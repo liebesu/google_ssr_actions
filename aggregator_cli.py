@@ -28,6 +28,7 @@ from datetime import datetime, timezone
 from typing import Dict, Iterable, List, Optional, Set, Tuple
 
 import requests
+import yaml
 
 # Ensure local imports resolve relative to this file
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -357,6 +358,9 @@ def main():
 
     # Write outputs
     write_text(os.path.join(paths["sub"], "all.txt"), "\n".join(all_nodes) + ("\n" if all_nodes else ""))
+    # YAML variant for Clash-compatible import (list of URI strings)
+    all_yaml = {"proxies": all_nodes}
+    write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(all_yaml, allow_unicode=True, sort_keys=False))
     write_text(os.path.join(paths["sub"], "urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
 
     for region, nodes in region_to_nodes.items():
