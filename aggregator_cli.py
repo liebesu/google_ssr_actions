@@ -21,6 +21,8 @@ import base64
 import json
 import os
 import re
+import html as html_lib
+from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 import sys
 import time
 from collections import defaultdict
@@ -120,6 +122,52 @@ def normalize_node_line(line: str) -> Optional[str]:
     if not any(line.startswith(p) for p in PROTOCOL_PREFIXES):
         return None
     return line
+
+
+def normalize_subscribe_url(raw_url: str) -> Optional[str]:
+    """Normalize subscribe URL and drop placeholders.
+    - HTML unescape (&amp; -> &)
+    - Keep scheme/netloc/path and allowed query keys (token, optional flag)
+    - Trim trailing non-URL garbage (stats appended)
+    - Filter placeholders like 'xxxx' host or token
+    """
+    if not raw_url:
+        return None
+    candidate = html_lib.unescape(raw_url.strip())
+    safe_chars = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~:/?#[]@!$&'()*+,;=%")
+    trimmed = []
+    for ch in candidate:
+        if ch in safe_chars:
+            trimmed.append(ch)
+        else:
+            break
+    candidate = "".join(trimmed)
+    try:
+        pu = urlparse(candidate)
+        if not pu.scheme or not pu.netloc:
+            return None
+        if "api/v1/client/subscribe" not in pu.path:
+            return None
+        host_low = pu.netloc.lower()
+        if "xxxx" in host_low or "your-provider.com" in host_low:
+            return None
+        qs = parse_qs(pu.query or "", keep_blank_values=False)
+        token_list = qs.get("token", [])
+        if not token_list:
+            return None
+        token = token_list[0]
+        if not re.fullmatch(r"[A-Za-z0-9]+", token):
+            return None
+        if token.lower() == "xxxx":
+            return None
+        out_qs = {"token": token}
+        if "flag" in qs and re.fullmatch(r"[A-Za-z0-9]+", qs["flag"][0]):
+            out_qs["flag"] = qs["flag"][0]
+        new_query = urlencode(out_qs)
+        normalized = urlunparse((pu.scheme, pu.netloc, pu.path, "", new_query, ""))
+        return normalized
+    except Exception:
+        return None
 
 
 REGION_KEYWORDS = {
@@ -370,13 +418,15 @@ def main():
             print(f"[warn] scrape step skipped or failed: {e}")
 
     # Load candidate URL set
-    candidates = load_candidate_urls(PROJECT_ROOT, data_dir)
+    raw_candidates = load_candidate_urls(PROJECT_ROOT, data_dir)
+    candidates = [u for u in (normalize_subscribe_url(u) for u in raw_candidates) if u]
     gh_urls: List[str] = []
     if args.github_discovery:
         try:
             gh_urls = discover_from_github(defaults=True)
             if gh_urls:
-                candidates = merge_urls(candidates, gh_urls)
+                gh_norm = [u for u in (normalize_subscribe_url(u) for u in gh_urls) if u]
+                candidates = merge_urls(candidates, gh_norm)
             else:
                 print("[info] github discovery returned 0 urls")
         except Exception as e:
@@ -489,29 +539,92 @@ def main():
                 }
             },
             "proxy-groups": [
-                {
-                    "name": "Auto",
-                    "type": "url-test",
-                    "use": ["all"],
-                    "url": "http://www.gstatic.com/generate_204",
-                    "interval": 300,
-                },
-                {
-                    "name": "Select",
-                    "type": "select",
-                    "proxies": ["Auto", "DIRECT"],
-                },
+                {"name": "🚀 节点选择", "type": "select", "use": ["all"], "proxies": ["♻️ 自动选择", "DIRECT"]},
+                {"name": "♻️ 自动选择", "type": "url-test", "use": ["all"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "🌍 国外媒体", "type": "select", "proxies": ["🚀 节点选择", "♻️ 自动选择", "DIRECT"]},
+                {"name": "📲 电报信息", "type": "select", "proxies": ["🚀 节点选择", "DIRECT"]},
+                {"name": "Ⓜ️ 微软服务", "type": "select", "proxies": ["DIRECT", "🚀 节点选择"]},
+                {"name": "🍎 苹果服务", "type": "select", "proxies": ["DIRECT", "🚀 节点选择"]},
+                {"name": "🐟 漏网之鱼", "type": "select", "proxies": ["🚀 节点选择", "DIRECT", "♻️ 自动选择"]},
             ],
+            "rule-providers": {
+                "LocalAreaNetwork": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
+                    "path": "./rules/LocalAreaNetwork.list", "interval": 86400
+                },
+                "UnBan": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list",
+                    "path": "./rules/UnBan.list", "interval": 86400
+                },
+                "BanAD": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
+                    "path": "./rules/BanAD.list", "interval": 86400
+                },
+                "BanProgramAD": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
+                    "path": "./rules/BanProgramAD.list", "interval": 86400
+                },
+                "GoogleFCM": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list",
+                    "path": "./rules/GoogleFCM.list", "interval": 86400
+                },
+                "Telegram": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
+                    "path": "./rules/Telegram.list", "interval": 86400
+                },
+                "ProxyMedia": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
+                    "path": "./rules/ProxyMedia.list", "interval": 86400
+                },
+                "Microsoft": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list",
+                    "path": "./rules/Microsoft.list", "interval": 86400
+                },
+                "Apple": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list",
+                    "path": "./rules/Apple.list", "interval": 86400
+                },
+                "ChinaDomain": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list",
+                    "path": "./rules/ChinaDomain.list", "interval": 86400
+                },
+                "ChinaCompanyIp": {
+                    "type": "http", "behavior": "ipcidr",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
+                    "path": "./rules/ChinaCompanyIp.list", "interval": 86400
+                }
+            },
             "rules": [
+                {"RULE-SET": "LocalAreaNetwork", "target": "DIRECT"},
+                {"RULE-SET": "UnBan", "target": "DIRECT"},
+                {"RULE-SET": "BanAD", "target": "REJECT"},
+                {"RULE-SET": "BanProgramAD", "target": "REJECT"},
+                {"RULE-SET": "GoogleFCM", "target": "🚀 节点选择"},
+                {"RULE-SET": "Telegram", "target": "🚀 节点选择"},
+                {"RULE-SET": "ProxyMedia", "target": "🌍 国外媒体"},
+                {"RULE-SET": "Microsoft", "target": "Ⓜ️ 微软服务"},
+                {"RULE-SET": "Apple", "target": "🍎 苹果服务"},
+                {"RULE-SET": "ChinaDomain", "target": "DIRECT"},
+                {"RULE-SET": "ChinaCompanyIp", "target": "DIRECT"},
                 "GEOIP,CN,DIRECT",
-                "MATCH,Select",
+                "MATCH,🐟 漏网之鱼",
             ],
         }
         write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False))
     write_text(os.path.join(paths["sub"], "urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
     write_text(os.path.join(paths["sub"], "all_urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
     if gh_urls:
-        gh_set_urls = set(gh_urls)
+        gh_set_urls = set([u for u in (normalize_subscribe_url(u) for u in gh_urls) if u])
         gh_alive_urls = [u for u in alive_urls if u in gh_set_urls]
         write_text(os.path.join(paths["sub"], "github-urls.txt"), "\n".join(gh_alive_urls) + ("\n" if gh_alive_urls else ""))
 
