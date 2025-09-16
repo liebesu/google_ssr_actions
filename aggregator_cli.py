@@ -270,6 +270,7 @@ def ensure_dirs(output_dir: str) -> Dict[str, str]:
         "sub": os.path.join(output_dir, "sub"),
         "regions": os.path.join(output_dir, "sub", "regions"),
         "proto": os.path.join(output_dir, "sub", "proto"),
+        "providers": os.path.join(output_dir, "sub", "providers"),
     }
     for p in paths.values():
         os.makedirs(p, exist_ok=True)
@@ -451,9 +452,12 @@ def main():
 
     # Write outputs
     write_text(os.path.join(paths["sub"], "all.txt"), "\n".join(all_nodes) + ("\n" if all_nodes else ""))
-    # Clash configuration YAML using proxy-providers pointing to the published TXT
+    # Clash configuration YAML using proxy-providers pointing to a provider file we also publish
     if args.public_base:
-        provider_url = args.public_base.rstrip("/") + "/sub/all.txt"
+        # publish a provider list (just URIs) so Clash can ingest it predictably
+        provider_list = {"proxies": all_nodes}
+        write_text(os.path.join(paths["providers"], "all.yaml"), yaml.safe_dump(provider_list, allow_unicode=True, sort_keys=False))
+        provider_url = args.public_base.rstrip("/") + "/sub/providers/all.yaml"
         clash_yaml = {
             "mixed-port": 7890,
             "allow-lan": False,
