@@ -36,6 +36,7 @@ PROJECT_ROOT = CURRENT_DIR
 sys.path.append(PROJECT_ROOT)
 
 from url_extractor import URLExtractor  # type: ignore
+from github_search_scraper import discover_from_github  # type: ignore
 
 
 def read_text_file_lines(path: str) -> List[str]:
@@ -342,6 +343,7 @@ def main():
     parser.add_argument("--skip-scrape", action="store_true", help="Skip running one-shot scraper")
     parser.add_argument("--public-base", default="", help="Public base URL for Pages, e.g., https://USER.github.io/REPO")
     parser.add_argument("--min-searches-left", type=int, default=5, help="If SerpAPI total remaining below this, skip scrape")
+    parser.add_argument("--github-discovery", action="store_true", help="Enable GitHub search discovery channel")
     parser.add_argument("--emit-health", action="store_true", help="Emit health.json")
     parser.add_argument("--emit-index", action="store_true", help="Emit index.html")
     args = parser.parse_args()
@@ -369,6 +371,16 @@ def main():
 
     # Load candidate URL set
     candidates = load_candidate_urls(PROJECT_ROOT, data_dir)
+    gh_urls: List[str] = []
+    if args.github_discovery:
+        try:
+            gh_urls = discover_from_github(defaults=True)
+            if gh_urls:
+                candidates = merge_urls(candidates, gh_urls)
+            else:
+                print("[info] github discovery returned 0 urls")
+        except Exception as e:
+            print(f"[warn] github discovery failed: {e}")
     candidates = sorted(set(candidates))
 
     # Load/prepare rate limit state
@@ -497,6 +509,8 @@ def main():
         }
         write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False))
     write_text(os.path.join(paths["sub"], "urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
+    if gh_urls:
+        write_text(os.path.join(paths["sub"], "github-urls.txt"), "\n".join(gh_urls) + "\n")
 
     for region, nodes in region_to_nodes.items():
         write_text(os.path.join(paths["regions"], f"{region}.txt"), "\n".join(nodes) + ("\n" if nodes else ""))
@@ -511,6 +525,30 @@ def main():
         ss_raw = ("\n".join(ss_nodes) + "\n").encode("utf-8")
         ss_b64 = base64.b64encode(ss_raw).decode("ascii")
         write_text(os.path.join(paths["proto"], "ss-base64.txt"), ss_b64 + "\n")
+
+    # Optional: GitHub-only node output
+    if gh_urls:
+        gh_set = set(gh_urls)
+        gh_alive = [u for u in alive_urls if u in gh_set]
+        gh_nodes: List[str] = []
+        for u in gh_alive:
+            if should_skip_due_to_backoff(rate_state, u, now_ts):
+                continue
+            body, code, sample, _ = fetch_subscription(u)
+            if not body:
+                if code in RATE_LIMIT_STATUS:
+                    mark_rate_limited(rate_state, u, now_ts, f"http {code}")
+                elif sample and any(h in sample for h in RATE_LIMIT_BODY_HINTS):
+                    mark_rate_limited(rate_state, u, now_ts, "body-hint")
+                continue
+            lines = split_subscription_content_to_lines(body)
+            for ln in lines:
+                n = normalize_node_line(ln)
+                if n:
+                    gh_nodes.append(n)
+        if args.dedup:
+            gh_nodes = list(dict.fromkeys(gh_nodes))
+        write_text(os.path.join(paths["sub"], "github.txt"), "\n".join(gh_nodes) + ("\n" if gh_nodes else ""))
 
     # Health info
     health = {
