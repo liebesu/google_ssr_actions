@@ -1,0 +1,58 @@
+name: build-and-publish-subscriptions
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sub-publish
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install deps
+        run: |
+          pip install -r requirements_scraper.txt
+
+      - name: Prepare secrets
+        run: |
+          if [ -n "${{ secrets.SCRAPER_KEYS }}" ]; then
+            printf "%s\n" "${{ secrets.SCRAPER_KEYS }}" > keys
+          fi
+          if [ -n "${{ secrets.SCRAPER_CONFIG_JSON }}" ]; then
+            printf "%s\n" "${{ secrets.SCRAPER_CONFIG_JSON }}" > scraper_config.json
+          fi
+
+      - name: Generate subscriptions
+        run: |
+          mkdir -p dist
+          python aggregator_cli.py --output-dir dist --max 1200 --dedup
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+
