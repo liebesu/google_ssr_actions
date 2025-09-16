@@ -58,24 +58,27 @@ class GitHubURLScraper:
         except Exception:
             return ""
 
-    def _extract_links_from_search(self, html: str) -> t.List[str]:
+    def _is_issues_search(self, url: str) -> bool:
+        return "type=issues" in url
+
+    def _is_repos_search(self, url: str) -> bool:
+        return "type=repositories" in url
+
+    def _extract_issue_links(self, html: str) -> t.List[str]:
         if not html:
             return []
         soup = BeautifulSoup(html, "lxml")
         links: t.List[str] = []
+        # issue links look like /owner/repo/issues/123 or /owner/repo/discussions/123
         for a in soup.find_all("a", href=True):
             href = a.get("href") or ""
-            # Keep repository and issues/PR paths
             if not href.startswith("/"):
                 continue
-            # Skip navigation and settings links
-            if any(seg in href for seg in ["/settings", "/login", "/signup", "/marketplace"]):
-                continue
-            abs_url = "https://github.com" + href
-            links.append(abs_url)
-        # Dedup while keeping order
-        seen = set()
-        out = []
+            if "/issues/" in href and not href.endswith("/issues"):
+                links.append("https://github.com" + href)
+        # dedup keep order
+        seen: t.Set[str] = set()
+        out: t.List[str] = []
         for u in links:
             if u not in seen:
                 seen.add(u)
@@ -98,27 +101,39 @@ class GitHubURLScraper:
         for su in self.config.search_urls:
             html = self._fetch_text(su)
             time.sleep(self.config.request_delay_sec)
-            detail_links = self._extract_links_from_search(html)[: self.config.per_search_limit]
-            for link in detail_links:
-                text = self._fetch_text(link)
-                if text:
-                    found = self._extract_subscribe_urls(text)
-                    if found:
-                        discovered.extend(found)
-                time.sleep(self.config.request_delay_sec)
+            if self._is_issues_search(su):
+                # Only first 2 pages are provided in seeds; visit each issue page
+                issue_links = self._extract_issue_links(html)[: self.config.per_search_limit]
+                for link in issue_links:
+                    text = self._fetch_text(link)
+                    if text:
+                        found = self._extract_subscribe_urls(text)
+                        if found:
+                            discovered.extend(found)
+                    time.sleep(self.config.request_delay_sec)
+            elif self._is_repos_search(su):
+                # Extract URLs directly from list page per requirement
+                found = self._extract_subscribe_urls(html)
+                if found:
+                    discovered.extend(found)
+            else:
+                # Fallback: scan page text
+                found = self._extract_subscribe_urls(html)
+                if found:
+                    discovered.extend(found)
         # Dedup
-        dedup = list(dict.fromkeys(discovered))
-        return dedup
+        return list(dict.fromkeys(discovered))
 
 
 def discover_from_github(defaults: bool = True, extra_urls: t.Optional[t.List[str]] = None) -> t.List[str]:
     seeds: t.List[str] = []
     if defaults:
         seeds.extend([
+            # Issues: updated desc, first 2 pages
+            "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=issues&s=updated&o=desc&p=1",
+            "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=issues&s=updated&o=desc&p=2",
+            # Repositories: updated desc, first page only
             "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=repositories&s=updated&o=desc",
-            "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=issues&s=created&o=desc",
-            "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=issues&s=created&o=desc&p=2",
-            "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=code&s=indexed&o=desc",
         ])
     if extra_urls:
         seeds.extend(extra_urls)
