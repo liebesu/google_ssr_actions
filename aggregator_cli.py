@@ -284,6 +284,7 @@ def main():
     parser.add_argument("--history", default=os.path.join(PROJECT_ROOT, "..", "data", "history_urls.json"))
     parser.add_argument("--live-out", default=os.path.join(PROJECT_ROOT, "..", "data", "live_urls.json"))
     parser.add_argument("--skip-scrape", action="store_true", help="Skip running one-shot scraper")
+    parser.add_argument("--public-base", default="", help="Public base URL for Pages, e.g., https://USER.github.io/REPO")
     parser.add_argument("--emit-health", action="store_true", help="Emit health.json")
     parser.add_argument("--emit-index", action="store_true", help="Emit index.html")
     args = parser.parse_args()
@@ -358,9 +359,47 @@ def main():
 
     # Write outputs
     write_text(os.path.join(paths["sub"], "all.txt"), "\n".join(all_nodes) + ("\n" if all_nodes else ""))
-    # YAML variant for Clash-compatible import (list of URI strings)
-    all_yaml = {"proxies": all_nodes}
-    write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(all_yaml, allow_unicode=True, sort_keys=False))
+    # Clash configuration YAML using proxy-providers pointing to the published TXT
+    if args.public_base:
+        provider_url = args.public_base.rstrip("/") + "/sub/all.txt"
+        clash_yaml = {
+            "mixed-port": 7890,
+            "allow-lan": False,
+            "mode": "rule",
+            "log-level": "info",
+            "proxy-providers": {
+                "all": {
+                    "type": "http",
+                    "url": provider_url,
+                    "path": "./providers/all.yaml",
+                    "interval": 3600,
+                    "health-check": {
+                        "enable": True,
+                        "url": "http://www.gstatic.com/generate_204",
+                        "interval": 600,
+                    },
+                }
+            },
+            "proxy-groups": [
+                {
+                    "name": "Auto",
+                    "type": "url-test",
+                    "use": ["all"],
+                    "url": "http://www.gstatic.com/generate_204",
+                    "interval": 300,
+                },
+                {
+                    "name": "Select",
+                    "type": "select",
+                    "proxies": ["Auto", "DIRECT"],
+                },
+            ],
+            "rules": [
+                "GEOIP,CN,DIRECT",
+                "MATCH,Select",
+            ],
+        }
+        write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False))
     write_text(os.path.join(paths["sub"], "urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
 
     for region, nodes in region_to_nodes.items():
