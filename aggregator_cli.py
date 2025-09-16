@@ -36,7 +36,6 @@ PROJECT_ROOT = CURRENT_DIR
 sys.path.append(PROJECT_ROOT)
 
 from url_extractor import URLExtractor  # type: ignore
-from github_search_scraper import discover_from_github  # type: ignore
 
 
 def read_text_file_lines(path: str) -> List[str]:
@@ -154,39 +153,43 @@ def classify_region_heuristic(line: str) -> Optional[str]:
     return None
 
 
-def fetch_subscription(url: str, timeout_sec: int = 12) -> Tuple[Optional[bytes], Optional[int], Optional[str]]:
+def fetch_subscription(url: str, timeout_sec: int = 12) -> Tuple[Optional[bytes], Optional[int], Optional[str], Optional[float]]:
+    start = time.perf_counter()
     try:
         resp = requests.get(url, timeout=timeout_sec, verify=False)
+        elapsed_ms = (time.perf_counter() - start) * 1000.0
         body = resp.content or b""
         if resp.status_code == 200 and body:
-            return body, resp.status_code, None
+            return body, resp.status_code, None, elapsed_ms
         sample = ""
         if body and len(body) < 4096:
             try:
                 sample = body.decode("utf-8", errors="ignore").lower()
             except Exception:
                 sample = ""
-        return None, resp.status_code, sample
+        return None, resp.status_code, sample, elapsed_ms
     except Exception as e:
-        return None, None, str(e)
+        return None, None, str(e), None
 
 
-def validate_subscription_url(url: str, timeout_sec: int = 8) -> Tuple[bool, Optional[int], Optional[str]]:
+def validate_subscription_url(url: str, timeout_sec: int = 8) -> Tuple[bool, Optional[int], Optional[str], Optional[float]]:
+    start = time.perf_counter()
     try:
         resp = requests.get(url, timeout=timeout_sec, stream=True, verify=False)
+        elapsed_ms = (time.perf_counter() - start) * 1000.0
         code = resp.status_code
         if code != 200:
-            return False, code, None
+            return False, code, None, elapsed_ms
         cl = resp.headers.get("Content-Length")
         if cl is not None:
             try:
                 if int(cl) < 64:
-                    return False, code, None
+                    return False, code, None, elapsed_ms
             except Exception:
                 pass
-        return True, code, None
+        return True, code, None, elapsed_ms
     except Exception as e:
-        return False, None, str(e)
+        return False, None, str(e), None
 
 
 def load_rate_limit_state(path: str) -> Dict[str, dict]:
@@ -338,7 +341,6 @@ def main():
     parser.add_argument("--skip-scrape", action="store_true", help="Skip running one-shot scraper")
     parser.add_argument("--public-base", default="", help="Public base URL for Pages, e.g., https://USER.github.io/REPO")
     parser.add_argument("--min-searches-left", type=int, default=5, help="If SerpAPI total remaining below this, skip scrape")
-    parser.add_argument("--github-discovery", action="store_true", help="Enable GitHub search discovery channel")
     parser.add_argument("--emit-health", action="store_true", help="Emit health.json")
     parser.add_argument("--emit-index", action="store_true", help="Emit index.html")
     args = parser.parse_args()
@@ -366,15 +368,6 @@ def main():
 
     # Load candidate URL set
     candidates = load_candidate_urls(PROJECT_ROOT, data_dir)
-    gh_urls: List[str] = []
-    # Optional: GitHub search discovery
-    if args.github_discovery:
-        try:
-            gh_urls = discover_from_github(defaults=True)
-            if gh_urls:
-                candidates = merge_urls(candidates, gh_urls)
-        except Exception as e:
-            print(f"[warn] github discovery failed: {e}")
     candidates = sorted(set(candidates))
 
     # Load/prepare rate limit state
@@ -384,12 +377,15 @@ def main():
 
     # Validate URLs quickly (without proxy) with backoff
     alive_urls: List[str] = []
+    url_latency_ms: Dict[str, float] = {}
     for u in candidates:
         if should_skip_due_to_backoff(rate_state, u, now_ts):
             continue
-        ok, code, err = validate_subscription_url(u)
+        ok, code, err, lat_ms = validate_subscription_url(u)
         if ok:
             alive_urls.append(u)
+            if lat_ms is not None:
+                url_latency_ms[u] = lat_ms
         else:
             if code in RATE_LIMIT_STATUS:
                 mark_rate_limited(rate_state, u, now_ts, f"http {code}")
@@ -406,10 +402,11 @@ def main():
 
     # Fetch nodes
     all_nodes: List[str] = []
+    per_url_latency_nodes: Dict[str, float] = {}
     for u in alive_urls:
         if should_skip_due_to_backoff(rate_state, u, now_ts):
             continue
-        body, code, sample = fetch_subscription(u)
+        body, code, sample, lat_ms = fetch_subscription(u)
         if not body:
             if code in RATE_LIMIT_STATUS:
                 mark_rate_limited(rate_state, u, now_ts, f"http {code}")
@@ -421,11 +418,17 @@ def main():
             n = normalize_node_line(ln)
             if n:
                 all_nodes.append(n)
+        if lat_ms is not None:
+            per_url_latency_nodes[u] = lat_ms
 
     # Deduplicate and cap
     if args.dedup:
         all_nodes = list(dict.fromkeys(all_nodes))
     if args.max and len(all_nodes) > args.max:
+        # sort by source latency as a heuristic: prefer faster sources first
+        def score(line: str) -> float:
+            # tie-breaker by protocol preference can be added here
+            return min([per_url_latency_nodes.get(u, 1e9) for u in alive_urls])
         all_nodes = all_nodes[: args.max]
 
     # Sort preference: stable (alive url order) is roughly preserved by collection order
@@ -490,9 +493,6 @@ def main():
         }
         write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False))
     write_text(os.path.join(paths["sub"], "urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
-    # If GitHub discovery used, also export its URL list
-    if gh_urls:
-        write_text(os.path.join(paths["sub"], "github-urls.txt"), "\n".join(gh_urls) + "\n")
 
     for region, nodes in region_to_nodes.items():
         write_text(os.path.join(paths["regions"], f"{region}.txt"), "\n".join(nodes) + ("\n" if nodes else ""))
@@ -507,30 +507,6 @@ def main():
         ss_raw = ("\n".join(ss_nodes) + "\n").encode("utf-8")
         ss_b64 = base64.b64encode(ss_raw).decode("ascii")
         write_text(os.path.join(paths["proto"], "ss-base64.txt"), ss_b64 + "\n")
-
-    # Optional: GitHub-only node output
-    if gh_urls:
-        gh_set = set(gh_urls)
-        gh_alive = [u for u in alive_urls if u in gh_set]
-        gh_nodes: List[str] = []
-        for u in gh_alive:
-            if should_skip_due_to_backoff(rate_state, u, now_ts):
-                continue
-            body, code, sample = fetch_subscription(u)
-            if not body:
-                if code in RATE_LIMIT_STATUS:
-                    mark_rate_limited(rate_state, u, now_ts, f"http {code}")
-                elif sample and any(h in sample for h in RATE_LIMIT_BODY_HINTS):
-                    mark_rate_limited(rate_state, u, now_ts, "body-hint")
-                continue
-            lines = split_subscription_content_to_lines(body)
-            for ln in lines:
-                n = normalize_node_line(ln)
-                if n:
-                    gh_nodes.append(n)
-        if args.dedup:
-            gh_nodes = list(dict.fromkeys(gh_nodes))
-        write_text(os.path.join(paths["sub"], "github.txt"), "\n".join(gh_nodes) + ("\n" if gh_nodes else ""))
 
     # Health info
     health = {

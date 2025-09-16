@@ -118,6 +118,7 @@ def discover_from_github(defaults: bool = True, extra_urls: t.Optional[t.List[st
             "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=repositories&s=updated&o=desc",
             "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=issues&s=created&o=desc",
             "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=issues&s=created&o=desc&p=2",
+            "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=code&s=indexed&o=desc",
         ])
     if extra_urls:
         seeds.extend(extra_urls)
