@@ -36,6 +36,7 @@ PROJECT_ROOT = CURRENT_DIR
 sys.path.append(PROJECT_ROOT)
 
 from url_extractor import URLExtractor  # type: ignore
+from github_search_scraper import discover_from_github  # type: ignore
 
 
 def read_text_file_lines(path: str) -> List[str]:
@@ -337,6 +338,7 @@ def main():
     parser.add_argument("--skip-scrape", action="store_true", help="Skip running one-shot scraper")
     parser.add_argument("--public-base", default="", help="Public base URL for Pages, e.g., https://USER.github.io/REPO")
     parser.add_argument("--min-searches-left", type=int, default=5, help="If SerpAPI total remaining below this, skip scrape")
+    parser.add_argument("--github-discovery", action="store_true", help="Enable GitHub search discovery channel")
     parser.add_argument("--emit-health", action="store_true", help="Emit health.json")
     parser.add_argument("--emit-index", action="store_true", help="Emit index.html")
     args = parser.parse_args()
@@ -364,6 +366,14 @@ def main():
 
     # Load candidate URL set
     candidates = load_candidate_urls(PROJECT_ROOT, data_dir)
+    # Optional: GitHub search discovery
+    if args.github_discovery:
+        try:
+            gh_urls = discover_from_github(defaults=True)
+            if gh_urls:
+                candidates = merge_urls(candidates, gh_urls)
+        except Exception as e:
+            print(f"[warn] github discovery failed: {e}")
     candidates = sorted(set(candidates))
 
     # Load/prepare rate limit state

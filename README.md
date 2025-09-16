@@ -13,6 +13,7 @@
 ## 仓库结构
 - `aggregator_cli.py`: 聚合与输出入口（Actions 调用）
 - `requirements_scraper.txt`: 运行依赖
+- `github_search_scraper.py`: 通过 GitHub 搜索页发现含 `api/v1/client/subscribe?token=` 的订阅 URL
 - `data/`: 历史与可用 URL 状态（Actions 自动更新）
   - `history_urls.json`, `live_urls.json`
 - `.github/workflows/build-and-publish-subscriptions.yml`: 定时构建与 Pages 发布
@@ -23,7 +24,7 @@
 
 ## 本地测试（可选）
 ```bash
-python aggregator_cli.py --output-dir dist --max 1200 --dedup --skip-scrape
+python aggregator_cli.py --output-dir dist --max 1200 --dedup --skip-scrape --github-discovery --public-base https://liebesu.github.io/google_ssr_actions
 ```
 
 ## 注意

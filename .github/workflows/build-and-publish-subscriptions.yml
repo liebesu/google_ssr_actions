@@ -44,7 +44,7 @@ jobs:
       - name: Generate subscriptions
         run: |
           mkdir -p dist
-          python aggregator_cli.py --output-dir dist --max 1200 --dedup --public-base https://liebesu.github.io/google_ssr_actions
+          python aggregator_cli.py --output-dir dist --max 1200 --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
