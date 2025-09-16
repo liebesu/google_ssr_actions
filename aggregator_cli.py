@@ -509,8 +509,11 @@ def main():
         }
         write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False))
     write_text(os.path.join(paths["sub"], "urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
+    write_text(os.path.join(paths["sub"], "all_urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
     if gh_urls:
-        write_text(os.path.join(paths["sub"], "github-urls.txt"), "\n".join(gh_urls) + "\n")
+        gh_set_urls = set(gh_urls)
+        gh_alive_urls = [u for u in alive_urls if u in gh_set_urls]
+        write_text(os.path.join(paths["sub"], "github-urls.txt"), "\n".join(gh_alive_urls) + ("\n" if gh_alive_urls else ""))
 
     for region, nodes in region_to_nodes.items():
         write_text(os.path.join(paths["regions"], f"{region}.txt"), "\n".join(nodes) + ("\n" if nodes else ""))
