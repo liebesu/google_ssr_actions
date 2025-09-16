@@ -366,6 +366,13 @@ def main():
         nodes = proto_to_nodes.get(proto, [])
         write_text(os.path.join(paths["proto"], f"{proto}.txt"), "\n".join(nodes) + ("\n" if nodes else ""))
 
+    # Extra: Shadowsocks base64 subscription for legacy SS clients
+    ss_nodes = proto_to_nodes.get("ss", [])
+    if ss_nodes:
+        ss_raw = ("\n".join(ss_nodes) + "\n").encode("utf-8")
+        ss_b64 = base64.b64encode(ss_raw).decode("ascii")
+        write_text(os.path.join(paths["proto"], "ss-base64.txt"), ss_b64 + "\n")
+
     # Health info
     health = {
         "build_time_utc": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
