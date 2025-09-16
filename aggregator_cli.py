@@ -539,13 +539,13 @@ def main():
                 }
             },
             "proxy-groups": [
-                {"name": "🚀 节点选择", "type": "select", "use": ["all"], "proxies": ["♻️ 自动选择", "DIRECT"]},
-                {"name": "♻️ 自动选择", "type": "url-test", "use": ["all"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
-                {"name": "🌍 国外媒体", "type": "select", "proxies": ["🚀 节点选择", "♻️ 自动选择", "DIRECT"]},
-                {"name": "📲 电报信息", "type": "select", "proxies": ["🚀 节点选择", "DIRECT"]},
-                {"name": "Ⓜ️ 微软服务", "type": "select", "proxies": ["DIRECT", "🚀 节点选择"]},
-                {"name": "🍎 苹果服务", "type": "select", "proxies": ["DIRECT", "🚀 节点选择"]},
-                {"name": "🐟 漏网之鱼", "type": "select", "proxies": ["🚀 节点选择", "DIRECT", "♻️ 自动选择"]},
+                {"name": "Node-Select", "type": "select", "use": ["all"], "proxies": ["Auto", "DIRECT"]},
+                {"name": "Auto", "type": "url-test", "use": ["all"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
+                {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
+                {"name": "Apple", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
+                {"name": "Final", "type": "select", "proxies": ["Node-Select", "DIRECT", "Auto"]},
             ],
             "rule-providers": {
                 "LocalAreaNetwork": {
@@ -609,15 +609,15 @@ def main():
                 "RULE-SET,UnBan,DIRECT",
                 "RULE-SET,BanAD,REJECT",
                 "RULE-SET,BanProgramAD,REJECT",
-                "RULE-SET,GoogleFCM,🚀 节点选择",
-                "RULE-SET,Telegram,🚀 节点选择",
-                "RULE-SET,ProxyMedia,🌍 国外媒体",
-                "RULE-SET,Microsoft,Ⓜ️ 微软服务",
-                "RULE-SET,Apple,🍎 苹果服务",
+                "RULE-SET,GoogleFCM,Node-Select",
+                "RULE-SET,Telegram,Node-Select",
+                "RULE-SET,ProxyMedia,Media",
+                "RULE-SET,Microsoft,Microsoft",
+                "RULE-SET,Apple,Apple",
                 "RULE-SET,ChinaDomain,DIRECT",
                 "RULE-SET,ChinaCompanyIp,DIRECT",
                 "GEOIP,CN,DIRECT",
-                "MATCH,🐟 漏网之鱼",
+                "MATCH,Final",
             ],
         }
         write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False))
