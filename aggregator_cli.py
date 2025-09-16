@@ -366,6 +366,7 @@ def main():
 
     # Load candidate URL set
     candidates = load_candidate_urls(PROJECT_ROOT, data_dir)
+    gh_urls: List[str] = []
     # Optional: GitHub search discovery
     if args.github_discovery:
         try:
@@ -489,6 +490,9 @@ def main():
         }
         write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False))
     write_text(os.path.join(paths["sub"], "urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
+    # If GitHub discovery used, also export its URL list
+    if gh_urls:
+        write_text(os.path.join(paths["sub"], "github-urls.txt"), "\n".join(gh_urls) + "\n")
 
     for region, nodes in region_to_nodes.items():
         write_text(os.path.join(paths["regions"], f"{region}.txt"), "\n".join(nodes) + ("\n" if nodes else ""))
@@ -503,6 +507,30 @@ def main():
         ss_raw = ("\n".join(ss_nodes) + "\n").encode("utf-8")
         ss_b64 = base64.b64encode(ss_raw).decode("ascii")
         write_text(os.path.join(paths["proto"], "ss-base64.txt"), ss_b64 + "\n")
+
+    # Optional: GitHub-only node output
+    if gh_urls:
+        gh_set = set(gh_urls)
+        gh_alive = [u for u in alive_urls if u in gh_set]
+        gh_nodes: List[str] = []
+        for u in gh_alive:
+            if should_skip_due_to_backoff(rate_state, u, now_ts):
+                continue
+            body, code, sample = fetch_subscription(u)
+            if not body:
+                if code in RATE_LIMIT_STATUS:
+                    mark_rate_limited(rate_state, u, now_ts, f"http {code}")
+                elif sample and any(h in sample for h in RATE_LIMIT_BODY_HINTS):
+                    mark_rate_limited(rate_state, u, now_ts, "body-hint")
+                continue
+            lines = split_subscription_content_to_lines(body)
+            for ln in lines:
+                n = normalize_node_line(ln)
+                if n:
+                    gh_nodes.append(n)
+        if args.dedup:
+            gh_nodes = list(dict.fromkeys(gh_nodes))
+        write_text(os.path.join(paths["sub"], "github.txt"), "\n".join(gh_nodes) + ("\n" if gh_nodes else ""))
 
     # Health info
     health = {
