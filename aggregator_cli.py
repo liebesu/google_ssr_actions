@@ -280,8 +280,8 @@ def main():
     parser.add_argument("--output-dir", required=True, help="Directory to write outputs, e.g., dist")
     parser.add_argument("--max", type=int, default=1200, help="Max nodes in all.txt")
     parser.add_argument("--dedup", action="store_true", help="Enable deduplication")
-    parser.add_argument("--history", default=os.path.join(PROJECT_ROOT, "data", "history_urls.json"))
-    parser.add_argument("--live-out", default=os.path.join(PROJECT_ROOT, "data", "live_urls.json"))
+    parser.add_argument("--history", default=os.path.join(PROJECT_ROOT, "..", "data", "history_urls.json"))
+    parser.add_argument("--live-out", default=os.path.join(PROJECT_ROOT, "..", "data", "live_urls.json"))
     parser.add_argument("--skip-scrape", action="store_true", help="Skip running one-shot scraper")
     parser.add_argument("--emit-health", action="store_true", help="Emit health.json")
     parser.add_argument("--emit-index", action="store_true", help="Emit index.html")
@@ -289,7 +289,7 @@ def main():
 
     # Normalize paths
     output_dir = os.path.abspath(args.output_dir)
-    data_dir = os.path.abspath(os.path.join(PROJECT_ROOT, "data"))
+    data_dir = os.path.abspath(os.path.join(PROJECT_ROOT, "..", "data"))
     os.makedirs(data_dir, exist_ok=True)
 
     # Optional: run one-shot scrape to refresh discovered URLs

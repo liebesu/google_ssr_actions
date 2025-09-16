@@ -1,5 +1,7 @@
 name: build-and-publish-subscriptions
 on:
+  push:
+    branches: [ main ]
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
