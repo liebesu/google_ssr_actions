@@ -82,6 +82,18 @@ PROTOCOL_PREFIXES = [
     "hysteria2://",
 ]
 
+RATE_LIMIT_STATUS = {403, 429, 503, 509}
+RATE_LIMIT_BODY_HINTS = [
+    "rate limit",
+    "too many requests",
+    "quota exceeded",
+    "exceeded",
+    "bandwidth exceeded",
+    "流量已用尽",
+    "超出配额",
+    "请求过多",
+]
+
 
 def split_subscription_content_to_lines(raw_bytes: bytes) -> List[str]:
     """Attempt to parse a subscription response body into node lines."""
@@ -141,32 +153,71 @@ def classify_region_heuristic(line: str) -> Optional[str]:
     return None
 
 
-def fetch_subscription(url: str, timeout_sec: int = 12) -> Optional[bytes]:
+def fetch_subscription(url: str, timeout_sec: int = 12) -> Tuple[Optional[bytes], Optional[int], Optional[str]]:
     try:
         resp = requests.get(url, timeout=timeout_sec, verify=False)
-        if resp.status_code == 200 and resp.content:
-            return resp.content
-        return None
-    except Exception:
-        return None
+        body = resp.content or b""
+        if resp.status_code == 200 and body:
+            return body, resp.status_code, None
+        sample = ""
+        if body and len(body) < 4096:
+            try:
+                sample = body.decode("utf-8", errors="ignore").lower()
+            except Exception:
+                sample = ""
+        return None, resp.status_code, sample
+    except Exception as e:
+        return None, None, str(e)
 
 
-def validate_subscription_url(url: str, timeout_sec: int = 8) -> bool:
+def validate_subscription_url(url: str, timeout_sec: int = 8) -> Tuple[bool, Optional[int], Optional[str]]:
     try:
         resp = requests.get(url, timeout=timeout_sec, stream=True, verify=False)
-        if resp.status_code != 200:
-            return False
-        # Require minimal body size to avoid empty/banned endpoints
+        code = resp.status_code
+        if code != 200:
+            return False, code, None
         cl = resp.headers.get("Content-Length")
         if cl is not None:
             try:
                 if int(cl) < 64:
-                    return False
+                    return False, code, None
             except Exception:
                 pass
-        return True
+        return True, code, None
+    except Exception as e:
+        return False, None, str(e)
+
+
+def load_rate_limit_state(path: str) -> Dict[str, dict]:
+    data = read_json(path, {})
+    if isinstance(data, dict):
+        return data
+    return {}
+
+
+def should_skip_due_to_backoff(rate_state: Dict[str, dict], url: str, now_ts: float) -> bool:
+    info = rate_state.get(url)
+    if not info:
+        return False
+    next_ok = info.get("next_allowed_at", 0)
+    try:
+        return now_ts < float(next_ok)
     except Exception:
         return False
+
+
+def mark_rate_limited(rate_state: Dict[str, dict], url: str, now_ts: float, reason: str) -> None:
+    info = rate_state.get(url, {})
+    hits = int(info.get("hits", 0)) + 1
+    base_minutes = 15 * (2 ** (hits - 1))
+    wait_minutes = min(base_minutes, 24 * 60)
+    next_allowed_at = now_ts + wait_minutes * 60
+    rate_state[url] = {
+        "hits": hits,
+        "last_reason": reason,
+        "last_at": now_ts,
+        "next_allowed_at": next_allowed_at,
+    }
 
 
 def merge_urls(*url_lists: Iterable[str]) -> List[str]:
@@ -285,6 +336,7 @@ def main():
     parser.add_argument("--live-out", default=os.path.join(PROJECT_ROOT, "..", "data", "live_urls.json"))
     parser.add_argument("--skip-scrape", action="store_true", help="Skip running one-shot scraper")
     parser.add_argument("--public-base", default="", help="Public base URL for Pages, e.g., https://USER.github.io/REPO")
+    parser.add_argument("--min-searches-left", type=int, default=5, help="If SerpAPI total remaining below this, skip scrape")
     parser.add_argument("--emit-health", action="store_true", help="Emit health.json")
     parser.add_argument("--emit-index", action="store_true", help="Emit index.html")
     args = parser.parse_args()
@@ -294,38 +346,64 @@ def main():
     data_dir = os.path.abspath(os.path.join(PROJECT_ROOT, "..", "data"))
     os.makedirs(data_dir, exist_ok=True)
 
-    # Optional: run one-shot scrape to refresh discovered URLs
+    # Optional: run one-shot scrape to refresh discovered URLs (respect SerpAPI quota)
     if not args.skip_scrape:
         try:
-            from google_api_scraper_enhanced import EnhancedGoogleAPIScraper  # type: ignore
-
-            scraper = EnhancedGoogleAPIScraper()
-            # Run a single scraping round synchronously
-            scraper.run_scraping_task()
+            from enhanced_key_manager import EnhancedSerpAPIKeyManager  # type: ignore
+            mgr = EnhancedSerpAPIKeyManager(keys_file=os.path.join(PROJECT_ROOT, "keys"))
+            quotas = mgr.check_all_quotas(force_refresh=True)
+            total_left = sum(q.get("total_searches_left", 0) for q in quotas if q.get("success"))
+            if total_left < args.min_searches_left:
+                print(f"[info] SerpAPI remaining {total_left} < {args.min_searches_left}, skip scrape this round")
+            else:
+                from google_api_scraper_enhanced import EnhancedGoogleAPIScraper  # type: ignore
+                scraper = EnhancedGoogleAPIScraper()
+                scraper.run_scraping_task()
         except Exception as e:
-            # Non-fatal in CI
-            print(f"[warn] scrape step failed: {e}")
+            print(f"[warn] scrape step skipped or failed: {e}")
 
     # Load candidate URL set
     candidates = load_candidate_urls(PROJECT_ROOT, data_dir)
     candidates = sorted(set(candidates))
 
-    # Validate URLs quickly (without proxy)
+    # Load/prepare rate limit state
+    rate_path = os.path.join(data_dir, "rate_limit.json")
+    rate_state = load_rate_limit_state(rate_path)
+    now_ts = time.time()
+
+    # Validate URLs quickly (without proxy) with backoff
     alive_urls: List[str] = []
     for u in candidates:
-        if validate_subscription_url(u):
+        if should_skip_due_to_backoff(rate_state, u, now_ts):
+            continue
+        ok, code, err = validate_subscription_url(u)
+        if ok:
             alive_urls.append(u)
+        else:
+            if code in RATE_LIMIT_STATUS:
+                mark_rate_limited(rate_state, u, now_ts, f"http {code}")
+            elif err:
+                low = err.lower()
+                if any(h in low for h in RATE_LIMIT_BODY_HINTS):
+                    mark_rate_limited(rate_state, u, now_ts, "body-hint")
 
     # Persist history/live
     merged_history = sorted(set(candidates))
     write_json(os.path.join(data_dir, "history_urls.json"), merged_history)
     write_json(os.path.join(data_dir, "live_urls.json"), alive_urls)
+    write_json(rate_path, rate_state)
 
     # Fetch nodes
     all_nodes: List[str] = []
     for u in alive_urls:
-        body = fetch_subscription(u)
+        if should_skip_due_to_backoff(rate_state, u, now_ts):
+            continue
+        body, code, sample = fetch_subscription(u)
         if not body:
+            if code in RATE_LIMIT_STATUS:
+                mark_rate_limited(rate_state, u, now_ts, f"http {code}")
+            elif sample and any(h in sample for h in RATE_LIMIT_BODY_HINTS):
+                mark_rate_limited(rate_state, u, now_ts, "body-hint")
             continue
         lines = split_subscription_content_to_lines(body)
         for ln in lines:
