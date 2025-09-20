@@ -31,6 +31,11 @@ from typing import Dict, Iterable, List, Optional, Set, Tuple
 
 import requests
 import yaml
+import urllib3
+from urllib3.exceptions import InsecureRequestWarning
+
+# Suppress SSL warnings for verify=False requests
+urllib3.disable_warnings(InsecureRequestWarning)
 
 # Ensure local imports resolve relative to this file
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -765,7 +770,6 @@ def main():
     # Health info
     # Health info
     build_dt = datetime.now(timezone.utc)
-    next_dt = build_dt.replace(microsecond=0) + (timezone.utc.utcoffset(build_dt) or (0))
     # Fixed schedule: every 3 hours
     from datetime import timedelta
     next_dt = build_dt + timedelta(hours=3)
