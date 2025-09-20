@@ -37,6 +37,12 @@ from urllib3.exceptions import InsecureRequestWarning
 # Suppress SSL warnings for verify=False requests
 urllib3.disable_warnings(InsecureRequestWarning)
 
+try:
+    # Import for traffic extraction helpers without triggering notifications
+    from subscription_checker import SubscriptionChecker  # type: ignore
+except Exception:
+    SubscriptionChecker = None  # type: ignore
+
 # Ensure local imports resolve relative to this file
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = CURRENT_DIR
@@ -101,6 +107,54 @@ RATE_LIMIT_BODY_HINTS = [
     "超出配额",
     "请求过多",
 ]
+
+
+def _convert_to_gb(value: float, unit: str) -> float:
+    unit_low = (unit or "").lower()
+    if unit_low.startswith("tb"):
+        return value * 1024.0
+    if unit_low.startswith("mb"):
+        return value / 1024.0
+    return value
+
+
+def extract_traffic_info_from_text(text: str) -> Dict[str, object]:
+    """Best-effort extraction of traffic info from subscription response text."""
+    info: Dict[str, object] = {}
+    try:
+        # Common patterns: 总流量/总量/Total, 剩余/Remaining, 已用/Used, 单位 GB/TB/MB
+        patterns = [
+            (r"总(?:流量|量)[:：]\s*([0-9.]+)\s*(TB|GB|MB)?", "total"),
+            (r"剩余(?:流量)?[:：]\s*([0-9.]+)\s*(TB|GB|MB)?", "remaining"),
+            (r"已用[:：]\s*([0-9.]+)\s*(TB|GB|MB)?", "used"),
+            (r"Total\s*:?\s*([0-9.]+)\s*(TB|GB|MB)?", "total"),
+            (r"Remaining\s*:?\s*([0-9.]+)\s*(TB|GB|MB)?", "remaining"),
+            (r"Used\s*:?\s*([0-9.]+)\s*(TB|GB|MB)?", "used"),
+        ]
+        for pat, key in patterns:
+            m = re.search(pat, text, flags=re.IGNORECASE)
+            if m:
+                val = float(m.group(1))
+                unit = m.group(2) or "GB"
+                gb = round(_convert_to_gb(val, unit), 2)
+                if key == "total":
+                    info["total_traffic"] = gb
+                elif key == "remaining":
+                    info["remaining_traffic"] = gb
+                elif key == "used":
+                    info["used_traffic"] = gb
+                info["traffic_unit"] = "GB"
+        # Derive missing
+        total = info.get("total_traffic")
+        remaining = info.get("remaining_traffic")
+        used = info.get("used_traffic")
+        if total is not None and remaining is not None and used is None:
+            info["used_traffic"] = round(total - remaining, 2)
+        if total is not None and used is not None and remaining is None:
+            info["remaining_traffic"] = round(total - used, 2)
+    except Exception:
+        pass
+    return info
 
 
 def split_subscription_content_to_lines(raw_bytes: bytes) -> List[str]:
@@ -358,6 +412,7 @@ def generate_index_html(base_url_paths: Dict[str, str], health: Dict[str, object
     vless_n = protocol_counts.get("vless", 0)
     trojan_n = protocol_counts.get("trojan", 0)
     hy2_n = protocol_counts.get("hysteria2", 0)
+    auth_hash = health.get("auth_sha256", "")
     return f"""
 <!doctype html>
 <html lang=\"zh-CN\">
@@ -379,6 +434,33 @@ body {{ font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvet
 code {{ background:#f3f4f6; padding: 2px 6px; border-radius: 4px; }}
 small {{ color: #6b7280; }}
 </style>
+<script>
+const AUTH_HASH = "{auth_hash}";
+async function sha256(message) {{
+  const msgBuffer = new TextEncoder().encode(message);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}}
+async function gate() {{
+  if (!AUTH_HASH) {{
+    document.documentElement.style.display = '';
+    return;
+  }}
+  let ok = false;
+  for (let i = 0; i < 3; i++) {{
+    const pwd = window.prompt('请输入访问密码');
+    if (pwd === null) break;
+    const h = await sha256(pwd);
+    if (h.toLowerCase() === AUTH_HASH.toLowerCase()) {{ ok = true; break; }}
+    alert('密码错误');
+  }}
+  if (!ok) {{ document.body.innerHTML = '<p style="margin:24px;color:#ef4444">未授权访问</p>'; return; }}
+  document.documentElement.style.display = '';
+}}
+document.documentElement.style.display = 'none';
+document.addEventListener('DOMContentLoaded', gate);
+</script>
 </head>
 <body>
   <div class=\"wrap\">
@@ -423,6 +505,46 @@ small {{ color: #6b7280; }}
           <li>Trojan：{trojan_n}</li>
           <li>Hysteria2：{hy2_n}</li>
         </ul>
+      </div>
+
+      <div class=\"card\">
+        <h3>源详细信息</h3>
+        <p><small>以下为每个订阅URL的可用性、节点与流量概览（仅显示可用源）。</small></p>
+        <div id=\"url-meta\"><small>加载中...</small></div>
+        <script>
+        async function loadMeta() {{
+          try {{
+            const res = await fetch('sub/url_meta.json', {{ cache: 'no-cache' }});
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
+            const rows = data.map(item => `
+              <tr>
+                <td><a href="${item.url}" target="_blank">源</a></td>
+                <td>${item.available ? '✅' : '❌'}</td>
+                <td>${item.nodes_total ?? 0}</td>
+                <td>${item.protocols ?? ''}</td>
+                <td>${item.traffic?.remaining ?? '-'} / ${item.traffic?.total ?? '-'} ${item.traffic?.unit ?? ''}</td>
+                <td>${item.response_ms ?? '-'}</td>
+              </tr>`).join('');
+            const html = `
+              <table style="width:100%;border-collapse:collapse">
+                <thead><tr>
+                  <th style="text-align:left">URL</th>
+                  <th>可用</th>
+                  <th>节点数</th>
+                  <th>协议</th>
+                  <th>流量(剩余/总量)</th>
+                  <th>耗时(ms)</th>
+                </tr></thead>
+                <tbody>${rows}</tbody>
+              </table>`;
+            document.getElementById('url-meta').innerHTML = html;
+          }} catch(e) {{
+            document.getElementById('url-meta').innerHTML = '<small>未获取到源详情</small>';
+          }}
+        }}
+        loadMeta();
+        </script>
       </div>
 
       <div class=\"card\">
@@ -768,6 +890,40 @@ def main():
         write_text(os.path.join(paths["sub"], "github.txt"), "\n".join(gh_nodes) + ("\n" if gh_nodes else ""))
 
     # Health info
+    # Build per-URL metadata (availability, nodes, traffic) for index table
+    url_meta: List[Dict[str, object]] = []
+    for u in alive_urls:
+        meta = {"url": u, "available": True}
+        # Try to fetch a small sample for traffic hints
+        body, code, sample, lat_ms = fetch_subscription(u)
+        meta["response_ms"] = round(lat_ms or 0.0, 1) if lat_ms is not None else None
+        if not body:
+            meta["available"] = False
+            url_meta.append(meta)
+            continue
+        text_preview = body.decode('utf-8', errors='ignore')[:4000]
+        traffic = extract_traffic_info_from_text(text_preview)
+        # Estimate protocols by counting prefixes
+        pc = {p: 0 for p in ["ss", "vmess", "vless", "trojan", "hysteria2", "ssr"]}
+        lines = split_subscription_content_to_lines(body)
+        for ln in lines:
+            c = classify_protocol(ln) or ""
+            if c in pc:
+                pc[c] += 1
+        nodes_total = sum(pc.values())
+        proto_text = ", ".join([f"{k}:{v}" for k, v in pc.items() if v > 0])
+        meta.update({
+            "nodes_total": nodes_total,
+            "protocols": proto_text,
+            "traffic": {
+                "total": traffic.get("total_traffic"),
+                "remaining": traffic.get("remaining_traffic"),
+                "used": traffic.get("used_traffic"),
+                "unit": traffic.get("traffic_unit", "GB"),
+            }
+        })
+        url_meta.append(meta)
+
     # Health info
     build_dt = datetime.now(timezone.utc)
     # Fixed schedule: every 3 hours
@@ -776,6 +932,8 @@ def main():
     sources_new = len(set(alive_urls) - set(prev_live_urls))
     sources_removed = len(set(prev_live_urls) - set(alive_urls))
     protocol_counts = {k: len(v) for k, v in proto_to_nodes.items()}
+    # Optional auth: set AUTH_SHA256 env to require password gate
+    auth_sha256_env = os.getenv("AUTH_SHA256", "")
     health = {
         "build_time_utc": build_dt.strftime("%Y-%m-%d %H:%M:%S"),
         "next_run_utc": next_dt.strftime("%Y-%m-%d %H:%M:%S"),
@@ -791,9 +949,12 @@ def main():
         "quota_total_capacity": quota_total_cap,
         "keys_total": keys_total,
         "keys_ok": keys_ok,
+        "auth_sha256": auth_sha256_env,
     }
     if args.emit_health:
         write_json(os.path.join(output_dir, "health.json"), health)
+        # also publish url meta for UI table
+        write_json(os.path.join(paths["sub"], "url_meta.json"), url_meta)
 
     # Index page
     if args.emit_index:
