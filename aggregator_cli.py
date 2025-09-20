@@ -881,10 +881,17 @@ def main():
             if not isinstance(prev, list):
                 prev = []
             today = build_dt.astimezone(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d")
-            entry = {"date": today, "google_added": int(health.get("google_urls_count",0)), "github_added": int(health.get("github_urls_count",0))}
-            # keep last 30 days; overwrite today
+            entry = {
+                "date": today,
+                "google_added": int(health.get("google_urls_count", 0)),
+                "github_added": int(health.get("github_urls_count", 0)),
+                "new_total": int(health.get("sources_new", 0)),
+                "removed_total": int(health.get("sources_removed", 0)),
+                "alive_total": int(health.get("source_alive", 0)),
+            }
+            # keep last 60 days; overwrite today
             prev = [e for e in prev if e.get("date") != today] + [entry]
-            prev = prev[-30:]
+            prev = prev[-60:]
             write_json(stats_path, prev)
         except Exception:
             pass

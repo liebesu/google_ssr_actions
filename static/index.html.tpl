@@ -20,8 +20,10 @@
     small { color: var(--muted); }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    table { color:#e5e7eb; }
-    th,td { padding:8px 10px; border-bottom:1px solid #1f2937; }
+    table { color:#e5e7eb; width:100%; border-collapse:collapse; display:block; overflow:auto; max-height:420px; }
+    thead, tbody { display: table; width: 100%; table-layout: fixed; }
+    tbody { display: block; max-height: 360px; overflow: auto; }
+    th,td { padding:8px 10px; border-bottom:1px solid #1f2937; word-break: break-all; }
     th { color:#cbd5e1; text-align:left; background:#0b1220; position:sticky; top:0; }
     .ok { color: var(--ok); }
     .bad { color: var(--bad); }
@@ -50,6 +52,14 @@
     }
     document.documentElement.style.display = 'none';
     document.addEventListener('DOMContentLoaded', gate);
+    // 根据是否有配额数据隐藏卡片
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const qleft = '__QLEFT__'; const qcap = '__QCAP__'; const kok='__KOK__'; const kt='__KTOTAL__';
+      const hideQuota = (!qleft || qleft==='0') && (!qcap || qcap==='0') && (!kok || kok==='0') && (!kt || kt==='0');
+      if(hideQuota){
+        document.querySelectorAll('.stat.quota').forEach(el=>el.style.display='none');
+      }
+    });
   </script>
 </head>
 <body>
@@ -60,10 +70,10 @@
     </div>
     <div class="subtitle">源 __ALIVE__/__TOTAL__ · 节点 __NODES__ · 新增 __NEW__ · 移除 __REMOVED__</div>
 
-    <div class="stats">
-      <div class="stat"><div class="num">__QLEFT__</div><div>剩余额度</div></div>
-      <div class="stat"><div class="num">__QCAP__</div><div>总额度</div></div>
-      <div class="stat"><div class="num">__KOK__/__KTOTAL__</div><div>可用密钥/总密钥</div></div>
+    <div class="stats" id="stats-cards">
+      <div class="stat quota" data-hide="q"><div class="num">__QLEFT__</div><div>剩余额度</div></div>
+      <div class="stat quota" data-hide="q"><div class="num">__QCAP__</div><div>总额度</div></div>
+      <div class="stat quota" data-hide="q"><div class="num">__KOK__/__KTOTAL__</div><div>可用密钥/总密钥</div></div>
       <div class="stat"><div class="num">__NEXT_CN__</div><div>下次更新时间(中国时区)</div></div>
     </div>
 
@@ -123,7 +133,9 @@
             try {
               const res = await fetch('sub/url_meta.json', { cache: 'no-cache' });
               if (!res.ok) throw new Error('fetch failed');
-              const data = await res.json();
+              let data = await res.json();
+              // 只展示可用源
+              data = (Array.isArray(data) ? data : []).filter(x=>x && x.available);
               const rows = data.map(function(item){
                 return '<tr>' +
                   '<td><div style="display:flex;gap:8px;align-items:center">' +
@@ -142,7 +154,7 @@
                   '</td>' +
                 '</tr>';
               }).join('');
-              const html = '<table style="width:100%;border-collapse:collapse">' +
+              const html = '<table>' +
                 '<thead><tr>' +
                 '<th style="text-align:left">URL/机场</th>' +
                 '<th>可用</th>' +
@@ -167,10 +179,12 @@
               const labels = d.map(x=>x.date);
               const google = d.map(x=>x.google_added||0);
               const github = d.map(x=>x.github_added||0);
+              const added = d.map(x=>x.new_total||0);
+              const removed = d.map(x=>x.removed_total||0);
               const canvas = document.getElementById('dailyChart');
               const ctx = canvas.getContext('2d');
               // 极简绘制
-              const max = Math.max(1, ...google, ...github);
+              const max = Math.max(1, ...google, ...github, ...added, ...removed);
               const W = canvas.width = canvas.clientWidth;
               const H = canvas.height;
               function plot(series, color, yoff) {
@@ -182,7 +196,7 @@
                 }); ctx.stroke();
               }
               ctx.clearRect(0,0,W,H); ctx.fillStyle='#0b1220'; ctx.fillRect(0,0,W,H);
-              plot(google,'#60a5fa'); plot(github,'#10b981');
+              plot(google,'#60a5fa'); plot(github,'#10b981'); plot(added,'#a78bfa'); plot(removed,'#f87171');
             } catch(e) {}
           }
           loadMeta(); loadDailyChart();
