@@ -33,6 +33,8 @@ import requests
 import yaml
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning
+from zoneinfo import ZoneInfo
+import hashlib
 
 # Suppress SSL warnings for verify=False requests
 urllib3.disable_warnings(InsecureRequestWarning)
@@ -394,7 +396,9 @@ def write_text(path: str, content: str) -> None:
 def generate_index_html(base_url_paths: Dict[str, str], health: Dict[str, object]) -> str:
     # Enhanced static HTML with richer health/status info
     ts = health.get("build_time_utc", "")
+    ts_cn = health.get("build_time_cn", "")
     next_ts = health.get("next_run_utc", "")
+    next_ts_cn = health.get("next_run_cn", "")
     total_sources = health.get("source_total", 0)
     alive_sources = health.get("source_alive", 0)
     nodes_total = health.get("nodes_total", 0)
@@ -466,7 +470,7 @@ document.addEventListener('DOMContentLoaded', gate);
   <div class=\"wrap\">
     <div class=\"header\">
       <h1>Google SSR Actions</h1>
-      <small>构建时间(UTC)：{ts}</small>
+      <small>构建时间(中国时区)：{ts_cn}</small>
     </div>
     <div class=\"subtitle\">源 {alive_sources}/{total_sources} · 节点 {nodes_total} · 新增 {sources_new} · 移除 {sources_removed}</div>
 
@@ -474,7 +478,7 @@ document.addEventListener('DOMContentLoaded', gate);
       <div class=\"stat\"><div class=\"num\">{quota_left}</div><div>剩余额度</div></div>
       <div class=\"stat\"><div class=\"num\">{quota_cap}</div><div>总额度</div></div>
       <div class=\"stat\"><div class=\"num\">{keys_ok}/{keys_total}</div><div>可用密钥/总密钥</div></div>
-      <div class=\"stat\"><div class=\"num\">{next_ts}</div><div>下次更新时间(UTC)</div></div>
+      <div class=\"stat\"><div class=\"num\">{next_ts_cn}</div><div>下次更新时间(中国时区)</div></div>
     </div>
 
     <div class=\"grid\">
@@ -512,37 +516,37 @@ document.addEventListener('DOMContentLoaded', gate);
         <p><small>以下为每个订阅URL的可用性、节点与流量概览（仅显示可用源）。</small></p>
         <div id=\"url-meta\"><small>加载中...</small></div>
         <script>
-        async function loadMeta() {{
-          try {{
-            const res = await fetch('sub/url_meta.json', {{ cache: 'no-cache' }});
+        async function loadMeta() {
+          try {
+            const res = await fetch('sub/url_meta.json', { cache: 'no-cache' });
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-            const rows = data.map(item => `
-              <tr>
-                <td><a href="${item.url}" target="_blank">源</a></td>
-                <td>${item.available ? '✅' : '❌'}</td>
-                <td>${item.nodes_total ?? 0}</td>
-                <td>${item.protocols ?? ''}</td>
-                <td>${item.traffic?.remaining ?? '-'} / ${item.traffic?.total ?? '-'} ${item.traffic?.unit ?? ''}</td>
-                <td>${item.response_ms ?? '-'}</td>
-              </tr>`).join('');
-            const html = `
-              <table style="width:100%;border-collapse:collapse">
-                <thead><tr>
-                  <th style="text-align:left">URL</th>
-                  <th>可用</th>
-                  <th>节点数</th>
-                  <th>协议</th>
-                  <th>流量(剩余/总量)</th>
-                  <th>耗时(ms)</th>
-                </tr></thead>
-                <tbody>${rows}</tbody>
-              </table>`;
+            const rows = data.map(function(item){
+              return '<tr>' +
+                '<td><a href="' + (item.url||'#') + '" target="_blank">源</a></td>' +
+                '<td>' + (item.available ? '✅' : '❌') + '</td>' +
+                '<td>' + (item.nodes_total ?? 0) + '</td>' +
+                '<td>' + (item.protocols ?? '') + '</td>' +
+                '<td>' + ((item.traffic?.remaining ?? '-') + ' / ' + (item.traffic?.total ?? '-') + ' ' + (item.traffic?.unit ?? '')) + '</td>' +
+                '<td>' + (item.response_ms ?? '-') + '</td>' +
+              '</tr>';
+            }).join('');
+            const html = '<table style="width:100%;border-collapse:collapse">' +
+              '<thead><tr>' +
+              '<th style="text-align:left">URL</th>' +
+              '<th>可用</th>' +
+              '<th>节点数</th>' +
+              '<th>协议</th>' +
+              '<th>流量(剩余/总量)</th>' +
+              '<th>耗时(ms)</th>' +
+              '</tr></thead>' +
+              '<tbody>' + rows + '</tbody>' +
+              '</table>';
             document.getElementById('url-meta').innerHTML = html;
-          }} catch(e) {{
+          } catch(e) {
             document.getElementById('url-meta').innerHTML = '<small>未获取到源详情</small>';
-          }}
-        }}
+          }
+        }
         loadMeta();
         </script>
       </div>
@@ -929,14 +933,33 @@ def main():
     # Fixed schedule: every 3 hours
     from datetime import timedelta
     next_dt = build_dt + timedelta(hours=3)
+    # China timezone strings
+    try:
+        cn_tz = ZoneInfo("Asia/Shanghai")
+        ts_cn = build_dt.astimezone(cn_tz).strftime("%Y-%m-%d %H:%M:%S")
+        next_cn = next_dt.astimezone(cn_tz).strftime("%Y-%m-%d %H:%M:%S")
+    except Exception:
+        ts_cn = ""
+        next_cn = ""
     sources_new = len(set(alive_urls) - set(prev_live_urls))
     sources_removed = len(set(prev_live_urls) - set(alive_urls))
     protocol_counts = {k: len(v) for k, v in proto_to_nodes.items()}
     # Optional auth: set AUTH_SHA256 env to require password gate
     auth_sha256_env = os.getenv("AUTH_SHA256", "")
+    # Optional auth: set AUTH_PLAIN to a simple password; we hash it here to avoid embedding plain text
+    auth_plain = os.getenv("AUTH_PLAIN", "")
+    auth_sha256_env = os.getenv("AUTH_SHA256", "")
+    if auth_plain and not auth_sha256_env:
+        try:
+            auth_sha256_env = hashlib.sha256(auth_plain.encode("utf-8")).hexdigest()
+        except Exception:
+            auth_sha256_env = ""
+
     health = {
         "build_time_utc": build_dt.strftime("%Y-%m-%d %H:%M:%S"),
+        "build_time_cn": ts_cn,
         "next_run_utc": next_dt.strftime("%Y-%m-%d %H:%M:%S"),
+        "next_run_cn": next_cn,
         "source_total": len(candidates),
         "source_alive": len(alive_urls),
         "sources_new": sources_new,
