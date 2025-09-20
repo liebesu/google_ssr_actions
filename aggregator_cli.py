@@ -516,12 +516,12 @@ document.addEventListener('DOMContentLoaded', gate);
         <p><small>以下为每个订阅URL的可用性、节点与流量概览（仅显示可用源）。</small></p>
         <div id=\"url-meta\"><small>加载中...</small></div>
         <script>
-        async function loadMeta() {
-          try {
+        async function loadMeta() {{
+          try {{
             const res = await fetch('sub/url_meta.json', { cache: 'no-cache' });
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-            const rows = data.map(function(item){
+            const rows = data.map(function(item){{
               return '<tr>' +
                 '<td><a href="' + (item.url||'#') + '" target="_blank">源</a></td>' +
                 '<td>' + (item.available ? '✅' : '❌') + '</td>' +
@@ -543,10 +543,10 @@ document.addEventListener('DOMContentLoaded', gate);
               '<tbody>' + rows + '</tbody>' +
               '</table>';
             document.getElementById('url-meta').innerHTML = html;
-          } catch(e) {
+          }} catch(e) {{
             document.getElementById('url-meta').innerHTML = '<small>未获取到源详情</small>';
-          }
-        }
+          }}
+        }}
         loadMeta();
         </script>
       </div>
