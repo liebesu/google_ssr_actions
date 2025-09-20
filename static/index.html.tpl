@@ -99,13 +99,26 @@
 
       <div class="card">
         <h3>源详细信息</h3>
-        <p><small>以下为每个订阅URL的可用性、节点与流量概览（仅显示可用源）。</small></p>
+        <p><small>包含机场名称、容量/剩余、协议、复制与测速、详情页。</small></p>
         <div id="url-meta"><small>加载中...</small></div>
         <div class="chart">
           <h4 style="margin:0 0 8px 0">每日新增可用URL</h4>
           <canvas id="dailyChart" height="120"></canvas>
         </div>
         <script>
+          function copyText(text){
+            navigator.clipboard.writeText(text).then(()=>{
+              alert('已复制订阅链接');
+            }).catch(()=>{});
+          }
+          async function testSpeed(url){
+            const t0 = performance.now();
+            try{
+              const r = await fetch(url, {method:'HEAD', mode:'no-cors'});
+            }catch(e){}
+            const t1 = performance.now();
+            alert('粗略测速: ' + Math.round(t1 - t0) + ' ms');
+          }
           async function loadMeta() {
             try {
               const res = await fetch('sub/url_meta.json', { cache: 'no-cache' });
@@ -113,22 +126,31 @@
               const data = await res.json();
               const rows = data.map(function(item){
                 return '<tr>' +
-                  '<td><a href="' + (item.url||'#') + '" target="_blank">源</a></td>' +
+                  '<td><div style="display:flex;gap:8px;align-items:center">' +
+                    '<a href="' + (item.url||'#') + '" target="_blank">源</a>' +
+                    '<small style="color:#94a3b8">' + (item.provider||item.host||'') + '</small>' +
+                  '</div></td>' +
                   '<td>' + (item.available ? '✅' : '❌') + '</td>' +
                   '<td>' + (item.nodes_total ?? 0) + '</td>' +
                   '<td>' + (item.protocols ?? '') + '</td>' +
                   '<td>' + ((item.traffic?.remaining ?? '-') + ' / ' + (item.traffic?.total ?? '-') + ' ' + (item.traffic?.unit ?? '')) + '</td>' +
                   '<td>' + (item.response_ms ?? '-') + '</td>' +
+                  '<td>' +
+                    '<button onclick="copyText(\'' + (item.url||'') + '\')" style="padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">复制</button>' +
+                    '<button onclick="testSpeed(\'' + (item.url||'') + '\')" style="margin-left:6px;padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">测速</button>' +
+                    (item.detail_page ? '<a href="' + item.detail_page + '" style="margin-left:6px">详情</a>' : '') +
+                  '</td>' +
                 '</tr>';
               }).join('');
               const html = '<table style="width:100%;border-collapse:collapse">' +
                 '<thead><tr>' +
-                '<th style="text-align:left">URL</th>' +
+                '<th style="text-align:left">URL/机场</th>' +
                 '<th>可用</th>' +
                 '<th>节点数</th>' +
                 '<th>协议</th>' +
                 '<th>流量(剩余/总量)</th>' +
                 '<th>耗时(ms)</th>' +
+                '<th>操作</th>' +
                 '</tr></thead>' +
                 '<tbody>' + rows + '</tbody>' +
                 '</table>';

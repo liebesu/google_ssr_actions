@@ -778,9 +778,43 @@ def main():
                 pc[c] += 1
         nodes_total = sum(pc.values())
         proto_text = ", ".join([f"{k}:{v}" for k, v in pc.items() if v > 0])
+        # per-source provider assets
+        sid = hashlib.sha1(u.encode("utf-8")).hexdigest()[:12]
+        try:
+            host = urlparse(u).netloc
+        except Exception:
+            host = ""
+        provider = host or "unknown"
+        # write provider nodes and meta for drill-down page
+        try:
+            prov_txt_path = os.path.join(paths["providers"], f"{sid}.txt")
+            write_text(prov_txt_path, "\n".join(lines) + ("\n" if lines else ""))
+            prov_meta = {
+                "id": sid,
+                "url": u,
+                "host": host,
+                "provider": provider,
+                "nodes_total": nodes_total,
+                "protocol_counts": {k: v for k, v in pc.items() if v > 0},
+                "traffic": {
+                    "total": traffic.get("total_traffic"),
+                    "remaining": traffic.get("remaining_traffic"),
+                    "used": traffic.get("used_traffic"),
+                    "unit": traffic.get("traffic_unit", "GB"),
+                },
+                "response_ms": meta["response_ms"],
+                "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
+            }
+            write_json(os.path.join(paths["providers"], f"{sid}.json"), prov_meta)
+        except Exception:
+            pass
         meta.update({
             "nodes_total": nodes_total,
             "protocols": proto_text,
+            "id": sid,
+            "host": host,
+            "provider": provider,
+            "detail_page": f"source.html?id={sid}",
             "traffic": {
                 "total": traffic.get("total_traffic"),
                 "remaining": traffic.get("remaining_traffic"),
@@ -859,6 +893,14 @@ def main():
     if args.emit_index:
         index_html = generate_index_html(paths, health)
         write_text(os.path.join(output_dir, "index.html"), index_html)
+        # emit drill-down page
+        try:
+            src_tpl = os.path.join(PROJECT_ROOT, "static", "source.html")
+            if os.path.exists(src_tpl):
+                with open(src_tpl, "r", encoding="utf-8") as f:
+                    write_text(os.path.join(output_dir, "source.html"), f.read())
+        except Exception:
+            pass
 
     print(f"[ok] sources: {len(candidates)}, alive: {len(alive_urls)}, nodes: {len(all_nodes)}")
 
