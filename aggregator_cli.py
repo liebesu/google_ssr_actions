@@ -417,7 +417,7 @@ def generate_index_html(base_url_paths: Dict[str, str], health: Dict[str, object
     trojan_n = protocol_counts.get("trojan", 0)
     hy2_n = protocol_counts.get("hysteria2", 0)
     auth_hash = health.get("auth_sha256", "")
-    return f"""
+    template = """
 <!doctype html>
 <html lang=\"zh-CN\">
 <head>
@@ -566,6 +566,33 @@ document.addEventListener('DOMContentLoaded', gate);
 </body>
 </html>
 """
+    # Replace tokens to avoid f-string parsing issues
+    mapping = {
+        "{ts}": str(ts),
+        "{ts_cn}": str(ts_cn),
+        "{next_ts}": str(next_ts),
+        "{next_ts_cn}": str(next_ts_cn),
+        "{total_sources}": str(total_sources),
+        "{alive_sources}": str(alive_sources),
+        "{nodes_total}": str(nodes_total),
+        "{sources_new}": str(sources_new),
+        "{sources_removed}": str(sources_removed),
+        "{quota_left}": str(quota_left),
+        "{quota_cap}": str(quota_cap),
+        "{keys_total}": str(keys_total),
+        "{keys_ok}": str(keys_ok),
+        "{github_urls_count}": str(github_urls_count),
+        "{google_urls_count}": str(google_urls_count),
+        "{ss_n}": str(ss_n),
+        "{vmess_n}": str(vmess_n),
+        "{vless_n}": str(vless_n),
+        "{trojan_n}": str(trojan_n),
+        "{hy2_n}": str(hy2_n),
+        "{auth_hash}": str(auth_hash),
+    }
+    for k, v in mapping.items():
+        template = template.replace(k, v)
+    return template
 
 
 def main():
