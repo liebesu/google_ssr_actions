@@ -135,7 +135,7 @@ class EnhancedGoogleAPIScraper:
         """加载配置文件"""
         default_config = {
             "proxy": {
-                "enabled": True,
+                "enabled": False,
                 "host": "127.0.0.1",
                 "port": 7897,
                 "protocol": "http"
@@ -229,17 +229,19 @@ class EnhancedGoogleAPIScraper:
         self.logger = daily_logger.get_logger()
     
     def setup_proxy(self):
-        """设置代理"""
+        """设置代理（在CI或DISABLE_PROXY=1时禁用）"""
+        try:
+            if os.getenv('GITHUB_ACTIONS') == 'true' or os.getenv('DISABLE_PROXY') == '1':
+                self.logger.info("CI环境或DISABLE_PROXY=1，代理已禁用")
+                return
+        except Exception:
+            pass
         if self.config.get('proxy', {}).get('enabled', False):
             proxy_host = self.config['proxy']['host']
             proxy_port = self.config['proxy']['port']
             proxy_protocol = self.config['proxy']['protocol']
-            
             proxy_url = f"{proxy_protocol}://{proxy_host}:{proxy_port}"
-            self.session.proxies.update({
-                'http': proxy_url,
-                'https': proxy_url
-            })
+            self.session.proxies.update({'http': proxy_url, 'https': proxy_url})
             self.logger.info(f"已设置代理: {proxy_url}")
     
     def load_visited_urls(self) -> Set[str]:

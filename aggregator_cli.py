@@ -333,51 +333,107 @@ def write_text(path: str, content: str) -> None:
 
 
 def generate_index_html(base_url_paths: Dict[str, str], health: Dict[str, object]) -> str:
-    # Minimal static HTML
+    # Enhanced static HTML with richer health/status info
     ts = health.get("build_time_utc", "")
+    next_ts = health.get("next_run_utc", "")
     total_sources = health.get("source_total", 0)
     alive_sources = health.get("source_alive", 0)
     nodes_total = health.get("nodes_total", 0)
+    sources_new = health.get("sources_new", 0)
+    sources_removed = health.get("sources_removed", 0)
+    quota_left = health.get("quota_total_left", 0)
+    quota_cap = health.get("quota_total_capacity", 0)
+    keys_total = health.get("keys_total", 0)
+    keys_ok = health.get("keys_ok", 0)
+    github_urls_count = health.get("github_urls_count", 0)
+    google_urls_count = health.get("google_urls_count", 0)
+    protocol_counts = health.get("protocol_counts", {}) or {}
+    ss_n = protocol_counts.get("ss", 0)
+    vmess_n = protocol_counts.get("vmess", 0)
+    vless_n = protocol_counts.get("vless", 0)
+    trojan_n = protocol_counts.get("trojan", 0)
+    hy2_n = protocol_counts.get("hysteria2", 0)
     return f"""
 <!doctype html>
 <html lang=\"zh-CN\">
+<head>
 <meta charset=\"utf-8\" />
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
-<title>Subscriptions</title>
+<title>Google SSR Actions - 订阅聚合</title>
 <style>
-body {{ font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; }}
-code, pre {{ background: #f6f8fa; padding: 2px 6px; border-radius: 4px; }}
+body {{ font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; background: #f7fafc; }}
+.wrap {{ max-width: 1080px; margin: 0 auto; padding: 28px; }}
+.header {{ display:flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }}
+.subtitle {{ color:#6b7280; margin-top: 4px; }}
+.stats {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 12px; margin: 16px 0 24px; }}
+.stat {{ background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:14px; text-align:center; }}
+.stat .num {{ font-size: 20px; font-weight: 700; }}
 .grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }}
-.card {{ border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; }}
+.card {{ background:#fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 16px; }}
+.card h3 {{ margin: 0 0 10px; font-size: 16px; }}
+code {{ background:#f3f4f6; padding: 2px 6px; border-radius: 4px; }}
 small {{ color: #6b7280; }}
 </style>
-<h1>订阅聚合</h1>
-<p><small>构建时间(UTC)：{ts} · 源 {alive_sources}/{total_sources} · 节点 {nodes_total}</small></p>
-<div class=\"grid\">
-  <div class=\"card\"><h3>全量 TXT</h3><a href=\"sub/all.txt\"><code>sub/all.txt</code></a></div>
-  <div class=\"card\"><h3>源列表</h3><a href=\"sub/urls.txt\"><code>sub/urls.txt</code></a></div>
-  <div class=\"card\"><h3>健康信息</h3><a href=\"health.json\"><code>health.json</code></a></div>
-  <div class=\"card\"><h3>地区切片</h3>
-    <ul>
-      <li><a href=\"sub/regions/hk.txt\">hk.txt</a></li>
-      <li><a href=\"sub/regions/sg.txt\">sg.txt</a></li>
-      <li><a href=\"sub/regions/jp.txt\">jp.txt</a></li>
-      <li><a href=\"sub/regions/tw.txt\">tw.txt</a></li>
-      <li><a href=\"sub/regions/us.txt\">us.txt</a></li>
-      <li><a href=\"sub/regions/eu.txt\">eu.txt</a></li>
-    </ul>
+</head>
+<body>
+  <div class=\"wrap\">
+    <div class=\"header\">
+      <h1>Google SSR Actions</h1>
+      <small>构建时间(UTC)：{ts}</small>
+    </div>
+    <div class=\"subtitle\">源 {alive_sources}/{total_sources} · 节点 {nodes_total} · 新增 {sources_new} · 移除 {sources_removed}</div>
+
+    <div class=\"stats\">
+      <div class=\"stat\"><div class=\"num\">{quota_left}</div><div>剩余额度</div></div>
+      <div class=\"stat\"><div class=\"num\">{quota_cap}</div><div>总额度</div></div>
+      <div class=\"stat\"><div class=\"num\">{keys_ok}/{keys_total}</div><div>可用密钥/总密钥</div></div>
+      <div class=\"stat\"><div class=\"num\">{next_ts}</div><div>下次更新时间(UTC)</div></div>
+    </div>
+
+    <div class=\"grid\">
+      <div class=\"card\">
+        <h3>订阅文件</h3>
+        <ul>
+          <li><a href=\"sub/all.txt\"><code>sub/all.txt</code></a> 全量订阅</li>
+          <li><a href=\"sub/all.yaml\"><code>sub/all.yaml</code></a> Clash配置</li>
+        </ul>
+      </div>
+
+      <div class=\"card\">
+        <h3>URL 源</h3>
+        <ul>
+          <li><a href=\"sub/urls.txt\"><code>urls.txt</code></a> 当前可用源</li>
+          <li><a href=\"sub/all_urls.txt\"><code>all_urls.txt</code></a> 完整源列表</li>
+          <li><a href=\"sub/google_urls.txt\"><code>google_urls.txt</code></a> Google发现（{google_urls_count}）</li>
+          <li><a href=\"sub/github_urls.txt\"><code>github_urls.txt</code></a> GitHub发现（{github_urls_count}）</li>
+        </ul>
+      </div>
+
+      <div class=\"card\">
+        <h3>协议分布</h3>
+        <ul>
+          <li>SS：{ss_n}</li>
+          <li>VMess：{vmess_n}</li>
+          <li>VLESS：{vless_n}</li>
+          <li>Trojan：{trojan_n}</li>
+          <li>Hysteria2：{hy2_n}</li>
+        </ul>
+      </div>
+
+      <div class=\"card\">
+        <h3>辅助输出</h3>
+        <ul>
+          <li><a href=\"sub/github.txt\"><code>github.txt</code></a> GitHub节点</li>
+          <li><a href=\"sub/proto/ss-base64.txt\"><code>ss-base64.txt</code></a> SS Base64</li>
+          <li><a href=\"health.json\"><code>health.json</code></a> 健康信息</li>
+        </ul>
+      </div>
+    </div>
+
+    <p><small>仅展示可用源（自动过滤失效/超额/限速来源）。</small></p>
   </div>
-  <div class=\"card\"><h3>协议切片</h3>
-    <ul>
-      <li><a href=\"sub/proto/ss.txt\">ss.txt</a></li>
-      <li><a href=\"sub/proto/vmess.txt\">vmess.txt</a></li>
-      <li><a href=\"sub/proto/vless.txt\">vless.txt</a></li>
-      <li><a href=\"sub/proto/trojan.txt\">trojan.txt</a></li>
-      <li><a href=\"sub/proto/hysteria2.txt\">hysteria2.txt</a></li>
-    </ul>
-  </div>
-</div>
-<p><small>YAML 导出将在下一版本加入。</small></p>
+</body>
+</html>
 """
 
 
@@ -400,6 +456,15 @@ def main():
     output_dir = os.path.abspath(args.output_dir)
     data_dir = os.path.abspath(os.path.join(PROJECT_ROOT, "..", "data"))
     os.makedirs(data_dir, exist_ok=True)
+    live_out_path = os.path.abspath(args.live_out)
+    # Load previous live for diff
+    prev_live_urls: List[str] = []
+    try:
+        prev_live_urls = read_json(live_out_path, [])
+        if not isinstance(prev_live_urls, list):
+            prev_live_urls = []
+    except Exception:
+        prev_live_urls = []
 
     # Optional: run one-shot scrape to refresh discovered URLs (respect SerpAPI quota)
     if not args.skip_scrape:
@@ -416,6 +481,24 @@ def main():
                 scraper.run_scraping_task()
         except Exception as e:
             print(f"[warn] scrape step skipped or failed: {e}")
+
+    # Always compute quota summary for health (best-effort)
+    quota_total_left = 0
+    quota_total_cap = 0
+    keys_total = 0
+    keys_ok = 0
+    try:
+        from enhanced_key_manager import EnhancedSerpAPIKeyManager  # type: ignore
+        mgr2 = EnhancedSerpAPIKeyManager(keys_file=os.path.join(PROJECT_ROOT, "keys"))
+        quotas2 = mgr2.check_all_quotas(force_refresh=True)
+        keys_total = len(quotas2)
+        for q in quotas2:
+            if q.get("success"):
+                keys_ok += 1
+                quota_total_left += int(q.get("total_searches_left", 0) or 0)
+                quota_total_cap += int(q.get("searches_per_month", 0) or 0)
+    except Exception:
+        pass
 
     # Load candidate URL set
     raw_candidates = load_candidate_urls(PROJECT_ROOT, data_dir)
@@ -621,12 +704,25 @@ def main():
             ],
         }
         write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False))
+    # 写入各种URL文件
     write_text(os.path.join(paths["sub"], "urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
     write_text(os.path.join(paths["sub"], "all_urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
+    
+    # 分离GitHub和Google搜索发现的URL
+    github_alive_urls: List[str] = []
+    google_alive_urls: List[str] = []
     if gh_urls:
         gh_set_urls = set([u for u in (normalize_subscribe_url(u) for u in gh_urls) if u])
-        gh_alive_urls = [u for u in alive_urls if u in gh_set_urls]
-        write_text(os.path.join(paths["sub"], "github-urls.txt"), "\n".join(gh_alive_urls) + ("\n" if gh_alive_urls else ""))
+        github_alive_urls = [u for u in alive_urls if u in gh_set_urls]
+        write_text(os.path.join(paths["sub"], "github_urls.txt"), "\n".join(github_alive_urls) + ("\n" if github_alive_urls else ""))
+        
+        # Google搜索发现的URL（非GitHub来源）
+        google_alive_urls = [u for u in alive_urls if u not in gh_set_urls]
+        write_text(os.path.join(paths["sub"], "google_urls.txt"), "\n".join(google_alive_urls) + ("\n" if google_alive_urls else ""))
+    else:
+        # 如果没有GitHub发现的URL，所有URL都来自Google搜索
+        write_text(os.path.join(paths["sub"], "github_urls.txt"), "")
+        write_text(os.path.join(paths["sub"], "google_urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
 
     for region, nodes in region_to_nodes.items():
         write_text(os.path.join(paths["regions"], f"{region}.txt"), "\n".join(nodes) + ("\n" if nodes else ""))
@@ -667,11 +763,30 @@ def main():
         write_text(os.path.join(paths["sub"], "github.txt"), "\n".join(gh_nodes) + ("\n" if gh_nodes else ""))
 
     # Health info
+    # Health info
+    build_dt = datetime.now(timezone.utc)
+    next_dt = build_dt.replace(microsecond=0) + (timezone.utc.utcoffset(build_dt) or (0))
+    # Fixed schedule: every 3 hours
+    from datetime import timedelta
+    next_dt = build_dt + timedelta(hours=3)
+    sources_new = len(set(alive_urls) - set(prev_live_urls))
+    sources_removed = len(set(prev_live_urls) - set(alive_urls))
+    protocol_counts = {k: len(v) for k, v in proto_to_nodes.items()}
     health = {
-        "build_time_utc": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
+        "build_time_utc": build_dt.strftime("%Y-%m-%d %H:%M:%S"),
+        "next_run_utc": next_dt.strftime("%Y-%m-%d %H:%M:%S"),
         "source_total": len(candidates),
         "source_alive": len(alive_urls),
+        "sources_new": sources_new,
+        "sources_removed": sources_removed,
         "nodes_total": len(all_nodes),
+        "protocol_counts": protocol_counts,
+        "github_urls_count": len(github_alive_urls),
+        "google_urls_count": len(google_alive_urls) if google_alive_urls else (len(alive_urls) if not gh_urls else 0),
+        "quota_total_left": quota_total_left,
+        "quota_total_capacity": quota_total_cap,
+        "keys_total": keys_total,
+        "keys_ok": keys_ok,
     }
     if args.emit_health:
         write_json(os.path.join(output_dir, "health.json"), health)

@@ -44,7 +44,9 @@ jobs:
       - name: Generate subscriptions
         run: |
           mkdir -p dist
-          python aggregator_cli.py --output-dir dist --max 1200 --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery
+          # Disable proxy in CI and emit index/health to avoid 404
+          export DISABLE_PROXY=1
+          python aggregator_cli.py --output-dir dist --max 1200 --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery --emit-health --emit-index
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
