@@ -73,6 +73,44 @@ class SubscriptionChecker:
         
         # 钉钉Webhook配置
         self.dingtalk_webhook = DINGTALK_WEBHOOK
+        
+        # 额度阈值通知持久化状态
+        self.threshold_state_file = 'threshold_notification_state.json'
+        self.threshold_state = self._load_threshold_state()
+
+    def _load_threshold_state(self) -> dict:
+        """
+        加载额度阈值通知状态
+        Returns: dict
+        """
+        try:
+            if os.path.exists(self.threshold_state_file):
+                with open(self.threshold_state_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    if isinstance(data, dict):
+                        return {
+                            'last_notified_threshold': int(data.get('last_notified_threshold', 0)),
+                            'last_usage_percentage': float(data.get('last_usage_percentage', 0.0)),
+                            'last_updated': data.get('last_updated')
+                        }
+        except Exception as e:
+            logger.warning(f"加载额度阈值通知状态失败: {e}")
+        return {
+            'last_notified_threshold': 0,
+            'last_usage_percentage': 0.0,
+            'last_updated': None
+        }
+
+    def _save_threshold_state(self, state: dict):
+        """保存额度阈值通知状态"""
+        try:
+            state_to_save = dict(state)
+            from datetime import datetime
+            state_to_save['last_updated'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            with open(self.threshold_state_file, 'w', encoding='utf-8') as f:
+                json.dump(state_to_save, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            logger.warning(f"保存额度阈值通知状态失败: {e}")
     
     def _test_proxy_connection(self) -> bool:
         """
@@ -2002,20 +2040,12 @@ class SubscriptionChecker:
             # 计算使用率
             usage_percentage = (current_usage / total_quota * 100) if total_quota > 0 else 0
             
-            # 定义阈值列表 (10%, 20%, 30%, ...)
-            thresholds = [10, 20, 30, 40, 50, 60, 70, 80, 90, 95]
-            
-            # 检查是否达到某个阈值
-            reached_threshold = None
-            for threshold in thresholds:
-                if usage_percentage >= threshold:
-                    reached_threshold = threshold
-                else:
-                    break
-            
-            # 只有达到阈值才发送通知
-            if reached_threshold is None:
-                logger.debug(f"SerpAPI使用率 {usage_percentage:.1f}% 未达到通知阈值")
+            # 仅在跨过整十阈值时发送（10/20/…/90），并进行持久化去重
+            thresholds = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+            current_step = int(usage_percentage // 10) * 10 if usage_percentage >= 10 else 0
+            last_step = int(self.threshold_state.get('last_notified_threshold', 0))
+            if current_step == 0 or current_step <= last_step or current_step not in thresholds:
+                logger.debug(f"SerpAPI使用率 {usage_percentage:.1f}% 未跨越新阈值 (当前:{current_step}%, 上次:{last_step}%)")
                 return True
             
             # 计算密钥统计信息
@@ -2056,7 +2086,7 @@ class SubscriptionChecker:
             # 构建通知内容
             usage_content = f"""{current_time}
 🎯 SerpAPI使用量提醒
-使用率已达到 {reached_threshold}% 阈值
+使用率已达到 {current_step}% 阈值
 
 📈 汇总信息
 • ✅ 可用密钥: {available_keys}/{total_keys} {'(全部可用)' if available_keys == total_keys else ''}
@@ -2074,7 +2104,7 @@ class SubscriptionChecker:
             usage_content += f"""
 
 ⚠️ 使用量阈值提醒
-• 当前使用率已达到 {reached_threshold}% 监控阈值
+• 当前使用率已达到 {current_step}% 监控阈值
 • 请注意API配额使用情况
 • 建议合理安排搜索频率
 
@@ -2102,7 +2132,11 @@ class SubscriptionChecker:
             if response.status_code == 200:
                 result = response.json()
                 if result.get('errcode') == 0:
-                    logger.info(f"✅ SerpAPI使用量阈值通知发送成功 (使用率: {usage_percentage:.1f}%, 阈值: {reached_threshold}%)")
+                    logger.info(f"✅ SerpAPI使用量阈值通知发送成功 (使用率: {usage_percentage:.1f}%, 阈值: {current_step}%)")
+                    # 更新并保存阈值状态
+                    self.threshold_state['last_notified_threshold'] = current_step
+                    self.threshold_state['last_usage_percentage'] = round(usage_percentage, 2)
+                    self._save_threshold_state(self.threshold_state)
                     return True
                 else:
                     logger.error(f"❌ SerpAPI使用量阈值通知发送失败: {result}")
