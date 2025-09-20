@@ -23,8 +23,16 @@
     a:hover { text-decoration: underline; }
     table { color:#e5e7eb; width:100%; border-collapse:collapse; display:block; overflow:auto; max-height:720px; }
     thead, tbody { display: table; width: 100%; table-layout: fixed; }
-    tbody { display: block; max-height: 660px; overflow: auto; }
+    tbody { display: block; max-height: 660px; overflow: auto; scrollbar-gutter: stable; }
     th,td { padding:8px 10px; border-bottom:1px solid #1f2937; word-break: break-all; }
+    /* 固定列宽，保证表头与内容对齐 */
+    th:nth-child(1), td:nth-child(1) { width: 28%; }
+    th:nth-child(2), td:nth-child(2) { width: 6%; text-align:center; }
+    th:nth-child(3), td:nth-child(3) { width: 8%; text-align:right; }
+    th:nth-child(4), td:nth-child(4) { width: 14%; }
+    th:nth-child(5), td:nth-child(5) { width: 18%; }
+    th:nth-child(6), td:nth-child(6) { width: 8%; text-align:right; }
+    th:nth-child(7), td:nth-child(7) { width: 18%; }
     th { color:#cbd5e1; text-align:left; background:#0b1220; position:sticky; top:0; }
     .ok { color: var(--ok); }
     .bad { color: var(--bad); }
