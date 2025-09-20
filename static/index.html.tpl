@@ -15,14 +15,15 @@
     .stat .num { font-size: 22px; font-weight: 800; color:#fff; }
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
     .card { background: var(--card); border: 1px solid #1f2937; border-radius: 16px; padding: 18px; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+    .card-wide { grid-column: 1 / -1; }
     .card h3 { margin: 0 0 12px; font-size: 17px; color:#fff; border-left:3px solid var(--accent); padding-left:10px; }
     code { background:#0b1220; padding: 2px 6px; border-radius: 6px; border: 1px solid #1f2937; color:#d1d5db; }
     small { color: var(--muted); }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    table { color:#e5e7eb; width:100%; border-collapse:collapse; display:block; overflow:auto; max-height:420px; }
+    table { color:#e5e7eb; width:100%; border-collapse:collapse; display:block; overflow:auto; max-height:720px; }
     thead, tbody { display: table; width: 100%; table-layout: fixed; }
-    tbody { display: block; max-height: 360px; overflow: auto; }
+    tbody { display: block; max-height: 660px; overflow: auto; }
     th,td { padding:8px 10px; border-bottom:1px solid #1f2937; word-break: break-all; }
     th { color:#cbd5e1; text-align:left; background:#0b1220; position:sticky; top:0; }
     .ok { color: var(--ok); }
@@ -108,6 +109,15 @@
       </div>
 
       <div class="card">
+        <h3>辅助输出</h3>
+        <ul>
+          <li><a href="sub/github.txt"><code>github.txt</code></a> GitHub节点</li>
+          <li><a href="sub/proto/ss-base64.txt"><code>ss-base64.txt</code></a> SS Base64</li>
+          <li><a href="health.json"><code>health.json</code></a> 健康信息</li>
+        </ul>
+      </div>
+
+      <div class="card card-wide">
         <h3>源详细信息</h3>
         <p><small>包含机场名称、容量/剩余、协议、复制与测速、详情页。</small></p>
         <div id="url-meta"><small>加载中...</small></div>
@@ -201,15 +211,6 @@
           }
           loadMeta(); loadDailyChart();
         </script>
-      </div>
-
-      <div class="card">
-        <h3>辅助输出</h3>
-        <ul>
-          <li><a href="sub/github.txt"><code>github.txt</code></a> GitHub节点</li>
-          <li><a href="sub/proto/ss-base64.txt"><code>ss-base64.txt</code></a> SS Base64</li>
-          <li><a href="health.json"><code>health.json</code></a> 健康信息</li>
-        </ul>
       </div>
     </div>
 
