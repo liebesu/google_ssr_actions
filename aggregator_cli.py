@@ -1005,6 +1005,20 @@ def main():
         write_json(os.path.join(output_dir, "health.json"), health)
         # also publish url meta for UI table
         write_json(os.path.join(paths["sub"], "url_meta.json"), url_meta)
+        # daily stats for chart: append today's added counts
+        try:
+            stats_path = os.path.join(paths["sub"], "stats_daily.json")
+            prev = read_json(stats_path, [])
+            if not isinstance(prev, list):
+                prev = []
+            today = build_dt.astimezone(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d")
+            entry = {"date": today, "google_added": int(health.get("google_urls_count",0)), "github_added": int(health.get("github_urls_count",0))}
+            # keep last 30 days; overwrite today
+            prev = [e for e in prev if e.get("date") != today] + [entry]
+            prev = prev[-30:]
+            write_json(stats_path, prev)
+        except Exception:
+            pass
 
     # Index page
     if args.emit_index:

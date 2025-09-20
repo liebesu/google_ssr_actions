@@ -5,18 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Google SSR Actions - 订阅聚合</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; background: #f7fafc; }
-    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px; }
+    :root { --bg:#0f172a; --panel:#0b1220; --muted:#94a3b8; --card:#111827; --accent:#60a5fa; --ok:#10b981; --bad:#ef4444; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; margin:0; background:linear-gradient(135deg,#0f172a,#111827); color:#e5e7eb; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 28px; }
     .header { display:flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
-    .subtitle { color:#6b7280; margin-top: 4px; }
-    .stats { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 12px; margin: 16px 0 24px; }
-    .stat { background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:14px; text-align:center; }
-    .stat .num { font-size: 20px; font-weight: 700; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
-    .card { background:#fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 16px; }
-    .card h3 { margin: 0 0 10px; font-size: 16px; }
-    code { background:#f3f4f6; padding: 2px 6px; border-radius: 4px; }
-    small { color: #6b7280; }
+    .subtitle { color: var(--muted); margin-top: 4px; }
+    .stats { display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 12px; margin: 16px 0 24px; }
+    .stat { background: var(--panel); border:1px solid #1f2937; border-radius:12px; padding:16px; text-align:center; box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+    .stat .num { font-size: 22px; font-weight: 800; color:#fff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+    .card { background: var(--card); border: 1px solid #1f2937; border-radius: 16px; padding: 18px; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+    .card h3 { margin: 0 0 12px; font-size: 17px; color:#fff; border-left:3px solid var(--accent); padding-left:10px; }
+    code { background:#0b1220; padding: 2px 6px; border-radius: 6px; border: 1px solid #1f2937; color:#d1d5db; }
+    small { color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    table { color:#e5e7eb; }
+    th,td { padding:8px 10px; border-bottom:1px solid #1f2937; }
+    th { color:#cbd5e1; text-align:left; background:#0b1220; position:sticky; top:0; }
+    .ok { color: var(--ok); }
+    .bad { color: var(--bad); }
+    .chart { background: var(--panel); border:1px solid #1f2937; border-radius:12px; padding:12px; margin-top:16px; }
   </style>
   <script>
     const AUTH_HASH = "__AUTH_HASH__";
@@ -92,6 +101,10 @@
         <h3>源详细信息</h3>
         <p><small>以下为每个订阅URL的可用性、节点与流量概览（仅显示可用源）。</small></p>
         <div id="url-meta"><small>加载中...</small></div>
+        <div class="chart">
+          <h4 style="margin:0 0 8px 0">每日新增可用URL</h4>
+          <canvas id="dailyChart" height="120"></canvas>
+        </div>
         <script>
           async function loadMeta() {
             try {
@@ -124,7 +137,33 @@
               document.getElementById('url-meta').innerHTML = '<small>未获取到源详情</small>';
             }
           }
-          loadMeta();
+          async function loadDailyChart() {
+            try {
+              const r = await fetch('sub/stats_daily.json', { cache:'no-cache' });
+              if (!r.ok) return;
+              const d = await r.json();
+              const labels = d.map(x=>x.date);
+              const google = d.map(x=>x.google_added||0);
+              const github = d.map(x=>x.github_added||0);
+              const canvas = document.getElementById('dailyChart');
+              const ctx = canvas.getContext('2d');
+              // 极简绘制
+              const max = Math.max(1, ...google, ...github);
+              const W = canvas.width = canvas.clientWidth;
+              const H = canvas.height;
+              function plot(series, color, yoff) {
+                ctx.strokeStyle=color; ctx.lineWidth=2; ctx.beginPath();
+                series.forEach((v,i)=>{
+                  const x = (W-20) * (i/(series.length-1)) + 10;
+                  const y = H-10 - (H-20) * (v/max);
+                  if (i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+                }); ctx.stroke();
+              }
+              ctx.clearRect(0,0,W,H); ctx.fillStyle='#0b1220'; ctx.fillRect(0,0,W,H);
+              plot(google,'#60a5fa'); plot(github,'#10b981');
+            } catch(e) {}
+          }
+          loadMeta(); loadDailyChart();
         </script>
       </div>
 

@@ -46,6 +46,8 @@ jobs:
           mkdir -p dist
           # Disable proxy in CI and emit index/health to avoid 404
           export DISABLE_PROXY=1
+          # Optional simple password for homepage (set in repository Variables -> AUTH_PLAIN)
+          if [ -n "${{ vars.AUTH_PLAIN }}" ]; then export AUTH_PLAIN="${{ vars.AUTH_PLAIN }}"; fi
           python aggregator_cli.py --output-dir dist --max 1200 --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery --emit-health --emit-index
 
       - name: Persist history back to repo
