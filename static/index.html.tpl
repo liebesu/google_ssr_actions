@@ -118,6 +118,23 @@
 
     <div class="grid">
       <div class="card">
+        <h3>关键指标（7/30天）</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px">
+          <div>
+            <small>新增(7天)</small>
+            <canvas id="spark-added-7" height="40"></canvas>
+          </div>
+          <div>
+            <small>失效(7天)</small>
+            <canvas id="spark-removed-7" height="40"></canvas>
+          </div>
+          <div>
+            <small>存活(30天)</small>
+            <canvas id="spark-alive-30" height="40"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="card">
         <h3>订阅文件</h3>
         <ul>
           <li><a href="sub/all.txt"><code>sub/all.txt</code></a> 全量订阅</li>
@@ -171,11 +188,29 @@
           }
           async function testSpeed(url){
             const t0 = performance.now();
-            try{
-              const r = await fetch(url, {method:'HEAD', mode:'no-cors'});
-            }catch(e){}
+            try{ await fetch(url, {method:'HEAD', mode:'no-cors'}); }catch(e){}
             const t1 = performance.now();
-            alert('粗略测速: ' + Math.round(t1 - t0) + ' ms');
+            return Math.round(t1 - t0);
+          }
+          async function runBatchSpeed(urls, concurrency){
+            const results = new Array(urls.length).fill(null);
+            let idx = 0;
+            async function worker(){
+              while(idx < urls.length){
+                const i = idx++;
+                const u = urls[i];
+                const ms = await testSpeed(u);
+                results[i] = ms;
+                const cell = document.querySelector(`[data-url-id="${i}"]`);
+                if(cell){
+                  cell.textContent = ms;
+                  cell.style.color = ms<=300?'#10b981':(ms<=800?'#60a5fa':'#f59e0b');
+                }
+              }
+            }
+            const workers = Array.from({length: Math.min(concurrency, urls.length)}, ()=>worker());
+            await Promise.all(workers.map(w=>w()));
+            return results;
           }
           async function loadMeta() {
             try {
@@ -184,7 +219,7 @@
               let data = await res.json();
               // 只展示可用源
               data = (Array.isArray(data) ? data : []).filter(x=>x && x.available);
-              const rows = data.map(function(item){
+              const rows = data.map(function(item, i){
                 const q = (item.quality_score ?? 0);
                 const qColor = q>=80?'#10b981':(q>=60?'#60a5fa':'#f59e0b');
                 return '<tr>' +
@@ -196,11 +231,11 @@
                   '<td>' + (item.nodes_total ?? 0) + '</td>' +
                   '<td>' + (item.protocols ?? '') + '</td>' +
                   '<td>' + ((item.traffic?.remaining ?? '-') + ' / ' + (item.traffic?.total ?? '-') + ' ' + (item.traffic?.unit ?? '')) + '</td>' +
-                  '<td>' + (item.response_ms ?? '-') + '</td>' +
+                  '<td data-url-id="' + i + '">' + (item.response_ms ?? '-') + '</td>' +
                   '<td><b style="color:' + qColor + '">' + q + '</b></td>' +
                   '<td>' +
                     '<button onclick="copyText(\'' + (item.url||'') + '\')" style="padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">复制</button>' +
-                    '<button onclick="testSpeed(\'' + (item.url||'') + '\')" style="margin-left:6px;padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">测速</button>' +
+                    '<button class="btn-speed" data-url="' + (item.url||'') + '" style="margin-left:6px;padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">测速</button>' +
                     '<span style="margin-left:6px;color:#94a3b8">' + ((item.source||'-')) + ' · ' + ((item.first_seen||'-')) + '</span>' +
                     (item.detail_page ? '<a href="' + item.detail_page + '" style="margin-left:8px">详情</a>' : '') +
                   '</td>' +
@@ -220,6 +255,17 @@
                 '<tbody>' + rows + '</tbody>' +
                 '</table>';
               document.getElementById('url-meta').innerHTML = html;
+              // 绑定单击测速
+              document.querySelectorAll('.btn-speed').forEach(btn=>{
+                btn.addEventListener('click', async (e)=>{
+                  const u = e.currentTarget.getAttribute('data-url');
+                  const ms = await testSpeed(u);
+                  e.currentTarget.closest('tr').querySelector('[data-url-id]').textContent = ms;
+                });
+              });
+              // 批量测速（限并发 6）
+              const urls = data.map(x=>x.url);
+              runBatchSpeed(urls, 6);
             } catch(e) {
               document.getElementById('url-meta').innerHTML = '<small>未获取到源详情</small>';
             }
@@ -252,7 +298,25 @@
               plot(google,'#60a5fa'); plot(github,'#10b981'); plot(added,'#a78bfa'); plot(removed,'#f87171');
             } catch(e) {}
           }
-          loadMeta(); loadDailyChart();
+          function drawSparkline(canvasId, series, color){
+            const c = document.getElementById(canvasId); if(!c) return; const ctx=c.getContext('2d');
+            const W = c.width = c.clientWidth || 160; const H = c.height; const max = Math.max(1, ...series);
+            ctx.clearRect(0,0,W,H); ctx.strokeStyle=color; ctx.lineWidth=2; ctx.beginPath();
+            series.forEach((v,i)=>{ const x=(W-6)*(i/(series.length-1))+3; const y=H-3 - (H-6)*(v/max); if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y); });
+            ctx.stroke();
+          }
+          async function loadSparklines(){
+            try{
+              const r = await fetch('sub/stats_daily.json', { cache:'no-cache' }); if(!r.ok) return;
+              const d = await r.json();
+              const last7 = d.slice(-7);
+              const last30 = d.slice(-30);
+              drawSparkline('spark-added-7', last7.map(x=>x.new_total||0), '#60a5fa');
+              drawSparkline('spark-removed-7', last7.map(x=>x.removed_total||0), '#f87171');
+              drawSparkline('spark-alive-30', last30.map(x=>x.alive_total||0), '#10b981');
+            }catch(e){}
+          }
+          loadMeta(); loadDailyChart(); loadSparklines();
         </script>
       </div>
     </div>
