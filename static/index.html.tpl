@@ -233,6 +233,8 @@
               let data = await res.json();
               // 只展示可用源
               data = (Array.isArray(data) ? data : []).filter(x=>x && x.available);
+              // 按质量分倒序排序
+              data.sort((a,b)=> (b.quality_score||0) - (a.quality_score||0));
               const rows = data.map(function(item, i){
                 const q = (item.quality_score ?? 0);
                 const qColor = q>=80?'#10b981':(q>=60?'#60a5fa':'#f59e0b');
