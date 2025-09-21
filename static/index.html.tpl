@@ -14,9 +14,9 @@
     .stat { background: var(--panel); border:1px solid #1f2937; border-radius:12px; padding:16px; text-align:center; box-shadow: 0 8px 20px rgba(0,0,0,.2); }
     .stat .num { font-size: 22px; font-weight: 800; color:#fff; }
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
-    .card { background: var(--card); border: 1px solid #1f2937; border-radius: 16px; padding: 18px; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+    .card { background: var(--card); border: 1px solid #1f2937; border-radius: 16px; padding: 18px; box-shadow: 0 20px 40px rgba(2,6,23,.35), inset 0 0 0 1px rgba(255,255,255,.02); }
     .card-wide { grid-column: 1 / -1; }
-    .card h3 { margin: 0 0 12px; font-size: 17px; color:#fff; border-left:3px solid var(--accent); padding-left:10px; }
+    .card h3 { margin: 0 0 12px; font-size: 17px; color:#fff; border-left:3px solid var(--accent); padding-left:10px; letter-spacing: .3px; text-shadow: 0 1px 0 rgba(0,0,0,.25); }
     code { background:#0b1220; padding: 2px 6px; border-radius: 6px; border: 1px solid #1f2937; color:#d1d5db; }
     small { color: var(--muted); }
     a { color: var(--accent); text-decoration: none; }
@@ -41,7 +41,7 @@
     .ok { color: var(--ok); }
     .bad { color: var(--bad); }
     .chart { background: var(--panel); border:1px solid #1f2937; border-radius:12px; padding:12px; margin-top:16px; }
-    .pill { display:inline-block; padding:2px 8px; border-radius:9999px; font-size:12px; border:1px solid #1f2937; }
+    .pill { display:inline-block; padding:2px 8px; border-radius:9999px; font-size:12px; border:1px solid #1f2937; background: linear-gradient(90deg,#0b1220,#0f172a); box-shadow: inset 0 0 0 1px rgba(255,255,255,.03); }
     /* Auth overlay */
     .auth-mask { position: fixed; inset:0; display:flex; align-items:center; justify-content:center; backdrop-filter: blur(12px); background: rgba(2,6,23,0.55); z-index: 50; }
     .auth-card { width: 92%; max-width: 380px; background: radial-gradient(120% 120% at 10% 10%, #0b1220 0%, #0a0f1c 60%, #0b1220 100%);

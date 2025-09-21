@@ -40,14 +40,30 @@ jobs:
           if [ -n "${{ secrets.SCRAPER_CONFIG_JSON }}" ]; then
             printf "%s\n" "${{ secrets.SCRAPER_CONFIG_JSON }}" > scraper_config.json
           fi
+          # prepare auth env from variables/secrets
+          if [ -n "${{ vars.AUTH_PLAIN }}" ]; then
+            echo "AUTH_PLAIN from vars configured"
+          fi
+          if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then
+            echo "AUTH_SHA256 from secrets configured"
+          fi
+          if [ -n "${{ vars.AUTH_SHA256 }}" ]; then
+            echo "AUTH_SHA256 from vars configured"
+          fi
+          if [ -n "${{ vars.AUTH_USER }}" ]; then
+            echo "AUTH_USER from vars configured"
+          fi
 
       - name: Generate subscriptions
         run: |
           mkdir -p dist
           # Disable proxy in CI and emit index/health to avoid 404
           export DISABLE_PROXY=1
-          # Optional simple password for homepage (set in repository Variables -> AUTH_PLAIN)
+          # Pass optional auth envs
           if [ -n "${{ vars.AUTH_PLAIN }}" ]; then export AUTH_PLAIN="${{ vars.AUTH_PLAIN }}"; fi
+          if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ secrets.AUTH_SHA256 }}"; fi
+          if [ -n "${{ vars.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ vars.AUTH_SHA256 }}"; fi
+          if [ -n "${{ vars.AUTH_USER }}" ]; then export AUTH_USER="${{ vars.AUTH_USER }}"; fi
           python aggregator_cli.py --output-dir dist --max 1200 --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery --emit-health --emit-index
 
       - name: Persist history back to repo
