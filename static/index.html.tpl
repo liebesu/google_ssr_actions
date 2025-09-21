@@ -78,7 +78,16 @@
     }
     function gate() {
       if (!AUTH_HASH) { document.documentElement.style.display = ''; return; }
-      showAuth();
+      // 优先读取本地令牌
+      try{
+        const tk = localStorage.getItem('gauth');
+        if(tk && tk.toLowerCase() === AUTH_HASH.toLowerCase()){
+          document.documentElement.style.display = '';
+          return;
+        }
+      }catch(e){}
+      // 无令牌则跳登录页
+      location.replace('login.html');
     }
     document.documentElement.style.display = 'none';
     document.addEventListener('DOMContentLoaded', gate);

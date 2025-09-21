@@ -404,6 +404,7 @@ def generate_index_html(base_url_paths: Dict[str, str], health: Dict[str, object
     protocol_counts = health.get("protocol_counts", {}) or {}
     mapping = {
         "__AUTH_HASH__": str(health.get("auth_sha256", "")),
+        "__AUTH_USER__": str(health.get("auth_user", "")),
         "__TS__": str(health.get("build_time_utc", "")),
         "__TS_CN__": str(health.get("build_time_cn", "")),
         "__NEXT__": str(health.get("next_run_utc", "")),
@@ -887,6 +888,7 @@ def main():
             auth_sha256_env = hashlib.sha256(auth_plain.encode("utf-8")).hexdigest()
         except Exception:
             auth_sha256_env = ""
+    auth_user = os.getenv("AUTH_USER", "")
 
     health = {
         "build_time_utc": build_dt.strftime("%Y-%m-%d %H:%M:%S"),
@@ -910,6 +912,7 @@ def main():
         "keys_total": keys_total,
         "keys_ok": keys_ok,
         "auth_sha256": auth_sha256_env,
+        "auth_user": auth_user,
     }
     if args.emit_health:
         write_json(os.path.join(output_dir, "health.json"), health)
@@ -947,6 +950,17 @@ def main():
             if os.path.exists(src_tpl):
                 with open(src_tpl, "r", encoding="utf-8") as f:
                     write_text(os.path.join(output_dir, "source.html"), f.read())
+        except Exception:
+            pass
+        # emit login page
+        try:
+            login_tpl = os.path.join(PROJECT_ROOT, "static", "login.html")
+            if os.path.exists(login_tpl):
+                with open(login_tpl, "r", encoding="utf-8") as f:
+                    tpl = f.read()
+                tpl = tpl.replace("__AUTH_HASH__", str(health.get("auth_sha256", "")))
+                tpl = tpl.replace("__AUTH_USER__", str(health.get("auth_user", "")))
+                write_text(os.path.join(output_dir, "login.html"), tpl)
         except Exception:
             pass
 
