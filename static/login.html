@@ -27,6 +27,7 @@
       err.textContent = '';
       if(!AUTH_HASH){ location.replace('index.html'); return; }
       if(!u){ err.textContent = '请输入用户名'; return; }
+      if((AUTH_USER||'').trim().length>0 && u !== AUTH_USER){ err.textContent='用户名不正确'; return; }
       if(!p){ err.textContent = '请输入密码'; return; }
       const h = await sha256(p);
       if(h.toLowerCase() === AUTH_HASH.toLowerCase()){

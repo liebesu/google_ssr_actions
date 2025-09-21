@@ -55,6 +55,7 @@
   </style>
   <script>
     const AUTH_HASH = "__AUTH_HASH__";
+    const AUTH_USER = "__AUTH_USER__";
     async function sha256(message) {
       const msgBuffer = new TextEncoder().encode(message);
       const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
@@ -83,15 +84,14 @@
     }
     function gate() {
       if (!AUTH_HASH) { document.documentElement.style.display = ''; return; }
-      // 优先读取本地令牌
       try{
         const tk = localStorage.getItem('gauth');
-        if(tk && tk.toLowerCase() === AUTH_HASH.toLowerCase()){
-          document.documentElement.style.display = '';
-          return;
-        }
+        const gu = localStorage.getItem('guser') || '';
+        const userRequired = (AUTH_USER || '').trim().length > 0;
+        const passOk = !!tk && (tk.toLowerCase() === AUTH_HASH.toLowerCase());
+        const userOk = userRequired ? (gu === AUTH_USER) : true;
+        if (passOk && userOk) { document.documentElement.style.display = ''; return; }
       }catch(e){}
-      // 无令牌则跳登录页
       location.replace('login.html');
     }
     document.documentElement.style.display = 'none';
