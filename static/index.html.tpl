@@ -86,10 +86,10 @@
       if (!AUTH_HASH) { document.documentElement.style.display = ''; return; }
       try{
         const tk = localStorage.getItem('gauth');
-        const gu = localStorage.getItem('guser') || '';
+        const gu = (localStorage.getItem('guser') || '').trim();
         const userRequired = (AUTH_USER || '').trim().length > 0;
         const passOk = !!tk && (tk.toLowerCase() === AUTH_HASH.toLowerCase());
-        const userOk = userRequired ? (gu === AUTH_USER) : true;
+        const userOk = userRequired ? (gu === (AUTH_USER||'').trim()) : true;
         if (passOk && userOk) { document.documentElement.style.display = ''; return; }
       }catch(e){}
       location.replace('login.html');

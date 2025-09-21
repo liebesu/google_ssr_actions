@@ -53,6 +53,9 @@ jobs:
           if [ -n "${{ vars.AUTH_USER }}" ]; then
             echo "AUTH_USER from vars configured"
           fi
+          if [ -n "${{ secrets.AUTH_USER }}" ]; then
+            echo "AUTH_USER from secrets configured"
+          fi
 
       - name: Generate subscriptions
         run: |
@@ -64,6 +67,7 @@ jobs:
           if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ secrets.AUTH_SHA256 }}"; fi
           if [ -n "${{ vars.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ vars.AUTH_SHA256 }}"; fi
           if [ -n "${{ vars.AUTH_USER }}" ]; then export AUTH_USER="${{ vars.AUTH_USER }}"; fi
+          if [ -n "${{ secrets.AUTH_USER }}" ]; then export AUTH_USER="${{ secrets.AUTH_USER }}"; fi
           python aggregator_cli.py --output-dir dist --max 1200 --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery --emit-health --emit-index
 
       - name: Persist history back to repo
