@@ -580,6 +580,7 @@ def main():
             per_url_latency_nodes[u] = lat_ms
 
     # Deduplicate and cap
+    nodes_before_dedup = len(all_nodes)
     if args.dedup:
         all_nodes = list(dict.fromkeys(all_nodes))
     if args.max and len(all_nodes) > args.max:
@@ -777,6 +778,7 @@ def main():
     # Health info
     # Build per-URL metadata (availability, nodes, traffic) for index table
     url_meta: List[Dict[str, object]] = []
+    parse_ok_count = 0
     # Build a set of GitHub-discovered URLs for source tagging
     gh_norm_set: Set[str] = set()
     try:
@@ -834,6 +836,12 @@ def main():
             write_json(os.path.join(paths["providers"], f"{sid}.json"), prov_meta)
         except Exception:
             pass
+        # Quality score estimation: blend latency and parse success
+        lat_component = 100.0 - min(100.0, (meta["response_ms"] or 2000.0) / 20.0)
+        parse_component = 100.0 if nodes_total > 0 else 0.0
+        quality_score = int(round(0.6 * lat_component + 0.4 * parse_component))
+        if nodes_total > 0:
+            parse_ok_count += 1
         meta.update({
             "nodes_total": nodes_total,
             "protocols": proto_text,
@@ -843,6 +851,7 @@ def main():
             "source": ("github" if u in gh_norm_set else "google"),
             "first_seen": first_seen_map.get(u, date_today),
             "detail_page": f"source.html?id={sid}",
+            "quality_score": quality_score,
             "traffic": {
                 "total": traffic.get("total_traffic"),
                 "remaining": traffic.get("remaining_traffic"),
@@ -889,6 +898,10 @@ def main():
         "sources_new": sources_new,
         "sources_removed": sources_removed,
         "nodes_total": len(all_nodes),
+        "nodes_before_dedup": nodes_before_dedup,
+        "nodes_after_dedup": len(all_nodes),
+        "dedup_ratio": round(1.0 - (len(all_nodes) / nodes_before_dedup), 4) if nodes_before_dedup else 0.0,
+        "parse_ok_rate": round((parse_ok_count / max(1, len(alive_urls))), 4),
         "protocol_counts": protocol_counts,
         "github_urls_count": len(github_alive_urls),
         "google_urls_count": len(google_alive_urls) if google_alive_urls else (len(alive_urls) if not gh_urls else 0),

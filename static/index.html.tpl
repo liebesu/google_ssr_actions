@@ -185,6 +185,8 @@
               // 只展示可用源
               data = (Array.isArray(data) ? data : []).filter(x=>x && x.available);
               const rows = data.map(function(item){
+                const q = (item.quality_score ?? 0);
+                const qColor = q>=80?'#10b981':(q>=60?'#60a5fa':'#f59e0b');
                 return '<tr>' +
                   '<td><div style="display:flex;gap:8px;align-items:center">' +
                     '<a href="' + (item.url||'#') + '" target="_blank">源</a>' +
@@ -195,6 +197,7 @@
                   '<td>' + (item.protocols ?? '') + '</td>' +
                   '<td>' + ((item.traffic?.remaining ?? '-') + ' / ' + (item.traffic?.total ?? '-') + ' ' + (item.traffic?.unit ?? '')) + '</td>' +
                   '<td>' + (item.response_ms ?? '-') + '</td>' +
+                  '<td><b style="color:' + qColor + '">' + q + '</b></td>' +
                   '<td>' +
                     '<button onclick="copyText(\'' + (item.url||'') + '\')" style="padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">复制</button>' +
                     '<button onclick="testSpeed(\'' + (item.url||'') + '\')" style="margin-left:6px;padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">测速</button>' +
@@ -211,6 +214,7 @@
                 '<th>协议</th>' +
                 '<th>流量(剩余/总量)</th>' +
                 '<th>耗时(ms)</th>' +
+                '<th>质量</th>' +
                 '<th>操作</th>' +
                 '</tr></thead>' +
                 '<tbody>' + rows + '</tbody>' +
