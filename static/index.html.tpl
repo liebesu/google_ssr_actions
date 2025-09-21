@@ -37,6 +37,16 @@
     .ok { color: var(--ok); }
     .bad { color: var(--bad); }
     .chart { background: var(--panel); border:1px solid #1f2937; border-radius:12px; padding:12px; margin-top:16px; }
+    /* Auth overlay */
+    .auth-mask { position: fixed; inset:0; display:flex; align-items:center; justify-content:center; backdrop-filter: blur(12px); background: rgba(2,6,23,0.55); z-index: 50; }
+    .auth-card { width: 92%; max-width: 380px; background: radial-gradient(120% 120% at 10% 10%, #0b1220 0%, #0a0f1c 60%, #0b1220 100%);
+      border:1px solid #1f2937; border-radius: 16px; padding: 18px; box-shadow: 0 20px 40px rgba(0,0,0,.35);
+    }
+    .auth-title { margin:0 0 8px 0; font-size: 18px; color:#e5e7eb; }
+    .auth-sub { margin:0 0 12px 0; color:#94a3b8; font-size: 13px; }
+    .auth-input { width:100%; padding:10px 12px; background:#0b1220; border:1px solid #1f2937; border-radius: 10px; color:#e5e7eb; outline:none; }
+    .auth-btn { margin-top:10px; width:100%; padding:10px 12px; border-radius:10px; border:1px solid #2563eb; background: linear-gradient(90deg,#1d4ed8,#2563eb,#1d4ed8); color:#e5e7eb; cursor:pointer; }
+    .auth-err { color:#f87171; font-size: 12px; min-height: 16px; margin-top:6px; }
   </style>
   <script>
     const AUTH_HASH = "__AUTH_HASH__";
@@ -46,18 +56,29 @@
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
     }
-    async function gate() {
-      if (!AUTH_HASH) { document.documentElement.style.display = ''; return; }
-      let ok = false;
-      for (let i = 0; i < 3; i++) {
-        const pwd = window.prompt('请输入访问密码');
-        if (pwd === null) break;
+    function showAuth() {
+      const mask = document.getElementById('auth-mask');
+      const input = document.getElementById('auth-input');
+      const err = document.getElementById('auth-err');
+      const btn = document.getElementById('auth-btn');
+      mask.style.display = 'flex';
+      input.focus();
+      async function submit() {
+        const pwd = input.value || '';
         const h = await sha256(pwd);
-        if (h.toLowerCase() === AUTH_HASH.toLowerCase()) { ok = true; break; }
-        alert('密码错误');
+        if (h.toLowerCase() === AUTH_HASH.toLowerCase()) {
+          mask.style.display = 'none';
+          document.documentElement.style.display = '';
+        } else {
+          err.textContent = '密码错误，请重试';
+        }
       }
-      if (!ok) { document.body.innerHTML = '<p style="margin:24px;color:#ef4444">未授权访问</p>'; return; }
-      document.documentElement.style.display = '';
+      btn.addEventListener('click', submit);
+      input.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ submit(); }});
+    }
+    function gate() {
+      if (!AUTH_HASH) { document.documentElement.style.display = ''; return; }
+      showAuth();
     }
     document.documentElement.style.display = 'none';
     document.addEventListener('DOMContentLoaded', gate);
@@ -73,6 +94,15 @@
 </head>
 <body>
   <div class="wrap">
+    <div id="auth-mask" class="auth-mask" style="display:none">
+      <div class="auth-card">
+        <h3 class="auth-title">访问认证</h3>
+        <p class="auth-sub">请输入访问密码以查看页面内容</p>
+        <input id="auth-input" class="auth-input" type="password" placeholder="输入密码" />
+        <button id="auth-btn" class="auth-btn">进入</button>
+        <div id="auth-err" class="auth-err"></div>
+      </div>
+    </div>
     <div class="header">
       <h1>Google SSR Actions</h1>
       <small>构建时间(中国时区)：__TS_CN__</small>
