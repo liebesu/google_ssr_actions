@@ -168,7 +168,8 @@
                   '<td>' +
                     '<button onclick="copyText(\'' + (item.url||'') + '\')" style="padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">复制</button>' +
                     '<button onclick="testSpeed(\'' + (item.url||'') + '\')" style="margin-left:6px;padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">测速</button>' +
-                    (item.detail_page ? '<a href="' + item.detail_page + '" style="margin-left:6px">详情</a>' : '') +
+                    '<span style="margin-left:6px;color:#94a3b8">' + ((item.source||'-')) + ' · ' + ((item.first_seen||'-')) + '</span>' +
+                    (item.detail_page ? '<a href="' + item.detail_page + '" style="margin-left:8px">详情</a>' : '') +
                   '</td>' +
                 '</tr>';
               }).join('');

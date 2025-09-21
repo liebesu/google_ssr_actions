@@ -459,6 +459,17 @@ def main():
     except Exception:
         prev_live_urls = []
 
+    # Track first-seen dates for URLs
+    first_seen_path = os.path.join(data_dir, "url_first_seen.json")
+    first_seen_map = read_json(first_seen_path, {})
+    if not isinstance(first_seen_map, dict):
+        first_seen_map = {}
+    try:
+        cn_tz = ZoneInfo("Asia/Shanghai")
+        date_today = datetime.now(cn_tz).strftime("%Y-%m-%d")
+    except Exception:
+        date_today = datetime.utcnow().strftime("%Y-%m-%d")
+
     # Optional: run one-shot scrape to refresh discovered URLs (respect SerpAPI quota)
     if not args.skip_scrape:
         try:
@@ -538,6 +549,14 @@ def main():
     write_json(os.path.join(data_dir, "history_urls.json"), merged_history)
     write_json(os.path.join(data_dir, "live_urls.json"), alive_urls)
     write_json(rate_path, rate_state)
+    # Update first-seen dates for any new URLs
+    changed_first_seen = False
+    for u in merged_history:
+        if u not in first_seen_map:
+            first_seen_map[u] = date_today
+            changed_first_seen = True
+    if changed_first_seen:
+        write_json(first_seen_path, first_seen_map)
 
     # Fetch nodes
     all_nodes: List[str] = []
@@ -758,6 +777,13 @@ def main():
     # Health info
     # Build per-URL metadata (availability, nodes, traffic) for index table
     url_meta: List[Dict[str, object]] = []
+    # Build a set of GitHub-discovered URLs for source tagging
+    gh_norm_set: Set[str] = set()
+    try:
+        gh_norm_set = set([uu for uu in (normalize_subscribe_url(uu) for uu in gh_urls) if uu]) if gh_urls else set()
+    except Exception:
+        gh_norm_set = set()
+
     for u in alive_urls:
         meta = {"url": u, "available": True}
         # Try to fetch a small sample for traffic hints
@@ -814,6 +840,8 @@ def main():
             "id": sid,
             "host": host,
             "provider": provider,
+            "source": ("github" if u in gh_norm_set else "google"),
+            "first_seen": first_seen_map.get(u, date_today),
             "detail_page": f"source.html?id={sid}",
             "traffic": {
                 "total": traffic.get("total_traffic"),
