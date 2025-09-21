@@ -26,17 +26,22 @@
     tbody { display: block; max-height: 660px; overflow: auto; scrollbar-gutter: stable; }
     th,td { padding:8px 10px; border-bottom:1px solid #1f2937; word-break: break-all; }
     /* 固定列宽，保证表头与内容对齐 */
-    th:nth-child(1), td:nth-child(1) { width: 28%; }
+    th:nth-child(1), td:nth-child(1) { width: 24%; }
     th:nth-child(2), td:nth-child(2) { width: 6%; text-align:center; }
     th:nth-child(3), td:nth-child(3) { width: 8%; text-align:right; }
     th:nth-child(4), td:nth-child(4) { width: 14%; }
-    th:nth-child(5), td:nth-child(5) { width: 18%; }
+    th:nth-child(5), td:nth-child(5) { width: 15%; }
     th:nth-child(6), td:nth-child(6) { width: 8%; text-align:right; }
-    th:nth-child(7), td:nth-child(7) { width: 18%; }
+    th:nth-child(7), td:nth-child(7) { width: 7%; text-align:right; }
+    th:nth-child(8), td:nth-child(8) { width: 9%; }
+    th:nth-child(9), td:nth-child(9) { width: 9%; }
     th { color:#cbd5e1; text-align:left; background:#0b1220; position:sticky; top:0; }
+    tbody tr:nth-child(even) { background: rgba(31,41,55,.35); }
+    tbody tr:hover { background: rgba(59,130,246,.15); }
     .ok { color: var(--ok); }
     .bad { color: var(--bad); }
     .chart { background: var(--panel); border:1px solid #1f2937; border-radius:12px; padding:12px; margin-top:16px; }
+    .pill { display:inline-block; padding:2px 8px; border-radius:9999px; font-size:12px; border:1px solid #1f2937; }
     /* Auth overlay */
     .auth-mask { position: fixed; inset:0; display:flex; align-items:center; justify-content:center; backdrop-filter: blur(12px); background: rgba(2,6,23,0.55); z-index: 50; }
     .auth-card { width: 92%; max-width: 380px; background: radial-gradient(120% 120% at 10% 10%, #0b1220 0%, #0a0f1c 60%, #0b1220 100%);
@@ -231,6 +236,9 @@
               const rows = data.map(function(item, i){
                 const q = (item.quality_score ?? 0);
                 const qColor = q>=80?'#10b981':(q>=60?'#60a5fa':'#f59e0b');
+                const src = (item.source||'').toLowerCase();
+                const pillColor = src==='github'?'#111827': '#0b1220';
+                const pillText = src==='github'?'GitHub':'Google';
                 return '<tr>' +
                   '<td><div style="display:flex;gap:8px;align-items:center">' +
                     '<a href="' + (item.url||'#') + '" target="_blank">源</a>' +
@@ -242,10 +250,11 @@
                   '<td>' + ((item.traffic?.remaining ?? '-') + ' / ' + (item.traffic?.total ?? '-') + ' ' + (item.traffic?.unit ?? '')) + '</td>' +
                   '<td data-url-id="' + i + '">' + (item.response_ms ?? '-') + '</td>' +
                   '<td><b style="color:' + qColor + '">' + q + '</b></td>' +
+                  '<td><span class="pill" style="background:' + pillColor + '">' + pillText + '</span></td>' +
+                  '<td>' + (item.first_seen || '-') + '</td>' +
                   '<td>' +
                     '<button onclick="copyText(\'' + (item.url||'') + '\')" style="padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">复制</button>' +
                     '<button class="btn-speed" data-url="' + (item.url||'') + '" style="margin-left:6px;padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">测速</button>' +
-                    '<span style="margin-left:6px;color:#94a3b8">' + ((item.source||'-')) + ' · ' + ((item.first_seen||'-')) + '</span>' +
                     (item.detail_page ? '<a href="' + item.detail_page + '" style="margin-left:8px">详情</a>' : '') +
                   '</td>' +
                 '</tr>';
@@ -259,6 +268,8 @@
                 '<th>流量(剩余/总量)</th>' +
                 '<th>耗时(ms)</th>' +
                 '<th>质量</th>' +
+                '<th>来源</th>' +
+                '<th>采集</th>' +
                 '<th>操作</th>' +
                 '</tr></thead>' +
                 '<tbody>' + rows + '</tbody>' +
