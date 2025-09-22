@@ -24,10 +24,10 @@
     "next_allowed_at": 1758598243.1885583
   },
   "https://5cb1.uu.a0079.store/api/v1/client/subscribe?token=k9pU": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1758576033.2432816,
-    "next_allowed_at": 1758579633.2432816
+    "last_at": 1758584322.074602,
+    "next_allowed_at": 1758591522.074602
   },
   "https://apidy.pqjc.site/api/v1/client/subscribe?token=98931419ad844bbf028e6b9dfaf971be": {
     "hits": 5,
