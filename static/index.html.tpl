@@ -118,6 +118,17 @@
         </ul>
       </div>
 
+      <div class="card card-health">
+        <h3>健康信息</h3>
+        <ul class="health-list">
+          <li>构建时间(中国时区)：<b>__TS_CN__</b></li>
+          <li>下次更新时间(中国时区)：<b>__NEXT_CN__</b></li>
+          <li>源：<b>__ALIVE__/__TOTAL__</b> · 新增 <b>__NEW__</b> · 移除 <b>__REMOVED__</b></li>
+          <li>节点：<b>__NODES__</b> · 协议 SS <b>__SS__</b> | VMess <b>__VMESS__</b> | VLESS <b>__VLESS__</b> | Trojan <b>__TROJAN__</b> | HY2 <b>__HY2__</b></li>
+          <li>来源：Google <b>__GCOUNT__</b> | GitHub <b>__GHCOUNT__</b></li>
+        </ul>
+      </div>
+
       <div class="card card-protocols">
         <h3>协议分布</h3>
         <ul>
