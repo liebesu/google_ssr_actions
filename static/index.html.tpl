@@ -83,7 +83,7 @@
     </div>
 
     <div class="grid">
-      <div class="card">
+      <div class="card card-metrics">
         <h3>关键指标（7/30天）</h3>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px">
           <div>
@@ -100,7 +100,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card card-files">
         <h3>订阅文件</h3>
         <ul>
           <li><a href="sub/all.txt"><code>sub/all.txt</code></a> 全量订阅</li>
@@ -108,7 +108,7 @@
         </ul>
       </div>
 
-      <div class="card">
+      <div class="card card-sources">
         <h3>URL 源</h3>
         <ul>
           <li><a href="sub/urls.txt"><code>urls.txt</code></a> 当前可用源</li>
@@ -118,7 +118,7 @@
         </ul>
       </div>
 
-      <div class="card">
+      <div class="card card-protocols">
         <h3>协议分布</h3>
         <ul>
           <li>SS：__SS__</li>
@@ -129,7 +129,7 @@
         </ul>
       </div>
 
-      <div class="card">
+      <div class="card card-extras">
         <h3>辅助输出</h3>
         <ul>
           <li><a href="sub/github.txt"><code>github.txt</code></a> GitHub节点</li>
@@ -138,7 +138,7 @@
         </ul>
       </div>
 
-      <div class="card card-wide">
+      <div class="card card-wide card-details">
         <h3>源详细信息</h3>
         <p><small>包含机场名称、容量/剩余、协议、复制与测速、详情页。</small></p>
         <div id="url-meta"><small>加载中...</small></div>
