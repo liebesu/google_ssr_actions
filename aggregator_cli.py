@@ -436,8 +436,8 @@ def main():
     parser.add_argument("--output-dir", required=True, help="Directory to write outputs, e.g., dist")
     parser.add_argument("--max", type=int, default=1200, help="Max nodes in all.txt")
     parser.add_argument("--dedup", action="store_true", help="Enable deduplication")
-    parser.add_argument("--history", default=os.path.join(PROJECT_ROOT, "..", "data", "history_urls.json"))
-    parser.add_argument("--live-out", default=os.path.join(PROJECT_ROOT, "..", "data", "live_urls.json"))
+    parser.add_argument("--history", default=os.path.join(PROJECT_ROOT, "data", "history_urls.json"))
+    parser.add_argument("--live-out", default=os.path.join(PROJECT_ROOT, "data", "live_urls.json"))
     parser.add_argument("--skip-scrape", action="store_true", help="Skip running one-shot scraper")
     parser.add_argument("--public-base", default="", help="Public base URL for Pages, e.g., https://USER.github.io/REPO")
     parser.add_argument("--min-searches-left", type=int, default=5, help="If SerpAPI total remaining below this, skip scrape")
@@ -448,7 +448,7 @@ def main():
 
     # Normalize paths
     output_dir = os.path.abspath(args.output_dir)
-    data_dir = os.path.abspath(os.path.join(PROJECT_ROOT, "..", "data"))
+    data_dir = os.path.abspath(os.path.join(PROJECT_ROOT, "data"))
     os.makedirs(data_dir, exist_ok=True)
     live_out_path = os.path.abspath(args.live_out)
     # Load previous live for diff
@@ -920,10 +920,11 @@ def main():
         write_json(os.path.join(paths["sub"], "url_meta.json"), url_meta)
         # daily stats for chart: append today's added counts
         try:
-            stats_path = os.path.join(paths["sub"], "stats_daily.json")
-            prev = read_json(stats_path, [])
-            if not isinstance(prev, list):
-                prev = []
+            # 读取并更新仓库内的长期历史
+            history_path = os.path.join(data_dir, "stats_daily_history.json")
+            hist = read_json(history_path, [])
+            if not isinstance(hist, list):
+                hist = []
             today = build_dt.astimezone(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d")
             entry = {
                 "date": today,
@@ -933,10 +934,13 @@ def main():
                 "removed_total": int(health.get("sources_removed", 0)),
                 "alive_total": int(health.get("source_alive", 0)),
             }
-            # keep last 60 days; overwrite today
-            prev = [e for e in prev if e.get("date") != today] + [entry]
-            prev = prev[-60:]
-            write_json(stats_path, prev)
+            # 覆盖当天并限制最大长度（例如一年）
+            hist = [e for e in hist if e.get("date") != today] + [entry]
+            hist = hist[-365:]
+            write_json(history_path, hist)
+            # 将最近60天写入发布目录供前端使用
+            stats_path = os.path.join(paths["sub"], "stats_daily.json")
+            write_json(stats_path, hist[-60:])
         except Exception:
             pass
 
@@ -961,6 +965,15 @@ def main():
                 tpl = tpl.replace("__AUTH_HASH__", str(health.get("auth_sha256", "")))
                 tpl = tpl.replace("__AUTH_USER__", str(health.get("auth_user", "")))
                 write_text(os.path.join(output_dir, "login.html"), tpl)
+        except Exception:
+            pass
+        # emit stylesheet
+        try:
+            css_tpl = os.path.join(PROJECT_ROOT, "static", "styles.css")
+            if os.path.exists(css_tpl):
+                with open(css_tpl, "r", encoding="utf-8") as f:
+                    css_text = f.read()
+                write_text(os.path.join(output_dir, "styles.css"), css_text)
         except Exception:
             pass
 
