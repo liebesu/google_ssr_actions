@@ -173,10 +173,10 @@ class EnhancedGoogleAPIScraper:
                 "subscription_notification_delay": 5
             },
             "regions": {
-                "batch_count": 4,
+                "batch_count": 1,  # 每次只搜索1个地区
                 "inter_region_delay": 15,
-                "priority_regions": ["cn", "hk", "tw", "us", "sg", "jp", "kr", "de"],
-                "use_priority_only": False
+                "priority_regions": ["cn", "hk", "tw", "us", "sg", "jp", "kr", "de", "sa", "tr", "il", "in"],
+                "use_priority_only": True  # 启用优先地区模式
             }
         }
         
@@ -664,36 +664,37 @@ class EnhancedGoogleAPIScraper:
         all_api_urls = []
         time_range = self.config['search']['time_range']
         
-        # 获取批量搜索配置
-        batch_count = self.config.get('regions', {}).get('batch_count', 4)
+        # 每次只搜索一个地区，轮换执行
         inter_region_delay = self.config.get('regions', {}).get('inter_region_delay', 15)
         priority_regions = self.config.get('regions', {}).get('priority_regions', [])
         use_priority_only = self.config.get('regions', {}).get('use_priority_only', False)
         
-        # 确定本次要搜索的地区列表
+        # 确定本次要搜索的地区（只选择一个）
         regions_to_search = []
         executed_regions = []  # 记录实际执行的地区信息，用于保存结果
         
         if use_priority_only and priority_regions:
-            # 只使用优先地区
+            # 从优先地区中轮换选择
             priority_region_configs = []
             for region_code in priority_regions:
                 for region in self.regions:
                     if region['gl'] == region_code:
                         priority_region_configs.append(region)
                         break
-            regions_to_search = priority_region_configs[:batch_count]
+            # 只选择当前索引对应的优先地区
+            if priority_region_configs:
+                region_index = self.current_region_index % len(priority_region_configs)
+                regions_to_search = [priority_region_configs[region_index]]
         else:
-            # 从当前索引开始获取batch_count个地区
+            # 从所有地区中轮换选择
             total_regions = len(self.regions)
-            for i in range(batch_count):
-                region_index = (self.current_region_index + i) % total_regions
-                regions_to_search.append(self.regions[region_index])
+            region_index = self.current_region_index % total_regions
+            regions_to_search = [self.regions[region_index]]
         
         try:
             query = self.search_query
             self.logger.info(f"使用搜索查询: {query}")
-            self.logger.info(f"批量搜索地区数量: {len(regions_to_search)}")
+            self.logger.info(f"本次搜索地区数量: {len(regions_to_search)}")
             
             # 循环搜索各个地区
             for i, current_region in enumerate(regions_to_search):
@@ -806,15 +807,16 @@ class EnhancedGoogleAPIScraper:
                     # 即使失败也记录执行过的地区
                     executed_regions.append(current_region)
                 
-                # 地区间延迟（最后一个地区不需要延迟）
-                if i < len(regions_to_search) - 1:
-                    self.logger.info(f"地区间延迟 {inter_region_delay} 秒...")
-                    time.sleep(inter_region_delay)
+                # 由于只搜索一个地区，不需要地区间延迟
             
-            # 批量更新地区索引（一次性推进batch_count个位置）
+            # 更新地区索引（每次推进1个位置）
             if not use_priority_only:
-                self.current_region_index = (self.current_region_index + len(regions_to_search)) % len(self.regions)
+                self.current_region_index = (self.current_region_index + 1) % len(self.regions)
                 self.save_region_index()  # 保存地区索引状态
+            else:
+                # 如果是优先地区模式，也要更新索引
+                self.current_region_index = (self.current_region_index + 1) % len(priority_regions)
+                self.save_region_index()
             
             # 保存执行的地区列表，供结果保存时使用
             self.last_executed_regions = executed_regions
