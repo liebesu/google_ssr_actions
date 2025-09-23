@@ -5,19 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>订阅聚合器</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #0a0a0a; color: #fff; margin: 0; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; background: #1a1a1a; padding: 20px; border-radius: 10px; }
-        h1 { color: #4CAF50; text-align: center; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #fff; 
+            margin: 0; 
+            padding: 20px; 
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background: rgba(26, 26, 26, 0.8); 
+            padding: 30px; 
+            border-radius: 15px; 
+            border: 1px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        h1 { 
+            color: #4CAF50; 
+            text-align: center; 
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+        .status-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .success { color: #4CAF50; }
+        .warning { color: #ff9800; }
+        .error { color: #f44336; }
+        .info { color: #2196F3; }
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .link-card {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        .link-card:hover {
+            background: rgba(76, 175, 80, 0.1);
+            border-color: #4CAF50;
+        }
+        .link-card a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #888;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🚀 订阅聚合器</h1>
-        <p>系统正在初始化，请稍候...</p>
-        <p>构建时间: <span id="build-time"></span></p>
+        
+        <div class="status-card">
+            <h2>系统状态</h2>
+            <p class="success">✅ GitHub Pages 部署正常</p>
+            <p class="success">✅ 页面访问正常</p>
+            <p class="info">📅 构建时间: <span id="build-time"></span></p>
+            <p class="info">🔄 自动更新: 每3小时</p>
+        </div>
+        
+        <div class="status-card">
+            <h2>功能特性</h2>
+            <ul>
+                <li>🔍 自动采集订阅链接</li>
+                <li>✅ 实时验证可用性</li>
+                <li>🔄 智能去重和过滤</li>
+                <li>🌐 多协议支持 (SS/VMess/VLESS/Trojan/Hysteria2)</li>
+                <li>📊 流量监控和统计</li>
+                <li>🔑 SerpAPI 密钥状态监控</li>
+            </ul>
+        </div>
+        
+        <div class="links">
+            <div class="link-card">
+                <a href="sub/urls.txt">📥 下载订阅文件</a>
+                <p>所有可用订阅链接</p>
+            </div>
+            <div class="link-card">
+                <a href="health.json">📊 健康状态</a>
+                <p>系统运行状态信息</p>
+            </div>
+            <div class="link-card">
+                <a href="sub/google_urls.txt">🔍 Google 发现</a>
+                <p>通过 Google 搜索发现的链接</p>
+            </div>
+            <div class="link-card">
+                <a href="sub/github_urls.txt">🐙 GitHub 发现</a>
+                <p>通过 GitHub 发现的链接</p>
+            </div>
+        </div>
+        
+        <div class="status-card">
+            <h2>使用说明</h2>
+            <p>1. 点击上方链接下载订阅文件</p>
+            <p>2. 将订阅链接导入到你的代理客户端</p>
+            <p>3. 系统会自动更新和验证订阅链接</p>
+            <p>4. 查看健康状态了解系统运行情况</p>
+        </div>
+        
+        <div class="footer">
+            <p>🔧 技术栈: Python + GitHub Actions + GitHub Pages</p>
+            <p>📡 数据源: Google 搜索 + GitHub 仓库</p>
+            <p>⚡ 更新频率: 每3小时自动构建</p>
+        </div>
     </div>
+    
     <script>
-        document.getElementById("build-time").textContent = new Date().toLocaleString("zh-CN");
+        // 显示当前时间
+        document.getElementById('build-time').textContent = new Date().toLocaleString('zh-CN');
+        
+        // 检查健康状态
+        fetch('health.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log('健康状态:', data);
+                // 可以在这里更新页面显示更多信息
+            })
+            .catch(error => {
+                console.log('健康状态检查失败:', error);
+            });
     </script>
 </body>
 </html>
