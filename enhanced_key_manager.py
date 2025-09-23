@@ -139,8 +139,9 @@ class EnhancedSerpAPIKeyManager:
         
         策略：
         1. 优先选择下次重置时间最近的密钥（避免浪费即将重置的额度）
-        2. 如果该密钥没有剩余额度，自动跳到下一个时间窗口的密钥
-        3. 确保最大化密钥利用率
+        2. 如果重置时间相同，选择剩余余额最多的密钥
+        3. 如果该密钥没有剩余额度，自动跳到下一个时间窗口的密钥
+        4. 确保最大化密钥利用率
         
         Returns:
             str: 最优密钥
@@ -163,8 +164,8 @@ class EnhancedSerpAPIKeyManager:
             key_info['reset_datetime'] = self._parse_reset_date(reset_date)
             keys_with_reset.append(key_info)
         
-        # 按重置时间排序（最近的重置时间优先）
-        keys_with_reset.sort(key=lambda x: x['reset_datetime'])
+        # 按重置时间排序（最近的重置时间优先），如果重置时间相同则按剩余余额排序（余额多的优先）
+        keys_with_reset.sort(key=lambda x: (x['reset_datetime'], -x.get('total_searches_left', 0)))
         
         # 寻找第一个有剩余额度的密钥
         for key_info in keys_with_reset:
@@ -330,8 +331,9 @@ class EnhancedSerpAPIKeyManager:
         
         策略：
         1. 按下次重置时间排序（最近的优先）
-        2. 有剩余额度的密钥排在前面
-        3. 支持失败后自动切换到下一个密钥
+        2. 如果重置时间相同，按剩余余额排序（余额多的优先）
+        3. 有剩余额度的密钥排在前面
+        4. 支持失败后自动切换到下一个密钥
         
         Returns:
             List[str]: 按优先级排序的密钥列表
@@ -354,14 +356,14 @@ class EnhancedSerpAPIKeyManager:
             key_info['reset_datetime'] = self._parse_reset_date(reset_date)
             keys_with_reset.append(key_info)
         
-        # 按重置时间排序（最近的重置时间优先）
-        keys_with_reset.sort(key=lambda x: x['reset_datetime'])
+        # 按重置时间排序（最近的重置时间优先），如果重置时间相同则按剩余余额排序（余额多的优先）
+        keys_with_reset.sort(key=lambda x: (x['reset_datetime'], -x.get('total_searches_left', 0)))
         
         # 分离有额度和无额度的密钥
         keys_with_quota = [k for k in keys_with_reset if k.get('total_searches_left', 0) > 0]
         keys_without_quota = [k for k in keys_with_reset if k.get('total_searches_left', 0) <= 0]
         
-        # 优先返回有额度的密钥，然后是无额度的（按重置时间排序）
+        # 优先返回有额度的密钥，然后是无额度的（按重置时间+余额排序）
         priority_keys = keys_with_quota + keys_without_quota
         
         key_list = []
