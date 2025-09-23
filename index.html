@@ -44,7 +44,7 @@
         const userOk = userRequired ? (gu === (AUTH_USER||'').trim()) : true;
         if (passOk && userOk) { document.documentElement.style.display = ''; return; }
       }catch(e){}
-      location.replace('login.html');
+      showAuth();
     }
     document.documentElement.style.display = 'none';
     document.addEventListener('DOMContentLoaded', gate);
