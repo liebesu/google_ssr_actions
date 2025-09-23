@@ -129,6 +129,19 @@
         </ul>
       </div>
 
+      <div class="card card-serpapi">
+        <h3>SerpAPI 密钥状态</h3>
+        <div id="serpapi-status">
+          <div class="serpapi-summary">
+            <span class="status-item">可用密钥: <b id="keys-ok">__KOK__</b>/<b id="keys-total">__KTOTAL__</b></span>
+            <span class="status-item">总剩余额度: <b id="quota-left">__QLEFT__</b>/<b id="quota-cap">__QCAP__</b></span>
+          </div>
+          <div id="serpapi-keys-list" class="serpapi-keys-list">
+            <!-- 动态加载密钥详情 -->
+          </div>
+        </div>
+      </div>
+
       <div class="card card-protocols">
         <h3>协议分布</h3>
         <ul>
@@ -301,7 +314,56 @@
               drawSparkline('spark-alive-30', last30.map(x=>x.alive_total||0), '#10b981');
             }catch(e){}
           }
-          loadMeta(); loadDailyChart(); loadSparklines();
+
+          // 加载 SerpAPI 密钥详情
+          async function loadSerpAPIKeys() {
+            try {
+              const r = await fetch('health.json', { cache:'no-cache' });
+              if(!r.ok) return;
+              const health = await r.json();
+              const keys = health.serpapi_keys_detail || [];
+              const container = document.getElementById('serpapi-keys-list');
+              if(!container) return;
+              
+              if(keys.length === 0) {
+                container.innerHTML = '<div class="serpapi-key-item error">暂无密钥信息</div>';
+                return;
+              }
+              
+              container.innerHTML = keys.map(key => {
+                if(key.error) {
+                  return `<div class="serpapi-key-item error">Key ${key.index}: ${key.error}</div>`;
+                }
+                const used = key.used_searches || 0;
+                const total = key.searches_per_month || 0;
+                const left = key.total_searches_left || 0;
+                const usagePercent = total > 0 ? Math.round((used / total) * 100) : 0;
+                const statusClass = left <= 0 ? 'exhausted' : (usagePercent > 80 ? 'warning' : 'ok');
+                const resetDate = key.reset_date ? new Date(key.reset_date).toLocaleDateString('zh-CN') : '未知';
+                
+                return `
+                  <div class="serpapi-key-item ${statusClass}">
+                    <div class="key-header">
+                      <span class="key-index">Key ${key.index}</span>
+                      <span class="key-status">${left <= 0 ? '已用尽' : (usagePercent > 80 ? '即将用尽' : '正常')}</span>
+                    </div>
+                    <div class="key-details">
+                      <div class="quota-bar">
+                        <div class="quota-fill" style="width: ${usagePercent}%"></div>
+                      </div>
+                      <div class="quota-text">已用 ${used}/${total} (${usagePercent}%) · 剩余 ${left}</div>
+                      <div class="reset-info">重置时间: ${resetDate}</div>
+                    </div>
+                  </div>
+                `;
+              }).join('');
+            } catch(e) { 
+              console.warn('SerpAPI keys load failed:', e);
+              const container = document.getElementById('serpapi-keys-list');
+              if(container) container.innerHTML = '<div class="serpapi-key-item error">加载失败</div>';
+            }
+          }
+          loadMeta(); loadDailyChart(); loadSparklines(); loadSerpAPIKeys();
         </script>
       </div>
     </div>

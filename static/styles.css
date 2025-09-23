@@ -15,7 +15,28 @@ body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, H
 .card-extras { background: radial-gradient(120% 140% at 10% 0%, #2b1208 0%, #1f140c 60%, #20150d 100%); border-color: #f59e0b; box-shadow: 0 14px 36px rgba(245,158,11,.4), 0 0 0 1px rgba(255,255,255,.04) inset; }
 .card-details { background: radial-gradient(120% 140% at 10% 0%, #0b1630 0%, #0a1122 60%, #0a1020 100%); border-color: #38bdf8; box-shadow: 0 18px 44px rgba(56,189,248,.45), 0 0 0 1px rgba(255,255,255,.03) inset; }
 .card-health { background: radial-gradient(120% 140% at 10% 0%, #170a3a 0%, #11082b 60%, #120a2e 100%); border-color: #e879f9; box-shadow: 0 14px 36px rgba(232,121,249,.42), 0 0 0 1px rgba(255,255,255,.04) inset; }
+.card-serpapi { background: radial-gradient(120% 140% at 10% 0%, #0a1a2e 0%, #0b1d30 60%, #0c1f32 100%); border-color: #06b6d4; box-shadow: 0 14px 36px rgba(6,182,212,.4), 0 0 0 1px rgba(255,255,255,.04) inset; }
 .health-list { line-height: 1.8; color: #e5e7eb; }
+.serpapi-summary { display: flex; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+.status-item { color: #e5e7eb; font-size: 14px; }
+.serpapi-keys-list { display: flex; flex-direction: column; gap: 8px; }
+.serpapi-key-item { background: rgba(15,23,42,.6); border: 1px solid #334155; border-radius: 8px; padding: 12px; }
+.serpapi-key-item.ok { border-color: #10b981; }
+.serpapi-key-item.warning { border-color: #f59e0b; }
+.serpapi-key-item.exhausted { border-color: #ef4444; }
+.serpapi-key-item.error { border-color: #6b7280; }
+.key-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.key-index { color: #e5e7eb; font-weight: 600; }
+.key-status { font-size: 12px; padding: 2px 8px; border-radius: 4px; }
+.serpapi-key-item.ok .key-status { background: rgba(16,185,129,.2); color: #10b981; }
+.serpapi-key-item.warning .key-status { background: rgba(245,158,11,.2); color: #f59e0b; }
+.serpapi-key-item.exhausted .key-status { background: rgba(239,68,68,.2); color: #ef4444; }
+.serpapi-key-item.error .key-status { background: rgba(107,114,128,.2); color: #6b7280; }
+.key-details { color: #cbd5e1; font-size: 13px; }
+.quota-bar { width: 100%; height: 6px; background: rgba(51,65,85,.5); border-radius: 3px; overflow: hidden; margin: 6px 0; }
+.quota-fill { height: 100%; background: linear-gradient(90deg, #10b981 0%, #f59e0b 80%, #ef4444 100%); transition: width 0.3s ease; }
+.quota-text { margin: 4px 0; }
+.reset-info { color: #94a3b8; font-size: 12px; }
 .card-wide { grid-column: 1 / -1; }
 .card h3 { margin: 0 0 12px; font-size: 17px; color:#fff; border-left:3px solid var(--accent); padding-left:10px; letter-spacing: .3px; text-shadow: 0 1px 0 rgba(0,0,0,.25); }
 code { background:#0b1220; padding: 2px 6px; border-radius: 6px; border: 1px solid #1f2937; color:#d1d5db; }

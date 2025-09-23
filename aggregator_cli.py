@@ -492,18 +492,30 @@ def main():
     quota_total_cap = 0
     keys_total = 0
     keys_ok = 0
+    serpapi_keys_detail = []
     try:
         from enhanced_key_manager import EnhancedSerpAPIKeyManager  # type: ignore
         mgr2 = EnhancedSerpAPIKeyManager(keys_file=os.path.join(PROJECT_ROOT, "keys"))
         quotas2 = mgr2.check_all_quotas(force_refresh=True)
         keys_total = len(quotas2)
-        for q in quotas2:
+        for i, q in enumerate(quotas2):
             if q.get("success"):
                 keys_ok += 1
                 quota_total_left += int(q.get("total_searches_left", 0) or 0)
                 quota_total_cap += int(q.get("searches_per_month", 0) or 0)
-    except Exception:
-        pass
+            # 收集每个 key 的详细信息
+            key_info = {
+                "index": i + 1,
+                "success": q.get("success", False),
+                "total_searches_left": q.get("total_searches_left", 0),
+                "searches_per_month": q.get("searches_per_month", 0),
+                "used_searches": q.get("searches_per_month", 0) - q.get("total_searches_left", 0),
+                "reset_date": q.get("reset_date", ""),
+                "error": q.get("error", "") if not q.get("success") else ""
+            }
+            serpapi_keys_detail.append(key_info)
+    except Exception as e:
+        serpapi_keys_detail = [{"error": f"Failed to load keys: {str(e)}"}]
 
     # Load candidate URL set
     raw_candidates = load_candidate_urls(PROJECT_ROOT, data_dir)
@@ -931,6 +943,7 @@ def main():
         "quota_total_capacity": quota_total_cap,
         "keys_total": keys_total,
         "keys_ok": keys_ok,
+        "serpapi_keys_detail": serpapi_keys_detail,
         "auth_sha256": auth_sha256_env,
         "auth_user": auth_user,
     }
