@@ -69,6 +69,52 @@ jobs:
           if [ -n "${{ vars.AUTH_USER }}" ]; then export AUTH_USER="${{ vars.AUTH_USER }}"; fi
           if [ -n "${{ secrets.AUTH_USER }}" ]; then export AUTH_USER="${{ secrets.AUTH_USER }}"; fi
           python aggregator_cli.py --output-dir dist --max 1200 --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery --emit-health --emit-index
+          
+          # 确保 dist 目录有内容
+          echo "=== 检查 dist 目录内容 ==="
+          ls -la dist/
+          echo "=== 检查 index.html ==="
+          if [ -f dist/index.html ]; then
+            echo "index.html 存在，大小: $(wc -c < dist/index.html) 字节"
+            head -5 dist/index.html
+          else
+            echo "index.html 不存在！"
+          fi
+          
+          # 如果 index.html 不存在，创建一个简单的测试页面
+          if [ ! -f dist/index.html ]; then
+            echo "创建测试页面..."
+            cat > dist/index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订阅聚合器</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #0a0a0a; color: #fff; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: #1a1a1a; padding: 20px; border-radius: 10px; }
+        h1 { color: #4CAF50; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 订阅聚合器</h1>
+        <p>系统正在初始化，请稍候...</p>
+        <p>构建时间: <span id="build-time"></span></p>
+    </div>
+    <script>
+        document.getElementById('build-time').textContent = new Date().toLocaleString('zh-CN');
+    </script>
+</body>
+</html>
+EOF
+          fi
+          
+          echo "=== 最终 dist 目录内容 ==="
+          ls -la dist/
+          echo "=== index.html 内容预览 ==="
+          head -10 dist/index.html
 
       - name: Persist history back to repo
         env:
@@ -84,6 +130,25 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+          
+      - name: Verify artifact
+        run: |
+          echo "=== 验证工件内容 ==="
+          echo "工件路径: dist"
+          echo "文件列表:"
+          find dist -type f -exec ls -la {} \;
+          echo "=== 检查关键文件 ==="
+          if [ -f dist/index.html ]; then
+            echo "✅ index.html 存在"
+            echo "文件大小: $(wc -c < dist/index.html) 字节"
+          else
+            echo "❌ index.html 不存在"
+          fi
+          if [ -f dist/health.json ]; then
+            echo "✅ health.json 存在"
+          else
+            echo "⚠️ health.json 不存在"
+          fi
 
       - name: Notify DingTalk (SerpAPI & Crawl Health)
         if: ${{ always() }}
