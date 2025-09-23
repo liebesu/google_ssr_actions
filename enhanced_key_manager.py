@@ -2,14 +2,32 @@
 # -*- coding: utf-8 -*-
 """
 增强版SerpAPI密钥管理器
-支持按剩余额度排序、钉钉通知和智能密钥选择
+支持智能密钥选择、自动故障转移和最大化利用率
+
+核心特性：
+1. 智能密钥选择：按下次重置时间优先级选择密钥，最大化利用率
+2. 自动故障转移：失败后自动切换到下一个时间窗口的密钥
+3. 钉钉通知支持：配额状态监控和异常通知
+4. 配额监控：实时检查所有密钥的配额状态
+
+使用示例：
+    # 基本使用
+    mgr = EnhancedSerpAPIKeyManager('keys')
+    optimal_key = mgr.get_optimal_key()
+    
+    # 支持故障转移的操作
+    def search_operation(api_key):
+        # 执行SerpAPI搜索操作
+        return serpapi_search(api_key, query)
+    
+    result = mgr.try_key_with_fallback(search_operation)
 """
 
 import requests
 import json
 import time
 import logging
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Any
 from datetime import datetime
 
 class EnhancedSerpAPIKeyManager:
@@ -117,7 +135,12 @@ class EnhancedSerpAPIKeyManager:
     
     def get_optimal_key(self) -> Optional[str]:
         """
-        获取最优密钥（剩余额度最多的可用密钥）
+        获取最优密钥（按下次重置时间优先级选择，最大化利用率）
+        
+        策略：
+        1. 优先选择下次重置时间最近的密钥（避免浪费即将重置的额度）
+        2. 如果该密钥没有剩余额度，自动跳到下一个时间窗口的密钥
+        3. 确保最大化密钥利用率
         
         Returns:
             str: 最优密钥
@@ -125,21 +148,166 @@ class EnhancedSerpAPIKeyManager:
         # 检查所有密钥额度
         quotas = self.check_all_quotas()
         
-        # 过滤出可用的密钥
-        available_keys = [q for q in quotas if q['success'] and q['account_status'] == 'Active']
+        # 过滤出激活状态的密钥（包括额度为0的，因为我们需要知道重置时间）
+        active_keys = [q for q in quotas if q['success'] and q['account_status'] == 'Active']
         
-        if not available_keys:
-            self.logger.error("没有可用的API密钥")
+        if not active_keys:
+            self.logger.error("没有激活状态的API密钥")
             return None
         
-        # 按剩余搜索次数排序（降序）
-        available_keys.sort(key=lambda x: x['total_searches_left'], reverse=True)
+        # 为每个密钥添加重置时间信息
+        keys_with_reset = []
+        for i, key_info in enumerate(active_keys):
+            reset_date = self._calculate_next_reset_date(key_info, i + 1)
+            key_info['reset_date'] = reset_date
+            key_info['reset_datetime'] = self._parse_reset_date(reset_date)
+            keys_with_reset.append(key_info)
         
-        # 选择剩余额度最多的密钥
-        optimal_key = available_keys[0]['api_key']
-        self.logger.info(f"选择最优密钥: {optimal_key[:10]}... (剩余: {available_keys[0]['total_searches_left']}次)")
+        # 按重置时间排序（最近的重置时间优先）
+        keys_with_reset.sort(key=lambda x: x['reset_datetime'])
         
-        return optimal_key
+        # 寻找第一个有剩余额度的密钥
+        for key_info in keys_with_reset:
+            remaining = key_info.get('total_searches_left', 0)
+            if remaining > 0:
+                optimal_key = key_info['api_key']
+                reset_date = key_info['reset_date']
+                self.logger.info(f"选择最优密钥: {optimal_key[:10]}... (剩余: {remaining}次, 重置时间: {reset_date})")
+                return optimal_key
+        
+        # 如果所有密钥都没有剩余额度，选择重置时间最近的
+        if keys_with_reset:
+            key_info = keys_with_reset[0]
+            optimal_key = key_info['api_key']
+            reset_date = key_info['reset_date']
+            self.logger.warning(f"所有密钥额度耗尽，选择重置时间最近的: {optimal_key[:10]}... (重置时间: {reset_date})")
+            return optimal_key
+        
+        self.logger.error("没有可用的API密钥")
+        return None
+    
+    def _calculate_next_reset_date(self, quota_info: Dict, key_index: int) -> str:
+        """
+        计算SerpAPI账户的下次重置时间
+        
+        Args:
+            quota_info: 配额信息字典
+            key_index: 密钥索引
+            
+        Returns:
+            str: 下次重置时间字符串
+        """
+        try:
+            from datetime import datetime, timedelta
+            import calendar
+            import json
+            import os
+            
+            # 获取当前时间
+            now = datetime.now()
+            
+            # 尝试从配置文件加载注册日期
+            registration_dates_file = 'api_key_registration_dates.json'
+            registration_dates = {}
+            
+            if os.path.exists(registration_dates_file):
+                try:
+                    with open(registration_dates_file, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                        registration_dates = data.get('key_registration_dates', {})
+                except Exception as e:
+                    self.logger.warning(f"加载注册日期配置文件失败: {e}")
+            
+            # 获取当前API密钥
+            current_api_key = quota_info.get('api_key', '')
+            
+            # 查找对应的注册日期
+            registration_date_str = None
+            for key, date in registration_dates.items():
+                if key in current_api_key or current_api_key in key:
+                    registration_date_str = date
+                    break
+            
+            if registration_date_str:
+                try:
+                    # 解析注册日期
+                    registration_date = datetime.strptime(registration_date_str, '%Y-%m-%d')
+                    
+                    # 计算下次重置时间（基于注册日期的每月对应日）
+                    if now.month == 12:
+                        next_reset = registration_date.replace(year=now.year + 1)
+                    else:
+                        next_reset = registration_date.replace(year=now.year, month=now.month + 1)
+                    
+                    # 如果计算出的重置时间已经过了，则使用下下个月
+                    if next_reset <= now:
+                        if now.month == 11:
+                            next_reset = registration_date.replace(year=now.year + 1, month=1)
+                        elif now.month == 12:
+                            next_reset = registration_date.replace(year=now.year + 1, month=2)
+                        else:
+                            next_reset = registration_date.replace(year=now.year, month=now.month + 2)
+                    
+                    # 确保日期有效（处理2月29日等特殊情况）
+                    last_day_of_month = calendar.monthrange(next_reset.year, next_reset.month)[1]
+                    if next_reset.day > last_day_of_month:
+                        next_reset = next_reset.replace(day=last_day_of_month)
+                    
+                    self.logger.debug(f"密钥 {key_index} 基于注册日期 {registration_date_str} 计算重置时间: {next_reset.strftime('%Y-%m-%d')}")
+                    return next_reset.strftime("%Y-%m-%d")
+                    
+                except ValueError as e:
+                    self.logger.warning(f"解析注册日期失败: {registration_date_str}, 错误: {e}")
+            
+            # 如果没有找到注册日期，使用默认逻辑（基于密钥索引）
+            self.logger.debug(f"密钥 {key_index} 未找到注册日期，使用默认计算方式")
+            
+            # 使用密钥索引作为偏移量，确保不同密钥有不同的重置时间
+            offset_days = (key_index - 1) * 7  # 每个密钥相差7天，避免过于接近
+            
+            # 计算下个月的同一天作为重置时间
+            if now.month == 12:
+                next_month = now.replace(year=now.year + 1, month=1, day=1)
+            else:
+                next_month = now.replace(month=now.month + 1, day=1)
+            
+            # 添加偏移量
+            reset_date = next_month + timedelta(days=offset_days)
+            
+            # 确保日期不超过下个月的最后一天
+            last_day_of_month = calendar.monthrange(reset_date.year, reset_date.month)[1]
+            if reset_date.day > last_day_of_month:
+                reset_date = reset_date.replace(day=last_day_of_month)
+            
+            return reset_date.strftime("%Y-%m-%d")
+            
+        except Exception as e:
+            self.logger.warning(f"计算重置时间失败: {e}")
+            # 如果计算失败，返回下个月1号作为默认值
+            from datetime import datetime
+            now = datetime.now()
+            if now.month == 12:
+                return f"{now.year + 1}-01-01"
+            else:
+                return f"{now.year}-{now.month + 1:02d}-01"
+    
+    def _parse_reset_date(self, reset_date_str: str) -> datetime:
+        """
+        解析重置日期字符串为datetime对象，用于排序
+        
+        Args:
+            reset_date_str: 重置日期字符串
+            
+        Returns:
+            datetime: 解析后的日期对象
+        """
+        try:
+            from datetime import datetime
+            return datetime.strptime(reset_date_str, '%Y-%m-%d')
+        except:
+            # 如果解析失败，返回很远的未来时间，这样它会排在最后
+            from datetime import datetime
+            return datetime(2099, 12, 31)
     
     def get_available_key(self) -> Optional[str]:
         """
@@ -155,6 +323,94 @@ class EnhancedSerpAPIKeyManager:
         
         # 如果最优密钥不可用，回退到轮换模式
         return self._get_next_available_key()
+    
+    def get_key_priority_list(self) -> List[str]:
+        """
+        获取按优先级排序的密钥列表（用于失败后自动切换）
+        
+        策略：
+        1. 按下次重置时间排序（最近的优先）
+        2. 有剩余额度的密钥排在前面
+        3. 支持失败后自动切换到下一个密钥
+        
+        Returns:
+            List[str]: 按优先级排序的密钥列表
+        """
+        # 检查所有密钥额度
+        quotas = self.check_all_quotas()
+        
+        # 过滤出激活状态的密钥
+        active_keys = [q for q in quotas if q['success'] and q['account_status'] == 'Active']
+        
+        if not active_keys:
+            self.logger.error("没有激活状态的API密钥")
+            return []
+        
+        # 为每个密钥添加重置时间信息
+        keys_with_reset = []
+        for i, key_info in enumerate(active_keys):
+            reset_date = self._calculate_next_reset_date(key_info, i + 1)
+            key_info['reset_date'] = reset_date
+            key_info['reset_datetime'] = self._parse_reset_date(reset_date)
+            keys_with_reset.append(key_info)
+        
+        # 按重置时间排序（最近的重置时间优先）
+        keys_with_reset.sort(key=lambda x: x['reset_datetime'])
+        
+        # 分离有额度和无额度的密钥
+        keys_with_quota = [k for k in keys_with_reset if k.get('total_searches_left', 0) > 0]
+        keys_without_quota = [k for k in keys_with_reset if k.get('total_searches_left', 0) <= 0]
+        
+        # 优先返回有额度的密钥，然后是无额度的（按重置时间排序）
+        priority_keys = keys_with_quota + keys_without_quota
+        
+        key_list = []
+        for key_info in priority_keys:
+            api_key = key_info['api_key']
+            remaining = key_info.get('total_searches_left', 0)
+            reset_date = key_info['reset_date']
+            key_list.append(api_key)
+            self.logger.debug(f"密钥优先级: {api_key[:10]}... (剩余: {remaining}次, 重置: {reset_date})")
+        
+        return key_list
+    
+    def try_key_with_fallback(self, operation_func, max_retries: int = None) -> Optional[Any]:
+        """
+        使用密钥执行操作，支持失败后自动切换到下一个密钥
+        
+        Args:
+            operation_func: 操作函数，接收api_key参数
+            max_retries: 最大重试次数，默认为密钥总数
+            
+        Returns:
+            操作结果，如果所有密钥都失败则返回None
+        """
+        key_list = self.get_key_priority_list()
+        
+        if not key_list:
+            self.logger.error("没有可用的密钥")
+            return None
+        
+        if max_retries is None:
+            max_retries = len(key_list)
+        
+        for i, api_key in enumerate(key_list[:max_retries]):
+            try:
+                self.logger.info(f"尝试使用密钥 {i+1}/{max_retries}: {api_key[:10]}...")
+                result = operation_func(api_key)
+                
+                if result is not None:
+                    self.logger.info(f"密钥 {api_key[:10]}... 操作成功")
+                    return result
+                else:
+                    self.logger.warning(f"密钥 {api_key[:10]}... 操作失败，切换到下一个密钥")
+                    
+            except Exception as e:
+                self.logger.warning(f"密钥 {api_key[:10]}... 操作异常: {str(e)}, 切换到下一个密钥")
+                continue
+        
+        self.logger.error(f"所有 {max_retries} 个密钥都操作失败")
+        return None
     
     def _get_next_available_key(self) -> Optional[str]:
         """轮换模式获取可用密钥"""
