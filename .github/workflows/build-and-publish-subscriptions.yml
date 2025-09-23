@@ -85,6 +85,36 @@ jobs:
         with:
           path: dist
 
+      - name: Notify DingTalk (SerpAPI & Crawl Health)
+        if: ${{ always() }}
+        env:
+          DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
+          DINGTALK_TOKEN: ${{ secrets.DINGTALK_TOKEN }}
+        run: |
+          if [ -z "${DINGTALK_WEBHOOK}" ] && [ -n "${DINGTALK_TOKEN}" ]; then
+            DINGTALK_WEBHOOK="https://oapi.dingtalk.com/robot/send?access_token=${DINGTALK_TOKEN}"
+          fi
+          if [ -z "${DINGTALK_WEBHOOK}" ]; then
+            echo "DingTalk webhook not configured, skip"; exit 0; fi
+          if [ ! -f dist/health.json ]; then echo "health.json missing"; exit 0; fi
+          jq -r '.' dist/health.json | sed -e 's/\\n/ /g' > /tmp/health.json
+          BUILD_CN=$(jq -r '.build_time_cn // ""' /tmp/health.json)
+          NEXT_CN=$(jq -r '.next_run_cn // ""' /tmp/health.json)
+          ALIVE=$(jq -r '.source_alive // 0' /tmp/health.json)
+          TOTAL=$(jq -r '.source_total // 0' /tmp/health.json)
+          NEW=$(jq -r '.sources_new // 0' /tmp/health.json)
+          REM=$(jq -r '.sources_removed // 0' /tmp/health.json)
+          QLEFT=$(jq -r '.quota_total_left // 0' /tmp/health.json)
+          QCAP=$(jq -r '.quota_total_capacity // 0' /tmp/health.json)
+          KOK=$(jq -r '.keys_ok // 0' /tmp/health.json)
+          KT=$(jq -r '.keys_total // 0' /tmp/health.json)
+          G=$(jq -r '.google_urls_count // 0' /tmp/health.json)
+          GH=$(jq -r '.github_urls_count // 0' /tmp/health.json)
+          MSG="【订阅构建】时间:${BUILD_CN} 下次:${NEXT_CN}%0A源: ${ALIVE}/${TOTAL} (+${NEW}/-${REM})%0ASerpAPI: ${KOK}/${KT} 剩余额度:${QLEFT}/${QCAP}%0A发现: Google ${G} | GitHub ${GH}%0A页面: https://liebesu.github.io/google_ssr_actions/"
+          curl -sS -X POST "${DINGTALK_WEBHOOK}" \
+            -H 'Content-Type: application/json' \
+            -d "{\"msgtype\":\"text\",\"text\":{\"content\":\"${MSG}\"}}" | cat
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
