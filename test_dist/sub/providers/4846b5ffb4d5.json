@@ -1,0 +1,18 @@
+{
+  "id": "4846b5ffb4d5",
+  "url": "https://pwac.anliangjifeiyun.eu/api/v1/client/subscribe?token=f858b37e9f7efc29d7a050ed3b47d418",
+  "host": "pwac.anliangjifeiyun.eu",
+  "provider": "pwac.anliangjifeiyun.eu",
+  "nodes_total": 13,
+  "protocol_counts": {
+    "vmess": 13
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 574.9,
+  "updated_at": "2025-09-23 15:44:17"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "0e31dabd2e83",
+  "url": "http://shiyuanyinian.xyz/api/v1/client/subscribe?token=f64ab6f1d58f1120064b61da41e84f47",
+  "host": "shiyuanyinian.xyz",
+  "provider": "shiyuanyinian.xyz",
+  "nodes_total": 56,
+  "protocol_counts": {
+    "ss": 2,
+    "vless": 48,
+    "hysteria2": 6
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 641.0,
+  "updated_at": "2025-09-23 15:43:27"
+}

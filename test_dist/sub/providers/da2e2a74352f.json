@@ -1,0 +1,18 @@
+{
+  "id": "da2e2a74352f",
+  "url": "https://hs.huasuan666.top/api/v1/client/subscribe?token=459f9d4018f457cd3c5a41d6969c7c2f",
+  "host": "hs.huasuan666.top",
+  "provider": "hs.huasuan666.top",
+  "nodes_total": 12,
+  "protocol_counts": {
+    "hysteria2": 12
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 800.9,
+  "updated_at": "2025-09-23 15:44:11"
+}

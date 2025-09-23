@@ -1000,7 +1000,6 @@ def main():
     auth_sha256_env = os.getenv("AUTH_SHA256", "")
     # Optional auth: set AUTH_PLAIN to a simple password; we hash it here to avoid embedding plain text
     auth_plain = os.getenv("AUTH_PLAIN", "")
-    auth_sha256_env = os.getenv("AUTH_SHA256", "")
     if auth_plain and not auth_sha256_env:
         try:
             auth_sha256_env = hashlib.sha256(auth_plain.encode("utf-8")).hexdigest()

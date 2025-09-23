@@ -62,6 +62,8 @@ jobs:
           mkdir -p dist
           # Disable proxy in CI and emit index/health to avoid 404
           export DISABLE_PROXY=1
+          # Pass SerpAPI keys as environment variable for backup plan
+          if [ -n "${{ secrets.SCRAPER_KEYS }}" ]; then export SCRAPER_KEYS="${{ secrets.SCRAPER_KEYS }}"; fi
           # Pass optional auth envs
           if [ -n "${{ vars.AUTH_PLAIN }}" ]; then export AUTH_PLAIN="${{ vars.AUTH_PLAIN }}"; fi
           if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ secrets.AUTH_SHA256 }}"; fi

@@ -1,0 +1,18 @@
+{
+  "id": "d7adb80c1dd0",
+  "url": "https://jjzcloud.top/api/v1/client/subscribe?token=cde6a668c03617ca385c7b6d74579f61",
+  "host": "jjzcloud.top",
+  "provider": "jjzcloud.top",
+  "nodes_total": 13,
+  "protocol_counts": {
+    "hysteria2": 13
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 596.7,
+  "updated_at": "2025-09-23 15:44:13"
+}

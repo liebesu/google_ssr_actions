@@ -1,0 +1,18 @@
+{
+  "id": "7c279d0bb051",
+  "url": "https://xilucloud.top/api/v1/client/subscribe?token=a4d27b63c41713657da539e4e1835c30",
+  "host": "xilucloud.top",
+  "provider": "xilucloud.top",
+  "nodes_total": 9,
+  "protocol_counts": {
+    "hysteria2": 9
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 552.0,
+  "updated_at": "2025-09-23 15:45:08"
+}

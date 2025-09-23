@@ -1,0 +1,20 @@
+{
+  "id": "24fe2c477afc",
+  "url": "https://feiniaoyun.xyz/api/v1/client/subscribe?token=8b0582e6d2882cef83b1ea7d60ba9b90",
+  "host": "feiniaoyun.xyz",
+  "provider": "feiniaoyun.xyz",
+  "nodes_total": 42,
+  "protocol_counts": {
+    "vless": 2,
+    "trojan": 5,
+    "hysteria2": 35
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 1167.0,
+  "updated_at": "2025-09-23 15:44:04"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "b535c8c9933d",
+  "url": "https://sub.bajieurl.com/api/v1/client/subscribe?token=a7f2a1975aec5bd766e1f1222819b9f5",
+  "host": "sub.bajieurl.com",
+  "provider": "sub.bajieurl.com",
+  "nodes_total": 8,
+  "protocol_counts": {
+    "ss": 8
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 1100.1,
+  "updated_at": "2025-09-23 15:44:43"
+}

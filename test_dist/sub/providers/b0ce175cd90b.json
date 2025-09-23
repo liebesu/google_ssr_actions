@@ -1,0 +1,18 @@
+{
+  "id": "b0ce175cd90b",
+  "url": "https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e",
+  "host": "ylccloud.top",
+  "provider": "ylccloud.top",
+  "nodes_total": 11,
+  "protocol_counts": {
+    "hysteria2": 11
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 337.1,
+  "updated_at": "2025-09-23 15:45:13"
+}

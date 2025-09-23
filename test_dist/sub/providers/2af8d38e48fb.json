@@ -1,0 +1,18 @@
+{
+  "id": "2af8d38e48fb",
+  "url": "https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516e",
+  "host": "sufujia.top",
+  "provider": "sufujia.top",
+  "nodes_total": 14,
+  "protocol_counts": {
+    "hysteria2": 14
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 522.9,
+  "updated_at": "2025-09-23 15:44:46"
+}

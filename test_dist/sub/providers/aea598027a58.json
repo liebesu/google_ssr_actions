@@ -1,0 +1,18 @@
+{
+  "id": "aea598027a58",
+  "url": "http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc",
+  "host": "x2b.eans.top",
+  "provider": "x2b.eans.top",
+  "nodes_total": 4,
+  "protocol_counts": {
+    "vless": 4
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 580.2,
+  "updated_at": "2025-09-23 15:43:28"
+}

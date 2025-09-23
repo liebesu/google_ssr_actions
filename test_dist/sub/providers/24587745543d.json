@@ -1,0 +1,18 @@
+{
+  "id": "24587745543d",
+  "url": "https://daka778.top/api/v1/client/subscribe?token=4ecc6ac703c0762cf988735d5fdeae38",
+  "host": "daka778.top",
+  "provider": "daka778.top",
+  "nodes_total": 16,
+  "protocol_counts": {
+    "hysteria2": 16
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 464.7,
+  "updated_at": "2025-09-23 15:43:37"
+}

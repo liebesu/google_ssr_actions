@@ -1,0 +1,18 @@
+{
+  "id": "3306d78071a9",
+  "url": "https://xiaohuolongjc.top/api/v1/client/subscribe?token=c0835a26b85464a27a9b677ef6f5d252",
+  "host": "xiaohuolongjc.top",
+  "provider": "xiaohuolongjc.top",
+  "nodes_total": 11,
+  "protocol_counts": {
+    "hysteria2": 11
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 368.6,
+  "updated_at": "2025-09-23 15:45:03"
+}

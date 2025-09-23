@@ -1,0 +1,18 @@
+{
+  "id": "f1de6b435cb5",
+  "url": "https://foldjc.top/api/v1/client/subscribe?token=76fcc30dae445df7f5be0ba10aab8b51",
+  "host": "foldjc.top",
+  "provider": "foldjc.top",
+  "nodes_total": 11,
+  "protocol_counts": {
+    "hysteria2": 11
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 929.3,
+  "updated_at": "2025-09-23 15:44:07"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "3e6b3c4363b8",
+  "url": "https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=981ea26409350a8783c71077c85e9278",
+  "host": "maxhjd.jjzcloud.top",
+  "provider": "maxhjd.jjzcloud.top",
+  "nodes_total": 13,
+  "protocol_counts": {
+    "hysteria2": 13
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 391.6,
+  "updated_at": "2025-09-23 15:44:16"
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>登录 - Google SSR Actions</title>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; margin:0; background:linear-gradient(135deg,#0f172a,#111827); color:#e5e7eb; }
+    .wrap { min-height: 100vh; display:flex; align-items:center; justify-content:center; }
+    .card { width: 92%; max-width: 380px; background: radial-gradient(120% 120% at 10% 10%, #0b1220 0%, #0a0f1c 60%, #0b1220 100%); border:1px solid #1f2937; border-radius: 16px; padding: 18px; box-shadow: 0 20px 40px rgba(0,0,0,.35); }
+    h1 { margin:0 0 8px 0; font-size: 18px; color:#e5e7eb; }
+    .sub { margin:0 0 12px 0; color:#94a3b8; font-size: 13px; }
+    label { display:block; font-size:12px; color:#94a3b8; margin:8px 0 6px; }
+    input { width:100%; padding:10px 12px; background:#0b1220; border:1px solid #1f2937; border-radius: 10px; color:#e5e7eb; outline:none; }
+    button { margin-top:12px; width:100%; padding:10px 12px; border-radius:10px; border:1px solid #2563eb; background: linear-gradient(90deg,#1d4ed8,#2563eb,#1d4ed8); color:#e5e7eb; cursor:pointer; }
+    .err { color:#f87171; font-size: 12px; min-height: 16px; margin-top:6px; }
+  </style>
+  <script>
+    const AUTH_HASH = "";
+    const AUTH_USER = "";
+    async function sha256(message) { const msgBuffer = new TextEncoder().encode(message); const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer); return Array.from(new Uint8Array(hashBuffer)).map(b=>b.toString(16).padStart(2,'0')).join(''); }
+    function presetUser(){ try{ if(AUTH_USER){ document.getElementById('user').value = AUTH_USER; } }catch(e){} }
+    async function login(){
+      const u = document.getElementById('user').value.trim();
+      const p = document.getElementById('pass').value;
+      const err = document.getElementById('err');
+      err.textContent = '';
+      if(!AUTH_HASH){ location.replace('index.html'); return; }
+      if(!u){ err.textContent = '请输入用户名'; return; }
+      const needUser = (AUTH_USER||'').trim().length>0;
+      if(needUser && u !== (AUTH_USER||'').trim()){ err.textContent='用户名不正确'; return; }
+      if(!p){ err.textContent = '请输入密码'; return; }
+      const h = await sha256(p);
+      if(h.toLowerCase() === AUTH_HASH.toLowerCase()){
+        try{ localStorage.setItem('gauth', h); localStorage.setItem('guser', u); }catch(e){}
+        location.replace('index.html');
+      } else {
+        err.textContent = '用户名或密码不正确';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', ()=>{
+      presetUser();
+      document.getElementById('btn').addEventListener('click', login);
+      document.getElementById('pass').addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ login(); }});
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>登录</h1>
+      <p class="sub">请输入用户名与密码</p>
+      <label>用户名</label>
+      <input id="user" placeholder="用户名" />
+      <label>密码</label>
+      <input id="pass" type="password" placeholder="密码" />
+      <button id="btn">登录</button>
+      <div id="err" class="err"></div>
+    </div>
+  </div>
+</body>
+</html>
+
+

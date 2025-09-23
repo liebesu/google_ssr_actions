@@ -1,0 +1,18 @@
+{
+  "id": "285416b294a6",
+  "url": "https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9",
+  "host": "dl.vfkum.website",
+  "provider": "dl.vfkum.website",
+  "nodes_total": 7,
+  "protocol_counts": {
+    "vmess": 7
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 5838.3,
+  "updated_at": "2025-09-23 15:43:50"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "4fff2d9ea3b2",
+  "url": "https://api.91unicorn.vip/api/v1/client/subscribe?token=47c2b803f3c6b84c4552e60106852aa1",
+  "host": "api.91unicorn.vip",
+  "provider": "api.91unicorn.vip",
+  "nodes_total": 51,
+  "protocol_counts": {
+    "ss": 51
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 730.8,
+  "updated_at": "2025-09-23 15:43:33"
+}
