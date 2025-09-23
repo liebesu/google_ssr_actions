@@ -443,3 +443,4 @@ class SubscriptionValidator:
             pass
         
         return traffic_info
+

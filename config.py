@@ -124,3 +124,4 @@ class ConfigManager:
 
 # 全局配置实例
 config = ConfigManager()
+

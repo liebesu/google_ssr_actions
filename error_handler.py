@@ -205,3 +205,4 @@ SUBSCRIPTION_RETRY_CONFIG = RetryConfig(
     backoff_factor=2.0,
     retryable_status_codes=[403, 429, 500, 502, 503]  # 包含403因为订阅链接经常出现
 )
+
