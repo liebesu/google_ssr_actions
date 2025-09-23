@@ -84,31 +84,7 @@ jobs:
           # 如果 index.html 不存在，创建一个简单的测试页面
           if [ ! -f dist/index.html ]; then
             echo "创建测试页面..."
-            cat > dist/index.html << 'EOF'
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>订阅聚合器</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #0a0a0a; color: #fff; margin: 0; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; background: #1a1a1a; padding: 20px; border-radius: 10px; }
-        h1 { color: #4CAF50; text-align: center; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>🚀 订阅聚合器</h1>
-        <p>系统正在初始化，请稍候...</p>
-        <p>构建时间: <span id="build-time"></span></p>
-    </div>
-    <script>
-        document.getElementById('build-time').textContent = new Date().toLocaleString('zh-CN');
-    </script>
-</body>
-</html>
-EOF
+            echo '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>订阅聚合器</title></head><body><h1>🚀 订阅聚合器</h1><p>系统正在初始化...</p></body></html>' > dist/index.html
           fi
           
           echo "=== 最终 dist 目录内容 ==="
