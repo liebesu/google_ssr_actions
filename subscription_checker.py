@@ -2126,7 +2126,7 @@ class SubscriptionChecker:
             response = requests.post(
                 self.dingtalk_webhook,
                 json=usage_message,
-                timeout=10
+                timeout=5  # 减少超时时间到5秒
             )
             
             if response.status_code == 200:

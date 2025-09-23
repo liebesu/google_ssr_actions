@@ -3167,3 +3167,1947 @@ hysteria2://1552d87b-a830-4fb6-b79f-a579af95a814@mf1.ylccloud.top:16090/?insecur
 2025-09-23 22:42:43 - WARNING - 代理连接失败，切换到直连模式
 2025-09-23 22:42:43 - INFO - 加载了 114 个已通知URL记录
 2025-09-23 22:42:43 - INFO - ✅ SerpAPI使用量阈值通知发送成功 (使用率: 58.3%, 阈值: 50%)
+2025-09-23 22:53:29 - INFO - 未使用代理
+2025-09-23 22:53:29 - INFO - 加载了 114 个已通知URL记录
+2025-09-23 22:53:38 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58
+2025-09-23 22:53:38 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58&flag=clash
+2025-09-23 22:53:38 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58&flag=clash
+2025-09-23 22:53:39 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58
+2025-09-23 22:53:39 - INFO - 开始双重分析订阅内容
+2025-09-23 22:53:39 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:53:39 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58
+2025-09-23 22:53:39 - INFO - 原始内容长度: 2876
+2025-09-23 22:53:39 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMmVkMWZhN2ItOWFmMi00MmJlLWEzM2QtMDUzZTk2NWI0NjUyQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:53:39 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:53:39 - INFO - 解码后内容预览: hysteria2://2ed1fa7b-9af2-42be-a33d-053e965b4652@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A87.05%20GB
+hysteria2://2ed1fa7b-9af2-42be-a33d-053e965b4652@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://2ed1fa7b-9af2-42be-a33d-053e965b4652@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:53:39 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:53:39 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:53:39 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:53:39 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:53:39 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58&flag=clash
+2025-09-23 22:53:39 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:53:39 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:53:39 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:53:39 - INFO - 内容比较结果: 不一致
+2025-09-23 22:53:39 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:53:39 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:53:39 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:53:39 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:53:40 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:53:40 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:53:40 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:53:40 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:53:41 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:53:41 - WARNING - 所有转换服务都失败
+2025-09-23 22:53:41 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:53:41 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:53:41 - INFO - 总流量: 87.05 GB
+2025-09-23 22:53:41 - INFO - 剩余流量: 87.05 GB
+2025-09-23 22:53:41 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58
+2025-09-23 22:53:43 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:53:43 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:53:43 - INFO - 发现可用订阅: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58
+2025-09-23 22:53:43 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:53:43 - INFO -   流量信息: 剩余 87.05 GB, 总量 87.05 GB
+2025-09-23 22:53:43 - INFO -   状态码: 200
+2025-09-23 22:53:43 - INFO - 钉钉通知发送成功: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58
+2025-09-23 22:53:43 - INFO - 已记录通知URL: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58
+2025-09-23 22:53:43 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:53:43 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d
+2025-09-23 22:53:43 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d&flag=clash
+2025-09-23 22:53:43 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d&flag=clash
+2025-09-23 22:53:44 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d
+2025-09-23 22:53:44 - INFO - 开始双重分析订阅内容
+2025-09-23 22:53:44 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:53:44 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d
+2025-09-23 22:53:44 - INFO - 原始内容长度: 2872
+2025-09-23 22:53:44 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vZmM0YjExNjUtODM5YS00NDNiLThiMWMtNDcwYTAxNjJmNTZkQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:53:44 - INFO - 原始内容base64解码成功，长度: 2154
+2025-09-23 22:53:44 - INFO - 解码后内容预览: hysteria2://fc4b1165-839a-443b-8b1c-470a0162f56d@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A27.6%20GB
+hysteria2://fc4b1165-839a-443b-8b1c-470a0162f56d@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://fc4b1165-839a-443b-8b1c-470a0162f56d@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5...
+2025-09-23 22:53:44 - INFO - 开始分析解码后内容，长度: 2154
+2025-09-23 22:53:44 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:53:44 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:53:44 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:53:44 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d&flag=clash
+2025-09-23 22:53:44 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:53:44 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:53:44 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:53:44 - INFO - 内容比较结果: 不一致
+2025-09-23 22:53:44 - INFO - 原始内容长度: 2154, Clash内容长度: 20915
+2025-09-23 22:53:44 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:53:44 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:53:44 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:53:44 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:53:44 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:53:44 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:53:44 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:53:45 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:53:45 - WARNING - 所有转换服务都失败
+2025-09-23 22:53:45 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:53:45 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:53:45 - INFO - 总流量: 27.6 GB
+2025-09-23 22:53:45 - INFO - 剩余流量: 27.6 GB
+2025-09-23 22:53:45 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d
+2025-09-23 22:53:47 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:53:47 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:53:47 - INFO - 发现可用订阅: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d
+2025-09-23 22:53:47 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:53:47 - INFO -   流量信息: 剩余 27.6 GB, 总量 27.6 GB
+2025-09-23 22:53:47 - INFO -   状态码: 200
+2025-09-23 22:53:47 - INFO - 钉钉通知发送成功: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d
+2025-09-23 22:53:47 - INFO - 已记录通知URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d
+2025-09-23 22:53:47 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:53:47 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3
+2025-09-23 22:53:47 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3&flag=clash
+2025-09-23 22:53:47 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3&flag=clash
+2025-09-23 22:53:47 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3
+2025-09-23 22:53:47 - INFO - 开始双重分析订阅内容
+2025-09-23 22:53:47 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:53:47 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3
+2025-09-23 22:53:47 - INFO - 原始内容长度: 2872
+2025-09-23 22:53:47 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMmY3ZjYzYTgtNTA5Yy00NmRkLTkwMjYtZDY4NWIwZDViZjAyQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:53:47 - INFO - 原始内容base64解码成功，长度: 2154
+2025-09-23 22:53:47 - INFO - 解码后内容预览: hysteria2://2f7f63a8-509c-46dd-9026-d685b0d5bf02@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A7.97%20GB
+hysteria2://2f7f63a8-509c-46dd-9026-d685b0d5bf02@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://2f7f63a8-509c-46dd-9026-d685b0d5bf02@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5...
+2025-09-23 22:53:47 - INFO - 开始分析解码后内容，长度: 2154
+2025-09-23 22:53:47 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:53:47 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:53:47 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:53:47 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3&flag=clash
+2025-09-23 22:53:48 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:53:48 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:53:48 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:53:48 - INFO - 内容比较结果: 不一致
+2025-09-23 22:53:48 - INFO - 原始内容长度: 2154, Clash内容长度: 20915
+2025-09-23 22:53:48 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:53:48 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:53:48 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:53:48 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:53:48 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:53:48 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:53:48 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:53:48 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:53:48 - WARNING - 所有转换服务都失败
+2025-09-23 22:53:48 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:53:48 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:53:48 - INFO - 总流量: 7.97 GB
+2025-09-23 22:53:48 - INFO - 剩余流量: 7.97 GB
+2025-09-23 22:53:48 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3
+2025-09-23 22:53:49 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:53:49 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:53:49 - INFO - 发现可用订阅: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3
+2025-09-23 22:53:49 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:53:49 - INFO -   流量信息: 剩余 7.97 GB, 总量 7.97 GB
+2025-09-23 22:53:49 - INFO -   状态码: 200
+2025-09-23 22:53:49 - INFO - 钉钉通知发送成功: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3
+2025-09-23 22:53:49 - INFO - 已记录通知URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3
+2025-09-23 22:53:49 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:53:49 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9
+2025-09-23 22:53:49 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9&flag=clash
+2025-09-23 22:53:49 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9&flag=clash
+2025-09-23 22:53:50 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9
+2025-09-23 22:53:50 - INFO - 开始双重分析订阅内容
+2025-09-23 22:53:50 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:53:50 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9
+2025-09-23 22:53:50 - INFO - 原始内容长度: 2872
+2025-09-23 22:53:50 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vYzUxNjMyYTQtYWMxNS00M2E2LWI3OGYtMDBiZThjMmVhZTAyQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:53:50 - INFO - 原始内容base64解码成功，长度: 2154
+2025-09-23 22:53:50 - INFO - 解码后内容预览: hysteria2://c51632a4-ac15-43a6-b78f-00be8c2eae02@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A97.5%20GB
+hysteria2://c51632a4-ac15-43a6-b78f-00be8c2eae02@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://c51632a4-ac15-43a6-b78f-00be8c2eae02@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5...
+2025-09-23 22:53:50 - INFO - 开始分析解码后内容，长度: 2154
+2025-09-23 22:53:50 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:53:50 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:53:50 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:53:50 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9&flag=clash
+2025-09-23 22:53:50 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:53:50 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:53:50 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:53:50 - INFO - 内容比较结果: 不一致
+2025-09-23 22:53:50 - INFO - 原始内容长度: 2154, Clash内容长度: 20915
+2025-09-23 22:53:50 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:53:50 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:53:50 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:53:50 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:53:50 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:53:50 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:53:50 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:53:51 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:53:51 - WARNING - 所有转换服务都失败
+2025-09-23 22:53:51 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:53:51 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:53:51 - INFO - 总流量: 97.5 GB
+2025-09-23 22:53:51 - INFO - 剩余流量: 97.5 GB
+2025-09-23 22:53:51 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9
+2025-09-23 22:53:52 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:53:52 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:53:52 - INFO - 发现可用订阅: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9
+2025-09-23 22:53:52 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:53:52 - INFO -   流量信息: 剩余 97.5 GB, 总量 97.5 GB
+2025-09-23 22:53:52 - INFO -   状态码: 200
+2025-09-23 22:53:52 - INFO - 钉钉通知发送成功: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9
+2025-09-23 22:53:52 - INFO - 已记录通知URL: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9
+2025-09-23 22:53:52 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:53:52 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84
+2025-09-23 22:53:52 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84&flag=clash
+2025-09-23 22:53:52 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84&flag=clash
+2025-09-23 22:53:52 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84
+2025-09-23 22:53:52 - INFO - 开始双重分析订阅内容
+2025-09-23 22:53:52 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:53:52 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84
+2025-09-23 22:53:53 - INFO - 原始内容长度: 2864
+2025-09-23 22:53:53 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vYjk1NTNhNmQtNTcyNS00YTc3LWI2YzQtZTZmODUwN2YzY2Y0QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:53:53 - INFO - 原始内容base64解码成功，长度: 2146
+2025-09-23 22:53:53 - INFO - 解码后内容预览: hysteria2://b9553a6d-5725-4a77-b6c4-e6f8507f3cf4@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A0
+hysteria2://b9553a6d-5725-4a77-b6c4-e6f8507f3cf4@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://b9553a6d-5725-4a77-b6c4-e6f8507f3cf4@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5%88%B0%E...
+2025-09-23 22:53:53 - INFO - 开始分析解码后内容，长度: 2146
+2025-09-23 22:53:53 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:53:53 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:53:53 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:53:53 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84&flag=clash
+2025-09-23 22:53:53 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:53:53 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:53:53 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:53:53 - INFO - 内容比较结果: 不一致
+2025-09-23 22:53:53 - INFO - 原始内容长度: 2146, Clash内容长度: 20915
+2025-09-23 22:53:53 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:53:53 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:53:53 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:53:53 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:53:53 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:53:53 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:53:53 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:53:54 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:53:54 - WARNING - 所有转换服务都失败
+2025-09-23 22:53:54 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:53:54 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:53:54 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84
+2025-09-23 22:53:55 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:53:55 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:53:55 - INFO - 发现可用订阅: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84
+2025-09-23 22:53:55 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:53:55 - INFO -   流量信息: 剩余 None GB, 总量 None GB
+2025-09-23 22:53:55 - INFO -   状态码: 200
+2025-09-23 22:53:55 - INFO - 钉钉通知发送成功: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84
+2025-09-23 22:53:55 - INFO - 已记录通知URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84
+2025-09-23 22:53:55 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:53:55 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91
+2025-09-23 22:53:55 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91&flag=clash
+2025-09-23 22:53:55 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91&flag=clash
+2025-09-23 22:53:55 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91
+2025-09-23 22:53:55 - INFO - 开始双重分析订阅内容
+2025-09-23 22:53:55 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:53:55 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91
+2025-09-23 22:53:56 - INFO - 原始内容长度: 2876
+2025-09-23 22:53:56 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMGY0NDM2NzEtMGM4OS00Nzc3LThlMTQtODg1MGZhNGZlNDFiQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:53:56 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:53:56 - INFO - 解码后内容预览: hysteria2://0f443671-0c89-4777-8e14-8850fa4fe41b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A79.64%20GB
+hysteria2://0f443671-0c89-4777-8e14-8850fa4fe41b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://0f443671-0c89-4777-8e14-8850fa4fe41b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:53:56 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:53:56 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:53:56 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:53:56 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:53:56 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91&flag=clash
+2025-09-23 22:53:56 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:53:56 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:53:56 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:53:56 - INFO - 内容比较结果: 不一致
+2025-09-23 22:53:56 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:53:56 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:53:56 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:53:56 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:53:56 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:53:56 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:53:56 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:53:56 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:53:57 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:53:57 - WARNING - 所有转换服务都失败
+2025-09-23 22:53:57 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:53:57 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:53:57 - INFO - 总流量: 79.64 GB
+2025-09-23 22:53:57 - INFO - 剩余流量: 79.64 GB
+2025-09-23 22:53:57 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91
+2025-09-23 22:53:58 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:53:58 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:53:58 - INFO - 发现可用订阅: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91
+2025-09-23 22:53:58 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:53:58 - INFO -   流量信息: 剩余 79.64 GB, 总量 79.64 GB
+2025-09-23 22:53:58 - INFO -   状态码: 200
+2025-09-23 22:53:58 - INFO - 钉钉通知发送成功: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91
+2025-09-23 22:53:58 - INFO - 已记录通知URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91
+2025-09-23 22:53:58 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:53:58 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f
+2025-09-23 22:53:58 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f&flag=clash
+2025-09-23 22:53:58 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f&flag=clash
+2025-09-23 22:53:58 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f
+2025-09-23 22:53:58 - INFO - 开始双重分析订阅内容
+2025-09-23 22:53:58 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:53:58 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f
+2025-09-23 22:53:58 - INFO - 原始内容长度: 2876
+2025-09-23 22:53:58 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vOGZjYWUwM2MtMWRlMS00YWIwLTkyZDItNDExZDI5Y2I0YWQ3QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:53:58 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:53:58 - INFO - 解码后内容预览: hysteria2://8fcae03c-1de1-4ab0-92d2-411d29cb4ad7@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A92.07%20GB
+hysteria2://8fcae03c-1de1-4ab0-92d2-411d29cb4ad7@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://8fcae03c-1de1-4ab0-92d2-411d29cb4ad7@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:53:58 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:53:58 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:53:58 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:53:58 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:53:58 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f&flag=clash
+2025-09-23 22:53:59 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:53:59 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:53:59 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:53:59 - INFO - 内容比较结果: 不一致
+2025-09-23 22:53:59 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:53:59 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:53:59 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:53:59 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:53:59 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:53:59 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:53:59 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:53:59 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:53:59 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:53:59 - WARNING - 所有转换服务都失败
+2025-09-23 22:53:59 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:53:59 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:53:59 - INFO - 总流量: 92.07 GB
+2025-09-23 22:53:59 - INFO - 剩余流量: 92.07 GB
+2025-09-23 22:53:59 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f
+2025-09-23 22:54:01 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:54:01 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:54:01 - INFO - 发现可用订阅: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f
+2025-09-23 22:54:01 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:54:01 - INFO -   流量信息: 剩余 92.07 GB, 总量 92.07 GB
+2025-09-23 22:54:01 - INFO -   状态码: 200
+2025-09-23 22:54:01 - INFO - 钉钉通知发送成功: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f
+2025-09-23 22:54:01 - INFO - 已记录通知URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f
+2025-09-23 22:54:01 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:54:01 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74
+2025-09-23 22:54:01 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74&flag=clash
+2025-09-23 22:54:01 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74&flag=clash
+2025-09-23 22:54:01 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74
+2025-09-23 22:54:01 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:01 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:01 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74
+2025-09-23 22:54:01 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:01 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vZDNiNDljMWQtMzM3Ni00ZTVmLWI0ZTEtMTRlNGI1YmE0NTU4QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:01 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:01 - INFO - 解码后内容预览: hysteria2://d3b49c1d-3376-4e5f-b4e1-14e4b5ba4558@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A90.28%20GB
+hysteria2://d3b49c1d-3376-4e5f-b4e1-14e4b5ba4558@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://d3b49c1d-3376-4e5f-b4e1-14e4b5ba4558@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:01 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:01 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:01 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:01 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:01 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74&flag=clash
+2025-09-23 22:54:02 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:02 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:02 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:02 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:02 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:02 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:02 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:02 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:02 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:02 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:02 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:02 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:02 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:02 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:02 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:02 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:02 - INFO - 总流量: 90.28 GB
+2025-09-23 22:54:02 - INFO - 剩余流量: 90.28 GB
+2025-09-23 22:54:02 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74
+2025-09-23 22:54:04 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:54:04 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:54:04 - INFO - 发现可用订阅: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74
+2025-09-23 22:54:04 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:54:04 - INFO -   流量信息: 剩余 90.28 GB, 总量 90.28 GB
+2025-09-23 22:54:04 - INFO -   状态码: 200
+2025-09-23 22:54:04 - INFO - 钉钉通知发送成功: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74
+2025-09-23 22:54:04 - INFO - 已记录通知URL: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74
+2025-09-23 22:54:04 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:54:04 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20
+2025-09-23 22:54:04 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20&flag=clash
+2025-09-23 22:54:04 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20&flag=clash
+2025-09-23 22:54:04 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20
+2025-09-23 22:54:04 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:04 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:04 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20
+2025-09-23 22:54:04 - INFO - 原始内容长度: 2872
+2025-09-23 22:54:04 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vYjFmOWIyZjQtMDQwYi00MjVjLWE0ZDItYzBjZjcwN2Q3MDk2QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:04 - INFO - 原始内容base64解码成功，长度: 2154
+2025-09-23 22:54:04 - INFO - 解码后内容预览: hysteria2://b1f9b2f4-040b-425c-a4d2-c0cf707d7096@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A91.3%20GB
+hysteria2://b1f9b2f4-040b-425c-a4d2-c0cf707d7096@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://b1f9b2f4-040b-425c-a4d2-c0cf707d7096@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5...
+2025-09-23 22:54:04 - INFO - 开始分析解码后内容，长度: 2154
+2025-09-23 22:54:04 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:04 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:04 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:04 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20&flag=clash
+2025-09-23 22:54:05 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:05 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:05 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:05 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:05 - INFO - 原始内容长度: 2154, Clash内容长度: 20915
+2025-09-23 22:54:05 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:05 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:05 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:05 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:05 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:05 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:05 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:05 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:05 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:05 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:05 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:05 - INFO - 总流量: 91.3 GB
+2025-09-23 22:54:05 - INFO - 剩余流量: 91.3 GB
+2025-09-23 22:54:05 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20
+2025-09-23 22:54:06 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:54:06 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:54:06 - INFO - 发现可用订阅: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20
+2025-09-23 22:54:06 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:54:06 - INFO -   流量信息: 剩余 91.3 GB, 总量 91.3 GB
+2025-09-23 22:54:06 - INFO -   状态码: 200
+2025-09-23 22:54:06 - INFO - 钉钉通知发送成功: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20
+2025-09-23 22:54:06 - INFO - 已记录通知URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20
+2025-09-23 22:54:06 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:54:06 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e
+2025-09-23 22:54:06 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e&flag=clash
+2025-09-23 22:54:06 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e&flag=clash
+2025-09-23 22:54:07 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e
+2025-09-23 22:54:07 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:07 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:07 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e
+2025-09-23 22:54:07 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:07 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMjllMTA2MjItMDQwMi00NGI4LWEwOTAtN2JkNDdlOWI3MzFiQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:07 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:07 - INFO - 解码后内容预览: hysteria2://29e10622-0402-44b8-a090-7bd47e9b731b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A86.63%20GB
+hysteria2://29e10622-0402-44b8-a090-7bd47e9b731b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://29e10622-0402-44b8-a090-7bd47e9b731b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:07 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:07 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:07 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:07 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:07 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e&flag=clash
+2025-09-23 22:54:07 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:07 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:07 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:07 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:07 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:07 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:07 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:07 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:08 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:08 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:08 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:08 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:08 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:08 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:08 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:08 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:08 - INFO - 总流量: 86.63 GB
+2025-09-23 22:54:08 - INFO - 剩余流量: 86.63 GB
+2025-09-23 22:54:08 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e
+2025-09-23 22:54:09 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:54:09 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:54:09 - INFO - 发现可用订阅: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e
+2025-09-23 22:54:09 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:54:09 - INFO -   流量信息: 剩余 86.63 GB, 总量 86.63 GB
+2025-09-23 22:54:09 - INFO -   状态码: 200
+2025-09-23 22:54:09 - INFO - 钉钉通知发送成功: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e
+2025-09-23 22:54:09 - INFO - 已记录通知URL: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e
+2025-09-23 22:54:09 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:54:09 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729
+2025-09-23 22:54:09 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729&flag=clash
+2025-09-23 22:54:09 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729&flag=clash
+2025-09-23 22:54:10 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729
+2025-09-23 22:54:10 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:10 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:10 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729
+2025-09-23 22:54:10 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:10 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vZGZjNzNlMWItMmMzYS00YTRjLWJiMzctMmJhZjgwZDQyYjY3QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:10 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:10 - INFO - 解码后内容预览: hysteria2://dfc73e1b-2c3a-4a4c-bb37-2baf80d42b67@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A96.63%20GB
+hysteria2://dfc73e1b-2c3a-4a4c-bb37-2baf80d42b67@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://dfc73e1b-2c3a-4a4c-bb37-2baf80d42b67@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:10 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:10 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:10 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:10 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:10 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729&flag=clash
+2025-09-23 22:54:10 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:10 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:10 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:10 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:10 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:10 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:10 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:10 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:10 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:10 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:11 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:11 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:11 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:11 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:11 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:11 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:11 - INFO - 总流量: 96.63 GB
+2025-09-23 22:54:11 - INFO - 剩余流量: 96.63 GB
+2025-09-23 22:54:11 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729
+2025-09-23 22:54:12 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:54:12 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:54:12 - INFO - 发现可用订阅: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729
+2025-09-23 22:54:12 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:54:12 - INFO -   流量信息: 剩余 96.63 GB, 总量 96.63 GB
+2025-09-23 22:54:12 - INFO -   状态码: 200
+2025-09-23 22:54:12 - INFO - 钉钉通知发送成功: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729
+2025-09-23 22:54:12 - INFO - 已记录通知URL: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729
+2025-09-23 22:54:12 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:54:12 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0
+2025-09-23 22:54:12 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0&flag=clash
+2025-09-23 22:54:12 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0&flag=clash
+2025-09-23 22:54:12 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0
+2025-09-23 22:54:12 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:12 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:12 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0
+2025-09-23 22:54:13 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:13 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vOTk1ZGJhYTgtODAyNy00YmM5LTk3NjktNDQ5OGY5YmE5MDhhQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:13 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:13 - INFO - 解码后内容预览: hysteria2://995dbaa8-8027-4bc9-9769-4498f9ba908a@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A95.35%20GB
+hysteria2://995dbaa8-8027-4bc9-9769-4498f9ba908a@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://995dbaa8-8027-4bc9-9769-4498f9ba908a@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:13 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:13 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:13 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:13 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:13 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0&flag=clash
+2025-09-23 22:54:13 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:13 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:13 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:13 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:13 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:13 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:13 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:13 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:13 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:13 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:13 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:13 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:13 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:13 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:13 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:13 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:13 - INFO - 总流量: 95.35 GB
+2025-09-23 22:54:13 - INFO - 剩余流量: 95.35 GB
+2025-09-23 22:54:13 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0
+2025-09-23 22:54:15 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:54:15 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:54:15 - INFO - 发现可用订阅: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0
+2025-09-23 22:54:15 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:54:15 - INFO -   流量信息: 剩余 95.35 GB, 总量 95.35 GB
+2025-09-23 22:54:15 - INFO -   状态码: 200
+2025-09-23 22:54:15 - INFO - 钉钉通知发送成功: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0
+2025-09-23 22:54:15 - INFO - 已记录通知URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0
+2025-09-23 22:54:15 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:54:15 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516e
+2025-09-23 22:54:15 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516e&flag=clash
+2025-09-23 22:54:15 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516e&flag=clash
+2025-09-23 22:54:15 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516e
+2025-09-23 22:54:15 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:15 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:15 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516e
+2025-09-23 22:54:15 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:15 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMTI1MWZhNmItYTQ3MS00ZjE5LWJmNTctMDQxOGY0NDk0MjVjQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:15 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:15 - INFO - 解码后内容预览: hysteria2://1251fa6b-a471-4f19-bf57-0418f449425c@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A66.16%20GB
+hysteria2://1251fa6b-a471-4f19-bf57-0418f449425c@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://1251fa6b-a471-4f19-bf57-0418f449425c@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:15 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:15 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:15 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:15 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:15 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516e&flag=clash
+2025-09-23 22:54:16 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:16 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:16 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:16 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:16 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:16 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:16 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:16 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:16 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:16 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:16 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:16 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:16 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:16 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:16 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:16 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:16 - INFO - 总流量: 66.16 GB
+2025-09-23 22:54:16 - INFO - 剩余流量: 66.16 GB
+2025-09-23 22:54:16 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516e
+2025-09-23 22:54:18 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:18 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:18 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94
+2025-09-23 22:54:18 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94&flag=clash
+2025-09-23 22:54:18 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94&flag=clash
+2025-09-23 22:54:18 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94
+2025-09-23 22:54:18 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:18 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:18 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94
+2025-09-23 22:54:18 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:18 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMjI5MzNmZWUtYTFlYy00YWI4LTk5OTgtYWIzMjVjMjk4MGUzQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:18 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:18 - INFO - 解码后内容预览: hysteria2://22933fee-a1ec-4ab8-9998-ab325c2980e3@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A96.96%20GB
+hysteria2://22933fee-a1ec-4ab8-9998-ab325c2980e3@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://22933fee-a1ec-4ab8-9998-ab325c2980e3@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:18 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:18 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:18 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:18 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:18 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94&flag=clash
+2025-09-23 22:54:18 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:18 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:18 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:18 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:18 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:18 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:18 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:18 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:19 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:19 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:19 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:19 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:19 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:19 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:19 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:19 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:19 - INFO - 总流量: 96.96 GB
+2025-09-23 22:54:19 - INFO - 剩余流量: 96.96 GB
+2025-09-23 22:54:19 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94
+2025-09-23 22:54:20 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:20 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:20 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:20 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:20 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5e
+2025-09-23 22:54:20 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5e&flag=clash
+2025-09-23 22:54:20 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5e&flag=clash
+2025-09-23 22:54:21 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5e
+2025-09-23 22:54:21 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:21 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:21 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5e
+2025-09-23 22:54:21 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:21 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNDMzNmZiNWQtOTdiMC00MmJlLTkwMzItNDM0ZDk5MWFlYmE5QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:21 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:21 - INFO - 解码后内容预览: hysteria2://4336fb5d-97b0-42be-9032-434d991aeba9@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A97.75%20GB
+hysteria2://4336fb5d-97b0-42be-9032-434d991aeba9@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://4336fb5d-97b0-42be-9032-434d991aeba9@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:21 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:21 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:21 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:21 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:21 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5e&flag=clash
+2025-09-23 22:54:21 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:21 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:21 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:21 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:21 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:21 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:21 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:21 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:21 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:21 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:21 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:21 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:22 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:22 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:22 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:22 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:22 - INFO - 总流量: 97.75 GB
+2025-09-23 22:54:22 - INFO - 剩余流量: 97.75 GB
+2025-09-23 22:54:22 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5e
+2025-09-23 22:54:23 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:23 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:23 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:23 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:23 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5b
+2025-09-23 22:54:23 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5b&flag=clash
+2025-09-23 22:54:23 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5b&flag=clash
+2025-09-23 22:54:23 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5b
+2025-09-23 22:54:23 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:23 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:23 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5b
+2025-09-23 22:54:23 - INFO - 原始内容长度: 2872
+2025-09-23 22:54:23 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNTEyZWYyOGQtYWMwMS00Nzc0LTg3MzYtMGVlYjFlZWFkNTQ5QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:23 - INFO - 原始内容base64解码成功，长度: 2154
+2025-09-23 22:54:23 - INFO - 解码后内容预览: hysteria2://512ef28d-ac01-4774-8736-0eeb1eead549@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A88.9%20GB
+hysteria2://512ef28d-ac01-4774-8736-0eeb1eead549@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://512ef28d-ac01-4774-8736-0eeb1eead549@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5...
+2025-09-23 22:54:23 - INFO - 开始分析解码后内容，长度: 2154
+2025-09-23 22:54:23 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:23 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:23 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:23 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5b&flag=clash
+2025-09-23 22:54:24 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:24 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:24 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:24 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:24 - INFO - 原始内容长度: 2154, Clash内容长度: 20915
+2025-09-23 22:54:24 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:24 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:24 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:24 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:24 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:24 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:24 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:24 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:24 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:24 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:24 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:24 - INFO - 总流量: 88.9 GB
+2025-09-23 22:54:24 - INFO - 剩余流量: 88.9 GB
+2025-09-23 22:54:24 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5b
+2025-09-23 22:54:26 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:26 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:26 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:26 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:26 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6
+2025-09-23 22:54:26 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6&flag=clash
+2025-09-23 22:54:26 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6&flag=clash
+2025-09-23 22:54:26 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6
+2025-09-23 22:54:26 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:26 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:26 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6
+2025-09-23 22:54:27 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:27 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNThlMTIzZTktOTFiYy00YTgxLWIwMjMtMGQ5ZTcyODA5ZmNlQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:27 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:27 - INFO - 解码后内容预览: hysteria2://58e123e9-91bc-4a81-b023-0d9e72809fce@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A97.18%20GB
+hysteria2://58e123e9-91bc-4a81-b023-0d9e72809fce@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://58e123e9-91bc-4a81-b023-0d9e72809fce@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:27 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:27 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:27 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:27 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:27 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6&flag=clash
+2025-09-23 22:54:27 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:27 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:27 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:27 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:27 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:27 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:27 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:27 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:27 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:27 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:27 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:27 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:27 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:27 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:27 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:27 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:27 - INFO - 总流量: 97.18 GB
+2025-09-23 22:54:27 - INFO - 剩余流量: 97.18 GB
+2025-09-23 22:54:27 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6
+2025-09-23 22:54:29 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:29 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:29 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:29 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:29 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08
+2025-09-23 22:54:29 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08&flag=clash
+2025-09-23 22:54:29 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08&flag=clash
+2025-09-23 22:54:29 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08
+2025-09-23 22:54:29 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:29 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:29 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08
+2025-09-23 22:54:29 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:29 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNjQ3NjAzYjgtNmE4Mi00ZGM5LTg3ZjYtMDJiYzVkYmNmMjc4QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:29 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:29 - INFO - 解码后内容预览: hysteria2://647603b8-6a82-4dc9-87f6-02bc5dbcf278@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A90.04%20GB
+hysteria2://647603b8-6a82-4dc9-87f6-02bc5dbcf278@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://647603b8-6a82-4dc9-87f6-02bc5dbcf278@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:29 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:29 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:29 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:29 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:29 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08&flag=clash
+2025-09-23 22:54:30 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:30 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:30 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:30 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:30 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:30 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:30 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:30 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:30 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:30 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:30 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:30 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:30 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:30 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:30 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:30 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:30 - INFO - 总流量: 90.04 GB
+2025-09-23 22:54:30 - INFO - 剩余流量: 90.04 GB
+2025-09-23 22:54:30 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08
+2025-09-23 22:54:31 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:31 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:31 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:31 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:31 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159
+2025-09-23 22:54:31 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159&flag=clash
+2025-09-23 22:54:31 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159&flag=clash
+2025-09-23 22:54:32 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159
+2025-09-23 22:54:32 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:32 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:32 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159
+2025-09-23 22:54:32 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:32 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNTY0ZDYzNzktMDczOS00YTI5LTlmNzEtNDdmODMwMTQzNGM4QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:32 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:32 - INFO - 解码后内容预览: hysteria2://564d6379-0739-4a29-9f71-47f8301434c8@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A65.69%20GB
+hysteria2://564d6379-0739-4a29-9f71-47f8301434c8@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://564d6379-0739-4a29-9f71-47f8301434c8@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:32 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:32 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:32 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:32 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:32 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159&flag=clash
+2025-09-23 22:54:32 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:32 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:32 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:32 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:32 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:32 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:32 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:32 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:32 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:32 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:32 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:32 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:33 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:33 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:33 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:33 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:33 - INFO - 总流量: 65.69 GB
+2025-09-23 22:54:33 - INFO - 剩余流量: 65.69 GB
+2025-09-23 22:54:33 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159
+2025-09-23 22:54:34 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:34 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:34 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:34 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:34 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775
+2025-09-23 22:54:34 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775&flag=clash
+2025-09-23 22:54:34 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775&flag=clash
+2025-09-23 22:54:34 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775
+2025-09-23 22:54:34 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:34 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:34 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775
+2025-09-23 22:54:35 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:35 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vOGVkZjQxMjMtOTE4Yi00ZmI0LTliOWEtZDAzYmNjYjdjMGU5QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:35 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:35 - INFO - 解码后内容预览: hysteria2://8edf4123-918b-4fb4-9b9a-d03bccb7c0e9@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A86.37%20GB
+hysteria2://8edf4123-918b-4fb4-9b9a-d03bccb7c0e9@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://8edf4123-918b-4fb4-9b9a-d03bccb7c0e9@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:35 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:35 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:35 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:35 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:35 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775&flag=clash
+2025-09-23 22:54:35 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:35 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:35 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:35 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:35 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:35 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:35 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:35 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:35 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:35 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:35 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:35 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:35 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:35 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:35 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:35 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:35 - INFO - 总流量: 86.37 GB
+2025-09-23 22:54:35 - INFO - 剩余流量: 86.37 GB
+2025-09-23 22:54:35 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775
+2025-09-23 22:54:37 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:37 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:37 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:37 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:37 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babd
+2025-09-23 22:54:37 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babd&flag=clash
+2025-09-23 22:54:37 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babd&flag=clash
+2025-09-23 22:54:37 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babd
+2025-09-23 22:54:37 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:37 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:37 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babd
+2025-09-23 22:54:37 - INFO - 原始内容长度: 2864
+2025-09-23 22:54:37 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vY2UzODY3YmUtZjZkOS00MjljLTgyNTktNDYyOWI2NmFjMzNiQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:37 - INFO - 原始内容base64解码成功，长度: 2146
+2025-09-23 22:54:37 - INFO - 解码后内容预览: hysteria2://ce3867be-f6d9-429c-8259-4629b66ac33b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A0
+hysteria2://ce3867be-f6d9-429c-8259-4629b66ac33b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://ce3867be-f6d9-429c-8259-4629b66ac33b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5%88%B0%E...
+2025-09-23 22:54:37 - INFO - 开始分析解码后内容，长度: 2146
+2025-09-23 22:54:37 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:37 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:37 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:37 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babd&flag=clash
+2025-09-23 22:54:38 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:38 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:38 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:38 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:38 - INFO - 原始内容长度: 2146, Clash内容长度: 20915
+2025-09-23 22:54:38 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:38 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:38 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:38 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:38 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:38 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:38 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:38 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:38 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:38 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:38 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:38 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babd
+2025-09-23 22:54:39 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:39 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:39 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:39 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:39 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1
+2025-09-23 22:54:39 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1&flag=clash
+2025-09-23 22:54:39 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1&flag=clash
+2025-09-23 22:54:40 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1
+2025-09-23 22:54:40 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:40 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:40 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1
+2025-09-23 22:54:40 - INFO - 原始内容长度: 2872
+2025-09-23 22:54:40 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNzFlODI4YjctZGE1Ni00ZDUzLWE0MTAtMDBjNDgzMWQ2NzZlQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:40 - INFO - 原始内容base64解码成功，长度: 2152
+2025-09-23 22:54:40 - INFO - 解码后内容预览: hysteria2://71e828b7-da56-4d53-a410-00c4831d676e@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A81%20GB
+hysteria2://71e828b7-da56-4d53-a410-00c4831d676e@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://71e828b7-da56-4d53-a410-00c4831d676e@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5%8...
+2025-09-23 22:54:40 - INFO - 开始分析解码后内容，长度: 2152
+2025-09-23 22:54:40 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:40 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:40 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:40 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1&flag=clash
+2025-09-23 22:54:40 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:40 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:40 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:40 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:40 - INFO - 原始内容长度: 2152, Clash内容长度: 20915
+2025-09-23 22:54:40 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:40 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:40 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:40 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:40 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:41 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:41 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:41 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:41 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:41 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:41 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:41 - INFO - 总流量: 81.0 GB
+2025-09-23 22:54:41 - INFO - 剩余流量: 81.0 GB
+2025-09-23 22:54:41 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1
+2025-09-23 22:54:42 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:42 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:42 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:42 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:42 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029
+2025-09-23 22:54:42 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029&flag=clash
+2025-09-23 22:54:42 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029&flag=clash
+2025-09-23 22:54:42 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029
+2025-09-23 22:54:42 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:42 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:42 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029
+2025-09-23 22:54:43 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:43 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNTZiY2IyNjMtNWRkMC00ZDA4LTgxNWYtZjdlZjRmMTQ4YWUzQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:43 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:43 - INFO - 解码后内容预览: hysteria2://56bcb263-5dd0-4d08-815f-f7ef4f148ae3@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A53.71%20GB
+hysteria2://56bcb263-5dd0-4d08-815f-f7ef4f148ae3@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://56bcb263-5dd0-4d08-815f-f7ef4f148ae3@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:43 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:43 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:43 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:43 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:43 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029&flag=clash
+2025-09-23 22:54:43 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:43 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:43 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:43 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:43 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:43 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:43 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:43 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:43 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:43 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:43 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:43 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:43 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:43 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:43 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:43 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:43 - INFO - 总流量: 53.71 GB
+2025-09-23 22:54:43 - INFO - 剩余流量: 53.71 GB
+2025-09-23 22:54:43 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029
+2025-09-23 22:54:45 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:45 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:45 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:45 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:45 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144
+2025-09-23 22:54:45 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144&flag=clash
+2025-09-23 22:54:45 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144&flag=clash
+2025-09-23 22:54:45 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144
+2025-09-23 22:54:45 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:45 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:45 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144
+2025-09-23 22:54:45 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:45 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNjU0YjQ0MjktZGViYy00YzE3LTkwMjEtOWZlZDg5ZWY2N2U2QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:45 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:45 - INFO - 解码后内容预览: hysteria2://654b4429-debc-4c17-9021-9fed89ef67e6@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A97.31%20GB
+hysteria2://654b4429-debc-4c17-9021-9fed89ef67e6@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://654b4429-debc-4c17-9021-9fed89ef67e6@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:45 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:45 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:45 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:45 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:45 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144&flag=clash
+2025-09-23 22:54:46 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:46 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:46 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:46 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:46 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:46 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:46 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:46 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:46 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:46 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:46 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:46 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:46 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:46 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:46 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:46 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:46 - INFO - 总流量: 97.31 GB
+2025-09-23 22:54:46 - INFO - 剩余流量: 97.31 GB
+2025-09-23 22:54:46 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144
+2025-09-23 22:54:48 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:48 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:48 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:48 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:48 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15
+2025-09-23 22:54:48 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15&flag=clash
+2025-09-23 22:54:48 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15&flag=clash
+2025-09-23 22:54:48 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15
+2025-09-23 22:54:48 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:48 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:48 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15
+2025-09-23 22:54:48 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:48 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNzg2YTFmMjctOWMwNi00MmIyLWFlNjMtYzY1OTkxMDRlMjk4QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:48 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:48 - INFO - 解码后内容预览: hysteria2://786a1f27-9c06-42b2-ae63-c6599104e298@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A95.93%20GB
+hysteria2://786a1f27-9c06-42b2-ae63-c6599104e298@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://786a1f27-9c06-42b2-ae63-c6599104e298@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:48 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:48 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:48 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:48 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:48 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15&flag=clash
+2025-09-23 22:54:49 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:49 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:49 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:49 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:49 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:49 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:49 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:49 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:49 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:49 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:49 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:49 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:49 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:49 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:49 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:49 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:49 - INFO - 总流量: 95.93 GB
+2025-09-23 22:54:49 - INFO - 剩余流量: 95.93 GB
+2025-09-23 22:54:49 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15
+2025-09-23 22:54:50 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:50 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:50 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:50 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:50 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658a
+2025-09-23 22:54:50 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658a&flag=clash
+2025-09-23 22:54:50 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658a&flag=clash
+2025-09-23 22:54:51 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658a
+2025-09-23 22:54:51 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:51 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:51 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658a
+2025-09-23 22:54:51 - INFO - 原始内容长度: 2872
+2025-09-23 22:54:51 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNGQ3YjRmMjUtNzEzYS00OGEyLTg5M2EtMTRkMWI2OWQ0M2FiQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:51 - INFO - 原始内容base64解码成功，长度: 2154
+2025-09-23 22:54:51 - INFO - 解码后内容预览: hysteria2://4d7b4f25-713a-48a2-893a-14d1b69d43ab@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A81.4%20GB
+hysteria2://4d7b4f25-713a-48a2-893a-14d1b69d43ab@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://4d7b4f25-713a-48a2-893a-14d1b69d43ab@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5...
+2025-09-23 22:54:51 - INFO - 开始分析解码后内容，长度: 2154
+2025-09-23 22:54:51 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:51 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:51 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:51 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658a&flag=clash
+2025-09-23 22:54:51 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:51 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:51 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:51 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:51 - INFO - 原始内容长度: 2154, Clash内容长度: 20915
+2025-09-23 22:54:51 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:51 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:51 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:52 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:52 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:52 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:52 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:52 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:52 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:52 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:52 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:52 - INFO - 总流量: 81.4 GB
+2025-09-23 22:54:52 - INFO - 剩余流量: 81.4 GB
+2025-09-23 22:54:52 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658a
+2025-09-23 22:54:53 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:53 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:53 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:53 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:53 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018
+2025-09-23 22:54:53 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018&flag=clash
+2025-09-23 22:54:53 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018&flag=clash
+2025-09-23 22:54:54 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018
+2025-09-23 22:54:54 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:54 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:54 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018
+2025-09-23 22:54:54 - INFO - 原始内容长度: 2872
+2025-09-23 22:54:54 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vM2JmNzEzYTYtZDYxMS00MDQyLWE0YWMtZTIxZTdkMDI2ZjQ3QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:54 - INFO - 原始内容base64解码成功，长度: 2153
+2025-09-23 22:54:54 - INFO - 解码后内容预览: hysteria2://3bf713a6-d611-4042-a4ac-e21e7d026f47@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A9.9%20GB
+hysteria2://3bf713a6-d611-4042-a4ac-e21e7d026f47@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://3bf713a6-d611-4042-a4ac-e21e7d026f47@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5%...
+2025-09-23 22:54:54 - INFO - 开始分析解码后内容，长度: 2153
+2025-09-23 22:54:54 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:54 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:54 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:54 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018&flag=clash
+2025-09-23 22:54:54 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:54 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:54 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:54 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:54 - INFO - 原始内容长度: 2153, Clash内容长度: 20915
+2025-09-23 22:54:54 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:54 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:54 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:54 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:54 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:54 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:54 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:55 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:55 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:55 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:55 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:55 - INFO - 总流量: 9.9 GB
+2025-09-23 22:54:55 - INFO - 剩余流量: 9.9 GB
+2025-09-23 22:54:55 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018
+2025-09-23 22:54:56 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:56 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:56 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:56 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:56 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1
+2025-09-23 22:54:56 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1&flag=clash
+2025-09-23 22:54:56 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1&flag=clash
+2025-09-23 22:54:56 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1
+2025-09-23 22:54:56 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:56 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:56 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1
+2025-09-23 22:54:57 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:57 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vODZlMDM1ZGYtN2ZmYy00MDQ1LTlkODAtMWJhNGZmNjQ3NjBiQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:57 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:57 - INFO - 解码后内容预览: hysteria2://86e035df-7ffc-4045-9d80-1ba4ff64760b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A84.61%20GB
+hysteria2://86e035df-7ffc-4045-9d80-1ba4ff64760b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://86e035df-7ffc-4045-9d80-1ba4ff64760b@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:57 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:57 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:57 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:57 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:57 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1&flag=clash
+2025-09-23 22:54:57 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:54:57 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:54:57 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:54:57 - INFO - 内容比较结果: 不一致
+2025-09-23 22:54:57 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:54:57 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:54:57 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:54:57 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:54:57 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:54:57 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:54:57 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:54:57 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:54:57 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:54:57 - WARNING - 所有转换服务都失败
+2025-09-23 22:54:57 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:54:57 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:54:57 - INFO - 总流量: 84.61 GB
+2025-09-23 22:54:57 - INFO - 剩余流量: 84.61 GB
+2025-09-23 22:54:57 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1
+2025-09-23 22:54:59 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:59 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:59 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:54:59 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:54:59 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e
+2025-09-23 22:54:59 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e&flag=clash
+2025-09-23 22:54:59 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e&flag=clash
+2025-09-23 22:54:59 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e
+2025-09-23 22:54:59 - INFO - 开始双重分析订阅内容
+2025-09-23 22:54:59 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:54:59 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e
+2025-09-23 22:54:59 - INFO - 原始内容长度: 2876
+2025-09-23 22:54:59 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vM2Y5YTljOGUtNzQzNy00NDZlLTkzMjYtMGIyOTk2ZDA3MjRjQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:54:59 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:54:59 - INFO - 解码后内容预览: hysteria2://3f9a9c8e-7437-446e-9326-0b2996d0724c@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A61.02%20GB
+hysteria2://3f9a9c8e-7437-446e-9326-0b2996d0724c@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://3f9a9c8e-7437-446e-9326-0b2996d0724c@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:54:59 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:54:59 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:54:59 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:54:59 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:54:59 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e&flag=clash
+2025-09-23 22:55:00 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:00 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:00 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:00 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:00 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:00 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:00 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:00 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:00 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:00 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:00 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:00 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:00 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:00 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:00 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:00 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:00 - INFO - 总流量: 61.02 GB
+2025-09-23 22:55:00 - INFO - 剩余流量: 61.02 GB
+2025-09-23 22:55:00 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e
+2025-09-23 22:55:02 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:55:02 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:55:02 - INFO - 发现可用订阅: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e
+2025-09-23 22:55:02 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:55:02 - INFO -   流量信息: 剩余 61.02 GB, 总量 61.02 GB
+2025-09-23 22:55:02 - INFO -   状态码: 200
+2025-09-23 22:55:02 - INFO - 钉钉通知发送成功: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e
+2025-09-23 22:55:02 - INFO - 已记录通知URL: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e
+2025-09-23 22:55:02 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:55:02 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb
+2025-09-23 22:55:02 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb&flag=clash
+2025-09-23 22:55:02 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb&flag=clash
+2025-09-23 22:55:02 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb
+2025-09-23 22:55:02 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:02 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:02 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb
+2025-09-23 22:55:02 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:02 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMzRiZDUyMzAtMWUyOC00ODg1LWE5NjktMTdiMmIxZGM3ZDc5QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:02 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:02 - INFO - 解码后内容预览: hysteria2://34bd5230-1e28-4885-a969-17b2b1dc7d79@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A32.23%20GB
+hysteria2://34bd5230-1e28-4885-a969-17b2b1dc7d79@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://34bd5230-1e28-4885-a969-17b2b1dc7d79@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:02 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:02 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:02 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:02 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:02 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb&flag=clash
+2025-09-23 22:55:03 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:03 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:03 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:03 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:03 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:03 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:03 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:03 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:03 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:03 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:03 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:03 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:03 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:03 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:03 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:03 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:03 - INFO - 总流量: 32.23 GB
+2025-09-23 22:55:03 - INFO - 剩余流量: 32.23 GB
+2025-09-23 22:55:03 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb
+2025-09-23 22:55:05 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:55:05 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:55:05 - INFO - 发现可用订阅: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb
+2025-09-23 22:55:05 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:55:05 - INFO -   流量信息: 剩余 32.23 GB, 总量 32.23 GB
+2025-09-23 22:55:05 - INFO -   状态码: 200
+2025-09-23 22:55:05 - INFO - 钉钉通知发送成功: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb
+2025-09-23 22:55:05 - INFO - 已记录通知URL: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb
+2025-09-23 22:55:05 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:55:05 - INFO - 正在检测订阅链接: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=4086fa59b5d6c198c886c8879026992d
+2025-09-23 22:55:05 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=4086fa59b5d6c198c886c8879026992d&flag=clash
+2025-09-23 22:55:05 - INFO - URL已清理: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=4086fa59b5d6c198c886c8879026992d&flag=clash
+2025-09-23 22:55:05 - WARNING - 订阅链接HTTP错误: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=4086fa59b5d6c198c886c8879026992d, 状态码: 403
+2025-09-23 22:55:05 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0
+2025-09-23 22:55:05 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0&flag=clash
+2025-09-23 22:55:05 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0&flag=clash
+2025-09-23 22:55:05 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0
+2025-09-23 22:55:05 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:05 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:05 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0
+2025-09-23 22:55:05 - INFO - 原始内容长度: 2872
+2025-09-23 22:55:05 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vZjk2YmFhN2YtZjQ3Yy00NzhkLTgxY2MtN2JjNDk1YjI4YTAxQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:05 - INFO - 原始内容base64解码成功，长度: 2154
+2025-09-23 22:55:05 - INFO - 解码后内容预览: hysteria2://f96baa7f-f47c-478d-81cc-7bc495b28a01@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A98.5%20GB
+hysteria2://f96baa7f-f47c-478d-81cc-7bc495b28a01@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://f96baa7f-f47c-478d-81cc-7bc495b28a01@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5...
+2025-09-23 22:55:05 - INFO - 开始分析解码后内容，长度: 2154
+2025-09-23 22:55:05 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:05 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:05 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:05 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0&flag=clash
+2025-09-23 22:55:05 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:05 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:05 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:05 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:05 - INFO - 原始内容长度: 2154, Clash内容长度: 20915
+2025-09-23 22:55:05 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:05 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:05 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:06 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:06 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:06 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:06 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:06 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:06 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:06 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:06 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:06 - INFO - 总流量: 98.5 GB
+2025-09-23 22:55:06 - INFO - 剩余流量: 98.5 GB
+2025-09-23 22:55:06 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0
+2025-09-23 22:55:07 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:55:07 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:55:07 - INFO - 发现可用订阅: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0
+2025-09-23 22:55:07 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:55:07 - INFO -   流量信息: 剩余 98.5 GB, 总量 98.5 GB
+2025-09-23 22:55:07 - INFO -   状态码: 200
+2025-09-23 22:55:07 - INFO - 钉钉通知发送成功: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0
+2025-09-23 22:55:07 - INFO - 已记录通知URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0
+2025-09-23 22:55:07 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:55:07 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e
+2025-09-23 22:55:07 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e&flag=clash
+2025-09-23 22:55:07 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e&flag=clash
+2025-09-23 22:55:08 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e
+2025-09-23 22:55:08 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:08 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:08 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e
+2025-09-23 22:55:08 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:08 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNGJkOTJjMzAtNTdmOS00Njg5LTkzNGEtYmQ5ODNlOTNhNWQ5QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:08 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:08 - INFO - 解码后内容预览: hysteria2://4bd92c30-57f9-4689-934a-bd983e93a5d9@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A96.79%20GB
+hysteria2://4bd92c30-57f9-4689-934a-bd983e93a5d9@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://4bd92c30-57f9-4689-934a-bd983e93a5d9@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:08 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:08 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:08 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:08 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:08 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e&flag=clash
+2025-09-23 22:55:08 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:08 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:08 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:08 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:08 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:08 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:08 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:08 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:08 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:08 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:08 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:08 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:09 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:09 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:09 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:09 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:09 - INFO - 总流量: 96.79 GB
+2025-09-23 22:55:09 - INFO - 剩余流量: 96.79 GB
+2025-09-23 22:55:09 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e
+2025-09-23 22:55:10 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:55:10 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:55:10 - INFO - 发现可用订阅: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e
+2025-09-23 22:55:10 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:55:10 - INFO -   流量信息: 剩余 96.79 GB, 总量 96.79 GB
+2025-09-23 22:55:10 - INFO -   状态码: 200
+2025-09-23 22:55:10 - INFO - 钉钉通知发送成功: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e
+2025-09-23 22:55:10 - INFO - 已记录通知URL: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e
+2025-09-23 22:55:10 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:55:10 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a
+2025-09-23 22:55:10 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a&flag=clash
+2025-09-23 22:55:10 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a&flag=clash
+2025-09-23 22:55:10 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a
+2025-09-23 22:55:10 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:10 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:10 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a
+2025-09-23 22:55:11 - INFO - 原始内容长度: 2872
+2025-09-23 22:55:11 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vZmFiMDBkMzMtOTNlMS00ZDFjLWI5NzEtYzA3MzNiZDg3YjkxQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:11 - INFO - 原始内容base64解码成功，长度: 2154
+2025-09-23 22:55:11 - INFO - 解码后内容预览: hysteria2://fab00d33-93e1-4d1c-b971-c0733bd87b91@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A97.7%20GB
+hysteria2://fab00d33-93e1-4d1c-b971-c0733bd87b91@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://fab00d33-93e1-4d1c-b971-c0733bd87b91@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5...
+2025-09-23 22:55:11 - INFO - 开始分析解码后内容，长度: 2154
+2025-09-23 22:55:11 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:11 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:11 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:11 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a&flag=clash
+2025-09-23 22:55:11 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:11 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:11 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:11 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:11 - INFO - 原始内容长度: 2154, Clash内容长度: 20915
+2025-09-23 22:55:11 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:11 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:11 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:11 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:11 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:11 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:11 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:11 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:11 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:11 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:11 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:11 - INFO - 总流量: 97.7 GB
+2025-09-23 22:55:11 - INFO - 剩余流量: 97.7 GB
+2025-09-23 22:55:11 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a
+2025-09-23 22:55:13 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:55:13 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:55:13 - INFO - 发现可用订阅: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a
+2025-09-23 22:55:13 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:55:13 - INFO -   流量信息: 剩余 97.7 GB, 总量 97.7 GB
+2025-09-23 22:55:13 - INFO -   状态码: 200
+2025-09-23 22:55:13 - INFO - 钉钉通知发送成功: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a
+2025-09-23 22:55:13 - INFO - 已记录通知URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a
+2025-09-23 22:55:13 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:55:13 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3
+2025-09-23 22:55:13 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3&flag=clash
+2025-09-23 22:55:13 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3&flag=clash
+2025-09-23 22:55:13 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3
+2025-09-23 22:55:13 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:13 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:13 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3
+2025-09-23 22:55:13 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:13 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMTQ5Y2QxN2YtZGZlYi00NmU2LWIyYWItNGJmMzFiZDM3M2JkQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:13 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:13 - INFO - 解码后内容预览: hysteria2://149cd17f-dfeb-46e6-b2ab-4bf31bd373bd@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A94.05%20GB
+hysteria2://149cd17f-dfeb-46e6-b2ab-4bf31bd373bd@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://149cd17f-dfeb-46e6-b2ab-4bf31bd373bd@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:13 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:13 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:13 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:13 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:13 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3&flag=clash
+2025-09-23 22:55:14 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:14 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:14 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:14 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:14 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:14 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:14 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:14 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:14 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:14 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:14 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:14 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:14 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:14 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:14 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:14 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:14 - INFO - 总流量: 94.05 GB
+2025-09-23 22:55:14 - INFO - 剩余流量: 94.05 GB
+2025-09-23 22:55:14 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3
+2025-09-23 22:55:16 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:55:16 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:55:16 - INFO - 发现可用订阅: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3
+2025-09-23 22:55:16 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:55:16 - INFO -   流量信息: 剩余 94.05 GB, 总量 94.05 GB
+2025-09-23 22:55:16 - INFO -   状态码: 200
+2025-09-23 22:55:16 - INFO - 钉钉通知发送成功: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3
+2025-09-23 22:55:16 - INFO - 已记录通知URL: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3
+2025-09-23 22:55:16 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:55:16 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169
+2025-09-23 22:55:16 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169&flag=clash
+2025-09-23 22:55:16 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169&flag=clash
+2025-09-23 22:55:16 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169
+2025-09-23 22:55:16 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:16 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:16 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169
+2025-09-23 22:55:16 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:16 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vZDI5NWE5Y2EtYWMxYy00YTRjLWE2NjgtMTI0Zjc0NmJkMmQ2QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:16 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:16 - INFO - 解码后内容预览: hysteria2://d295a9ca-ac1c-4a4c-a668-124f746bd2d6@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A79.17%20GB
+hysteria2://d295a9ca-ac1c-4a4c-a668-124f746bd2d6@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://d295a9ca-ac1c-4a4c-a668-124f746bd2d6@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:16 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:16 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:16 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:16 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:16 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169&flag=clash
+2025-09-23 22:55:17 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:17 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:17 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:17 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:17 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:17 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:17 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:17 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:17 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:17 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:17 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:17 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:17 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:17 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:17 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:17 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:17 - INFO - 总流量: 79.17 GB
+2025-09-23 22:55:17 - INFO - 剩余流量: 79.17 GB
+2025-09-23 22:55:17 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169
+2025-09-23 22:55:19 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:19 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:55:19 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494ad
+2025-09-23 22:55:19 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494ad&flag=clash
+2025-09-23 22:55:19 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494ad&flag=clash
+2025-09-23 22:55:19 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494ad
+2025-09-23 22:55:19 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:19 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:19 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494ad
+2025-09-23 22:55:19 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:19 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vZjBjYjhiOGQtODA0Zi00ODNmLTllN2YtNDBiN2VlODc2OWJkQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:19 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:19 - INFO - 解码后内容预览: hysteria2://f0cb8b8d-804f-483f-9e7f-40b7ee8769bd@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A91.95%20GB
+hysteria2://f0cb8b8d-804f-483f-9e7f-40b7ee8769bd@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://f0cb8b8d-804f-483f-9e7f-40b7ee8769bd@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:19 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:19 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:19 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:19 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:19 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494ad&flag=clash
+2025-09-23 22:55:19 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:19 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:19 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:19 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:19 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:19 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:19 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:19 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:20 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:20 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:20 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:20 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:20 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:20 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:20 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:20 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:20 - INFO - 总流量: 91.95 GB
+2025-09-23 22:55:20 - INFO - 剩余流量: 91.95 GB
+2025-09-23 22:55:20 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494ad
+2025-09-23 22:55:21 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:21 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:21 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:21 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:55:21 - INFO - 正在检测订阅链接: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5
+2025-09-23 22:55:21 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5&flag=clash
+2025-09-23 22:55:21 - INFO - URL已清理: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5&flag=clash
+2025-09-23 22:55:21 - WARNING - 订阅链接HTTP错误: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5, 状态码: 403
+2025-09-23 22:55:21 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4a
+2025-09-23 22:55:21 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4a&flag=clash
+2025-09-23 22:55:21 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4a&flag=clash
+2025-09-23 22:55:22 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4a
+2025-09-23 22:55:22 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:22 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:22 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4a
+2025-09-23 22:55:22 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:22 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMWFhYzQxOTItODNiNS00M2I3LTg0N2MtNmUzNWM0ODQyYWExQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:22 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:22 - INFO - 解码后内容预览: hysteria2://1aac4192-83b5-43b7-847c-6e35c4842aa1@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A87.26%20GB
+hysteria2://1aac4192-83b5-43b7-847c-6e35c4842aa1@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://1aac4192-83b5-43b7-847c-6e35c4842aa1@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:22 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:22 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:22 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:22 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:22 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4a&flag=clash
+2025-09-23 22:55:22 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:22 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:22 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:22 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:22 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:22 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:22 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:22 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:22 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:22 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:22 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:22 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:23 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:23 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:23 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:23 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:23 - INFO - 总流量: 87.26 GB
+2025-09-23 22:55:23 - INFO - 剩余流量: 87.26 GB
+2025-09-23 22:55:23 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4a
+2025-09-23 22:55:24 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:24 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:24 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:24 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:55:24 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851
+2025-09-23 22:55:24 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851&flag=clash
+2025-09-23 22:55:24 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851&flag=clash
+2025-09-23 22:55:24 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851
+2025-09-23 22:55:24 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:24 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:24 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851
+2025-09-23 22:55:25 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:25 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vM2I5MWVmM2ItNDI3Yi00ODk4LTk4NjQtM2E0M2YzMjM4OGE4QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:25 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:25 - INFO - 解码后内容预览: hysteria2://3b91ef3b-427b-4898-9864-3a43f32388a8@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A92.01%20GB
+hysteria2://3b91ef3b-427b-4898-9864-3a43f32388a8@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://3b91ef3b-427b-4898-9864-3a43f32388a8@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:25 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:25 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:25 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:25 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:25 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851&flag=clash
+2025-09-23 22:55:25 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:25 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:25 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:25 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:25 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:25 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:25 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:25 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:25 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:25 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:25 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:25 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:25 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:25 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:26 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:26 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:26 - INFO - 总流量: 92.01 GB
+2025-09-23 22:55:26 - INFO - 剩余流量: 92.01 GB
+2025-09-23 22:55:26 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851
+2025-09-23 22:55:27 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:27 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:27 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:27 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:55:27 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738da
+2025-09-23 22:55:27 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738da&flag=clash
+2025-09-23 22:55:27 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738da&flag=clash
+2025-09-23 22:55:27 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738da
+2025-09-23 22:55:27 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:27 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:27 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738da
+2025-09-23 22:55:27 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:27 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMzU2NTZhMmItMjM2ZC00NTU5LWE5MGItYjNkOTg1MWY0OTU1QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:27 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:27 - INFO - 解码后内容预览: hysteria2://35656a2b-236d-4559-a90b-b3d9851f4955@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A76.37%20GB
+hysteria2://35656a2b-236d-4559-a90b-b3d9851f4955@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://35656a2b-236d-4559-a90b-b3d9851f4955@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:27 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:27 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:27 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:27 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:27 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738da&flag=clash
+2025-09-23 22:55:28 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:28 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:28 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:28 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:28 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:28 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:28 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:28 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:28 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:28 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:28 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:28 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:28 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:28 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:28 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:28 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:28 - INFO - 总流量: 76.37 GB
+2025-09-23 22:55:28 - INFO - 剩余流量: 76.37 GB
+2025-09-23 22:55:28 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738da
+2025-09-23 22:55:30 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:30 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:30 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:30 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:55:30 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749c
+2025-09-23 22:55:30 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749c&flag=clash
+2025-09-23 22:55:30 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749c&flag=clash
+2025-09-23 22:55:30 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749c
+2025-09-23 22:55:30 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:30 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:30 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749c
+2025-09-23 22:55:30 - INFO - 原始内容长度: 2872
+2025-09-23 22:55:30 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNjliNGMyMzMtYjMzMy00NzUzLTlmMGUtM2VjNDJkYTU0YmU0QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:30 - INFO - 原始内容base64解码成功，长度: 2154
+2025-09-23 22:55:30 - INFO - 解码后内容预览: hysteria2://69b4c233-b333-4753-9f0e-3ec42da54be4@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A83.9%20GB
+hysteria2://69b4c233-b333-4753-9f0e-3ec42da54be4@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://69b4c233-b333-4753-9f0e-3ec42da54be4@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E5...
+2025-09-23 22:55:30 - INFO - 开始分析解码后内容，长度: 2154
+2025-09-23 22:55:30 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:30 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:30 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:30 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749c&flag=clash
+2025-09-23 22:55:31 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:31 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:31 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:31 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:31 - INFO - 原始内容长度: 2154, Clash内容长度: 20915
+2025-09-23 22:55:31 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:31 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:31 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:31 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:31 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:31 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:31 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:31 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:31 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:31 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:31 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:31 - INFO - 总流量: 83.9 GB
+2025-09-23 22:55:31 - INFO - 剩余流量: 83.9 GB
+2025-09-23 22:55:31 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749c
+2025-09-23 22:55:32 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:32 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:32 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:32 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:55:32 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041
+2025-09-23 22:55:32 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041&flag=clash
+2025-09-23 22:55:32 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041&flag=clash
+2025-09-23 22:55:33 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041
+2025-09-23 22:55:33 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:33 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:33 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041
+2025-09-23 22:55:33 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:33 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMjFhZGExZjItYzkxMC00YTE1LWJlNTQtNzRmYTRmYmFhYmIxQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:33 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:33 - INFO - 解码后内容预览: hysteria2://21ada1f2-c910-4a15-be54-74fa4fbaabb1@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A88.95%20GB
+hysteria2://21ada1f2-c910-4a15-be54-74fa4fbaabb1@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://21ada1f2-c910-4a15-be54-74fa4fbaabb1@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:33 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:33 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:33 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:33 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:33 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041&flag=clash
+2025-09-23 22:55:33 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:33 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:33 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:33 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:33 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:33 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:33 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:33 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:33 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:33 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:34 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:34 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:34 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:34 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:34 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:34 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:34 - INFO - 总流量: 88.95 GB
+2025-09-23 22:55:34 - INFO - 剩余流量: 88.95 GB
+2025-09-23 22:55:34 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041
+2025-09-23 22:55:35 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:35 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:35 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:35 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:55:35 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103
+2025-09-23 22:55:35 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103&flag=clash
+2025-09-23 22:55:35 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103&flag=clash
+2025-09-23 22:55:35 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103
+2025-09-23 22:55:35 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:35 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:35 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103
+2025-09-23 22:55:36 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:36 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNDc3MDQwYTUtYmE4Ny00MjQ0LWIyMWUtMGZiMDRlMGVkYjVlQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:36 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:36 - INFO - 解码后内容预览: hysteria2://477040a5-ba87-4244-b21e-0fb04e0edb5e@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A90.25%20GB
+hysteria2://477040a5-ba87-4244-b21e-0fb04e0edb5e@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://477040a5-ba87-4244-b21e-0fb04e0edb5e@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:36 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:36 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:36 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:36 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:36 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103&flag=clash
+2025-09-23 22:55:36 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:36 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:36 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:36 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:36 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:36 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:36 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:36 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:36 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:36 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:36 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:36 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:37 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:37 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:37 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:37 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:37 - INFO - 总流量: 90.25 GB
+2025-09-23 22:55:37 - INFO - 剩余流量: 90.25 GB
+2025-09-23 22:55:37 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103
+2025-09-23 22:55:38 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:38 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:38 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:38 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:55:38 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679
+2025-09-23 22:55:38 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679&flag=clash
+2025-09-23 22:55:38 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679&flag=clash
+2025-09-23 22:55:39 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679
+2025-09-23 22:55:39 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:39 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:39 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679
+2025-09-23 22:55:39 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:39 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMmZkY2U4MzEtZjQzYi00ZDRhLTkwYTYtZmVkYWQyNGFiNjIxQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:39 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:39 - INFO - 解码后内容预览: hysteria2://2fdce831-f43b-4d4a-90a6-fedad24ab621@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A94.73%20GB
+hysteria2://2fdce831-f43b-4d4a-90a6-fedad24ab621@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://2fdce831-f43b-4d4a-90a6-fedad24ab621@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:39 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:39 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:39 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:39 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:39 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679&flag=clash
+2025-09-23 22:55:39 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:39 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:39 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:39 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:39 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:39 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:39 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:39 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:39 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:39 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:39 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:39 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:40 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:40 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:40 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:40 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:40 - INFO - 总流量: 94.73 GB
+2025-09-23 22:55:40 - INFO - 剩余流量: 94.73 GB
+2025-09-23 22:55:40 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679
+2025-09-23 22:55:41 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:41 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:41 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:41 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:55:41 - INFO - 正在检测订阅链接: https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdb
+2025-09-23 22:55:41 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdb&flag=clash
+2025-09-23 22:55:41 - INFO - URL已清理: https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdb&flag=clash
+2025-09-23 22:55:41 - INFO - 订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdb
+2025-09-23 22:55:41 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:41 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:41 - INFO - 重新请求原始URL获取base64内容: https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdb
+2025-09-23 22:55:42 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:42 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vZTUwYjNiMzQtZTkxZS00NzUyLTljYjYtNGYyNzk4NDkxZjU4QHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:42 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:42 - INFO - 解码后内容预览: hysteria2://e50b3b34-e91e-4752-9cb6-4f2798491f58@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A94.27%20GB
+hysteria2://e50b3b34-e91e-4752-9cb6-4f2798491f58@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://e50b3b34-e91e-4752-9cb6-4f2798491f58@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:42 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:42 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:42 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:42 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:42 - INFO - 尝试获取Clash格式: https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdb&flag=clash
+2025-09-23 22:55:42 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:42 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:42 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:42 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:42 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:42 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:42 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:42 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:42 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:42 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:42 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:42 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:42 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:42 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:42 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:42 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:42 - INFO - 总流量: 94.27 GB
+2025-09-23 22:55:42 - INFO - 剩余流量: 94.27 GB
+2025-09-23 22:55:42 - INFO - 发送钉钉通知: https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdb
+2025-09-23 22:55:44 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:44 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:44 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:44 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:55:44 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50bhttps://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3dhttps://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5bhttps://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4ahttps://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdbhttps://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516ehttps://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1ehttps://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884fhttps://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494adhttps://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6ahttps://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749chttps://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babdhttps://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658ahttps://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cbhttps://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738dahttps://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018
+2025-09-23 22:55:44 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50bhttps://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3dhttps://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5bhttps://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4ahttps://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdbhttps://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516ehttps://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1ehttps://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884fhttps://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494adhttps://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6ahttps://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749chttps://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babdhttps://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658ahttps://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cbhttps://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738dahttps://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018&flag=clash
+2025-09-23 22:55:44 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50bhttps://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3dhttps://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5bhttps://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4ahttps://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdbhttps://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516ehttps://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1ehttps://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884fhttps://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494adhttps://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6ahttps://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749chttps://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babdhttps://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658ahttps://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cbhttps://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738dahttps://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018&flag=clash
+2025-09-23 22:55:44 - WARNING - 订阅链接HTTP错误: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50bhttps://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3dhttps://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5bhttps://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4ahttps://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdbhttps://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516ehttps://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1ehttps://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884fhttps://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494adhttps://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6ahttps://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749chttps://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babdhttps://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658ahttps://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cbhttps://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738dahttps://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018, 状态码: 403
+2025-09-23 22:55:44 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50b
+2025-09-23 22:55:44 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50b&flag=clash
+2025-09-23 22:55:44 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50b&flag=clash
+2025-09-23 22:55:44 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50b
+2025-09-23 22:55:44 - INFO - 开始双重分析订阅内容
+2025-09-23 22:55:44 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:55:44 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50b
+2025-09-23 22:55:45 - INFO - 原始内容长度: 2876
+2025-09-23 22:55:45 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vZTAxNWE1NzUtNjI0NC00ZjcyLWE4ODQtZmM3YWJlOTJkMzkwQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:55:45 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:55:45 - INFO - 解码后内容预览: hysteria2://e015a575-6244-4f72-a884-fc7abe92d390@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A91.22%20GB
+hysteria2://e015a575-6244-4f72-a884-fc7abe92d390@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://e015a575-6244-4f72-a884-fc7abe92d390@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:55:45 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:55:45 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:55:45 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:55:45 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:55:45 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50b&flag=clash
+2025-09-23 22:55:45 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:55:45 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:55:45 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:55:45 - INFO - 内容比较结果: 不一致
+2025-09-23 22:55:45 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:55:45 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:55:45 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:55:45 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:55:45 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:55:45 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:55:45 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:55:45 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:55:45 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:55:45 - WARNING - 所有转换服务都失败
+2025-09-23 22:55:45 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:55:45 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:55:45 - INFO - 总流量: 91.22 GB
+2025-09-23 22:55:45 - INFO - 剩余流量: 91.22 GB
+2025-09-23 22:55:45 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50b
+2025-09-23 22:55:47 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:47 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:47 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:55:47 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:55:58 - WARNING - 代理测试异常: HTTPConnectionPool(host='192.168.100.110', port=7893): Read timed out. (read timeout=5)
+2025-09-23 22:55:58 - WARNING - 代理连接失败，切换到直连模式
+2025-09-23 22:55:58 - INFO - 加载了 132 个已通知URL记录

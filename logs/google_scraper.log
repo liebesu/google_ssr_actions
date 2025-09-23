@@ -362,3 +362,180 @@
 2025-09-23 22:42:32 - INFO - 检查SerpAPI使用量是否达到通知阈值...
 2025-09-23 22:42:38 - INFO - 检查SerpAPI使用量是否达到通知阈值...
 2025-09-23 22:42:43 - INFO - ✅ SerpAPI使用量阈值检查完成
+2025-09-23 22:53:29 - INFO - 订阅检测器初始化成功
+2025-09-23 22:53:29 - INFO - ==================================================
+2025-09-23 22:53:29 - INFO - 开始执行搜索任务
+2025-09-23 22:53:29 - INFO - ==================================================
+2025-09-23 22:53:29 - INFO - 开始搜索API URL
+2025-09-23 22:53:29 - INFO - 正在检查密钥额度...
+2025-09-23 22:53:35 - INFO - 使用搜索查询: "api/v1/client/subscribe?token="
+2025-09-23 22:53:35 - INFO - 本次搜索地区数量: 1
+2025-09-23 22:53:35 - INFO - [1/1] 搜索地区: 中国大陆 (gl=cn, hl=zh-CN, lr=lang_zh-CN|lang_en)
+2025-09-23 22:53:35 - INFO - SerpAPI 搜索参数: {'api_key': 'eafd4bb7fcc093dbf132f573d836604406f6d428eab708ec5681a45b6ef3bdaa', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'cn', 'hl': 'zh-CN', 'num': 100, 'lr': 'lang_zh-CN|lang_en', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-23 22:53:37 - INFO - SerpAPI 有机结果 7 条
+2025-09-23 22:53:37 - INFO - [中国大陆] 直接命中完整订阅URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:53:37 - INFO - ⏭️ [中国大陆] 跳过已验证的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:53:38 - INFO - ✅ 从 https://t.me/s/ccbaohe?before=14024 提取到 53 个订阅链接
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58
+2025-09-23 22:53:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9
+2025-09-23 22:53:38 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=9b54032c8dc6b0fc076afdfee4f540b5
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516e
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5e
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5b
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babd
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658a
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb
+2025-09-23 22:53:38 - INFO -    发现: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=4086fa59b5d6c198c886c8879026992d
+2025-09-23 22:53:38 - INFO -    发现: https://api.nnbhhxk.com/api/v1/client/subscribe?token=c48e7a6135ee2c8c56bf68fab56315c0
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494ad
+2025-09-23 22:53:38 - INFO -    发现: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4a
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738da
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749c
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041
+2025-09-23 22:53:38 - INFO -    发现: https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679
+2025-09-23 22:53:38 - INFO -    发现: https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdb
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50bhttps://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3dhttps://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5bhttps://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4ahttps://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdbhttps://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516ehttps://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1ehttps://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884fhttps://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494adhttps://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6ahttps://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749chttps://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babdhttps://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658ahttps://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cbhttps://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738dahttps://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018
+2025-09-23 22:53:38 - INFO -    发现: https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50b
+2025-09-23 22:53:38 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58
+2025-09-23 22:53:43 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58
+2025-09-23 22:53:43 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105
+2025-09-23 22:53:43 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d
+2025-09-23 22:53:47 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3d
+2025-09-23 22:53:47 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3
+2025-09-23 22:53:49 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3
+2025-09-23 22:53:49 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9
+2025-09-23 22:53:52 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9
+2025-09-23 22:53:52 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=9b54032c8dc6b0fc076afdfee4f540b5
+2025-09-23 22:53:52 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84
+2025-09-23 22:53:55 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84
+2025-09-23 22:53:55 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91
+2025-09-23 22:53:58 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91
+2025-09-23 22:53:58 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f
+2025-09-23 22:54:01 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884f
+2025-09-23 22:54:01 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74
+2025-09-23 22:54:04 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74
+2025-09-23 22:54:04 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:54:04 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20
+2025-09-23 22:54:06 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20
+2025-09-23 22:54:06 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e
+2025-09-23 22:54:09 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1e
+2025-09-23 22:54:09 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729
+2025-09-23 22:54:12 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729
+2025-09-23 22:54:12 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0
+2025-09-23 22:54:15 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0
+2025-09-23 22:54:15 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516e
+2025-09-23 22:54:18 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516e
+2025-09-23 22:54:18 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94
+2025-09-23 22:54:20 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94
+2025-09-23 22:54:20 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5e
+2025-09-23 22:54:23 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5e
+2025-09-23 22:54:23 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5b
+2025-09-23 22:54:26 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5b
+2025-09-23 22:54:26 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6
+2025-09-23 22:54:29 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6
+2025-09-23 22:54:29 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08
+2025-09-23 22:54:31 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08
+2025-09-23 22:54:31 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159
+2025-09-23 22:54:34 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159
+2025-09-23 22:54:34 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775
+2025-09-23 22:54:37 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775
+2025-09-23 22:54:37 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babd
+2025-09-23 22:54:39 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babd
+2025-09-23 22:54:39 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1
+2025-09-23 22:54:42 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1
+2025-09-23 22:54:42 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029
+2025-09-23 22:54:45 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029
+2025-09-23 22:54:45 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144
+2025-09-23 22:54:48 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144
+2025-09-23 22:54:48 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15
+2025-09-23 22:54:50 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15
+2025-09-23 22:54:50 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658a
+2025-09-23 22:54:53 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658a
+2025-09-23 22:54:53 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018
+2025-09-23 22:54:56 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018
+2025-09-23 22:54:56 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1
+2025-09-23 22:54:59 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1
+2025-09-23 22:54:59 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e
+2025-09-23 22:55:02 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827e
+2025-09-23 22:55:02 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb
+2025-09-23 22:55:05 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cb
+2025-09-23 22:55:05 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=4086fa59b5d6c198c886c8879026992d
+2025-09-23 22:55:05 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=4086fa59b5d6c198c886c8879026992d
+2025-09-23 22:55:05 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: https://api.nnbhhxk.com/api/v1/client/subscribe?token=c48e7a6135ee2c8c56bf68fab56315c0
+2025-09-23 22:55:05 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0
+2025-09-23 22:55:07 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0
+2025-09-23 22:55:07 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e
+2025-09-23 22:55:10 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2e
+2025-09-23 22:55:10 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a
+2025-09-23 22:55:13 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6a
+2025-09-23 22:55:13 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3
+2025-09-23 22:55:16 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3
+2025-09-23 22:55:16 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169
+2025-09-23 22:55:19 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169
+2025-09-23 22:55:19 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494ad
+2025-09-23 22:55:21 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494ad
+2025-09-23 22:55:21 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5
+2025-09-23 22:55:21 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5
+2025-09-23 22:55:21 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4a
+2025-09-23 22:55:24 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4a
+2025-09-23 22:55:24 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851
+2025-09-23 22:55:27 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851
+2025-09-23 22:55:27 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738da
+2025-09-23 22:55:30 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738da
+2025-09-23 22:55:30 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749c
+2025-09-23 22:55:32 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749c
+2025-09-23 22:55:32 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041
+2025-09-23 22:55:35 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041
+2025-09-23 22:55:35 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a
+2025-09-23 22:55:35 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103
+2025-09-23 22:55:38 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103
+2025-09-23 22:55:38 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679
+2025-09-23 22:55:41 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679
+2025-09-23 22:55:41 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdb
+2025-09-23 22:55:44 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdb
+2025-09-23 22:55:44 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50bhttps://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3dhttps://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5bhttps://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4ahttps://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdbhttps://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516ehttps://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1ehttps://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884fhttps://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494adhttps://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6ahttps://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749chttps://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babdhttps://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658ahttps://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cbhttps://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738dahttps://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018
+2025-09-23 22:55:44 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=cbbb11535d2dbb3111b2112898e543e3https://sfj.sufujia.top/api/v1/client/subscribe?token=edf0c99d2bae6b1a5eec2e93f65a7f91https://sufujia.top/api/v1/client/subscribe?token=b06dee0600fd370ed4bc742d05f8827ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=819ddc351ee249d0135dcfe043ae4679https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50bhttps://sufujia.top/api/v1/client/subscribe?token=5f947d10b296d170c21ecfd7d1653103https://sfj.sufujia.top/api/v1/client/subscribe?token=2832d4ef8f3ec6705163d5b335555b5ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=63a5117fded4db1b781089b8196deb3dhttps://sufujia.top/api/v1/client/subscribe?token=0f734deda7f68fc714bc9f6b29101f74https://sufujia.top/api/v1/client/subscribe?token=c5d6b2e65705d279e5ab134b88df0f5bhttps://sfj.sufujia.top/api/v1/client/subscribe?token=5b40747e58250f85e9908d7ebdee3a20https://sfj.sufujia.top/api/v1/client/subscribe?token=f691879b3da81182250fb040f099da4ahttps://sufujia.top/api/v1/client/subscribe?token=24ae679e4dd1e07214a4a6a2dbe78cb3https://sufujia.top/api/v1/client/subscribe?token=f5f2823fee548af242d527a3f55f3cdbhttps://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15https://sufujia.top/api/v1/client/subscribe?token=139af2c7a585a51587c487544ba3516ehttps://sufujia.top/api/v1/client/subscribe?token=d04ba1811b6b9953f685740aef36d851https://sufujia.top/api/v1/client/subscribe?token=6572a291f1b3a16f078455a3be618729https://sufujia.top/api/v1/client/subscribe?token=2b8b4c777b718dee23a45204f04405a6https://sfj.sufujia.top/api/v1/client/subscribe?token=1a3d40c8d46f762719a3f2d65d9481b0https://sfj.sufujia.top/api/v1/client/subscribe?token=b7dfbe2e03178fe7b799323f46782bc0https://sufujia.top/api/v1/client/subscribe?token=ceb171fa96dd8c364adb74d8d8521ff9https://sufujia.top/api/v1/client/subscribe?token=73e64a110f37e3da60005e8e7ce75144https://sufujia.top/api/v1/client/subscribe?token=b6d3f0c2fa329fe3590b5270cc40ef1ehttps://sufujia.top/api/v1/client/subscribe?token=17081e0beb866e1cdc41252ca78a3e2ehttps://sfj.sufujia.top/api/v1/client/subscribe?token=74543b07e52587e4735d1cfd590a6f94https://sfj.sufujia.top/api/v1/client/subscribe?token=caff1aa553be8e406018a01d526c884fhttps://sufujia.top/api/v1/client/subscribe?token=422ea723cffbfa91742a0ad3461494adhttps://sfj.sufujia.top/api/v1/client/subscribe?token=0a4a698fc35693d87cd59064970f7e6ahttps://sufujia.top/api/v1/client/subscribe?token=6c16dd5038fb620f6293eed58a4a4775https://sufujia.top/api/v1/client/subscribe?token=1a5da90949f106628b24512155dd4f58https://sufujia.top/api/v1/client/subscribe?token=f96a341b3d43006b6aa3ff89bc606159https://sufujia.top/api/v1/client/subscribe?token=5b602d2b5e7b536494f34629dfdb749chttps://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2https://sfj.sufujia.top/api/v1/client/subscribe?token=4d53e0552a93023db4c7e6132dd1babdhttps://sufujia.top/api/v1/client/subscribe?token=37cc97557e6972a3e3c0602207ff18f1https://sfj.sufujia.top/api/v1/client/subscribe?token=f0e4ec04c7c0fda253beadfab7d18041https://sfj.sufujia.top/api/v1/client/subscribe?token=5ec0c3d517257129ba6b13f77b41e029https://sfj.sufujia.top/api/v1/client/subscribe?token=c0cc5e97cdefb9f547c81b88955b8f08https://sufujia.top/api/v1/client/subscribe?token=2184dc6a7b0992cf529eac2e6822658ahttps://sufujia.top/api/v1/client/subscribe?token=80d391ad976e22029b1476769d556169https://sufujia.top/api/v1/client/subscribe?token=11af72093f2e7b5043cccc7bc0dab1c1https://sufujia.top/api/v1/client/subscribe?token=6c79f1ad758e3abe671d20eefd0081cbhttps://sfj.sufujia.top/api/v1/client/subscribe?token=3b0a9d1fd64ce0488d76703d5eb738dahttps://sfj.sufujia.top/api/v1/client/subscribe?token=af396b235fa7f22ed897158201011c84https://sfj.sufujia.top/api/v1/client/subscribe?token=feab6ddf8c76ca34117823c773532018
+2025-09-23 22:55:44 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50b
+2025-09-23 22:55:47 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=1c9718cbabdf65c8253df50a9d8ef50b
+2025-09-23 22:55:47 - INFO - [中国大陆] 地区搜索完成，发现 1 个URL
+2025-09-23 22:55:47 - INFO - 批量搜索完成，共搜索 1 个地区，找到 54 个API URL
+2025-09-23 22:55:47 - INFO - 🔄 最终去重: 54 -> 53 (移除 1 个重复URL)
+2025-09-23 22:55:47 - INFO - 结果已保存到 api_urls_results.json 和 api_urls.txt
+2025-09-23 22:55:47 - INFO - 搜索模式: single_region, 地区: 中国大陆 (gl=cn, hl=zh-CN, lr=lang_zh-CN|lang_en)
+2025-09-23 22:55:47 - INFO - 任务完成，找到 54 个API URL
+2025-09-23 22:55:47 - INFO - 检查SerpAPI使用量是否达到通知阈值...
+2025-09-23 22:55:53 - INFO - 检查SerpAPI使用量是否达到通知阈值...
+2025-09-23 22:55:58 - INFO - ✅ SerpAPI使用量阈值检查完成

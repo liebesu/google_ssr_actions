@@ -362,12 +362,32 @@ class EnhancedGoogleAPIScraper:
         """检查SerpAPI使用量是否达到阈值并发送通知"""
         try:
             self.logger.info("检查SerpAPI使用量是否达到通知阈值...")
-            quotas = self.key_manager.check_all_quotas(force_refresh=True)
-            if quotas:
-                # 只发送SerpAPI使用量阈值通知，不发送轮次结束报告
-                self._send_serpapi_usage_threshold_notification(quotas)
-            else:
-                self.logger.warning("无法获取密钥使用情况信息")
+            # 添加超时控制，避免长时间等待
+            import signal
+            
+            def timeout_handler(signum, frame):
+                raise TimeoutError("SerpAPI配额检查超时")
+            
+            # 设置30秒超时
+            signal.signal(signal.SIGALRM, timeout_handler)
+            signal.alarm(30)
+            
+            try:
+                quotas = self.key_manager.check_all_quotas(force_refresh=True)
+                signal.alarm(0)  # 取消超时
+                
+                if quotas:
+                    # 只发送SerpAPI使用量阈值通知，不发送轮次结束报告
+                    self._send_serpapi_usage_threshold_notification(quotas)
+                else:
+                    self.logger.warning("无法获取密钥使用情况信息")
+            except TimeoutError:
+                self.logger.warning("SerpAPI配额检查超时，跳过通知")
+                signal.alarm(0)  # 确保取消超时
+            except Exception as e:
+                signal.alarm(0)  # 确保取消超时
+                raise e
+                
         except Exception as e:
             self.logger.error(f"检查SerpAPI使用量阈值时出错: {e}")
     
@@ -411,10 +431,27 @@ class EnhancedGoogleAPIScraper:
             if total_used > 0 and total_quota > 0:
                 self.logger.debug(f"SerpAPI总使用量: {total_used}/{total_quota}")
                 
-                # 创建订阅检测器实例并发送阈值通知
-                checker = SubscriptionChecker()
-                success = checker.send_serpapi_usage_notification(total_used, total_quota, quotas)
+                # 创建订阅检测器实例并发送阈值通知（添加超时控制）
+                import signal
                 
+                def notification_timeout_handler(signum, frame):
+                    raise TimeoutError("SerpAPI通知发送超时")
+                
+                signal.signal(signal.SIGALRM, notification_timeout_handler)
+                signal.alarm(15)  # 设置15秒超时
+                
+                try:
+                    checker = SubscriptionChecker()
+                    success = checker.send_serpapi_usage_notification(total_used, total_quota, quotas)
+                    signal.alarm(0)  # 取消超时
+                except TimeoutError:
+                    self.logger.warning("SerpAPI通知发送超时，跳过通知")
+                    success = False
+                    signal.alarm(0)  # 确保取消超时
+                except Exception as e:
+                    signal.alarm(0)  # 确保取消超时
+                    raise e
+                    
                 if success:
                     self.logger.info("✅ SerpAPI使用量阈值检查完成")
                 else:
