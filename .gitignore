@@ -1,0 +1,75 @@
+__pycache__/
+*.pyc
+dist/
+logs/
+*.log
+keys
+scraper_config.json
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Logs
+logs/
+*.log
+
+# Runtime data files (optional - uncomment if you want to ignore these)
+# notified_urls.txt
+# discovered_urls.json
+# visited_urls.json
+# api_urls.txt
+# api_urls_results.json
+# region_state.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# API Keys (uncomment if you want to ignore keys file)
+# keys

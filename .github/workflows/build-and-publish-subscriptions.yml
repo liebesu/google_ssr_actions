@@ -1,0 +1,174 @@
+name: build-and-publish-subscriptions
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: requirements_scraper.txt
+
+      - name: Install deps
+        run: |
+          pip install -r requirements_scraper.txt
+
+      - name: Prepare secrets
+        run: |
+          if [ -n "${{ secrets.SCRAPER_KEYS }}" ]; then
+            printf "%s\n" "${{ secrets.SCRAPER_KEYS }}" > keys
+          fi
+          if [ -n "${{ secrets.SCRAPER_CONFIG_JSON }}" ]; then
+            printf "%s\n" "${{ secrets.SCRAPER_CONFIG_JSON }}" > scraper_config.json
+          fi
+          # prepare auth env from variables/secrets
+          if [ -n "${{ vars.AUTH_PLAIN }}" ]; then
+            echo "AUTH_PLAIN from vars configured"
+          fi
+          if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then
+            echo "AUTH_SHA256 from secrets configured"
+          fi
+          if [ -n "${{ vars.AUTH_SHA256 }}" ]; then
+            echo "AUTH_SHA256 from vars configured"
+          fi
+          if [ -n "${{ vars.AUTH_USER }}" ]; then
+            echo "AUTH_USER from vars configured"
+          fi
+          if [ -n "${{ secrets.AUTH_USER }}" ]; then
+            echo "AUTH_USER from secrets configured"
+          fi
+
+      - name: Generate subscriptions
+        run: |
+          mkdir -p dist
+          # Disable proxy in CI and emit index/health to avoid 404
+          export DISABLE_PROXY=1
+          # Pass optional auth envs
+          if [ -n "${{ vars.AUTH_PLAIN }}" ]; then export AUTH_PLAIN="${{ vars.AUTH_PLAIN }}"; fi
+          if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ secrets.AUTH_SHA256 }}"; fi
+          if [ -n "${{ vars.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ vars.AUTH_SHA256 }}"; fi
+          if [ -n "${{ vars.AUTH_USER }}" ]; then export AUTH_USER="${{ vars.AUTH_USER }}"; fi
+          if [ -n "${{ secrets.AUTH_USER }}" ]; then export AUTH_USER="${{ secrets.AUTH_USER }}"; fi
+          python aggregator_cli.py --output-dir dist --max 1200 --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery --emit-health --emit-index
+          
+          # 确保 dist 目录有内容
+          echo "=== 检查 dist 目录内容 ==="
+          ls -la dist/
+          echo "=== 检查 index.html ==="
+          if [ -f dist/index.html ]; then
+            echo "index.html 存在，大小: $(wc -c < dist/index.html) 字节"
+            head -5 dist/index.html
+          else
+            echo "index.html 不存在！"
+          fi
+          
+          # 如果 index.html 不存在，创建一个简单的测试页面
+          if [ ! -f dist/index.html ]; then
+            echo "创建测试页面..."
+            echo '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>订阅聚合器</title></head><body><h1>🚀 订阅聚合器</h1><p>系统正在初始化...</p></body></html>' > dist/index.html
+          fi
+          
+          echo "=== 最终 dist 目录内容 ==="
+          ls -la dist/
+          echo "=== index.html 内容预览 ==="
+          head -10 dist/index.html
+
+      - name: Persist history back to repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/*.json api_urls*.json discovered_urls.json visited_urls.json || true
+          git diff --cached --quiet || git commit -m "chore(data): update history/live/discovered urls [skip ci]"
+          git push
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+          
+      - name: Verify artifact
+        run: |
+          echo "=== 验证工件内容 ==="
+          echo "工件路径: dist"
+          echo "文件列表:"
+          find dist -type f -exec ls -la {} \;
+          echo "=== 检查关键文件 ==="
+          if [ -f dist/index.html ]; then
+            echo "✅ index.html 存在"
+            echo "文件大小: $(wc -c < dist/index.html) 字节"
+          else
+            echo "❌ index.html 不存在"
+          fi
+          if [ -f dist/health.json ]; then
+            echo "✅ health.json 存在"
+          else
+            echo "⚠️ health.json 不存在"
+          fi
+
+      - name: Notify DingTalk (SerpAPI & Crawl Health)
+        if: ${{ always() }}
+        env:
+          DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
+          DINGTALK_TOKEN: ${{ secrets.DINGTALK_TOKEN }}
+        run: |
+          if [ -z "${DINGTALK_WEBHOOK}" ] && [ -n "${DINGTALK_TOKEN}" ]; then
+            DINGTALK_WEBHOOK="https://oapi.dingtalk.com/robot/send?access_token=${DINGTALK_TOKEN}"
+          fi
+          if [ -z "${DINGTALK_WEBHOOK}" ]; then
+            echo "DingTalk webhook not configured, skip"; exit 0; fi
+          if [ ! -f dist/health.json ]; then echo "health.json missing"; exit 0; fi
+          jq -r '.' dist/health.json | sed -e 's/\\n/ /g' > /tmp/health.json
+          BUILD_CN=$(jq -r '.build_time_cn // ""' /tmp/health.json)
+          NEXT_CN=$(jq -r '.next_run_cn // ""' /tmp/health.json)
+          ALIVE=$(jq -r '.source_alive // 0' /tmp/health.json)
+          TOTAL=$(jq -r '.source_total // 0' /tmp/health.json)
+          NEW=$(jq -r '.sources_new // 0' /tmp/health.json)
+          REM=$(jq -r '.sources_removed // 0' /tmp/health.json)
+          QLEFT=$(jq -r '.quota_total_left // 0' /tmp/health.json)
+          QCAP=$(jq -r '.quota_total_capacity // 0' /tmp/health.json)
+          KOK=$(jq -r '.keys_ok // 0' /tmp/health.json)
+          KT=$(jq -r '.keys_total // 0' /tmp/health.json)
+          G=$(jq -r '.google_urls_count // 0' /tmp/health.json)
+          GH=$(jq -r '.github_urls_count // 0' /tmp/health.json)
+          MSG="【订阅构建】时间:${BUILD_CN} 下次:${NEXT_CN}%0A源: ${ALIVE}/${TOTAL} (+${NEW}/-${REM})%0ASerpAPI: ${KOK}/${KT} 剩余额度:${QLEFT}/${QCAP}%0A发现: Google ${G} | GitHub ${GH}%0A页面: https://liebesu.github.io/google_ssr_actions/"
+          curl -sS -X POST "${DINGTALK_WEBHOOK}" \
+            -H 'Content-Type: application/json' \
+            -d "{\"msgtype\":\"text\",\"text\":{\"content\":\"${MSG}\"}}" | cat
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Verify deployment
+        run: |
+          echo "Deployment completed successfully"
+          echo "Page URL: ${{ steps.deployment.outputs.page_url }}"
+
+
