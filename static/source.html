@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>订阅源详情</title>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; margin:0; background:#0f172a; color:#e5e7eb; }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; }
+    .card { background:#111827; border:1px solid #1f2937; border-radius:14px; padding:16px; }
+    h1 { font-size: 20px; margin:0 0 10px 0; }
+    code { background:#0b1220; padding:2px 6px; border-radius:6px; border:1px solid #1f2937; color:#d1d5db; }
+    textarea { width:100%; min-height: 380px; background:#0b1220; color:#e5e7eb; border:1px solid #1f2937; border-radius:12px; padding:10px; }
+    a { color:#60a5fa; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>订阅源详情</h1>
+      <div id="meta"><small>加载中...</small></div>
+      <p id="actions"></p>
+      <textarea id="nodes" readonly>加载中...</textarea>
+    </div>
+  </div>
+  <script>
+    function qs(k){ const u=new URL(location.href); return u.searchParams.get(k); }
+    function copyText(t){ navigator.clipboard.writeText(t).then(()=>alert('已复制')).catch(()=>{}); }
+    async function init(){
+      const id = qs('id');
+      if(!id){ document.getElementById('meta').innerHTML = '<small>缺少 id</small>'; return; }
+      try{
+        const metaRes = await fetch('sub/providers/' + id + '.json', { cache:'no-cache' });
+        const meta = metaRes.ok ? await metaRes.json() : null;
+        const txtRes = await fetch('sub/providers/' + id + '.txt', { cache:'no-cache' });
+        const txt = txtRes.ok ? await txtRes.text() : '';
+        if(meta){
+          document.getElementById('meta').innerHTML =
+            '<div>机场：<b>' + (meta.provider||meta.host||'') + '</b></div>' +
+            '<div>URL：<a href="' + (meta.url||'#') + '" target="_blank">' + (meta.url||'') + '</a></div>' +
+            '<div>节点：' + (meta.nodes_total||0) + '</div>' +
+            '<div>协议：' + (Object.entries(meta.protocol_counts||{}).map(([k,v])=>k+':'+v).join(', ')||'-') + '</div>' +
+            '<div>流量：' + ((meta.traffic?.remaining ?? '-') + ' / ' + (meta.traffic?.total ?? '-') + ' ' + (meta.traffic?.unit ?? '')) + '</div>' +
+            '<div>延迟：' + (meta.response_ms ?? '-') + ' ms</div>' +
+            '<div>更新：' + (meta.updated_at || '-') + '</div>';
+          document.getElementById('actions').innerHTML =
+            '<button onclick="copyText(\'' + (meta.url||'') + '\')">复制订阅链接</button>';
+        }
+        document.getElementById('nodes').value = txt || '';
+      }catch(e){ document.getElementById('meta').innerHTML = '<small>加载失败</small>'; }
+    }
+    init();
+  </script>
+</body>
+</html>
+
+
