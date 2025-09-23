@@ -192,112 +192,112 @@
     "next_allowed_at": 1758699377.2758753
   },
   "http://23.145.248.232:13389/api/v1/client/subscribe?token=1df0f08cf96675a767ceec9f9336fbf4": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "http://23.145.248.232:13389/api/v1/client/subscribe?token=1df0f08cf96675a767ceec9f9336fbf4&flag=clash": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://amaoaamaoa.matach.qq.com.scsmpp.com/api/v1/client/subscribe?token=542b26414871bf2ebd3f05251f7c80fb": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://datapn.net/api/v1/client/subscribe?token=58f412a1bca411dd0aa6b92aabce0bc4": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://datapn.net/api/v1/client/subscribe?token=e81722e27deb1af8bcc0400c63f48436": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://msub.xn--bwwx30f.top/api/v1/client/subscribe?token=b22bc070f15fba6ddfab88cdeeaa87db": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://sakuracat1203.xn--3iq226gfdb94q.com/api/v1/client/subscribe?token=c1dcb31fd37e76f1c07338a3d82d2ce5": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=54df77e82f700ab31b31f1593617919b": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://v1.vmess.top/api/v1/client/subscribe?token=4466f09766641e9e7b6e89fe084da55c": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://xn--4gq62f52gdss.com/api/v1/client/subscribe?token=xxxxx": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://xn--4gq62f52gdss.com/api/v1/client/subscribe?token=xxxxxx": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://ysbzc1.subscribe6.com/api/v1/client/subscribe?token=fc7": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://ysbzc1.subscribe6.com/api/v1/client/subscribe?token=fc7ba": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://ysbzc1.subscribe6.com/api/v1/client/subscribe?token=fc7ba2236a956b292fae4e60ca5751fd": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://ysbzc1.subscribe6.com/api/v1/client/subscribe?token=fcd": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1758652384.375606,
-    "next_allowed_at": 1758666784.375606
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758699071.553831
   },
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1758662603.3603063,
-    "next_allowed_at": 1758669803.3603063
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758684671.553831
   },
   "https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1758662603.3603063,
-    "next_allowed_at": 1758669803.3603063
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758684671.553831
   },
   "https://subscribe.shenlong123.top/api/v1/client/subscribe?token=4823ebcbdfa2228e30be1c760872e9cf": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1758662603.3603063,
-    "next_allowed_at": 1758669803.3603063
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758684671.553831
   },
   "https://sub.soyorin.shop/api/v1/client/subscribe?token=f62d458ba609530a3e208eef5b8e871d": {
     "hits": 2,
@@ -306,15 +306,15 @@
     "next_allowed_at": 1758664403.3603063
   },
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1758662603.3603063,
-    "next_allowed_at": 1758663503.3603063
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758672071.553831
   },
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=4086fa59b5d6c198c886c8879026992d": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1758662603.3603063,
-    "next_allowed_at": 1758663503.3603063
+    "last_at": 1758670271.553831,
+    "next_allowed_at": 1758672071.553831
   }
 }
