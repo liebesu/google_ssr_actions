@@ -282,21 +282,21 @@
     "next_allowed_at": 1758648977.2758753
   },
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1758641777.2758753,
-    "next_allowed_at": 1758642677.2758753
+    "last_at": 1758643199.216319,
+    "next_allowed_at": 1758644999.216319
   },
   "https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1758641777.2758753,
-    "next_allowed_at": 1758642677.2758753
+    "last_at": 1758643199.216319,
+    "next_allowed_at": 1758644999.216319
   },
   "https://subscribe.shenlong123.top/api/v1/client/subscribe?token=4823ebcbdfa2228e30be1c760872e9cf": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1758641777.2758753,
-    "next_allowed_at": 1758642677.2758753
+    "last_at": 1758643199.216319,
+    "next_allowed_at": 1758644999.216319
   }
 }
