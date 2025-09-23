@@ -1,0 +1,327 @@
+2025-09-20 16:56:48 - INFO - 删除过期日志文件: logs/google_scraper.log.2025-09-11
+2025-09-20 16:56:48 - INFO - 删除过期日志文件: logs/google_scraper.log.2025-09-10
+2025-09-20 16:56:48 - INFO - 删除过期日志文件: logs/google_scraper.log.2025-09-12
+2025-09-20 16:56:48 - INFO - 清理完成，删除了 3 个过期日志文件
+2025-09-20 16:56:48 - INFO - 已设置代理: http://192.168.100.110:7893
+2025-09-20 16:56:53 - INFO - 订阅检测器初始化成功
+2025-09-20 16:56:53 - INFO - ==================================================
+2025-09-20 16:56:53 - INFO - 开始执行搜索任务
+2025-09-20 16:56:53 - INFO - ==================================================
+2025-09-20 16:56:53 - INFO - 开始搜索API URL
+2025-09-20 16:56:53 - INFO - 正在检查密钥额度...
+2025-09-20 16:57:18 - INFO - 使用搜索查询: "api/v1/client/subscribe?token="
+2025-09-20 16:57:18 - INFO - 批量搜索地区数量: 4
+2025-09-20 16:57:18 - INFO - [1/4] 搜索地区: 沙特阿拉伯 (gl=sa, hl=ar, lr=lang_ar|lang_en|lang_zh-CN)
+2025-09-20 16:57:18 - INFO - SerpAPI 搜索参数: {'api_key': 'e9e285d715996e4394896d766ba24dc8e680f2a1f41aa31ec89cbee537f6b7a6', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'sa', 'hl': 'ar', 'num': 100, 'lr': 'lang_ar|lang_en|lang_zh-CN', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-20 16:57:48 - INFO - SerpAPI连接问题，切换到直连模式: HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /search?api_key=e9e285d715996e4394896d766ba24dc8e680f2a1f41aa31ec89cbee537f6b7a6&engine=google&q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&google_domain=google.com&gl=sa&hl=ar&num=100&lr=lang_ar%7Clang_en%7Clang_zh-CN&tbs=qdr%3Ad&filter=0 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x104dfdf90>, 'Connection to 192.168.100.110 timed out. (connect timeout=30)')))
+2025-09-20 16:57:55 - INFO - SerpAPI 有机结果 10 条
+2025-09-20 16:57:55 - INFO - [沙特阿拉伯] 直接命中完整订阅URL: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 16:57:55 - INFO - [沙特阿拉伯] 直接命中完整订阅URL: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 16:57:55 - INFO - [沙特阿拉伯] 直接命中完整订阅URL: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 16:57:55 - INFO - [沙特阿拉伯] 直接命中完整订阅URL: https://ylccloud.top/api/v1/client/subscribe?token=099c9ace0178ed00ebbbcae3a434cd86
+2025-09-20 16:57:55 - INFO - [沙特阿拉伯] 直接命中完整订阅URL: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 16:57:55 - INFO - [沙特阿拉伯] 直接命中完整订阅URL: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 16:57:55 - INFO - 🔍 [沙特阿拉伯] 验证新发现的订阅链接: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 16:58:00 - INFO - ❌ [沙特阿拉伯] 直接命中的订阅链接不可用: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 16:58:00 - INFO - 🔍 [沙特阿拉伯] 验证新发现的订阅链接: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 16:58:01 - INFO - ❌ [沙特阿拉伯] 直接命中的订阅链接不可用: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 16:58:01 - INFO - 🔍 [沙特阿拉伯] 验证新发现的订阅链接: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 16:58:16 - INFO - ❌ [沙特阿拉伯] 直接命中的订阅链接不可用: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 16:58:16 - INFO - 🔍 [沙特阿拉伯] 验证新发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=099c9ace0178ed00ebbbcae3a434cd86
+2025-09-20 16:58:39 - INFO - ✅ [沙特阿拉伯] 直接命中的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=099c9ace0178ed00ebbbcae3a434cd86
+2025-09-20 16:58:39 - INFO - 🔍 [沙特阿拉伯] 验证新发现的订阅链接: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 16:58:44 - INFO - ❌ [沙特阿拉伯] 直接命中的订阅链接不可用: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 16:58:44 - INFO - 🔍 [沙特阿拉伯] 验证新发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 16:58:52 - INFO - ✅ [沙特阿拉伯] 直接命中的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 16:59:07 - INFO - 代理连接失败，尝试直连访问: https://t.me/s/freeVPNjd?before=7464
+2025-09-20 16:59:08 - INFO - 直连访问成功: https://t.me/s/freeVPNjd?before=7464
+2025-09-20 16:59:08 - INFO - ✅ 从 https://t.me/s/freeVPNjd?before=7464 提取到 18 个订阅链接
+2025-09-20 16:59:08 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=4e5c4a7b81d439509534fd5961f177eb
+2025-09-20 16:59:08 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 16:59:08 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=902f51f856881fa55be565c375f722ff
+2025-09-20 16:59:08 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=713bb65acf8e274910733efa74f6fbd8
+2025-09-20 16:59:08 - INFO -    发现: https://kqxnm.louwangzhiyu.online/api/v1/client/subscribe?token=cc2202ce625a58a54196440a82e57339
+2025-09-20 16:59:08 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=fede6fdb1b02c65b83dc15603d6c76f5
+2025-09-20 16:59:08 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=e5904803eb515a2ba8923c7ccc4f4845
+2025-09-20 16:59:08 - INFO -    发现: https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478
+2025-09-20 16:59:08 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=ba5d421591510920d66b84632ea3569d
+2025-09-20 16:59:08 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=fbeafb4b2294cda69a9f512b8435a47a
+2025-09-20 16:59:08 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=f4f6819d47aa49c745cb3a79242a5b01
+2025-09-20 16:59:08 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=59efa9fef12820ea0131e02dee748181
+2025-09-20 16:59:08 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=9eb52eab7c9dc171948910cbf1bd02f6
+2025-09-20 16:59:08 - INFO -    发现: https://s1.byte33.com/api/v1/client/subscribe?token=7aa935a0f7cae2b5c8519f9456c69315
+2025-09-20 16:59:08 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=f02087f621648c1d8824ec6537e55896
+2025-09-20 16:59:08 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=e498e8ac050b78209a85c116e06cc549
+2025-09-20 16:59:08 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=c78a46be07150cf384ae77e38e691c44
+2025-09-20 16:59:08 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=90da8795e27e95ffde4dd66c1666fddf
+2025-09-20 16:59:08 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=4e5c4a7b81d439509534fd5961f177eb
+2025-09-20 16:59:33 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=4e5c4a7b81d439509534fd5961f177eb
+2025-09-20 16:59:33 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 16:59:53 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 16:59:53 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=902f51f856881fa55be565c375f722ff
+2025-09-20 17:00:00 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=902f51f856881fa55be565c375f722ff
+2025-09-20 17:00:00 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=713bb65acf8e274910733efa74f6fbd8
+2025-09-20 17:00:08 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=713bb65acf8e274910733efa74f6fbd8
+2025-09-20 17:00:08 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://kqxnm.louwangzhiyu.online/api/v1/client/subscribe?token=cc2202ce625a58a54196440a82e57339
+2025-09-20 17:00:23 - INFO - ❌ [沙特阿拉伯] 发现的订阅链接不可用: https://kqxnm.louwangzhiyu.online/api/v1/client/subscribe?token=cc2202ce625a58a54196440a82e57339
+2025-09-20 17:00:23 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=fede6fdb1b02c65b83dc15603d6c76f5
+2025-09-20 17:00:56 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=fede6fdb1b02c65b83dc15603d6c76f5
+2025-09-20 17:00:56 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=e5904803eb515a2ba8923c7ccc4f4845
+2025-09-20 17:01:03 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=e5904803eb515a2ba8923c7ccc4f4845
+2025-09-20 17:01:03 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478
+2025-09-20 17:01:16 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478
+2025-09-20 17:01:16 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=ba5d421591510920d66b84632ea3569d
+2025-09-20 17:01:40 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=ba5d421591510920d66b84632ea3569d
+2025-09-20 17:01:40 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=fbeafb4b2294cda69a9f512b8435a47a
+2025-09-20 17:02:00 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=fbeafb4b2294cda69a9f512b8435a47a
+2025-09-20 17:02:00 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=f4f6819d47aa49c745cb3a79242a5b01
+2025-09-20 17:02:20 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=f4f6819d47aa49c745cb3a79242a5b01
+2025-09-20 17:02:20 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=59efa9fef12820ea0131e02dee748181
+2025-09-20 17:02:28 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=59efa9fef12820ea0131e02dee748181
+2025-09-20 17:02:28 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=9eb52eab7c9dc171948910cbf1bd02f6
+2025-09-20 17:02:49 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=9eb52eab7c9dc171948910cbf1bd02f6
+2025-09-20 17:02:49 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://s1.byte33.com/api/v1/client/subscribe?token=7aa935a0f7cae2b5c8519f9456c69315
+2025-09-20 17:02:54 - INFO - ❌ [沙特阿拉伯] 发现的订阅链接不可用: https://s1.byte33.com/api/v1/client/subscribe?token=7aa935a0f7cae2b5c8519f9456c69315
+2025-09-20 17:02:54 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=f02087f621648c1d8824ec6537e55896
+2025-09-20 17:03:15 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=f02087f621648c1d8824ec6537e55896
+2025-09-20 17:03:15 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=e498e8ac050b78209a85c116e06cc549
+2025-09-20 17:03:23 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=e498e8ac050b78209a85c116e06cc549
+2025-09-20 17:03:23 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=c78a46be07150cf384ae77e38e691c44
+2025-09-20 17:03:30 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=c78a46be07150cf384ae77e38e691c44
+2025-09-20 17:03:30 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=90da8795e27e95ffde4dd66c1666fddf
+2025-09-20 17:03:50 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=90da8795e27e95ffde4dd66c1666fddf
+2025-09-20 17:04:05 - INFO - 代理连接失败，尝试直连访问: https://linux.do/t/topic/969917
+2025-09-20 17:04:11 - WARNING - 页面访问受限 https://linux.do/t/topic/969917, 状态码: 403
+2025-09-20 17:04:26 - INFO - 代理连接失败，尝试直连访问: https://cn.tgstat.com/channel/@ccbaohe
+2025-09-20 17:04:32 - INFO - 直连访问成功: https://cn.tgstat.com/channel/@ccbaohe
+2025-09-20 17:04:32 - INFO - ✅ 从 https://cn.tgstat.com/channel/@ccbaohe 提取到 2 个订阅链接
+2025-09-20 17:04:32 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=fede6fdb1b02c65b83dc15603d6c76f5
+2025-09-20 17:04:32 - INFO -    发现: https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478
+2025-09-20 17:04:32 - INFO - ⏭️ [沙特阿拉伯] 跳过已验证的页面订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=fede6fdb1b02c65b83dc15603d6c76f5
+2025-09-20 17:04:32 - INFO - ⏭️ [沙特阿拉伯] 跳过已验证的页面订阅链接: https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478
+2025-09-20 17:04:32 - INFO - 跳过已知难以访问的域名: https://x.com/mana5430080
+2025-09-20 17:04:47 - INFO - 代理连接失败，尝试直连访问: https://tgstat.com/channel/@dingyue_Center
+2025-09-20 17:05:08 - WARNING - 直连访问也失败 https://tgstat.com/channel/@dingyue_Center: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-09-20 17:05:25 - INFO - 代理连接失败，尝试直连访问: https://tgstat.com/channel/@dingyue_Center
+2025-09-20 17:05:37 - INFO - 直连访问成功: https://tgstat.com/channel/@dingyue_Center
+2025-09-20 17:05:37 - INFO - ✅ 从 https://tgstat.com/channel/@dingyue_Center 提取到 4 个订阅链接
+2025-09-20 17:05:37 - INFO -    发现: https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=bbcda09c41e71bd271465b720758e6fe
+2025-09-20 17:05:37 - INFO -    发现: https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=624b1e7563cbb1b95a6de2b926165510
+2025-09-20 17:05:37 - INFO -    发现: https://dash.pqjc.site/api/v1/client/subscribe?token=623515126e1ea10d95eeb594fbf6ac29
+2025-09-20 17:05:37 - INFO -    发现: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 17:05:37 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=bbcda09c41e71bd271465b720758e6fe
+2025-09-20 17:05:51 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=bbcda09c41e71bd271465b720758e6fe
+2025-09-20 17:05:51 - INFO - ⏭️ [沙特阿拉伯] 跳过已验证的页面订阅链接: https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=624b1e7563cbb1b95a6de2b926165510
+2025-09-20 17:05:51 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dash.pqjc.site/api/v1/client/subscribe?token=623515126e1ea10d95eeb594fbf6ac29
+2025-09-20 17:06:04 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dash.pqjc.site/api/v1/client/subscribe?token=623515126e1ea10d95eeb594fbf6ac29
+2025-09-20 17:06:04 - INFO - ⏭️ [沙特阿拉伯] 跳过已验证的页面订阅链接: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 17:06:04 - INFO - 跳过已知难以访问的域名: https://telemetr.io/en/channels/1586973880-proxysharecn
+2025-09-20 17:06:19 - INFO - 代理连接失败，尝试直连访问: https://www.tiktok.com/@dramaboli1/video/7551784350560292113
+2025-09-20 17:06:20 - INFO - 直连访问成功: https://www.tiktok.com/@dramaboli1/video/7551784350560292113
+2025-09-20 17:06:20 - INFO - 跳过已知难以访问的域名: https://telemetr.io/en/channels/2672264558-pgkj666
+2025-09-20 17:06:20 - INFO - [沙特阿拉伯] 地区搜索完成，发现 6 个URL
+2025-09-20 17:06:20 - INFO - 地区间延迟 15 秒...
+2025-09-20 17:06:35 - INFO - [2/4] 搜索地区: 土耳其 (gl=tr, hl=tr, lr=lang_tr|lang_en|lang_zh-CN)
+2025-09-20 17:07:00 - INFO - SerpAPI 搜索参数: {'api_key': 'e9e285d715996e4394896d766ba24dc8e680f2a1f41aa31ec89cbee537f6b7a6', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'tr', 'hl': 'tr', 'num': 100, 'lr': 'lang_tr|lang_en|lang_zh-CN', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-20 17:07:30 - INFO - SerpAPI连接问题，切换到直连模式: HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /search?api_key=e9e285d715996e4394896d766ba24dc8e680f2a1f41aa31ec89cbee537f6b7a6&engine=google&q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&google_domain=google.com&gl=tr&hl=tr&num=100&lr=lang_tr%7Clang_en%7Clang_zh-CN&tbs=qdr%3Ad&filter=0 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x104fb4a50>, 'Connection to 192.168.100.110 timed out. (connect timeout=30)')))
+2025-09-20 17:07:36 - INFO - SerpAPI 有机结果 10 条
+2025-09-20 17:07:36 - INFO - [土耳其] 直接命中完整订阅URL: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 17:07:36 - INFO - [土耳其] 直接命中完整订阅URL: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 17:07:36 - INFO - [土耳其] 直接命中完整订阅URL: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 17:07:36 - INFO - [土耳其] 直接命中完整订阅URL: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 17:07:36 - INFO - [土耳其] 直接命中完整订阅URL: https://sub.966888.xyz/api/v1/client/subscribe?token=2c53cb842bd6e2366782444aac8cfc16
+2025-09-20 17:07:36 - INFO - [土耳其] 直接命中完整订阅URL: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 17:07:36 - INFO - [土耳其] 直接命中完整订阅URL: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 17:07:36 - INFO - ⏭️ [土耳其] 跳过已验证的订阅链接: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 17:07:36 - INFO - ⏭️ [土耳其] 跳过已验证的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 17:07:36 - INFO - ⏭️ [土耳其] 跳过已验证的订阅链接: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 17:07:36 - INFO - ⏭️ [土耳其] 跳过已验证的订阅链接: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 17:07:36 - INFO - 🔍 [土耳其] 验证新发现的订阅链接: https://sub.966888.xyz/api/v1/client/subscribe?token=2c53cb842bd6e2366782444aac8cfc16
+2025-09-20 17:07:49 - INFO - ✅ [土耳其] 直接命中的订阅链接可用: https://sub.966888.xyz/api/v1/client/subscribe?token=2c53cb842bd6e2366782444aac8cfc16
+2025-09-20 17:07:49 - INFO - ⏭️ [土耳其] 跳过已验证的订阅链接: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 17:07:49 - INFO - ⏭️ [土耳其] 跳过已验证的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 17:08:04 - INFO - 代理连接失败，尝试直连访问: https://www.tiktok.com/@dramaboli1/video/7551783966999809297
+2025-09-20 17:08:05 - INFO - 直连访问成功: https://www.tiktok.com/@dramaboli1/video/7551783966999809297
+2025-09-20 17:08:05 - INFO - [土耳其] 地区搜索完成，发现 7 个URL
+2025-09-20 17:08:05 - INFO - 地区间延迟 15 秒...
+2025-09-20 17:08:20 - INFO - [3/4] 搜索地区: 以色列 (gl=il, hl=he, lr=lang_he|lang_en|lang_zh-CN)
+2025-09-20 17:08:20 - INFO - SerpAPI 搜索参数: {'api_key': 'e9e285d715996e4394896d766ba24dc8e680f2a1f41aa31ec89cbee537f6b7a6', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'il', 'hl': 'he', 'num': 100, 'lr': 'lang_he|lang_en|lang_zh-CN', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-20 17:08:50 - INFO - SerpAPI连接问题，切换到直连模式: HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /search?api_key=e9e285d715996e4394896d766ba24dc8e680f2a1f41aa31ec89cbee537f6b7a6&engine=google&q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&google_domain=google.com&gl=il&hl=he&num=100&lr=lang_he%7Clang_en%7Clang_zh-CN&tbs=qdr%3Ad&filter=0 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x104fb4410>, 'Connection to 192.168.100.110 timed out. (connect timeout=30)')))
+2025-09-20 17:08:57 - INFO - SerpAPI 有机结果 10 条
+2025-09-20 17:08:57 - INFO - [以色列] 直接命中完整订阅URL: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 17:08:57 - INFO - [以色列] 直接命中完整订阅URL: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 17:08:57 - INFO - [以色列] 直接命中完整订阅URL: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 17:08:57 - INFO - [以色列] 直接命中完整订阅URL: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 17:08:57 - INFO - [以色列] 直接命中完整订阅URL: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 17:08:57 - INFO - [以色列] 直接命中完整订阅URL: https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=158da66e7a12bb08018974512a596599
+2025-09-20 17:08:57 - INFO - ⏭️ [以色列] 跳过已验证的订阅链接: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 17:08:57 - INFO - ⏭️ [以色列] 跳过已验证的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 17:08:57 - INFO - ⏭️ [以色列] 跳过已验证的订阅链接: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 17:08:57 - INFO - ⏭️ [以色列] 跳过已验证的订阅链接: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 17:08:57 - INFO - ⏭️ [以色列] 跳过已验证的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 17:08:57 - INFO - ⏭️ [以色列] 跳过已验证的订阅链接: https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=158da66e7a12bb08018974512a596599
+2025-09-20 17:09:12 - INFO - 代理连接失败，尝试直连访问: https://www.tiktok.com/@podcast_clips2003/video/7551762283332898078
+2025-09-20 17:09:13 - INFO - 直连访问成功: https://www.tiktok.com/@podcast_clips2003/video/7551762283332898078
+2025-09-20 17:09:13 - INFO - [以色列] 地区搜索完成，发现 6 个URL
+2025-09-20 17:09:13 - INFO - 地区间延迟 15 秒...
+2025-09-20 17:09:28 - INFO - [4/4] 搜索地区: 印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)
+2025-09-20 17:09:28 - INFO - SerpAPI 搜索参数: {'api_key': 'e9e285d715996e4394896d766ba24dc8e680f2a1f41aa31ec89cbee537f6b7a6', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'in', 'hl': 'hi', 'num': 100, 'lr': 'lang_hi|lang_en|lang_zh-CN', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-20 17:11:53 - INFO - SerpAPI连接问题，切换到直连模式: HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /search?api_key=e9e285d715996e4394896d766ba24dc8e680f2a1f41aa31ec89cbee537f6b7a6&engine=google&q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&google_domain=google.com&gl=in&hl=hi&num=100&lr=lang_hi%7Clang_en%7Clang_zh-CN&tbs=qdr%3Ad&filter=0 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x104fb5590>, 'Connection to 192.168.100.110 timed out. (connect timeout=30)')))
+2025-09-20 17:12:00 - INFO - SerpAPI 有机结果 10 条
+2025-09-20 17:12:00 - INFO - [印度] 直接命中完整订阅URL: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 17:12:00 - INFO - [印度] 直接命中完整订阅URL: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 17:12:00 - INFO - [印度] 直接命中完整订阅URL: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 17:12:00 - INFO - [印度] 直接命中完整订阅URL: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 17:12:00 - INFO - [印度] 直接命中完整订阅URL: https://sub.966888.xyz/api/v1/client/subscribe?token=2c53cb842bd6e2366782444aac8cfc16
+2025-09-20 17:12:00 - INFO - [印度] 直接命中完整订阅URL: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 17:12:00 - INFO - [印度] 直接命中完整订阅URL: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 17:12:00 - INFO - ⏭️ [印度] 跳过已验证的订阅链接: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 17:12:00 - INFO - ⏭️ [印度] 跳过已验证的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 17:12:00 - INFO - ⏭️ [印度] 跳过已验证的订阅链接: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 17:12:00 - INFO - ⏭️ [印度] 跳过已验证的订阅链接: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 17:12:00 - INFO - ⏭️ [印度] 跳过已验证的订阅链接: https://sub.966888.xyz/api/v1/client/subscribe?token=2c53cb842bd6e2366782444aac8cfc16
+2025-09-20 17:12:00 - INFO - ⏭️ [印度] 跳过已验证的订阅链接: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 17:12:00 - INFO - ⏭️ [印度] 跳过已验证的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 17:12:00 - INFO - [印度] 地区搜索完成，发现 7 个URL
+2025-09-20 17:12:00 - INFO - 批量搜索完成，共搜索 4 个地区，找到 50 个API URL
+2025-09-20 17:12:00 - INFO - 🔄 最终去重: 50 -> 29 (移除 21 个重复URL)
+2025-09-20 17:12:00 - INFO - 结果已保存到 api_urls_results.json 和 api_urls.txt
+2025-09-20 17:12:00 - INFO - 搜索模式: batch_regions, 地区: 批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度
+2025-09-20 17:12:00 - INFO - 任务完成，找到 50 个API URL
+2025-09-20 17:12:00 - INFO - 检查SerpAPI使用量是否达到通知阈值...
+2025-09-20 17:12:25 - INFO - 检查SerpAPI使用量是否达到通知阈值...
+2025-09-20 17:12:30 - INFO - ✅ SerpAPI使用量阈值检查完成
+2025-09-20 18:41:18 - INFO - 已设置代理: http://192.168.100.110:7893
+2025-09-20 18:41:23 - INFO - 订阅检测器初始化成功
+2025-09-20 18:41:23 - INFO - ==================================================
+2025-09-20 18:41:23 - INFO - 开始执行搜索任务
+2025-09-20 18:41:23 - INFO - ==================================================
+2025-09-20 18:41:23 - INFO - 开始搜索API URL
+2025-09-20 18:41:23 - INFO - 正在检查密钥额度...
+2025-09-20 18:41:48 - INFO - 使用搜索查询: "api/v1/client/subscribe?token="
+2025-09-20 18:41:48 - INFO - 批量搜索地区数量: 4
+2025-09-20 18:41:48 - INFO - [1/4] 搜索地区: 巴西 (gl=br, hl=pt, lr=lang_pt|lang_en|lang_zh-CN)
+2025-09-20 18:41:48 - INFO - SerpAPI 搜索参数: {'api_key': '547d658f3cd6137203ff9d457a391d5613f6a79c69fc3c5cec14d7ff52add830', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'br', 'hl': 'pt', 'num': 100, 'lr': 'lang_pt|lang_en|lang_zh-CN', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-20 18:42:18 - INFO - SerpAPI连接问题，切换到直连模式: HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /search?api_key=547d658f3cd6137203ff9d457a391d5613f6a79c69fc3c5cec14d7ff52add830&engine=google&q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&google_domain=google.com&gl=br&hl=pt&num=100&lr=lang_pt%7Clang_en%7Clang_zh-CN&tbs=qdr%3Ad&filter=0 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x104ae6d50>, 'Connection to 192.168.100.110 timed out. (connect timeout=30)')))
+2025-09-20 18:42:26 - INFO - SerpAPI 有机结果 10 条
+2025-09-20 18:42:26 - INFO - [巴西] 直接命中完整订阅URL: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 18:42:26 - INFO - [巴西] 直接命中完整订阅URL: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 18:42:26 - INFO - [巴西] 直接命中完整订阅URL: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 18:42:26 - INFO - [巴西] 直接命中完整订阅URL: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 18:42:26 - INFO - [巴西] 直接命中完整订阅URL: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 18:42:26 - INFO - [巴西] 直接命中完整订阅URL: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 18:42:26 - INFO - ⏭️ [巴西] 跳过已验证的订阅链接: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 18:42:26 - INFO - ⏭️ [巴西] 跳过已验证的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 18:42:26 - INFO - ⏭️ [巴西] 跳过已验证的订阅链接: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 18:42:26 - INFO - ⏭️ [巴西] 跳过已验证的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 18:42:26 - INFO - ⏭️ [巴西] 跳过已验证的订阅链接: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 18:42:26 - INFO - ⏭️ [巴西] 跳过已验证的订阅链接: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 18:42:26 - INFO - [巴西] 地区搜索完成，发现 6 个URL
+2025-09-20 18:42:26 - INFO - 地区间延迟 15 秒...
+2025-09-20 18:42:41 - INFO - [2/4] 搜索地区: 墨西哥 (gl=mx, hl=es, lr=lang_es|lang_en|lang_zh-CN)
+2025-09-20 18:42:41 - INFO - SerpAPI 搜索参数: {'api_key': '547d658f3cd6137203ff9d457a391d5613f6a79c69fc3c5cec14d7ff52add830', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'mx', 'hl': 'es', 'num': 100, 'lr': 'lang_es|lang_en|lang_zh-CN', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-20 18:43:11 - INFO - SerpAPI连接问题，切换到直连模式: HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /search?api_key=547d658f3cd6137203ff9d457a391d5613f6a79c69fc3c5cec14d7ff52add830&engine=google&q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&google_domain=google.com&gl=mx&hl=es&num=100&lr=lang_es%7Clang_en%7Clang_zh-CN&tbs=qdr%3Ad&filter=0 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x104ae7250>, 'Connection to 192.168.100.110 timed out. (connect timeout=30)')))
+2025-09-20 18:43:17 - INFO - SerpAPI 有机结果 10 条
+2025-09-20 18:43:17 - INFO - [墨西哥] 直接命中完整订阅URL: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 18:43:17 - INFO - [墨西哥] 直接命中完整订阅URL: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 18:43:17 - INFO - [墨西哥] 直接命中完整订阅URL: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 18:43:17 - INFO - [墨西哥] 直接命中完整订阅URL: https://ylccloud.top/api/v1/client/subscribe?token=099c9ace0178ed00ebbbcae3a434cd86
+2025-09-20 18:43:17 - INFO - [墨西哥] 直接命中完整订阅URL: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 18:43:17 - INFO - [墨西哥] 直接命中完整订阅URL: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 18:43:17 - INFO - ⏭️ [墨西哥] 跳过已验证的订阅链接: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 18:43:17 - INFO - ⏭️ [墨西哥] 跳过已验证的订阅链接: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 18:43:17 - INFO - ⏭️ [墨西哥] 跳过已验证的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 18:43:17 - INFO - ⏭️ [墨西哥] 跳过已验证的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=099c9ace0178ed00ebbbcae3a434cd86
+2025-09-20 18:43:17 - INFO - ⏭️ [墨西哥] 跳过已验证的订阅链接: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 18:43:17 - INFO - ⏭️ [墨西哥] 跳过已验证的订阅链接: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 18:43:17 - INFO - [墨西哥] 地区搜索完成，发现 6 个URL
+2025-09-20 18:43:17 - INFO - 地区间延迟 15 秒...
+2025-09-20 18:43:32 - INFO - [3/4] 搜索地区: 中国大陆 (gl=cn, hl=zh-CN, lr=lang_zh-CN|lang_en)
+2025-09-20 18:43:32 - INFO - SerpAPI 搜索参数: {'api_key': '547d658f3cd6137203ff9d457a391d5613f6a79c69fc3c5cec14d7ff52add830', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'cn', 'hl': 'zh-CN', 'num': 100, 'lr': 'lang_zh-CN|lang_en', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-20 18:44:02 - INFO - SerpAPI连接问题，切换到直连模式: HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /search?api_key=547d658f3cd6137203ff9d457a391d5613f6a79c69fc3c5cec14d7ff52add830&engine=google&q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&google_domain=google.com&gl=cn&hl=zh-CN&num=100&lr=lang_zh-CN%7Clang_en&tbs=qdr%3Ad&filter=0 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x104ae7750>, 'Connection to 192.168.100.110 timed out. (connect timeout=30)')))
+2025-09-20 18:44:08 - INFO - SerpAPI 有机结果 10 条
+2025-09-20 18:44:08 - INFO - [中国大陆] 直接命中完整订阅URL: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 18:44:08 - INFO - [中国大陆] 直接命中完整订阅URL: https://03d.microcloudvm.com/api/v1/client/subscribe?token=a164498513f2f276c4dbd048673f99c2
+2025-09-20 18:44:08 - INFO - [中国大陆] 直接命中完整订阅URL: https://03d.microcloudvm.com/api/v1/client/subscribe?token=a164498513f2f276c4dbd048673f99c2&flag=meta
+2025-09-20 18:44:08 - INFO - [中国大陆] 直接命中完整订阅URL: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 18:44:08 - INFO - [中国大陆] 直接命中完整订阅URL: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 18:44:08 - INFO - [中国大陆] 直接命中完整订阅URL: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 18:44:08 - INFO - [中国大陆] 直接命中完整订阅URL: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 18:44:08 - INFO - [中国大陆] 直接命中完整订阅URL: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 18:44:08 - INFO - [中国大陆] 直接命中完整订阅URL: https://03d.microcloudvm.com/api/v1/client/subscribe?token=a164498513f2f276c4dbd048673f99c2&flag=meta&types
+2025-09-20 18:44:08 - INFO - ⏭️ [中国大陆] 跳过已验证的订阅链接: https://platform.djjc.cfd/api/v1/client/subscribe?token=a041b1ea7c980c4a5915e8a8dda35cee
+2025-09-20 18:44:08 - INFO - 🔍 [中国大陆] 验证新发现的订阅链接: https://03d.microcloudvm.com/api/v1/client/subscribe?token=a164498513f2f276c4dbd048673f99c2
+2025-09-20 18:44:22 - INFO - ✅ [中国大陆] 直接命中的订阅链接可用: https://03d.microcloudvm.com/api/v1/client/subscribe?token=a164498513f2f276c4dbd048673f99c2
+2025-09-20 18:44:22 - INFO - ⏭️ [中国大陆] 跳过已验证的订阅链接: https://03d.microcloudvm.com/api/v1/client/subscribe?token=a164498513f2f276c4dbd048673f99c2&flag=meta
+2025-09-20 18:44:22 - INFO - ⏭️ [中国大陆] 跳过已验证的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=e1848209697adb3622d48477251e83d9
+2025-09-20 18:44:22 - INFO - ⏭️ [中国大陆] 跳过已验证的订阅链接: https://taibai0201.面膜无纺布.com/api/v1/client/subscribe?token=6d1d8b39cd0c4305ab5ae59a66155085
+2025-09-20 18:44:22 - INFO - ⏭️ [中国大陆] 跳过已验证的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=01778e286ce22ab9d7d3c95e567da737
+2025-09-20 18:44:22 - INFO - ⏭️ [中国大陆] 跳过已验证的订阅链接: https://yfjc.xyz/api/v1/client/subscribe?token=2d06ae8236c3e5955e8926039251fca7
+2025-09-20 18:44:22 - INFO - ⏭️ [中国大陆] 跳过已验证的订阅链接: https://rfuXT0SVhKsTRK.syzagk.com/api/v1/client/subscribe?token=1d2a675318d349135560a3e79cec36fd
+2025-09-20 18:44:22 - INFO - ⏭️ [中国大陆] 跳过已验证的订阅链接: https://03d.microcloudvm.com/api/v1/client/subscribe?token=a164498513f2f276c4dbd048673f99c2&flag=meta&types
+2025-09-20 18:44:37 - INFO - 代理连接失败，尝试直连访问: https://t.me/s/dingyue_center?q=%23%E6%8A%95%E7%A8%BF
+2025-09-20 18:44:38 - INFO - 直连访问成功: https://t.me/s/dingyue_center?q=%23%E6%8A%95%E7%A8%BF
+2025-09-20 18:44:38 - INFO - ✅ 从 https://t.me/s/dingyue_center?q=%23%E6%8A%95%E7%A8%BF 提取到 19 个订阅链接
+2025-09-20 18:44:38 - INFO -    发现: http://gw-zubknq2tly.1010520.click/api/v1/client/subscribe?token=0985b7b96ce09745d2f3fa9fcb4a4243&flag=meta
+2025-09-20 18:44:38 - INFO -    发现: https://gogof.hgfastgo.com/api/v1/client/subscribe?token=b294a9be1f2b6ad355a60c29e3e65f7b
+2025-09-20 18:44:38 - INFO -    发现: https://showdb.389123.xyz/s/7550a6896f04d30e7f195ea1a0569aec总流量:1.84TB剩余流量:1.74TB已上传:661.85MB已下载:101.05GB该订阅将于未知过期订阅链接:http://shiyuanyinian.xyz/api/v1/client/subscribe?token=f64ab6f1d58f1120064b61da41e84f47
+2025-09-20 18:44:38 - INFO -    发现: https://www.s.aifjj.asia/api/v1/client/subscribe?token=3eddd42e9dc1e77d881326ad87da9246
+2025-09-20 18:44:38 - INFO -    发现: https://subapi.v1.mk/remoteconfig/2025/09/0919/c425221beee6c6e54573d201dc47be6b.ini订阅链接:https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478
+2025-09-20 18:44:38 - INFO -    发现: https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=bbcda09c41e71bd271465b720758e6fe
+2025-09-20 18:44:38 - INFO -    发现: https://app.mitce.net/?sid=315868&token=srvcdbfjvless://909d9946-ba4b-439f-91bb-f3cd6d6aa0f5@159.65.135.75:443?type=tcp&encryption=none&security=reality&pbk=QATdc0n0ZMAiGVbZX7whqD8zIieaPFKdnL8K8zEspF4&fp=chrome&sni=www.google.com&sid=9a2562f4fcd0&spx=/
+2025-09-20 18:44:38 - INFO -    发现: https://mojie.app/api/v1/client/subscribe?token=0a052dd65193332621d52ff38e5c1717总流量:130.00GB剩余流量:14.70GB已上传:908.45MB已下载:114.41GB该订阅将于未知过期订阅链接:https://odysseycdn.cyou/api/v1/client/subscribe?token=6acb961f4a5d0c12a15b604a9605ce94
+2025-09-20 18:44:38 - INFO -    发现: https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=920bd6c0538a16dbd568415badba5
+2025-09-20 18:44:38 - INFO -    发现: https://odysseycdn.cyou/api/v1/client/subscribe?token=6acb961f4a5d0c12a15b604a9605ce94
+2025-09-20 18:44:38 - INFO -    发现: http://shiyuanyinian.xyz/api/v1/client/subscribe?token=f64ab6f1d58f1120064b61da41e84f47
+2025-09-20 18:44:38 - INFO -    发现: http://gw-zubknq2tly.1010520.click/api/v1/client/subscribe?token=0985b7b96ce09745d2f3fa9fcb4a4243
+2025-09-20 18:44:38 - INFO -    发现: https://gogof.hgfastgo.com/api/v1/client/subscribe?token=506d4358ba171eed3a516e7f21436975
+2025-09-20 18:44:38 - INFO -    发现: https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=624b1e7563cbb1b95a6de2b926165510
+2025-09-20 18:44:38 - INFO -    发现: https://dash.pqjc.site/api/v1/client/subscribe?token=623515126e1ea10d95eeb594fbf6ac29
+2025-09-20 18:44:38 - INFO -    发现: https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478
+2025-09-20 18:44:38 - INFO -    发现: https://msub.xn--bwwx30f.top/api/v1/client/subscribe?token=6faca5ae825cdad945dcd39f661e7567
+2025-09-20 18:44:38 - INFO -    发现: https://rgergergergerg77760.sgcloud.icu/api/v1/client/subscribe?token=0c568d9bed9ab9d4f26bdb97224634
+2025-09-20 18:44:38 - INFO -    发现: https://mojie.app/api/v1/client/subscribe?token=0a052dd65193332621d52ff38e5c1717
+2025-09-20 18:44:38 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: http://gw-zubknq2tly.1010520.click/api/v1/client/subscribe?token=0985b7b96ce09745d2f3fa9fcb4a4243&flag=meta
+2025-09-20 18:44:38 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://gogof.hgfastgo.com/api/v1/client/subscribe?token=b294a9be1f2b6ad355a60c29e3e65f7b
+2025-09-20 18:44:45 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://gogof.hgfastgo.com/api/v1/client/subscribe?token=b294a9be1f2b6ad355a60c29e3e65f7b
+2025-09-20 18:44:45 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://showdb.389123.xyz/s/7550a6896f04d30e7f195ea1a0569aec总流量:1.84TB剩余流量:1.74TB已上传:661.85MB已下载:101.05GB该订阅将于未知过期订阅链接:http://shiyuanyinian.xyz/api/v1/client/subscribe?token=f64ab6f1d58f1120064b61da41e84f47
+2025-09-20 18:44:45 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://showdb.389123.xyz/s/7550a6896f04d30e7f195ea1a0569aec总流量:1.84TB剩余流量:1.74TB已上传:661.85MB已下载:101.05GB该订阅将于未知过期订阅链接:http://shiyuanyinian.xyz/api/v1/client/subscribe?token=f64ab6f1d58f1120064b61da41e84f47
+2025-09-20 18:44:45 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://www.s.aifjj.asia/api/v1/client/subscribe?token=3eddd42e9dc1e77d881326ad87da9246
+2025-09-20 18:44:50 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://www.s.aifjj.asia/api/v1/client/subscribe?token=3eddd42e9dc1e77d881326ad87da9246
+2025-09-20 18:44:50 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://subapi.v1.mk/remoteconfig/2025/09/0919/c425221beee6c6e54573d201dc47be6b.ini订阅链接:https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478
+2025-09-20 18:44:55 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://subapi.v1.mk/remoteconfig/2025/09/0919/c425221beee6c6e54573d201dc47be6b.ini订阅链接:https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478
+2025-09-20 18:44:55 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=bbcda09c41e71bd271465b720758e6fe
+2025-09-20 18:44:55 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://app.mitce.net/?sid=315868&token=srvcdbfjvless://909d9946-ba4b-439f-91bb-f3cd6d6aa0f5@159.65.135.75:443?type=tcp&encryption=none&security=reality&pbk=QATdc0n0ZMAiGVbZX7whqD8zIieaPFKdnL8K8zEspF4&fp=chrome&sni=www.google.com&sid=9a2562f4fcd0&spx=/
+2025-09-20 18:45:01 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://app.mitce.net/?sid=315868&token=srvcdbfjvless://909d9946-ba4b-439f-91bb-f3cd6d6aa0f5@159.65.135.75:443?type=tcp&encryption=none&security=reality&pbk=QATdc0n0ZMAiGVbZX7whqD8zIieaPFKdnL8K8zEspF4&fp=chrome&sni=www.google.com&sid=9a2562f4fcd0&spx=/
+2025-09-20 18:45:01 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://mojie.app/api/v1/client/subscribe?token=0a052dd65193332621d52ff38e5c1717总流量:130.00GB剩余流量:14.70GB已上传:908.45MB已下载:114.41GB该订阅将于未知过期订阅链接:https://odysseycdn.cyou/api/v1/client/subscribe?token=6acb961f4a5d0c12a15b604a9605ce94
+2025-09-20 18:45:11 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://mojie.app/api/v1/client/subscribe?token=0a052dd65193332621d52ff38e5c1717总流量:130.00GB剩余流量:14.70GB已上传:908.45MB已下载:114.41GB该订阅将于未知过期订阅链接:https://odysseycdn.cyou/api/v1/client/subscribe?token=6acb961f4a5d0c12a15b604a9605ce94
+2025-09-20 18:45:11 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=920bd6c0538a16dbd568415badba5
+2025-09-20 18:45:11 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://odysseycdn.cyou/api/v1/client/subscribe?token=6acb961f4a5d0c12a15b604a9605ce94
+2025-09-20 18:45:16 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://odysseycdn.cyou/api/v1/client/subscribe?token=6acb961f4a5d0c12a15b604a9605ce94
+2025-09-20 18:45:16 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: http://shiyuanyinian.xyz/api/v1/client/subscribe?token=f64ab6f1d58f1120064b61da41e84f47
+2025-09-20 18:45:16 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: http://gw-zubknq2tly.1010520.click/api/v1/client/subscribe?token=0985b7b96ce09745d2f3fa9fcb4a4243
+2025-09-20 18:45:16 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://gogof.hgfastgo.com/api/v1/client/subscribe?token=506d4358ba171eed3a516e7f21436975
+2025-09-20 18:45:16 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://gogof.hgfastgo.com/api/v1/client/subscribe?token=506d4358ba171eed3a516e7f21436975
+2025-09-20 18:45:16 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=624b1e7563cbb1b95a6de2b926165510
+2025-09-20 18:45:16 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: https://dash.pqjc.site/api/v1/client/subscribe?token=623515126e1ea10d95eeb594fbf6ac29
+2025-09-20 18:45:16 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478
+2025-09-20 18:45:16 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://msub.xn--bwwx30f.top/api/v1/client/subscribe?token=6faca5ae825cdad945dcd39f661e7567
+2025-09-20 18:45:45 - INFO - ✅ [中国大陆] 发现的订阅链接可用: https://msub.xn--bwwx30f.top/api/v1/client/subscribe?token=6faca5ae825cdad945dcd39f661e7567
+2025-09-20 18:45:45 - INFO - 🔍 [中国大陆] 验证页面发现的订阅链接: https://rgergergergerg77760.sgcloud.icu/api/v1/client/subscribe?token=0c568d9bed9ab9d4f26bdb97224634
+2025-09-20 18:45:50 - INFO - ❌ [中国大陆] 发现的订阅链接不可用: https://rgergergergerg77760.sgcloud.icu/api/v1/client/subscribe?token=0c568d9bed9ab9d4f26bdb97224634
+2025-09-20 18:45:50 - INFO - ⏭️ [中国大陆] 跳过已验证的页面订阅链接: https://mojie.app/api/v1/client/subscribe?token=0a052dd65193332621d52ff38e5c1717
+2025-09-20 18:45:50 - INFO - [中国大陆] 地区搜索完成，发现 9 个URL
+2025-09-20 18:45:50 - INFO - 地区间延迟 15 秒...
+2025-09-20 18:46:05 - INFO - [4/4] 搜索地区: 香港 (gl=hk, hl=zh-HK, lr=lang_zh-HK|lang_en)
+2025-09-20 18:46:05 - INFO - SerpAPI 搜索参数: {'api_key': '547d658f3cd6137203ff9d457a391d5613f6a79c69fc3c5cec14d7ff52add830', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'hk', 'hl': 'zh-HK', 'num': 100, 'lr': 'lang_zh-HK|lang_en', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-20 18:46:35 - INFO - SerpAPI连接问题，切换到直连模式: HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /search?api_key=547d658f3cd6137203ff9d457a391d5613f6a79c69fc3c5cec14d7ff52add830&engine=google&q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&google_domain=google.com&gl=hk&hl=zh-HK&num=100&lr=lang_zh-HK%7Clang_en&tbs=qdr%3Ad&filter=0 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x104ae6fd0>, 'Connection to 192.168.100.110 timed out. (connect timeout=30)')))
+2025-09-20 18:46:41 - ERROR - SerpAPI请求失败: HTTP 400
+2025-09-20 18:46:41 - WARNING - 地区 香港 未获取到搜索结果
+2025-09-20 18:46:41 - INFO - 批量搜索完成，共搜索 4 个地区，找到 40 个API URL
+2025-09-20 18:46:41 - INFO - 🔄 最终去重: 40 -> 25 (移除 15 个重复URL)
+2025-09-20 18:46:41 - INFO - 结果已保存到 api_urls_results.json 和 api_urls.txt
+2025-09-20 18:46:41 - INFO - 搜索模式: batch_regions, 地区: 批量搜索 4 个地区: 巴西, 墨西哥, 中国大陆, 香港
+2025-09-20 18:46:41 - INFO - 任务完成，找到 40 个API URL
+2025-09-20 18:46:41 - INFO - 检查SerpAPI使用量是否达到通知阈值...
+2025-09-20 18:47:06 - INFO - 检查SerpAPI使用量是否达到通知阈值...
+2025-09-20 18:47:11 - INFO - ✅ SerpAPI使用量阈值检查完成

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订阅聚合器 - 测试页面</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #0a0a0a; 
+            color: #fff; 
+            margin: 0; 
+            padding: 20px; 
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: #1a1a1a; 
+            padding: 20px; 
+            border-radius: 10px; 
+            border: 1px solid #333; 
+        }
+        h1 { 
+            color: #4CAF50; 
+            text-align: center; 
+        }
+        .status { 
+            background: #2a2a2a; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 20px 0; 
+        }
+        .success { 
+            color: #4CAF50; 
+        }
+        .error { 
+            color: #f44336; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 订阅聚合器</h1>
+        <div class="status">
+            <h2>系统状态</h2>
+            <p class="success">✅ GitHub Pages 部署正常</p>
+            <p class="success">✅ 构建时间: <span id="build-time"></span></p>
+            <p class="success">✅ 页面访问正常</p>
+        </div>
+        
+        <div class="status">
+            <h2>功能说明</h2>
+            <ul>
+                <li>自动采集订阅链接</li>
+                <li>实时验证可用性</li>
+                <li>智能去重和过滤</li>
+                <li>多协议支持</li>
+            </ul>
+        </div>
+        
+        <div class="status">
+            <h2>快速链接</h2>
+            <p><a href="sub/urls.txt" style="color: #4CAF50;">📥 下载订阅文件</a></p>
+            <p><a href="health.json" style="color: #4CAF50;">📊 查看健康状态</a></p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('build-time').textContent = new Date().toLocaleString('zh-CN');
+    </script>
+</body>
+</html>
