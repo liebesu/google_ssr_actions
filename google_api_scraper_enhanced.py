@@ -29,50 +29,18 @@ class EnhancedGoogleAPIScraper:
         # 使用标准API格式搜索
         self.search_query = '"api/v1/client/subscribe?token="'
         
-        # 多地区多语言搜索配置
+        # 精简地区配置 - 只保留最重要的5个地区
         self.regions = [
             # 中文地区
             {'gl': 'cn', 'hl': 'zh-CN', 'lr': 'lang_zh-CN|lang_en', 'name': '中国大陆'},
             {'gl': 'hk', 'hl': 'zh-HK', 'lr': 'lang_zh-HK|lang_en', 'name': '香港'},
-            {'gl': 'tw', 'hl': 'zh-TW', 'lr': 'lang_zh-TW|lang_en', 'name': '台湾'},
-            {'gl': 'mo', 'hl': 'zh-CN', 'lr': 'lang_zh-CN|lang_en', 'name': '澳门'},
             
             # 英语地区
             {'gl': 'us', 'hl': 'en', 'lr': 'lang_en|lang_zh-CN', 'name': '美国'},
-            {'gl': 'gb', 'hl': 'en', 'lr': 'lang_en|lang_zh-CN', 'name': '英国'},
-            {'gl': 'ca', 'hl': 'en', 'lr': 'lang_en|lang_fr|lang_zh-CN', 'name': '加拿大'},
-            {'gl': 'au', 'hl': 'en', 'lr': 'lang_en|lang_zh-CN', 'name': '澳大利亚'},
-            {'gl': 'nz', 'hl': 'en', 'lr': 'lang_en|lang_zh-CN', 'name': '新西兰'},
             
             # 亚太地区
             {'gl': 'sg', 'hl': 'en', 'lr': 'lang_en|lang_zh-CN|lang_ms', 'name': '新加坡'},
-            {'gl': 'my', 'hl': 'ms', 'lr': 'lang_ms|lang_en|lang_zh-CN', 'name': '马来西亚'},
-            {'gl': 'th', 'hl': 'th', 'lr': 'lang_th|lang_en|lang_zh-CN', 'name': '泰国'},
-            {'gl': 'ph', 'hl': 'en', 'lr': 'lang_en|lang_tl|lang_zh-CN', 'name': '菲律宾'},
-            {'gl': 'id', 'hl': 'id', 'lr': 'lang_id|lang_en|lang_zh-CN', 'name': '印尼'},
-            {'gl': 'vn', 'hl': 'vi', 'lr': 'lang_vi|lang_en|lang_zh-CN', 'name': '越南'},
             {'gl': 'jp', 'hl': 'ja', 'lr': 'lang_ja|lang_en|lang_zh-CN', 'name': '日本'},
-            {'gl': 'kr', 'hl': 'ko', 'lr': 'lang_ko|lang_en|lang_zh-CN', 'name': '韩国'},
-            
-            # 欧洲地区
-            {'gl': 'de', 'hl': 'de', 'lr': 'lang_de|lang_en|lang_zh-CN', 'name': '德国'},
-            {'gl': 'fr', 'hl': 'fr', 'lr': 'lang_fr|lang_en|lang_zh-CN', 'name': '法国'},
-            {'gl': 'it', 'hl': 'it', 'lr': 'lang_it|lang_en|lang_zh-CN', 'name': '意大利'},
-            {'gl': 'es', 'hl': 'es', 'lr': 'lang_es|lang_en|lang_zh-CN', 'name': '西班牙'},
-            {'gl': 'nl', 'hl': 'nl', 'lr': 'lang_nl|lang_en|lang_zh-CN', 'name': '荷兰'},
-            {'gl': 'ch', 'hl': 'de', 'lr': 'lang_de|lang_fr|lang_en|lang_zh-CN', 'name': '瑞士'},
-            {'gl': 'se', 'hl': 'sv', 'lr': 'lang_sv|lang_en|lang_zh-CN', 'name': '瑞典'},
-            {'gl': 'no', 'hl': 'no', 'lr': 'lang_no|lang_en|lang_zh-CN', 'name': '挪威'},
-            {'gl': 'ru', 'hl': 'ru', 'lr': 'lang_ru|lang_en|lang_zh-CN', 'name': '俄罗斯'},
-            
-            # 中东与其他地区
-            {'gl': 'ae', 'hl': 'ar', 'lr': 'lang_ar|lang_en|lang_zh-CN', 'name': '阿联酋'},
-            {'gl': 'sa', 'hl': 'ar', 'lr': 'lang_ar|lang_en|lang_zh-CN', 'name': '沙特阿拉伯'},
-            {'gl': 'tr', 'hl': 'tr', 'lr': 'lang_tr|lang_en|lang_zh-CN', 'name': '土耳其'},
-            {'gl': 'il', 'hl': 'he', 'lr': 'lang_he|lang_en|lang_zh-CN', 'name': '以色列'},
-            {'gl': 'in', 'hl': 'hi', 'lr': 'lang_hi|lang_en|lang_zh-CN', 'name': '印度'},
-            {'gl': 'br', 'hl': 'pt', 'lr': 'lang_pt|lang_en|lang_zh-CN', 'name': '巴西'},
-            {'gl': 'mx', 'hl': 'es', 'lr': 'lang_es|lang_en|lang_zh-CN', 'name': '墨西哥'},
         ]
         # 从状态文件加载地区索引，确保轮换状态持久化
         self.region_state_file = 'region_state.json'
@@ -175,7 +143,7 @@ class EnhancedGoogleAPIScraper:
             "regions": {
                 "batch_count": 1,  # 每次只搜索1个地区
                 "inter_region_delay": 15,
-                "priority_regions": ["cn", "hk", "tw", "us", "sg", "jp", "kr", "de", "sa", "tr", "il", "in"],
+                "priority_regions": ["cn", "hk", "us", "sg", "jp"],
                 "use_priority_only": True  # 启用优先地区模式
             }
         }
