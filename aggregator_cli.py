@@ -719,22 +719,10 @@ def main():
             "allow-lan": False,
             "mode": "rule",
             "log-level": "info",
-            "proxy-providers": {
-                "all": {
-                    "type": "http",
-                    "url": provider_url,
-                    "path": "./providers/all.yaml",
-                    "interval": 3600,
-                    "health-check": {
-                        "enable": True,
-                        "url": "http://www.gstatic.com/generate_204",
-                        "interval": 600,
-                    },
-                }
-            },
+            "proxies": all_nodes,  # 直接包含所有节点
             "proxy-groups": [
-                {"name": "Node-Select", "type": "select", "use": ["all"], "proxies": ["Auto", "DIRECT"]},
-                {"name": "Auto", "type": "url-test", "use": ["all"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Node-Select", "type": "select", "proxies": ["Auto", "DIRECT"] + all_nodes[:50] if len(all_nodes) > 0 else ["Auto", "DIRECT"]},  # 限制前50个节点避免配置过大
+                {"name": "Auto", "type": "url-test", "proxies": all_nodes[:30] if len(all_nodes) > 0 else ["DIRECT"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
                 {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
                 {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
                 {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
@@ -815,6 +803,39 @@ def main():
             ],
         }
         write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
+        
+        # 保持原有的 proxy-providers 版本作为备选 (all_providers.yaml)
+        clash_yaml_providers = {
+            "mixed-port": 7890,
+            "allow-lan": False,
+            "mode": "rule",
+            "log-level": "info",
+            "proxy-providers": {
+                "all": {
+                    "type": "http",
+                    "url": provider_url,
+                    "path": "./providers/all.yaml",
+                    "interval": 3600,
+                    "health-check": {
+                        "enable": True,
+                        "url": "http://www.gstatic.com/generate_204",
+                        "interval": 600,
+                    },
+                }
+            },
+            "proxy-groups": [
+                {"name": "Node-Select", "type": "select", "use": ["all"], "proxies": ["Auto", "DIRECT"]},
+                {"name": "Auto", "type": "url-test", "use": ["all"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
+                {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
+                {"name": "Apple", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
+                {"name": "Final", "type": "select", "proxies": ["Node-Select", "DIRECT", "Auto"]},
+            ],
+            "rule-providers": clash_yaml["rule-providers"],
+            "rules": clash_yaml["rules"],
+        }
+        write_text(os.path.join(paths["sub"], "all_providers.yaml"), yaml.safe_dump(clash_yaml_providers, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
     # URL文件的写入改在可用性细化（含流量/配额判定）后执行
 
     for region, nodes in region_to_nodes.items():

@@ -166,8 +166,9 @@
       <div class="card card-files">
         <h3>订阅文件</h3>
         <ul>
-          <li><a href="sub/all.txt"><code>sub/all.txt</code></a> 全量订阅</li>
-          <li><a href="sub/all.yaml"><code>sub/all.yaml</code></a> Clash配置</li>
+          <li><a href="sub/all.txt"><code>sub/all.txt</code></a> 全量订阅 (文本格式)</li>
+          <li><a href="sub/all.yaml"><code>sub/all.yaml</code></a> Clash配置 (包含完整节点信息)</li>
+          <li><a href="sub/all_providers.yaml"><code>sub/all_providers.yaml</code></a> Clash配置 (使用proxy-providers)</li>
         </ul>
         <p><small style="color:#94a3b8">📌 所有订阅文件和接口可直接访问，无需页面认证</small></p>
       </div>
