@@ -1,8 +1,0 @@
-trojan://6ecb327c-1276-48d1-9869-324feb5dbe7e@a-2f9191ac.tanke.me:8084?allowInsecure=1&peer=Tanke&sni=Tanke#A-%E4%B8%AD%E5%9B%BD%E9%A6%99%E6%B8%AF-T1
-trojan://6ecb327c-1276-48d1-9869-324feb5dbe7e@a-08e84d1f.tanke.me:8102?allowInsecure=1&peer=Tanke&sni=Tanke#A-%E4%B8%AD%E5%9B%BD%E9%A6%99%E6%B8%AF-T2
-trojan://6ecb327c-1276-48d1-9869-324feb5dbe7e@a-49f0a542.tanke.me:8092?allowInsecure=1&peer=TK&sni=TK#A-%E7%BE%8E%E6%97%A7%E9%87%91%E5%B1%B1-U1
-trojan://6ecb327c-1276-48d1-9869-324feb5dbe7e@h-f66bbe78.tanke.me:8116?allowInsecure=1&peer=G6&sni=G6#A-%E6%96%B0%E5%8A%A0%E5%9D%A1-D1
-trojan://6ecb327c-1276-48d1-9869-324feb5dbe7e@3bff6809.tanke.me:8093?allowInsecure=1&peer=HK&sni=HK#A-%E9%A6%99%E6%B8%AF%E5%9C%B0%E5%8C%BA-BN
-trojan://6ecb327c-1276-48d1-9869-324feb5dbe7e@a-105fadcc.tanke.me:8096?allowInsecure=1&peer=HK&sni=HK#A-%E9%A6%99%E6%B8%AF%E5%9C%B0%E5%8C%BA-BG
-trojan://6ecb327c-1276-48d1-9869-324feb5dbe7e@a-fea4d12d.tanke.me:8095?allowInsecure=1&peer=TK&sni=TK#A-%E4%BA%9A%E5%A4%AA%E4%BA%8C%E5%8C%BA-DP
-trojan://6ecb327c-1276-48d1-9869-324feb5dbe7e@h-6433498d.tanke.me:8089?allowInsecure=1#H-%E7%BE%8E%E6%B4%9B%E6%9D%89%E7%9F%B6-TS
