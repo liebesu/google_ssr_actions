@@ -560,20 +560,48 @@ def main():
         traceback.print_exc()
         serpapi_keys_detail = [{"error": f"Failed to load keys: {str(e)}"}]
         
-        # 备用方案：尝试从环境变量获取基本信息
+        # 备用方案：尝试从环境变量获取真实密钥信息
         scraper_keys_env = os.getenv("SCRAPER_KEYS")
         if scraper_keys_env:
-            keys_count = len([k for k in scraper_keys_env.split('\n') if k.strip()])
-            print(f"[info] 备用方案：从环境变量检测到 {keys_count} 个密钥")
-            serpapi_keys_detail = [{
-                "index": 1,
-                "success": False,
-                "total_searches_left": 0,
-                "searches_per_month": 0,
-                "used_searches": 0,
-                "reset_date": "",
-                "error": f"API check failed: {str(e)}"
-            } for _ in range(keys_count)]
+            actual_keys = [k.strip() for k in scraper_keys_env.split('\n') if k.strip()]
+            keys_total = len(actual_keys)
+            print(f"[info] 备用方案：从环境变量检测到 {keys_total} 个真实密钥")
+            
+            # 为每个真实密钥创建状态记录
+            serpapi_keys_detail = []
+            for i, key in enumerate(actual_keys):
+                key_detail = {
+                    "index": i + 1,
+                    "success": False,
+                    "total_searches_left": 0,
+                    "searches_per_month": 0,
+                    "used_searches": 0,
+                    "reset_date": "",
+                    "key_masked": key[:8] + "..." if len(key) > 8 else key,
+                    "error": f"Unable to check quota: {str(e)}"
+                }
+                
+                # 简单的密钥格式验证
+                if len(key) >= 20 and key.replace('_', '').replace('-', '').isalnum():
+                    key_detail["status"] = "key_valid_unchecked"
+                else:
+                    key_detail["status"] = "key_invalid"
+                    key_detail["error"] = "Invalid key format"
+                
+                serpapi_keys_detail.append(key_detail)
+                
+            keys_ok = len([k for k in serpapi_keys_detail if k.get("status") == "key_valid_unchecked"])
+            print(f"[info] 检测到格式有效的密钥: {keys_ok}/{keys_total}")
+        else:
+            print(f"[warn] 环境变量 SCRAPER_KEYS 未配置")
+            serpapi_keys_detail = [{"error": "No SCRAPER_KEYS environment variable found"}]
+    
+    # 如果无法获取真实数据，显示错误状态而不是假数据
+    if quota_total_left == 0 and quota_total_cap == 0:
+        print(f"[error] 无法获取真实的SerpAPI数据，请检查密钥配置")
+        # 设置为错误状态，让前端显示实际的错误信息
+        if not serpapi_keys_detail:
+            serpapi_keys_detail = [{"error": "Unable to fetch real SerpAPI data"}]
 
     # Load candidate URL set
     raw_candidates = load_candidate_urls(PROJECT_ROOT, data_dir)
