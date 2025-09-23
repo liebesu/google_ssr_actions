@@ -712,7 +712,7 @@ def main():
     if args.public_base:
         # publish a provider list (just URIs) so Clash can ingest it predictably
         provider_list = {"proxies": all_nodes}
-        write_text(os.path.join(paths["providers"], "all.yaml"), yaml.safe_dump(provider_list, allow_unicode=True, sort_keys=False))
+        write_text(os.path.join(paths["providers"], "all.yaml"), yaml.safe_dump(provider_list, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
         provider_url = args.public_base.rstrip("/") + "/sub/providers/all.yaml"
         clash_yaml = {
             "mixed-port": 7890,
@@ -814,7 +814,7 @@ def main():
                 "MATCH,Final",
             ],
         }
-        write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False))
+        write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
     # URL文件的写入改在可用性细化（含流量/配额判定）后执行
 
     for region, nodes in region_to_nodes.items():
