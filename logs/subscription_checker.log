@@ -2304,3 +2304,866 @@ hysteria2://d295a9ca-ac1c-4a4c-a668-124f746bd2d6@sfjmg4.sufujia.top:57300/?insec
 2025-09-23 18:20:33 - WARNING - 代理连接失败，切换到直连模式
 2025-09-23 18:20:33 - INFO - 加载了 146 个已通知URL记录
 2025-09-23 18:20:33 - INFO - ✅ SerpAPI使用量阈值通知发送成功 (使用率: 57.0%, 阈值: 50%)
+2025-09-23 22:39:09 - INFO - 未使用代理
+2025-09-23 22:39:09 - INFO - 加载了 99 个已通知URL记录
+2025-09-23 22:39:19 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:39:19 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d&flag=clash
+2025-09-23 22:39:19 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d&flag=clash
+2025-09-23 22:39:20 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:39:20 - INFO - 开始双重分析订阅内容
+2025-09-23 22:39:20 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:39:20 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:39:20 - INFO - 原始内容长度: 2296
+2025-09-23 22:39:20 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vOGVlNzFhMzQtNGU5NC00ODcyLWE3ZjgtMzc5ZWZjNDNjNTdiQG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:39:20 - INFO - 原始内容base64解码成功，长度: 1721
+2025-09-23 22:39:20 - INFO - 解码后内容预览: hysteria2://8ee71a34-4e94-4872-a7f8-379efc43c57b@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A91.74%20GB
+hysteria2://8ee71a34-4e94-4872-a7f8-379efc43c57b@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://8ee71a34-4e94-4872-a7f8-379efc43c57b@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9...
+2025-09-23 22:39:20 - INFO - 开始分析解码后内容，长度: 1721
+2025-09-23 22:39:20 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:39:20 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:39:20 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:39:20 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d&flag=clash
+2025-09-23 22:39:20 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:39:20 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:39:20 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:39:20 - INFO - 内容比较结果: 不一致
+2025-09-23 22:39:20 - INFO - 原始内容长度: 1721, Clash内容长度: 20915
+2025-09-23 22:39:20 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:39:20 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:39:20 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:39:20 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:39:20 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:39:21 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:39:21 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:39:22 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:39:22 - WARNING - 所有转换服务都失败
+2025-09-23 22:39:22 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:39:22 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:39:22 - INFO - 总流量: 91.74 GB
+2025-09-23 22:39:22 - INFO - 剩余流量: 91.74 GB
+2025-09-23 22:39:22 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:39:23 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:39:23 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:39:23 - INFO - 发现可用订阅: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:39:23 - INFO -   节点信息: 11个节点, 协议: hysteria2(11), 分析方式: base64_decode
+2025-09-23 22:39:23 - INFO -   流量信息: 剩余 91.74 GB, 总量 91.74 GB
+2025-09-23 22:39:23 - INFO -   状态码: 200
+2025-09-23 22:39:23 - INFO - 钉钉通知发送成功: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:39:23 - INFO - 已记录通知URL: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:39:23 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:39:23 - INFO - 正在检测订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:39:23 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2&flag=clash
+2025-09-23 22:39:23 - INFO - URL已清理: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2&flag=clash
+2025-09-23 22:39:24 - INFO - 订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:39:24 - INFO - 开始双重分析订阅内容
+2025-09-23 22:39:24 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:39:24 - INFO - 重新请求原始URL获取base64内容: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:39:24 - INFO - 原始内容长度: 2876
+2025-09-23 22:39:24 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vOTViOGYxOTMtZmM5NC00NWRkLTgyY2YtY2ZhMzA3NzdjN2IwQHNmam1nNC5zdWZ1amlhLnRvcDo1NzMwMC8/aW5zZWN1cmU9MSZzbmk9c2ZqbWc0LnN1ZnVqaWEudG9wIyVFNSU4OSVBOSVFNCVCRCU5OSVFNiVCNSU4MSVFOSU4NyU4RiVFRiVC...
+2025-09-23 22:39:24 - INFO - 原始内容base64解码成功，长度: 2155
+2025-09-23 22:39:24 - INFO - 解码后内容预览: hysteria2://95b8f193-fc94-45dd-82cf-cfa30777c7b0@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A72.88%20GB
+hysteria2://95b8f193-fc94-45dd-82cf-cfa30777c7b0@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://95b8f193-fc94-45dd-82cf-cfa30777c7b0@sfjmg4.sufujia.top:57300/?insecure=1&sni=sfjmg4.sufujia.top#%E5%A5%97%E9%A4%90%E...
+2025-09-23 22:39:24 - INFO - 开始分析解码后内容，长度: 2155
+2025-09-23 22:39:24 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:39:24 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 14, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:39:24 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:39:24 - INFO - 尝试获取Clash格式: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2&flag=clash
+2025-09-23 22:39:25 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:39:25 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:39:25 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:39:25 - INFO - 内容比较结果: 不一致
+2025-09-23 22:39:25 - INFO - 原始内容长度: 2155, Clash内容长度: 20915
+2025-09-23 22:39:25 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:39:25 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:39:25 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:39:25 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:39:25 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:39:31 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:39:31 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:39:32 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:39:32 - WARNING - 所有转换服务都失败
+2025-09-23 22:39:32 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:39:32 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:39:32 - INFO - 总流量: 72.88 GB
+2025-09-23 22:39:32 - INFO - 剩余流量: 72.88 GB
+2025-09-23 22:39:32 - INFO - 发送钉钉通知: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:39:33 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:39:33 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:39:33 - INFO - 发现可用订阅: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:39:33 - INFO -   节点信息: 14个节点, 协议: hysteria2(14), 分析方式: base64_decode
+2025-09-23 22:39:33 - INFO -   流量信息: 剩余 72.88 GB, 总量 72.88 GB
+2025-09-23 22:39:33 - INFO -   状态码: 200
+2025-09-23 22:39:33 - INFO - 钉钉通知发送成功: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:39:33 - INFO - 已记录通知URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:39:33 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:39:35 - INFO - 正在检测订阅链接: https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902
+2025-09-23 22:39:35 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902&flag=clash
+2025-09-23 22:39:35 - INFO - URL已清理: https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902&flag=clash
+2025-09-23 22:39:35 - WARNING - 订阅链接HTTP错误: https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902, 状态码: 403
+2025-09-23 22:39:38 - INFO - 正在检测订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=9b54032c8dc6b0fc076afdfee4f540b5
+2025-09-23 22:39:38 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://dl.vfkum.website/api/v1/client/subscribe?token=9b54032c8dc6b0fc076afdfee4f540b5&flag=clash
+2025-09-23 22:39:38 - INFO - URL已清理: https://dl.vfkum.website/api/v1/client/subscribe?token=9b54032c8dc6b0fc076afdfee4f540b5&flag=clash
+2025-09-23 22:39:48 - ERROR - 订阅链接请求超时: https://dl.vfkum.website/api/v1/client/subscribe?token=9b54032c8dc6b0fc076afdfee4f540b5
+2025-09-23 22:39:48 - INFO - 正在检测订阅链接: https://api.nnbhhxk.com/api/v1/client/subscribe?token=c48e7a6135ee2c8c56bf68fab56315c0
+2025-09-23 22:39:48 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://api.nnbhhxk.com/api/v1/client/subscribe?token=c48e7a6135ee2c8c56bf68fab56315c0&flag=clash
+2025-09-23 22:39:48 - INFO - URL已清理: https://api.nnbhhxk.com/api/v1/client/subscribe?token=c48e7a6135ee2c8c56bf68fab56315c0&flag=clash
+2025-09-23 22:39:49 - WARNING - 订阅链接内容无效: https://api.nnbhhxk.com/api/v1/client/subscribe?token=c48e7a6135ee2c8c56bf68fab56315c0
+2025-09-23 22:39:49 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e
+2025-09-23 22:39:49 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e&flag=clash
+2025-09-23 22:39:49 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e&flag=clash
+2025-09-23 22:39:49 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e
+2025-09-23 22:39:49 - INFO - 开始双重分析订阅内容
+2025-09-23 22:39:49 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:39:49 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e
+2025-09-23 22:39:49 - INFO - 原始内容长度: 2296
+2025-09-23 22:39:49 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNmEwZTU4ZTktZGUzOC00MGQ5LTlkZjAtODQ2YTIwYjlhZThiQG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:39:49 - INFO - 原始内容base64解码成功，长度: 1721
+2025-09-23 22:39:49 - INFO - 解码后内容预览: hysteria2://6a0e58e9-de38-40d9-9df0-846a20b9ae8b@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A91.07%20GB
+hysteria2://6a0e58e9-de38-40d9-9df0-846a20b9ae8b@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://6a0e58e9-de38-40d9-9df0-846a20b9ae8b@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9...
+2025-09-23 22:39:49 - INFO - 开始分析解码后内容，长度: 1721
+2025-09-23 22:39:49 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:39:49 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:39:49 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:39:49 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e&flag=clash
+2025-09-23 22:39:49 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:39:49 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:39:49 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:39:49 - INFO - 内容比较结果: 不一致
+2025-09-23 22:39:49 - INFO - 原始内容长度: 1721, Clash内容长度: 20915
+2025-09-23 22:39:49 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:39:49 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:39:49 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:39:53 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:39:53 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:39:54 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:39:54 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:39:54 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:39:54 - WARNING - 所有转换服务都失败
+2025-09-23 22:39:54 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:39:54 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:39:54 - INFO - 总流量: 91.07 GB
+2025-09-23 22:39:54 - INFO - 剩余流量: 91.07 GB
+2025-09-23 22:39:54 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e
+2025-09-23 22:39:56 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:39:56 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:39:56 - INFO - 发现可用订阅: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e
+2025-09-23 22:39:56 - INFO -   节点信息: 11个节点, 协议: hysteria2(11), 分析方式: base64_decode
+2025-09-23 22:39:56 - INFO -   流量信息: 剩余 91.07 GB, 总量 91.07 GB
+2025-09-23 22:39:56 - INFO -   状态码: 200
+2025-09-23 22:39:56 - INFO - 钉钉通知发送成功: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e
+2025-09-23 22:39:56 - INFO - 已记录通知URL: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e
+2025-09-23 22:39:56 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:39:56 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f
+2025-09-23 22:39:56 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f&flag=clash
+2025-09-23 22:39:56 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f&flag=clash
+2025-09-23 22:39:56 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f
+2025-09-23 22:39:56 - INFO - 开始双重分析订阅内容
+2025-09-23 22:39:56 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:39:56 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f
+2025-09-23 22:39:56 - INFO - 原始内容长度: 2296
+2025-09-23 22:39:56 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vOGUwZTA2OWYtYTlmMi00NjQ0LWE4MzEtZWIwNTViNWE1MDE5QG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:39:56 - INFO - 原始内容base64解码成功，长度: 1720
+2025-09-23 22:39:56 - INFO - 解码后内容预览: hysteria2://8e0e069f-a9f2-4644-a831-eb055b5a5019@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A97.5%20GB
+hysteria2://8e0e069f-a9f2-4644-a831-eb055b5a5019@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://8e0e069f-a9f2-4644-a831-eb055b5a5019@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9C...
+2025-09-23 22:39:56 - INFO - 开始分析解码后内容，长度: 1720
+2025-09-23 22:39:56 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:39:56 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:39:56 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:39:56 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f&flag=clash
+2025-09-23 22:39:57 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:39:57 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:39:57 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:39:57 - INFO - 内容比较结果: 不一致
+2025-09-23 22:39:57 - INFO - 原始内容长度: 1720, Clash内容长度: 20915
+2025-09-23 22:39:57 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:39:57 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:39:57 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:39:59 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:39:59 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:39:59 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:39:59 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:39:59 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:39:59 - WARNING - 所有转换服务都失败
+2025-09-23 22:39:59 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:39:59 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:39:59 - INFO - 总流量: 97.5 GB
+2025-09-23 22:39:59 - INFO - 剩余流量: 97.5 GB
+2025-09-23 22:39:59 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f
+2025-09-23 22:40:01 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:40:01 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:40:01 - INFO - 发现可用订阅: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f
+2025-09-23 22:40:01 - INFO -   节点信息: 11个节点, 协议: hysteria2(11), 分析方式: base64_decode
+2025-09-23 22:40:01 - INFO -   流量信息: 剩余 97.5 GB, 总量 97.5 GB
+2025-09-23 22:40:01 - INFO -   状态码: 200
+2025-09-23 22:40:01 - INFO - 钉钉通知发送成功: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f
+2025-09-23 22:40:01 - INFO - 已记录通知URL: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f
+2025-09-23 22:40:01 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:40:01 - INFO - 正在检测订阅链接: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5
+2025-09-23 22:40:01 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5&flag=clash
+2025-09-23 22:40:01 - INFO - URL已清理: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5&flag=clash
+2025-09-23 22:40:01 - INFO - 订阅链接可用: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5
+2025-09-23 22:40:01 - INFO - 开始双重分析订阅内容
+2025-09-23 22:40:01 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:40:01 - INFO - 重新请求原始URL获取base64内容: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5
+2025-09-23 22:40:01 - INFO - 原始内容长度: 5320
+2025-09-23 22:40:01 - INFO - 原始内容预览: dHJvamFuOi8vZjM1N2FhYjUtZjRiOC00MTIyLWFmZDctNGFkNjBlYWYyMzAwQDAuMC4wLjA6NDQzP2FsbG93SW5zZWN1cmU9MSZwZWVyPTAuMC4wLjAmc25pPTAuMC4wLjAmdHlwZT13cyMlRUYlQkMlODglRTclOUMlOEIlRTglQkYlOTklRTklODclOEMlRUYlQkMl...
+2025-09-23 22:40:01 - INFO - 原始内容base64解码成功，长度: 3990
+2025-09-23 22:40:01 - INFO - 解码后内容预览: trojan://f357aab5-f4b8-4122-afd7-4ad60eaf2300@0.0.0.0:443?allowInsecure=1&peer=0.0.0.0&sni=0.0.0.0&type=ws#%EF%BC%88%E7%9C%8B%E8%BF%99%E9%87%8C%EF%BC%89%E6%AF%8F%E6%9C%88%E5%88%B7%E6%96%B0%E8%AE%A2%E9%98%85%E8%8E%B7%E5%8F%96%E6%96%B0%E8%8A%82%E7%82%B9
+trojan://f357aab5-f4b8-4122-afd7-4ad60eaf2300@0.0.0.0:443?allowInsecure=1&peer=0.0.0.0&sni=0.0.0.0&type=ws#%E4%B8%80%E5%85%83%E6%9C%BA%E5%9C%BA.ink
+trojan://f357aab5-f4b8-4122-afd7-4ad60eaf2300@hk1.0260893d-f3e7-5880-9e11-5d936f86fdd6.6df03129.th...
+2025-09-23 22:40:01 - INFO - 开始分析解码后内容，长度: 3990
+2025-09-23 22:40:01 - INFO - 解码内容检测到节点数量: 14
+2025-09-23 22:40:01 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 14, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 0, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:40:01 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:40:01 - INFO - 尝试获取Clash格式: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5&flag=clash
+2025-09-23 22:40:02 - INFO - 获取到Clash格式内容，长度: 25607
+2025-09-23 22:40:02 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:40:02 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:40:02 - INFO - 内容比较结果: 不一致
+2025-09-23 22:40:02 - INFO - 原始内容长度: 3990, Clash内容长度: 25607
+2025-09-23 22:40:02 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:40:02 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:40:02 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:40:02 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:40:02 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:40:02 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:40:02 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:40:02 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:40:02 - WARNING - 所有转换服务都失败
+2025-09-23 22:40:02 - INFO - 使用base64解码结果，找到 14 个节点
+2025-09-23 22:40:02 - INFO - 节点分析结果: 14 个节点
+2025-09-23 22:40:02 - INFO - 发送钉钉通知: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5
+2025-09-23 22:40:04 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:40:04 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:40:04 - INFO - 发现可用订阅: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5
+2025-09-23 22:40:04 - INFO -   节点信息: 14个节点, 协议: trojan(14), 分析方式: base64_decode
+2025-09-23 22:40:04 - INFO -   流量信息: 剩余 None GB, 总量 0.0 GB
+2025-09-23 22:40:04 - INFO -   状态码: 200
+2025-09-23 22:40:04 - INFO - 钉钉通知发送成功: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5
+2025-09-23 22:40:04 - INFO - 已记录通知URL: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5
+2025-09-23 22:40:04 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:40:04 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f
+2025-09-23 22:40:04 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f&flag=clash
+2025-09-23 22:40:04 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f&flag=clash
+2025-09-23 22:40:04 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f
+2025-09-23 22:40:04 - INFO - 开始双重分析订阅内容
+2025-09-23 22:40:04 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:40:04 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f
+2025-09-23 22:40:04 - INFO - 原始内容长度: 2296
+2025-09-23 22:40:04 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vOTlkMzdmNzctNWQyYS00OWNkLWFhMmItMDU3MjAzZTY3NTRmQG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:40:04 - INFO - 原始内容base64解码成功，长度: 1721
+2025-09-23 22:40:04 - INFO - 解码后内容预览: hysteria2://99d37f77-5d2a-49cd-aa2b-057203e6754f@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A86.96%20GB
+hysteria2://99d37f77-5d2a-49cd-aa2b-057203e6754f@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://99d37f77-5d2a-49cd-aa2b-057203e6754f@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9...
+2025-09-23 22:40:04 - INFO - 开始分析解码后内容，长度: 1721
+2025-09-23 22:40:04 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:40:04 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:40:04 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:40:04 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f&flag=clash
+2025-09-23 22:40:05 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:40:05 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:40:05 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:40:05 - INFO - 内容比较结果: 不一致
+2025-09-23 22:40:05 - INFO - 原始内容长度: 1721, Clash内容长度: 20915
+2025-09-23 22:40:05 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:40:05 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:40:05 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:40:05 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:40:05 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:40:05 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:40:05 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:40:05 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:40:05 - WARNING - 所有转换服务都失败
+2025-09-23 22:40:05 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:40:05 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:40:05 - INFO - 总流量: 86.96 GB
+2025-09-23 22:40:05 - INFO - 剩余流量: 86.96 GB
+2025-09-23 22:40:05 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f
+2025-09-23 22:40:06 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:40:06 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:40:06 - INFO - 发现可用订阅: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f
+2025-09-23 22:40:06 - INFO -   节点信息: 11个节点, 协议: hysteria2(11), 分析方式: base64_decode
+2025-09-23 22:40:06 - INFO -   流量信息: 剩余 86.96 GB, 总量 86.96 GB
+2025-09-23 22:40:06 - INFO -   状态码: 200
+2025-09-23 22:40:06 - INFO - 钉钉通知发送成功: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f
+2025-09-23 22:40:06 - INFO - 已记录通知URL: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f
+2025-09-23 22:40:06 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:40:06 - INFO - 正在检测订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9
+2025-09-23 22:40:06 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9&flag=clash
+2025-09-23 22:40:06 - INFO - URL已清理: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9&flag=clash
+2025-09-23 22:40:14 - INFO - 订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9
+2025-09-23 22:40:14 - INFO - 开始双重分析订阅内容
+2025-09-23 22:40:14 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:40:14 - INFO - 重新请求原始URL获取base64内容: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9
+2025-09-23 22:40:23 - INFO - 原始内容长度: 2660
+2025-09-23 22:40:23 - INFO - 原始内容预览: dm1lc3M6Ly9leUoySWpvaU1pSXNJbkJ6SWpvaVhIVTFNalk1WEhVMFpqVTVYSFUyWkRReFhIVTVNV05tWEhWbVpqRmhPVGs1TGpJMElFZENJaXdpWVdSa0lqb2lORFV1TVRRMExqRTNOQzQyTUNJc0luQnZjblFpT2lJeU16RTNPQ0lzSW1sa0lqb2lPRFk1WW1Fd09U...
+2025-09-23 22:40:23 - INFO - 原始内容base64解码成功，长度: 1994
+2025-09-23 22:40:23 - INFO - 解码后内容预览: vmess://eyJ2IjoiMiIsInBzIjoiXHU1MjY5XHU0ZjU5XHU2ZDQxXHU5MWNmXHVmZjFhOTk5LjI0IEdCIiwiYWRkIjoiNDUuMTQ0LjE3NC42MCIsInBvcnQiOiIyMzE3OCIsImlkIjoiODY5YmEwOTctYzY4Yy00ODMwLWExYTAtMjVmYTE0ZmQ5YTk4IiwiYWlkIjoiMCIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0IjoiIiwicGF0aCI6IiIsInRscyI6IiJ9
+vmess://eyJ2IjoiMiIsInBzIjoiXHU4ZGRkXHU3OWJiXHU0ZTBiXHU2YjIxXHU5MWNkXHU3ZjZlXHU1MjY5XHU0ZjU5XHVmZjFhNyBcdTU5MjkiLCJhZGQiOiI0NS4xNDQuMTc0LjYwIiwicG9ydCI6IjIzMTc4IiwiaWQiOiI4NjliYTA5Ny1jNjhjLTQ4MzAtYTFhMC0yNWZhMTRmZDlhOTgiLC...
+2025-09-23 22:40:23 - INFO - 开始分析解码后内容，长度: 1994
+2025-09-23 22:40:23 - INFO - 解码内容检测到节点数量: 7
+2025-09-23 22:40:23 - INFO - 节点类型分布: {'vmess': 7, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 0, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:40:23 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:40:23 - INFO - 尝试获取Clash格式: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9&flag=clash
+2025-09-23 22:40:27 - INFO - 获取到Clash格式内容，长度: 22684
+2025-09-23 22:40:27 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:40:27 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:40:27 - INFO - 内容比较结果: 不一致
+2025-09-23 22:40:27 - INFO - 原始内容长度: 1994, Clash内容长度: 22684
+2025-09-23 22:40:27 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:40:27 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:40:27 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:40:27 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:40:27 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:40:28 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:40:28 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:40:28 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:40:28 - WARNING - 所有转换服务都失败
+2025-09-23 22:40:28 - INFO - 使用base64解码结果，找到 7 个节点
+2025-09-23 22:40:28 - INFO - 节点分析结果: 7 个节点
+2025-09-23 22:40:28 - INFO - 发送钉钉通知: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9
+2025-09-23 22:40:30 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:40:30 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:40:30 - INFO - 发现可用订阅: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9
+2025-09-23 22:40:30 - INFO -   节点信息: 7个节点, 协议: vmess(7), 分析方式: base64_decode
+2025-09-23 22:40:30 - INFO -   流量信息: 剩余 None GB, 总量 0.0 GB
+2025-09-23 22:40:30 - INFO -   状态码: 200
+2025-09-23 22:40:30 - INFO - 钉钉通知发送成功: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9
+2025-09-23 22:40:30 - INFO - 已记录通知URL: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9
+2025-09-23 22:40:30 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:40:30 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47
+2025-09-23 22:40:30 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47&flag=clash
+2025-09-23 22:40:30 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47&flag=clash
+2025-09-23 22:40:30 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47
+2025-09-23 22:40:30 - INFO - 开始双重分析订阅内容
+2025-09-23 22:40:30 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:40:30 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47
+2025-09-23 22:40:30 - INFO - 原始内容长度: 2296
+2025-09-23 22:40:30 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vZjNlOWY4ZGItYTdlNi00YzE5LTg5MmYtNzE2MjI0NmEzM2Y0QG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:40:30 - INFO - 原始内容base64解码成功，长度: 1721
+2025-09-23 22:40:30 - INFO - 解码后内容预览: hysteria2://f3e9f8db-a7e6-4c19-892f-7162246a33f4@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A96.83%20GB
+hysteria2://f3e9f8db-a7e6-4c19-892f-7162246a33f4@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://f3e9f8db-a7e6-4c19-892f-7162246a33f4@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9...
+2025-09-23 22:40:30 - INFO - 开始分析解码后内容，长度: 1721
+2025-09-23 22:40:30 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:40:30 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:40:30 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:40:30 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47&flag=clash
+2025-09-23 22:40:31 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:40:31 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:40:31 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:40:31 - INFO - 内容比较结果: 不一致
+2025-09-23 22:40:31 - INFO - 原始内容长度: 1721, Clash内容长度: 20915
+2025-09-23 22:40:31 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:40:31 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:40:31 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:40:31 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:40:31 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:40:31 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:40:31 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:40:31 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:40:31 - WARNING - 所有转换服务都失败
+2025-09-23 22:40:31 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:40:31 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:40:31 - INFO - 总流量: 96.83 GB
+2025-09-23 22:40:31 - INFO - 剩余流量: 96.83 GB
+2025-09-23 22:40:31 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47
+2025-09-23 22:40:32 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:40:32 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:40:32 - INFO - 发现可用订阅: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47
+2025-09-23 22:40:32 - INFO -   节点信息: 11个节点, 协议: hysteria2(11), 分析方式: base64_decode
+2025-09-23 22:40:32 - INFO -   流量信息: 剩余 96.83 GB, 总量 96.83 GB
+2025-09-23 22:40:32 - INFO -   状态码: 200
+2025-09-23 22:40:32 - INFO - 钉钉通知发送成功: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47
+2025-09-23 22:40:32 - INFO - 已记录通知URL: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47
+2025-09-23 22:40:32 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:40:32 - INFO - 正在检测订阅链接: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e
+2025-09-23 22:40:32 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e&flag=clash
+2025-09-23 22:40:32 - INFO - URL已清理: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e&flag=clash
+2025-09-23 22:40:33 - INFO - 订阅链接可用: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e
+2025-09-23 22:40:33 - INFO - 开始双重分析订阅内容
+2025-09-23 22:40:33 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:40:33 - INFO - 重新请求原始URL获取base64内容: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e
+2025-09-23 22:40:33 - INFO - 原始内容长度: 1676
+2025-09-23 22:40:33 - INFO - 原始内容预览: dmxlc3M6Ly8zMWNmYTA4Yy1lNDMxLTQ0NzYtOTFiNi1iNTM1YmM2NTE0OTRAZC5lYW5zLnRvcDo3MDA4P21vZGU9bXVsdGkmc2VjdXJpdHk9cmVhbGl0eSZlbmNyeXB0aW9uPW5vbmUmdHlwZT10Y3AmZmxvdz14dGxzLXJwcngtdmlzaW9uJnBiaz1GUEg4MVgtRU13...
+2025-09-23 22:40:33 - INFO - 原始内容base64解码成功，长度: 1257
+2025-09-23 22:40:33 - INFO - 解码后内容预览: vless://31cfa08c-e431-4476-91b6-b535bc651494@d.eans.top:7008?mode=multi&security=reality&encryption=none&type=tcp&flow=xtls-rprx-vision&pbk=FPH81X-EMwzv4nXgkplSqBAaK81uLuPYqWaYyIWFsnQ&sid=efcbe824&sni=addons.mozilla.org&servername=addons.mozilla.org&spx=%2F&fp=firefox#%E8%BF%87%E6%BB%A4%E6%8E%895%E6%9D%A1%E7%BA%BF%E8%B7%AF
+vless://31cfa08c-e431-4476-91b6-b535bc651494@d.eans.top:7008?mode=multi&security=reality&encryption=none&type=tcp&flow=xtls-rprx-vision&pbk=FPH81X-EMwzv4nXgkplSqBAaK81uLuPYqW...
+2025-09-23 22:40:33 - INFO - 开始分析解码后内容，长度: 1257
+2025-09-23 22:40:33 - INFO - 解码内容检测到节点数量: 4
+2025-09-23 22:40:33 - INFO - 节点类型分布: {'vmess': 0, 'vless': 4, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 0, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:40:33 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:40:33 - INFO - 尝试获取Clash格式: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e&flag=clash
+2025-09-23 22:40:34 - INFO - 获取到Clash格式内容，长度: 22078
+2025-09-23 22:40:34 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:40:34 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:40:34 - INFO - 内容比较结果: 不一致
+2025-09-23 22:40:34 - INFO - 原始内容长度: 1257, Clash内容长度: 22078
+2025-09-23 22:40:34 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:40:34 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:40:34 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:40:34 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:40:34 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:40:34 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:40:34 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:40:34 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:40:34 - WARNING - 所有转换服务都失败
+2025-09-23 22:40:34 - INFO - 使用base64解码结果，找到 4 个节点
+2025-09-23 22:40:34 - INFO - 节点分析结果: 4 个节点
+2025-09-23 22:40:34 - INFO - 发送钉钉通知: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e
+2025-09-23 22:40:36 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:40:36 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:40:36 - INFO - 发现可用订阅: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e
+2025-09-23 22:40:36 - INFO -   节点信息: 4个节点, 协议: vless(4), 分析方式: base64_decode
+2025-09-23 22:40:36 - INFO -   流量信息: 剩余 None GB, 总量 0.0 GB
+2025-09-23 22:40:36 - INFO -   状态码: 200
+2025-09-23 22:40:36 - INFO - 钉钉通知发送成功: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e
+2025-09-23 22:40:36 - INFO - 已记录通知URL: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e
+2025-09-23 22:40:36 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:40:36 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=526c92c456e524ef8b50db73b296e10b
+2025-09-23 22:40:36 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=526c92c456e524ef8b50db73b296e10b&flag=clash
+2025-09-23 22:40:36 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=526c92c456e524ef8b50db73b296e10b&flag=clash
+2025-09-23 22:40:36 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=526c92c456e524ef8b50db73b296e10b
+2025-09-23 22:40:36 - INFO - 开始双重分析订阅内容
+2025-09-23 22:40:36 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:40:36 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=526c92c456e524ef8b50db73b296e10b
+2025-09-23 22:40:36 - INFO - 原始内容长度: 2296
+2025-09-23 22:40:36 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vYTFhMjg4MTctY2VmMC00NDc0LWIwZTgtOGMxNDY3MTY4NDM2QG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:40:36 - INFO - 原始内容base64解码成功，长度: 1721
+2025-09-23 22:40:36 - INFO - 解码后内容预览: hysteria2://a1a28817-cef0-4474-b0e8-8c1467168436@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A94.59%20GB
+hysteria2://a1a28817-cef0-4474-b0e8-8c1467168436@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://a1a28817-cef0-4474-b0e8-8c1467168436@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9...
+2025-09-23 22:40:36 - INFO - 开始分析解码后内容，长度: 1721
+2025-09-23 22:40:36 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:40:36 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:40:36 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:40:36 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=526c92c456e524ef8b50db73b296e10b&flag=clash
+2025-09-23 22:40:36 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:40:36 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:40:36 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:40:36 - INFO - 内容比较结果: 不一致
+2025-09-23 22:40:36 - INFO - 原始内容长度: 1721, Clash内容长度: 20915
+2025-09-23 22:40:36 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:40:36 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:40:36 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:40:36 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:40:36 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:40:37 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:40:37 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:40:38 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:40:38 - WARNING - 所有转换服务都失败
+2025-09-23 22:40:38 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:40:38 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:40:38 - INFO - 总流量: 94.59 GB
+2025-09-23 22:40:38 - INFO - 剩余流量: 94.59 GB
+2025-09-23 22:40:38 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=526c92c456e524ef8b50db73b296e10b
+2025-09-23 22:40:39 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:40:39 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:40:39 - INFO - 正在检测订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=25b80aa359f4b52cf805d88494103971
+2025-09-23 22:40:39 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://dl.vfkum.website/api/v1/client/subscribe?token=25b80aa359f4b52cf805d88494103971&flag=clash
+2025-09-23 22:40:39 - INFO - URL已清理: https://dl.vfkum.website/api/v1/client/subscribe?token=25b80aa359f4b52cf805d88494103971&flag=clash
+2025-09-23 22:40:45 - INFO - 订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=25b80aa359f4b52cf805d88494103971
+2025-09-23 22:40:45 - INFO - 开始双重分析订阅内容
+2025-09-23 22:40:45 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:40:45 - INFO - 重新请求原始URL获取base64内容: https://dl.vfkum.website/api/v1/client/subscribe?token=25b80aa359f4b52cf805d88494103971
+2025-09-23 22:40:49 - INFO - 原始内容长度: 2660
+2025-09-23 22:40:49 - INFO - 原始内容预览: dm1lc3M6Ly9leUoySWpvaU1pSXNJbkJ6SWpvaVhIVTFNalk1WEhVMFpqVTVYSFUyWkRReFhIVTVNV05tWEhWbVpqRmhPVGs0TGpjMklFZENJaXdpWVdSa0lqb2lORFV1TVRRMExqRTNOQzQyTUNJc0luQnZjblFpT2lJeU16RTNPQ0lzSW1sa0lqb2lNMkppTldaaVpq...
+2025-09-23 22:40:49 - INFO - 原始内容base64解码成功，长度: 1994
+2025-09-23 22:40:49 - INFO - 解码后内容预览: vmess://eyJ2IjoiMiIsInBzIjoiXHU1MjY5XHU0ZjU5XHU2ZDQxXHU5MWNmXHVmZjFhOTk4Ljc2IEdCIiwiYWRkIjoiNDUuMTQ0LjE3NC42MCIsInBvcnQiOiIyMzE3OCIsImlkIjoiM2JiNWZiZjEtNjRjNC00ZGYyLTgxMTgtNzNmNDlhOTcwZWUwIiwiYWlkIjoiMCIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0IjoiIiwicGF0aCI6IiIsInRscyI6IiJ9
+vmess://eyJ2IjoiMiIsInBzIjoiXHU4ZGRkXHU3OWJiXHU0ZTBiXHU2YjIxXHU5MWNkXHU3ZjZlXHU1MjY5XHU0ZjU5XHVmZjFhNyBcdTU5MjkiLCJhZGQiOiI0NS4xNDQuMTc0LjYwIiwicG9ydCI6IjIzMTc4IiwiaWQiOiIzYmI1ZmJmMS02NGM0LTRkZjItODExOC03M2Y0OWE5NzBlZTAiLC...
+2025-09-23 22:40:49 - INFO - 开始分析解码后内容，长度: 1994
+2025-09-23 22:40:49 - INFO - 解码内容检测到节点数量: 7
+2025-09-23 22:40:49 - INFO - 节点类型分布: {'vmess': 7, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 0, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:40:49 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:40:49 - INFO - 尝试获取Clash格式: https://dl.vfkum.website/api/v1/client/subscribe?token=25b80aa359f4b52cf805d88494103971&flag=clash
+2025-09-23 22:40:57 - INFO - 获取到Clash格式内容，长度: 22684
+2025-09-23 22:40:57 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:40:57 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:40:57 - INFO - 内容比较结果: 不一致
+2025-09-23 22:40:57 - INFO - 原始内容长度: 1994, Clash内容长度: 22684
+2025-09-23 22:40:57 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:40:57 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:40:57 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:40:57 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:40:57 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:40:57 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:40:57 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:40:58 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:40:58 - WARNING - 所有转换服务都失败
+2025-09-23 22:40:58 - INFO - 使用base64解码结果，找到 7 个节点
+2025-09-23 22:40:58 - INFO - 节点分析结果: 7 个节点
+2025-09-23 22:40:58 - INFO - 发送钉钉通知: https://dl.vfkum.website/api/v1/client/subscribe?token=25b80aa359f4b52cf805d88494103971
+2025-09-23 22:40:59 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:40:59 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:40:59 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:40:59 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:40:59 - INFO - 正在检测订阅链接: https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a
+2025-09-23 22:40:59 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a&flag=clash
+2025-09-23 22:40:59 - INFO - URL已清理: https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a&flag=clash
+2025-09-23 22:41:00 - WARNING - 订阅链接内容无效: https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a
+2025-09-23 22:41:00 - INFO - 正在检测订阅链接: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc
+2025-09-23 22:41:00 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc&flag=clash
+2025-09-23 22:41:00 - INFO - URL已清理: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc&flag=clash
+2025-09-23 22:41:00 - INFO - 订阅链接可用: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc
+2025-09-23 22:41:00 - INFO - 开始双重分析订阅内容
+2025-09-23 22:41:00 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:41:00 - INFO - 重新请求原始URL获取base64内容: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc
+2025-09-23 22:41:00 - INFO - 原始内容长度: 1672
+2025-09-23 22:41:00 - INFO - 原始内容预览: dmxlc3M6Ly9hMWVjYjc0MC05ZjVhLTRlYzEtOWJjZi02ZjUzOTgyYTAzYWZAZC5lYW5zLnRvcDo3MDA4P21vZGU9bXVsdGkmc2VjdXJpdHk9cmVhbGl0eSZlbmNyeXB0aW9uPW5vbmUmdHlwZT10Y3AmZmxvdz14dGxzLXJwcngtdmlzaW9uJnBiaz1GUEg4MVgtRU13...
+2025-09-23 22:41:00 - INFO - 原始内容base64解码成功，长度: 1252
+2025-09-23 22:41:00 - INFO - 解码后内容预览: vless://a1ecb740-9f5a-4ec1-9bcf-6f53982a03af@d.eans.top:7008?mode=multi&security=reality&encryption=none&type=tcp&flow=xtls-rprx-vision&pbk=FPH81X-EMwzv4nXgkplSqBAaK81uLuPYqWaYyIWFsnQ&sid=efcbe824&sni=addons.mozilla.org&servername=addons.mozilla.org&spx=%2F&fp=edge#%E8%BF%87%E6%BB%A4%E6%8E%895%E6%9D%A1%E7%BA%BF%E8%B7%AF
+vless://a1ecb740-9f5a-4ec1-9bcf-6f53982a03af@d.eans.top:7008?mode=multi&security=reality&encryption=none&type=tcp&flow=xtls-rprx-vision&pbk=FPH81X-EMwzv4nXgkplSqBAaK81uLuPYqWaYy...
+2025-09-23 22:41:00 - INFO - 开始分析解码后内容，长度: 1252
+2025-09-23 22:41:00 - INFO - 解码内容检测到节点数量: 4
+2025-09-23 22:41:00 - INFO - 节点类型分布: {'vmess': 0, 'vless': 4, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 0, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:41:00 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:41:00 - INFO - 尝试获取Clash格式: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc&flag=clash
+2025-09-23 22:41:01 - INFO - 获取到Clash格式内容，长度: 22078
+2025-09-23 22:41:01 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:41:01 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:41:01 - INFO - 内容比较结果: 不一致
+2025-09-23 22:41:01 - INFO - 原始内容长度: 1252, Clash内容长度: 22078
+2025-09-23 22:41:01 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:41:01 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:41:01 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:41:01 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:41:01 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:41:01 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:41:01 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:41:01 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:41:01 - WARNING - 所有转换服务都失败
+2025-09-23 22:41:01 - INFO - 使用base64解码结果，找到 4 个节点
+2025-09-23 22:41:01 - INFO - 节点分析结果: 4 个节点
+2025-09-23 22:41:01 - INFO - 发送钉钉通知: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc
+2025-09-23 22:41:03 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:41:03 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:41:03 - INFO - 发现可用订阅: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc
+2025-09-23 22:41:03 - INFO -   节点信息: 4个节点, 协议: vless(4), 分析方式: base64_decode
+2025-09-23 22:41:03 - INFO -   流量信息: 剩余 None GB, 总量 0.0 GB
+2025-09-23 22:41:03 - INFO -   状态码: 200
+2025-09-23 22:41:03 - INFO - 钉钉通知发送成功: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc
+2025-09-23 22:41:03 - INFO - 已记录通知URL: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc
+2025-09-23 22:41:03 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:41:03 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204
+2025-09-23 22:41:03 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204&flag=clash
+2025-09-23 22:41:03 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204&flag=clash
+2025-09-23 22:41:03 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204
+2025-09-23 22:41:03 - INFO - 开始双重分析订阅内容
+2025-09-23 22:41:03 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:41:03 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204
+2025-09-23 22:41:03 - INFO - 原始内容长度: 2292
+2025-09-23 22:41:03 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMTE0N2RhYzUtYjRmMC00NGQ3LTkzY2UtZjBjODVmYTUyMGNlQG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:41:03 - INFO - 原始内容base64解码成功，长度: 1718
+2025-09-23 22:41:03 - INFO - 解码后内容预览: hysteria2://1147dac5-b4f0-44d7-93ce-f0c85fa520ce@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A97%20GB
+hysteria2://1147dac5-b4f0-44d7-93ce-f0c85fa520ce@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://1147dac5-b4f0-44d7-93ce-f0c85fa520ce@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9C%9...
+2025-09-23 22:41:03 - INFO - 开始分析解码后内容，长度: 1718
+2025-09-23 22:41:03 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:41:03 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:41:03 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:41:03 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204&flag=clash
+2025-09-23 22:41:03 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:41:03 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:41:03 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:41:03 - INFO - 内容比较结果: 不一致
+2025-09-23 22:41:03 - INFO - 原始内容长度: 1718, Clash内容长度: 20915
+2025-09-23 22:41:03 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:41:03 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:41:03 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:41:03 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:41:03 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:41:04 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:41:04 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:41:04 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:41:04 - WARNING - 所有转换服务都失败
+2025-09-23 22:41:04 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:41:04 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:41:04 - INFO - 总流量: 97.0 GB
+2025-09-23 22:41:04 - INFO - 剩余流量: 97.0 GB
+2025-09-23 22:41:04 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204
+2025-09-23 22:41:05 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:41:05 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:41:05 - INFO - 发现可用订阅: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204
+2025-09-23 22:41:05 - INFO -   节点信息: 11个节点, 协议: hysteria2(11), 分析方式: base64_decode
+2025-09-23 22:41:05 - INFO -   流量信息: 剩余 97.0 GB, 总量 97.0 GB
+2025-09-23 22:41:05 - INFO -   状态码: 200
+2025-09-23 22:41:05 - INFO - 钉钉通知发送成功: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204
+2025-09-23 22:41:05 - INFO - 已记录通知URL: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204
+2025-09-23 22:41:05 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:41:05 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe
+2025-09-23 22:41:05 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe&flag=clash
+2025-09-23 22:41:05 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe&flag=clash
+2025-09-23 22:41:05 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe
+2025-09-23 22:41:05 - INFO - 开始双重分析订阅内容
+2025-09-23 22:41:05 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:41:05 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe
+2025-09-23 22:41:06 - INFO - 原始内容长度: 2296
+2025-09-23 22:41:06 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMDMxYjVlMTEtMTdhMC00MjI4LTg2YjYtNjUwNmJhMzc0MzMyQG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:41:06 - INFO - 原始内容base64解码成功，长度: 1721
+2025-09-23 22:41:06 - INFO - 解码后内容预览: hysteria2://031b5e11-17a0-4228-86b6-6506ba374332@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A42.27%20GB
+hysteria2://031b5e11-17a0-4228-86b6-6506ba374332@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://031b5e11-17a0-4228-86b6-6506ba374332@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9...
+2025-09-23 22:41:06 - INFO - 开始分析解码后内容，长度: 1721
+2025-09-23 22:41:06 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:41:06 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:41:06 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:41:06 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe&flag=clash
+2025-09-23 22:41:06 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:41:06 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:41:06 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:41:06 - INFO - 内容比较结果: 不一致
+2025-09-23 22:41:06 - INFO - 原始内容长度: 1721, Clash内容长度: 20915
+2025-09-23 22:41:06 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:41:06 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:41:06 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:41:06 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:41:06 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:41:06 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:41:06 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:41:06 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:41:06 - WARNING - 所有转换服务都失败
+2025-09-23 22:41:06 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:41:06 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:41:06 - INFO - 总流量: 42.27 GB
+2025-09-23 22:41:06 - INFO - 剩余流量: 42.27 GB
+2025-09-23 22:41:06 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe
+2025-09-23 22:41:08 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:41:08 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:41:08 - INFO - 发现可用订阅: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe
+2025-09-23 22:41:08 - INFO -   节点信息: 11个节点, 协议: hysteria2(11), 分析方式: base64_decode
+2025-09-23 22:41:08 - INFO -   流量信息: 剩余 42.27 GB, 总量 42.27 GB
+2025-09-23 22:41:08 - INFO -   状态码: 200
+2025-09-23 22:41:08 - INFO - 钉钉通知发送成功: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe
+2025-09-23 22:41:08 - INFO - 已记录通知URL: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe
+2025-09-23 22:41:08 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:41:08 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e
+2025-09-23 22:41:08 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e&flag=clash
+2025-09-23 22:41:08 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e&flag=clash
+2025-09-23 22:41:08 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e
+2025-09-23 22:41:08 - INFO - 开始双重分析订阅内容
+2025-09-23 22:41:08 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:41:08 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e
+2025-09-23 22:41:08 - INFO - 原始内容长度: 2296
+2025-09-23 22:41:08 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMzVjZTI5ZGItZmE4Yy00MWUyLTllZDMtMGJlMzUyOWRkMDAzQG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:41:08 - INFO - 原始内容base64解码成功，长度: 1720
+2025-09-23 22:41:08 - INFO - 解码后内容预览: hysteria2://35ce29db-fa8c-41e2-9ed3-0be3529dd003@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A93.3%20GB
+hysteria2://35ce29db-fa8c-41e2-9ed3-0be3529dd003@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://35ce29db-fa8c-41e2-9ed3-0be3529dd003@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9C...
+2025-09-23 22:41:08 - INFO - 开始分析解码后内容，长度: 1720
+2025-09-23 22:41:08 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:41:08 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:41:08 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:41:08 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e&flag=clash
+2025-09-23 22:41:08 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:41:08 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:41:08 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:41:08 - INFO - 内容比较结果: 不一致
+2025-09-23 22:41:08 - INFO - 原始内容长度: 1720, Clash内容长度: 20915
+2025-09-23 22:41:08 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:41:08 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:41:08 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:41:09 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:41:09 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:41:09 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:41:09 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:41:09 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:41:09 - WARNING - 所有转换服务都失败
+2025-09-23 22:41:09 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:41:09 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:41:09 - INFO - 总流量: 93.3 GB
+2025-09-23 22:41:09 - INFO - 剩余流量: 93.3 GB
+2025-09-23 22:41:09 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e
+2025-09-23 22:41:10 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:41:10 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:41:10 - INFO - 发现可用订阅: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e
+2025-09-23 22:41:10 - INFO -   节点信息: 11个节点, 协议: hysteria2(11), 分析方式: base64_decode
+2025-09-23 22:41:10 - INFO -   流量信息: 剩余 93.3 GB, 总量 93.3 GB
+2025-09-23 22:41:10 - INFO -   状态码: 200
+2025-09-23 22:41:10 - INFO - 钉钉通知发送成功: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e
+2025-09-23 22:41:10 - INFO - 已记录通知URL: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e
+2025-09-23 22:41:10 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:41:10 - INFO - 正在检测订阅链接: https://subscribe.shenlong123.top/api/v1/client/subscribe?token=4823ebcbdfa2228e30be1c760872e9cf
+2025-09-23 22:41:10 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://subscribe.shenlong123.top/api/v1/client/subscribe?token=4823ebcbdfa2228e30be1c760872e9cf&flag=clash
+2025-09-23 22:41:10 - INFO - URL已清理: https://subscribe.shenlong123.top/api/v1/client/subscribe?token=4823ebcbdfa2228e30be1c760872e9cf&flag=clash
+2025-09-23 22:41:11 - WARNING - 订阅链接内容无效: https://subscribe.shenlong123.top/api/v1/client/subscribe?token=4823ebcbdfa2228e30be1c760872e9cf
+2025-09-23 22:41:11 - INFO - 正在检测订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387
+2025-09-23 22:41:11 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387&flag=clash
+2025-09-23 22:41:11 - INFO - URL已清理: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387&flag=clash
+2025-09-23 22:41:17 - INFO - 订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387
+2025-09-23 22:41:17 - INFO - 开始双重分析订阅内容
+2025-09-23 22:41:17 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:41:17 - INFO - 重新请求原始URL获取base64内容: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387
+2025-09-23 22:41:21 - INFO - 原始内容长度: 2660
+2025-09-23 22:41:21 - INFO - 原始内容预览: dm1lc3M6Ly9leUoySWpvaU1pSXNJbkJ6SWpvaVhIVTFNalk1WEhVMFpqVTVYSFUyWkRReFhIVTVNV05tWEhWbVpqRmhPVGd6TGpReUlFZENJaXdpWVdSa0lqb2lORFV1TVRRMExqRTNOQzQyTUNJc0luQnZjblFpT2lJeU16RTNPQ0lzSW1sa0lqb2lOVGt6TURBME16...
+2025-09-23 22:41:21 - INFO - 原始内容base64解码成功，长度: 1994
+2025-09-23 22:41:21 - INFO - 解码后内容预览: vmess://eyJ2IjoiMiIsInBzIjoiXHU1MjY5XHU0ZjU5XHU2ZDQxXHU5MWNmXHVmZjFhOTgzLjQyIEdCIiwiYWRkIjoiNDUuMTQ0LjE3NC42MCIsInBvcnQiOiIyMzE3OCIsImlkIjoiNTkzMDA0MzQtYjY5Yi00MTYzLWE4N2YtM2M4NTJiOGIwZWZlIiwiYWlkIjoiMCIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0IjoiIiwicGF0aCI6IiIsInRscyI6IiJ9
+vmess://eyJ2IjoiMiIsInBzIjoiXHU4ZGRkXHU3OWJiXHU0ZTBiXHU2YjIxXHU5MWNkXHU3ZjZlXHU1MjY5XHU0ZjU5XHVmZjFhNyBcdTU5MjkiLCJhZGQiOiI0NS4xNDQuMTc0LjYwIiwicG9ydCI6IjIzMTc4IiwiaWQiOiI1OTMwMDQzNC1iNjliLTQxNjMtYTg3Zi0zYzg1MmI4YjBlZmUiLC...
+2025-09-23 22:41:21 - INFO - 开始分析解码后内容，长度: 1994
+2025-09-23 22:41:21 - INFO - 解码内容检测到节点数量: 7
+2025-09-23 22:41:21 - INFO - 节点类型分布: {'vmess': 7, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 0, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:41:21 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:41:21 - INFO - 尝试获取Clash格式: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387&flag=clash
+2025-09-23 22:41:27 - INFO - 获取到Clash格式内容，长度: 22684
+2025-09-23 22:41:27 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:41:27 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:41:27 - INFO - 内容比较结果: 不一致
+2025-09-23 22:41:27 - INFO - 原始内容长度: 1994, Clash内容长度: 22684
+2025-09-23 22:41:27 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:41:27 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:41:27 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:41:27 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:41:27 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:41:27 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:41:27 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:41:28 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:41:28 - WARNING - 所有转换服务都失败
+2025-09-23 22:41:28 - INFO - 使用base64解码结果，找到 7 个节点
+2025-09-23 22:41:28 - INFO - 节点分析结果: 7 个节点
+2025-09-23 22:41:28 - INFO - 发送钉钉通知: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387
+2025-09-23 22:41:30 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:41:30 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:41:30 - INFO - 发现可用订阅: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387
+2025-09-23 22:41:30 - INFO -   节点信息: 7个节点, 协议: vmess(7), 分析方式: base64_decode
+2025-09-23 22:41:30 - INFO -   流量信息: 剩余 None GB, 总量 0.0 GB
+2025-09-23 22:41:30 - INFO -   状态码: 200
+2025-09-23 22:41:30 - INFO - 钉钉通知发送成功: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387
+2025-09-23 22:41:30 - INFO - 已记录通知URL: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387
+2025-09-23 22:41:30 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:41:30 - INFO - 正在检测订阅链接: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5
+2025-09-23 22:41:30 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5&flag=clash
+2025-09-23 22:41:30 - INFO - URL已清理: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5&flag=clash
+2025-09-23 22:41:30 - WARNING - 订阅链接HTTP错误: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5, 状态码: 403
+2025-09-23 22:41:30 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28
+2025-09-23 22:41:30 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28&flag=clash
+2025-09-23 22:41:30 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28&flag=clash
+2025-09-23 22:41:30 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28
+2025-09-23 22:41:30 - INFO - 开始双重分析订阅内容
+2025-09-23 22:41:30 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:41:30 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28
+2025-09-23 22:41:30 - INFO - 原始内容长度: 2296
+2025-09-23 22:41:30 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMzE1MTQ1YzUtYTAwNC00YjkzLTljM2ItYmUwNjcwYzk0MzI0QG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:41:30 - INFO - 原始内容base64解码成功，长度: 1721
+2025-09-23 22:41:30 - INFO - 解码后内容预览: hysteria2://315145c5-a004-4b93-9c3b-be0670c94324@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A97.63%20GB
+hysteria2://315145c5-a004-4b93-9c3b-be0670c94324@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://315145c5-a004-4b93-9c3b-be0670c94324@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9...
+2025-09-23 22:41:30 - INFO - 开始分析解码后内容，长度: 1721
+2025-09-23 22:41:30 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:41:30 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:41:30 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:41:30 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28&flag=clash
+2025-09-23 22:41:30 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:41:30 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:41:30 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:41:30 - INFO - 内容比较结果: 不一致
+2025-09-23 22:41:30 - INFO - 原始内容长度: 1721, Clash内容长度: 20915
+2025-09-23 22:41:30 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:41:30 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:41:30 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:41:34 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:41:34 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:41:34 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:41:34 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:41:35 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:41:35 - WARNING - 所有转换服务都失败
+2025-09-23 22:41:35 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:41:35 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:41:35 - INFO - 总流量: 97.63 GB
+2025-09-23 22:41:35 - INFO - 剩余流量: 97.63 GB
+2025-09-23 22:41:35 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28
+2025-09-23 22:41:36 - INFO - 钉钉通知发送成功（Link卡片 + @all提醒 + 分析结果）
+2025-09-23 22:41:36 - INFO - Link卡片支持复制，@all提醒确认收到
+2025-09-23 22:41:36 - INFO - 发现可用订阅: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28
+2025-09-23 22:41:36 - INFO -   节点信息: 11个节点, 协议: hysteria2(11), 分析方式: base64_decode
+2025-09-23 22:41:36 - INFO -   流量信息: 剩余 97.63 GB, 总量 97.63 GB
+2025-09-23 22:41:36 - INFO -   状态码: 200
+2025-09-23 22:41:36 - INFO - 钉钉通知发送成功: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28
+2025-09-23 22:41:36 - INFO - 已记录通知URL: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28
+2025-09-23 22:41:36 - INFO - ✅ 钉钉通知发送成功
+2025-09-23 22:41:36 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=0b4560aa32c8cdfc190cf69f2dc381dc
+2025-09-23 22:41:36 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=0b4560aa32c8cdfc190cf69f2dc381dc&flag=clash
+2025-09-23 22:41:36 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=0b4560aa32c8cdfc190cf69f2dc381dc&flag=clash
+2025-09-23 22:41:36 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=0b4560aa32c8cdfc190cf69f2dc381dc
+2025-09-23 22:41:36 - INFO - 开始双重分析订阅内容
+2025-09-23 22:41:36 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:41:36 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=0b4560aa32c8cdfc190cf69f2dc381dc
+2025-09-23 22:41:37 - INFO - 原始内容长度: 2296
+2025-09-23 22:41:37 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vNmE2NzZlOTQtMDU4OC00YjE2LWJlN2ItMGJlNjM5NGRjZTgwQG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:41:37 - INFO - 原始内容base64解码成功，长度: 1721
+2025-09-23 22:41:37 - INFO - 解码后内容预览: hysteria2://6a676e94-0588-4b16-be7b-0be6394dce80@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A95.47%20GB
+hysteria2://6a676e94-0588-4b16-be7b-0be6394dce80@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://6a676e94-0588-4b16-be7b-0be6394dce80@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9...
+2025-09-23 22:41:37 - INFO - 开始分析解码后内容，长度: 1721
+2025-09-23 22:41:37 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:41:37 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:41:37 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:41:37 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=0b4560aa32c8cdfc190cf69f2dc381dc&flag=clash
+2025-09-23 22:41:37 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:41:37 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:41:37 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:41:37 - INFO - 内容比较结果: 不一致
+2025-09-23 22:41:37 - INFO - 原始内容长度: 1721, Clash内容长度: 20915
+2025-09-23 22:41:37 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:41:37 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:41:37 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:41:37 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:41:37 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:41:37 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:41:37 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:41:37 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:41:37 - WARNING - 所有转换服务都失败
+2025-09-23 22:41:37 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:41:37 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:41:37 - INFO - 总流量: 95.47 GB
+2025-09-23 22:41:37 - INFO - 剩余流量: 95.47 GB
+2025-09-23 22:41:37 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=0b4560aa32c8cdfc190cf69f2dc381dc
+2025-09-23 22:41:39 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:41:39 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:41:39 - INFO - 正在检测订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105
+2025-09-23 22:41:39 - INFO - 检测到Clash订阅链接，已自动添加&flag=clash: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105&flag=clash
+2025-09-23 22:41:39 - INFO - URL已清理: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105&flag=clash
+2025-09-23 22:41:39 - INFO - 订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105
+2025-09-23 22:41:39 - INFO - 开始双重分析订阅内容
+2025-09-23 22:41:39 - INFO - 步骤1：分析原始base64内容
+2025-09-23 22:41:39 - INFO - 重新请求原始URL获取base64内容: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105
+2025-09-23 22:41:39 - INFO - 原始内容长度: 2296
+2025-09-23 22:41:39 - INFO - 原始内容预览: aHlzdGVyaWEyOi8vMTU1MmQ4N2ItYTgzMC00ZmI2LWI3OWYtYTU3OWFmOTVhODE0QG1mMS55bGNjbG91ZC50b3A6MTYwOTAvP2luc2VjdXJlPTEmc25pPW1mMS55bGNjbG91ZC50b3AjJUU1JTg5JUE5JUU0JUJEJTk5JUU2JUI1JTgxJUU5JTg3JThGJUVGJUJDJTlB...
+2025-09-23 22:41:39 - INFO - 原始内容base64解码成功，长度: 1721
+2025-09-23 22:41:39 - INFO - 解码后内容预览: hysteria2://1552d87b-a830-4fb6-b79f-a579af95a814@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%89%A9%E4%BD%99%E6%B5%81%E9%87%8F%EF%BC%9A91.39%20GB
+hysteria2://1552d87b-a830-4fb6-b79f-a579af95a814@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E8%B7%9D%E7%A6%BB%E4%B8%8B%E6%AC%A1%E9%87%8D%E7%BD%AE%E5%89%A9%E4%BD%99%EF%BC%9A7%20%E5%A4%A9
+hysteria2://1552d87b-a830-4fb6-b79f-a579af95a814@mf1.ylccloud.top:16090/?insecure=1&sni=mf1.ylccloud.top#%E5%A5%97%E9%A4%90%E5%88%B0%E6%9...
+2025-09-23 22:41:39 - INFO - 开始分析解码后内容，长度: 1721
+2025-09-23 22:41:39 - INFO - 解码内容检测到节点数量: 11
+2025-09-23 22:41:39 - INFO - 节点类型分布: {'vmess': 0, 'vless': 0, 'trojan': 0, 'ss': 0, 'ssr': 0, 'hysteria': 0, 'hysteria2': 11, 'http': 0, 'https': 0, 'socks5': 0, 'other': 0}
+2025-09-23 22:41:39 - INFO - 步骤2：获取clash格式内容
+2025-09-23 22:41:39 - INFO - 尝试获取Clash格式: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105&flag=clash
+2025-09-23 22:41:40 - INFO - 获取到Clash格式内容，长度: 20915
+2025-09-23 22:41:40 - INFO - 开始解析Clash YAML格式内容
+2025-09-23 22:41:40 - INFO - Clash YAML解析完成，检测到节点数量: 0
+2025-09-23 22:41:40 - INFO - 内容比较结果: 不一致
+2025-09-23 22:41:40 - INFO - 原始内容长度: 1721, Clash内容长度: 20915
+2025-09-23 22:41:40 - INFO - 内容不一致，使用订阅地址转换服务
+2025-09-23 22:41:40 - INFO - 尝试使用订阅转换服务
+2025-09-23 22:41:40 - INFO - 尝试转换服务: https://sub.xeton.dev/sub
+2025-09-23 22:41:40 - WARNING - 转换服务 https://sub.xeton.dev/sub 请求失败，状态码: 400
+2025-09-23 22:41:40 - INFO - 尝试转换服务: https://api.dler.io/sub
+2025-09-23 22:41:40 - WARNING - 转换服务 https://api.dler.io/sub 请求失败，状态码: 400
+2025-09-23 22:41:40 - INFO - 尝试转换服务: https://subweb.s3.fr-par.scw.cloud/sub
+2025-09-23 22:41:40 - WARNING - 转换服务 https://subweb.s3.fr-par.scw.cloud/sub 请求失败，状态码: 403
+2025-09-23 22:41:40 - WARNING - 所有转换服务都失败
+2025-09-23 22:41:40 - INFO - 使用base64解码结果，找到 11 个节点
+2025-09-23 22:41:40 - INFO - 节点分析结果: 11 个节点
+2025-09-23 22:41:40 - INFO - 总流量: 91.39 GB
+2025-09-23 22:41:40 - INFO - 剩余流量: 91.39 GB
+2025-09-23 22:41:40 - INFO - 发送钉钉通知: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105
+2025-09-23 22:41:42 - ERROR - Link卡片消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:41:42 - ERROR - @all提醒消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:41:42 - ERROR - 分析结果消息发送失败: 200 - {'errcode': 660026, 'errmsg': 'sending too many messages per minute'}
+2025-09-23 22:41:42 - WARNING - ❌ 钉钉通知发送失败
+2025-09-23 22:42:43 - WARNING - 代理测试异常: HTTPConnectionPool(host='192.168.100.110', port=7893): Read timed out. (read timeout=5)
+2025-09-23 22:42:43 - WARNING - 代理连接失败，切换到直连模式
+2025-09-23 22:42:43 - INFO - 加载了 114 个已通知URL记录
+2025-09-23 22:42:43 - INFO - ✅ SerpAPI使用量阈值通知发送成功 (使用率: 58.3%, 阈值: 50%)

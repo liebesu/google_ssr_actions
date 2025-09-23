@@ -1,0 +1,88 @@
+name: search-subscriptions
+on:
+  workflow_dispatch:
+    inputs:
+      regions:
+        description: 'Search regions (comma-separated)'
+        required: false
+        default: 'sa,tr,il,in'
+      max_searches:
+        description: 'Maximum searches per region'
+        required: false
+        default: '5'
+  schedule:
+    - cron: "0 2 * * *"  # 每天凌晨2点运行一次搜索
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: search-subscriptions
+  cancel-in-progress: true
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: requirements_scraper.txt
+
+      - name: Install deps
+        run: |
+          pip install -r requirements_scraper.txt
+
+      - name: Prepare secrets
+        run: |
+          if [ -n "${{ secrets.SCRAPER_KEYS }}" ]; then
+            printf "%s\n" "${{ secrets.SCRAPER_KEYS }}" > keys
+          fi
+          if [ -n "${{ secrets.SCRAPER_CONFIG_JSON }}" ]; then
+            printf "%s\n" "${{ secrets.SCRAPER_CONFIG_JSON }}" > scraper_config.json
+          fi
+
+      - name: Run subscription search
+        run: |
+          # 设置搜索参数
+          export SEARCH_REGIONS="${{ github.event.inputs.regions || 'sa,tr,il,in' }}"
+          export MAX_SEARCHES="${{ github.event.inputs.max_searches || '5' }}"
+          
+          # 运行搜索（不跳过搜索）
+          python aggregator_cli.py --output-dir dist --max 1200 --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery --emit-health --emit-index
+          
+          # 提交搜索结果
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/*.json api_urls*.json discovered_urls.json visited_urls.json || true
+          git diff --cached --quiet || git commit -m "chore(search): update discovered URLs [skip ci]"
+          git push
+
+      - name: Notify search completion
+        if: always()
+        env:
+          DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
+          DINGTALK_TOKEN: ${{ secrets.DINGTALK_TOKEN }}
+        run: |
+          if [ -z "${DINGTALK_WEBHOOK}" ] && [ -n "${DINGTALK_TOKEN}" ]; then
+            DINGTALK_WEBHOOK="https://oapi.dingtalk.com/robot/send?access_token=${DINGTALK_TOKEN}"
+          fi
+          if [ -z "${DINGTALK_WEBHOOK}" ]; then
+            echo "DingTalk webhook not configured, skip"; exit 0; fi
+          
+          if [ "${{ job.status }}" = "success" ]; then
+            MSG="【订阅搜索】✅ 搜索任务完成%0A时间: $(date '+%Y-%m-%d %H:%M:%S')%0A状态: 成功%0A页面: https://liebesu.github.io/google_ssr_actions/"
+          else
+            MSG="【订阅搜索】❌ 搜索任务失败%0A时间: $(date '+%Y-%m-%d %H:%M:%S')%0A状态: 失败%0A请检查 Actions 日志"
+          fi
+          
+          curl -sS -X POST "${DINGTALK_WEBHOOK}" \
+            -H 'Content-Type: application/json' \
+            -d "{\"msgtype\":\"text\",\"text\":{\"content\":\"${MSG}\"}}" | cat

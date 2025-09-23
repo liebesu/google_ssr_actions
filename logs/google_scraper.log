@@ -232,3 +232,133 @@
 2025-09-23 18:20:22 - INFO - 检查SerpAPI使用量是否达到通知阈值...
 2025-09-23 18:20:30 - INFO - 检查SerpAPI使用量是否达到通知阈值...
 2025-09-23 18:20:33 - INFO - ✅ SerpAPI使用量阈值检查完成
+2025-09-23 22:39:09 - INFO - 订阅检测器初始化成功
+2025-09-23 22:39:09 - INFO - ==================================================
+2025-09-23 22:39:09 - INFO - 开始执行搜索任务
+2025-09-23 22:39:09 - INFO - ==================================================
+2025-09-23 22:39:09 - INFO - 开始搜索API URL
+2025-09-23 22:39:09 - INFO - 正在检查密钥额度...
+2025-09-23 22:39:16 - INFO - 使用搜索查询: "api/v1/client/subscribe?token="
+2025-09-23 22:39:16 - INFO - 批量搜索地区数量: 4
+2025-09-23 22:39:16 - INFO - [1/4] 搜索地区: 沙特阿拉伯 (gl=sa, hl=ar, lr=lang_ar|lang_en|lang_zh-CN)
+2025-09-23 22:39:16 - INFO - SerpAPI 搜索参数: {'api_key': 'eafd4bb7fcc093dbf132f573d836604406f6d428eab708ec5681a45b6ef3bdaa', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'sa', 'hl': 'ar', 'num': 100, 'lr': 'lang_ar|lang_en|lang_zh-CN', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-23 22:39:19 - INFO - SerpAPI 有机结果 6 条
+2025-09-23 22:39:19 - INFO - [沙特阿拉伯] 直接命中完整订阅URL: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:39:19 - INFO - [沙特阿拉伯] 直接命中完整订阅URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:39:19 - INFO - 🔍 [沙特阿拉伯] 验证新发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:39:23 - INFO - ✅ [沙特阿拉伯] 直接命中的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:39:23 - INFO - 🔍 [沙特阿拉伯] 验证新发现的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:39:33 - INFO - ✅ [沙特阿拉伯] 直接命中的订阅链接可用: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:39:35 - INFO - ✅ 从 https://cn.tgstat.com/channel/@juzibaipiao 提取到 1 个订阅链接
+2025-09-23 22:39:35 - INFO -    发现: https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902
+2025-09-23 22:39:35 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902
+2025-09-23 22:39:35 - INFO - ❌ [沙特阿拉伯] 发现的订阅链接不可用: https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902
+2025-09-23 22:39:35 - INFO - 跳过已知难以访问的域名: https://x.com/v2ray_n/status/1970341616268562744
+2025-09-23 22:39:37 - INFO - 跳过已知难以访问的域名: https://x.com/fqzw8/status/1970341713177919903
+2025-09-23 22:39:38 - INFO - ✅ 从 https://en.tgchannels.org/channel/freevpnjd?size=30&lang=all&first=7536&start=7536 提取到 25 个订阅链接
+2025-09-23 22:39:38 - INFO -    发现: http://shiyuanyinian.xyz/api/v1/client/subscribe?token=f64ab6f1d58f1120064b61da41e84f47
+2025-09-23 22:39:38 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=9b54032c8dc6b0fc076afdfee4f540b5
+2025-09-23 22:39:38 - INFO -    发现: https://api.nnbhhxk.com/api/v1/client/subscribe?token=c48e7a6135ee2c8c56bf68fab56315c0
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f
+2025-09-23 22:39:38 - INFO -    发现: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f
+2025-09-23 22:39:38 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47
+2025-09-23 22:39:38 - INFO -    发现: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=526c92c456e524ef8b50db73b296e10b
+2025-09-23 22:39:38 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=25b80aa359f4b52cf805d88494103971
+2025-09-23 22:39:38 - INFO -    发现: https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a
+2025-09-23 22:39:38 - INFO -    发现: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204
+2025-09-23 22:39:38 - INFO -    发现: https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e
+2025-09-23 22:39:38 - INFO -    发现: https://subscribe.shenlong123.top/api/v1/client/subscribe?token=4823ebcbdfa2228e30be1c760872e9cf
+2025-09-23 22:39:38 - INFO -    发现: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387
+2025-09-23 22:39:38 - INFO -    发现: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=0b4560aa32c8cdfc190cf69f2dc381dc
+2025-09-23 22:39:38 - INFO -    发现: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105
+2025-09-23 22:39:38 - INFO - ⏭️ [沙特阿拉伯] 跳过已验证的页面订阅链接: http://shiyuanyinian.xyz/api/v1/client/subscribe?token=f64ab6f1d58f1120064b61da41e84f47
+2025-09-23 22:39:38 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=9b54032c8dc6b0fc076afdfee4f540b5
+2025-09-23 22:39:48 - INFO - ❌ [沙特阿拉伯] 发现的订阅链接不可用: https://dl.vfkum.website/api/v1/client/subscribe?token=9b54032c8dc6b0fc076afdfee4f540b5
+2025-09-23 22:39:48 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://api.nnbhhxk.com/api/v1/client/subscribe?token=c48e7a6135ee2c8c56bf68fab56315c0
+2025-09-23 22:39:49 - INFO - ❌ [沙特阿拉伯] 发现的订阅链接不可用: https://api.nnbhhxk.com/api/v1/client/subscribe?token=c48e7a6135ee2c8c56bf68fab56315c0
+2025-09-23 22:39:49 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e
+2025-09-23 22:39:56 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=9b40758851f625f3fd04e15c367f010e
+2025-09-23 22:39:56 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f
+2025-09-23 22:40:01 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=1386437bdd5c7915d80142ed1e2fd01f
+2025-09-23 22:40:01 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5
+2025-09-23 22:40:04 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=b314671029e0a513c9db22c1b66ba4b5
+2025-09-23 22:40:04 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f
+2025-09-23 22:40:06 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=d62d49d40e7735c4252856655c2f4c8f
+2025-09-23 22:40:06 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9
+2025-09-23 22:40:30 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=2e10e08a326b058b75647e586f3940a9
+2025-09-23 22:40:30 - INFO - ⏭️ [沙特阿拉伯] 跳过已验证的页面订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d
+2025-09-23 22:40:30 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47
+2025-09-23 22:40:32 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=1ee41d0f66202d32f466124feed3ad47
+2025-09-23 22:40:32 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e
+2025-09-23 22:40:36 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: http://x2b.eans.top/api/v1/client/subscribe?token=81f7fb76a46b5dfed793259d0c984e9e
+2025-09-23 22:40:36 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=526c92c456e524ef8b50db73b296e10b
+2025-09-23 22:40:39 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=526c92c456e524ef8b50db73b296e10b
+2025-09-23 22:40:39 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=25b80aa359f4b52cf805d88494103971
+2025-09-23 22:40:59 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=25b80aa359f4b52cf805d88494103971
+2025-09-23 22:40:59 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a
+2025-09-23 22:41:00 - INFO - ❌ [沙特阿拉伯] 发现的订阅链接不可用: https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a
+2025-09-23 22:41:00 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc
+2025-09-23 22:41:03 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc
+2025-09-23 22:41:03 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204
+2025-09-23 22:41:05 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=7b3a06e07c8bc8d31bc6e235b5e3f204
+2025-09-23 22:41:05 - INFO - ⏭️ [沙特阿拉伯] 跳过已验证的页面订阅链接: https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902
+2025-09-23 22:41:05 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe
+2025-09-23 22:41:08 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=354de41f9593085049706f34bc67befe
+2025-09-23 22:41:08 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e
+2025-09-23 22:41:10 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=e1ec047ab3b9bf778bda70a6fee9ba7e
+2025-09-23 22:41:10 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://subscribe.shenlong123.top/api/v1/client/subscribe?token=4823ebcbdfa2228e30be1c760872e9cf
+2025-09-23 22:41:11 - INFO - ❌ [沙特阿拉伯] 发现的订阅链接不可用: https://subscribe.shenlong123.top/api/v1/client/subscribe?token=4823ebcbdfa2228e30be1c760872e9cf
+2025-09-23 22:41:11 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387
+2025-09-23 22:41:30 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://dl.vfkum.website/api/v1/client/subscribe?token=37ed5180f35fb7f9025bf125730a3387
+2025-09-23 22:41:30 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5
+2025-09-23 22:41:30 - INFO - ❌ [沙特阿拉伯] 发现的订阅链接不可用: https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5
+2025-09-23 22:41:30 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28
+2025-09-23 22:41:36 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28
+2025-09-23 22:41:36 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=0b4560aa32c8cdfc190cf69f2dc381dc
+2025-09-23 22:41:39 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=0b4560aa32c8cdfc190cf69f2dc381dc
+2025-09-23 22:41:39 - INFO - 🔍 [沙特阿拉伯] 验证页面发现的订阅链接: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105
+2025-09-23 22:41:42 - INFO - ✅ [沙特阿拉伯] 发现的订阅链接可用: https://ylccloud.top/api/v1/client/subscribe?token=d26b0314988670f1743739e979c44105
+2025-09-23 22:41:42 - INFO - [沙特阿拉伯] 地区搜索完成，发现 2 个URL
+2025-09-23 22:41:42 - INFO - 地区间延迟 15 秒...
+2025-09-23 22:41:57 - INFO - [2/4] 搜索地区: 土耳其 (gl=tr, hl=tr, lr=lang_tr|lang_en|lang_zh-CN)
+2025-09-23 22:41:57 - INFO - SerpAPI 搜索参数: {'api_key': 'eafd4bb7fcc093dbf132f573d836604406f6d428eab708ec5681a45b6ef3bdaa', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'tr', 'hl': 'tr', 'num': 100, 'lr': 'lang_tr|lang_en|lang_zh-CN', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-23 22:41:58 - INFO - SerpAPI 有机结果 5 条
+2025-09-23 22:41:58 - INFO - [土耳其] 直接命中完整订阅URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:41:58 - INFO - ⏭️ [土耳其] 跳过已验证的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:41:58 - INFO - 跳过已知难以访问的域名: https://x.com/baipiaogbot/status/1970341203582578893
+2025-09-23 22:41:58 - INFO - [土耳其] 地区搜索完成，发现 1 个URL
+2025-09-23 22:41:58 - INFO - 地区间延迟 15 秒...
+2025-09-23 22:42:13 - INFO - [3/4] 搜索地区: 以色列 (gl=il, hl=he, lr=lang_he|lang_en|lang_zh-CN)
+2025-09-23 22:42:13 - INFO - SerpAPI 搜索参数: {'api_key': 'eafd4bb7fcc093dbf132f573d836604406f6d428eab708ec5681a45b6ef3bdaa', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'il', 'hl': 'he', 'num': 100, 'lr': 'lang_he|lang_en|lang_zh-CN', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-23 22:42:14 - INFO - SerpAPI 有机结果 6 条
+2025-09-23 22:42:14 - INFO - [以色列] 直接命中完整订阅URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:42:14 - INFO - ⏭️ [以色列] 跳过已验证的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:42:16 - INFO - ✅ 从 https://cn.tgstat.com/uz/channel/@juzibaipiao 提取到 1 个订阅链接
+2025-09-23 22:42:16 - INFO -    发现: https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902
+2025-09-23 22:42:16 - INFO - ⏭️ [以色列] 跳过已验证的页面订阅链接: https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902
+2025-09-23 22:42:16 - INFO - [以色列] 地区搜索完成，发现 1 个URL
+2025-09-23 22:42:16 - INFO - 地区间延迟 15 秒...
+2025-09-23 22:42:31 - INFO - [4/4] 搜索地区: 印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)
+2025-09-23 22:42:31 - INFO - SerpAPI 搜索参数: {'api_key': 'eafd4bb7fcc093dbf132f573d836604406f6d428eab708ec5681a45b6ef3bdaa', 'engine': 'google', 'q': '"api/v1/client/subscribe?token="', 'google_domain': 'google.com', 'gl': 'in', 'hl': 'hi', 'num': 100, 'lr': 'lang_hi|lang_en|lang_zh-CN', 'tbs': 'qdr:d', 'filter': '0'}
+2025-09-23 22:42:32 - INFO - SerpAPI 有机结果 5 条
+2025-09-23 22:42:32 - INFO - [印度] 直接命中完整订阅URL: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:42:32 - INFO - ⏭️ [印度] 跳过已验证的订阅链接: https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2
+2025-09-23 22:42:32 - INFO - [印度] 地区搜索完成，发现 1 个URL
+2025-09-23 22:42:32 - INFO - 批量搜索完成，共搜索 4 个地区，找到 32 个API URL
+2025-09-23 22:42:32 - INFO - 🔄 最终去重: 32 -> 26 (移除 6 个重复URL)
+2025-09-23 22:42:32 - INFO - 结果已保存到 api_urls_results.json 和 api_urls.txt
+2025-09-23 22:42:32 - INFO - 搜索模式: batch_regions, 地区: 批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度
+2025-09-23 22:42:32 - INFO - 任务完成，找到 32 个API URL
+2025-09-23 22:42:32 - INFO - 检查SerpAPI使用量是否达到通知阈值...
+2025-09-23 22:42:38 - INFO - 检查SerpAPI使用量是否达到通知阈值...
+2025-09-23 22:42:43 - INFO - ✅ SerpAPI使用量阈值检查完成
