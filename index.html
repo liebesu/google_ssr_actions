@@ -1,148 +1,375 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>订阅聚合器</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-            color: #fff; 
-            margin: 0; 
-            padding: 20px; 
-            min-height: 100vh;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Google SSR Actions - 订阅聚合</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    const AUTH_HASH = "1dd2557b6334b098dc895f52fe46add7880094aec59a2eece3e4c5da2fc79f86";
+    const AUTH_USER = "liebesu";
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+    function showAuth() {
+      const mask = document.getElementById('auth-mask');
+      const input = document.getElementById('auth-input');
+      const err = document.getElementById('auth-err');
+      const btn = document.getElementById('auth-btn');
+      mask.style.display = 'flex';
+      input.focus();
+      async function submit() {
+        const pwd = input.value || '';
+        const h = await sha256(pwd);
+        if (h.toLowerCase() === AUTH_HASH.toLowerCase()) {
+          mask.style.display = 'none';
+          document.documentElement.style.display = '';
+        } else {
+          err.textContent = '密码错误，请重试';
         }
-        .container { 
-            max-width: 1000px; 
-            margin: 0 auto; 
-            background: rgba(26, 26, 26, 0.8); 
-            padding: 30px; 
-            border-radius: 15px; 
-            border: 1px solid #333;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        h1 { 
-            color: #4CAF50; 
-            text-align: center; 
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
-        }
-        .status-card {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border-left: 4px solid #4CAF50;
-        }
-        .success { color: #4CAF50; }
-        .warning { color: #ff9800; }
-        .error { color: #f44336; }
-        .info { color: #2196F3; }
-        .links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .link-card {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid #333;
-            transition: all 0.3s ease;
-        }
-        .link-card:hover {
-            background: rgba(76, 175, 80, 0.1);
-            border-color: #4CAF50;
-        }
-        .link-card a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            color: #888;
-            font-size: 0.9em;
-        }
-    </style>
+      }
+      btn.addEventListener('click', submit);
+      input.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ submit(); }});
+    }
+    function gate() {
+      if (!AUTH_HASH) { document.documentElement.style.display = ''; return; }
+      try{
+        const tk = localStorage.getItem('gauth');
+        const gu = (localStorage.getItem('guser') || '').trim();
+        const userRequired = (AUTH_USER || '').trim().length > 0;
+        const passOk = !!tk && (tk.toLowerCase() === AUTH_HASH.toLowerCase());
+        const userOk = userRequired ? (gu === (AUTH_USER||'').trim()) : true;
+        if (passOk && userOk) { document.documentElement.style.display = ''; return; }
+      }catch(e){}
+      location.replace('login.html');
+    }
+    document.documentElement.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', gate);
+    // 根据是否有配额数据隐藏卡片
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const qleft = '__QLEFT__'; const qcap = '__QCAP__'; const kok='__KOK__'; const kt='__KTOTAL__';
+      const hideQuota = (!qleft || qleft==='0') && (!qcap || qcap==='0') && (!kok || kok==='0') && (!kt || kt==='0');
+      if(hideQuota){
+        document.querySelectorAll('.stat.quota').forEach(el=>el.style.display='none');
+      }
+    });
+  </script>
 </head>
 <body>
-    <div class="container">
-        <h1>🚀 订阅聚合器</h1>
-        
-        <div class="status-card">
-            <h2>系统状态</h2>
-            <p class="success">✅ GitHub Pages 部署正常</p>
-            <p class="success">✅ 页面访问正常</p>
-            <p class="info">📅 构建时间: <span id="build-time"></span></p>
-            <p class="info">🔄 自动更新: 每3小时</p>
-        </div>
-        
-        <div class="status-card">
-            <h2>功能特性</h2>
-            <ul>
-                <li>🔍 自动采集订阅链接</li>
-                <li>✅ 实时验证可用性</li>
-                <li>🔄 智能去重和过滤</li>
-                <li>🌐 多协议支持 (SS/VMess/VLESS/Trojan/Hysteria2)</li>
-                <li>📊 流量监控和统计</li>
-                <li>🔑 SerpAPI 密钥状态监控</li>
-            </ul>
-        </div>
-        
-        <div class="links">
-            <div class="link-card">
-                <a href="sub/urls.txt">📥 下载订阅文件</a>
-                <p>所有可用订阅链接</p>
-            </div>
-            <div class="link-card">
-                <a href="health.json">📊 健康状态</a>
-                <p>系统运行状态信息</p>
-            </div>
-            <div class="link-card">
-                <a href="sub/google_urls.txt">🔍 Google 发现</a>
-                <p>通过 Google 搜索发现的链接</p>
-            </div>
-            <div class="link-card">
-                <a href="sub/github_urls.txt">🐙 GitHub 发现</a>
-                <p>通过 GitHub 发现的链接</p>
-            </div>
-        </div>
-        
-        <div class="status-card">
-            <h2>使用说明</h2>
-            <p>1. 点击上方链接下载订阅文件</p>
-            <p>2. 将订阅链接导入到你的代理客户端</p>
-            <p>3. 系统会自动更新和验证订阅链接</p>
-            <p>4. 查看健康状态了解系统运行情况</p>
-        </div>
-        
-        <div class="footer">
-            <p>🔧 技术栈: Python + GitHub Actions + GitHub Pages</p>
-            <p>📡 数据源: Google 搜索 + GitHub 仓库</p>
-            <p>⚡ 更新频率: 每3小时自动构建</p>
-        </div>
+  <div class="wrap">
+    <div id="auth-mask" class="auth-mask" style="display:none">
+      <div class="auth-card">
+        <h3 class="auth-title">访问认证</h3>
+        <p class="auth-sub">请输入访问密码以查看页面内容</p>
+        <input id="auth-input" class="auth-input" type="password" placeholder="输入密码" />
+        <button id="auth-btn" class="auth-btn">进入</button>
+        <div id="auth-err" class="auth-err"></div>
+      </div>
     </div>
-    
-    <script>
-        // 显示当前时间
-        document.getElementById('build-time').textContent = new Date().toLocaleString('zh-CN');
-        
-        // 检查健康状态
-        fetch('health.json')
-            .then(response => response.json())
-            .then(data => {
-                console.log('健康状态:', data);
-                // 可以在这里更新页面显示更多信息
-            })
-            .catch(error => {
-                console.log('健康状态检查失败:', error);
-            });
-    </script>
+    <div class="header">
+      <h1>Google SSR Actions</h1>
+      <small>构建时间(中国时区)：__TS_CN__</small>
+    </div>
+    <div class="subtitle">源 __ALIVE__/__TOTAL__ · 节点 __NODES__ · 新增 __NEW__ · 移除 __REMOVED__</div>
+
+    <div class="stats" id="stats-cards">
+      <div class="stat quota" data-hide="q"><div class="num">__QLEFT__</div><div>剩余额度</div></div>
+      <div class="stat quota" data-hide="q"><div class="num">__QCAP__</div><div>总额度</div></div>
+      <div class="stat quota" data-hide="q"><div class="num">__KOK__/__KTOTAL__</div><div>可用密钥/总密钥</div></div>
+      <div class="stat"><div class="num">__NEXT_CN__</div><div>下次更新时间(中国时区)</div></div>
+    </div>
+
+    <div class="grid">
+      <div class="card card-metrics">
+        <h3>关键指标（7/30天）</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px">
+          <div>
+            <small>新增(7天)</small>
+            <canvas id="spark-added-7" height="40"></canvas>
+          </div>
+          <div>
+            <small>失效(7天)</small>
+            <canvas id="spark-removed-7" height="40"></canvas>
+          </div>
+          <div>
+            <small>存活(30天)</small>
+            <canvas id="spark-alive-30" height="40"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="card card-files">
+        <h3>订阅文件</h3>
+        <ul>
+          <li><a href="sub/all.txt"><code>sub/all.txt</code></a> 全量订阅</li>
+          <li><a href="sub/all.yaml"><code>sub/all.yaml</code></a> Clash配置</li>
+        </ul>
+      </div>
+
+      <div class="card card-sources">
+        <h3>URL 源</h3>
+        <ul>
+          <li><a href="sub/urls.txt"><code>urls.txt</code></a> 当前可用源</li>
+          <li><a href="sub/all_urls.txt"><code>all_urls.txt</code></a> 完整源列表</li>
+          <li><a href="sub/google_urls.txt"><code>google_urls.txt</code></a> Google发现（__GCOUNT__）</li>
+          <li><a href="sub/github_urls.txt"><code>github_urls.txt</code></a> GitHub发现（__GHCOUNT__）</li>
+        </ul>
+      </div>
+
+      <div class="card card-health">
+        <h3>健康信息</h3>
+        <ul class="health-list">
+          <li>构建时间(中国时区)：<b>__TS_CN__</b></li>
+          <li>下次更新时间(中国时区)：<b>__NEXT_CN__</b></li>
+          <li>源：<b>__ALIVE__/__TOTAL__</b> · 新增 <b>__NEW__</b> · 移除 <b>__REMOVED__</b></li>
+          <li>节点：<b>__NODES__</b> · 协议 SS <b>__SS__</b> | VMess <b>__VMESS__</b> | VLESS <b>__VLESS__</b> | Trojan <b>__TROJAN__</b> | HY2 <b>__HY2__</b></li>
+          <li>来源：Google <b>__GCOUNT__</b> | GitHub <b>__GHCOUNT__</b></li>
+        </ul>
+      </div>
+
+      <div class="card card-serpapi">
+        <h3>SerpAPI 密钥状态</h3>
+        <div id="serpapi-status">
+          <div class="serpapi-summary">
+            <span class="status-item">可用密钥: <b id="keys-ok">__KOK__</b>/<b id="keys-total">__KTOTAL__</b></span>
+            <span class="status-item">总剩余额度: <b id="quota-left">__QLEFT__</b>/<b id="quota-cap">__QCAP__</b></span>
+          </div>
+          <div id="serpapi-keys-list" class="serpapi-keys-list">
+            <!-- 动态加载密钥详情 -->
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-protocols">
+        <h3>协议分布</h3>
+        <ul>
+          <li>SS：__SS__</li>
+          <li>VMess：__VMESS__</li>
+          <li>VLESS：__VLESS__</li>
+          <li>Trojan：__TROJAN__</li>
+          <li>Hysteria2：__HY2__</li>
+        </ul>
+      </div>
+
+      <div class="card card-extras">
+        <h3>辅助输出</h3>
+        <ul>
+          <li><a href="sub/github.txt"><code>github.txt</code></a> GitHub节点</li>
+          <li><a href="sub/proto/ss-base64.txt"><code>ss-base64.txt</code></a> SS Base64</li>
+          <li><a href="health.json"><code>health.json</code></a> 健康信息</li>
+        </ul>
+      </div>
+
+      <div class="card card-wide card-details">
+        <h3>源详细信息</h3>
+        <p><small>包含机场名称、容量/剩余、协议、复制与测速、详情页。</small></p>
+        <div id="url-meta"><small>加载中...</small></div>
+        <div class="chart">
+          <h4 style="margin:0 0 8px 0">每日新增可用URL</h4>
+          <canvas id="dailyChart" height="120"></canvas>
+        </div>
+        <script>
+          function copyText(text){
+            navigator.clipboard.writeText(text).then(()=>{
+              alert('已复制订阅链接');
+            }).catch(()=>{});
+          }
+          async function testSpeed(url){
+            const t0 = performance.now();
+            try{ await fetch(url, {method:'HEAD', mode:'no-cors'}); }catch(e){}
+            const t1 = performance.now();
+            return Math.round(t1 - t0);
+          }
+          async function runBatchSpeed(urls, concurrency){
+            const results = new Array(urls.length).fill(null);
+            let idx = 0;
+            async function worker(){
+              while(idx < urls.length){
+                const i = idx++;
+                const u = urls[i];
+                const ms = await testSpeed(u);
+                results[i] = ms;
+                const cell = document.querySelector(`[data-url-id="${i}"]`);
+                if(cell){
+                  cell.textContent = ms;
+                  cell.style.color = ms<=300?'#10b981':(ms<=800?'#60a5fa':'#f59e0b');
+                }
+              }
+            }
+            const workers = Array.from({length: Math.min(concurrency, urls.length)}, ()=>worker());
+            await Promise.all(workers.map(w=>w()));
+            return results;
+          }
+          async function loadMeta() {
+            try {
+              const res = await fetch('sub/url_meta.json', { cache: 'no-cache' });
+              if (!res.ok) throw new Error('fetch failed');
+              let data = await res.json();
+              // 只展示可用源
+              data = (Array.isArray(data) ? data : []).filter(x=>x && x.available);
+              // 按质量分倒序排序
+              data.sort((a,b)=> (b.quality_score||0) - (a.quality_score||0));
+              const rows = data.map(function(item, i){
+                const q = (item.quality_score ?? 0);
+                const qColor = q>=80?'#10b981':(q>=60?'#60a5fa':'#f59e0b');
+                const src = (item.source||'').toLowerCase();
+                const pillColor = src==='github'?'#111827': '#0b1220';
+                const pillText = src==='github'?'GitHub':'Google';
+                return '<tr>' +
+                  '<td><div style="display:flex;gap:8px;align-items:center">' +
+                    '<a href="' + (item.url||'#') + '" target="_blank">源</a>' +
+                    '<small style="color:#94a3b8">' + (item.provider||item.host||'') + '</small>' +
+                  '</div></td>' +
+                  '<td>' + (item.available ? '✅' : '❌') + '</td>' +
+                  '<td>' + (item.nodes_total ?? 0) + '</td>' +
+                  '<td>' + (item.protocols ?? '') + '</td>' +
+                  '<td>' + ((item.traffic?.remaining ?? '-') + ' / ' + (item.traffic?.total ?? '-') + ' ' + (item.traffic?.unit ?? '')) + '</td>' +
+                  '<td data-url-id="' + i + '">' + (item.response_ms ?? '-') + '</td>' +
+                  '<td><b style="color:' + qColor + '">' + q + '</b></td>' +
+                  '<td><span class="pill" style="background:' + pillColor + '">' + pillText + '</span></td>' +
+                  '<td>' + (item.first_seen || '-') + '</td>' +
+                  '<td>' +
+                    '<button onclick="copyText(\'' + (item.url||'') + '\')" style="padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">复制</button>' +
+                    '<button class="btn-speed" data-url="' + (item.url||'') + '" style="margin-left:6px;padding:4px 8px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb">测速</button>' +
+                    (item.detail_page ? '<a href="' + item.detail_page + '" style="margin-left:8px">详情</a>' : '') +
+                  '</td>' +
+                '</tr>';
+              }).join('');
+              const html = '<table>' +
+                '<thead><tr>' +
+                '<th style="text-align:left">URL/机场</th>' +
+                '<th>可用</th>' +
+                '<th>节点数</th>' +
+                '<th>协议</th>' +
+                '<th>流量(剩余/总量)</th>' +
+                '<th>耗时(ms)</th>' +
+                '<th>质量</th>' +
+                '<th>来源</th>' +
+                '<th>采集</th>' +
+                '<th>操作</th>' +
+                '</tr></thead>' +
+                '<tbody>' + rows + '</tbody>' +
+                '</table>';
+              document.getElementById('url-meta').innerHTML = html;
+              // 绑定单击测速
+              document.querySelectorAll('.btn-speed').forEach(btn=>{
+                btn.addEventListener('click', async (e)=>{
+                  const u = e.currentTarget.getAttribute('data-url');
+                  const ms = await testSpeed(u);
+                  e.currentTarget.closest('tr').querySelector('[data-url-id]').textContent = ms;
+                });
+              });
+              // 批量测速（限并发 6）
+              const urls = data.map(x=>x.url);
+              runBatchSpeed(urls, 6);
+            } catch(e) {
+              document.getElementById('url-meta').innerHTML = '<small>未获取到源详情</small>';
+            }
+          }
+          async function loadDailyChart() {
+            try {
+              const r = await fetch('sub/stats_daily.json', { cache:'no-cache' });
+              if (!r.ok) return;
+              const d = await r.json();
+              const labels = d.map(x=>x.date);
+              const google = d.map(x=>x.google_added||0);
+              const github = d.map(x=>x.github_added||0);
+              const added = d.map(x=>x.new_total||0);
+              const removed = d.map(x=>x.removed_total||0);
+              const canvas = document.getElementById('dailyChart');
+              const ctx = canvas.getContext('2d');
+              // 极简绘制
+              const max = Math.max(1, ...google, ...github, ...added, ...removed);
+              const W = canvas.width = canvas.clientWidth;
+              const H = canvas.height;
+              function plot(series, color, yoff) {
+                ctx.strokeStyle=color; ctx.lineWidth=2; ctx.beginPath();
+                series.forEach((v,i)=>{
+                  const x = (W-20) * (i/(series.length-1)) + 10;
+                  const y = H-10 - (H-20) * (v/max);
+                  if (i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+                }); ctx.stroke();
+              }
+              ctx.clearRect(0,0,W,H); ctx.fillStyle='#0b1220'; ctx.fillRect(0,0,W,H);
+              plot(google,'#60a5fa'); plot(github,'#10b981'); plot(added,'#a78bfa'); plot(removed,'#f87171');
+            } catch(e) {}
+          }
+          function drawSparkline(canvasId, series, color){
+            const c = document.getElementById(canvasId); if(!c) return; const ctx=c.getContext('2d');
+            const W = c.width = c.clientWidth || 160; const H = c.height; const max = Math.max(1, ...series);
+            ctx.clearRect(0,0,W,H); ctx.strokeStyle=color; ctx.lineWidth=2; ctx.beginPath();
+            series.forEach((v,i)=>{ const x=(W-6)*(i/(series.length-1))+3; const y=H-3 - (H-6)*(v/max); if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y); });
+            ctx.stroke();
+          }
+          async function loadSparklines(){
+            try{
+              const r = await fetch('sub/stats_daily.json', { cache:'no-cache' }); if(!r.ok) return;
+              const d = await r.json();
+              const last7 = d.slice(-7);
+              const last30 = d.slice(-30);
+              drawSparkline('spark-added-7', last7.map(x=>x.new_total||0), '#60a5fa');
+              drawSparkline('spark-removed-7', last7.map(x=>x.removed_total||0), '#f87171');
+              drawSparkline('spark-alive-30', last30.map(x=>x.alive_total||0), '#10b981');
+            }catch(e){}
+          }
+
+          // 加载 SerpAPI 密钥详情
+          async function loadSerpAPIKeys() {
+            try {
+              const r = await fetch('health.json', { cache:'no-cache' });
+              if(!r.ok) return;
+              const health = await r.json();
+              const keys = health.serpapi_keys_detail || [];
+              const container = document.getElementById('serpapi-keys-list');
+              if(!container) return;
+              
+              if(keys.length === 0) {
+                container.innerHTML = '<div class="serpapi-key-item error">暂无密钥信息</div>';
+                return;
+              }
+              
+              container.innerHTML = keys.map(key => {
+                if(key.error) {
+                  return `<div class="serpapi-key-item error">Key ${key.index}: ${key.error}</div>`;
+                }
+                const used = key.used_searches || 0;
+                const total = key.searches_per_month || 0;
+                const left = key.total_searches_left || 0;
+                const usagePercent = total > 0 ? Math.round((used / total) * 100) : 0;
+                const statusClass = left <= 0 ? 'exhausted' : (usagePercent > 80 ? 'warning' : 'ok');
+                const resetDate = key.reset_date ? new Date(key.reset_date).toLocaleDateString('zh-CN') : '未知';
+                
+                return `
+                  <div class="serpapi-key-item ${statusClass}">
+                    <div class="key-header">
+                      <span class="key-index">Key ${key.index}</span>
+                      <span class="key-status">${left <= 0 ? '已用尽' : (usagePercent > 80 ? '即将用尽' : '正常')}</span>
+                    </div>
+                    <div class="key-details">
+                      <div class="quota-bar">
+                        <div class="quota-fill" style="width: ${usagePercent}%"></div>
+                      </div>
+                      <div class="quota-text">已用 ${used}/${total} (${usagePercent}%) · 剩余 ${left}</div>
+                      <div class="reset-info">重置时间: ${resetDate}</div>
+                    </div>
+                  </div>
+                `;
+              }).join('');
+            } catch(e) { 
+              console.warn('SerpAPI keys load failed:', e);
+              const container = document.getElementById('serpapi-keys-list');
+              if(container) container.innerHTML = '<div class="serpapi-key-item error">加载失败</div>';
+            }
+          }
+          loadMeta(); loadDailyChart(); loadSparklines(); loadSerpAPIKeys();
+        </script>
+      </div>
+    </div>
+
+    <p><small>仅展示可用源（自动过滤失效/超额/限速来源）。 构建(UTC)：__TS__ · 下次(UTC)：__NEXT__</small></p>
+  </div>
 </body>
 </html>
+
