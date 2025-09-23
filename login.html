@@ -16,8 +16,8 @@
     .err { color:#f87171; font-size: 12px; min-height: 16px; margin-top:6px; }
   </style>
   <script>
-    const AUTH_HASH = "__AUTH_HASH__";
-    const AUTH_USER = "__AUTH_USER__";
+    const AUTH_HASH = "1dd2557b6334b098dc895f52fe46add7880094aec59a2eece3e4c5da2fc79f86";
+    const AUTH_USER = "liebesu";
     async function sha256(message) { const msgBuffer = new TextEncoder().encode(message); const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer); return Array.from(new Uint8Array(hashBuffer)).map(b=>b.toString(16).padStart(2,'0')).join(''); }
     function presetUser(){ try{ if(AUTH_USER){ document.getElementById('user').value = AUTH_USER; } }catch(e){} }
     async function login(){
