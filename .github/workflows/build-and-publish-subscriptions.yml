@@ -122,7 +122,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify deployment
+        run: |
+          echo "Deployment completed successfully"
+          echo "Page URL: ${{ steps.deployment.outputs.page_url }}"
 
 
