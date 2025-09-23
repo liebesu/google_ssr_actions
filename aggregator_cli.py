@@ -545,10 +545,9 @@ def main():
                 if any(h in low for h in RATE_LIMIT_BODY_HINTS):
                     mark_rate_limited(rate_state, u, now_ts, "body-hint")
 
-    # Persist history/live
+    # Persist history and current rate-limit state (live list will be written after availability refinement)
     merged_history = sorted(set(candidates))
     write_json(os.path.join(data_dir, "history_urls.json"), merged_history)
-    write_json(os.path.join(data_dir, "live_urls.json"), alive_urls)
     write_json(rate_path, rate_state)
     # Update first-seen dates for any new URLs
     changed_first_seen = False
@@ -718,25 +717,7 @@ def main():
             ],
         }
         write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False))
-    # 写入各种URL文件
-    write_text(os.path.join(paths["sub"], "urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
-    write_text(os.path.join(paths["sub"], "all_urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
-    
-    # 分离GitHub和Google搜索发现的URL
-    github_alive_urls: List[str] = []
-    google_alive_urls: List[str] = []
-    if gh_urls:
-        gh_set_urls = set([u for u in (normalize_subscribe_url(u) for u in gh_urls) if u])
-        github_alive_urls = [u for u in alive_urls if u in gh_set_urls]
-        write_text(os.path.join(paths["sub"], "github_urls.txt"), "\n".join(github_alive_urls) + ("\n" if github_alive_urls else ""))
-        
-        # Google搜索发现的URL（非GitHub来源）
-        google_alive_urls = [u for u in alive_urls if u not in gh_set_urls]
-        write_text(os.path.join(paths["sub"], "google_urls.txt"), "\n".join(google_alive_urls) + ("\n" if google_alive_urls else ""))
-    else:
-        # 如果没有GitHub发现的URL，所有URL都来自Google搜索
-        write_text(os.path.join(paths["sub"], "github_urls.txt"), "")
-        write_text(os.path.join(paths["sub"], "google_urls.txt"), "\n".join(alive_urls) + ("\n" if alive_urls else ""))
+    # URL文件的写入改在可用性细化（含流量/配额判定）后执行
 
     for region, nodes in region_to_nodes.items():
         write_text(os.path.join(paths["regions"], f"{region}.txt"), "\n".join(nodes) + ("\n" if nodes else ""))
@@ -798,6 +779,8 @@ def main():
             continue
         text_preview = body.decode('utf-8', errors='ignore')[:4000]
         traffic = extract_traffic_info_from_text(text_preview)
+        low_preview = text_preview.lower()
+        over_quota_hint = any(h in low_preview for h in RATE_LIMIT_BODY_HINTS)
         # Estimate protocols by counting prefixes
         pc = {p: 0 for p in ["ss", "vmess", "vless", "trojan", "hysteria2", "ssr"]}
         lines = split_subscription_content_to_lines(body)
@@ -837,6 +820,18 @@ def main():
             write_json(os.path.join(paths["providers"], f"{sid}.json"), prov_meta)
         except Exception:
             pass
+        # 结合节点数/配额提示/剩余流量，修正可用性
+        remaining_gb = traffic.get("remaining_traffic")
+        is_depleted = False
+        try:
+            if remaining_gb is not None:
+                is_depleted = float(remaining_gb) <= 0.0
+        except Exception:
+            is_depleted = False
+        if nodes_total == 0 or over_quota_hint or is_depleted:
+            meta["available"] = False
+        meta["over_quota"] = bool(over_quota_hint or is_depleted)
+
         # Quality score estimation: blend latency and parse success
         lat_component = 100.0 - min(100.0, (meta["response_ms"] or 2000.0) / 20.0)
         parse_component = 100.0 if nodes_total > 0 else 0.0
@@ -862,6 +857,31 @@ def main():
         })
         url_meta.append(meta)
 
+    # 二次可用性筛选：仅保留有效且未满额/未用尽且有节点的源
+    refined_alive_urls = [m["url"] for m in url_meta if m.get("available")]
+
+    # 写入各种URL文件（基于 refined 列表）
+    write_json(live_out_path, refined_alive_urls)
+    write_text(os.path.join(paths["sub"], "urls.txt"), "\n".join(refined_alive_urls) + ("\n" if refined_alive_urls else ""))
+    write_text(os.path.join(paths["sub"], "all_urls.txt"), "\n".join(refined_alive_urls) + ("\n" if refined_alive_urls else ""))
+
+    # 分离GitHub和Google搜索发现的URL（基于 refined 列表）
+    github_alive_urls: List[str] = []
+    google_alive_urls: List[str] = []
+    if gh_urls:
+        try:
+            gh_set_urls = set([uu for uu in (normalize_subscribe_url(uu) for uu in gh_urls) if uu])
+        except Exception:
+            gh_set_urls = set()
+        github_alive_urls = [u for u in refined_alive_urls if u in gh_set_urls]
+        write_text(os.path.join(paths["sub"], "github_urls.txt"), "\n".join(github_alive_urls) + ("\n" if github_alive_urls else ""))
+        # Google搜索发现的URL（非GitHub来源）
+        google_alive_urls = [u for u in refined_alive_urls if u not in gh_set_urls]
+        write_text(os.path.join(paths["sub"], "google_urls.txt"), "\n".join(google_alive_urls) + ("\n" if google_alive_urls else ""))
+    else:
+        write_text(os.path.join(paths["sub"], "github_urls.txt"), "")
+        write_text(os.path.join(paths["sub"], "google_urls.txt"), "\n".join(refined_alive_urls) + ("\n" if refined_alive_urls else ""))
+
     # Health info
     build_dt = datetime.now(timezone.utc)
     # Fixed schedule: every 3 hours
@@ -875,8 +895,8 @@ def main():
     except Exception:
         ts_cn = ""
         next_cn = ""
-    sources_new = len(set(alive_urls) - set(prev_live_urls))
-    sources_removed = len(set(prev_live_urls) - set(alive_urls))
+    sources_new = len(set(refined_alive_urls) - set(prev_live_urls))
+    sources_removed = len(set(prev_live_urls) - set(refined_alive_urls))
     protocol_counts = {k: len(v) for k, v in proto_to_nodes.items()}
     # Optional auth: set AUTH_SHA256 env to require password gate
     auth_sha256_env = os.getenv("AUTH_SHA256", "")
@@ -896,7 +916,7 @@ def main():
         "next_run_utc": next_dt.strftime("%Y-%m-%d %H:%M:%S"),
         "next_run_cn": next_cn,
         "source_total": len(candidates),
-        "source_alive": len(alive_urls),
+        "source_alive": len(refined_alive_urls),
         "sources_new": sources_new,
         "sources_removed": sources_removed,
         "nodes_total": len(all_nodes),
@@ -906,7 +926,7 @@ def main():
         "parse_ok_rate": round((parse_ok_count / max(1, len(alive_urls))), 4),
         "protocol_counts": protocol_counts,
         "github_urls_count": len(github_alive_urls),
-        "google_urls_count": len(google_alive_urls) if google_alive_urls else (len(alive_urls) if not gh_urls else 0),
+        "google_urls_count": len(google_alive_urls) if google_alive_urls else (len(refined_alive_urls) if not gh_urls else 0),
         "quota_total_left": quota_total_left,
         "quota_total_capacity": quota_total_cap,
         "keys_total": keys_total,
