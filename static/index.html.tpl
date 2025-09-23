@@ -29,10 +29,32 @@
         const userRequired = (AUTH_USER || '').trim().length > 0;
         const userOk = userRequired ? (user === (AUTH_USER||'').trim()) : true;
         if (userOk && h.toLowerCase() === AUTH_HASH.toLowerCase()) {
-          try{ localStorage.setItem('gauth', h); localStorage.setItem('guser', user); }catch(e){}
+          console.log('🎉 认证成功！');
+          try{ 
+            localStorage.setItem('gauth', h); 
+            localStorage.setItem('guser', user); 
+            console.log('✅ 认证信息已保存到localStorage');
+          }catch(e){
+            console.error('保存认证信息失败:', e);
+          }
           mask.style.display = 'none';
           document.documentElement.style.display = '';
+          console.log('✅ 页面已显示，开始加载内容...');
+          
+          // 手动触发页面内容加载
+          setTimeout(() => {
+            try {
+              if (typeof loadMeta === 'function') loadMeta();
+              if (typeof loadDailyChart === 'function') loadDailyChart();
+              if (typeof loadSparklines === 'function') loadSparklines();
+              if (typeof loadSerpAPIKeys === 'function') loadSerpAPIKeys();
+              console.log('✅ 所有内容加载函数已触发');
+            } catch(e) {
+              console.error('内容加载出错:', e);
+            }
+          }, 100);
         } else {
+          console.log('❌ 认证失败');
           err.textContent = '用户名或密码错误，请重试';
         }
       }
@@ -40,15 +62,50 @@
       passInput.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ submit(); }});
     }
     function gate() {
-      if (!AUTH_HASH) { document.documentElement.style.display = ''; return; }
+      console.log('🔐 认证检查开始...');
+      console.log('AUTH_HASH:', AUTH_HASH ? '已设置' : '未设置');
+      console.log('AUTH_USER:', AUTH_USER ? '已设置' : '未设置');
+      
+      if (!AUTH_HASH || AUTH_HASH.trim() === '') { 
+        console.log('✅ 无需认证，直接显示页面');
+        document.documentElement.style.display = ''; 
+        return; 
+      }
+      
       try{
         const tk = localStorage.getItem('gauth');
         const gu = (localStorage.getItem('guser') || '').trim();
         const userRequired = (AUTH_USER || '').trim().length > 0;
         const passOk = !!tk && (tk.toLowerCase() === AUTH_HASH.toLowerCase());
         const userOk = userRequired ? (gu === (AUTH_USER||'').trim()) : true;
-        if (passOk && userOk) { document.documentElement.style.display = ''; return; }
-      }catch(e){}
+        
+        console.log('存储的认证:', tk ? '存在' : '不存在');
+        console.log('密码验证:', passOk ? '通过' : '失败');
+        console.log('用户验证:', userOk ? '通过' : '失败');
+        
+        if (passOk && userOk) { 
+          console.log('✅ 认证成功，显示页面');
+          document.documentElement.style.display = ''; 
+          
+          // 确保内容加载函数在页面显示后执行
+          setTimeout(() => {
+            try {
+              if (typeof loadMeta === 'function') loadMeta();
+              if (typeof loadDailyChart === 'function') loadDailyChart();
+              if (typeof loadSparklines === 'function') loadSparklines();
+              if (typeof loadSerpAPIKeys === 'function') loadSerpAPIKeys();
+              console.log('✅ 自动加载所有内容完成');
+            } catch(e) {
+              console.error('自动内容加载出错:', e);
+            }
+          }, 100);
+          return;
+        }
+      }catch(e){
+        console.error('认证检查出错:', e);
+      }
+      
+      console.log('❌ 认证失败，显示登录框');
       showAuth(); // 直接显示认证弹窗而不是跳转
     }
     document.documentElement.style.display = 'none';
@@ -112,6 +169,7 @@
           <li><a href="sub/all.txt"><code>sub/all.txt</code></a> 全量订阅</li>
           <li><a href="sub/all.yaml"><code>sub/all.yaml</code></a> Clash配置</li>
         </ul>
+        <p><small style="color:#94a3b8">📌 所有订阅文件和接口可直接访问，无需页面认证</small></p>
       </div>
 
       <div class="card card-sources">
@@ -166,6 +224,7 @@
           <li><a href="sub/proto/ss-base64.txt"><code>ss-base64.txt</code></a> SS Base64</li>
           <li><a href="health.json"><code>health.json</code></a> 健康信息</li>
         </ul>
+        <p><small style="color:#94a3b8">💡 API接口和JSON数据可通过程序直接调用</small></p>
       </div>
 
       <div class="card card-wide card-details">
