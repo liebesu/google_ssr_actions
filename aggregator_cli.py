@@ -502,8 +502,26 @@ def main():
         # 检查密钥文件是否存在
         if not os.path.exists(keys_file_path):
             print(f"[warn] 密钥文件不存在: {keys_file_path}")
-            serpapi_keys_detail = [{"error": f"Keys file not found: {keys_file_path}"}]
-        else:
+            # 尝试从环境变量获取密钥
+            scraper_keys_env = os.getenv("SCRAPER_KEYS")
+            if scraper_keys_env:
+                print(f"[info] 从环境变量 SCRAPER_KEYS 获取密钥")
+                with open(keys_file_path, 'w') as f:
+                    f.write(scraper_keys_env)
+                print(f"[info] 已创建密钥文件: {keys_file_path}")
+            else:
+                print(f"[warn] 环境变量 SCRAPER_KEYS 也未设置")
+                serpapi_keys_detail = [{"error": f"Keys file not found and SCRAPER_KEYS env not set"}]
+                return
+        
+        # 检查密钥文件是否为空
+        if os.path.exists(keys_file_path):
+            with open(keys_file_path, 'r') as f:
+                keys_content = f.read().strip()
+                if not keys_content:
+                    print(f"[warn] 密钥文件为空")
+                    serpapi_keys_detail = [{"error": "Keys file is empty"}]
+                    return
             # 读取密钥文件内容
             with open(keys_file_path, 'r') as f:
                 keys_content = f.read().strip()
@@ -541,6 +559,21 @@ def main():
         import traceback
         traceback.print_exc()
         serpapi_keys_detail = [{"error": f"Failed to load keys: {str(e)}"}]
+        
+        # 备用方案：尝试从环境变量获取基本信息
+        scraper_keys_env = os.getenv("SCRAPER_KEYS")
+        if scraper_keys_env:
+            keys_count = len([k for k in scraper_keys_env.split('\n') if k.strip()])
+            print(f"[info] 备用方案：从环境变量检测到 {keys_count} 个密钥")
+            serpapi_keys_detail = [{
+                "index": 1,
+                "success": False,
+                "total_searches_left": 0,
+                "searches_per_month": 0,
+                "used_searches": 0,
+                "reset_date": "",
+                "error": f"API check failed: {str(e)}"
+            } for _ in range(keys_count)]
 
     # Load candidate URL set
     raw_candidates = load_candidate_urls(PROJECT_ROOT, data_dir)
