@@ -1,0 +1,42 @@
+{
+  "build_time_utc": "2025-09-23 21:30:00",
+  "build_time_cn": "2025-09-24 05:30:00",
+  "next_run_utc": "2025-09-24 00:30:00",
+  "next_run_cn": "2025-09-24 08:30:00",
+  "source_total": 61,
+  "source_alive": 47,
+  "sources_new": 3,
+  "sources_removed": 2,
+  "nodes_total": 556,
+  "protocol_counts": {
+    "ss": 120,
+    "vmess": 200,
+    "vless": 150,
+    "trojan": 50,
+    "hysteria2": 36
+  },
+  "gcount": 25,
+  "ghcount": 22,
+  "quota_total_left": 1500,
+  "quota_total_cap": 2000,
+  "keys_ok": 4,
+  "keys_total": 5,
+  "auth_sha256": "1dd2557b6334b098dc895f52fe46add7880094aec59a2eece3e4c5da2fc79f86",
+  "auth_user": "liebesu",
+  "serpapi_keys_detail": [
+    {
+      "key": "key1",
+      "usage": 100,
+      "remaining": 400,
+      "total": 500,
+      "reset_date": "2025-10-01"
+    },
+    {
+      "key": "key2", 
+      "usage": 200,
+      "remaining": 300,
+      "total": 500,
+      "reset_date": "2025-10-01"
+    }
+  ]
+}
