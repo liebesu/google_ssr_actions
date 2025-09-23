@@ -16,23 +16,28 @@
     }
     function showAuth() {
       const mask = document.getElementById('auth-mask');
-      const input = document.getElementById('auth-input');
+      const userInput = document.getElementById('auth-user');
+      const passInput = document.getElementById('auth-input');
       const err = document.getElementById('auth-err');
       const btn = document.getElementById('auth-btn');
       mask.style.display = 'flex';
-      input.focus();
+      userInput.focus();
       async function submit() {
-        const pwd = input.value || '';
+        const user = userInput.value.trim();
+        const pwd = passInput.value || '';
         const h = await sha256(pwd);
-        if (h.toLowerCase() === AUTH_HASH.toLowerCase()) {
+        const userRequired = (AUTH_USER || '').trim().length > 0;
+        const userOk = userRequired ? (user === (AUTH_USER||'').trim()) : true;
+        if (userOk && h.toLowerCase() === AUTH_HASH.toLowerCase()) {
+          try{ localStorage.setItem('gauth', h); localStorage.setItem('guser', user); }catch(e){}
           mask.style.display = 'none';
           document.documentElement.style.display = '';
         } else {
-          err.textContent = '密码错误，请重试';
+          err.textContent = '用户名或密码错误，请重试';
         }
       }
       btn.addEventListener('click', submit);
-      input.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ submit(); }});
+      passInput.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ submit(); }});
     }
     function gate() {
       if (!AUTH_HASH) { document.documentElement.style.display = ''; return; }
@@ -44,7 +49,7 @@
         const userOk = userRequired ? (gu === (AUTH_USER||'').trim()) : true;
         if (passOk && userOk) { document.documentElement.style.display = ''; return; }
       }catch(e){}
-      location.replace('login.html');
+      showAuth(); // 直接显示认证弹窗而不是跳转
     }
     document.documentElement.style.display = 'none';
     document.addEventListener('DOMContentLoaded', gate);
@@ -63,7 +68,8 @@
     <div id="auth-mask" class="auth-mask" style="display:none">
       <div class="auth-card">
         <h3 class="auth-title">访问认证</h3>
-        <p class="auth-sub">请输入访问密码以查看页面内容</p>
+        <p class="auth-sub">请输入用户名和密码以查看页面内容</p>
+        <input id="auth-user" class="auth-input" type="text" placeholder="输入用户名" />
         <input id="auth-input" class="auth-input" type="password" placeholder="输入密码" />
         <button id="auth-btn" class="auth-btn">进入</button>
         <div id="auth-err" class="auth-err"></div>
@@ -332,7 +338,18 @@
               
               container.innerHTML = keys.map(key => {
                 if(key.error) {
-                  return `<div class="serpapi-key-item error">Key ${key.index}: ${key.error}</div>`;
+                  const keyInfo = key.key_masked ? `(${key.key_masked})` : '';
+                  return `<div class="serpapi-key-item error">
+                    <div class="key-header">
+                      <span class="key-index">Key ${key.index} ${keyInfo}</span>
+                      <span class="key-status">错误</span>
+                    </div>
+                    <div class="key-details">
+                      <div style="color:#ef4444">${key.error}</div>
+                      ${key.status === 'key_valid_unchecked' ? '<div style="color:#10b981;margin-top:4px">✓ 密钥格式有效，但无法检查配额</div>' : ''}
+                      ${key.status === 'key_invalid' ? '<div style="color:#ef4444;margin-top:4px">✗ 密钥格式无效</div>' : ''}
+                    </div>
+                  </div>`;
                 }
                 const used = key.used_searches || 0;
                 const total = key.searches_per_month || 0;
@@ -340,11 +357,12 @@
                 const usagePercent = total > 0 ? Math.round((used / total) * 100) : 0;
                 const statusClass = left <= 0 ? 'exhausted' : (usagePercent > 80 ? 'warning' : 'ok');
                 const resetDate = key.reset_date ? new Date(key.reset_date).toLocaleDateString('zh-CN') : '未知';
+                const keyInfo = key.key_masked ? `(${key.key_masked})` : '';
                 
                 return `
                   <div class="serpapi-key-item ${statusClass}">
                     <div class="key-header">
-                      <span class="key-index">Key ${key.index}</span>
+                      <span class="key-index">Key ${key.index} ${keyInfo}</span>
                       <span class="key-status">${left <= 0 ? '已用尽' : (usagePercent > 80 ? '即将用尽' : '正常')}</span>
                     </div>
                     <div class="key-details">
