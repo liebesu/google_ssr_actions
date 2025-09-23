@@ -17,6 +17,8 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from google_api_scraper_enhanced import EnhancedGoogleAPIScraper
 from logger_config import get_scraper_logger
+from config import config
+from error_handler import ErrorHandler, safe_execute
 
 def main():
     """主程序入口"""
@@ -26,19 +28,29 @@ def main():
     print("=" * 50)
     
     try:
-        # 初始化搜索器
-        scraper = EnhancedGoogleAPIScraper()
+        # 初始化错误处理器
+        error_handler = ErrorHandler()
+        
+        # 安全初始化搜索器
+        scraper = safe_execute(
+            EnhancedGoogleAPIScraper,
+            default_return=None,
+            logger=logging.getLogger(__name__)
+        )
+        
+        if scraper is None:
+            print("❌ 搜索器初始化失败")
+            sys.exit(1)
         
         # 显示配置信息
         print(f"🔍 搜索查询: {scraper.search_query}")
         print(f"🌍 支持地区数量: {len(scraper.regions)} 个地区 (全球多语言覆盖)")
         
-        # 显示批量地区搜索配置
-        regions_config = scraper.config.get('regions', {})
-        batch_count = regions_config.get('batch_count', 4)
-        inter_region_delay = regions_config.get('inter_region_delay', 15)
-        priority_regions = regions_config.get('priority_regions', [])
-        use_priority_only = regions_config.get('use_priority_only', False)
+        # 使用统一配置管理器获取配置信息
+        batch_count = config.get('regions.batch_count', 4)
+        inter_region_delay = config.get('regions.inter_region_delay', 15)
+        priority_regions = config.get('regions.priority_regions', [])
+        use_priority_only = config.get('regions.use_priority_only', False)
         
         print(f"📍 搜索模式: {'批量地区搜索' if batch_count > 1 else '单地区搜索'}")
         if batch_count > 1:
@@ -49,15 +61,16 @@ def main():
             elif priority_regions:
                 print(f"   优先地区: {', '.join(priority_regions)} (优先但不限制)")
         
-        print(f"⏱️  搜索时间范围: {scraper.config['search']['time_range']}")
-        print(f"📊 每页最大结果数: {scraper.config['search']['max_results_per_query']}")
-        print(f"📄 最大处理页面数: {scraper.config['search']['max_pages_to_process']}")
-        print(f"🔄 定时任务间隔: {scraper.config['schedule']['interval_hours']} 小时")
-        print(f"🔔 钉钉通知: {'启用' if scraper.config['validation']['send_notifications'] else '禁用'}")
-        print(f"🌐 代理设置: {'启用' if scraper.config['proxy']['enabled'] else '禁用'}")
-        if scraper.config['proxy']['enabled']:
-            proxy_url = f"{scraper.config['proxy']['protocol']}://{scraper.config['proxy']['host']}:{scraper.config['proxy']['port']}"
-            print(f"   代理地址: {proxy_url}")
+        print(f"⏱️  搜索时间范围: {config.get('search.time_range', 'past_24_hours')}")
+        print(f"📊 每页最大结果数: {config.get('search.max_results_per_query', 100)}")
+        print(f"📄 最大处理页面数: {config.get('search.max_pages_to_process', 30)}")
+        print(f"🔄 定时任务间隔: {config.get('schedule.interval_hours', 2)} 小时")
+        print(f"🔔 钉钉通知: {'启用' if config.get('validation.send_notifications', True) else '禁用'}")
+        print(f"🌐 代理设置: {'启用' if config.is_proxy_enabled() else '禁用'}")
+        
+        proxy_config = config.get_proxy_config()
+        if proxy_config:
+            print(f"   代理地址: {proxy_config.get('http', 'N/A')}")
         print("=" * 50)
         
         # 启动定时任务调度器

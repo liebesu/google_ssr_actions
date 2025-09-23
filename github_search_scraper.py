@@ -54,8 +54,17 @@ class GitHubURLScraper:
             resp = self.session.get(url, timeout=self.config.timeout_sec)
             if resp.status_code == 200:
                 return resp.text
+            elif resp.status_code == 429:
+                # GitHub API rate limit
+                import time
+                time.sleep(2)  # Wait before retry
+                return ""
             return ""
-        except Exception:
+        except Exception as e:
+            # Log error for debugging
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.debug(f"Failed to fetch {url}: {e}")
             return ""
 
     def _is_issues_search(self, url: str) -> bool:
@@ -129,16 +138,23 @@ def discover_from_github(defaults: bool = True, extra_urls: t.Optional[t.List[st
     seeds: t.List[str] = []
     if defaults:
         seeds.extend([
-            # Issues: updated desc, first 2 pages
+            # Issues: updated desc, first 3 pages for better coverage
             "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=issues&s=updated&o=desc&p=1",
             "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=issues&s=updated&o=desc&p=2",
-            # Repositories: updated desc, first page only
-            "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=repositories&s=updated&o=desc",
+            "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=issues&s=updated&o=desc&p=3",
+            # Repositories: updated desc, first 2 pages
+            "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=repositories&s=updated&o=desc&p=1",
+            "https://github.com/search?q=%22api%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D%22&type=repositories&s=updated&o=desc&p=2",
+            # Additional search patterns
+            "https://github.com/search?q=subscribe+token+api&type=issues&s=updated&o=desc&p=1",
+            "https://github.com/search?q=clash+subscription&type=issues&s=updated&o=desc&p=1",
         ])
     if extra_urls:
         seeds.extend(extra_urls)
 
-    scraper = GitHubURLScraper(ScrapeConfig(search_urls=seeds))
+    # Use more conservative rate limiting for GitHub
+    config = ScrapeConfig(search_urls=seeds, per_search_limit=15, request_delay_sec=1.5)
+    scraper = GitHubURLScraper(config)
     return scraper.run()
 
 

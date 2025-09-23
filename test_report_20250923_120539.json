@@ -1,0 +1,58 @@
+{
+  "timestamp": "2025-09-23T12:05:39.797853",
+  "duration_seconds": 30.31,
+  "total_tests": 6,
+  "passed": 6,
+  "failed": 0,
+  "success_rate": 100.0,
+  "results": {
+    "config_manager": {
+      "status": "success",
+      "proxy_enabled": false,
+      "dingtalk_configured": true,
+      "proxy_config_available": false
+    },
+    "data_cleaner": {
+      "status": "success",
+      "url_validation_rate": 0.25,
+      "files_validated": 4
+    },
+    "url_extractor": {
+      "status": "success",
+      "test_cases_processed": 4,
+      "total_urls_extracted": 4
+    },
+    "subscription_validator": {
+      "status": "success",
+      "url_format_validation_rate": 1.0,
+      "validator_initialized": true
+    },
+    "github_scraper": {
+      "status": "success",
+      "urls_discovered": 0,
+      "scraper_functional": true
+    },
+    "error_handler": {
+      "status": "success",
+      "errors_processed": 3,
+      "total_errors": 3
+    }
+  },
+  "error_summary": {
+    "total_errors": 3,
+    "error_breakdown": {
+      "connection_errors": 1,
+      "timeout_errors": 1,
+      "http_errors": 0,
+      "validation_errors": 0,
+      "unknown_errors": 1
+    },
+    "error_rate_by_type": {
+      "connection_errors": 33.33,
+      "timeout_errors": 33.33,
+      "http_errors": 0.0,
+      "validation_errors": 0.0,
+      "unknown_errors": 33.33
+    }
+  }
+}
