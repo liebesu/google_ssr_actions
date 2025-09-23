@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-23T16:19:12.903720",
+  "timestamp": "2025-09-23T18:30:40.662552",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,9 +11,9 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 5,
+  "original_urls": 6,
   "urls": [
-    "https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2",
-    "https://ylccloud.top/api/v1/client/subscribe?token=ca195cab8de0da5de5c945c33034195d"
+    "https://sub.soyorin.shop/api/v1/client/subscribe?token=f62d458ba609530a3e208eef5b8e871d",
+    "https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2"
   ]
 }
