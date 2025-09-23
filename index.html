@@ -69,6 +69,11 @@
             color: #888;
             font-size: 0.9em;
         }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #ff9800;
+        }
     </style>
 </head>
 <body>
@@ -122,6 +127,11 @@
             <p>4. 查看健康状态了解系统运行情况</p>
         </div>
         
+        <div class="loading" id="loading-status">
+            <p>🔄 正在加载完整功能...</p>
+            <p>如果这是首次访问，请等待自动构建完成</p>
+        </div>
+        
         <div class="footer">
             <p>🔧 技术栈: Python + GitHub Actions + GitHub Pages</p>
             <p>📡 数据源: Google 搜索 + GitHub 仓库</p>
@@ -135,13 +145,24 @@
         
         // 检查健康状态
         fetch('health.json')
-            .then(response => response.json())
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('健康状态文件不存在');
+            })
             .then(data => {
                 console.log('健康状态:', data);
-                // 可以在这里更新页面显示更多信息
+                document.getElementById('loading-status').innerHTML = 
+                    '<p class="success">✅ 系统运行正常</p>' +
+                    '<p>可用源: ' + (data.source_alive || 0) + '/' + (data.source_total || 0) + '</p>' +
+                    '<p>节点总数: ' + (data.nodes_total || 0) + '</p>';
             })
             .catch(error => {
                 console.log('健康状态检查失败:', error);
+                document.getElementById('loading-status').innerHTML = 
+                    '<p class="warning">⚠️ 系统正在初始化中...</p>' +
+                    '<p>请稍候，自动构建完成后将显示完整功能</p>';
             });
     </script>
 </body>
