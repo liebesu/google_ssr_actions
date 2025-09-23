@@ -494,27 +494,52 @@ def main():
     keys_ok = 0
     serpapi_keys_detail = []
     try:
+        print(f"[info] 尝试加载 SerpAPI 密钥管理器...")
         from enhanced_key_manager import EnhancedSerpAPIKeyManager  # type: ignore
-        mgr2 = EnhancedSerpAPIKeyManager(keys_file=os.path.join(PROJECT_ROOT, "keys"))
-        quotas2 = mgr2.check_all_quotas(force_refresh=True)
-        keys_total = len(quotas2)
-        for i, q in enumerate(quotas2):
-            if q.get("success"):
-                keys_ok += 1
-                quota_total_left += int(q.get("total_searches_left", 0) or 0)
-                quota_total_cap += int(q.get("searches_per_month", 0) or 0)
-            # 收集每个 key 的详细信息
-            key_info = {
-                "index": i + 1,
-                "success": q.get("success", False),
-                "total_searches_left": q.get("total_searches_left", 0),
-                "searches_per_month": q.get("searches_per_month", 0),
-                "used_searches": q.get("searches_per_month", 0) - q.get("total_searches_left", 0),
-                "reset_date": q.get("reset_date", ""),
-                "error": q.get("error", "") if not q.get("success") else ""
-            }
-            serpapi_keys_detail.append(key_info)
+        keys_file_path = os.path.join(PROJECT_ROOT, "keys")
+        print(f"[info] 密钥文件路径: {keys_file_path}")
+        
+        # 检查密钥文件是否存在
+        if not os.path.exists(keys_file_path):
+            print(f"[warn] 密钥文件不存在: {keys_file_path}")
+            serpapi_keys_detail = [{"error": f"Keys file not found: {keys_file_path}"}]
+        else:
+            # 读取密钥文件内容
+            with open(keys_file_path, 'r') as f:
+                keys_content = f.read().strip()
+                print(f"[info] 密钥文件内容长度: {len(keys_content)}")
+                print(f"[info] 密钥行数: {len(keys_content.splitlines())}")
+            
+            mgr2 = EnhancedSerpAPIKeyManager(keys_file=keys_file_path)
+            print(f"[info] 密钥管理器初始化完成，密钥数量: {len(mgr2.api_keys)}")
+            
+            quotas2 = mgr2.check_all_quotas(force_refresh=True)
+            print(f"[info] 检查到 {len(quotas2)} 个密钥的额度信息")
+            
+            keys_total = len(quotas2)
+            for i, q in enumerate(quotas2):
+                print(f"[info] 密钥 {i+1}: success={q.get('success')}, left={q.get('total_searches_left')}, total={q.get('searches_per_month')}")
+                if q.get("success"):
+                    keys_ok += 1
+                    quota_total_left += int(q.get("total_searches_left", 0) or 0)
+                    quota_total_cap += int(q.get("searches_per_month", 0) or 0)
+                # 收集每个 key 的详细信息
+                key_info = {
+                    "index": i + 1,
+                    "success": q.get("success", False),
+                    "total_searches_left": q.get("total_searches_left", 0),
+                    "searches_per_month": q.get("searches_per_month", 0),
+                    "used_searches": q.get("searches_per_month", 0) - q.get("total_searches_left", 0),
+                    "reset_date": q.get("reset_date", ""),
+                    "error": q.get("error", "") if not q.get("success") else ""
+                }
+                serpapi_keys_detail.append(key_info)
+            
+            print(f"[info] SerpAPI 汇总: 可用密钥 {keys_ok}/{keys_total}, 总剩余额度 {quota_total_left}/{quota_total_cap}")
     except Exception as e:
+        print(f"[error] SerpAPI 密钥检查失败: {str(e)}")
+        import traceback
+        traceback.print_exc()
         serpapi_keys_detail = [{"error": f"Failed to load keys: {str(e)}"}]
 
     # Load candidate URL set
