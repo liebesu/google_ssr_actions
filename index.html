@@ -6,7 +6,7 @@
   <title>Google SSR Actions - 订阅聚合</title>
   <link rel="stylesheet" href="styles.css" />
   <script>
-    const AUTH_HASH = "37092303178fc51f57a52ea39e166a4954ec86c075de3a9df7a221c9ef7e0891";
+    const AUTH_HASH = "1dd2557b6334b098dc895f52fe46add7880094aec59a2eece3e4c5da2fc79f86";
     const AUTH_USER = "liebesu";
     async function sha256(message) {
       const msgBuffer = new TextEncoder().encode(message);
@@ -80,11 +80,8 @@
         const userOk = userRequired ? (gu === (AUTH_USER||'').trim()) : true;
         
         console.log('存储的认证:', tk ? '存在' : '不存在');
-        console.log('存储的用户:', gu || '无');
         console.log('密码验证:', passOk ? '通过' : '失败');
         console.log('用户验证:', userOk ? '通过' : '失败');
-        console.log('目标哈希:', AUTH_HASH);
-        console.log('存储哈希:', tk);
         
         if (passOk && userOk) { 
           console.log('✅ 认证成功，显示页面');
@@ -175,11 +172,6 @@
       <div class="auth-card">
         <h3 class="auth-title">访问认证</h3>
         <p class="auth-sub">请输入用户名和密码以查看页面内容</p>
-        <div style="background:#1f2937; padding:8px; border-radius:6px; margin:8px 0; font-size:12px; color:#94a3b8;">
-          <strong>调试信息:</strong><br>
-          用户名: <span id="debug-user">liebesu</span><br>
-          哈希值: <span id="debug-hash">37092303178fc51f57a52ea39e166a4954ec86c075de3a9df7a221c9ef7e0891</span>
-        </div>
         <input id="auth-user" class="auth-input" type="text" placeholder="输入用户名" />
         <input id="auth-input" class="auth-input" type="password" placeholder="输入密码" />
         <button id="auth-btn" class="auth-btn">进入</button>
@@ -188,7 +180,7 @@
     </div>
     <div class="header">
       <h1>Google SSR Actions</h1>
-      <small>构建时间(中国时区)：2025-09-24 18:00:00</small>
+      <small>构建时间(中国时区)：2025-09-24 18:30:00</small>
     </div>
     <div class="subtitle">源 108/192 · 节点 1200 · 新增 0 · 移除 4</div>
 
@@ -196,7 +188,7 @@
       <div class="stat quota" data-hide="q"><div class="num">472</div><div>剩余额度</div></div>
       <div class="stat quota" data-hide="q"><div class="num">1250</div><div>总额度</div></div>
       <div class="stat quota" data-hide="q"><div class="num">5/5</div><div>可用密钥/总密钥</div></div>
-      <div class="stat"><div class="num">2025-09-24 21:00:00</div><div>下次更新时间(中国时区)</div></div>
+      <div class="stat"><div class="num">2025-09-24 21:30:00</div><div>下次更新时间(中国时区)</div></div>
     </div>
 
     <div class="grid">
@@ -240,8 +232,8 @@
       <div class="card card-health">
         <h3>健康信息</h3>
         <ul class="health-list">
-          <li>构建时间(中国时区)：<b>2025-09-24 18:00:00</b></li>
-          <li>下次更新时间(中国时区)：<b>2025-09-24 21:00:00</b></li>
+          <li>构建时间(中国时区)：<b>2025-09-24 18:30:00</b></li>
+          <li>下次更新时间(中国时区)：<b>2025-09-24 21:30:00</b></li>
           <li>源：<b>108/192</b> · 新增 <b>0</b> · 移除 <b>4</b></li>
           <li>节点：<b>1200</b> · 协议 SS <b>147</b> | VMess <b>53</b> | VLESS <b>77</b> | Trojan <b>39</b> | HY2 <b>884</b></li>
           <li>来源：Google <b>103</b> | GitHub <b>5</b></li>
@@ -500,7 +492,7 @@
       </div>
     </div>
 
-    <p><small>仅展示可用源（自动过滤失效/超额/限速来源）。 构建(UTC)：2025-09-24 10:00:00 · 下次(UTC)：2025-09-24 13:00:00</small></p>
+    <p><small>仅展示可用源（自动过滤失效/超额/限速来源）。 构建(UTC)：2025-09-24 10:30:00 · 下次(UTC)：2025-09-24 13:30:00</small></p>
   </div>
 </body>
 </html>
