@@ -71,7 +71,7 @@ class EnhancedSerpAPIKeyManager:
             
             if response.status_code == 200:
                 data = response.json()
-                return {
+                quota_info = {
                     'success': True,
                     'api_key': api_key,
                     'account_status': data.get('account_status', 'Unknown'),
@@ -83,6 +83,18 @@ class EnhancedSerpAPIKeyManager:
                     'account_rate_limit_per_hour': data.get('account_rate_limit_per_hour', 0),
                     'response_time': response.elapsed.total_seconds()
                 }
+                
+                # 计算重置时间并添加到结果中
+                try:
+                    # 使用密钥索引，找到对应的密钥在列表中的位置
+                    key_index = self.api_keys.index(api_key) + 1
+                    reset_date = self._calculate_next_reset_date(quota_info, key_index)
+                    quota_info['reset_date'] = reset_date
+                except Exception as e:
+                    self.logger.warning(f"计算密钥 {api_key[:10]}... 重置时间失败: {e}")
+                    quota_info['reset_date'] = ""
+                
+                return quota_info
             else:
                 return {
                     'success': False,
