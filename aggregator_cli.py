@@ -1246,9 +1246,47 @@ def main():
             hist = [e for e in hist if e.get("date") != today] + [entry]
             hist = hist[-365:]
             write_json(history_path, hist)
+            
+            # 生成增强的7天历史数据，包含更详细的统计信息
+            last_7_days = hist[-7:] if len(hist) >= 7 else hist
+            enhanced_7day_data = []
+            
+            for i, day_data in enumerate(last_7_days):
+                # 计算当天的详细统计
+                day_date = day_data.get("date", "")
+                google_added = day_data.get("google_added", 0)
+                github_added = day_data.get("github_added", 0)
+                new_total = day_data.get("new_total", 0)
+                removed_total = day_data.get("removed_total", 0)
+                alive_total = day_data.get("alive_total", 0)
+                
+                # 计算新增总数（Google + GitHub）
+                total_added = google_added + github_added
+                
+                # 计算失效数量（新增 - 净增长）
+                net_growth = new_total - removed_total
+                failed_count = max(0, total_added - net_growth)
+                
+                enhanced_day = {
+                    "date": day_date,
+                    "total_count": alive_total,  # 总存活数量
+                    "new_added": total_added,    # 新增总数
+                    "google_added": google_added,
+                    "github_added": github_added,
+                    "failed_count": failed_count,  # 失效数量
+                    "removed_count": removed_total,  # 移除数量
+                    "net_growth": net_growth,  # 净增长
+                    "alive_count": alive_total  # 存活数量
+                }
+                enhanced_7day_data.append(enhanced_day)
+            
             # 将最近60天写入发布目录供前端使用
             stats_path = os.path.join(paths["sub"], "stats_daily.json")
             write_json(stats_path, hist[-60:])
+            
+            # 写入增强的7天数据供前端使用
+            enhanced_7day_path = os.path.join(paths["sub"], "stats_7day_enhanced.json")
+            write_json(enhanced_7day_path, enhanced_7day_data)
         except Exception:
             pass
 

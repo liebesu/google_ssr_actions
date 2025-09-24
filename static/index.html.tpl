@@ -393,6 +393,14 @@
             <canvas id="spark-alive-30" height="40"></canvas>
           </div>
         </div>
+        
+        <!-- 7天趋势详情表格 -->
+        <div class="trend-details">
+          <h4>📈 前七天详细趋势</h4>
+          <div id="trend7day-details" class="trend-table">
+            <div class="trend-loading">正在加载趋势数据...</div>
+          </div>
+        </div>
       </div>
 
       <div class="card card-recent">
@@ -739,7 +747,66 @@
               if(container) container.innerHTML = '<div class="serpapi-key-item error">加载失败</div>';
             }
           }
-          loadMeta(); loadDailyChart(); loadSparklines(); loadSerpAPIKeys(); loadRecentUrls();
+          
+          async function loadTrend7Day() {
+            try {
+              const r = await fetch('sub/stats_7day_enhanced.json', { cache:'no-cache' });
+              if (!r.ok) {
+                document.getElementById('trend7day-details').innerHTML = '<div class="trend-error">暂无趋势数据</div>';
+                return;
+              }
+              const data = await r.json();
+              
+              if (!data || data.length === 0) {
+                document.getElementById('trend7day-details').innerHTML = '<div class="trend-error">暂无趋势数据</div>';
+                return;
+              }
+              
+              // 生成表格HTML
+              let tableHtml = `
+                <div class="trend-table-header">
+                  <div class="trend-col">日期</div>
+                  <div class="trend-col">总数量</div>
+                  <div class="trend-col">新增</div>
+                  <div class="trend-col">失效</div>
+                  <div class="trend-col">存活</div>
+                  <div class="trend-col">净增长</div>
+                </div>
+              `;
+              
+              data.forEach(day => {
+                const date = day.date || '';
+                const total = day.total_count || 0;
+                const newAdded = day.new_added || 0;
+                const failed = day.failed_count || 0;
+                const alive = day.alive_count || 0;
+                const netGrowth = day.net_growth || 0;
+                
+                // 计算趋势箭头
+                const netGrowthIcon = netGrowth > 0 ? '📈' : netGrowth < 0 ? '📉' : '➡️';
+                const newAddedIcon = newAdded > 0 ? '🆕' : '';
+                const failedIcon = failed > 0 ? '❌' : '';
+                
+                tableHtml += `
+                  <div class="trend-table-row">
+                    <div class="trend-col trend-date">${date}</div>
+                    <div class="trend-col trend-total">${total}</div>
+                    <div class="trend-col trend-new">${newAddedIcon} ${newAdded}</div>
+                    <div class="trend-col trend-failed">${failedIcon} ${failed}</div>
+                    <div class="trend-col trend-alive">${alive}</div>
+                    <div class="trend-col trend-net">${netGrowthIcon} ${netGrowth}</div>
+                  </div>
+                `;
+              });
+              
+              document.getElementById('trend7day-details').innerHTML = tableHtml;
+            } catch(e) {
+              console.warn('7天趋势数据加载失败:', e);
+              document.getElementById('trend7day-details').innerHTML = '<div class="trend-error">加载失败</div>';
+            }
+          }
+          
+          loadMeta(); loadDailyChart(); loadSparklines(); loadSerpAPIKeys(); loadRecentUrls(); loadTrend7Day();
         </script>
       </div>
     </div>
