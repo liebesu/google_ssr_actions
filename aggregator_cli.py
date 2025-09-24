@@ -966,6 +966,7 @@ def main():
             "provider": provider,
             "source": ("github" if u in gh_norm_set else "google"),
             "first_seen": first_seen_map.get(u, date_today),
+            "first_seen_time": datetime.now(cn_tz).strftime("%H:%M:%S"),
             "detail_page": f"source.html?id={sid}",
             "quality_score": quality_score,
             "traffic": {

@@ -420,7 +420,12 @@
           </div>
           <div class="trend-description">
             <p class="trend-desc-text">
-              📊 <strong>图表说明</strong>：X轴为日期，Y轴为数量。绿色线条显示每日新增的订阅源数量，红色线条显示失效源数量，深绿色线条显示当前存活源总数，橙色线条显示净增长趋势。数据来源于Google搜索和GitHub发现。
+              📊 <strong>图表说明</strong>：X轴为日期，Y轴为数量。
+              <br>🟢 <strong>绿色线条</strong>：新增源（Google + GitHub 发现）
+              <br>🔴 <strong>红色线条</strong>：失效源（无法访问或已失效）
+              <br>🟢 <strong>深绿色线条</strong>：存活源（当前可用源总数）
+              <br>🟠 <strong>橙色线条</strong>：净增长（新增 - 失效）
+              <br>💡 数据来源于Google搜索和GitHub发现，实时更新。
             </p>
           </div>
         </div>
@@ -699,7 +704,7 @@
                     <div class="url-stats">
                       <span class="stat-item">📊 ${item.nodes_total || 0} 节点</span>
                       <span class="stat-item">💾 ${remaining}/${total} ${unit}</span>
-                      <span class="stat-item">📅 ${item.first_seen || '-'}</span>
+                      <span class="stat-item">📅 ${item.first_seen || '-'} ${item.first_seen_time || ''}</span>
                     </div>
                   </div>
                 `;
