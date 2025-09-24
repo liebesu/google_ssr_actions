@@ -48,6 +48,7 @@
               if (typeof loadDailyChart === 'function') loadDailyChart();
               if (typeof loadSparklines === 'function') loadSparklines();
               if (typeof loadSerpAPIKeys === 'function') loadSerpAPIKeys();
+              if (typeof loadRecentUrls === 'function') loadRecentUrls();
               console.log('✅ 所有内容加载函数已触发');
             } catch(e) {
               console.error('内容加载出错:', e);
@@ -94,6 +95,7 @@
               if (typeof loadDailyChart === 'function') loadDailyChart();
               if (typeof loadSparklines === 'function') loadSparklines();
               if (typeof loadSerpAPIKeys === 'function') loadSerpAPIKeys();
+              if (typeof loadRecentUrls === 'function') loadRecentUrls();
               console.log('✅ 自动加载所有内容完成');
             } catch(e) {
               console.error('自动内容加载出错:', e);
@@ -193,61 +195,155 @@
 
     <div class="grid">
       <div class="card card-metrics">
-        <h3>关键指标（7/30天）</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px">
-          <div>
-            <small>新增(7天)</small>
+        <h3>📊 关键指标趋势</h3>
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-header">
+              <span class="metric-label">📈 新增源 (7天)</span>
+              <span class="metric-value" id="new-count-7">-</span>
+            </div>
             <canvas id="spark-added-7" height="40"></canvas>
           </div>
-          <div>
-            <small>失效(7天)</small>
+          <div class="metric-item">
+            <div class="metric-header">
+              <span class="metric-label">📉 失效源 (7天)</span>
+              <span class="metric-value" id="removed-count-7">-</span>
+            </div>
             <canvas id="spark-removed-7" height="40"></canvas>
           </div>
-          <div>
-            <small>存活(30天)</small>
+          <div class="metric-item">
+            <div class="metric-header">
+              <span class="metric-label">💚 存活源 (30天)</span>
+              <span class="metric-value" id="alive-count-30">-</span>
+            </div>
             <canvas id="spark-alive-30" height="40"></canvas>
           </div>
         </div>
       </div>
+
+      <div class="card card-recent">
+        <h3>🆕 最新有效订阅源</h3>
+        <div id="recent-urls">
+          <div class="loading-placeholder">正在加载最新源...</div>
+        </div>
+      </div>
+
       <div class="card card-files">
-        <h3>订阅文件</h3>
-        <ul>
-          <li style="display:flex;align-items:center;gap:8px">
-            <a href="sub/all.txt"><code>sub/all.txt</code></a> 全量订阅 (文本格式)
-            <button onclick="copyFileUrl('sub/all.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
-          </li>
-          <li style="display:flex;align-items:center;gap:8px">
-            <a href="sub/all.yaml"><code>sub/all.yaml</code></a> Clash配置 (包含完整节点信息)
-            <button onclick="copyFileUrl('sub/all.yaml', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
-          </li>
-          <li style="display:flex;align-items:center;gap:8px">
-            <a href="sub/all_providers.yaml"><code>sub/all_providers.yaml</code></a> Clash配置 (使用proxy-providers)
-            <button onclick="copyFileUrl('sub/all_providers.yaml', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
-          </li>
-        </ul>
-        <p><small style="color:#94a3b8">📌 所有订阅文件和接口可直接访问，无需页面认证</small></p>
+        <h3>🔗 订阅文件</h3>
+        <div class="file-list">
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="sub/all.txt"><code>all.txt</code></a>
+                <span class="file-desc">全量订阅 (文本格式)</span>
+              </div>
+              <div class="file-stats">
+                <span class="nodes-count">__NODES__ 节点</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/all.txt', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制链接</span>
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="sub/all.yaml"><code>all.yaml</code></a>
+                <span class="file-desc">Clash配置 (完整节点)</span>
+              </div>
+              <div class="file-stats">
+                <span class="file-type">YAML</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/all.yaml', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制链接</span>
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="sub/all_providers.yaml"><code>all_providers.yaml</code></a>
+                <span class="file-desc">Clash配置 (代理提供商)</span>
+              </div>
+              <div class="file-stats">
+                <span class="file-type">YAML</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/all_providers.yaml', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制链接</span>
+            </button>
+          </div>
+        </div>
+        <p class="card-note">📌 所有订阅文件和接口可直接访问，无需页面认证</p>
       </div>
 
       <div class="card card-sources">
-        <h3>URL 源</h3>
-        <ul>
-          <li style="display:flex;align-items:center;gap:8px">
-            <a href="sub/urls.txt"><code>urls.txt</code></a> 当前可用源
-            <button onclick="copyFileUrl('sub/urls.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
-          </li>
-          <li style="display:flex;align-items:center;gap:8px">
-            <a href="sub/all_urls.txt"><code>all_urls.txt</code></a> 完整源列表
-            <button onclick="copyFileUrl('sub/all_urls.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
-          </li>
-          <li style="display:flex;align-items:center;gap:8px">
-            <a href="sub/google_urls.txt"><code>google_urls.txt</code></a> Google发现（__GCOUNT__）
-            <button onclick="copyFileUrl('sub/google_urls.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
-          </li>
-          <li style="display:flex;align-items:center;gap:8px">
-            <a href="sub/github_urls.txt"><code>github_urls.txt</code></a> GitHub发现（__GHCOUNT__）
-            <button onclick="copyFileUrl('sub/github_urls.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
-          </li>
-        </ul>
+        <h3>📂 URL源文件</h3>
+        <div class="file-list">
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="sub/urls.txt"><code>urls.txt</code></a>
+                <span class="file-desc">当前可用源</span>
+              </div>
+              <div class="file-stats">
+                <span class="status-badge available">✅ 已验证</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/urls.txt', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制</span>
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="sub/all_urls.txt"><code>all_urls.txt</code></a>
+                <span class="file-desc">完整源列表</span>
+              </div>
+              <div class="file-stats">
+                <span class="status-badge complete">📋 完整</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/all_urls.txt', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制</span>
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="sub/google_urls.txt"><code>google_urls.txt</code></a>
+                <span class="file-desc">Google发现</span>
+              </div>
+              <div class="file-stats">
+                <span class="count-badge">__GCOUNT__ 个</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/google_urls.txt', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制</span>
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="sub/github_urls.txt"><code>github_urls.txt</code></a>
+                <span class="file-desc">GitHub发现</span>
+              </div>
+              <div class="file-stats">
+                <span class="count-badge">__GHCOUNT__ 个</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/github_urls.txt', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       <div class="card card-health">
@@ -286,22 +382,55 @@
       </div>
 
       <div class="card card-extras">
-        <h3>辅助输出</h3>
-        <ul>
-          <li style="display:flex;align-items:center;gap:8px">
-            <a href="sub/github.txt"><code>github.txt</code></a> GitHub节点
-            <button onclick="copyFileUrl('sub/github.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
-          </li>
-          <li style="display:flex;align-items:center;gap:8px">
-            <a href="sub/proto/ss-base64.txt"><code>ss-base64.txt</code></a> SS Base64
-            <button onclick="copyFileUrl('sub/proto/ss-base64.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
-          </li>
-          <li style="display:flex;align-items:center;gap:8px">
-            <a href="health.json"><code>health.json</code></a> 健康信息
-            <button onclick="copyFileUrl('health.json', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
-          </li>
-        </ul>
-        <p><small style="color:#94a3b8">💡 API接口和JSON数据可通过程序直接调用</small></p>
+        <h3>🛠️ 辅助输出</h3>
+        <div class="file-list">
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="sub/github.txt"><code>github.txt</code></a>
+                <span class="file-desc">GitHub节点</span>
+              </div>
+              <div class="file-stats">
+                <span class="file-type">TXT</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/github.txt', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制</span>
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="sub/proto/ss-base64.txt"><code>ss-base64.txt</code></a>
+                <span class="file-desc">SS Base64编码</span>
+              </div>
+              <div class="file-stats">
+                <span class="file-type">Base64</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/proto/ss-base64.txt', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制</span>
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="health.json"><code>health.json</code></a>
+                <span class="file-desc">健康状态API</span>
+              </div>
+              <div class="file-stats">
+                <span class="file-type">JSON</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('health.json', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制</span>
+            </button>
+          </div>
+        </div>
+        <p class="card-note">💡 API接口和JSON数据可通过程序直接调用</p>
       </div>
 
       <div class="card card-wide card-details">
@@ -471,10 +600,79 @@
               const d = await r.json();
               const last7 = d.slice(-7);
               const last30 = d.slice(-30);
+              
+              // 更新指标数值
+              const newCount7 = last7.reduce((sum, x) => sum + (x.new_total||0), 0);
+              const removedCount7 = last7.reduce((sum, x) => sum + (x.removed_total||0), 0);
+              const aliveCount30 = last30.length > 0 ? last30[last30.length-1].alive_total||0 : 0;
+              
+              document.getElementById('new-count-7').textContent = newCount7;
+              document.getElementById('removed-count-7').textContent = removedCount7;
+              document.getElementById('alive-count-30').textContent = aliveCount30;
+              
               drawSparkline('spark-added-7', last7.map(x=>x.new_total||0), '#60a5fa');
               drawSparkline('spark-removed-7', last7.map(x=>x.removed_total||0), '#f87171');
               drawSparkline('spark-alive-30', last30.map(x=>x.alive_total||0), '#10b981');
             }catch(e){}
+          }
+
+          // 加载最新有效URL
+          async function loadRecentUrls() {
+            try {
+              const res = await fetch('sub/url_meta.json', { cache: 'no-cache' });
+              if (!res.ok) throw new Error('fetch failed');
+              let data = await res.json();
+              
+              // 筛选最新的有效源
+              data = (Array.isArray(data) ? data : []).filter(x=>x && x.available);
+              
+              // 按质量分和日期排序，取前5个
+              data.sort((a,b)=> {
+                const scoreA = (b.quality_score||0) - (a.quality_score||0);
+                if (scoreA !== 0) return scoreA;
+                return new Date(b.first_seen||'1970-01-01') - new Date(a.first_seen||'1970-01-01');
+              });
+              
+              const recentData = data.slice(0, 5);
+              const container = document.getElementById('recent-urls');
+              
+              if (recentData.length === 0) {
+                container.innerHTML = '<div class="no-data">暂无最新源</div>';
+                return;
+              }
+              
+              container.innerHTML = recentData.map(item => {
+                const host = item.host || new URL(item.url).hostname;
+                const traffic = item.traffic || {};
+                const remaining = traffic.remaining || '-';
+                const total = traffic.total || '-';
+                const unit = traffic.unit || '';
+                const quality = item.quality_score || 0;
+                const qualityColor = quality >= 80 ? '#10b981' : quality >= 60 ? '#60a5fa' : '#f59e0b';
+                
+                return `
+                  <div class="recent-url-item">
+                    <div class="url-header">
+                      <div class="url-title">
+                        <a href="${item.url}" target="_blank" class="url-link">${host}</a>
+                        <span class="quality-score" style="color: ${qualityColor}">质量: ${quality}</span>
+                      </div>
+                      <div class="url-actions">
+                        <button onclick="copyText('${item.url}')" class="copy-btn-mini">复制链接</button>
+                      </div>
+                    </div>
+                    <div class="url-stats">
+                      <span class="stat-item">📊 ${item.nodes_total || 0} 节点</span>
+                      <span class="stat-item">💾 ${remaining}/${total} ${unit}</span>
+                      <span class="stat-item">📅 ${item.first_seen || '-'}</span>
+                    </div>
+                  </div>
+                `;
+              }).join('');
+              
+            } catch(e) {
+              document.getElementById('recent-urls').innerHTML = '<div class="error-msg">加载失败</div>';
+            }
           }
 
           // 加载 SerpAPI 密钥详情
@@ -537,7 +735,7 @@
               if(container) container.innerHTML = '<div class="serpapi-key-item error">加载失败</div>';
             }
           }
-          loadMeta(); loadDailyChart(); loadSparklines(); loadSerpAPIKeys();
+          loadMeta(); loadDailyChart(); loadSparklines(); loadSerpAPIKeys(); loadRecentUrls();
         </script>
       </div>
     </div>

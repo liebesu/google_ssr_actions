@@ -16,6 +16,7 @@ body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, H
 .card-details { background: radial-gradient(120% 140% at 10% 0%, #0b1630 0%, #0a1122 60%, #0a1020 100%); border-color: #38bdf8; box-shadow: 0 18px 44px rgba(56,189,248,.45), 0 0 0 1px rgba(255,255,255,.03) inset; }
 .card-health { background: radial-gradient(120% 140% at 10% 0%, #170a3a 0%, #11082b 60%, #120a2e 100%); border-color: #e879f9; box-shadow: 0 14px 36px rgba(232,121,249,.42), 0 0 0 1px rgba(255,255,255,.04) inset; }
 .card-serpapi { background: radial-gradient(120% 140% at 10% 0%, #0a1a2e 0%, #0b1d30 60%, #0c1f32 100%); border-color: #06b6d4; box-shadow: 0 14px 36px rgba(6,182,212,.4), 0 0 0 1px rgba(255,255,255,.04) inset; }
+.card-recent { background: radial-gradient(120% 140% at 10% 0%, #0f2027 0%, #12242b 60%, #13252c 100%); border-color: #14b8a6; box-shadow: 0 14px 36px rgba(20,184,166,.4), 0 0 0 1px rgba(255,255,255,.04) inset; }
 .health-list { line-height: 1.8; color: #e5e7eb; }
 .serpapi-summary { display: flex; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
 .status-item { color: #e5e7eb; font-size: 14px; }
@@ -74,4 +75,55 @@ tbody tr:hover { background: rgba(59,130,246,.15); }
 .auth-input { width:100%; padding:10px 12px; background:#0b1220; border:1px solid #1f2937; border-radius: 10px; color:#e5e7eb; outline:none; }
 .auth-btn { margin-top:10px; width:100%; padding:10px 12px; border-radius:10px; border:1px solid #2563eb; background: linear-gradient(90deg,#1d4ed8,#2563eb,#1d4ed8); color:#e5e7eb; cursor:pointer; }
 .auth-err { color:#f87171; font-size: 12px; min-height: 16px; margin-top:6px; }
+
+/* 新样式 - 指标网格 */
+.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.metric-item { padding: 12px; background: rgba(15,23,42,.4); border: 1px solid rgba(59,130,246,.3); border-radius: 8px; }
+.metric-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.metric-label { font-size: 13px; color: #cbd5e1; }
+.metric-value { font-size: 16px; font-weight: 700; color: #60a5fa; }
+
+/* 文件列表样式 */
+.file-list { display: flex; flex-direction: column; gap: 8px; }
+.file-item { display: flex; justify-content: space-between; align-items: center; padding: 12px; background: rgba(15,23,42,.3); border: 1px solid #334155; border-radius: 8px; transition: all 0.2s ease; }
+.file-item:hover { background: rgba(15,23,42,.5); border-color: #475569; }
+.file-info { flex: 1; display: flex; justify-content: space-between; align-items: center; }
+.file-name { display: flex; flex-direction: column; gap: 2px; }
+.file-name code { font-size: 14px; }
+.file-desc { font-size: 12px; color: #94a3b8; }
+.file-stats { display: flex; gap: 6px; align-items: center; }
+.nodes-count { font-size: 12px; color: #10b981; font-weight: 500; }
+.file-type { font-size: 11px; padding: 2px 6px; background: rgba(96,165,250,.2); color: #60a5fa; border-radius: 4px; }
+.status-badge { font-size: 11px; padding: 2px 6px; border-radius: 4px; font-weight: 500; }
+.status-badge.available { background: rgba(16,185,129,.2); color: #10b981; }
+.status-badge.complete { background: rgba(156,163,175,.2); color: #d1d5db; }
+.count-badge { font-size: 11px; padding: 2px 6px; background: rgba(245,158,11,.2); color: #f59e0b; border-radius: 4px; font-weight: 500; }
+
+/* 复制按钮样式 */
+.copy-btn { padding: 6px 12px; background: #1f2937; border: 1px solid #374151; border-radius: 6px; color: #9ca3af; font-size: 12px; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 4px; }
+.copy-btn:hover { background: #374151; border-color: #4b5563; color: #e5e7eb; }
+.copy-btn:active { transform: translateY(1px); }
+.copy-icon { font-size: 11px; }
+.copy-text { font-weight: 500; }
+.copy-btn-mini { padding: 4px 8px; background: #1f2937; border: 1px solid #374151; border-radius: 4px; color: #9ca3af; font-size: 11px; cursor: pointer; transition: all 0.2s ease; }
+.copy-btn-mini:hover { background: #374151; color: #e5e7eb; }
+
+/* 最新URL样式 */
+.recent-url-item { padding: 12px; background: rgba(15,23,42,.4); border: 1px solid rgba(20,184,166,.3); border-radius: 8px; margin-bottom: 8px; transition: all 0.2s ease; }
+.recent-url-item:hover { background: rgba(15,23,42,.6); border-color: rgba(20,184,166,.5); }
+.url-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.url-title { display: flex; flex-direction: column; gap: 2px; }
+.url-link { color: #14b8a6; font-weight: 500; text-decoration: none; }
+.url-link:hover { text-decoration: underline; }
+.quality-score { font-size: 11px; font-weight: 600; }
+.url-stats { display: flex; gap: 12px; flex-wrap: wrap; }
+.stat-item { font-size: 11px; color: #94a3b8; display: flex; align-items: center; gap: 2px; }
+
+/* 加载状态 */
+.loading-placeholder { text-align: center; color: #94a3b8; padding: 20px; }
+.no-data { text-align: center; color: #6b7280; padding: 20px; }
+.error-msg { text-align: center; color: #ef4444; padding: 20px; }
+
+/* 卡片注释 */
+.card-note { margin-top: 12px; margin-bottom: 0; font-size: 12px; color: #94a3b8; }
 
