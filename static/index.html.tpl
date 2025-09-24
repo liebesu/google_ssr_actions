@@ -111,26 +111,54 @@
       console.log('❌ 认证失败，显示登录框');
       showAuth(); // 直接显示认证弹窗而不是跳转
     }
-    // 确保页面初始化正确
-    document.documentElement.style.display = 'none';
+    // 强制确保页面能够显示
+    console.log('🚀 页面初始化开始...');
     
-    // 添加多重初始化保障
-    document.addEventListener('DOMContentLoaded', gate);
-    window.addEventListener('load', function() {
-      // 如果页面加载完成后仍然隐藏，强制检查认证
-      if (document.documentElement.style.display === 'none') {
-        console.log('⚠️ 页面加载完成但仍隐藏，重新检查认证...');
-        gate();
-      }
+    // 先立即显示页面，然后进行认证检查
+    document.documentElement.style.display = '';
+    
+    // 延迟隐藏页面，给认证检查足够时间
+    setTimeout(function() {
+      console.log('🔐 开始认证检查，暂时隐藏页面...');
+      document.documentElement.style.display = 'none';
+      
+      // 立即进行认证检查
+      gate();
+      
+      // 超短时间fallback - 确保用户能看到内容
+      setTimeout(function() {
+        if (document.documentElement.style.display === 'none') {
+          console.log('⚠️ 1秒fallback - 强制显示认证框');
+          showAuth();
+        }
+      }, 1000);
+      
+      // 最终fallback - 无论如何都要显示
+      setTimeout(function() {
+        if (document.documentElement.style.display === 'none') {
+          console.log('🚨 最终fallback - 强制显示页面');
+          document.documentElement.style.display = '';
+          showAuth();
+        }
+      }, 2000);
+      
+    }, 100);
+    
+    // 多重事件监听保障
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('📄 DOM加载完成，检查认证状态...');
+      setTimeout(gate, 50);
     });
     
-    // 添加fallback机制
-    setTimeout(function() {
-      if (document.documentElement.style.display === 'none') {
-        console.log('⚠️ 超时fallback，强制显示认证框...');
-        showAuth();
-      }
-    }, 3000);
+    window.addEventListener('load', function() {
+      console.log('🌐 页面完全加载，最终检查...');
+      setTimeout(function() {
+        if (document.documentElement.style.display === 'none') {
+          console.log('⚠️ 页面加载完成但仍隐藏，强制显示认证框');
+          showAuth();
+        }
+      }, 100);
+    });
     // 根据是否有配额数据隐藏卡片
     document.addEventListener('DOMContentLoaded', ()=>{
       const qleft = '__QLEFT__'; const qcap = '__QCAP__'; const kok='__KOK__'; const kt='__KTOTAL__';

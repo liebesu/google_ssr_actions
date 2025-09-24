@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #0f172a; 
+            color: #e5e7eb; 
+            margin: 0; 
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1f2937;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .auth-box {
+            background: #374151;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #6b7280;
+            background: #1f2937;
+            color: #e5e7eb;
+        }
+        button {
+            background: #3b82f6;
+            cursor: pointer;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success { background: #10b981; }
+        .error { background: #ef4444; }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 页面显示测试</h1>
+        
+        <div id="status" class="status success">
+            ✅ 如果你能看到这个页面，说明基本HTML/CSS都正常
+        </div>
+        
+        <div class="auth-box">
+            <h3>认证测试</h3>
+            <p>用户名: liebesu</p>
+            <p>需要的密码哈希: 37092303...（参考主页面调试信息）</p>
+            
+            <input type="text" id="username" placeholder="用户名" value="liebesu">
+            <input type="password" id="password" placeholder="密码">
+            <button onclick="testAuth()">测试认证</button>
+            
+            <div id="result" class="status" style="background: #374151;">等待测试...</div>
+        </div>
+        
+        <div class="auth-box">
+            <h3>页面隐藏/显示测试</h3>
+            <button onclick="hidePage()">隐藏页面</button>
+            <button onclick="showPage()">显示页面</button>
+            <button onclick="testShowAuth()">测试显示认证框</button>
+        </div>
+        
+        <div id="auth-mask" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center;">
+            <div style="background: #1f2937; padding: 20px; border-radius: 10px; width: 300px;">
+                <h3>模拟认证框</h3>
+                <p>这是模拟的认证框</p>
+                <button onclick="closeAuth()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log('🔍 测试页面开始执行...');
+        
+        const AUTH_HASH = "37092303178fc51f57a52ea39e166a4954ec86c075de3a9df7a221c9ef7e0891";
+        const AUTH_USER = "liebesu";
+        
+        async function sha256(message) {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        
+        async function testAuth() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const result = document.getElementById('result');
+            
+            if (!password) {
+                result.className = 'status error';
+                result.textContent = '请输入密码';
+                return;
+            }
+            
+            try {
+                const hash = await sha256(password);
+                const userOk = username === AUTH_USER;
+                const passOk = hash.toLowerCase() === AUTH_HASH.toLowerCase();
+                
+                if (userOk && passOk) {
+                    result.className = 'status success';
+                    result.innerHTML = `✅ 认证成功！<br>用户名: ${username}<br>密码哈希: ${hash}`;
+                    
+                    // 模拟保存到localStorage
+                    localStorage.setItem('gauth', hash);
+                    localStorage.setItem('guser', username);
+                } else {
+                    result.className = 'status error';
+                    result.innerHTML = `❌ 认证失败<br>用户名验证: ${userOk ? '✅' : '❌'}<br>密码验证: ${passOk ? '✅' : '❌'}<br>计算哈希: ${hash}`;
+                }
+            } catch(e) {
+                result.className = 'status error';
+                result.textContent = '认证过程出错: ' + e.message;
+            }
+        }
+        
+        function hidePage() {
+            document.documentElement.style.display = 'none';
+            console.log('页面已隐藏');
+        }
+        
+        function showPage() {
+            document.documentElement.style.display = '';
+            console.log('页面已显示');
+        }
+        
+        function testShowAuth() {
+            document.getElementById('auth-mask').style.display = 'flex';
+            console.log('认证框已显示');
+        }
+        
+        function closeAuth() {
+            document.getElementById('auth-mask').style.display = 'none';
+            console.log('认证框已关闭');
+        }
+        
+        // 检查localStorage中的认证信息
+        window.onload = function() {
+            const storedAuth = localStorage.getItem('gauth');
+            const storedUser = localStorage.getItem('guser');
+            
+            if (storedAuth && storedUser) {
+                console.log('发现存储的认证信息:', { user: storedUser, auth: storedAuth.substring(0, 10) + '...' });
+            } else {
+                console.log('没有存储的认证信息');
+            }
+        };
+        
+        console.log('🎉 测试页面执行完成');
+    </script>
+</body>
+</html>

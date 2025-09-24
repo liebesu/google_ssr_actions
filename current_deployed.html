@@ -111,54 +111,26 @@
       console.log('❌ 认证失败，显示登录框');
       showAuth(); // 直接显示认证弹窗而不是跳转
     }
-    // 强制确保页面能够显示
-    console.log('🚀 页面初始化开始...');
+    // 确保页面初始化正确
+    document.documentElement.style.display = 'none';
     
-    // 先立即显示页面，然后进行认证检查
-    document.documentElement.style.display = '';
-    
-    // 延迟隐藏页面，给认证检查足够时间
-    setTimeout(function() {
-      console.log('🔐 开始认证检查，暂时隐藏页面...');
-      document.documentElement.style.display = 'none';
-      
-      // 立即进行认证检查
-      gate();
-      
-      // 超短时间fallback - 确保用户能看到内容
-      setTimeout(function() {
-        if (document.documentElement.style.display === 'none') {
-          console.log('⚠️ 1秒fallback - 强制显示认证框');
-          showAuth();
-        }
-      }, 1000);
-      
-      // 最终fallback - 无论如何都要显示
-      setTimeout(function() {
-        if (document.documentElement.style.display === 'none') {
-          console.log('🚨 最终fallback - 强制显示页面');
-          document.documentElement.style.display = '';
-          showAuth();
-        }
-      }, 2000);
-      
-    }, 100);
-    
-    // 多重事件监听保障
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('📄 DOM加载完成，检查认证状态...');
-      setTimeout(gate, 50);
-    });
-    
+    // 添加多重初始化保障
+    document.addEventListener('DOMContentLoaded', gate);
     window.addEventListener('load', function() {
-      console.log('🌐 页面完全加载，最终检查...');
-      setTimeout(function() {
-        if (document.documentElement.style.display === 'none') {
-          console.log('⚠️ 页面加载完成但仍隐藏，强制显示认证框');
-          showAuth();
-        }
-      }, 100);
+      // 如果页面加载完成后仍然隐藏，强制检查认证
+      if (document.documentElement.style.display === 'none') {
+        console.log('⚠️ 页面加载完成但仍隐藏，重新检查认证...');
+        gate();
+      }
     });
+    
+    // 添加fallback机制
+    setTimeout(function() {
+      if (document.documentElement.style.display === 'none') {
+        console.log('⚠️ 超时fallback，强制显示认证框...');
+        showAuth();
+      }
+    }, 3000);
     // 根据是否有配额数据隐藏卡片
     document.addEventListener('DOMContentLoaded', ()=>{
       const qleft = '472'; const qcap = '1250'; const kok='5'; const kt='5';
@@ -188,15 +160,15 @@
     </div>
     <div class="header">
       <h1>Google SSR Actions</h1>
-      <small>构建时间(中国时区)：2025-09-24 18:00:00</small>
+      <small>构建时间(中国时区)：2025-09-24 10:28:59</small>
     </div>
-    <div class="subtitle">源 108/192 · 节点 1200 · 新增 0 · 移除 4</div>
+    <div class="subtitle">源 113/193 · 节点 1200 · 新增 4 · 移除 0</div>
 
     <div class="stats" id="stats-cards">
       <div class="stat quota" data-hide="q"><div class="num">472</div><div>剩余额度</div></div>
       <div class="stat quota" data-hide="q"><div class="num">1250</div><div>总额度</div></div>
       <div class="stat quota" data-hide="q"><div class="num">5/5</div><div>可用密钥/总密钥</div></div>
-      <div class="stat"><div class="num">2025-09-24 21:00:00</div><div>下次更新时间(中国时区)</div></div>
+      <div class="stat"><div class="num">2025-09-24 13:28:59</div><div>下次更新时间(中国时区)</div></div>
     </div>
 
     <div class="grid">
@@ -232,7 +204,7 @@
         <ul>
           <li><a href="sub/urls.txt"><code>urls.txt</code></a> 当前可用源</li>
           <li><a href="sub/all_urls.txt"><code>all_urls.txt</code></a> 完整源列表</li>
-          <li><a href="sub/google_urls.txt"><code>google_urls.txt</code></a> Google发现（103）</li>
+          <li><a href="sub/google_urls.txt"><code>google_urls.txt</code></a> Google发现（108）</li>
           <li><a href="sub/github_urls.txt"><code>github_urls.txt</code></a> GitHub发现（5）</li>
         </ul>
       </div>
@@ -240,11 +212,11 @@
       <div class="card card-health">
         <h3>健康信息</h3>
         <ul class="health-list">
-          <li>构建时间(中国时区)：<b>2025-09-24 18:00:00</b></li>
-          <li>下次更新时间(中国时区)：<b>2025-09-24 21:00:00</b></li>
-          <li>源：<b>108/192</b> · 新增 <b>0</b> · 移除 <b>4</b></li>
-          <li>节点：<b>1200</b> · 协议 SS <b>147</b> | VMess <b>53</b> | VLESS <b>77</b> | Trojan <b>39</b> | HY2 <b>884</b></li>
-          <li>来源：Google <b>103</b> | GitHub <b>5</b></li>
+          <li>构建时间(中国时区)：<b>2025-09-24 10:28:59</b></li>
+          <li>下次更新时间(中国时区)：<b>2025-09-24 13:28:59</b></li>
+          <li>源：<b>113/193</b> · 新增 <b>4</b> · 移除 <b>0</b></li>
+          <li>节点：<b>1200</b> · 协议 SS <b>147</b> | VMess <b>81</b> | VLESS <b>77</b> | Trojan <b>39</b> | HY2 <b>856</b></li>
+          <li>来源：Google <b>108</b> | GitHub <b>5</b></li>
         </ul>
       </div>
 
@@ -265,10 +237,10 @@
         <h3>协议分布</h3>
         <ul>
           <li>SS：147</li>
-          <li>VMess：53</li>
+          <li>VMess：81</li>
           <li>VLESS：77</li>
           <li>Trojan：39</li>
-          <li>Hysteria2：884</li>
+          <li>Hysteria2：856</li>
         </ul>
       </div>
 
@@ -500,7 +472,7 @@
       </div>
     </div>
 
-    <p><small>仅展示可用源（自动过滤失效/超额/限速来源）。 构建(UTC)：2025-09-24 10:00:00 · 下次(UTC)：2025-09-24 13:00:00</small></p>
+    <p><small>仅展示可用源（自动过滤失效/超额/限速来源）。 构建(UTC)：2025-09-24 02:28:59 · 下次(UTC)：2025-09-24 05:28:59</small></p>
   </div>
 </body>
 </html>
