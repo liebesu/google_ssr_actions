@@ -508,5 +508,11 @@
     "last_reason": "body-hint",
     "last_at": 1758717883.6421359,
     "next_allowed_at": 1758732283.6421359
+  },
+  "https://eeeeehhhoyfhaihfg.qrfly.me/api/v1/client/subscribe?token=d45a097f5670e68cbc7ca00378d98fb6": {
+    "hits": 1,
+    "last_reason": "body-hint",
+    "last_at": 1758723461.587344,
+    "next_allowed_at": 1758724361.587344
   }
 }
