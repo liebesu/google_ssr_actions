@@ -282,28 +282,28 @@
     "next_allowed_at": 1758699071.553831
   },
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1758670271.553831,
-    "next_allowed_at": 1758684671.553831
+    "last_at": 1758684910.7975519,
+    "next_allowed_at": 1758713710.7975519
   },
   "https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1758670271.553831,
-    "next_allowed_at": 1758684671.553831
+    "last_at": 1758684910.7975519,
+    "next_allowed_at": 1758713710.7975519
   },
   "https://subscribe.shenlong123.top/api/v1/client/subscribe?token=4823ebcbdfa2228e30be1c760872e9cf": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1758670271.553831,
-    "next_allowed_at": 1758684671.553831
+    "last_at": 1758684910.7975519,
+    "next_allowed_at": 1758713710.7975519
   },
   "https://sub.soyorin.shop/api/v1/client/subscribe?token=f62d458ba609530a3e208eef5b8e871d": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1758662603.3603063,
-    "next_allowed_at": 1758664403.3603063
+    "last_at": 1758684910.7975519,
+    "next_allowed_at": 1758688510.7975519
   },
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5": {
     "hits": 4,
@@ -318,9 +318,15 @@
     "next_allowed_at": 1758687896.6207955
   },
   "https://tiziya-zone-35j5gzft7lc3-1323316545.eo-edgefunctions1.com/api/v1/client/subscribe?token=2704165367b5aaef3eec9d6f6058292c": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "body-hint",
-    "last_at": 1758676643.811435,
-    "next_allowed_at": 1758678443.811435
+    "last_at": 1758684910.7975519,
+    "next_allowed_at": 1758688510.7975519
+  },
+  "https://pwac.anliangjifeiyun.eu/api/v1/client/subscribe?token=f858b37e9f7efc29d7a050ed3b47d418": {
+    "hits": 1,
+    "last_reason": "body-hint",
+    "last_at": 1758684910.7975519,
+    "next_allowed_at": 1758685810.7975519
   }
 }
