@@ -516,21 +516,21 @@
     "next_allowed_at": 1758756105.6366272
   },
   "http://148.135.67.219/api/v1/client/subscribe?token=5fdc037af8a1d09c7": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1758748905.6366272,
-    "next_allowed_at": 1758750705.6366272
+    "last_at": 1758755743.3820004,
+    "next_allowed_at": 1758759343.3820004
   },
   "https://qufanfan.info/api/v1/client/subscribe?token=00d1eff0820cffa7b904f3ed0dcee8d9": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1758748905.6366272,
-    "next_allowed_at": 1758749805.6366272
+    "last_at": 1758755743.3820004,
+    "next_allowed_at": 1758757543.3820004
   },
   "https://www.djjc.cfd/api/v1/client/subscribe?token=eb6fb117e1c1cbe8041e0e0a00935b85": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1758748905.6366272,
-    "next_allowed_at": 1758749805.6366272
+    "last_at": 1758755743.3820004,
+    "next_allowed_at": 1758757543.3820004
   }
 }
