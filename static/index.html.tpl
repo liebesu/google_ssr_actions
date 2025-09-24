@@ -403,20 +403,25 @@
           <div class="trend-legend">
             <div class="legend-item">
               <span class="legend-color" style="background: #10b981;"></span>
-              <span class="legend-label">新增源</span>
+              <span class="legend-label">新增源 (Google + GitHub 发现)</span>
             </div>
             <div class="legend-item">
               <span class="legend-color" style="background: #ef4444;"></span>
-              <span class="legend-label">失效源</span>
+              <span class="legend-label">失效源 (无法访问或已失效)</span>
             </div>
             <div class="legend-item">
               <span class="legend-color" style="background: #22c55e;"></span>
-              <span class="legend-label">存活源</span>
+              <span class="legend-label">存活源 (当前可用源总数)</span>
             </div>
             <div class="legend-item">
               <span class="legend-color" style="background: #f59e0b;"></span>
-              <span class="legend-label">净增长</span>
+              <span class="legend-label">净增长 (新增 - 失效)</span>
             </div>
+          </div>
+          <div class="trend-description">
+            <p class="trend-desc-text">
+              📊 <strong>图表说明</strong>：X轴为日期，Y轴为数量。绿色线条显示每日新增的订阅源数量，红色线条显示失效源数量，深绿色线条显示当前存活源总数，橙色线条显示净增长趋势。数据来源于Google搜索和GitHub发现。
+            </p>
           </div>
         </div>
       </div>
