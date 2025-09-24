@@ -706,12 +706,37 @@ def main():
     # Ensure directories
     paths = ensure_dirs(output_dir)
 
-    # Write outputs
-    write_text(os.path.join(paths["sub"], "all.txt"), "\n".join(all_nodes) + ("\n" if all_nodes else ""))
+    # 只有经过验证的可用源的节点才会被包含在对外提供的订阅文件中
+    # 重新获取节点，只从 refined_alive_urls 中获取
+    verified_nodes: List[str] = []
+    print(f"[info] 从 {len(refined_alive_urls)} 个验证可用源重新获取节点...")
+    
+    for u in refined_alive_urls:
+        if should_skip_due_to_backoff(rate_state, u, now_ts):
+            continue
+        body, code, sample, lat_ms = fetch_subscription(u)
+        if not body:
+            continue
+        lines = split_subscription_content_to_lines(body)
+        for ln in lines:
+            n = normalize_node_line(ln)
+            if n:
+                verified_nodes.append(n)
+    
+    # 去重和限制数量
+    if args.dedup:
+        verified_nodes = list(dict.fromkeys(verified_nodes))
+    if args.max and len(verified_nodes) > args.max:
+        verified_nodes = verified_nodes[:args.max]
+    
+    print(f"[info] 从验证源获取到 {len(verified_nodes)} 个节点用于对外订阅文件")
+    
+    # Write outputs - 只包含验证可用源的节点
+    write_text(os.path.join(paths["sub"], "all.txt"), "\n".join(verified_nodes) + ("\n" if verified_nodes else ""))
     # Clash configuration YAML using proxy-providers pointing to a provider file we also publish
     if args.public_base:
         # publish a provider list (just URIs) so Clash can ingest it predictably
-        provider_list = {"proxies": all_nodes}
+        provider_list = {"proxies": verified_nodes}
         write_text(os.path.join(paths["providers"], "all.yaml"), yaml.safe_dump(provider_list, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
         provider_url = args.public_base.rstrip("/") + "/sub/providers/all.yaml"
         clash_yaml = {
@@ -719,10 +744,10 @@ def main():
             "allow-lan": False,
             "mode": "rule",
             "log-level": "info",
-            "proxies": all_nodes,  # 直接包含所有节点
+            "proxies": verified_nodes,  # 直接包含所有节点
             "proxy-groups": [
-                {"name": "Node-Select", "type": "select", "proxies": ["Auto", "DIRECT"] + all_nodes[:50] if len(all_nodes) > 0 else ["Auto", "DIRECT"]},  # 限制前50个节点避免配置过大
-                {"name": "Auto", "type": "url-test", "proxies": all_nodes[:30] if len(all_nodes) > 0 else ["DIRECT"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Node-Select", "type": "select", "proxies": ["Auto", "DIRECT"] + verified_nodes[:50] if len(verified_nodes) > 0 else ["Auto", "DIRECT"]},  # 限制前50个节点避免配置过大
+                {"name": "Auto", "type": "url-test", "proxies": verified_nodes[:30] if len(verified_nodes) > 0 else ["DIRECT"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
                 {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
                 {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
                 {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
@@ -979,10 +1004,23 @@ def main():
     # 二次可用性筛选：仅保留有效且未满额/未用尽且有节点的源
     refined_alive_urls = [m["url"] for m in url_meta if m.get("available")]
 
-    # 写入各种URL文件（基于 refined 列表）
+    # 写入各种URL文件
     write_json(live_out_path, refined_alive_urls)
+    
+    # 文件分类说明：
+    # 1. all_urls.txt: 完整源列表（包含所有发现的源，无任何过滤）
+    # 2. 其他文件: 只包含经过以下验证的可用源：
+    #    - 可访问性检查：能否正常访问
+    #    - 有效性验证：是否失效 
+    #    - 余额检查：是否有剩余流量
+    #    - 质量评估：综合性能评分
+    
+    # urls.txt: 只包含经过分析验证的可用源
     write_text(os.path.join(paths["sub"], "urls.txt"), "\n".join(refined_alive_urls) + ("\n" if refined_alive_urls else ""))
-    write_text(os.path.join(paths["sub"], "all_urls.txt"), "\n".join(refined_alive_urls) + ("\n" if refined_alive_urls else ""))
+    
+    # all_urls.txt: 完整源列表（未经过滤的原始发现源）
+    all_discovered_urls = list(candidates)
+    write_text(os.path.join(paths["sub"], "all_urls.txt"), "\n".join(all_discovered_urls) + ("\n" if all_discovered_urls else ""))
 
     # 分离GitHub和Google搜索发现的URL（基于 refined 列表）
     github_alive_urls: List[str] = []
@@ -994,7 +1032,7 @@ def main():
             gh_set_urls = set()
         github_alive_urls = [u for u in refined_alive_urls if u in gh_set_urls]
         write_text(os.path.join(paths["sub"], "github_urls.txt"), "\n".join(github_alive_urls) + ("\n" if github_alive_urls else ""))
-        # Google搜索发现的URL（非GitHub来源）
+        # Google搜索发现的URL（非GitHub来源，只包含验证可用的）
         google_alive_urls = [u for u in refined_alive_urls if u not in gh_set_urls]
         write_text(os.path.join(paths["sub"], "google_urls.txt"), "\n".join(google_alive_urls) + ("\n" if google_alive_urls else ""))
     else:
@@ -1037,10 +1075,10 @@ def main():
         "source_alive": len(refined_alive_urls),
         "sources_new": sources_new,
         "sources_removed": sources_removed,
-        "nodes_total": len(all_nodes),
+        "nodes_total": len(verified_nodes),
         "nodes_before_dedup": nodes_before_dedup,
-        "nodes_after_dedup": len(all_nodes),
-        "dedup_ratio": round(1.0 - (len(all_nodes) / nodes_before_dedup), 4) if nodes_before_dedup else 0.0,
+        "nodes_after_dedup": len(verified_nodes),
+        "dedup_ratio": round(1.0 - (len(verified_nodes) / nodes_before_dedup), 4) if nodes_before_dedup else 0.0,
         "parse_ok_rate": round((parse_ok_count / max(1, len(alive_urls))), 4),
         "protocol_counts": protocol_counts,
         "github_urls_count": len(github_alive_urls),
@@ -1116,7 +1154,7 @@ def main():
         except Exception:
             pass
 
-    print(f"[ok] sources: {len(candidates)}, alive: {len(alive_urls)}, nodes: {len(all_nodes)}")
+    print(f"[ok] sources: {len(candidates)}, alive: {len(alive_urls)}, verified: {len(refined_alive_urls)}, nodes: {len(verified_nodes)}")
 
 
 if __name__ == "__main__":
