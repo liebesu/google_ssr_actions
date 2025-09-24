@@ -1,0 +1,73 @@
+{
+  "build_time_utc": "2025-09-24 03:19:04",
+  "build_time_cn": "2025-09-24 11:19:04",
+  "next_run_utc": "2025-09-24 06:19:04",
+  "next_run_cn": "2025-09-24 14:19:04",
+  "source_alive": 108,
+  "source_total": 192,
+  "nodes_total": 1200,
+  "sources_new": 0,
+  "sources_removed": 4,
+  "quota_total_left": 472,
+  "quota_total_capacity": 1250,
+  "keys_ok": 5,
+  "keys_total": 5,
+  "google_urls_count": 103,
+  "github_urls_count": 5,
+  "protocol_counts": {
+    "ss": 147,
+    "vmess": 53,
+    "vless": 77,
+    "trojan": 39,
+    "hysteria2": 884
+  },
+  "serpapi_keys_detail": [
+    {
+      "index": 1,
+      "key_masked": "xxxx...x1ff",
+      "used_searches": 150,
+      "searches_per_month": 250,
+      "total_searches_left": 100,
+      "reset_date": "2025-10-05",
+      "status": "active"
+    },
+    {
+      "index": 2,
+      "key_masked": "xxxx...x6a6",
+      "used_searches": 180,
+      "searches_per_month": 250,
+      "total_searches_left": 70,
+      "reset_date": "2025-10-10",
+      "status": "active"
+    },
+    {
+      "index": 3,
+      "key_masked": "xxxx...x830",
+      "used_searches": 200,
+      "searches_per_month": 250,
+      "total_searches_left": 50,
+      "reset_date": "2025-10-10",
+      "status": "active"
+    },
+    {
+      "index": 4,
+      "key_masked": "xxxx...x70a",
+      "used_searches": 230,
+      "searches_per_month": 250,
+      "total_searches_left": 20,
+      "reset_date": "2025-10-11",
+      "status": "active"
+    },
+    {
+      "index": 5,
+      "key_masked": "xxxx...xdaa",
+      "used_searches": 248,
+      "searches_per_month": 250,
+      "total_searches_left": 2,
+      "reset_date": "2025-10-21",
+      "status": "active"
+    }
+  ],
+  "auth_sha256": "1dd2557b6334b098dc895f52fe46add7880094aec59a2eece3e4c5da2fc79f86",
+  "auth_user": "liebesu"
+}
