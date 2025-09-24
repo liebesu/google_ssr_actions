@@ -194,40 +194,7 @@
     </div>
 
     <div class="grid">
-      <div class="card card-metrics">
-        <h3>📊 关键指标趋势</h3>
-        <div class="metrics-grid">
-          <div class="metric-item">
-            <div class="metric-header">
-              <span class="metric-label">📈 新增源 (7天)</span>
-              <span class="metric-value" id="new-count-7">-</span>
-            </div>
-            <canvas id="spark-added-7" height="40"></canvas>
-          </div>
-          <div class="metric-item">
-            <div class="metric-header">
-              <span class="metric-label">📉 失效源 (7天)</span>
-              <span class="metric-value" id="removed-count-7">-</span>
-            </div>
-            <canvas id="spark-removed-7" height="40"></canvas>
-          </div>
-          <div class="metric-item">
-            <div class="metric-header">
-              <span class="metric-label">💚 存活源 (30天)</span>
-              <span class="metric-value" id="alive-count-30">-</span>
-            </div>
-            <canvas id="spark-alive-30" height="40"></canvas>
-          </div>
-        </div>
-      </div>
-
-      <div class="card card-recent">
-        <h3>🆕 最新有效订阅源</h3>
-        <div id="recent-urls">
-          <div class="loading-placeholder">正在加载最新源...</div>
-        </div>
-      </div>
-
+      <!-- 重要卡片优先显示 -->
       <div class="card card-files">
         <h3>🔗 订阅文件</h3>
         <div class="file-list">
@@ -280,6 +247,7 @@
         <p class="card-note">📌 所有订阅文件和接口可直接访问，无需页面认证</p>
       </div>
 
+      <!-- URL源文件卡片 -->
       <div class="card card-sources">
         <h3>📂 URL源文件</h3>
         <div class="file-list">
@@ -346,41 +314,7 @@
         </div>
       </div>
 
-      <div class="card card-health">
-        <h3>健康信息</h3>
-        <ul class="health-list">
-          <li>构建时间(中国时区)：<b>__TS_CN__</b></li>
-          <li>下次更新时间(中国时区)：<b>__NEXT_CN__</b></li>
-          <li>源：<b>__ALIVE__/__TOTAL__</b> · 新增 <b>__NEW__</b> · 移除 <b>__REMOVED__</b></li>
-          <li>节点：<b>__NODES__</b> · 协议 SS <b>__SS__</b> | VMess <b>__VMESS__</b> | VLESS <b>__VLESS__</b> | Trojan <b>__TROJAN__</b> | HY2 <b>__HY2__</b></li>
-          <li>来源：Google <b>__GCOUNT__</b> | GitHub <b>__GHCOUNT__</b></li>
-        </ul>
-      </div>
-
-      <div class="card card-serpapi">
-        <h3>SerpAPI 密钥状态</h3>
-        <div id="serpapi-status">
-          <div class="serpapi-summary">
-            <span class="status-item">可用密钥: <b id="keys-ok">__KOK__</b>/<b id="keys-total">__KTOTAL__</b></span>
-            <span class="status-item">总剩余额度: <b id="quota-left">__QLEFT__</b>/<b id="quota-cap">__QCAP__</b></span>
-          </div>
-          <div id="serpapi-keys-list" class="serpapi-keys-list">
-            <!-- 动态加载密钥详情 -->
-          </div>
-        </div>
-      </div>
-
-      <div class="card card-protocols">
-        <h3>协议分布</h3>
-        <ul>
-          <li>SS：__SS__</li>
-          <li>VMess：__VMESS__</li>
-          <li>VLESS：__VLESS__</li>
-          <li>Trojan：__TROJAN__</li>
-          <li>Hysteria2：__HY2__</li>
-        </ul>
-      </div>
-
+      <!-- 辅助输出卡片 -->
       <div class="card card-extras">
         <h3>🛠️ 辅助输出</h3>
         <div class="file-list">
@@ -431,6 +365,76 @@
           </div>
         </div>
         <p class="card-note">💡 API接口和JSON数据可通过程序直接调用</p>
+      </div>
+
+      <!-- 其他卡片 -->
+      <div class="card card-metrics">
+        <h3>📊 关键指标趋势</h3>
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-header">
+              <span class="metric-label">📈 新增源 (7天)</span>
+              <span class="metric-value" id="new-count-7">-</span>
+            </div>
+            <canvas id="spark-added-7" height="40"></canvas>
+          </div>
+          <div class="metric-item">
+            <div class="metric-header">
+              <span class="metric-label">📉 失效源 (7天)</span>
+              <span class="metric-value" id="removed-count-7">-</span>
+            </div>
+            <canvas id="spark-removed-7" height="40"></canvas>
+          </div>
+          <div class="metric-item">
+            <div class="metric-header">
+              <span class="metric-label">💚 存活源 (30天)</span>
+              <span class="metric-value" id="alive-count-30">-</span>
+            </div>
+            <canvas id="spark-alive-30" height="40"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-recent">
+        <h3>🆕 最新有效订阅源</h3>
+        <div id="recent-urls">
+          <div class="loading-placeholder">正在加载最新源...</div>
+        </div>
+      </div>
+
+      <div class="card card-health">
+        <h3>健康信息</h3>
+        <ul class="health-list">
+          <li>构建时间(中国时区)：<b>__TS_CN__</b></li>
+          <li>下次更新时间(中国时区)：<b>__NEXT_CN__</b></li>
+          <li>源：<b>__ALIVE__/__TOTAL__</b> · 新增 <b>__NEW__</b> · 移除 <b>__REMOVED__</b></li>
+          <li>节点：<b>__NODES__</b> · 协议 SS <b>__SS__</b> | VMess <b>__VMESS__</b> | VLESS <b>__VLESS__</b> | Trojan <b>__TROJAN__</b> | HY2 <b>__HY2__</b></li>
+          <li>来源：Google <b>__GCOUNT__</b> | GitHub <b>__GHCOUNT__</b></li>
+        </ul>
+      </div>
+
+      <div class="card card-serpapi">
+        <h3>SerpAPI 密钥状态</h3>
+        <div id="serpapi-status">
+          <div class="serpapi-summary">
+            <span class="status-item">可用密钥: <b id="keys-ok">__KOK__</b>/<b id="keys-total">__KTOTAL__</b></span>
+            <span class="status-item">总剩余额度: <b id="quota-left">__QLEFT__</b>/<b id="quota-cap">__QCAP__</b></span>
+          </div>
+          <div id="serpapi-keys-list" class="serpapi-keys-list">
+            <!-- 动态加载密钥详情 -->
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-protocols">
+        <h3>协议分布</h3>
+        <ul>
+          <li>SS：__SS__</li>
+          <li>VMess：__VMESS__</li>
+          <li>VLESS：__VLESS__</li>
+          <li>Trojan：__TROJAN__</li>
+          <li>Hysteria2：__HY2__</li>
+        </ul>
       </div>
 
       <div class="card card-wide card-details">
