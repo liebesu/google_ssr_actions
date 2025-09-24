@@ -572,11 +572,11 @@ def main():
             for i, key in enumerate(actual_keys):
                 key_detail = {
                     "index": i + 1,
-                    "success": False,
-                    "total_searches_left": 0,
-                    "searches_per_month": 0,
-                    "used_searches": 0,
-                    "reset_date": "",
+                "success": False,
+                "total_searches_left": 0,
+                "searches_per_month": 0,
+                "used_searches": 0,
+                "reset_date": "",
                     "key_masked": key[:8] + "..." if len(key) > 8 else key,
                     "error": f"Unable to check quota: {str(e)}"
                 }
@@ -706,37 +706,13 @@ def main():
     # Ensure directories
     paths = ensure_dirs(output_dir)
 
-    # 只有经过验证的可用源的节点才会被包含在对外提供的订阅文件中
-    # 重新获取节点，只从 refined_alive_urls 中获取
-    verified_nodes: List[str] = []
-    print(f"[info] 从 {len(refined_alive_urls)} 个验证可用源重新获取节点...")
+    # Write outputs - 临时使用原始的 all_nodes，稍后会被 verified_nodes 替换
+    write_text(os.path.join(paths["sub"], "all.txt"), "\n".join(all_nodes) + ("\n" if all_nodes else ""))
     
-    for u in refined_alive_urls:
-        if should_skip_due_to_backoff(rate_state, u, now_ts):
-            continue
-        body, code, sample, lat_ms = fetch_subscription(u)
-        if not body:
-            continue
-        lines = split_subscription_content_to_lines(body)
-        for ln in lines:
-            n = normalize_node_line(ln)
-            if n:
-                verified_nodes.append(n)
-    
-    # 去重和限制数量
-    if args.dedup:
-        verified_nodes = list(dict.fromkeys(verified_nodes))
-    if args.max and len(verified_nodes) > args.max:
-        verified_nodes = verified_nodes[:args.max]
-    
-    print(f"[info] 从验证源获取到 {len(verified_nodes)} 个节点用于对外订阅文件")
-    
-    # Write outputs - 只包含验证可用源的节点
-    write_text(os.path.join(paths["sub"], "all.txt"), "\n".join(verified_nodes) + ("\n" if verified_nodes else ""))
     # Clash configuration YAML using proxy-providers pointing to a provider file we also publish
     if args.public_base:
         # publish a provider list (just URIs) so Clash can ingest it predictably
-        provider_list = {"proxies": verified_nodes}
+        provider_list = {"proxies": all_nodes}
         write_text(os.path.join(paths["providers"], "all.yaml"), yaml.safe_dump(provider_list, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
         provider_url = args.public_base.rstrip("/") + "/sub/providers/all.yaml"
         clash_yaml = {
@@ -744,10 +720,10 @@ def main():
             "allow-lan": False,
             "mode": "rule",
             "log-level": "info",
-            "proxies": verified_nodes,  # 直接包含所有节点
+            "proxies": all_nodes,  # 直接包含所有节点
             "proxy-groups": [
-                {"name": "Node-Select", "type": "select", "proxies": ["Auto", "DIRECT"] + verified_nodes[:50] if len(verified_nodes) > 0 else ["Auto", "DIRECT"]},  # 限制前50个节点避免配置过大
-                {"name": "Auto", "type": "url-test", "proxies": verified_nodes[:30] if len(verified_nodes) > 0 else ["DIRECT"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Node-Select", "type": "select", "proxies": ["Auto", "DIRECT"] + all_nodes[:50] if len(all_nodes) > 0 else ["Auto", "DIRECT"]},  # 限制前50个节点避免配置过大
+                {"name": "Auto", "type": "url-test", "proxies": all_nodes[:30] if len(all_nodes) > 0 else ["DIRECT"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
                 {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
                 {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
                 {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
@@ -1003,6 +979,161 @@ def main():
 
     # 二次可用性筛选：仅保留有效且未满额/未用尽且有节点的源
     refined_alive_urls = [m["url"] for m in url_meta if m.get("available")]
+
+    # 只有经过验证的可用源的节点才会被包含在对外提供的订阅文件中
+    # 重新获取节点，只从 refined_alive_urls 中获取
+    verified_nodes: List[str] = []
+    print(f"[info] 从 {len(refined_alive_urls)} 个验证可用源重新获取节点...")
+    
+    for u in refined_alive_urls:
+        if should_skip_due_to_backoff(rate_state, u, now_ts):
+            continue
+        body, code, sample, lat_ms = fetch_subscription(u)
+        if not body:
+            continue
+        lines = split_subscription_content_to_lines(body)
+        for ln in lines:
+            n = normalize_node_line(ln)
+            if n:
+                verified_nodes.append(n)
+    
+    # 去重和限制数量
+    nodes_before_dedup = len(verified_nodes)  # 记录去重前的数量
+    if args.dedup:
+        verified_nodes = list(dict.fromkeys(verified_nodes))
+    if args.max and len(verified_nodes) > args.max:
+        verified_nodes = verified_nodes[:args.max]
+    
+    print(f"[info] 从验证源获取到 {len(verified_nodes)} 个节点用于对外订阅文件")
+    
+    # 更新订阅文件 - 只包含验证可用源的节点
+    write_text(os.path.join(paths["sub"], "all.txt"), "\n".join(verified_nodes) + ("\n" if verified_nodes else ""))
+
+    # Clash configuration YAML using proxy-providers pointing to a provider file we also publish
+    if args.public_base:
+        # publish a provider list (just URIs) so Clash can ingest it predictably
+        provider_list = {"proxies": verified_nodes}
+        write_text(os.path.join(paths["providers"], "all.yaml"), yaml.safe_dump(provider_list, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
+        provider_url = args.public_base.rstrip("/") + "/sub/providers/all.yaml"
+        clash_yaml = {
+            "mixed-port": 7890,
+            "allow-lan": False,
+            "mode": "rule",
+            "log-level": "info",
+            "proxies": verified_nodes,  # 直接包含所有节点
+            "proxy-groups": [
+                {"name": "Node-Select", "type": "select", "proxies": ["Auto", "DIRECT"] + verified_nodes[:50] if len(verified_nodes) > 0 else ["Auto", "DIRECT"]},  # 限制前50个节点避免配置过大
+                {"name": "Auto", "type": "url-test", "proxies": verified_nodes[:30] if len(verified_nodes) > 0 else ["DIRECT"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
+                {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
+                {"name": "Apple", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
+                {"name": "Final", "type": "select", "proxies": ["Node-Select", "DIRECT", "Auto"]},
+            ],
+            "rule-providers": {
+                "LocalAreaNetwork": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
+                    "path": "./rules/LocalAreaNetwork.list", "interval": 86400
+                },
+                "UnBan": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list",
+                    "path": "./rules/UnBan.list", "interval": 86400
+                },
+                "BanAD": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
+                    "path": "./rules/BanAD.list", "interval": 86400
+                },
+                "BanProgramAD": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
+                    "path": "./rules/BanProgramAD.list", "interval": 86400
+                },
+                "GoogleFCM": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list",
+                    "path": "./rules/GoogleFCM.list", "interval": 86400
+                },
+                "GoogleCN": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list",
+                    "path": "./rules/GoogleCN.list", "interval": 86400
+                },
+                "SteamCN": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list",
+                    "path": "./rules/SteamCN.list", "interval": 86400
+                },
+                "Microsoft": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list",
+                    "path": "./rules/Microsoft.list", "interval": 86400
+                },
+                "Apple": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list",
+                    "path": "./rules/Apple.list", "interval": 86400
+                },
+                "Telegram": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
+                    "path": "./rules/Telegram.list", "interval": 86400
+                },
+                "ProxyMedia": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
+                    "path": "./rules/ProxyMedia.list", "interval": 86400
+                },
+                "ProxyGFWlist": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
+                    "path": "./rules/ProxyGFWlist.list", "interval": 86400
+                },
+                "ChinaDomain": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list",
+                    "path": "./rules/ChinaDomain.list", "interval": 86400
+                },
+                "ChinaCompanyIp": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
+                    "path": "./rules/ChinaCompanyIp.list", "interval": 86400
+                },
+                "Download": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list",
+                    "path": "./rules/Download.list", "interval": 86400
+                },
+                "ChinaIp": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list",
+                    "path": "./rules/ChinaIp.list", "interval": 86400
+                }
+            },
+            "rules": [
+                "RULE-SET,LocalAreaNetwork,DIRECT",
+                "RULE-SET,UnBan,DIRECT",
+                "RULE-SET,BanAD,REJECT",
+                "RULE-SET,BanProgramAD,REJECT",
+                "RULE-SET,GoogleFCM,DIRECT",
+                "RULE-SET,GoogleCN,DIRECT",
+                "RULE-SET,SteamCN,DIRECT",
+                "RULE-SET,Microsoft,Microsoft",
+                "RULE-SET,Apple,Apple",
+                "RULE-SET,Telegram,Telegram",
+                "RULE-SET,ProxyMedia,Media",
+                "RULE-SET,ProxyGFWlist,Node-Select",
+                "RULE-SET,ChinaDomain,DIRECT",
+                "RULE-SET,ChinaCompanyIp,DIRECT",
+                "RULE-SET,Download,DIRECT",
+                "GEOIP,CN,DIRECT",
+                "RULE-SET,ChinaIp,DIRECT",
+                "MATCH,Final"
+            ]
+        }
+        write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
 
     # 写入各种URL文件
     write_json(live_out_path, refined_alive_urls)
