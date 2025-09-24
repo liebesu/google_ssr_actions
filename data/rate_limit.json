@@ -300,22 +300,22 @@
     "next_allowed_at": 1758775483.6421359
   },
   "https://sub.soyorin.shop/api/v1/client/subscribe?token=f62d458ba609530a3e208eef5b8e871d": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1758706691.0986488,
-    "next_allowed_at": 1758713891.0986488
+    "last_at": 1758748905.6366272,
+    "next_allowed_at": 1758763305.6366272
   },
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1758717883.6421359,
-    "next_allowed_at": 1758746683.6421359
+    "last_at": 1758748905.6366272,
+    "next_allowed_at": 1758806505.6366272
   },
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=4086fa59b5d6c198c886c8879026992d": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1758717883.6421359,
-    "next_allowed_at": 1758746683.6421359
+    "last_at": 1758748905.6366272,
+    "next_allowed_at": 1758806505.6366272
   },
   "https://tiziya-zone-35j5gzft7lc3-1323316545.eo-edgefunctions1.com/api/v1/client/subscribe?token=2704165367b5aaef3eec9d6f6058292c": {
     "hits": 3,
@@ -510,15 +510,27 @@
     "next_allowed_at": 1758767426.282729
   },
   "https://eeeeehhhoyfhaihfg.qrfly.me/api/v1/client/subscribe?token=d45a097f5670e68cbc7ca00378d98fb6": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1758738626.282729,
-    "next_allowed_at": 1758742226.282729
+    "last_at": 1758748905.6366272,
+    "next_allowed_at": 1758756105.6366272
   },
   "http://148.135.67.219/api/v1/client/subscribe?token=5fdc037af8a1d09c7": {
+    "hits": 2,
+    "last_reason": "http 403",
+    "last_at": 1758748905.6366272,
+    "next_allowed_at": 1758750705.6366272
+  },
+  "https://qufanfan.info/api/v1/client/subscribe?token=00d1eff0820cffa7b904f3ed0dcee8d9": {
     "hits": 1,
     "last_reason": "http 403",
-    "last_at": 1758738626.282729,
-    "next_allowed_at": 1758739526.282729
+    "last_at": 1758748905.6366272,
+    "next_allowed_at": 1758749805.6366272
+  },
+  "https://www.djjc.cfd/api/v1/client/subscribe?token=eb6fb117e1c1cbe8041e0e0a00935b85": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1758748905.6366272,
+    "next_allowed_at": 1758749805.6366272
   }
 }
