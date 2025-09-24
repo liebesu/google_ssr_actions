@@ -224,10 +224,23 @@ class EnhancedSerpAPIKeyManager:
             
             # 查找对应的注册日期
             registration_date_str = None
-            for key, date in registration_dates.items():
-                if key in current_api_key or current_api_key in key:
-                    registration_date_str = date
-                    break
+            
+            # 计算当前密钥的哈希值（用于匹配）
+            import hashlib
+            current_key_hash = hashlib.sha256(current_api_key.encode()).hexdigest()
+            
+            # 首先尝试用哈希值匹配
+            if current_key_hash in registration_dates:
+                registration_date_str = registration_dates[current_key_hash]
+                self.logger.debug(f"找到密钥哈希匹配: {current_key_hash[:10]}... -> {registration_date_str}")
+            else:
+                # 如果哈希匹配失败，尝试部分匹配
+                for key_hash, date in registration_dates.items():
+                    if (key_hash in current_key_hash or current_key_hash in key_hash or 
+                        key_hash in current_api_key or current_api_key in key_hash):
+                        registration_date_str = date
+                        self.logger.debug(f"找到密钥部分匹配: {key_hash[:10]}... -> {registration_date_str}")
+                        break
             
             if registration_date_str:
                 try:
@@ -235,26 +248,28 @@ class EnhancedSerpAPIKeyManager:
                     registration_date = datetime.strptime(registration_date_str, '%Y-%m-%d')
                     
                     # 计算下次重置时间（基于注册日期的每月对应日）
-                    if now.month == 12:
-                        next_reset = registration_date.replace(year=now.year + 1)
-                    else:
-                        next_reset = registration_date.replace(year=now.year, month=now.month + 1)
+                    # 从注册日期开始，找到下一个重置时间
+                    current_month = now.replace(day=registration_date.day)
                     
-                    # 如果计算出的重置时间已经过了，则使用下下个月
-                    if next_reset <= now:
-                        if now.month == 11:
+                    # 如果这个月的重置日期还没到，就用这个月的
+                    if current_month > now:
+                        next_reset = current_month
+                    else:
+                        # 否则使用下个月的重置日期
+                        if now.month == 12:
                             next_reset = registration_date.replace(year=now.year + 1, month=1)
-                        elif now.month == 12:
-                            next_reset = registration_date.replace(year=now.year + 1, month=2)
                         else:
-                            next_reset = registration_date.replace(year=now.year, month=now.month + 2)
+                            next_reset = registration_date.replace(year=now.year, month=now.month + 1)
                     
                     # 确保日期有效（处理2月29日等特殊情况）
                     last_day_of_month = calendar.monthrange(next_reset.year, next_reset.month)[1]
                     if next_reset.day > last_day_of_month:
                         next_reset = next_reset.replace(day=last_day_of_month)
                     
-                    self.logger.debug(f"密钥 {key_index} 基于注册日期 {registration_date_str} 计算重置时间: {next_reset.strftime('%Y-%m-%d')}")
+                    self.logger.info(f"密钥 {key_index} 重置时间计算:")
+                    self.logger.info(f"  注册日期: {registration_date_str}")
+                    self.logger.info(f"  当前时间: {now.strftime('%Y-%m-%d %H:%M:%S')}")
+                    self.logger.info(f"  下次重置: {next_reset.strftime('%Y-%m-%d')}")
                     return next_reset.strftime("%Y-%m-%d")
                     
                 except ValueError as e:
