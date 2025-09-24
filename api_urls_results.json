@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-24T02:22:34.915242",
+  "timestamp": "2025-09-24T02:38:47.074327",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,12 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 4,
-  "original_urls": 10,
+  "total_urls": 3,
+  "original_urls": 9,
   "urls": [
-    "https://sub.soyorin.shop/api/v1/client/subscribe?token=f62d458ba609530a3e208eef5b8e871d",
     "https://sfj.sufujia.top/api/v1/client/subscribe?token=787a0bbe099268e50e29377f153967b2",
-    "https://mmbb.daka778.top/api/v1/client/subscribe?token=61bb3601f776d076a199de5ef7c90554",
+    "https://sub.soyorin.shop/api/v1/client/subscribe?token=f62d458ba609530a3e208eef5b8e871d",
     "http://x2b.eans.top/api/v1/client/subscribe?token=01750dfe2cb5be6dce5e1576bfe466f0"
   ]
 }
