@@ -510,9 +510,9 @@
     "next_allowed_at": 1758732283.6421359
   },
   "https://eeeeehhhoyfhaihfg.qrfly.me/api/v1/client/subscribe?token=d45a097f5670e68cbc7ca00378d98fb6": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1758723461.587344,
-    "next_allowed_at": 1758724361.587344
+    "last_at": 1758727745.0921557,
+    "next_allowed_at": 1758729545.0921557
   }
 }
