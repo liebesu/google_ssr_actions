@@ -6,8 +6,8 @@
   <title>Google SSR Actions - 订阅聚合</title>
   <link rel="stylesheet" href="styles.css" />
   <script>
-    const AUTH_HASH = "test_hash_12345";
-    const AUTH_USER = "test_user";
+    const AUTH_HASH = "37092303178fc51f57a52ea39e166a4954ec86c075de3a9df7a221c9ef7e0891";
+    const AUTH_USER = "liebesu";
     async function sha256(message) {
       const msgBuffer = new TextEncoder().encode(message);
       const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
@@ -80,8 +80,11 @@
         const userOk = userRequired ? (gu === (AUTH_USER||'').trim()) : true;
         
         console.log('存储的认证:', tk ? '存在' : '不存在');
+        console.log('存储的用户:', gu || '无');
         console.log('密码验证:', passOk ? '通过' : '失败');
         console.log('用户验证:', userOk ? '通过' : '失败');
+        console.log('目标哈希:', AUTH_HASH);
+        console.log('存储哈希:', tk);
         
         if (passOk && userOk) { 
           console.log('✅ 认证成功，显示页面');
@@ -112,7 +115,7 @@
     document.addEventListener('DOMContentLoaded', gate);
     // 根据是否有配额数据隐藏卡片
     document.addEventListener('DOMContentLoaded', ()=>{
-      const qleft = '500'; const qcap = '1000'; const kok='3'; const kt='5';
+      const qleft = '476'; const qcap = '1250'; const kok='5'; const kt='5';
       const hideQuota = (!qleft || qleft==='0') && (!qcap || qcap==='0') && (!kok || kok==='0') && (!kt || kt==='0');
       if(hideQuota){
         document.querySelectorAll('.stat.quota').forEach(el=>el.style.display='none');
@@ -126,6 +129,11 @@
       <div class="auth-card">
         <h3 class="auth-title">访问认证</h3>
         <p class="auth-sub">请输入用户名和密码以查看页面内容</p>
+        <div style="background:#1f2937; padding:8px; border-radius:6px; margin:8px 0; font-size:12px; color:#94a3b8;">
+          <strong>调试信息:</strong><br>
+          用户名: <span id="debug-user">liebesu</span><br>
+          哈希值: <span id="debug-hash">37092303178fc51f57a52ea39e166a4954ec86c075de3a9df7a221c9ef7e0891</span>
+        </div>
         <input id="auth-user" class="auth-input" type="text" placeholder="输入用户名" />
         <input id="auth-input" class="auth-input" type="password" placeholder="输入密码" />
         <button id="auth-btn" class="auth-btn">进入</button>
@@ -136,12 +144,12 @@
       <h1>Google SSR Actions</h1>
       <small>构建时间(中国时区)：2025-09-24 17:00:00</small>
     </div>
-    <div class="subtitle">源 100/200 · 节点 1000 · 新增 10 · 移除 5</div>
+    <div class="subtitle">源 108/192 · 节点 1200 · 新增 0 · 移除 4</div>
 
     <div class="stats" id="stats-cards">
-      <div class="stat quota" data-hide="q"><div class="num">500</div><div>剩余额度</div></div>
-      <div class="stat quota" data-hide="q"><div class="num">1000</div><div>总额度</div></div>
-      <div class="stat quota" data-hide="q"><div class="num">3/5</div><div>可用密钥/总密钥</div></div>
+      <div class="stat quota" data-hide="q"><div class="num">476</div><div>剩余额度</div></div>
+      <div class="stat quota" data-hide="q"><div class="num">1250</div><div>总额度</div></div>
+      <div class="stat quota" data-hide="q"><div class="num">5/5</div><div>可用密钥/总密钥</div></div>
       <div class="stat"><div class="num">2025-09-24 20:00:00</div><div>下次更新时间(中国时区)</div></div>
     </div>
 
@@ -178,8 +186,8 @@
         <ul>
           <li><a href="sub/urls.txt"><code>urls.txt</code></a> 当前可用源</li>
           <li><a href="sub/all_urls.txt"><code>all_urls.txt</code></a> 完整源列表</li>
-          <li><a href="sub/google_urls.txt"><code>google_urls.txt</code></a> Google发现（80）</li>
-          <li><a href="sub/github_urls.txt"><code>github_urls.txt</code></a> GitHub发现（20）</li>
+          <li><a href="sub/google_urls.txt"><code>google_urls.txt</code></a> Google发现（103）</li>
+          <li><a href="sub/github_urls.txt"><code>github_urls.txt</code></a> GitHub发现（5）</li>
         </ul>
       </div>
 
@@ -188,9 +196,9 @@
         <ul class="health-list">
           <li>构建时间(中国时区)：<b>2025-09-24 17:00:00</b></li>
           <li>下次更新时间(中国时区)：<b>2025-09-24 20:00:00</b></li>
-          <li>源：<b>100/200</b> · 新增 <b>10</b> · 移除 <b>5</b></li>
-          <li>节点：<b>1000</b> · 协议 SS <b>100</b> | VMess <b>200</b> | VLESS <b>150</b> | Trojan <b>50</b> | HY2 <b>500</b></li>
-          <li>来源：Google <b>80</b> | GitHub <b>20</b></li>
+          <li>源：<b>108/192</b> · 新增 <b>0</b> · 移除 <b>4</b></li>
+          <li>节点：<b>1200</b> · 协议 SS <b>147</b> | VMess <b>53</b> | VLESS <b>77</b> | Trojan <b>39</b> | HY2 <b>884</b></li>
+          <li>来源：Google <b>103</b> | GitHub <b>5</b></li>
         </ul>
       </div>
 
@@ -198,8 +206,8 @@
         <h3>SerpAPI 密钥状态</h3>
         <div id="serpapi-status">
           <div class="serpapi-summary">
-            <span class="status-item">可用密钥: <b id="keys-ok">3</b>/<b id="keys-total">5</b></span>
-            <span class="status-item">总剩余额度: <b id="quota-left">500</b>/<b id="quota-cap">1000</b></span>
+            <span class="status-item">可用密钥: <b id="keys-ok">5</b>/<b id="keys-total">5</b></span>
+            <span class="status-item">总剩余额度: <b id="quota-left">476</b>/<b id="quota-cap">1250</b></span>
           </div>
           <div id="serpapi-keys-list" class="serpapi-keys-list">
             <!-- 动态加载密钥详情 -->
@@ -210,11 +218,11 @@
       <div class="card card-protocols">
         <h3>协议分布</h3>
         <ul>
-          <li>SS：100</li>
-          <li>VMess：200</li>
-          <li>VLESS：150</li>
-          <li>Trojan：50</li>
-          <li>Hysteria2：500</li>
+          <li>SS：147</li>
+          <li>VMess：53</li>
+          <li>VLESS：77</li>
+          <li>Trojan：39</li>
+          <li>Hysteria2：884</li>
         </ul>
       </div>
 

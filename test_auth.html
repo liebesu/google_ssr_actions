@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>认证测试</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #0f172a; color: #e5e7eb; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #1f2937; border-radius: 8px; }
+        .result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .success { background: #10b981; color: white; }
+        .error { background: #ef4444; color: white; }
+        .info { background: #3b82f6; color: white; }
+        input, button { padding: 8px; margin: 5px; border-radius: 4px; border: 1px solid #1f2937; background: #0b1220; color: #e5e7eb; }
+        button { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🔐 认证测试页面</h1>
+    
+    <div class="test-section">
+        <h3>当前认证信息</h3>
+        <div id="current-auth" class="result info"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>密码测试</h3>
+        <input type="text" id="test-password" placeholder="输入密码测试" />
+        <button onclick="testPassword()">测试密码</button>
+        <div id="password-result" class="result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>认证流程测试</h3>
+        <input type="text" id="test-user" placeholder="用户名" />
+        <input type="password" id="test-pass" placeholder="密码" />
+        <button onclick="testAuth()">测试认证</button>
+        <div id="auth-result" class="result"></div>
+    </div>
+
+    <script>
+        // 使用实际的认证信息
+        const AUTH_HASH = "37092303178fc51f57a52ea39e166a4954ec86c075de3a9df7a221c9ef7e0891";
+        const AUTH_USER = "liebesu";
+        
+        async function sha256(message) {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        
+        function updateCurrentAuth() {
+            document.getElementById('current-auth').innerHTML = `
+                <strong>AUTH_HASH:</strong> ${AUTH_HASH}<br>
+                <strong>AUTH_USER:</strong> ${AUTH_USER}<br>
+                <strong>存储的认证:</strong> ${localStorage.getItem('gauth') || '无'}<br>
+                <strong>存储的用户:</strong> ${localStorage.getItem('guser') || '无'}
+            `;
+        }
+        
+        async function testPassword() {
+            const password = document.getElementById('test-password').value;
+            if (!password) {
+                document.getElementById('password-result').innerHTML = '<div class="error">请输入密码</div>';
+                return;
+            }
+            
+            const hash = await sha256(password);
+            const match = hash.toLowerCase() === AUTH_HASH.toLowerCase();
+            
+            document.getElementById('password-result').innerHTML = `
+                <div class="${match ? 'success' : 'error'}">
+                    ${match ? '✅ 密码正确!' : '❌ 密码错误'}<br>
+                    <strong>输入密码:</strong> ${password}<br>
+                    <strong>计算哈希:</strong> ${hash}<br>
+                    <strong>目标哈希:</strong> ${AUTH_HASH}
+                </div>
+            `;
+        }
+        
+        async function testAuth() {
+            const user = document.getElementById('test-user').value;
+            const pass = document.getElementById('test-pass').value;
+            
+            if (!user || !pass) {
+                document.getElementById('auth-result').innerHTML = '<div class="error">请输入用户名和密码</div>';
+                return;
+            }
+            
+            const hash = await sha256(pass);
+            const userOk = user === AUTH_USER;
+            const passOk = hash.toLowerCase() === AUTH_HASH.toLowerCase();
+            const authOk = userOk && passOk;
+            
+            document.getElementById('auth-result').innerHTML = `
+                <div class="${authOk ? 'success' : 'error'}">
+                    ${authOk ? '✅ 认证成功!' : '❌ 认证失败'}<br>
+                    <strong>用户名验证:</strong> ${userOk ? '✅' : '❌'} (${user} vs ${AUTH_USER})<br>
+                    <strong>密码验证:</strong> ${passOk ? '✅' : '❌'}<br>
+                    <strong>计算哈希:</strong> ${hash}
+                </div>
+            `;
+            
+            if (authOk) {
+                try {
+                    localStorage.setItem('gauth', hash);
+                    localStorage.setItem('guser', user);
+                    updateCurrentAuth();
+                } catch(e) {
+                    console.error('保存认证信息失败:', e);
+                }
+            }
+        }
+        
+        // 页面加载时更新显示
+        updateCurrentAuth();
+    </script>
+</body>
+</html>

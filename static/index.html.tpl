@@ -80,8 +80,11 @@
         const userOk = userRequired ? (gu === (AUTH_USER||'').trim()) : true;
         
         console.log('存储的认证:', tk ? '存在' : '不存在');
+        console.log('存储的用户:', gu || '无');
         console.log('密码验证:', passOk ? '通过' : '失败');
         console.log('用户验证:', userOk ? '通过' : '失败');
+        console.log('目标哈希:', AUTH_HASH);
+        console.log('存储哈希:', tk);
         
         if (passOk && userOk) { 
           console.log('✅ 认证成功，显示页面');
@@ -126,6 +129,11 @@
       <div class="auth-card">
         <h3 class="auth-title">访问认证</h3>
         <p class="auth-sub">请输入用户名和密码以查看页面内容</p>
+        <div style="background:#1f2937; padding:8px; border-radius:6px; margin:8px 0; font-size:12px; color:#94a3b8;">
+          <strong>调试信息:</strong><br>
+          用户名: <span id="debug-user">__AUTH_USER__</span><br>
+          哈希值: <span id="debug-hash">__AUTH_HASH__</span>
+        </div>
         <input id="auth-user" class="auth-input" type="text" placeholder="输入用户名" />
         <input id="auth-input" class="auth-input" type="password" placeholder="输入密码" />
         <button id="auth-btn" class="auth-btn">进入</button>
