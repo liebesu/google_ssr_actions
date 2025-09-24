@@ -212,9 +212,18 @@
       <div class="card card-files">
         <h3>订阅文件</h3>
         <ul>
-          <li><a href="sub/all.txt"><code>sub/all.txt</code></a> 全量订阅 (文本格式)</li>
-          <li><a href="sub/all.yaml"><code>sub/all.yaml</code></a> Clash配置 (包含完整节点信息)</li>
-          <li><a href="sub/all_providers.yaml"><code>sub/all_providers.yaml</code></a> Clash配置 (使用proxy-providers)</li>
+          <li style="display:flex;align-items:center;gap:8px">
+            <a href="sub/all.txt"><code>sub/all.txt</code></a> 全量订阅 (文本格式)
+            <button onclick="copyFileUrl('sub/all.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
+          </li>
+          <li style="display:flex;align-items:center;gap:8px">
+            <a href="sub/all.yaml"><code>sub/all.yaml</code></a> Clash配置 (包含完整节点信息)
+            <button onclick="copyFileUrl('sub/all.yaml', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
+          </li>
+          <li style="display:flex;align-items:center;gap:8px">
+            <a href="sub/all_providers.yaml"><code>sub/all_providers.yaml</code></a> Clash配置 (使用proxy-providers)
+            <button onclick="copyFileUrl('sub/all_providers.yaml', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
+          </li>
         </ul>
         <p><small style="color:#94a3b8">📌 所有订阅文件和接口可直接访问，无需页面认证</small></p>
       </div>
@@ -222,10 +231,22 @@
       <div class="card card-sources">
         <h3>URL 源</h3>
         <ul>
-          <li><a href="sub/urls.txt"><code>urls.txt</code></a> 当前可用源</li>
-          <li><a href="sub/all_urls.txt"><code>all_urls.txt</code></a> 完整源列表</li>
-          <li><a href="sub/google_urls.txt"><code>google_urls.txt</code></a> Google发现（__GCOUNT__）</li>
-          <li><a href="sub/github_urls.txt"><code>github_urls.txt</code></a> GitHub发现（__GHCOUNT__）</li>
+          <li style="display:flex;align-items:center;gap:8px">
+            <a href="sub/urls.txt"><code>urls.txt</code></a> 当前可用源
+            <button onclick="copyFileUrl('sub/urls.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
+          </li>
+          <li style="display:flex;align-items:center;gap:8px">
+            <a href="sub/all_urls.txt"><code>all_urls.txt</code></a> 完整源列表
+            <button onclick="copyFileUrl('sub/all_urls.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
+          </li>
+          <li style="display:flex;align-items:center;gap:8px">
+            <a href="sub/google_urls.txt"><code>google_urls.txt</code></a> Google发现（__GCOUNT__）
+            <button onclick="copyFileUrl('sub/google_urls.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
+          </li>
+          <li style="display:flex;align-items:center;gap:8px">
+            <a href="sub/github_urls.txt"><code>github_urls.txt</code></a> GitHub发现（__GHCOUNT__）
+            <button onclick="copyFileUrl('sub/github_urls.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
+          </li>
         </ul>
       </div>
 
@@ -267,9 +288,18 @@
       <div class="card card-extras">
         <h3>辅助输出</h3>
         <ul>
-          <li><a href="sub/github.txt"><code>github.txt</code></a> GitHub节点</li>
-          <li><a href="sub/proto/ss-base64.txt"><code>ss-base64.txt</code></a> SS Base64</li>
-          <li><a href="health.json"><code>health.json</code></a> 健康信息</li>
+          <li style="display:flex;align-items:center;gap:8px">
+            <a href="sub/github.txt"><code>github.txt</code></a> GitHub节点
+            <button onclick="copyFileUrl('sub/github.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
+          </li>
+          <li style="display:flex;align-items:center;gap:8px">
+            <a href="sub/proto/ss-base64.txt"><code>ss-base64.txt</code></a> SS Base64
+            <button onclick="copyFileUrl('sub/proto/ss-base64.txt', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
+          </li>
+          <li style="display:flex;align-items:center;gap:8px">
+            <a href="health.json"><code>health.json</code></a> 健康信息
+            <button onclick="copyFileUrl('health.json', this)" style="padding:2px 6px;border-radius:4px;border:1px solid #374151;background:#1f2937;color:#9ca3af;font-size:12px;cursor:pointer;transition:all 0.2s">复制</button>
+          </li>
         </ul>
         <p><small style="color:#94a3b8">💡 API接口和JSON数据可通过程序直接调用</small></p>
       </div>
@@ -287,6 +317,26 @@
             navigator.clipboard.writeText(text).then(()=>{
               alert('已复制订阅链接');
             }).catch(()=>{});
+          }
+          function copyFileUrl(path, btn){
+            const fullUrl = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/') + path;
+            navigator.clipboard.writeText(fullUrl).then(()=>{
+              // 临时改变按钮文本和样式
+              const originalText = btn.textContent;
+              btn.textContent = '✓ 已复制';
+              btn.style.background = '#10b981';
+              btn.style.borderColor = '#10b981';
+              btn.style.color = 'white';
+              
+              setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '#1f2937';
+                btn.style.borderColor = '#374151';
+                btn.style.color = '#9ca3af';
+              }, 1500);
+            }).catch(()=>{
+              alert('复制失败，请手动复制: ' + fullUrl);
+            });
           }
           async function testSpeed(url){
             const t0 = performance.now();
