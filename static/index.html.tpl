@@ -394,11 +394,29 @@
           </div>
         </div>
         
-        <!-- 7天趋势详情表格 -->
+        <!-- 7天趋势详情图表 -->
         <div class="trend-details">
           <h4>📈 前七天详细趋势</h4>
-          <div id="trend7day-details" class="trend-table">
-            <div class="trend-loading">正在加载趋势数据...</div>
+          <div class="trend-chart-container">
+            <canvas id="trend7day-chart" width="400" height="200"></canvas>
+          </div>
+          <div class="trend-legend">
+            <div class="legend-item">
+              <span class="legend-color" style="background: #10b981;"></span>
+              <span class="legend-label">新增源</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color" style="background: #ef4444;"></span>
+              <span class="legend-label">失效源</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color" style="background: #22c55e;"></span>
+              <span class="legend-label">存活源</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color" style="background: #f59e0b;"></span>
+              <span class="legend-label">净增长</span>
+            </div>
           </div>
         </div>
       </div>
@@ -752,57 +770,111 @@
             try {
               const r = await fetch('sub/stats_7day_enhanced.json', { cache:'no-cache' });
               if (!r.ok) {
-                document.getElementById('trend7day-details').innerHTML = '<div class="trend-error">暂无趋势数据</div>';
+                document.getElementById('trend7day-chart').style.display = 'none';
                 return;
               }
               const data = await r.json();
               
               if (!data || data.length === 0) {
-                document.getElementById('trend7day-details').innerHTML = '<div class="trend-error">暂无趋势数据</div>';
+                document.getElementById('trend7day-chart').style.display = 'none';
                 return;
               }
               
-              // 生成表格HTML
-              let tableHtml = `
-                <div class="trend-table-header">
-                  <div class="trend-col">日期</div>
-                  <div class="trend-col">总数量</div>
-                  <div class="trend-col">新增</div>
-                  <div class="trend-col">失效</div>
-                  <div class="trend-col">存活</div>
-                  <div class="trend-col">净增长</div>
-                </div>
-              `;
+              // 绘制7天趋势图表
+              const canvas = document.getElementById('trend7day-chart');
+              if (!canvas) return;
               
-              data.forEach(day => {
-                const date = day.date || '';
-                const total = day.total_count || 0;
-                const newAdded = day.new_added || 0;
-                const failed = day.failed_count || 0;
-                const alive = day.alive_count || 0;
-                const netGrowth = day.net_growth || 0;
-                
-                // 计算趋势箭头
-                const netGrowthIcon = netGrowth > 0 ? '📈' : netGrowth < 0 ? '📉' : '➡️';
-                const newAddedIcon = newAdded > 0 ? '🆕' : '';
-                const failedIcon = failed > 0 ? '❌' : '';
-                
-                tableHtml += `
-                  <div class="trend-table-row">
-                    <div class="trend-col trend-date">${date}</div>
-                    <div class="trend-col trend-total">${total}</div>
-                    <div class="trend-col trend-new">${newAddedIcon} ${newAdded}</div>
-                    <div class="trend-col trend-failed">${failedIcon} ${failed}</div>
-                    <div class="trend-col trend-alive">${alive}</div>
-                    <div class="trend-col trend-net">${netGrowthIcon} ${netGrowth}</div>
-                  </div>
-                `;
+              const ctx = canvas.getContext('2d');
+              const W = canvas.width = canvas.clientWidth || 400;
+              const H = canvas.height = 200;
+              
+              // 准备数据
+              const dates = data.map(d => d.date || '');
+              const newAdded = data.map(d => d.new_added || 0);
+              const failed = data.map(d => d.failed_count || 0);
+              const alive = data.map(d => d.alive_count || 0);
+              const netGrowth = data.map(d => d.net_growth || 0);
+              
+              // 计算最大值用于缩放
+              const maxValue = Math.max(1, ...newAdded, ...failed, ...alive, ...netGrowth);
+              
+              // 清空画布
+              ctx.clearRect(0, 0, W, H);
+              ctx.fillStyle = '#0b1220';
+              ctx.fillRect(0, 0, W, H);
+              
+              // 绘制网格线
+              ctx.strokeStyle = '#334155';
+              ctx.lineWidth = 1;
+              for (let i = 0; i <= 4; i++) {
+                const y = 20 + (H - 40) * (i / 4);
+                ctx.beginPath();
+                ctx.moveTo(40, y);
+                ctx.lineTo(W - 20, y);
+                ctx.stroke();
+              }
+              
+              // 绘制数据线
+              function drawLine(series, color, lineWidth = 2) {
+                ctx.strokeStyle = color;
+                ctx.lineWidth = lineWidth;
+                ctx.beginPath();
+                series.forEach((value, i) => {
+                  const x = 40 + (W - 60) * (i / (series.length - 1));
+                  const y = H - 20 - (H - 40) * (value / maxValue);
+                  if (i === 0) {
+                    ctx.moveTo(x, y);
+                  } else {
+                    ctx.lineTo(x, y);
+                  }
+                });
+                ctx.stroke();
+              }
+              
+              // 绘制各条趋势线
+              drawLine(newAdded, '#10b981', 3);  // 新增源 - 绿色
+              drawLine(failed, '#ef4444', 2);    // 失效源 - 红色
+              drawLine(alive, '#22c55e', 2);     // 存活源 - 绿色
+              drawLine(netGrowth, '#f59e0b', 2); // 净增长 - 橙色
+              
+              // 绘制数据点
+              function drawPoints(series, color) {
+                ctx.fillStyle = color;
+                series.forEach((value, i) => {
+                  const x = 40 + (W - 60) * (i / (series.length - 1));
+                  const y = H - 20 - (H - 40) * (value / maxValue);
+                  ctx.beginPath();
+                  ctx.arc(x, y, 3, 0, 2 * Math.PI);
+                  ctx.fill();
+                });
+              }
+              
+              drawPoints(newAdded, '#10b981');
+              drawPoints(failed, '#ef4444');
+              drawPoints(alive, '#22c55e');
+              drawPoints(netGrowth, '#f59e0b');
+              
+              // 绘制X轴标签（日期）
+              ctx.fillStyle = '#94a3b8';
+              ctx.font = '11px ui-sans-serif';
+              ctx.textAlign = 'center';
+              dates.forEach((date, i) => {
+                const x = 40 + (W - 60) * (i / (dates.length - 1));
+                ctx.fillText(date, x, H - 5);
               });
               
-              document.getElementById('trend7day-details').innerHTML = tableHtml;
+              // 绘制Y轴标签
+              ctx.textAlign = 'right';
+              for (let i = 0; i <= 4; i++) {
+                const value = Math.round(maxValue * (i / 4));
+                const y = 20 + (H - 40) * (i / 4);
+                ctx.fillText(value.toString(), 35, y + 4);
+              }
+              
             } catch(e) {
-              console.warn('7天趋势数据加载失败:', e);
-              document.getElementById('trend7day-details').innerHTML = '<div class="trend-error">加载失败</div>';
+              console.warn('7天趋势图表加载失败:', e);
+              const canvas = document.getElementById('trend7day-chart');
+              if (canvas) canvas.style.display = 'none';
             }
           }
           
