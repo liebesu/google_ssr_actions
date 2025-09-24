@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>调试页面 - 检查页面显示问题</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background: #0f172a; 
+            color: #e5e7eb; 
+            line-height: 1.6;
+        }
+        .debug-section { 
+            margin: 20px 0; 
+            padding: 15px; 
+            border: 1px solid #1f2937; 
+            border-radius: 8px; 
+            background: #0b1220;
+        }
+        .status { 
+            padding: 10px; 
+            margin: 10px 0; 
+            border-radius: 5px; 
+        }
+        .success { background: #10b981; }
+        .error { background: #ef4444; }
+        .warning { background: #f59e0b; }
+        .info { background: #3b82f6; }
+        button { 
+            padding: 10px 15px; 
+            margin: 5px; 
+            border: none; 
+            border-radius: 5px; 
+            background: #3b82f6; 
+            color: white; 
+            cursor: pointer; 
+        }
+        .hidden { display: none !important; }
+        .visible { display: block !important; }
+    </style>
+</head>
+<body>
+    <h1>🔍 页面显示问题调试</h1>
+    
+    <div class="debug-section">
+        <h3>1. 基本页面测试</h3>
+        <div id="basic-test" class="status info">
+            ✅ 如果你能看到这个页面，说明HTML和CSS都能正常加载
+        </div>
+    </div>
+    
+    <div class="debug-section">
+        <h3>2. JavaScript执行测试</h3>
+        <div id="js-test" class="status warning">⏳ 检测JavaScript执行...</div>
+    </div>
+    
+    <div class="debug-section">
+        <h3>3. DOM操作测试</h3>
+        <div id="dom-test" class="status warning">⏳ 检测DOM操作...</div>
+        <div id="test-element" class="hidden">🎉 DOM操作正常！</div>
+    </div>
+    
+    <div class="debug-section">
+        <h3>4. localStorage测试</h3>
+        <div id="storage-test" class="status warning">⏳ 检测localStorage...</div>
+    </div>
+    
+    <div class="debug-section">
+        <h3>5. 认证逻辑测试</h3>
+        <div id="auth-test" class="status warning">⏳ 检测认证逻辑...</div>
+        <button onclick="testAuth()">测试认证</button>
+        <button onclick="clearStorage()">清除存储</button>
+    </div>
+    
+    <div class="debug-section">
+        <h3>6. 页面隐藏/显示测试</h3>
+        <div id="visibility-test" class="status warning">⏳ 检测页面可见性...</div>
+        <button onclick="hideShow()">隐藏/显示测试</button>
+    </div>
+
+    <script>
+        console.log('🔍 调试页面开始执行...');
+        
+        // 1. JavaScript执行测试
+        document.getElementById('js-test').className = 'status success';
+        document.getElementById('js-test').textContent = '✅ JavaScript执行正常';
+        
+        // 2. DOM操作测试
+        try {
+            document.getElementById('test-element').className = 'visible';
+            document.getElementById('dom-test').className = 'status success';
+            document.getElementById('dom-test').textContent = '✅ DOM操作正常';
+        } catch(e) {
+            document.getElementById('dom-test').className = 'status error';
+            document.getElementById('dom-test').textContent = '❌ DOM操作失败: ' + e.message;
+        }
+        
+        // 3. localStorage测试
+        try {
+            localStorage.setItem('test', 'value');
+            const value = localStorage.getItem('test');
+            if (value === 'value') {
+                document.getElementById('storage-test').className = 'status success';
+                document.getElementById('storage-test').textContent = '✅ localStorage正常';
+            } else {
+                throw new Error('读取值不匹配');
+            }
+            localStorage.removeItem('test');
+        } catch(e) {
+            document.getElementById('storage-test').className = 'status error';
+            document.getElementById('storage-test').textContent = '❌ localStorage失败: ' + e.message;
+        }
+        
+        // 4. 认证逻辑测试
+        const AUTH_HASH = "37092303178fc51f57a52ea39e166a4954ec86c075de3a9df7a221c9ef7e0891";
+        const AUTH_USER = "liebesu";
+        
+        async function sha256(message) {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        
+        try {
+            document.getElementById('auth-test').className = 'status success';
+            document.getElementById('auth-test').innerHTML = `
+                ✅ 认证变量加载正常<br>
+                用户名: ${AUTH_USER}<br>
+                哈希值: ${AUTH_HASH.substring(0, 20)}...
+            `;
+        } catch(e) {
+            document.getElementById('auth-test').className = 'status error';
+            document.getElementById('auth-test').textContent = '❌ 认证变量失败: ' + e.message;
+        }
+        
+        // 5. 页面可见性测试
+        document.getElementById('visibility-test').className = 'status success';
+        document.getElementById('visibility-test').innerHTML = `
+            ✅ 页面可见性正常<br>
+            文档显示状态: ${document.documentElement.style.display || '默认'}<br>
+            页面可见性: ${document.visibilityState}
+        `;
+        
+        function testAuth() {
+            const storedAuth = localStorage.getItem('gauth');
+            const storedUser = localStorage.getItem('guser');
+            
+            alert(`存储的认证信息:\n用户: ${storedUser || '无'}\n认证: ${storedAuth ? '存在' : '不存在'}`);
+        }
+        
+        function clearStorage() {
+            localStorage.removeItem('gauth');
+            localStorage.removeItem('guser');
+            alert('localStorage已清除');
+        }
+        
+        function hideShow() {
+            const currentDisplay = document.documentElement.style.display;
+            if (currentDisplay === 'none') {
+                document.documentElement.style.display = '';
+                console.log('页面已显示');
+            } else {
+                document.documentElement.style.display = 'none';
+                console.log('页面已隐藏');
+            }
+        }
+        
+        console.log('🎉 调试页面执行完成');
+    </script>
+</body>
+</html>

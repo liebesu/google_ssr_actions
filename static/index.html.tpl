@@ -111,8 +111,26 @@
       console.log('❌ 认证失败，显示登录框');
       showAuth(); // 直接显示认证弹窗而不是跳转
     }
+    // 确保页面初始化正确
     document.documentElement.style.display = 'none';
+    
+    // 添加多重初始化保障
     document.addEventListener('DOMContentLoaded', gate);
+    window.addEventListener('load', function() {
+      // 如果页面加载完成后仍然隐藏，强制检查认证
+      if (document.documentElement.style.display === 'none') {
+        console.log('⚠️ 页面加载完成但仍隐藏，重新检查认证...');
+        gate();
+      }
+    });
+    
+    // 添加fallback机制
+    setTimeout(function() {
+      if (document.documentElement.style.display === 'none') {
+        console.log('⚠️ 超时fallback，强制显示认证框...');
+        showAuth();
+      }
+    }, 3000);
     // 根据是否有配额数据隐藏卡片
     document.addEventListener('DOMContentLoaded', ()=>{
       const qleft = '__QLEFT__'; const qcap = '__QCAP__'; const kok='__KOK__'; const kt='__KTOTAL__';
