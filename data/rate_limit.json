@@ -300,10 +300,10 @@
     "next_allowed_at": 1758713710.7975519
   },
   "https://sub.soyorin.shop/api/v1/client/subscribe?token=f62d458ba609530a3e208eef5b8e871d": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1758684910.7975519,
-    "next_allowed_at": 1758688510.7975519
+    "last_at": 1758706691.0986488,
+    "next_allowed_at": 1758713891.0986488
   },
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5": {
     "hits": 5,
