@@ -873,13 +873,23 @@
                 ctx.fillText(date, x, H - 5);
               });
               
-              // 绘制Y轴标签
+              // 绘制Y轴标签（从下到上，数值递增）
               ctx.textAlign = 'right';
+              ctx.fillStyle = '#94a3b8';
+              ctx.font = '11px ui-sans-serif';
               for (let i = 0; i <= 4; i++) {
                 const value = Math.round(maxValue * (i / 4));
-                const y = 20 + (H - 40) * (i / 4);
+                const y = H - 20 - (H - 40) * (i / 4); // 修正Y坐标计算
                 ctx.fillText(value.toString(), 35, y + 4);
               }
+              
+              // 添加Y轴标题
+              ctx.save();
+              ctx.translate(15, H / 2);
+              ctx.rotate(-Math.PI / 2);
+              ctx.textAlign = 'center';
+              ctx.fillText('数量', 0, 0);
+              ctx.restore();
               
             } catch(e) {
               console.warn('7天趋势图表加载失败:', e);
