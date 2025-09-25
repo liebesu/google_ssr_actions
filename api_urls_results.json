@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-25T18:30:45.517109",
+  "timestamp": "2025-09-25T21:17:53.123930",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 6,
+  "total_urls": 2,
+  "original_urls": 5,
   "urls": [
     "https://v2b.100010.site/api/v1/client/subscribe?token=c2cddc7fc56f787ed12185b378fe559c",
-    "https://example.com/api/v1/client/subscribe?token=abcdefg",
-    "http://148.135.67.219/api/v1/client/subscribe?token=5fdc037af8a1d09c7"
+    "https://订阅域名/api/v1/client/subscribe?token=xxx"
   ]
 }
