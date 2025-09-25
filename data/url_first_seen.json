@@ -374,5 +374,6 @@
   "https://ylccloud.top/api/v1/client/subscribe?token=b299b06ad86341ad3801d302415d4401": "2025-09-25",
   "https://ylccloud.top/api/v1/client/subscribe?token=ccc69b04da0b7a9f82acf704bad06d37": "2025-09-25",
   "https://ylccloud.top/api/v1/client/subscribe?token=da5bdb35a129c3b3aa81a0df85847ee8": "2025-09-25",
-  "https://ylccloud.top/api/v1/client/subscribe?token=dc39e99b72384d8af2f1e4a3f16a2dcc": "2025-09-25"
+  "https://ylccloud.top/api/v1/client/subscribe?token=dc39e99b72384d8af2f1e4a3f16a2dcc": "2025-09-25",
+  "https://example.com/api/v1/client/subscribe?token=abcdefg": "2025-09-26"
 }
