@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-25T06:32:01.755561",
+  "timestamp": "2025-09-25T09:23:15.256388",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,33 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 6,
+  "total_urls": 25,
+  "original_urls": 31,
   "urls": [
+    "https://qufanfan.info/api/v1/client/subscribe?token=00d1eff0820cffa7b904f3ed0dcee8d9",
     "http://148.135.67.219/api/v1/client/subscribe?token=5fdc037af8a1d09c7",
-    "https://qufanfan.info/api/v1/client/subscribe?token=00d1eff0820cffa7b904f3ed0dcee8d9"
+    "https://sub.yifenjichang.online/api/v1/client/subscribe?token=bc7a2450d60ebc32688f1e07e837f16d",
+    "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=c760154489c818a263c429b9c0606421",
+    "https://sub.yifenjichang.online/api/v1/client/subscribe?token=71a92de8e9302ea6ecd1b2cf6acd4818",
+    "https://sub.bailian.site/api/v1/client/subscribe?token=054e7348b877dbad6a4f36870a4f2ff9",
+    "https://569cdn.1010520.click/api/v1/client/subscribe?token=d273183250f1dadc7c5bb9a2ebec31b9",
+    "http://gbtgurl01.org/api/v1/client/subscribe?token=36e8a67632a8d0f0c0eea58b099a0826",
+    "https://b3b0549e-160e-495a-a528-cccf5148bc48.372372.xyz/api/v1/client/subscribe?token=95388132afab15570d496c96fe99474d",
+    "https://cdn1715497317.ppgnginx.com/api/v1/client/subscribe?token=51a3824f85c5d02a32a3a8deb8931365",
+    "https://52pokemon.xz61.cn/api/v1/client/subscribe?token=9e40db08b7e09b7471c99b89c4c3d7d6",
+    "https://submit.xz61.cn:23443/api/v1/client/subscribe?token=aa997fc3d60f190eb00e4ed89528ca3a",
+    "https://569cdn.1010520.click/api/v1/client/subscribe?token=781d7319768d475772927420bc2a0274",
+    "https://login.yfjc.xyz/api/v1/client/subscribe?token=3e2a317b0334da677767c419b164ec1b",
+    "https://www.kuaidog010.top/api/v1/client/subscribe?token=9c4e70ccb2ba9ca162157bdac8b0b884",
+    "https://sub.jileiyun.top/api/v1/client/subscribe?token=a5c40ade0be59f8f6995bdb77fe13c20",
+    "https://sub.qingfengyun.icu/api/v1/client/subscribe?token=513aff97b9742122b2ae3be03839ac9b",
+    "https://sub.yifenjichang.online/api/v1/client/subscribe?token=718ad73f97025e3154c91758a6bbc911",
+    "https://dl.vfkum.website/api/v1/client/subscribe?token=c8684da353178ab2c34d3a16726c4584",
+    "https://088ea81a-3547-85e0-4af6-dfcb3c6674aa.372372.xyz/api/v1/client/subscribe?token=6d356f188634de6f14b70c20488b5079",
+    "https://jilu.uuvpn.xyz/api/v1/client/subscribe?token=c9fd509e51f08bec3182c29056e28772",
+    "https://zouma.guanhua.xyz/api/v1/client/subscribe?token=156786559d386ce1fb6a2aa97925c240",
+    "https://sub.bailian.site/api/v1/client/subscribe?token=f26d6b19bfbe25e969d117bccdc68217",
+    "https://52pokemon.xz61.cn/api/v1/client/subscribe?token=70c4f57a9a11a006893cdd46a40861fe",
+    "https://ktmcloud.club/api/v1/client/subscribe?token=a2e1d0cb8e56b1e2a14eedc1596b671e"
   ]
 }
