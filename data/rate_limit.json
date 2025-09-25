@@ -192,94 +192,94 @@
     "next_allowed_at": 1758790597.7418356
   },
   "http://23.145.248.232:13389/api/v1/client/subscribe?token=1df0f08cf96675a767ceec9f9336fbf4": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "http://23.145.248.232:13389/api/v1/client/subscribe?token=1df0f08cf96675a767ceec9f9336fbf4&flag=clash": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://amaoaamaoa.matach.qq.com.scsmpp.com/api/v1/client/subscribe?token=542b26414871bf2ebd3f05251f7c80fb": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://datapn.net/api/v1/client/subscribe?token=58f412a1bca411dd0aa6b92aabce0bc4": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://datapn.net/api/v1/client/subscribe?token=e81722e27deb1af8bcc0400c63f48436": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://msub.xn--bwwx30f.top/api/v1/client/subscribe?token=b22bc070f15fba6ddfab88cdeeaa87db": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://sakuracat1203.xn--3iq226gfdb94q.com/api/v1/client/subscribe?token=c1dcb31fd37e76f1c07338a3d82d2ce5": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=54df77e82f700ab31b31f1593617919b": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://v1.vmess.top/api/v1/client/subscribe?token=4466f09766641e9e7b6e89fe084da55c": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://xn--4gq62f52gdss.com/api/v1/client/subscribe?token=xxxxx": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://xn--4gq62f52gdss.com/api/v1/client/subscribe?token=xxxxxx": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://ysbzc1.subscribe6.com/api/v1/client/subscribe?token=fc7": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://ysbzc1.subscribe6.com/api/v1/client/subscribe?token=fc7ba": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://ysbzc1.subscribe6.com/api/v1/client/subscribe?token=fc7ba2236a956b292fae4e60ca5751fd": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://ysbzc1.subscribe6.com/api/v1/client/subscribe?token=fcd": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1758704197.7418356,
-    "next_allowed_at": 1758761797.7418356
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758849322.5358899
   },
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5": {
     "hits": 7,
@@ -510,27 +510,51 @@
     "next_allowed_at": 1758767426.282729
   },
   "https://eeeeehhhoyfhaihfg.qrfly.me/api/v1/client/subscribe?token=d45a097f5670e68cbc7ca00378d98fb6": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "body-hint",
-    "last_at": 1758748905.6366272,
-    "next_allowed_at": 1758756105.6366272
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758777322.5358899
   },
   "http://148.135.67.219/api/v1/client/subscribe?token=5fdc037af8a1d09c7": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1758755743.3820004,
-    "next_allowed_at": 1758759343.3820004
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758770122.5358899
   },
   "https://qufanfan.info/api/v1/client/subscribe?token=00d1eff0820cffa7b904f3ed0dcee8d9": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1758755743.3820004,
-    "next_allowed_at": 1758757543.3820004
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758766522.5358899
   },
   "https://www.djjc.cfd/api/v1/client/subscribe?token=eb6fb117e1c1cbe8041e0e0a00935b85": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1758755743.3820004,
-    "next_allowed_at": 1758757543.3820004
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758766522.5358899
+  },
+  "https://dash.pqjc.site/api/v1/client/subscribe?token=623515126e1ea10d95eeb594fbf6ac29": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758763822.5358899
+  },
+  "https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758763822.5358899
+  },
+  "https://msub.xn--bwwx30f.top/api/v1/client/subscribe?token=6faca5ae825cdad945dcd39f661e7567": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758763822.5358899
+  },
+  "https://vpndata.shop/api/v1/client/subscribe?token=a0abc72c47d4c7ea48e4b700bee0c1b5": {
+    "hits": 1,
+    "last_reason": "body-hint",
+    "last_at": 1758762922.5358899,
+    "next_allowed_at": 1758763822.5358899
   }
 }

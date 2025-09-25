@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-24T23:13:19.886786",
+  "timestamp": "2025-09-25T01:12:56.516466",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,12 +10,25 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 4,
-  "original_urls": 11,
+  "total_urls": 17,
+  "original_urls": 27,
   "urls": [
     "http://148.135.67.219/api/v1/client/subscribe?token=5fdc037af8a1d09c7",
-    "https://sub.soyorin.shop/api/v1/client/subscribe?token=f62d458ba609530a3e208eef5b8e871d",
     "https://sub.966888.xyz/api/v1/client/subscribe?token=2c53cb842bd6e2366782444aac8cfc16",
-    "https://qufanfan.info/api/v1/client/subscribe?token=00d1eff0820cffa7b904f3ed0dcee8d9"
+    "https://sub.soyorin.shop/api/v1/client/subscribe?token=f62d458ba609530a3e208eef5b8e871d",
+    "https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478",
+    "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=b294a9be1f2b6ad355a60c29e3e65f7b",
+    "https://subapi.v1.mk/remoteconfig/2025/09/0919/c425221beee6c6e54573d201dc47be6b.ini订阅链接:https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478",
+    "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=506d4358ba171eed3a516e7f21436975",
+    "https://dash.pqjc.site/api/v1/client/subscribe?token=623515126e1ea10d95eeb594fbf6ac29",
+    "https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=624b1e7563cbb1b95a6de2b926165510",
+    "https://xilucloud.top/api/v1/client/subscribe?token=b3c4c1cfeed19c52c482105b34b82c99",
+    "https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=920bd6c0538a16dbd568415badba5",
+    "http://gw-zubknq2tly.1010520.click/api/v1/client/subscribe?token=0985b7b96ce09745d2f3fa9fcb4a4243",
+    "https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=bbcda09c41e71bd271465b720758e6fe",
+    "https://app.mitce.net/?sid=315868&token=srvcdbfjvless://909d9946-ba4b-439f-91bb-f3cd6d6aa0f5@159.65.135.75:443?type=tcp&encryption=none&security=reality&pbk=QATdc0n0ZMAiGVbZX7whqD8zIieaPFKdnL8K8zEspF4&fp=chrome&sni=www.google.com&sid=9a2562f4fcd0&spx=/",
+    "https://gates.djjc.cfd/api/v1/client/subscribe?token=4e4631413841f4c8345a4b4c1f048902",
+    "https://msub.xn--bwwx30f.top/api/v1/client/subscribe?token=6faca5ae825cdad945dcd39f661e7567",
+    "https://subscribe.hxlgaozhong.xyz/api/v1/client/subscribe?token=3e6d91cdccde5149755dddc909af7774"
   ]
 }
