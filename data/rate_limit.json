@@ -534,22 +534,22 @@
     "next_allowed_at": 1758766522.5358899
   },
   "https://dash.pqjc.site/api/v1/client/subscribe?token=623515126e1ea10d95eeb594fbf6ac29": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1758762922.5358899,
-    "next_allowed_at": 1758763822.5358899
+    "last_at": 1758763871.0083072,
+    "next_allowed_at": 1758765671.0083072
   },
   "https://knjc.cfd/api/v1/client/subscribe?token=135c2b1eff3835d09ae84f575e8b1478": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1758762922.5358899,
-    "next_allowed_at": 1758763822.5358899
+    "last_at": 1758763871.0083072,
+    "next_allowed_at": 1758765671.0083072
   },
   "https://msub.xn--bwwx30f.top/api/v1/client/subscribe?token=6faca5ae825cdad945dcd39f661e7567": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1758762922.5358899,
-    "next_allowed_at": 1758763822.5358899
+    "last_at": 1758763871.0083072,
+    "next_allowed_at": 1758765671.0083072
   },
   "https://vpndata.shop/api/v1/client/subscribe?token=a0abc72c47d4c7ea48e4b700bee0c1b5": {
     "hits": 1,
