@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-25T21:17:53.123930",
+  "timestamp": "2025-09-26T01:29:21.521012",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,26 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 5,
+  "total_urls": 18,
+  "original_urls": 25,
   "urls": [
     "https://v2b.100010.site/api/v1/client/subscribe?token=c2cddc7fc56f787ed12185b378fe559c",
-    "https://订阅域名/api/v1/client/subscribe?token=xxx"
+    "https://www.s.aifjj.asia/api/v1/client/subscribe?token=3eddd42e9dc1e77d881326ad87da9246",
+    "https://订阅域名/api/v1/client/subscribe?token=xxx",
+    "https://ylccloud.top/api/v1/client/subscribe?token=2b3eb4e145b92a859cc5bbc04b5aad28",
+    "https://sufujia.top/api/v1/client/subscribe?token=8d882ce20470c7b2809dc32c3e4fc935",
+    "https://sfj.sufujia.top/api/v1/client/subscribe?token=475bbc358f8126c8d9e699184e91a8ed",
+    "https://sufujia.top/api/v1/client/subscribe?token=4e9d84a601fbc98990261ee93899331d",
+    "https://login.djjc.cfd/api/v1/client/subscribe?token=d9d366127674481da5457f4508c61788",
+    "https://sufujia.top/api/v1/client/subscribe?token=efea764acff0367dbecf144aff49502a",
+    "https://sufujia.top/api/v1/client/subscribe?token=e69c3e9e201effb62286c3063646b89f",
+    "https://rgergergergerg6555.saojc.xyz/api/v1/client/subscribe?token=185f79deb53f6fbd1650e4f483803a80",
+    "https://berber.pics/api/v1/client/subscribe?token=cca540002b0a7241d10056756eee9101",
+    "https://sufujia.top/api/v1/client/subscribe?token=4c776bc823b20bc98d6e6b063c0dd70b",
+    "https://sfj.sufujia.top/api/v1/client/subscribe?token=134b5ac2e2680ab102fb79ba63fa0490",
+    "https://ylccloud.top/api/v1/client/subscribe?token=d9008b98e8c44b3bb84a0e1b0d3a8272",
+    "http://202509011229371.chibaba.ggff.net/api/v1/client/subscribe?token=7ba6f4edef533d52a7d9ef3d93c19b4f",
+    "https://sufujia.top/api/v1/client/subscribe?token=2ddea025326fb94c933d36a36900566d",
+    "https://kqxnm.louwangzhiyu.online/api/v1/client/subscribe?token=130c1eb9d7a8f227613bfb95dbe0cfd6"
   ]
 }
