@@ -458,85 +458,81 @@ class EnhancedGoogleAPIScraper:
             self.logger.error(f"SerpAPI使用量阈值检查失败: {e}")
     
     def search_google_with_serpapi(self, query: str, time_range: str = "past_12_hours", region: Dict = None) -> List[Dict]:
-        """使用SerpAPI搜索Google"""
-        try:
-            # 获取最优密钥
-            api_key = self.key_manager.get_optimal_key()
-            if not api_key:
-                self.logger.error("没有可用的API密钥")
-                return []
-            
-            # 构建搜索参数
-            # 使用动态地区参数以获得不同地区的搜索结果
-            if region is None:
-                region = {'gl': 'cn', 'hl': 'zh-CN', 'lr': 'lang_zh-CN|lang_en'}  # 默认中国地区
-                
-            params = {
-                'api_key': api_key,
-                'engine': 'google',
-                'q': query,
-                'google_domain': 'google.com',  
-                'gl': region['gl'],  # 动态地理位置
-                'hl': region['hl'],  # 动态界面语言
-                'num': self.config['search']['max_results_per_query'],
-                'lr': region.get('lr', 'lang_zh-CN|lang_en'),  # 动态语言限制
-            }
-            
-            # 添加时间范围
-            time_mapping = {
-                'past_hour': 'qdr:h',
-                'past_12_hours': 'qdr:d',
-                'past_24_hours': 'qdr:d',
-                'past_week': 'qdr:w',
-                'past_month': 'qdr:m',
-                'past_year': 'qdr:y'
-            }
-            
-            if time_range in time_mapping:
-                params['tbs'] = time_mapping[time_range]
-            
-            # 添加过滤参数
-            params['filter'] = '0'  # 不过滤结果
-            
-            self.logger.info(f"SerpAPI 搜索参数: {params}")
-            
-            # 发送请求 - 先尝试使用session（带代理），失败时自动切换到直连
+        """使用SerpAPI搜索Google，支持自动密钥切换"""
+        
+        def search_operation(api_key):
+            """执行SerpAPI搜索操作"""
             try:
-                response = self.session.get('https://serpapi.com/search', params=params, timeout=30)
-            except (requests.exceptions.Timeout, requests.exceptions.ConnectionError, 
-                    requests.exceptions.ChunkedEncodingError) as e:
-                error_str = str(e)
-                if ("timed out" in error_str and "Connection to" in error_str) or \
-                   "Unable to connect to proxy" in error_str or \
-                   "ProxyError" in error_str or \
-                   "ConnectTimeoutError" in error_str or \
-                   "Connection aborted" in error_str or \
-                   "RemoteDisconnected" in error_str:
-                    self.logger.info(f"SerpAPI连接问题，切换到直连模式: {e}")
-                    response = requests.get('https://serpapi.com/search', params=params, timeout=30)
-                else:
-                    raise
-            
-            if response.status_code == 200:
-                data = response.json()
-                organic_results = data.get('organic_results', [])
-                self.logger.info(f"SerpAPI 有机结果 {len(organic_results)} 条")
-                return organic_results
-            elif response.status_code == 401:
-                self.logger.error("SerpAPI认证失败，密钥可能无效")
-                self.key_manager.mark_key_failed(api_key)
-                return []
-            elif response.status_code == 429:
-                self.logger.error("SerpAPI请求频率限制")
-                self.key_manager.mark_key_failed(api_key)
-                return []
-            else:
-                self.logger.error(f"SerpAPI请求失败: HTTP {response.status_code}")
-                return []
+                # 构建搜索参数
+                # 使用动态地区参数以获得不同地区的搜索结果
+                if region is None:
+                    region = {'gl': 'cn', 'hl': 'zh-CN', 'lr': 'lang_zh-CN|lang_en'}  # 默认中国地区
+                    
+                params = {
+                    'api_key': api_key,
+                    'engine': 'google',
+                    'q': query,
+                    'google_domain': 'google.com',  
+                    'gl': region['gl'],  # 动态地理位置
+                    'hl': region['hl'],  # 动态界面语言
+                    'num': self.config['search']['max_results_per_query'],
+                    'lr': region.get('lr', 'lang_zh-CN|lang_en'),  # 动态语言限制
+                }
                 
-        except Exception as e:
-            self.logger.error(f"SerpAPI搜索异常: {e}")
-            return []
+                # 添加时间范围
+                time_mapping = {
+                    'past_hour': 'qdr:h',
+                    'past_12_hours': 'qdr:d',
+                    'past_24_hours': 'qdr:d',
+                    'past_week': 'qdr:w',
+                    'past_month': 'qdr:m',
+                    'past_year': 'qdr:y'
+                }
+                
+                if time_range in time_mapping:
+                    params['tbs'] = time_mapping[time_range]
+                
+                # 添加过滤参数
+                params['filter'] = '0'  # 不过滤结果
+                
+                self.logger.info(f"SerpAPI 搜索参数: {params}")
+                
+                # 发送请求 - 先尝试使用session（带代理），失败时自动切换到直连
+                try:
+                    response = self.session.get('https://serpapi.com/search', params=params, timeout=30)
+                except (requests.exceptions.Timeout, requests.exceptions.ConnectionError, 
+                        requests.exceptions.ChunkedEncodingError) as e:
+                    error_str = str(e)
+                    if ("timed out" in error_str and "Connection to" in error_str) or \
+                       "Unable to connect to proxy" in error_str or \
+                       "ProxyError" in error_str or \
+                       "ConnectTimeoutError" in error_str or \
+                       "Connection aborted" in error_str or \
+                       "RemoteDisconnected" in error_str:
+                        self.logger.info(f"SerpAPI连接问题，切换到直连模式: {e}")
+                        response = requests.get('https://serpapi.com/search', params=params, timeout=30)
+                    else:
+                        raise
+                
+                if response.status_code == 200:
+                    data = response.json()
+                    organic_results = data.get('organic_results', [])
+                    self.logger.info(f"SerpAPI 有机结果 {len(organic_results)} 条")
+                    return organic_results
+                elif response.status_code in [401, 429]:
+                    self.logger.warning(f"SerpAPI密钥失败: {api_key[:10]}... (HTTP {response.status_code})")
+                    self.key_manager.mark_key_failed(api_key)
+                    return None  # 返回None触发重试
+                else:
+                    self.logger.error(f"SerpAPI请求失败: HTTP {response.status_code}")
+                    return None
+                    
+            except Exception as e:
+                self.logger.error(f"SerpAPI搜索异常: {e}")
+                return None
+        
+        # 使用故障转移机制
+        return self.key_manager.try_key_with_fallback(search_operation)
     
     def extract_api_urls_from_page(self, url: str) -> List[str]:
         """从网页中提取API URL"""

@@ -477,10 +477,18 @@ def main():
             from enhanced_key_manager import EnhancedSerpAPIKeyManager  # type: ignore
             mgr = EnhancedSerpAPIKeyManager(keys_file=os.path.join(PROJECT_ROOT, "keys"))
             quotas = mgr.check_all_quotas(force_refresh=True)
-            total_left = sum(q.get("total_searches_left", 0) for q in quotas if q.get("success"))
-            if total_left < args.min_searches_left:
-                print(f"[info] SerpAPI remaining {total_left} < {args.min_searches_left}, skip scrape this round")
+            
+            # 检查是否有任何可用的密钥（包括额度为0但重置时间近的）
+            available_keys = [q for q in quotas if q.get("success") and q.get("account_status") == "Active"]
+            
+            if not available_keys:
+                print(f"[info] 没有可用的SerpAPI密钥，跳过搜索")
             else:
+                # 计算总剩余额度
+                total_left = sum(q.get("total_searches_left", 0) for q in available_keys)
+                print(f"[info] SerpAPI 可用密钥: {len(available_keys)}个, 总剩余额度: {total_left}次")
+                
+                # 即使额度为0也要尝试，因为可能有重置时间近的密钥
                 from google_api_scraper_enhanced import EnhancedGoogleAPIScraper  # type: ignore
                 scraper = EnhancedGoogleAPIScraper()
                 scraper.run_scraping_task()
