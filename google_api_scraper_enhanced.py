@@ -460,14 +460,15 @@ class EnhancedGoogleAPIScraper:
     def search_google_with_serpapi(self, query: str, time_range: str = "past_12_hours", region: Dict = None) -> List[Dict]:
         """使用SerpAPI搜索Google，支持自动密钥切换"""
         
+        # 在外层函数中处理region默认值，避免内层函数的作用域问题
+        if region is None:
+            region = {'gl': 'cn', 'hl': 'zh-CN', 'lr': 'lang_zh-CN|lang_en'}  # 默认中国地区
+        
         def search_operation(api_key):
             """执行SerpAPI搜索操作"""
             try:
                 # 构建搜索参数
                 # 使用动态地区参数以获得不同地区的搜索结果
-                if region is None:
-                    region = {'gl': 'cn', 'hl': 'zh-CN', 'lr': 'lang_zh-CN|lang_en'}  # 默认中国地区
-                    
                 params = {
                     'api_key': api_key,
                     'engine': 'google',
