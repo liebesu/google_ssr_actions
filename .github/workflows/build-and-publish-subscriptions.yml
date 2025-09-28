@@ -70,7 +70,7 @@ jobs:
           if [ -n "${{ vars.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ vars.AUTH_SHA256 }}"; fi
           if [ -n "${{ vars.AUTH_USER }}" ]; then export AUTH_USER="${{ vars.AUTH_USER }}"; fi
           if [ -n "${{ secrets.AUTH_USER }}" ]; then export AUTH_USER="${{ secrets.AUTH_USER }}"; fi
-          python aggregator_cli.py --output-dir dist --max 1200 --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery --emit-health --emit-index
+          python aggregator_cli.py --output-dir dist --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery --emit-health --emit-index
           
           # 确保 dist 目录有内容
           echo "=== 检查 dist 目录内容 ==="
