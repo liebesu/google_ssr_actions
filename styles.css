@@ -127,6 +127,9 @@ tbody tr:hover { background: rgba(59,130,246,.15); }
 /* 卡片注释 */
 .card-note { margin-top: 12px; margin-bottom: 0; font-size: 12px; color: #94a3b8; }
 
+/* 全局说明注释 */
+.note { text-align: center; font-size: 12px; color: #94a3b8; margin: 8px 0 16px; background: rgba(15,23,42,.2); border: 1px solid rgba(148,163,184,.2); border-radius: 6px; padding: 6px 12px; display: inline-block; }
+
 /* 7天趋势图表样式 */
 .trend-details { margin-top: 16px; }
 .trend-details h4 { color: #e5e7eb; margin: 0 0 12px; font-size: 14px; border-left: 2px solid #60a5fa; padding-left: 8px; }

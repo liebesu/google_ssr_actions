@@ -184,13 +184,14 @@
       <h1>Google SSR Actions</h1>
       <small>构建时间(中国时区)：__TS_CN__</small>
     </div>
-    <div class="subtitle">源 __ALIVE__/__TOTAL__ · 节点 __NODES__ · 新增 __NEW__ · 移除 __REMOVED__</div>
+    <div class="subtitle">源 __ALIVE__/__TOTAL__ · 节点 __NODES__ · 新增 __NEW__ · 移除 __REMOVED__ · 今日新源 __DAILY_NEW__</div>
+    <div style="text-align: center;"><div class="note">📌 仅展示可用源（自动过滤失效/超额/限速来源）</div></div>
 
     <div class="stats" id="stats-cards">
       <div class="stat quota" data-hide="q"><div class="num">__QLEFT__</div><div>剩余额度</div></div>
       <div class="stat quota" data-hide="q"><div class="num">__QCAP__</div><div>总额度</div></div>
       <div class="stat quota" data-hide="q"><div class="num">__KOK__/__KTOTAL__</div><div>可用密钥/总密钥</div></div>
-      <div class="stat"><div class="num">__NEXT_CN__</div><div>下次更新时间(中国时区)</div></div>
+      <div class="stat"><div class="num">__NEXT_CN__</div><div>下次更新时间</div></div>
     </div>
 
     <div class="grid">
