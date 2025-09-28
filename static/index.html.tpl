@@ -244,6 +244,67 @@
               <span class="copy-text">复制链接</span>
             </button>
           </div>
+          
+          <!-- 地区分类文件 -->
+          <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(148,163,184,.2);">
+            <h4 style="color: #e5e7eb; margin: 0 0 12px; font-size: 14px;">🌍 地区分类订阅</h4>
+            <div class="file-list">
+              <div class="file-item">
+                <div class="file-info">
+                  <div class="file-name">
+                    <a href="sub/regions/hk.txt"><code>hk.txt</code></a>
+                    <span class="file-desc">香港节点</span>
+                  </div>
+                </div>
+                <button onclick="copyFileUrl('sub/regions/hk.txt', this)" class="copy-btn-mini">📋</button>
+              </div>
+              <div class="file-item">
+                <div class="file-info">
+                  <div class="file-name">
+                    <a href="sub/regions/tw.txt"><code>tw.txt</code></a>
+                    <span class="file-desc">台湾节点</span>
+                  </div>
+                </div>
+                <button onclick="copyFileUrl('sub/regions/tw.txt', this)" class="copy-btn-mini">📋</button>
+              </div>
+              <div class="file-item">
+                <div class="file-info">
+                  <div class="file-name">
+                    <a href="sub/regions/sg.txt"><code>sg.txt</code></a>
+                    <span class="file-desc">新加坡节点</span>
+                  </div>
+                </div>
+                <button onclick="copyFileUrl('sub/regions/sg.txt', this)" class="copy-btn-mini">📋</button>
+              </div>
+              <div class="file-item">
+                <div class="file-info">
+                  <div class="file-name">
+                    <a href="sub/regions/us.txt"><code>us.txt</code></a>
+                    <span class="file-desc">美国节点</span>
+                  </div>
+                </div>
+                <button onclick="copyFileUrl('sub/regions/us.txt', this)" class="copy-btn-mini">📋</button>
+              </div>
+              <div class="file-item">
+                <div class="file-info">
+                  <div class="file-name">
+                    <a href="sub/regions/kr.txt"><code>kr.txt</code></a>
+                    <span class="file-desc">韩国节点</span>
+                  </div>
+                </div>
+                <button onclick="copyFileUrl('sub/regions/kr.txt', this)" class="copy-btn-mini">📋</button>
+              </div>
+              <div class="file-item">
+                <div class="file-info">
+                  <div class="file-name">
+                    <a href="sub/regions/jp.txt"><code>jp.txt</code></a>
+                    <span class="file-desc">日本节点</span>
+                  </div>
+                </div>
+                <button onclick="copyFileUrl('sub/regions/jp.txt', this)" class="copy-btn-mini">📋</button>
+              </div>
+            </div>
+          </div>
         </div>
         <p class="card-note">📌 所有订阅文件和接口可直接访问，无需页面认证</p>
       </div>

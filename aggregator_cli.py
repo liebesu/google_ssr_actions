@@ -232,12 +232,13 @@ def normalize_subscribe_url(raw_url: str) -> Optional[str]:
 
 
 REGION_KEYWORDS = {
-    "hk": ["hk", "hongkong", "hong kong", "🇭🇰", "香港"],
-    "sg": ["sg", "singapore", "🇸🇬", "新加坡"],
-    "jp": ["jp", "japan", "🇯🇵", "日本"],
-    "tw": ["tw", "taiwan", "🇹🇼", "台湾", "臺灣"],
-    "us": ["us", "united states", "usa", "🇺🇸", "美国", "美國"],
-    "eu": ["eu", "europe", "🇪🇺", "欧", "歐"],
+    "hk": ["hk", "hongkong", "hong kong", "🇭🇰", "香港", "hkg"],
+    "tw": ["tw", "taiwan", "🇹🇼", "台湾", "臺灣", "taipei", "台北"],
+    "sg": ["sg", "singapore", "🇸🇬", "新加坡", "sgp"],
+    "us": ["us", "united states", "usa", "🇺🇸", "美国", "美國", "america", "american"],
+    "kr": ["kr", "korea", "south korea", "🇰🇷", "韩国", "韓國", "seoul", "首尔", "首爾"],
+    "jp": ["jp", "japan", "🇯🇵", "日本", "tokyo", "osaka", "东京", "大阪"],
+    "eu": ["eu", "europe", "🇪🇺", "欧", "歐", "germany", "france", "uk", "netherlands"],
 }
 
 
@@ -414,7 +415,6 @@ def generate_index_html(base_url_paths: Dict[str, str], health: Dict[str, object
         "__NODES__": str(health.get("nodes_total", 0)),
         "__NEW__": str(health.get("sources_new", 0)),
         "__REMOVED__": str(health.get("sources_removed", 0)),
-        "__DAILY_NEW__": str(health.get("daily_new_urls", 0)),  # 新增：每日新增URL
         "__QLEFT__": str(health.get("quota_total_left", 0)),
         "__QCAP__": str(health.get("quota_total_capacity", 0)),
         "__KOK__": str(health.get("keys_ok", 0)),
@@ -1008,6 +1008,21 @@ def main():
     
     print(f"[info] 从验证源获取到 {len(verified_nodes)} 个节点用于对外订阅文件")
     
+    # 基于验证节点重新进行地区和协议分类
+    verified_region_to_nodes: Dict[str, List[str]] = {k: [] for k in REGION_KEYWORDS.keys()}
+    verified_proto_to_nodes: Dict[str, List[str]] = defaultdict(list)
+    
+    for ln in verified_nodes:
+        # 地区分类
+        region = classify_region_heuristic(ln)
+        if region and region in verified_region_to_nodes:
+            verified_region_to_nodes[region].append(ln)
+        
+        # 协议分类  
+        proto = classify_protocol(ln)
+        if proto:
+            verified_proto_to_nodes[proto].append(ln)
+    
     # 更新订阅文件 - 只包含验证可用源的节点
     write_text(os.path.join(paths["sub"], "all.txt"), "\n".join(verified_nodes) + ("\n" if verified_nodes else ""))
 
@@ -1137,6 +1152,28 @@ def main():
         }
         write_text(os.path.join(paths["sub"], "all.yaml"), yaml.safe_dump(clash_yaml, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
 
+    # 生成基于验证节点的地区和协议分类文件
+    print(f"[info] 生成地区分类文件...")
+    for region, nodes in verified_region_to_nodes.items():
+        if nodes:  # 只有当地区有节点时才生成文件
+            print(f"[info] {region}.txt: {len(nodes)} 个节点")
+        write_text(os.path.join(paths["regions"], f"{region}.txt"), "\n".join(nodes) + ("\n" if nodes else ""))
+    
+    print(f"[info] 生成协议分类文件...")
+    for proto in ["ss", "vmess", "vless", "trojan", "hysteria2", "ssr"]:
+        nodes = verified_proto_to_nodes.get(proto, [])
+        if nodes:  # 只有当协议有节点时才输出日志
+            print(f"[info] {proto}.txt: {len(nodes)} 个节点")
+        write_text(os.path.join(paths["proto"], f"{proto}.txt"), "\n".join(nodes) + ("\n" if nodes else ""))
+    
+    # Shadowsocks base64 订阅文件（兼容传统SS客户端）
+    ss_nodes = verified_proto_to_nodes.get("ss", [])
+    if ss_nodes:
+        ss_raw = ("\n".join(ss_nodes) + "\n").encode("utf-8")
+        ss_b64 = base64.b64encode(ss_raw).decode("ascii")
+        write_text(os.path.join(paths["proto"], "ss-base64.txt"), ss_b64 + "\n")
+        print(f"[info] ss-base64.txt: {len(ss_nodes)} 个SS节点（Base64编码）")
+
     # 写入各种URL文件
     write_json(live_out_path, refined_alive_urls)
     
@@ -1199,9 +1236,6 @@ def main():
             auth_sha256_env = ""
     auth_user = os.getenv("AUTH_USER", "")
 
-    # 计算今日新增URL数量
-    daily_new_urls = sum(1 for meta in url_meta if meta.get("first_seen") == date_today)
-    
     health = {
         "build_time_utc": build_dt.strftime("%Y-%m-%d %H:%M:%S"),
         "build_time_cn": ts_cn,
@@ -1211,7 +1245,6 @@ def main():
         "source_alive": len(refined_alive_urls),
         "sources_new": sources_new,
         "sources_removed": sources_removed,
-        "daily_new_urls": daily_new_urls,  # 新增：每日新增可用URL数量
         "nodes_total": len(verified_nodes),
         "nodes_before_dedup": nodes_before_dedup,
         "nodes_after_dedup": len(verified_nodes),
