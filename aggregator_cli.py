@@ -415,6 +415,7 @@ def generate_index_html(base_url_paths: Dict[str, str], health: Dict[str, object
         "__NODES__": str(health.get("nodes_total", 0)),
         "__NEW__": str(health.get("sources_new", 0)),
         "__REMOVED__": str(health.get("sources_removed", 0)),
+        "__DAILY_NEW__": str(health.get("daily_new_urls", 0)),  # 新增：每日新增URL
         "__QLEFT__": str(health.get("quota_total_left", 0)),
         "__QCAP__": str(health.get("quota_total_capacity", 0)),
         "__KOK__": str(health.get("keys_ok", 0)),
@@ -1252,6 +1253,7 @@ def main():
         "source_alive": len(refined_alive_urls),
         "sources_new": sources_new,
         "sources_removed": sources_removed,
+        "daily_new_urls": sum(1 for meta in url_meta if meta.get("first_seen") == date_today),
         "nodes_total": len(verified_nodes),
         "nodes_before_dedup": nodes_before_dedup,
         "nodes_after_dedup": len(verified_nodes),
