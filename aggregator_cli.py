@@ -1010,13 +1010,20 @@ def main():
     
     # 基于验证节点重新进行地区和协议分类
     verified_region_to_nodes: Dict[str, List[str]] = {k: [] for k in REGION_KEYWORDS.keys()}
+    verified_region_to_nodes["others"] = []  # 添加"其他地区"分类
     verified_proto_to_nodes: Dict[str, List[str]] = defaultdict(list)
+    
+    # 主要地区列表（用于判断是否为"其他地区"）
+    main_regions = {"hk", "tw", "sg", "us", "kr", "jp"}
     
     for ln in verified_nodes:
         # 地区分类
         region = classify_region_heuristic(ln)
         if region and region in verified_region_to_nodes:
             verified_region_to_nodes[region].append(ln)
+        elif not region or region not in main_regions:
+            # 未识别的地区或非主要地区，归入"其他地区"
+            verified_region_to_nodes["others"].append(ln)
         
         # 协议分类  
         proto = classify_protocol(ln)

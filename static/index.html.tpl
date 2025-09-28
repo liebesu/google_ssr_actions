@@ -303,6 +303,15 @@
                 </div>
                 <button onclick="copyFileUrl('sub/regions/jp.txt', this)" class="copy-btn-mini">📋</button>
               </div>
+              <div class="file-item">
+                <div class="file-info">
+                  <div class="file-name">
+                    <a href="sub/regions/others.txt"><code>others.txt</code></a>
+                    <span class="file-desc">其他地区节点</span>
+                  </div>
+                </div>
+                <button onclick="copyFileUrl('sub/regions/others.txt', this)" class="copy-btn-mini">📋</button>
+              </div>
             </div>
           </div>
         </div>
