@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-29T03:38:49.644865",
+  "timestamp": "2025-09-29T06:33:43.172191",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,19 +10,13 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 11,
-  "original_urls": 14,
+  "total_urls": 5,
+  "original_urls": 8,
   "urls": [
-    "https://sufujia.top/api/v1/client/subscribe?token=31d608dc04893d6716980ea18b32221f",
     "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=158da66e7a12bb08018974512a596599",
-    "https://jjzcloud.top/api/v1/client/subscribe?token=245eb5aaadca9f5ecf07bb7429bd56e1",
-    "https://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=339042393ff956776e1222383fce9ce4",
-    "https://ylccloud.top/api/v1/client/subscribe?token=4aede15668c898c582cd93ca384a2182",
-    "https://sfj.sufujia.top/api/v1/client/subscribe?token=962bc311284648e5114ab93b3d8ef7c7",
-    "https://linlujs.cc/lll/8119cc492ee65c77c7f12ce41c7d070bhttps://maxhjd.jjzcloud.top/api/v1/client/subscribe?token=339042393ff956776e1222383fce9ce4https://jjzcloud.top/api/v1/client/subscribe?token=245eb5aaadca9f5ecf07bb7429bd56e1https://sfj.sufujia.top/api/v1/client/subscribe?token=ddd8deffff72a85585fcce191b5f06a7https://sfj.sufujia.top/api/v1/client/subscribe?token=962bc311284648e5114ab93b3d8ef7c7https://doslvcpq5ql74gid.pythonanywhere.com/clash/A6hOhttps://xl.xilucloud.top//api/v1/client/subscribe?token=485bfaab6f9ceb334c4370f102d60e9ahttps",
-    "https://sfj.sufujia.top/api/v1/client/subscribe?token=ddd8deffff72a85585fcce191b5f06a7",
-    "https://xl.xilucloud.top//api/v1/client/subscribe?token=485bfaab6f9ceb334c4370f102d60e9a",
-    "https://ylccloud.top/api/v1/client/subscribe?token=1ee6260a470d72903a0b29e959f5aac5",
-    "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=01469aa2996308f7fedf6d35727e1e04"
+    "https://9yddd.whtjdasha.com/api/v1/client/subscribe?token=32c1ac591c70bd37b56dc8f81e789eb6",
+    "https://falco.659742.xyz/api/v1/client/subscribe?token=4fe84e9d9ddae29669db37da98b13771",
+    "https://dash.pqjc.site/api/v1/client/subscribe?token=1cae4046540ba9f795806473f5f822a4",
+    "https://sufujia.top/api/v1/client/subscribe?token=31d608dc04893d6716980ea18b32221f"
   ]
 }
