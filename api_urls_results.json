@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-29T18:31:11.970713",
+  "timestamp": "2025-09-29T21:17:53.346932",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,22 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 14,
-  "original_urls": 17,
+  "total_urls": 3,
+  "original_urls": 7,
   "urls": [
     "https://sfj.sufujia.top/api/v1/client/subscribe?token=58a161ff0932cb2e3489eb8499db4ce3",
-    "https://ylccloud.top/api/v1/client/subscribe?token=a04efc4b51267a6d965037fffee05bc4",
-    "https://kqxnm.louwangzhiyu.online/api/v1/client/subscribe?token=130c1eb9d7a8f227613bfb95dbe0cfd6",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=d7096344a577d0e7d16c3051a3902adc",
-    "https://s1.byte11.com/api/v1/client/subscribe?token=1946f1ba6dc724c79cbe3f2c2c41336a",
-    "https://ylccloud.top/api/v1/client/subscribe?token=1ee6260a470d72903a0b29e959f5aac5",
-    "https://b3b0549e-160e-495a-a528-cccf5148bc48.372372.xyz/api/v1/client/subscribe?token=71e64f02f27cb21c237da6db94a77f1f",
-    "https://ylccloud.top/api/v1/client/subscribe?token=05a6e6b85e0cf5eb962fe7a3b6bb813e",
-    "https://ylccloud.top/api/v1/client/subscribe?token=713bb65acf8e274910733efa74f6fbd8",
-    "https://ylccloud.top/api/v1/client/subscribe?token=1fe83d24d3c0da15010a13f10576d3e0",
-    "https://ylccloud.top/api/v1/client/subscribe?token=4aede15668c898c582cd93ca384a2182",
-    "https://ylccloud.top/api/v1/client/subscribe?token=902f51f856881fa55be565c375f722ff",
-    "https://gates.djjc.cfd/api/v1/client/subscribe?token=ef51dda5cff8dc491dbbf4bc653ca906",
-    "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=4086fa59b5d6c198c886c8879026992d"
+    "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=4086fa59b5d6c198c886c8879026992d",
+    "https://sufujia.top/api/v1/client/subscribe?token=31d608dc04893d6716980ea18b32221f"
   ]
 }
