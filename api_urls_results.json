@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-30T15:20:29.504346",
+  "timestamp": "2025-09-30T18:28:21.034951",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,24 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 6,
+  "total_urls": 16,
+  "original_urls": 23,
   "urls": [
     "https://xiaomi.nekoy01.com:10018/api/v1/client/subscribe?token=ce9dd77b741c8a0dcdbe134314ea0901",
+    "https://ylccloud.top/api/v1/client/subscribe?token=f84718836cae8934b4b79612c6f704f7",
     "http://148.135.67.219/api/v1/client/subscribe?token=5fdc037af8a1d09c7",
+    "https://ylccloud.top/api/v1/client/subscribe?token=d083f5e45f34f776bbbc45bc452094bc",
+    "https://www.flyintpro05.com/api/v1/client/subscribe?token=62be89e4bc828cdfd0c62bfb44746312",
+    "https://ylccloud.top/api/v1/client/subscribe?token=2283892cf19d4ba07aaf45f582bed9a8",
+    "https://ylccloud.top/api/v1/client/subscribe?token=32d639ad1575bdf486a0d6e8ac6d6950",
+    "https://ylccloud.top/api/v1/client/subscribe?token=e9b1bd8310df66b1b0f5838ec98e366c",
+    "http://x2b.eans.top/api/v1/client/subscribe?token=ccf812a91218a6b4708a8fd3ba30eeee",
+    "http://x2b.eans.top/api/v1/client/subscribe?token=01750dfe2cb5be6dce5e1576bfe466f0",
+    "http://202509011229371.chibaba.ggff.net/api/v1/client/subscribe?token=f7afe7431b9f6e470812d4e9bf72944f",
+    "https://ylccloud.top/api/v1/client/subscribe?token=2df68395b4673d16bfff8893a1f61749",
+    "http://x2b.eans.top/api/v1/client/subscribe?token=956ad01bbc5e7501eaf8331a6836c355",
+    "https://ylccloud.top/api/v1/client/subscribe?token=da798bbf4cbb5da65df34071d85bfc4b",
+    "https://login.yfjc.xyz/api/v1/client/subscribe?token=922f5c4b744f0a0b259eb365adc3e54e",
     "https://mlshu.xyz/api/v1/client/subscribe?token=3ffbd62af7f8ecae6f863d65d3113e48"
   ]
 }
