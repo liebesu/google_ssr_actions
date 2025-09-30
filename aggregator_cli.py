@@ -436,7 +436,7 @@ def generate_index_html(base_url_paths: Dict[str, str], health: Dict[str, object
 def main():
     parser = argparse.ArgumentParser(description="Aggregate subscription URLs and generate outputs")
     parser.add_argument("--output-dir", required=True, help="Directory to write outputs, e.g., dist")
-    parser.add_argument("--max", type=int, default=1200, help="Max nodes in all.txt")
+    parser.add_argument("--max", type=int, default=None, help="Max nodes in all.txt (no limit if not specified)")
     parser.add_argument("--dedup", action="store_true", help="Enable deduplication")
     parser.add_argument("--history", default=os.path.join(PROJECT_ROOT, "data", "history_urls.json"))
     parser.add_argument("--live-out", default=os.path.join(PROJECT_ROOT, "data", "live_urls.json"))
