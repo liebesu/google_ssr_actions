@@ -924,10 +924,10 @@
     "next_allowed_at": 1759602739.3047478
   },
   "https://s1.byte33.com/api/v1/client/subscribe?token=d1b9f82917c63fce0059e7cb1b26f9ab": {
-    "hits": 12,
+    "hits": 13,
     "last_reason": "http 403",
-    "last_at": 1759418634.4475837,
-    "next_allowed_at": 1759505034.4475837
+    "last_at": 1759526384.2830093,
+    "next_allowed_at": 1759612784.2830093
   },
   "https://sub.mutoujd.top/api/v1/client/subscribe?token=5ec3d54e282a2d41273211203e3e7b59": {
     "hits": 13,
@@ -1266,10 +1266,10 @@
     "next_allowed_at": 1759569781.5227296
   },
   "https://login.yfjc.xyz/api/v1/client/subscribe?token=922f5c4b744f0a0b259eb365adc3e54e": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1759418634.4475837,
-    "next_allowed_at": 1759505034.4475837
+    "last_at": 1759526384.2830093,
+    "next_allowed_at": 1759612784.2830093
   },
   "http://202509011229371.chibaba.ggff.net/api/v1/client/subscribe?token=3d09e40594815b8d2f27bfc978b3668b": {
     "hits": 8,
@@ -1332,21 +1332,27 @@
     "next_allowed_at": 1759490581.5227296
   },
   "https://odysseycdn.cyou/api/v1/client/subscribe?token=057940e6e8d6f091ceabdf2f8b1965ed": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1759516339.3047478,
-    "next_allowed_at": 1759523539.3047478
+    "last_at": 1759526384.2830093,
+    "next_allowed_at": 1759540784.2830093
   },
   "https://djjc.cfd/api/v1/client/subscribe?token=4b4ad3eaa186905398ac0bcada1815ab": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1759516339.3047478,
-    "next_allowed_at": 1759519939.3047478
+    "last_at": 1759526384.2830093,
+    "next_allowed_at": 1759533584.2830093
   },
   "https://xtls.rprx.vision/api/v1/client/subscribe?token=99a65a39b738158aa849ef1ac8e6d845": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1759516339.3047478,
-    "next_allowed_at": 1759517239.3047478
+    "last_at": 1759526384.2830093,
+    "next_allowed_at": 1759528184.2830093
+  },
+  "https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15": {
+    "hits": 1,
+    "last_reason": "http 503",
+    "last_at": 1759526384.2830093,
+    "next_allowed_at": 1759527284.2830093
   }
 }
