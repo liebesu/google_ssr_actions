@@ -24,10 +24,10 @@
     "next_allowed_at": 1759526425.2406971
   },
   "https://5cb1.uu.a0079.store/api/v1/client/subscribe?token=k9pU": {
-    "hits": 13,
+    "hits": 14,
     "last_reason": "http 403",
-    "last_at": 1759368572.1498387,
-    "next_allowed_at": 1759454972.1498387
+    "last_at": 1759462345.209909,
+    "next_allowed_at": 1759548745.209909
   },
   "https://apidy.pqjc.site/api/v1/client/subscribe?token=98931419ad844bbf028e6b9dfaf971be": {
     "hits": 16,
@@ -522,10 +522,10 @@
     "next_allowed_at": 1759526425.2406971
   },
   "https://qufanfan.info/api/v1/client/subscribe?token=00d1eff0820cffa7b904f3ed0dcee8d9": {
-    "hits": 10,
+    "hits": 11,
     "last_reason": "http 403",
-    "last_at": 1759224299.7510455,
-    "next_allowed_at": 1759310699.7510455
+    "last_at": 1759462345.209909,
+    "next_allowed_at": 1759548745.209909
   },
   "https://www.djjc.cfd/api/v1/client/subscribe?token=eb6fb117e1c1cbe8041e0e0a00935b85": {
     "hits": 14,
