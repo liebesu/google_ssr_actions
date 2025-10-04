@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-04T09:18:55.035070",
+  "timestamp": "2025-10-04T12:38:00.650956",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,17 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 12,
+  "total_urls": 9,
+  "original_urls": 19,
   "urls": [
+    "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=158da66e7a12bb08018974512a596599",
     "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=fdcb29a03a96c3296620ef37d7f9a890",
-    "http://202509011229371.chibaba.ggff.net/api/v1/client/subscribe?token=f7afe7431b9f6e470812d4e9bf72944f",
-    "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=158da66e7a12bb08018974512a596599"
+    "http://x2b.eans.top/api/v1/client/subscribe?token=73eedd422ae33703e1f3aa504fec25a3",
+    "https://old-v2b.linkedton.com/api/v1/client/subscribe?token=ce7c8166b54f689b4db39e6240db96a1",
+    "https://562dd2da-d6a6-49ca-8ec2-f65fbb4b2e2c.xn--l6qx3lcvp58x.com/api/v1/client/subscribe?token=e3cfcced59c60d67198c8e585c785913",
+    "http://www.camael.top/api/v1/client/subscribe?token=3faa8f73d2fe1d554ef141d20044273f",
+    "http://www.camael.top/api/v1/client/subscribe?token=5d4f63e85f79b30b733b733dd69c0329",
+    "http://x2b.eans.top/api/v1/client/subscribe?token=4f7f084dc38a9539663ed6597412304e",
+    "http://202509011229371.chibaba.ggff.net/api/v1/client/subscribe?token=f7afe7431b9f6e470812d4e9bf72944f"
   ]
 }
