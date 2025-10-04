@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-04T06:28:14.303406",
+  "timestamp": "2025-10-04T09:18:55.035070",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,24 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 16,
-  "original_urls": 27,
+  "total_urls": 3,
+  "original_urls": 12,
   "urls": [
-    "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=158da66e7a12bb08018974512a596599",
-    "http://202509011229371.chibaba.ggff.net/api/v1/client/subscribe?token=f7afe7431b9f6e470812d4e9bf72944f",
-    "https://www.flyintpro05.com/api/v1/client/subscribe?token=62be89e4bc828cdfd0c62bfb44746312",
     "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=fdcb29a03a96c3296620ef37d7f9a890",
-    "https://kqxnm.louwangzhiyu.online/api/v1/client/subscribe?token=d12465acf358a440584117372e9a17f8",
-    "https://vaamx.louwangzhiyu.online/api/v1/client/subscribe?token=d56372e30d85e9c4183eb961aa368173",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=0de5dbd9210d179d733f542cee5f1891",
-    "https://9yddd.whtjdasha.com/api/v1/client/subscribe?token=32c1ac591c70bd37b56dc8f81e789eb6",
-    "https://ylccloud.top/api/v1/client/subscribe?token=6af6acc4167336f272a2ed07da14b7a7",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=d4985576dd91f013f646b8b436ece788",
-    "https://odysseycdn.cyou/api/v1/client/subscribe?token=057940e6e8d6f091ceabdf2f8b1965ed",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=fd9c9fc32d43be9c7a75ef72cd73e53f",
-    "https://xtls.rprx.vision/api/v1/client/subscribe?token=99a65a39b738158aa849ef1ac8e6d845",
-    "https://kqxnm.louwangzhiyu.online/api/v1/client/subscribe?token=130c1eb9d7a8f227613bfb95dbe0cfd6",
-    "https://ch.owokkvsxks.store/api/v1/client/subscribe?token=14d9b7ad8be7234188ee330d3bb511f7",
-    "https://sub.feishayun.top/api/v1/client/subscribe?token=a940573462f13abfe72e6eb51d0a16ad"
+    "http://202509011229371.chibaba.ggff.net/api/v1/client/subscribe?token=f7afe7431b9f6e470812d4e9bf72944f",
+    "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=158da66e7a12bb08018974512a596599"
   ]
 }
