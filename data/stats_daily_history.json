@@ -105,10 +105,10 @@
   },
   {
     "date": "2025-10-05",
-    "google_added": 254,
+    "google_added": 285,
     "github_added": 5,
-    "new_total": 0,
-    "removed_total": 34,
-    "alive_total": 259
+    "new_total": 33,
+    "removed_total": 2,
+    "alive_total": 290
   }
 ]
