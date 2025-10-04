@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-03T21:17:24.852951",
+  "timestamp": "2025-10-04T01:23:57.297360",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,12 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 10,
+  "total_urls": 4,
+  "original_urls": 15,
   "urls": [
     "https://www.flyintpro05.com/api/v1/client/subscribe?token=62be89e4bc828cdfd0c62bfb44746312",
     "http://x2b.eans.top/api/v1/client/subscribe?token=d4985576dd91f013f646b8b436ece788",
-    "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=158da66e7a12bb08018974512a596599"
+    "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=158da66e7a12bb08018974512a596599",
+    "http://202509011229371.chibaba.ggff.net/api/v1/client/subscribe?token=f7afe7431b9f6e470812d4e9bf72944f"
   ]
 }
