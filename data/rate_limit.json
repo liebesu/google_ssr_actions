@@ -1308,10 +1308,10 @@
     "next_allowed_at": 1759311649.6300552
   },
   "https://cloudflaresub.yuwan.link/api/v1/client/subscribe?token=28523a41b161916657c537c3bfa009e6": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1759322779.7149355,
-    "next_allowed_at": 1759323679.7149355
+    "last_at": 1759559428.787462,
+    "next_allowed_at": 1759561228.787462
   },
   "https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a": {
     "hits": 1,
@@ -1338,16 +1338,16 @@
     "next_allowed_at": 1759569977.8861291
   },
   "https://djjc.cfd/api/v1/client/subscribe?token=4b4ad3eaa186905398ac0bcada1815ab": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1759541177.8861291,
-    "next_allowed_at": 1759555577.8861291
+    "last_at": 1759559428.787462,
+    "next_allowed_at": 1759588228.787462
   },
   "https://xtls.rprx.vision/api/v1/client/subscribe?token=99a65a39b738158aa849ef1ac8e6d845": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1759548521.9428594,
-    "next_allowed_at": 1759555721.9428594
+    "last_at": 1759559428.787462,
+    "next_allowed_at": 1759573828.787462
   },
   "https://sufujia.top/api/v1/client/subscribe?token=1e9f52a6a438d5383beeda63000d5b15": {
     "hits": 1,
