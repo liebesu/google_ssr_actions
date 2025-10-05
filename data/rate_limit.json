@@ -1212,10 +1212,10 @@
     "next_allowed_at": 1759656082.0354578
   },
   "https://9yddd.whtjdasha.com/api/v1/client/subscribe?token=32c1ac591c70bd37b56dc8f81e789eb6": {
-    "hits": 1,
-    "last_reason": "body-hint",
-    "last_at": 1759053330.7873797,
-    "next_allowed_at": 1759054230.7873797
+    "hits": 2,
+    "last_reason": "http 403",
+    "last_at": 1759645842.965604,
+    "next_allowed_at": 1759647642.965604
   },
   "https://fn1.170809.xyz/api/v1/client/subscribe?token=d16d4532ee64cccfeeebe49fa3475fd0": {
     "hits": 12,
@@ -1332,10 +1332,10 @@
     "next_allowed_at": 1759598482.0354578
   },
   "https://odysseycdn.cyou/api/v1/client/subscribe?token=057940e6e8d6f091ceabdf2f8b1965ed": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1759581620.369524,
-    "next_allowed_at": 1759639220.369524
+    "last_at": 1759645842.965604,
+    "next_allowed_at": 1759732242.965604
   },
   "https://djjc.cfd/api/v1/client/subscribe?token=4b4ad3eaa186905398ac0bcada1815ab": {
     "hits": 7,
@@ -1362,9 +1362,15 @@
     "next_allowed_at": 1759542077.8861291
   },
   "https://example.domain.com/api/v1/client/subscribe?token=000000000000000000000000000000": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1759635540.6041481,
-    "next_allowed_at": 1759636440.6041481
+    "last_at": 1759645842.965604,
+    "next_allowed_at": 1759647642.965604
+  },
+  "https://411611.xyz/api/v1/client/subscribe?token=549": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1759645842.965604,
+    "next_allowed_at": 1759646742.965604
   }
 }
