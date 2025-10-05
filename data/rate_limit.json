@@ -1212,10 +1212,10 @@
     "next_allowed_at": 1759656082.0354578
   },
   "https://9yddd.whtjdasha.com/api/v1/client/subscribe?token=32c1ac591c70bd37b56dc8f81e789eb6": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1759645842.965604,
-    "next_allowed_at": 1759647642.965604
+    "last_at": 1759656065.4207635,
+    "next_allowed_at": 1759659665.4207635
   },
   "https://fn1.170809.xyz/api/v1/client/subscribe?token=d16d4532ee64cccfeeebe49fa3475fd0": {
     "hits": 12,
@@ -1326,10 +1326,10 @@
     "next_allowed_at": 1759440925.2406971
   },
   "https://qq.xlm.plus/api/v1/client/subscribe?token=9e5db95336ab586ac6c4e2306c4d25a9": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "body-hint",
-    "last_at": 1759569682.0354578,
-    "next_allowed_at": 1759598482.0354578
+    "last_at": 1759656065.4207635,
+    "next_allowed_at": 1759713665.4207635
   },
   "https://odysseycdn.cyou/api/v1/client/subscribe?token=057940e6e8d6f091ceabdf2f8b1965ed": {
     "hits": 8,
@@ -1338,10 +1338,10 @@
     "next_allowed_at": 1759732242.965604
   },
   "https://djjc.cfd/api/v1/client/subscribe?token=4b4ad3eaa186905398ac0bcada1815ab": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1759591216.1428792,
-    "next_allowed_at": 1759648816.1428792
+    "last_at": 1759656065.4207635,
+    "next_allowed_at": 1759742465.4207635
   },
   "https://xtls.rprx.vision/api/v1/client/subscribe?token=99a65a39b738158aa849ef1ac8e6d845": {
     "hits": 7,
@@ -1362,15 +1362,21 @@
     "next_allowed_at": 1759542077.8861291
   },
   "https://example.domain.com/api/v1/client/subscribe?token=000000000000000000000000000000": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "body-hint",
-    "last_at": 1759645842.965604,
-    "next_allowed_at": 1759647642.965604
+    "last_at": 1759656065.4207635,
+    "next_allowed_at": 1759659665.4207635
   },
   "https://411611.xyz/api/v1/client/subscribe?token=549": {
+    "hits": 2,
+    "last_reason": "http 403",
+    "last_at": 1759656065.4207635,
+    "next_allowed_at": 1759657865.4207635
+  },
+  "https://sub.coo.autos/api/v1/client/subscribe?token=e9146374e171d4a8a0da0350308cc70e": {
     "hits": 1,
     "last_reason": "http 403",
-    "last_at": 1759645842.965604,
-    "next_allowed_at": 1759646742.965604
+    "last_at": 1759656065.4207635,
+    "next_allowed_at": 1759656965.4207635
   }
 }
