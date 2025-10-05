@@ -188,6 +188,7 @@
   "https://example.com/api/v1/client/subscribe?token=xxxxxx",
   "https://example.com/api/v1/client/subscribe?token=xxxxxxx",
   "https://example.com/api/v1/client/subscribe?token=xxxxxxxx",
+  "https://example.domain.com/api/v1/client/subscribe?token=000000000000000000000000000000",
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=08118ea398dcf729b6a758a865b9648c",
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=09a6967e47e6c886698833a04ab79dd5",
   "https://f2.bbdmfetch.com/api/v1/client/subscribe?token=2725d30d820b9113bf6ada6e71b2dde5",
