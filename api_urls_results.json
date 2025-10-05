@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-05T18:26:42.681323",
+  "timestamp": "2025-10-05T21:17:01.114566",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,11 +11,11 @@
   ],
   "regions_count": 4,
   "total_urls": 4,
-  "original_urls": 14,
+  "original_urls": 16,
   "urls": [
+    "https://cyberguard.cfd/api/v1/client/subscribe?token=65526ef654bb0f2e4b6a4163164bf05a",
     "https://ylccloud.top/api/v1/client/subscribe?token=762ac269fd119d6d8f071404d874d7d6",
     "https://ktm.zuuqb.cn/api/v1/client/subscribe?token=e2a19321bb8564a6f004c821933d0a04",
-    "https://fg88.whtjdasha.com/api/v1/client/subscribe?token=7bbd0dbe02bcebb1b94e2cdf7c27770c",
-    "https://cyberguard.cfd/api/v1/client/subscribe?token=65526ef654bb0f2e4b6a4163164bf05a"
+    "https://fg88.whtjdasha.com/api/v1/client/subscribe?token=7bbd0dbe02bcebb1b94e2cdf7c27770c"
   ]
 }
