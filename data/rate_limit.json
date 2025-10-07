@@ -1326,10 +1326,10 @@
     "next_allowed_at": 1759440925.2406971
   },
   "https://qq.xlm.plus/api/v1/client/subscribe?token=9e5db95336ab586ac6c4e2306c4d25a9": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "body-hint",
-    "last_at": 1759742850.811245,
-    "next_allowed_at": 1759829250.811245
+    "last_at": 1759841128.202145,
+    "next_allowed_at": 1759927528.202145
   },
   "https://odysseycdn.cyou/api/v1/client/subscribe?token=057940e6e8d6f091ceabdf2f8b1965ed": {
     "hits": 10,
@@ -1338,10 +1338,10 @@
     "next_allowed_at": 1759915518.3286364
   },
   "https://djjc.cfd/api/v1/client/subscribe?token=4b4ad3eaa186905398ac0bcada1815ab": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "http 403",
-    "last_at": 1759742850.811245,
-    "next_allowed_at": 1759829250.811245
+    "last_at": 1759841128.202145,
+    "next_allowed_at": 1759927528.202145
   },
   "https://xtls.rprx.vision/api/v1/client/subscribe?token=99a65a39b738158aa849ef1ac8e6d845": {
     "hits": 9,
@@ -1392,16 +1392,16 @@
     "next_allowed_at": 1759865671.1650987
   },
   "https://dash.pqjc.site/api/v1/client/subscribe?token=0f70c1deaeab84ba25c825d2709ebfe4": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1759800606.5466275,
-    "next_allowed_at": 1759829406.5466275
+    "last_at": 1759841128.202145,
+    "next_allowed_at": 1759898728.202145
   },
   "https://dy.tagsub.net/api/v1/client/subscribe?token=680cc75508f474de1415f1b44ef5d7a4": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "body-hint",
-    "last_at": 1759800606.5466275,
-    "next_allowed_at": 1759829406.5466275
+    "last_at": 1759841128.202145,
+    "next_allowed_at": 1759898728.202145
   },
   "https://s.gwzxwk.com/api/v1/client/subscribe?token=f7577a5ef586b00d0774112a337c2d1e": {
     "hits": 2,
