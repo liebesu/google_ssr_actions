@@ -552,10 +552,10 @@
     "next_allowed_at": 1759818882.2863433
   },
   "https://vpndata.shop/api/v1/client/subscribe?token=a0abc72c47d4c7ea48e4b700bee0c1b5": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "body-hint",
-    "last_at": 1759257047.6763976,
-    "next_allowed_at": 1759258847.6763976
+    "last_at": 1759808071.1650987,
+    "next_allowed_at": 1759811671.1650987
   },
   "http://gbtgurl01.org/api/v1/client/subscribe?token=36e8a67632a8d0f0c0eea58b099a0826": {
     "hits": 17,
@@ -1386,10 +1386,10 @@
     "next_allowed_at": 1759821855.4186447
   },
   "http://14.103.133.120/api/v1/client/subscribe?token=8c120aac413e48a364bdd8410e4ccb80": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "body-hint",
-    "last_at": 1759775615.9900649,
-    "next_allowed_at": 1759804415.9900649
+    "last_at": 1759808071.1650987,
+    "next_allowed_at": 1759865671.1650987
   },
   "https://dash.pqjc.site/api/v1/client/subscribe?token=0f70c1deaeab84ba25c825d2709ebfe4": {
     "hits": 6,
@@ -1410,9 +1410,9 @@
     "next_allowed_at": 1759766055.4186447
   },
   "https://riolu.azure-api.net/api/v1/client/subscribe?token=4881d2ce996e6494d53a0d9598557352": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "body-hint",
-    "last_at": 1759800606.5466275,
-    "next_allowed_at": 1759802406.5466275
+    "last_at": 1759808071.1650987,
+    "next_allowed_at": 1759811671.1650987
   }
 }
