@@ -318,10 +318,10 @@
     "next_allowed_at": 1759915518.3286364
   },
   "https://tiziya-zone-35j5gzft7lc3-1323316545.eo-edgefunctions1.com/api/v1/client/subscribe?token=2704165367b5aaef3eec9d6f6058292c": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1759376015.740753,
-    "next_allowed_at": 1759390415.740753
+    "last_at": 1759887016.8447714,
+    "next_allowed_at": 1759915816.8447714
   },
   "https://pwac.anliangjifeiyun.eu/api/v1/client/subscribe?token=f858b37e9f7efc29d7a050ed3b47d418": {
     "hits": 2,
@@ -1212,10 +1212,10 @@
     "next_allowed_at": 1759937132.3518887
   },
   "https://9yddd.whtjdasha.com/api/v1/client/subscribe?token=32c1ac591c70bd37b56dc8f81e789eb6": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1759800606.5466275,
-    "next_allowed_at": 1759887006.5466275
+    "last_at": 1759887016.8447714,
+    "next_allowed_at": 1759973416.8447714
   },
   "https://fn1.170809.xyz/api/v1/client/subscribe?token=d16d4532ee64cccfeeebe49fa3475fd0": {
     "hits": 15,
@@ -1362,10 +1362,10 @@
     "next_allowed_at": 1759542077.8861291
   },
   "https://example.domain.com/api/v1/client/subscribe?token=000000000000000000000000000000": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "body-hint",
-    "last_at": 1759800606.5466275,
-    "next_allowed_at": 1759887006.5466275
+    "last_at": 1759887016.8447714,
+    "next_allowed_at": 1759973416.8447714
   },
   "https://411611.xyz/api/v1/client/subscribe?token=549": {
     "hits": 8,
@@ -1410,10 +1410,10 @@
     "next_allowed_at": 1759766055.4186447
   },
   "https://riolu.azure-api.net/api/v1/client/subscribe?token=4881d2ce996e6494d53a0d9598557352": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "body-hint",
-    "last_at": 1759850732.3518887,
-    "next_allowed_at": 1759879532.3518887
+    "last_at": 1759887016.8447714,
+    "next_allowed_at": 1759944616.8447714
   },
   "https://hjxixi001.xxssx.cn/api/v1/client/subscribe?token=db88cd47f7831eedc8950b105e3a97c1": {
     "hits": 1,
