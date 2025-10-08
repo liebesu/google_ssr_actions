@@ -185,6 +185,61 @@ def normalize_node_line(line: str) -> Optional[str]:
     return line
 
 
+def _is_good_node(node_line: str) -> bool:
+    """
+    判断节点是否为优秀节点
+    
+    Args:
+        node_line: 节点配置行
+        
+    Returns:
+        bool: 是否为优秀节点
+    """
+    if not node_line:
+        return False
+    
+    # 排除明显标识为公益、免费、测试的节点
+    exclude_keywords = [
+        '公益', '免费', '测试', 'test', 'free', 'public', 'demo',
+        '试用', 'trial', '临时', 'temp', '临时节点', '测试节点',
+        '免费节点', '公益节点', '试用节点', 'demo节点'
+    ]
+    
+    node_lower = node_line.lower()
+    for keyword in exclude_keywords:
+        if keyword in node_lower:
+            return False
+    
+    # 检查节点配置的完整性
+    # 对于SS/SSR节点，检查必要参数
+    if 'ss://' in node_line or 'ssr://' in node_line:
+        # SS/SSR节点应该有基本的配置参数
+        return True  # 基础验证通过
+    
+    # 对于VMess/VLESS节点，检查必要参数
+    elif 'vmess://' in node_line or 'vless://' in node_line:
+        return True  # 基础验证通过
+    
+    # 对于Trojan节点
+    elif 'trojan://' in node_line:
+        return True  # 基础验证通过
+    
+    # 对于Hysteria节点
+    elif 'hysteria://' in node_line or 'hysteria2://' in node_line:
+        return True  # 基础验证通过
+    
+    # 其他格式的节点
+    else:
+        # 检查是否包含基本的节点配置参数
+        node_indicators = [
+            'server=', 'port=', 'password=', 'method=', 'protocol=',
+            'obfs=', 'obfs_param=', 'remarks=', 'group=',
+            'name=', 'type=', 'uuid=', 'path=', 'host='
+        ]
+        indicator_count = sum(1 for indicator in node_indicators if indicator in node_line)
+        return indicator_count >= 2
+
+
 def normalize_subscribe_url(raw_url: str) -> Optional[str]:
     """Normalize subscribe URL and drop placeholders.
     - HTML unescape (&amp; -> &)
@@ -1009,6 +1064,59 @@ def main():
     
     print(f"[info] 从验证源获取到 {len(verified_nodes)} 个节点用于对外订阅文件")
     
+    # 生成优秀节点列表 (good.txt)
+    good_nodes = []
+    print(f"[info] 开始筛选优秀节点...")
+    
+    # 创建源质量映射，用于快速查找
+    source_quality_map = {}
+    for meta in url_meta:
+        if meta.get("available") and meta.get("url") in refined_alive_urls:
+            source_quality_map[meta["url"]] = {
+                "quality_score": meta.get("quality_score", 0),
+                "response_ms": meta.get("response_ms", 2000),
+                "over_quota": meta.get("over_quota", False),
+                "traffic": meta.get("traffic", {}),
+                "nodes_total": meta.get("nodes_total", 0)
+            }
+    
+    # 重新获取节点并筛选优秀节点
+    for u in refined_alive_urls:
+        if should_skip_due_to_backoff(rate_state, u, now_ts):
+            continue
+        
+        # 检查源质量
+        source_info = source_quality_map.get(u, {})
+        quality_score = source_info.get("quality_score", 0)
+        response_ms = source_info.get("response_ms", 2000)
+        over_quota = source_info.get("over_quota", False)
+        traffic_info = source_info.get("traffic", {})
+        
+        # 筛选条件：质量分数 >= 60，响应时间 < 2000ms，未满额，有剩余流量
+        remaining_traffic = traffic_info.get("remaining")
+        has_traffic = remaining_traffic is None or (isinstance(remaining_traffic, (int, float)) and remaining_traffic > 0)
+        
+        if (quality_score >= 60 and 
+            response_ms < 2000 and 
+            not over_quota and 
+            has_traffic):
+            
+            body, code, sample, lat_ms = fetch_subscription(u)
+            if not body:
+                continue
+                
+            lines = split_subscription_content_to_lines(body)
+            for ln in lines:
+                n = normalize_node_line(ln)
+                if n and _is_good_node(n):
+                    good_nodes.append(n)
+    
+    # 去重优秀节点
+    if args.dedup:
+        good_nodes = list(dict.fromkeys(good_nodes))
+    
+    print(f"[info] 筛选出 {len(good_nodes)} 个优秀节点")
+    
     # 基于验证节点重新进行地区和协议分类
     verified_region_to_nodes: Dict[str, List[str]] = {k: [] for k in REGION_KEYWORDS.keys()}
     verified_region_to_nodes["others"] = []  # 添加"其他地区"分类
@@ -1033,6 +1141,9 @@ def main():
     
     # 更新订阅文件 - 只包含验证可用源的节点
     write_text(os.path.join(paths["sub"], "all.txt"), "\n".join(verified_nodes) + ("\n" if verified_nodes else ""))
+    
+    # 生成优秀节点文件 (good.txt)
+    write_text(os.path.join(paths["sub"], "good.txt"), "\n".join(good_nodes) + ("\n" if good_nodes else ""))
 
     # Clash configuration YAML using proxy-providers pointing to a provider file we also publish
     if args.public_base:
