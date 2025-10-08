@@ -129,10 +129,10 @@
   },
   {
     "date": "2025-10-08",
-    "google_added": 252,
+    "google_added": 250,
     "github_added": 4,
-    "new_total": 0,
-    "removed_total": 13,
-    "alive_total": 256
+    "new_total": 1,
+    "removed_total": 3,
+    "alive_total": 254
   }
 ]
