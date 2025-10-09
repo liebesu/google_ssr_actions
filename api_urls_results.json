@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-09T07:15:36.389011",
+  "timestamp": "2025-10-09T07:52:55.781965",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,7 +11,7 @@
   ],
   "regions_count": 4,
   "total_urls": 1,
-  "original_urls": 3,
+  "original_urls": 2,
   "urls": [
     "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=158da66e7a12bb08018974512a596599"
   ]
