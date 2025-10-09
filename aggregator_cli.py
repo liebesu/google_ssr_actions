@@ -1157,15 +1157,32 @@ def main():
     
     # 生成优秀节点的Clash配置 (good.yaml)
     if args.public_base and good_nodes:
+        # 创建优秀节点的代理提供者文件
+        good_provider_list = {"proxies": good_nodes}
+        write_text(os.path.join(paths["providers"], "good.yaml"), yaml.safe_dump(good_provider_list, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
+        good_provider_url = args.public_base.rstrip("/") + "/sub/providers/good.yaml"
+        
         good_clash_yaml = {
             "mixed-port": 7890,
             "allow-lan": False,
             "mode": "rule",
             "log-level": "info",
-            "proxies": good_nodes,  # 直接包含优秀节点
+            "proxy-providers": {
+                "good": {
+                    "type": "http",
+                    "url": good_provider_url,
+                    "path": "./providers/good.yaml",
+                    "interval": 3600,
+                    "health-check": {
+                        "enable": True,
+                        "url": "http://www.gstatic.com/generate_204",
+                        "interval": 600,
+                    },
+                }
+            },
             "proxy-groups": [
-                {"name": "Node-Select", "type": "select", "proxies": ["Auto", "DIRECT"] + good_nodes[:50] if len(good_nodes) > 0 else ["Auto", "DIRECT"]},  # 限制前50个节点避免配置过大
-                {"name": "Auto", "type": "url-test", "proxies": good_nodes[:30] if len(good_nodes) > 0 else ["DIRECT"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Node-Select", "type": "select", "use": ["good"], "proxies": ["Auto", "DIRECT"]},
+                {"name": "Auto", "type": "url-test", "use": ["good"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
                 {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
                 {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
                 {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
