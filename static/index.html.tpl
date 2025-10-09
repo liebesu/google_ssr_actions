@@ -217,6 +217,36 @@
           <div class="file-item">
             <div class="file-info">
               <div class="file-name">
+                <a href="sub/good.txt"><code>good.txt</code></a>
+                <span class="file-desc">优秀节点 (高质量筛选)</span>
+              </div>
+              <div class="file-stats">
+                <span class="file-type">TXT</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/good.txt', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制链接</span>
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="sub/good.yaml"><code>good.yaml</code></a>
+                <span class="file-desc">优秀节点 (Clash配置)</span>
+              </div>
+              <div class="file-stats">
+                <span class="file-type">YAML</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/good.yaml', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制链接</span>
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
                 <a href="sub/all.yaml"><code>all.yaml</code></a>
                 <span class="file-desc">Clash配置 (完整节点)</span>
               </div>

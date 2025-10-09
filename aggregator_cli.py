@@ -1154,6 +1154,48 @@ def main():
     
     # 生成优秀节点文件 (good.txt)
     write_text(os.path.join(paths["sub"], "good.txt"), "\n".join(good_nodes) + ("\n" if good_nodes else ""))
+    
+    # 生成优秀节点的Clash配置 (good.yaml)
+    if args.public_base and good_nodes:
+        good_clash_yaml = {
+            "mixed-port": 7890,
+            "allow-lan": False,
+            "mode": "rule",
+            "log-level": "info",
+            "proxies": good_nodes,  # 直接包含优秀节点
+            "proxy-groups": [
+                {"name": "Node-Select", "type": "select", "proxies": ["Auto", "DIRECT"] + good_nodes[:50] if len(good_nodes) > 0 else ["Auto", "DIRECT"]},  # 限制前50个节点避免配置过大
+                {"name": "Auto", "type": "url-test", "proxies": good_nodes[:30] if len(good_nodes) > 0 else ["DIRECT"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
+                {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
+                {"name": "Apple", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
+                {"name": "Google", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "GitHub", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "Netflix", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "YouTube", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "Twitter", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "Facebook", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "Instagram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "Spotify", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "Steam", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
+                {"name": "Final", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]}
+            ],
+            "rules": [
+                "DOMAIN-SUFFIX,local,DIRECT",
+                "IP-CIDR,127.0.0.0/8,DIRECT",
+                "IP-CIDR,172.16.0.0/12,DIRECT",
+                "IP-CIDR,192.168.0.0/16,DIRECT",
+                "IP-CIDR,10.0.0.0/8,DIRECT",
+                "IP-CIDR,17.0.0.0/8,DIRECT",
+                "IP-CIDR,100.64.0.0/10,DIRECT",
+                "DOMAIN-SUFFIX,cn,DIRECT",
+                "GEOIP,CN,DIRECT",
+                "RULE-SET,ChinaIp,DIRECT",
+                "MATCH,Final"
+            ]
+        }
+        write_text(os.path.join(paths["sub"], "good.yaml"), yaml.safe_dump(good_clash_yaml, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
 
     # Clash configuration YAML using proxy-providers pointing to a provider file we also publish
     if args.public_base:
