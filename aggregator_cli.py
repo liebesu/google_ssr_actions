@@ -787,10 +787,22 @@ def main():
             "allow-lan": False,
             "mode": "rule",
             "log-level": "info",
-            "proxies": all_nodes,  # 直接包含所有节点
+            "proxy-providers": {
+                "all": {
+                    "type": "http",
+                    "url": provider_url,
+                    "path": "./providers/all.yaml",
+                    "interval": 3600,
+                    "health-check": {
+                        "enable": True,
+                        "url": "http://www.gstatic.com/generate_204",
+                        "interval": 600,
+                    },
+                }
+            },
             "proxy-groups": [
-                {"name": "Node-Select", "type": "select", "proxies": ["Auto", "DIRECT"] + all_nodes[:50] if len(all_nodes) > 0 else ["Auto", "DIRECT"]},  # 限制前50个节点避免配置过大
-                {"name": "Auto", "type": "url-test", "proxies": all_nodes[:30] if len(all_nodes) > 0 else ["DIRECT"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Node-Select", "type": "select", "use": ["all"], "proxies": ["Auto", "DIRECT"]},
+                {"name": "Auto", "type": "url-test", "use": ["all"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
                 {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
                 {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
                 {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
@@ -1225,10 +1237,22 @@ def main():
             "allow-lan": False,
             "mode": "rule",
             "log-level": "info",
-            "proxies": verified_nodes,  # 直接包含所有节点
+            "proxy-providers": {
+                "all": {
+                    "type": "http",
+                    "url": provider_url,
+                    "path": "./providers/all.yaml",
+                    "interval": 3600,
+                    "health-check": {
+                        "enable": True,
+                        "url": "http://www.gstatic.com/generate_204",
+                        "interval": 600,
+                    },
+                }
+            },
             "proxy-groups": [
-                {"name": "Node-Select", "type": "select", "proxies": ["Auto", "DIRECT"] + verified_nodes[:50] if len(verified_nodes) > 0 else ["Auto", "DIRECT"]},  # 限制前50个节点避免配置过大
-                {"name": "Auto", "type": "url-test", "proxies": verified_nodes[:30] if len(verified_nodes) > 0 else ["DIRECT"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Node-Select", "type": "select", "use": ["all"], "proxies": ["Auto", "DIRECT"]},
+                {"name": "Auto", "type": "url-test", "use": ["all"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
                 {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
                 {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
                 {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
