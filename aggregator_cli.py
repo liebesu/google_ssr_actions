@@ -198,11 +198,14 @@ def _is_good_node(node_line: str) -> bool:
     if not node_line:
         return False
     
-    # 排除明显标识为公益、免费、测试的节点
+    # 排除明显标识为公益、免费、测试、剩余、到期等低质量节点
     exclude_keywords = [
         '公益', '免费', '测试', 'test', 'free', 'public', 'demo',
         '试用', 'trial', '临时', 'temp', '临时节点', '测试节点',
-        '免费节点', '公益节点', '试用节点', 'demo节点'
+        '免费节点', '公益节点', '试用节点', 'demo节点',
+        '剩余', '到期', 'expire', 'expired', 'expiring', 'expiry',
+        'limited', 'limit', 'quota', 'quota exceeded', 'over quota',
+        'low quality', 'poor', 'bad', 'slow', 'unstable'
     ]
     
     node_lower = node_line.lower()
