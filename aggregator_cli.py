@@ -208,7 +208,14 @@ def _is_good_node(node_line: str) -> bool:
         'low quality', 'poor', 'bad', 'slow', 'unstable'
     ]
     
-    node_lower = node_line.lower()
+    # 先尝试URL解码，然后转换为小写进行匹配
+    try:
+        import urllib.parse
+        decoded_line = urllib.parse.unquote(node_line)
+        node_lower = decoded_line.lower()
+    except:
+        node_lower = node_line.lower()
+    
     for keyword in exclude_keywords:
         if keyword in node_lower:
             return False
