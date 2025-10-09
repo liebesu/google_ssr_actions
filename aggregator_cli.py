@@ -1210,6 +1210,13 @@ def main():
                 {"name": "Steam", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
                 {"name": "Final", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]}
             ],
+            "rule-providers": {
+                "ChinaIp": {
+                    "type": "http", "behavior": "classical",
+                    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list",
+                    "path": "./rules/ChinaIp.list", "interval": 86400
+                }
+            },
             "rules": [
                 "DOMAIN-SUFFIX,local,DIRECT",
                 "IP-CIDR,127.0.0.0/8,DIRECT",
