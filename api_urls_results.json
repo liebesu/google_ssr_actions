@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-09T18:30:59.484005",
+  "timestamp": "2025-10-09T21:18:48.020302",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,25 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 17,
-  "original_urls": 20,
+  "total_urls": 2,
+  "original_urls": 5,
   "urls": [
     "https://oxdtangx.top/api/v1/client/subscribe?token=1e807249be5662ce612e95e5b025e09e",
-    "https://oxdtangx.top/api/v1/client/subscribe?token=0ec75c20b5fecb5e2a315cf8327c4559",
-    "https://sub.966888.xyz/api/v1/client/subscribe?token=2c53cb842bd6e2366782444aac8cfc16",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=ccf812a91218a6b4708a8fd3ba30eeee",
-    "https://oxdtangx.top/api/v1/client/subscribe?token=82ceb590435013a6bf7f31629e247cd5",
-    "https://oxdtangx.top/api/v1/client/subscribe?token=b4e3378861dbb91ca384ba844817b144",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=510fb0101effe3bee10146fa4566b8b5",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=fd9c9fc32d43be9c7a75ef72cd73e53f",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=85676de027056ea72abd4691eff860a0",
-    "https://fanyun.pro/api/v1/client/subscribe?token=901ee588c51c64290d7da78054d5e330",
-    "https://oxdtangx.top/api/v1/client/subscribe?token=ccbd2dc82e96181645c46ba9b3917cf7",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=a5136c42b9e36ca7e6ca530babc381a6",
-    "https://oxdtangx.top/api/v1/client/subscribe?token=98d359c03df805577de672f4b319c6c0",
-    "https://vaamx.louwangzhiyu.online/api/v1/client/subscribe?token=d56372e30d85e9c4183eb961aa368173",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=6a257f4277ef9aad6bb98b66baf90723",
-    "https://oxdtangx.top/api/v1/client/subscribe?token=2d3d40bbb600f7c170b57cc575047cd7",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=73eedd422ae33703e1f3aa504fec25a3"
+    "https://oxdtangx.top/api/v1/client/subscribe?token=4405b0e90ef6f8b8c6c27309028ad648"
   ]
 }
