@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-09T21:18:48.020302",
+  "timestamp": "2025-10-10T01:29:07.685925",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 5,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://oxdtangx.top/api/v1/client/subscribe?token=1e807249be5662ce612e95e5b025e09e",
-    "https://oxdtangx.top/api/v1/client/subscribe?token=4405b0e90ef6f8b8c6c27309028ad648"
+    "https://oxdtangx.top/api/v1/client/subscribe?token=1e807249be5662ce612e95e5b025e09e"
   ]
 }
