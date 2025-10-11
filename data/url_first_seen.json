@@ -711,5 +711,6 @@
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=64c9714d0018": "2025-10-10",
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=64c9714d0018d1a73c3a9566d866b49e": "2025-10-10",
   "https://platform.djjc.cfd/api/v1/client/subscribe?token=6bd2d572b3f78f750caf259666d8736c": "2025-10-11",
-  "http://47.86.18.66/api/v1/client/subscribe?token=84f98ad8f8c5ef123e6430a310d709c1": "2025-10-11"
+  "http://47.86.18.66/api/v1/client/subscribe?token=84f98ad8f8c5ef123e6430a310d709c1": "2025-10-11",
+  "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=e29f7f689352adeed4908ae79224a426": "2025-10-11"
 }
