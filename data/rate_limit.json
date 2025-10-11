@@ -324,10 +324,10 @@
     "next_allowed_at": 1759915816.8447714
   },
   "https://pwac.anliangjifeiyun.eu/api/v1/client/subscribe?token=f858b37e9f7efc29d7a050ed3b47d418": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "body-hint",
-    "last_at": 1760044874.825183,
-    "next_allowed_at": 1760131274.825183
+    "last_at": 1760146075.335487,
+    "next_allowed_at": 1760232475.335487
   },
   "http://154.89.203.177/api/v1/client/subscribe?token=0f3c7e30c503f6a45ea65a671d4cfe26": {
     "hits": 15,
@@ -1410,10 +1410,10 @@
     "next_allowed_at": 1759766055.4186447
   },
   "https://riolu.azure-api.net/api/v1/client/subscribe?token=4881d2ce996e6494d53a0d9598557352": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "body-hint",
-    "last_at": 1760044874.825183,
-    "next_allowed_at": 1760131274.825183
+    "last_at": 1760146075.335487,
+    "next_allowed_at": 1760232475.335487
   },
   "https://hjxixi001.xxssx.cn/api/v1/client/subscribe?token=db88cd47f7831eedc8950b105e3a97c1": {
     "hits": 1,
@@ -1866,27 +1866,33 @@
     "next_allowed_at": 1760178748.0244915
   },
   "https://47.239.42.117/api/v1/client/subscribe?token=e1eb14cf3350721050096f557a721126": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1760131208.9326022,
-    "next_allowed_at": 1760138408.9326022
+    "last_at": 1760146075.335487,
+    "next_allowed_at": 1760160475.335487
   },
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=64c9714d": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1760131208.9326022,
-    "next_allowed_at": 1760138408.9326022
+    "last_at": 1760146075.335487,
+    "next_allowed_at": 1760160475.335487
   },
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=64c9714d0018": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1760131208.9326022,
-    "next_allowed_at": 1760138408.9326022
+    "last_at": 1760146075.335487,
+    "next_allowed_at": 1760160475.335487
   },
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=64c9714d0018d1a73c3a9566d866b49e": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1760131208.9326022,
-    "next_allowed_at": 1760138408.9326022
+    "last_at": 1760146075.335487,
+    "next_allowed_at": 1760160475.335487
+  },
+  "https://platform.djjc.cfd/api/v1/client/subscribe?token=6bd2d572b3f78f750caf259666d8736c": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1760146075.335487,
+    "next_allowed_at": 1760146975.335487
   }
 }

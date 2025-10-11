@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-10T12:42:05.886418",
+  "timestamp": "2025-10-11T01:25:28.496533",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,8 +11,8 @@
   ],
   "regions_count": 4,
   "total_urls": 1,
-  "original_urls": 4,
+  "original_urls": 1,
   "urls": [
-    "https://oxdtangx.top/api/v1/client/subscribe?token=1e807249be5662ce612e95e5b025e09e"
+    "https://platform.djjc.cfd/api/v1/client/subscribe?token=6bd2d572b3f78f750caf259666d8736c"
   ]
 }

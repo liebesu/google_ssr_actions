@@ -709,5 +709,6 @@
   "https://example.com/api/v1/client/subscribe?token=ilovechina": "2025-10-10",
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=64c9714d": "2025-10-10",
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=64c9714d0018": "2025-10-10",
-  "https://dash.djjc.cfd/api/v1/client/subscribe?token=64c9714d0018d1a73c3a9566d866b49e": "2025-10-10"
+  "https://dash.djjc.cfd/api/v1/client/subscribe?token=64c9714d0018d1a73c3a9566d866b49e": "2025-10-10",
+  "https://platform.djjc.cfd/api/v1/client/subscribe?token=6bd2d572b3f78f750caf259666d8736c": "2025-10-11"
 }
