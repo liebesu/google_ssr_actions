@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-11T18:25:39.462336",
+  "timestamp": "2025-10-11T21:17:17.798826",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,9 +11,9 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 4,
+  "original_urls": 6,
   "urls": [
-    "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=e29f7f689352adeed4908ae79224a426",
-    "https://www2nd.ga-sub.hair/api/v1/client/subscribe?token=e5451d54aa982b10f07ec5c02afe0499"
+    "https://sub.soyorin.shop/api/v1/client/subscribe?token=f62d458ba609530a3e208eef5b8e871d",
+    "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=e29f7f689352adeed4908ae79224a426"
   ]
 }

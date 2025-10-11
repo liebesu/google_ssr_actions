@@ -1338,10 +1338,10 @@
     "next_allowed_at": 1760282385.3464024
   },
   "https://djjc.cfd/api/v1/client/subscribe?token=4b4ad3eaa186905398ac0bcada1815ab": {
-    "hits": 13,
+    "hits": 14,
     "last_reason": "http 403",
-    "last_at": 1760121148.0244915,
-    "next_allowed_at": 1760207548.0244915
+    "last_at": 1760217580.2863643,
+    "next_allowed_at": 1760303980.2863643
   },
   "https://xtls.rprx.vision/api/v1/client/subscribe?token=99a65a39b738158aa849ef1ac8e6d845": {
     "hits": 13,
@@ -1896,10 +1896,10 @@
     "next_allowed_at": 1760236077.6263087
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=901ee588c51c64290d7da78054d5e330": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1760207277.6263087,
-    "next_allowed_at": 1760214477.6263087
+    "last_at": 1760217580.2863643,
+    "next_allowed_at": 1760231980.2863643
   },
   "https://feiniaoyun.life/api/v1/client/subscribe?token=6816d33214d612c02fdb95977cf5de89": {
     "hits": 5,
@@ -1908,9 +1908,9 @@
     "next_allowed_at": 1760221677.6263087
   },
   "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=e29f7f689352adeed4908ae79224a426": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1760207277.6263087,
-    "next_allowed_at": 1760214477.6263087
+    "last_at": 1760217580.2863643,
+    "next_allowed_at": 1760231980.2863643
   }
 }
