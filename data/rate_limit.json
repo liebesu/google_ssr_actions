@@ -1434,22 +1434,22 @@
     "next_allowed_at": 1759917321.4247987
   },
   "http://www.camael.top/api/v1/client/subscribe?token=3faa8f73d2fe1d554ef141d20044273f": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "body-hint",
-    "last_at": 1760164227.1798055,
-    "next_allowed_at": 1760250627.1798055
+    "last_at": 1760250634.0364623,
+    "next_allowed_at": 1760337034.0364623
   },
   "http://www.camael.top/api/v1/client/subscribe?token=5d4f63e85f79b30b733b733dd69c0329": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "body-hint",
-    "last_at": 1760164227.1798055,
-    "next_allowed_at": 1760250627.1798055
+    "last_at": 1760250634.0364623,
+    "next_allowed_at": 1760337034.0364623
   },
   "https://xn--cp3a08l.com/api/v1/client/subscribe?token=47fe18d88xx": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "http 403",
-    "last_at": 1760164227.1798055,
-    "next_allowed_at": 1760250627.1798055
+    "last_at": 1760250634.0364623,
+    "next_allowed_at": 1760337034.0364623
   },
   "https://911tg3rs.com/api/v1/client/subscribe?token=dfe593124f4dab2a4e85ac07732076b6": {
     "hits": 9,
