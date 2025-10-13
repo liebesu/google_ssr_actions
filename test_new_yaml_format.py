@@ -71,3 +71,4 @@ print(f"是否包含proxies: {'proxies:' in yaml_content}")
 print(f"是否包含proxy-providers: {'proxy-providers:' in yaml_content}")
 print(f"节点数量: {len(good_nodes)}")
 print(f"YAML行数: {yaml_content.count(chr(10))}")
+
