@@ -1179,22 +1179,10 @@ def main():
             "allow-lan": False,
             "mode": "rule",
             "log-level": "info",
-            "proxy-providers": {
-                "good": {
-                    "type": "http",
-                    "url": good_provider_url,
-                    "path": "./providers/good.yaml",
-                    "interval": 3600,
-                    "health-check": {
-                        "enable": True,
-                        "url": "http://www.gstatic.com/generate_204",
-                        "interval": 600,
-                    },
-                }
-            },
+            "proxies": good_nodes,
             "proxy-groups": [
-                {"name": "Node-Select", "type": "select", "use": ["good"], "proxies": ["Auto", "DIRECT"]},
-                {"name": "Auto", "type": "url-test", "use": ["good"], "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Node-Select", "type": "select", "proxies": good_nodes + ["Auto", "DIRECT"]},
+                {"name": "Auto", "type": "url-test", "proxies": good_nodes, "url": "http://www.gstatic.com/generate_204", "interval": 300},
                 {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
                 {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
                 {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
