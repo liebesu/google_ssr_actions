@@ -185,6 +185,238 @@ def normalize_node_line(line: str) -> Optional[str]:
     return line
 
 
+def _uri_to_clash_proxy(uri: str) -> dict:
+    """
+    将URI格式的节点转换为Clash代理对象格式
+    """
+    try:
+        import urllib.parse
+        
+        # 解析URI
+        if '://' not in uri:
+            return None
+            
+        scheme, rest = uri.split('://', 1)
+        
+        # 处理不同的协议
+        if scheme == 'ss':
+            # SS格式: ss://base64@server:port#name
+            if '@' in rest:
+                auth_part, server_part = rest.split('@', 1)
+                if '#' in server_part:
+                    server_port, name = server_part.split('#', 1)
+                    name = urllib.parse.unquote(name)
+                else:
+                    server_port = server_part
+                    name = "SS节点"
+                
+                if ':' in server_port:
+                    server, port = server_port.split(':', 1)
+                    port = int(port)
+                else:
+                    server = server_port
+                    port = 443
+                
+                # 解码base64认证信息
+                try:
+                    import base64
+                    auth_decoded = base64.b64decode(auth_part + '==').decode('utf-8')
+                    method, password = auth_decoded.split(':', 1)
+                except:
+                    return None
+                
+                return {
+                    "name": name,
+                    "type": "ss",
+                    "server": server,
+                    "port": port,
+                    "cipher": method,
+                    "password": password
+                }
+        
+        elif scheme == 'trojan':
+            # Trojan格式: trojan://password@server:port?params#name
+            if '@' in rest:
+                password, rest = rest.split('@', 1)
+                if '#' in rest:
+                    server_part, name = rest.split('#', 1)
+                    name = urllib.parse.unquote(name)
+                else:
+                    server_part = rest
+                    name = "Trojan节点"
+                
+                if '?' in server_part:
+                    server_port, params = server_part.split('?', 1)
+                else:
+                    server_port = server_part
+                    params = ""
+                
+                if ':' in server_port:
+                    server, port = server_port.split(':', 1)
+                    port = int(port)
+                else:
+                    server = server_port
+                    port = 443
+                
+                proxy = {
+                    "name": name,
+                    "type": "trojan",
+                    "server": server,
+                    "port": port,
+                    "password": password
+                }
+                
+                # 解析参数
+                if params:
+                    param_dict = urllib.parse.parse_qs(params)
+                    if 'sni' in param_dict:
+                        proxy["sni"] = param_dict['sni'][0]
+                    if 'allowInsecure' in param_dict:
+                        proxy["skip-cert-verify"] = param_dict['allowInsecure'][0] == '1'
+                
+                return proxy
+        
+        elif scheme == 'vmess':
+            # VMess格式: vmess://base64#name
+            if '#' in rest:
+                base64_part, name = rest.split('#', 1)
+                name = urllib.parse.unquote(name)
+            else:
+                base64_part = rest
+                name = "VMess节点"
+            
+            try:
+                import base64
+                import json
+                vmess_config = json.loads(base64.b64decode(base64_part + '==').decode('utf-8'))
+                
+                proxy = {
+                    "name": name,
+                    "type": "vmess",
+                    "server": vmess_config.get('add', ''),
+                    "port": int(vmess_config.get('port', 443)),
+                    "uuid": vmess_config.get('id', ''),
+                    "alterId": int(vmess_config.get('aid', 0)),
+                    "cipher": vmess_config.get('scy', 'auto')
+                }
+                
+                if vmess_config.get('net') == 'ws':
+                    proxy["network"] = "ws"
+                    if vmess_config.get('path'):
+                        proxy["ws-opts"] = {"path": vmess_config['path']}
+                    if vmess_config.get('host'):
+                        proxy["ws-opts"]["headers"] = {"Host": vmess_config['host']}
+                
+                if vmess_config.get('tls') == 'tls':
+                    proxy["tls"] = True
+                    if vmess_config.get('sni'):
+                        proxy["servername"] = vmess_config['sni']
+                
+                return proxy
+            except:
+                return None
+        
+        elif scheme == 'vless':
+            # VLESS格式: vless://uuid@server:port?params#name
+            if '@' in rest:
+                uuid, rest = rest.split('@', 1)
+                if '#' in rest:
+                    server_part, name = rest.split('#', 1)
+                    name = urllib.parse.unquote(name)
+                else:
+                    server_part = rest
+                    name = "VLESS节点"
+                
+                if '?' in server_part:
+                    server_port, params = server_part.split('?', 1)
+                else:
+                    server_port = server_part
+                    params = ""
+                
+                if ':' in server_port:
+                    server, port = server_port.split(':', 1)
+                    port = int(port)
+                else:
+                    server = server_port
+                    port = 443
+                
+                proxy = {
+                    "name": name,
+                    "type": "vless",
+                    "server": server,
+                    "port": port,
+                    "uuid": uuid
+                }
+                
+                # 解析参数
+                if params:
+                    param_dict = urllib.parse.parse_qs(params)
+                    if param_dict.get('type') == ['ws']:
+                        proxy["network"] = "ws"
+                        if param_dict.get('path'):
+                            proxy["ws-opts"] = {"path": param_dict['path'][0]}
+                        if param_dict.get('host'):
+                            proxy["ws-opts"]["headers"] = {"Host": param_dict['host'][0]}
+                    
+                    if param_dict.get('security') == ['tls']:
+                        proxy["tls"] = True
+                        if param_dict.get('sni'):
+                            proxy["servername"] = param_dict['sni'][0]
+                
+                return proxy
+        
+        elif scheme == 'hysteria2':
+            # Hysteria2格式: hysteria2://password@server:port?params#name
+            if '@' in rest:
+                password, rest = rest.split('@', 1)
+                if '#' in rest:
+                    server_part, name = rest.split('#', 1)
+                    name = urllib.parse.unquote(name)
+                else:
+                    server_part = rest
+                    name = "Hysteria2节点"
+                
+                if '?' in server_part:
+                    server_port, params = server_part.split('?', 1)
+                else:
+                    server_port = server_part
+                    params = ""
+                
+                if ':' in server_port:
+                    server, port = server_port.split(':', 1)
+                    # 处理端口号可能包含额外参数的情况
+                    if '/' in port:
+                        port = port.split('/')[0]
+                    port = int(port)
+                else:
+                    server = server_port
+                    port = 443
+                
+                proxy = {
+                    "name": name,
+                    "type": "hysteria2",
+                    "server": server,
+                    "port": port,
+                    "password": password
+                }
+                
+                # 解析参数
+                if params:
+                    param_dict = urllib.parse.parse_qs(params)
+                    if param_dict.get('sni'):
+                        proxy["sni"] = param_dict['sni'][0]
+                    if param_dict.get('insecure') == ['1']:
+                        proxy["skip-cert-verify"] = True
+                
+                return proxy
+        
+        return None
+        
+    except Exception as e:
+        print(f"解析节点URI失败: {uri}, 错误: {e}")
+        return None
+
+
 def _is_good_node(node_line: str) -> bool:
     """
     判断节点是否为优秀节点
@@ -1174,15 +1406,22 @@ def main():
         write_text(os.path.join(paths["providers"], "good.yaml"), yaml.safe_dump(good_provider_list, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
         good_provider_url = args.public_base.rstrip("/") + "/sub/providers/good.yaml"
         
+        # 将URI格式的节点转换为Clash对象格式
+        clash_proxies = []
+        for uri in good_nodes:
+            proxy_obj = _uri_to_clash_proxy(uri)
+            if proxy_obj:
+                clash_proxies.append(proxy_obj)
+        
         good_clash_yaml = {
             "mixed-port": 7890,
             "allow-lan": False,
             "mode": "rule",
             "log-level": "info",
-            "proxies": good_nodes,
+            "proxies": clash_proxies,
             "proxy-groups": [
-                {"name": "Node-Select", "type": "select", "proxies": good_nodes + ["Auto", "DIRECT"]},
-                {"name": "Auto", "type": "url-test", "proxies": good_nodes, "url": "http://www.gstatic.com/generate_204", "interval": 300},
+                {"name": "Node-Select", "type": "select", "proxies": [proxy["name"] for proxy in clash_proxies] + ["Auto", "DIRECT"]},
+                {"name": "Auto", "type": "url-test", "proxies": [proxy["name"] for proxy in clash_proxies], "url": "http://www.gstatic.com/generate_204", "interval": 300},
                 {"name": "Media", "type": "select", "proxies": ["Node-Select", "Auto", "DIRECT"]},
                 {"name": "Telegram", "type": "select", "proxies": ["Node-Select", "DIRECT"]},
                 {"name": "Microsoft", "type": "select", "proxies": ["DIRECT", "Node-Select"]},
