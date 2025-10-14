@@ -195,9 +195,9 @@
     </div>
 
     <div class="grid">
-      <!-- 重要卡片优先显示 -->
+      <!-- 基础订阅文件卡片 -->
       <div class="card card-files">
-        <h3>🔗 订阅文件</h3>
+        <h3>🔗 基础订阅文件</h3>
         <div class="file-list">
           <div class="file-item">
             <div class="file-info">
@@ -211,7 +211,7 @@
             </div>
             <button onclick="copyFileUrl('sub/all.txt', this)" class="copy-btn">
               <span class="copy-icon">📋</span>
-              <span class="copy-text">复制链接</span>
+              <span class="copy-text">复制</span>
             </button>
           </div>
           <div class="file-item">
@@ -226,7 +226,7 @@
             </div>
             <button onclick="copyFileUrl('sub/good.txt', this)" class="copy-btn">
               <span class="copy-icon">📋</span>
-              <span class="copy-text">复制链接</span>
+              <span class="copy-text">复制</span>
             </button>
           </div>
           <div class="file-item">
@@ -241,7 +241,7 @@
             </div>
             <button onclick="copyFileUrl('sub/good.yaml', this)" class="copy-btn">
               <span class="copy-icon">📋</span>
-              <span class="copy-text">复制链接</span>
+              <span class="copy-text">复制</span>
             </button>
           </div>
           <div class="file-item">
@@ -256,211 +256,250 @@
             </div>
             <button onclick="copyFileUrl('sub/all.yaml', this)" class="copy-btn">
               <span class="copy-icon">📋</span>
-              <span class="copy-text">复制链接</span>
+              <span class="copy-text">复制</span>
             </button>
           </div>
-          <div class="file-item">
-            <div class="file-info">
-              <div class="file-name">
-                <a href="sub/all_providers.yaml"><code>all_providers.yaml</code></a>
-                <span class="file-desc">Clash配置 (代理提供商)</span>
+        </div>
+        
+        <!-- 最优秀100个节点 -->
+        <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid rgba(148,163,184,.3);">
+          <h4 style="color: #e5e7eb; margin: 0 0 16px; font-size: 16px; font-weight: 600;">⭐ 最优秀100个节点</h4>
+          <div class="file-list">
+            <div class="file-item">
+              <div class="file-info">
+                <div class="file-name">
+                  <a href="sub/top100.txt"><code>top100.txt</code></a>
+                  <span class="file-desc">最优秀100个节点 (文本格式)</span>
+                </div>
+                <div class="file-stats">
+                  <span class="nodes-count">100 节点</span>
+                  <span class="file-type">TXT</span>
+                </div>
               </div>
-              <div class="file-stats">
-                <span class="file-type">YAML</span>
-              </div>
+              <button onclick="copyFileUrl('sub/top100.txt', this)" class="copy-btn">
+                <span class="copy-icon">📋</span>
+                <span class="copy-text">复制</span>
+              </button>
             </div>
-            <button onclick="copyFileUrl('sub/all_providers.yaml', this)" class="copy-btn">
-              <span class="copy-icon">📋</span>
-              <span class="copy-text">复制链接</span>
-            </button>
-          </div>
-          
-          <!-- 客户端分类订阅 -->
-          <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid rgba(148,163,184,.3);">
-            <h4 style="color: #e5e7eb; margin: 0 0 16px; font-size: 16px; font-weight: 600;">📱 客户端分类订阅</h4>
-            
-            <!-- PassWall2 订阅 -->
-            <div style="margin-bottom: 20px;">
-              <h5 style="color: #94a3b8; margin: 0 0 12px; font-size: 14px; font-weight: 500;">🔧 PassWall2 订阅</h5>
-              <div class="file-list">
-                <div class="file-item">
-                  <div class="file-info">
-                    <div class="file-name">
-                      <a href="sub/passwall2/all.txt"><code>all.txt</code></a>
-                      <span class="file-desc">全量订阅 (URI格式)</span>
-                    </div>
-                    <div class="file-stats">
-                      <span class="nodes-count">__NODES__ 节点</span>
-                      <span class="client-tag">PassWall2</span>
-                    </div>
-                  </div>
-                  <button onclick="copyFileUrl('sub/passwall2/all.txt', this)" class="copy-btn">
-                    <span class="copy-icon">📋</span>
-                    <span class="copy-text">复制链接</span>
-                  </button>
+            <div class="file-item">
+              <div class="file-info">
+                <div class="file-name">
+                  <a href="sub/top100_v2ray.txt"><code>top100_v2ray.txt</code></a>
+                  <span class="file-desc">V2Ray格式订阅</span>
                 </div>
-                <div class="file-item">
-                  <div class="file-info">
-                    <div class="file-name">
-                      <a href="sub/passwall2/good.txt"><code>good.txt</code></a>
-                      <span class="file-desc">高质量订阅</span>
-                    </div>
-                    <div class="file-stats">
-                      <span class="file-type">TXT</span>
-                      <span class="client-tag">PassWall2</span>
-                    </div>
-                  </div>
-                  <button onclick="copyFileUrl('sub/passwall2/good.txt', this)" class="copy-btn">
-                    <span class="copy-icon">📋</span>
-                    <span class="copy-text">复制链接</span>
-                  </button>
+                <div class="file-stats">
+                  <span class="file-type">V2Ray</span>
                 </div>
               </div>
+              <button onclick="copyFileUrl('sub/top100_v2ray.txt', this)" class="copy-btn">
+                <span class="copy-icon">📋</span>
+                <span class="copy-text">复制</span>
+              </button>
             </div>
-            
-            <!-- Clash 订阅 -->
-            <div style="margin-bottom: 20px;">
-              <h5 style="color: #94a3b8; margin: 0 0 12px; font-size: 14px; font-weight: 500;">⚡ Clash 订阅</h5>
-              <div class="file-list">
-                <div class="file-item">
-                  <div class="file-info">
-                    <div class="file-name">
-                      <a href="sub/clash/all.yaml"><code>all.yaml</code></a>
-                      <span class="file-desc">全量配置</span>
-                    </div>
-                    <div class="file-stats">
-                      <span class="nodes-count">__NODES__ 节点</span>
-                      <span class="client-tag">Clash</span>
-                    </div>
-                  </div>
-                  <button onclick="copyFileUrl('sub/clash/all.yaml', this)" class="copy-btn">
-                    <span class="copy-icon">📋</span>
-                    <span class="copy-text">复制链接</span>
-                  </button>
+            <div class="file-item">
+              <div class="file-info">
+                <div class="file-name">
+                  <a href="sub/top100.yaml"><code>top100.yaml</code></a>
+                  <span class="file-desc">Clash格式订阅</span>
                 </div>
-                <div class="file-item">
-                  <div class="file-info">
-                    <div class="file-name">
-                      <a href="sub/clash/good.yaml"><code>good.yaml</code></a>
-                      <span class="file-desc">高质量配置</span>
-                    </div>
-                    <div class="file-stats">
-                      <span class="file-type">YAML</span>
-                      <span class="client-tag">Clash</span>
-                    </div>
-                  </div>
-                  <button onclick="copyFileUrl('sub/clash/good.yaml', this)" class="copy-btn">
-                    <span class="copy-icon">📋</span>
-                    <span class="copy-text">复制链接</span>
-                  </button>
+                <div class="file-stats">
+                  <span class="file-type">YAML</span>
                 </div>
               </div>
-            </div>
-          </div>
-          
-          <!-- 协议分类订阅 -->
-          <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid rgba(148,163,184,.3);">
-            <h4 style="color: #e5e7eb; margin: 0 0 16px; font-size: 16px; font-weight: 600;">📡 协议分类订阅</h4>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
-              <div class="protocol-item">
-                <h5 style="color: #e5e7eb; margin: 0 0 8px; font-size: 14px; font-weight: 600;">Shadowsocks</h5>
-                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                  <a href="sub/passwall2/ss.txt" class="protocol-link">PassWall2</a>
-                  <a href="sub/clash/ss.yaml" class="protocol-link">Clash</a>
-                </div>
-                <span class="protocol-count">__SS_COUNT__ 节点</span>
-              </div>
-              <div class="protocol-item">
-                <h5 style="color: #e5e7eb; margin: 0 0 8px; font-size: 14px; font-weight: 600;">Trojan</h5>
-                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                  <a href="sub/passwall2/trojan.txt" class="protocol-link">PassWall2</a>
-                  <a href="sub/clash/trojan.yaml" class="protocol-link">Clash</a>
-                </div>
-                <span class="protocol-count">__TROJAN_COUNT__ 节点</span>
-              </div>
-              <div class="protocol-item">
-                <h5 style="color: #e5e7eb; margin: 0 0 8px; font-size: 14px; font-weight: 600;">VMess</h5>
-                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                  <a href="sub/passwall2/vmess.txt" class="protocol-link">PassWall2</a>
-                  <a href="sub/clash/vmess.yaml" class="protocol-link">Clash</a>
-                </div>
-                <span class="protocol-count">__VMESS_COUNT__ 节点</span>
-              </div>
-              <div class="protocol-item">
-                <h5 style="color: #e5e7eb; margin: 0 0 8px; font-size: 14px; font-weight: 600;">VLESS</h5>
-                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                  <a href="sub/passwall2/vless.txt" class="protocol-link">PassWall2</a>
-                  <a href="sub/clash/vless.yaml" class="protocol-link">Clash</a>
-                </div>
-                <span class="protocol-count">__VLESS_COUNT__ 节点</span>
-              </div>
-              <div class="protocol-item">
-                <h5 style="color: #e5e7eb; margin: 0 0 8px; font-size: 14px; font-weight: 600;">Hysteria2</h5>
-                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                  <a href="sub/passwall2/hysteria2.txt" class="protocol-link">PassWall2</a>
-                  <a href="sub/clash/hysteria2.yaml" class="protocol-link">Clash</a>
-                </div>
-                <span class="protocol-count">__HYSTERIA2_COUNT__ 节点</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- 地区分类订阅 -->
-          <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid rgba(148,163,184,.3);">
-            <h4 style="color: #e5e7eb; margin: 0 0 16px; font-size: 16px; font-weight: 600;">🌍 地区分类订阅</h4>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
-              <div class="region-item">
-                <h5 style="color: #e5e7eb; margin: 0 0 8px; font-size: 14px; font-weight: 600;">🇭🇰 香港</h5>
-                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                  <a href="sub/regions/hk/passwall2.txt" class="region-link">PassWall2</a>
-                  <a href="sub/regions/hk/clash.yaml" class="region-link">Clash</a>
-                </div>
-                <span class="region-count">__HK_COUNT__ 节点</span>
-              </div>
-              <div class="region-item">
-                <h5 style="color: #e5e7eb; margin: 0 0 8px; font-size: 14px; font-weight: 600;">🇯🇵 日本</h5>
-                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                  <a href="sub/regions/jp/passwall2.txt" class="region-link">PassWall2</a>
-                  <a href="sub/regions/jp/clash.yaml" class="region-link">Clash</a>
-                </div>
-                <span class="region-count">__JP_COUNT__ 节点</span>
-              </div>
-              <div class="region-item">
-                <h5 style="color: #e5e7eb; margin: 0 0 8px; font-size: 14px; font-weight: 600;">🇺🇸 美国</h5>
-                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                  <a href="sub/regions/us/passwall2.txt" class="region-link">PassWall2</a>
-                  <a href="sub/regions/us/clash.yaml" class="region-link">Clash</a>
-                </div>
-                <span class="region-count">__US_COUNT__ 节点</span>
-              </div>
-              <div class="region-item">
-                <h5 style="color: #e5e7eb; margin: 0 0 8px; font-size: 14px; font-weight: 600;">🇸🇬 新加坡</h5>
-                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                  <a href="sub/regions/sg/passwall2.txt" class="region-link">PassWall2</a>
-                  <a href="sub/regions/sg/clash.yaml" class="region-link">Clash</a>
-                </div>
-                <span class="region-count">__SG_COUNT__ 节点</span>
-              </div>
-              <div class="region-item">
-                <h5 style="color: #e5e7eb; margin: 0 0 8px; font-size: 14px; font-weight: 600;">🇹🇼 台湾</h5>
-                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                  <a href="sub/regions/tw/passwall2.txt" class="region-link">PassWall2</a>
-                  <a href="sub/regions/tw/clash.yaml" class="region-link">Clash</a>
-                </div>
-                <span class="region-count">__TW_COUNT__ 节点</span>
-              </div>
-              <div class="region-item">
-                <h5 style="color: #e5e7eb; margin: 0 0 8px; font-size: 14px; font-weight: 600;">🇰🇷 韩国</h5>
-                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                  <a href="sub/regions/kr/passwall2.txt" class="region-link">PassWall2</a>
-                  <a href="sub/regions/kr/clash.yaml" class="region-link">Clash</a>
-                </div>
-                <span class="region-count">__KR_COUNT__ 节点</span>
-              </div>
+              <button onclick="copyFileUrl('sub/top100.yaml', this)" class="copy-btn">
+                <span class="copy-icon">📋</span>
+                <span class="copy-text">复制</span>
+              </button>
             </div>
           </div>
         </div>
-        <p class="card-note">📌 所有订阅文件和接口可直接访问，无需页面认证</p>
+        
+        <p class="card-note">📌 所有订阅文件可直接访问，无需页面认证</p>
+      </div>
+
+      <!-- 客户端分类订阅卡片 -->
+      <div class="card card-clients">
+        <h3>📱 客户端分类订阅</h3>
+        
+        <!-- PassWall2 订阅 -->
+        <div class="client-section">
+          <h4 class="client-title">🔧 PassWall2</h4>
+          <div class="file-list">
+            <div class="file-item">
+              <div class="file-info">
+                <div class="file-name">
+                  <a href="sub/passwall2/all.txt"><code>all.txt</code></a>
+                  <span class="file-desc">全量订阅 (URI格式)</span>
+                </div>
+                <div class="file-stats">
+                  <span class="nodes-count">__NODES__ 节点</span>
+                  <span class="client-tag">PassWall2</span>
+                </div>
+              </div>
+              <button onclick="copyFileUrl('sub/passwall2/all.txt', this)" class="copy-btn">
+                <span class="copy-icon">📋</span>
+                <span class="copy-text">复制</span>
+              </button>
+            </div>
+            <div class="file-item">
+              <div class="file-info">
+                <div class="file-name">
+                  <a href="sub/passwall2/good.txt"><code>good.txt</code></a>
+                  <span class="file-desc">高质量订阅</span>
+                </div>
+                <div class="file-stats">
+                  <span class="file-type">TXT</span>
+                  <span class="client-tag">PassWall2</span>
+                </div>
+              </div>
+              <button onclick="copyFileUrl('sub/passwall2/good.txt', this)" class="copy-btn">
+                <span class="copy-icon">📋</span>
+                <span class="copy-text">复制</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Clash 订阅 -->
+        <div class="client-section">
+          <h4 class="client-title">⚡ Clash</h4>
+          <div class="file-list">
+            <div class="file-item">
+              <div class="file-info">
+                <div class="file-name">
+                  <a href="sub/clash/all.yaml"><code>all.yaml</code></a>
+                  <span class="file-desc">全量配置</span>
+                </div>
+                <div class="file-stats">
+                  <span class="nodes-count">__NODES__ 节点</span>
+                  <span class="client-tag">Clash</span>
+                </div>
+              </div>
+              <button onclick="copyFileUrl('sub/clash/all.yaml', this)" class="copy-btn">
+                <span class="copy-icon">📋</span>
+                <span class="copy-text">复制</span>
+              </button>
+            </div>
+            <div class="file-item">
+              <div class="file-info">
+                <div class="file-name">
+                  <a href="sub/clash/good.yaml"><code>good.yaml</code></a>
+                  <span class="file-desc">高质量配置</span>
+                </div>
+                <div class="file-stats">
+                  <span class="file-type">YAML</span>
+                  <span class="client-tag">Clash</span>
+                </div>
+              </div>
+              <button onclick="copyFileUrl('sub/clash/good.yaml', this)" class="copy-btn">
+                <span class="copy-icon">📋</span>
+                <span class="copy-text">复制</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 协议分类订阅卡片 -->
+      <div class="card card-protocols">
+        <h3>📡 协议分类订阅</h3>
+        <div class="protocol-grid">
+          <div class="protocol-item">
+            <h5 class="protocol-name">Shadowsocks</h5>
+            <div class="protocol-links">
+              <a href="sub/passwall2/ss.txt" class="protocol-link">PassWall2</a>
+              <a href="sub/clash/ss.yaml" class="protocol-link">Clash</a>
+            </div>
+            <span class="protocol-count">__SS_COUNT__ 节点</span>
+          </div>
+          <div class="protocol-item">
+            <h5 class="protocol-name">Trojan</h5>
+            <div class="protocol-links">
+              <a href="sub/passwall2/trojan.txt" class="protocol-link">PassWall2</a>
+              <a href="sub/clash/trojan.yaml" class="protocol-link">Clash</a>
+            </div>
+            <span class="protocol-count">__TROJAN_COUNT__ 节点</span>
+          </div>
+          <div class="protocol-item">
+            <h5 class="protocol-name">VMess</h5>
+            <div class="protocol-links">
+              <a href="sub/passwall2/vmess.txt" class="protocol-link">PassWall2</a>
+              <a href="sub/clash/vmess.yaml" class="protocol-link">Clash</a>
+            </div>
+            <span class="protocol-count">__VMESS_COUNT__ 节点</span>
+          </div>
+          <div class="protocol-item">
+            <h5 class="protocol-name">VLESS</h5>
+            <div class="protocol-links">
+              <a href="sub/passwall2/vless.txt" class="protocol-link">PassWall2</a>
+              <a href="sub/clash/vless.yaml" class="protocol-link">Clash</a>
+            </div>
+            <span class="protocol-count">__VLESS_COUNT__ 节点</span>
+          </div>
+          <div class="protocol-item">
+            <h5 class="protocol-name">Hysteria2</h5>
+            <div class="protocol-links">
+              <a href="sub/passwall2/hysteria2.txt" class="protocol-link">PassWall2</a>
+              <a href="sub/clash/hysteria2.yaml" class="protocol-link">Clash</a>
+            </div>
+            <span class="protocol-count">__HYSTERIA2_COUNT__ 节点</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 地区分类订阅卡片 -->
+      <div class="card card-regions">
+        <h3>🌍 地区分类订阅</h3>
+        <div class="region-grid">
+          <div class="region-item">
+            <h5 class="region-name">🇭🇰 香港</h5>
+            <div class="region-links">
+              <a href="sub/regions/hk/passwall2.txt" class="region-link">PassWall2</a>
+              <a href="sub/regions/hk/clash.yaml" class="region-link">Clash</a>
+            </div>
+            <span class="region-count">__HK_COUNT__ 节点</span>
+          </div>
+          <div class="region-item">
+            <h5 class="region-name">🇯🇵 日本</h5>
+            <div class="region-links">
+              <a href="sub/regions/jp/passwall2.txt" class="region-link">PassWall2</a>
+              <a href="sub/regions/jp/clash.yaml" class="region-link">Clash</a>
+            </div>
+            <span class="region-count">__JP_COUNT__ 节点</span>
+          </div>
+          <div class="region-item">
+            <h5 class="region-name">🇺🇸 美国</h5>
+            <div class="region-links">
+              <a href="sub/regions/us/passwall2.txt" class="region-link">PassWall2</a>
+              <a href="sub/regions/us/clash.yaml" class="region-link">Clash</a>
+            </div>
+            <span class="region-count">__US_COUNT__ 节点</span>
+          </div>
+          <div class="region-item">
+            <h5 class="region-name">🇸🇬 新加坡</h5>
+            <div class="region-links">
+              <a href="sub/regions/sg/passwall2.txt" class="region-link">PassWall2</a>
+              <a href="sub/regions/sg/clash.yaml" class="region-link">Clash</a>
+            </div>
+            <span class="region-count">__SG_COUNT__ 节点</span>
+          </div>
+          <div class="region-item">
+            <h5 class="region-name">🇹🇼 台湾</h5>
+            <div class="region-links">
+              <a href="sub/regions/tw/passwall2.txt" class="region-link">PassWall2</a>
+              <a href="sub/regions/tw/clash.yaml" class="region-link">Clash</a>
+            </div>
+            <span class="region-count">__TW_COUNT__ 节点</span>
+          </div>
+          <div class="region-item">
+            <h5 class="region-name">🇰🇷 韩国</h5>
+            <div class="region-links">
+              <a href="sub/regions/kr/passwall2.txt" class="region-link">PassWall2</a>
+              <a href="sub/regions/kr/clash.yaml" class="region-link">Clash</a>
+            </div>
+            <span class="region-count">__KR_COUNT__ 节点</span>
+          </div>
+        </div>
       </div>
 
       <!-- URL源文件卡片 -->

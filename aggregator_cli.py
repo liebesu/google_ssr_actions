@@ -1651,6 +1651,205 @@ def main():
     # 生成优秀节点文件 (good.txt)
     write_text(os.path.join(paths["sub"], "good.txt"), "\n".join(good_nodes) + ("\n" if good_nodes else ""))
     
+    # 生成最优秀的100个节点文件
+    print(f"[info] 生成最优秀100个节点文件...")
+    
+    # 按质量分数排序，取前100个
+    if good_nodes:
+        # 为每个节点计算质量分数
+        scored_nodes = []
+        for node in good_nodes:
+            score = 0
+            # 基础分数
+            score += 50
+            
+            # 根据协议加分
+            if node.startswith('vmess://'):
+                score += 20
+            elif node.startswith('vless://'):
+                score += 25
+            elif node.startswith('trojan://'):
+                score += 30
+            elif node.startswith('hysteria2://') or node.startswith('hysteria://'):
+                score += 35
+            elif node.startswith('ss://'):
+                score += 15
+            
+            # 根据地区加分
+            region = infer_region_from_server(node)
+            if region == '香港':
+                score += 20
+            elif region == '日本':
+                score += 18
+            elif region == '新加坡':
+                score += 15
+            elif region == '美国':
+                score += 10
+            elif region == '台湾':
+                score += 12
+            elif region == '韩国':
+                score += 8
+            
+            # 根据节点名称加分（避免包含测试、免费等词汇）
+            try:
+                import urllib.parse
+                if '#' in node:
+                    name_part = node.split('#', 1)[1]
+                    decoded_name = urllib.parse.unquote(name_part).lower()
+                    if any(keyword in decoded_name for keyword in ['premium', 'pro', 'plus', 'vip', '高级', '专业']):
+                        score += 15
+                    if any(keyword in decoded_name for keyword in ['hk', 'hongkong', '香港']):
+                        score += 10
+                    if any(keyword in decoded_name for keyword in ['jp', 'japan', '日本']):
+                        score += 8
+            except:
+                pass
+            
+            scored_nodes.append((score, node))
+        
+        # 按分数排序，取前100个
+        scored_nodes.sort(key=lambda x: x[0], reverse=True)
+        top_100_nodes = [node for score, node in scored_nodes[:100]]
+        
+        print(f"[info] 筛选出最优秀的 {len(top_100_nodes)} 个节点")
+        
+        # 生成各种格式的高质量节点文件
+        write_text(os.path.join(paths["sub"], "top100.txt"), "\n".join(top_100_nodes) + ("\n" if top_100_nodes else ""))
+        
+        # 生成V2Ray格式的订阅
+        v2ray_nodes = []
+        for node in top_100_nodes:
+            if node.startswith('vmess://') or node.startswith('vless://'):
+                v2ray_nodes.append(node)
+        
+        if v2ray_nodes:
+            write_text(os.path.join(paths["sub"], "top100_v2ray.txt"), "\n".join(v2ray_nodes) + ("\n" if v2ray_nodes else ""))
+            print(f"[info] 生成V2Ray格式订阅: {len(v2ray_nodes)} 个节点")
+        
+        # 生成Clash格式的订阅
+        clash_proxies = []
+        for uri in top_100_nodes:
+            proxy_obj = _uri_to_clash_proxy(uri)
+            if proxy_obj:
+                clash_proxies.append(proxy_obj)
+        
+        if clash_proxies:
+            top100_clash_yaml = {
+                "mixed-port": 7890,
+                "allow-lan": False,
+                "mode": "rule",
+                "log-level": "info",
+                "proxies": clash_proxies,
+                "proxy-groups": [
+                    {
+                        "name": "Node-Select",
+                        "type": "select",
+                        "proxies": [proxy["name"] for proxy in clash_proxies] + ["Auto", "DIRECT"]
+                    },
+                    {
+                        "name": "Auto",
+                        "type": "url-test",
+                        "proxies": [proxy["name"] for proxy in clash_proxies],
+                        "url": "http://www.gstatic.com/generate_204",
+                        "interval": 300
+                    },
+                    {
+                        "name": "Media",
+                        "type": "select",
+                        "proxies": ["Node-Select", "Auto", "DIRECT"]
+                    },
+                    {
+                        "name": "Telegram",
+                        "type": "select",
+                        "proxies": ["Node-Select", "DIRECT"]
+                    },
+                    {
+                        "name": "Microsoft",
+                        "type": "select",
+                        "proxies": ["DIRECT", "Node-Select"]
+                    },
+                    {
+                        "name": "Apple",
+                        "type": "select",
+                        "proxies": ["DIRECT", "Node-Select"]
+                    },
+                    {
+                        "name": "Google",
+                        "type": "select",
+                        "proxies": ["Node-Select", "DIRECT"]
+                    },
+                    {
+                        "name": "GitHub",
+                        "type": "select",
+                        "proxies": ["Node-Select", "DIRECT"]
+                    },
+                    {
+                        "name": "Netflix",
+                        "type": "select",
+                        "proxies": ["Node-Select", "DIRECT"]
+                    },
+                    {
+                        "name": "YouTube",
+                        "type": "select",
+                        "proxies": ["Node-Select", "DIRECT"]
+                    },
+                    {
+                        "name": "Twitter",
+                        "type": "select",
+                        "proxies": ["Node-Select", "DIRECT"]
+                    },
+                    {
+                        "name": "Facebook",
+                        "type": "select",
+                        "proxies": ["Node-Select", "DIRECT"]
+                    },
+                    {
+                        "name": "Instagram",
+                        "type": "select",
+                        "proxies": ["Node-Select", "DIRECT"]
+                    },
+                    {
+                        "name": "Spotify",
+                        "type": "select",
+                        "proxies": ["Node-Select", "DIRECT"]
+                    },
+                    {
+                        "name": "Steam",
+                        "type": "select",
+                        "proxies": ["Node-Select", "DIRECT"]
+                    },
+                    {
+                        "name": "Final",
+                        "type": "select",
+                        "proxies": ["Node-Select", "Auto", "DIRECT"]
+                    }
+                ],
+                "rule-providers": {
+                    "ChinaIp": {
+                        "type": "http", "behavior": "classical",
+                        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list",
+                        "path": "./rules/ChinaIp.list", "interval": 86400
+                    }
+                },
+                "rules": [
+                    "DOMAIN-SUFFIX,local,DIRECT",
+                    "IP-CIDR,127.0.0.0/8,DIRECT",
+                    "IP-CIDR,172.16.0.0/12,DIRECT",
+                    "IP-CIDR,192.168.0.0/16,DIRECT",
+                    "IP-CIDR,10.0.0.0/8,DIRECT",
+                    "IP-CIDR,17.0.0.0/8,DIRECT",
+                    "IP-CIDR,100.64.0.0/10,DIRECT",
+                    "DOMAIN-SUFFIX,cn,DIRECT",
+                    "GEOIP,CN,DIRECT",
+                    "RULE-SET,ChinaIp,DIRECT",
+                    "MATCH,Final"
+                ]
+            }
+            write_text(os.path.join(paths["sub"], "top100.yaml"), yaml.safe_dump(top100_clash_yaml, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
+            print(f"[info] 生成Clash格式订阅: {len(clash_proxies)} 个节点")
+    else:
+        print(f"[warning] 没有优秀节点，跳过生成top100文件")
+    
     # 生成分类订阅文件
     print(f"[info] 生成分类订阅文件...")
     
