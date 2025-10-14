@@ -522,10 +522,10 @@
     "next_allowed_at": 1760445945.73118
   },
   "https://qufanfan.info/api/v1/client/subscribe?token=00d1eff0820cffa7b904f3ed0dcee8d9": {
-    "hits": 18,
+    "hits": 19,
     "last_reason": "http 403",
-    "last_at": 1760282468.1644905,
-    "next_allowed_at": 1760368868.1644905
+    "last_at": 1760423615.5597973,
+    "next_allowed_at": 1760510015.5597973
   },
   "https://www.djjc.cfd/api/v1/client/subscribe?token=eb6fb117e1c1cbe8041e0e0a00935b85": {
     "hits": 24,
@@ -1428,10 +1428,10 @@
     "next_allowed_at": 1760508346.086509
   },
   "https://www.gogocloud.icu/api/v1/client/subscribe?token=82ac2910f209bba43c84586880313447": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1760327151.0746589,
-    "next_allowed_at": 1760330751.0746589
+    "last_at": 1760423615.5597973,
+    "next_allowed_at": 1760430815.5597973
   },
   "http://www.camael.top/api/v1/client/subscribe?token=3faa8f73d2fe1d554ef141d20044273f": {
     "hits": 11,
