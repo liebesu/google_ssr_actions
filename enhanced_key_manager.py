@@ -27,6 +27,8 @@ import requests
 import json
 import time
 import logging
+import hashlib
+import os
 from typing import List, Dict, Optional, Any
 from datetime import datetime
 
@@ -51,15 +53,55 @@ class EnhancedSerpAPIKeyManager:
         self.last_quota_check = None
         
     def _load_api_keys(self) -> List[str]:
-        """从文件加载API密钥"""
-        try:
-            with open(self.keys_file, 'r', encoding='utf-8') as f:
-                keys = [line.strip() for line in f if line.strip()]
-            self.logger.info(f"加载了 {len(keys)} 个SerpAPI密钥")
-            return keys
-        except Exception as e:
-            self.logger.error(f"加载密钥文件失败: {e}")
-            return []
+        """加载API密钥"""
+        keys = []
+        
+        # 优先从密钥管理文件加载
+        keys_manager_file = os.path.join(os.path.dirname(self.keys_file), "data", "serpapi_keys.json")
+        if os.path.exists(keys_manager_file):
+            try:
+                with open(keys_manager_file, "r", encoding="utf-8") as f:
+                    keys_data = json.load(f)
+                    for key_data in keys_data:
+                        if key_data.get("status") == "valid":
+                            # 从环境变量中匹配密钥
+                            key_hash = key_data.get("key_hash")
+                            if key_hash:
+                                for i in range(1, 11):
+                                    env_key = os.getenv(f"SERPAPI_KEY_{i}")
+                                    if env_key and hashlib.sha256(env_key.strip().encode()).hexdigest() == key_hash:
+                                        keys.append(env_key.strip())
+                                        break
+            except Exception as e:
+                self.logger.warning(f"读取密钥管理文件失败: {e}")
+        
+        # 如果密钥管理文件中没有有效密钥，从环境变量加载
+        if not keys:
+            scraper_keys = os.getenv('SCRAPER_KEYS')
+            if scraper_keys:
+                keys.extend([k.strip() for k in scraper_keys.split(',') if k.strip()])
+            
+            # 从SERPAPI_KEY_1到SERPAPI_KEY_10加载
+            for i in range(1, 11):
+                key = os.getenv(f'SERPAPI_KEY_{i}')
+                if key and key.strip():
+                    keys.append(key.strip())
+        
+        # 从文件加载（如果环境变量中没有）
+        if not keys and os.path.exists(self.keys_file):
+            try:
+                with open(self.keys_file, 'r', encoding='utf-8') as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith('#'):
+                            keys.append(line)
+            except Exception as e:
+                self.logger.error(f"读取密钥文件失败: {e}")
+        
+        # 去重
+        keys = list(set(keys))
+        self.logger.info(f"加载了 {len(keys)} 个SerpAPI密钥")
+        return keys
     
     def get_key_quota(self, api_key: str) -> Dict:
         """获取单个密钥的额度信息"""

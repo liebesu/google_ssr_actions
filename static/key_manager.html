@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SerpAPI 密钥管理 - Google SSR Actions</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .key-manager {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .key-form {
+      background: var(--card);
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 20px 40px rgba(2,6,23,.35);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      color: #e5e7eb;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: #0b1220;
+      border: 1px solid #1f2937;
+      border-radius: 8px;
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      transition: border-color 0.3s ease;
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: #60a5fa;
+    }
+    
+    .form-textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(90deg, #1d4ed8, #2563eb);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #1e40af, #1d4ed8);
+      transform: translateY(-1px);
+    }
+    
+    .btn-secondary {
+      background: #374151;
+      color: #e5e7eb;
+      border: 1px solid #4b5563;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background: #4b5563;
+    }
+    
+    .key-list {
+      background: var(--card);
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(2,6,23,.35);
+    }
+    
+    .key-item {
+      background: rgba(15,23,42,.6);
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .key-item:hover {
+      border-color: #60a5fa;
+      transform: translateY(-2px);
+    }
+    
+    .key-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .key-name {
+      color: #e5e7eb;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    
+    .key-status {
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .status-valid {
+      background: rgba(16,185,129,.2);
+      color: #10b981;
+    }
+    
+    .status-invalid {
+      background: rgba(239,68,68,.2);
+      color: #ef4444;
+    }
+    
+    .status-pending {
+      background: rgba(245,158,11,.2);
+      color: #f59e0b;
+    }
+    
+    .key-details {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    .key-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .btn-small {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+    
+    .alert {
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    
+    .alert-success {
+      background: rgba(16,185,129,.1);
+      border: 1px solid rgba(16,185,129,.3);
+      color: #10b981;
+    }
+    
+    .alert-error {
+      background: rgba(239,68,68,.1);
+      border: 1px solid rgba(239,68,68,.3);
+      color: #ef4444;
+    }
+    
+    .alert-info {
+      background: rgba(59,130,246,.1);
+      border: 1px solid rgba(59,130,246,.3);
+      color: #60a5fa;
+    }
+    
+    .loading {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #60a5fa;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>SerpAPI 密钥管理</h1>
+      <small>管理您的 SerpAPI 密钥</small>
+    </div>
+    
+    <div class="key-manager">
+      <!-- 添加密钥表单 -->
+      <div class="key-form">
+        <h3 style="color: #e5e7eb; margin: 0 0 1.5rem; font-size: 1.25rem;">🔑 添加新密钥</h3>
+        
+        <div id="alert-container"></div>
+        
+        <form id="key-form">
+          <div class="form-group">
+            <label class="form-label" for="key-name">密钥名称</label>
+            <input type="text" id="key-name" class="form-input" placeholder="例如：Key-1, Production-Key 等" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="key-value">密钥值</label>
+            <input type="password" id="key-value" class="form-input" placeholder="输入您的 SerpAPI 密钥" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="key-registration-date">密钥创建日期</label>
+            <input type="date" id="key-registration-date" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="key-description">描述（可选）</label>
+            <textarea id="key-description" class="form-input form-textarea" placeholder="密钥用途描述..."></textarea>
+          </div>
+          
+          <div style="display: flex; gap: 1rem;">
+            <button type="submit" class="btn-primary" id="submit-btn">
+              <span id="submit-text">添加并验证密钥</span>
+              <span id="submit-loading" class="loading hidden"></span>
+            </button>
+            <button type="button" class="btn-secondary" onclick="clearForm()">清空表单</button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- 密钥列表 -->
+      <div class="key-list">
+        <h3 style="color: #e5e7eb; margin: 0 0 1.5rem; font-size: 1.25rem;">📋 密钥列表</h3>
+        <div id="key-list-container">
+          <div style="text-align: center; color: #94a3b8; padding: 2rem;">
+            正在加载密钥列表...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 显示提示信息
+    function showAlert(message, type = 'info') {
+      const container = document.getElementById('alert-container');
+      const alert = document.createElement('div');
+      alert.className = `alert alert-${type}`;
+      alert.textContent = message;
+      container.innerHTML = '';
+      container.appendChild(alert);
+      
+      setTimeout(() => {
+        alert.remove();
+      }, 5000);
+    }
+    
+    // 清空表单
+    function clearForm() {
+      document.getElementById('key-form').reset();
+      document.getElementById('alert-container').innerHTML = '';
+    }
+    
+    // 验证密钥
+    async function validateKey(keyValue) {
+      try {
+        const response = await fetch('/api/validate-key', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ key: keyValue })
+        });
+        
+        if (!response.ok) {
+          throw new Error('验证请求失败');
+        }
+        
+        const result = await response.json();
+        return result;
+      } catch (error) {
+        console.error('验证密钥失败:', error);
+        return { valid: false, error: '网络错误，请稍后重试' };
+      }
+    }
+    
+    // 添加密钥
+    async function addKey(keyData) {
+      try {
+        const response = await fetch('/api/add-key', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(keyData)
+        });
+        
+        if (!response.ok) {
+          throw new Error('添加密钥失败');
+        }
+        
+        const result = await response.json();
+        return result;
+      } catch (error) {
+        console.error('添加密钥失败:', error);
+        return { success: false, error: '网络错误，请稍后重试' };
+      }
+    }
+    
+    // 删除密钥
+    async function deleteKey(keyId) {
+      try {
+        const response = await fetch(`/api/delete-key/${keyId}`, {
+          method: 'DELETE'
+        });
+        
+        if (!response.ok) {
+          throw new Error('删除密钥失败');
+        }
+        
+        const result = await response.json();
+        return result;
+      } catch (error) {
+        console.error('删除密钥失败:', error);
+        return { success: false, error: '网络错误，请稍后重试' };
+      }
+    }
+    
+    // 获取密钥列表
+    async function loadKeyList() {
+      try {
+        const response = await fetch('/api/keys');
+        if (!response.ok) {
+          throw new Error('获取密钥列表失败');
+        }
+        
+        const keys = await response.json();
+        renderKeyList(keys);
+      } catch (error) {
+        console.error('加载密钥列表失败:', error);
+        document.getElementById('key-list-container').innerHTML = 
+          '<div style="text-align: center; color: #ef4444; padding: 2rem;">加载失败，请刷新页面重试</div>';
+      }
+    }
+    
+    // 渲染密钥列表
+    function renderKeyList(keys) {
+      const container = document.getElementById('key-list-container');
+      
+      if (keys.length === 0) {
+        container.innerHTML = '<div style="text-align: center; color: #94a3b8; padding: 2rem;">暂无密钥</div>';
+        return;
+      }
+      
+      container.innerHTML = keys.map(key => `
+        <div class="key-item">
+          <div class="key-header">
+            <div class="key-name">${key.name}</div>
+            <div class="key-status status-${key.status}">${getStatusText(key.status)}</div>
+          </div>
+          <div class="key-details">
+            <div><strong>创建日期:</strong> ${key.registration_date}</div>
+            <div><strong>密钥:</strong> ${key.key_masked}</div>
+            ${key.description ? `<div><strong>描述:</strong> ${key.description}</div>` : ''}
+            ${key.last_validated ? `<div><strong>最后验证:</strong> ${key.last_validated}</div>` : ''}
+            ${key.error ? `<div style="color: #ef4444;"><strong>错误:</strong> ${key.error}</div>` : ''}
+          </div>
+          <div class="key-actions">
+            <button class="btn-secondary btn-small" onclick="revalidateKey('${key.id}')">重新验证</button>
+            <button class="btn-secondary btn-small" onclick="deleteKeyConfirm('${key.id}', '${key.name}')">删除</button>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    // 获取状态文本
+    function getStatusText(status) {
+      const statusMap = {
+        'valid': '有效',
+        'invalid': '无效',
+        'pending': '待验证',
+        'error': '错误'
+      };
+      return statusMap[status] || '未知';
+    }
+    
+    // 重新验证密钥
+    async function revalidateKey(keyId) {
+      try {
+        const response = await fetch(`/api/revalidate-key/${keyId}`, {
+          method: 'POST'
+        });
+        
+        if (!response.ok) {
+          throw new Error('验证失败');
+        }
+        
+        const result = await response.json();
+        if (result.success) {
+          showAlert('密钥验证成功', 'success');
+          loadKeyList();
+        } else {
+          showAlert(result.error || '验证失败', 'error');
+        }
+      } catch (error) {
+        showAlert('验证失败，请稍后重试', 'error');
+      }
+    }
+    
+    // 删除密钥确认
+    function deleteKeyConfirm(keyId, keyName) {
+      if (confirm(`确定要删除密钥 "${keyName}" 吗？此操作不可撤销。`)) {
+        deleteKeyAction(keyId);
+      }
+    }
+    
+    // 删除密钥操作
+    async function deleteKeyAction(keyId) {
+      const result = await deleteKey(keyId);
+      if (result.success) {
+        showAlert('密钥删除成功', 'success');
+        loadKeyList();
+      } else {
+        showAlert(result.error || '删除失败', 'error');
+      }
+    }
+    
+    // 表单提交处理
+    document.getElementById('key-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submit-btn');
+      const submitText = document.getElementById('submit-text');
+      const submitLoading = document.getElementById('submit-loading');
+      
+      // 显示加载状态
+      submitBtn.disabled = true;
+      submitText.classList.add('hidden');
+      submitLoading.classList.remove('hidden');
+      
+      try {
+        const keyData = {
+          name: document.getElementById('key-name').value.trim(),
+          key: document.getElementById('key-value').value.trim(),
+          registration_date: document.getElementById('key-registration-date').value,
+          description: document.getElementById('key-description').value.trim()
+        };
+        
+        // 验证密钥
+        showAlert('正在验证密钥...', 'info');
+        const validation = await validateKey(keyData.key);
+        
+        if (!validation.valid) {
+          showAlert(validation.error || '密钥验证失败', 'error');
+          return;
+        }
+        
+        // 添加密钥
+        showAlert('密钥验证成功，正在保存...', 'info');
+        const result = await addKey({
+          ...keyData,
+          validation_result: validation
+        });
+        
+        if (result.success) {
+          showAlert('密钥添加成功！', 'success');
+          clearForm();
+          loadKeyList();
+        } else {
+          showAlert(result.error || '添加失败', 'error');
+        }
+        
+      } catch (error) {
+        showAlert('操作失败，请稍后重试', 'error');
+      } finally {
+        // 恢复按钮状态
+        submitBtn.disabled = false;
+        submitText.classList.remove('hidden');
+        submitLoading.classList.add('hidden');
+      }
+    });
+    
+    // 页面加载时获取密钥列表
+    document.addEventListener('DOMContentLoaded', () => {
+      loadKeyList();
+    });
+  </script>
+</body>
+</html>

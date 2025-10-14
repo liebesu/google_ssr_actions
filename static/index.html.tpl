@@ -714,6 +714,11 @@
           <div id="serpapi-keys-list" class="serpapi-keys-list">
             <!-- 动态加载密钥详情 -->
           </div>
+          <div style="margin-top: 1rem; text-align: center;">
+            <a href="key_manager.html" class="btn-primary" style="display: inline-block; padding: 0.5rem 1rem; text-decoration: none;">
+              🔑 管理 SerpAPI 密钥
+            </a>
+          </div>
         </div>
       </div>
 
