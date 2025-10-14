@@ -417,6 +417,243 @@ def _uri_to_clash_proxy(uri: str) -> dict:
         return None
 
 
+def infer_region_from_server(node_uri: str) -> str:
+    """从服务器地址推断地区"""
+    try:
+        if '://' in node_uri:
+            scheme, rest = node_uri.split('://', 1)
+            if '@' in rest:
+                _, server_part = rest.split('@', 1)
+                if '#' in server_part:
+                    server_port, _ = server_part.split('#', 1)
+                else:
+                    server_port = server_part
+                
+                if ':' in server_port:
+                    server = server_port.split(':')[0]
+                else:
+                    server = server_port
+                
+                # 根据服务器地址推断地区
+                server_lower = server.lower()
+                if any(keyword in server_lower for keyword in ['hk', 'hongkong', '香港']):
+                    return '香港'
+                elif any(keyword in server_lower for keyword in ['jp', 'japan', '日本']):
+                    return '日本'
+                elif any(keyword in server_lower for keyword in ['us', 'usa', 'america', '美国']):
+                    return '美国'
+                elif any(keyword in server_lower for keyword in ['sg', 'singapore', '新加坡']):
+                    return '新加坡'
+                elif any(keyword in server_lower for keyword in ['tw', 'taiwan', '台湾']):
+                    return '台湾'
+                elif any(keyword in server_lower for keyword in ['kr', 'korea', '韩国']):
+                    return '韩国'
+                elif any(keyword in server_lower for keyword in ['uk', 'britain', '英国']):
+                    return '英国'
+                elif any(keyword in server_lower for keyword in ['de', 'germany', '德国']):
+                    return '德国'
+                elif any(keyword in server_lower for keyword in ['fr', 'france', '法国']):
+                    return '法国'
+                else:
+                    return '其他'
+    except:
+        pass
+    return '未知'
+
+
+def add_region_to_name(node_uri: str, region: str) -> str:
+    """为节点名称添加地区信息"""
+    try:
+        if '#' in node_uri:
+            uri_part, name_part = node_uri.split('#', 1)
+            import urllib.parse
+            decoded_name = urllib.parse.unquote(name_part)
+            
+            # 检查名称中是否已包含地区信息
+            if not any(r in decoded_name for r in ['香港', '日本', '美国', '新加坡', '台湾', '韩国', '英国', '德国', '法国']):
+                new_name = f"{region}-{decoded_name}"
+                encoded_name = urllib.parse.quote(new_name)
+                return f"{uri_part}#{encoded_name}"
+    except:
+        pass
+    return node_uri
+
+
+def classify_nodes_by_protocol(nodes: list) -> dict:
+    """按协议分类节点"""
+    protocol_nodes = {
+        'ss': [],
+        'trojan': [],
+        'vmess': [],
+        'vless': [],
+        'hysteria2': [],
+        'ssr': [],
+        'other': []
+    }
+    
+    for node in nodes:
+        if node.startswith('ss://') and not node.startswith('ssr://'):
+            protocol_nodes['ss'].append(node)
+        elif node.startswith('ssr://'):
+            protocol_nodes['ssr'].append(node)
+        elif node.startswith('trojan://'):
+            protocol_nodes['trojan'].append(node)
+        elif node.startswith('vmess://'):
+            protocol_nodes['vmess'].append(node)
+        elif node.startswith('vless://'):
+            protocol_nodes['vless'].append(node)
+        elif node.startswith('hysteria2://') or node.startswith('hysteria://'):
+            protocol_nodes['hysteria2'].append(node)
+        else:
+            protocol_nodes['other'].append(node)
+    
+    return protocol_nodes
+
+
+def classify_nodes_by_region(nodes: list) -> dict:
+    """按地区分类节点"""
+    region_nodes = {
+        'hk': [],
+        'jp': [],
+        'us': [],
+        'sg': [],
+        'tw': [],
+        'kr': [],
+        'uk': [],
+        'de': [],
+        'fr': [],
+        'other': []
+    }
+    
+    for node in nodes:
+        region = infer_region_from_server(node)
+        if region == '香港':
+            region_nodes['hk'].append(node)
+        elif region == '日本':
+            region_nodes['jp'].append(node)
+        elif region == '美国':
+            region_nodes['us'].append(node)
+        elif region == '新加坡':
+            region_nodes['sg'].append(node)
+        elif region == '台湾':
+            region_nodes['tw'].append(node)
+        elif region == '韩国':
+            region_nodes['kr'].append(node)
+        elif region == '英国':
+            region_nodes['uk'].append(node)
+        elif region == '德国':
+            region_nodes['de'].append(node)
+        elif region == '法国':
+            region_nodes['fr'].append(node)
+        else:
+            region_nodes['other'].append(node)
+    
+    return region_nodes
+
+
+def generate_passwall2_subscription(nodes: list, filename: str):
+    """生成PassWall2订阅文件"""
+    passwall2_nodes = []
+    
+    for node in nodes:
+        # 确保节点名称包含地区信息
+        region = infer_region_from_server(node)
+        enhanced_node = add_region_to_name(node, region)
+        passwall2_nodes.append(enhanced_node)
+    
+    # 按协议分组
+    protocol_groups = classify_nodes_by_protocol(passwall2_nodes)
+    
+    # 生成订阅内容
+    content = []
+    for protocol, protocol_nodes in protocol_groups.items():
+        if protocol_nodes:
+            content.append(f"# {protocol.upper()} 节点")
+            content.extend(protocol_nodes)
+            content.append("")  # 空行分隔
+    
+    write_text(filename, "\n".join(content))
+
+
+def generate_clash_config(nodes: list, filename: str, config_type: str = "full"):
+    """生成Clash配置文件"""
+    # 转换节点为Clash格式
+    clash_proxies = []
+    for uri in nodes:
+        proxy_obj = _uri_to_clash_proxy(uri)
+        if proxy_obj:
+            clash_proxies.append(proxy_obj)
+    
+    if not clash_proxies:
+        return
+    
+    # 根据配置类型选择规则集
+    if config_type == "full":
+        rule_providers = {
+            "ChinaIp": {
+                "type": "http", "behavior": "classical",
+                "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list",
+                "path": "./rules/ChinaIp.list", "interval": 86400
+            }
+        }
+        rules = [
+            "DOMAIN-SUFFIX,local,DIRECT",
+            "IP-CIDR,127.0.0.0/8,DIRECT",
+            "IP-CIDR,172.16.0.0/12,DIRECT",
+            "IP-CIDR,192.168.0.0/16,DIRECT",
+            "IP-CIDR,10.0.0.0/8,DIRECT",
+            "IP-CIDR,17.0.0.0/8,DIRECT",
+            "IP-CIDR,100.64.0.0/10,DIRECT",
+            "DOMAIN-SUFFIX,cn,DIRECT",
+            "GEOIP,CN,DIRECT",
+            "RULE-SET,ChinaIp,DIRECT",
+            "MATCH,Final"
+        ]
+    else:  # minimal
+        rule_providers = {}
+        rules = [
+            "DOMAIN-SUFFIX,local,DIRECT",
+            "GEOIP,CN,DIRECT",
+            "MATCH,Final"
+        ]
+    
+    clash_config = {
+        "mixed-port": 7890,
+        "allow-lan": False,
+        "mode": "rule",
+        "log-level": "info",
+        "proxies": clash_proxies,
+        "proxy-groups": [
+            {
+                "name": "Node-Select",
+                "type": "select",
+                "proxies": [proxy["name"] for proxy in clash_proxies] + ["Auto", "DIRECT"]
+            },
+            {
+                "name": "Auto",
+                "type": "url-test",
+                "proxies": [proxy["name"] for proxy in clash_proxies],
+                "url": "http://www.gstatic.com/generate_204",
+                "interval": 300
+            },
+            {
+                "name": "Media",
+                "type": "select",
+                "proxies": ["Node-Select", "Auto", "DIRECT"]
+            },
+            {
+                "name": "Final",
+                "type": "select",
+                "proxies": ["Node-Select", "Auto", "DIRECT"]
+            }
+        ],
+        "rule-providers": rule_providers,
+        "rules": rules
+    }
+    
+    write_text(filename, yaml.safe_dump(clash_config, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
+
+
 def _is_good_node(node_line: str) -> bool:
     """
     判断节点是否为优秀节点
@@ -700,6 +937,8 @@ def generate_index_html(base_url_paths: Dict[str, str], health: Dict[str, object
         return "<html><body><p>index template missing</p></body></html>"
 
     protocol_counts = health.get("protocol_counts", {}) or {}
+    region_counts = health.get("region_counts", {}) or {}
+    
     mapping = {
         "__AUTH_HASH__": str(health.get("auth_sha256", "")),
         "__AUTH_USER__": str(health.get("auth_user", "")),
@@ -724,6 +963,19 @@ def generate_index_html(base_url_paths: Dict[str, str], health: Dict[str, object
         "__VLESS__": str(protocol_counts.get("vless", 0)),
         "__TROJAN__": str(protocol_counts.get("trojan", 0)),
         "__HY2__": str(protocol_counts.get("hysteria2", 0)),
+        # 协议统计
+        "__SS_COUNT__": str(protocol_counts.get("ss", 0)),
+        "__TROJAN_COUNT__": str(protocol_counts.get("trojan", 0)),
+        "__VMESS_COUNT__": str(protocol_counts.get("vmess", 0)),
+        "__VLESS_COUNT__": str(protocol_counts.get("vless", 0)),
+        "__HYSTERIA2_COUNT__": str(protocol_counts.get("hysteria2", 0)),
+        # 地区统计
+        "__HK_COUNT__": str(region_counts.get("hk", 0)),
+        "__JP_COUNT__": str(region_counts.get("jp", 0)),
+        "__US_COUNT__": str(region_counts.get("us", 0)),
+        "__SG_COUNT__": str(region_counts.get("sg", 0)),
+        "__TW_COUNT__": str(region_counts.get("tw", 0)),
+        "__KR_COUNT__": str(region_counts.get("kr", 0)),
     }
     for k, v in mapping.items():
         template = template.replace(k, v)
@@ -1399,6 +1651,57 @@ def main():
     # 生成优秀节点文件 (good.txt)
     write_text(os.path.join(paths["sub"], "good.txt"), "\n".join(good_nodes) + ("\n" if good_nodes else ""))
     
+    # 生成分类订阅文件
+    print(f"[info] 生成分类订阅文件...")
+    
+    # 创建目录结构
+    os.makedirs(os.path.join(paths["sub"], "passwall2"), exist_ok=True)
+    os.makedirs(os.path.join(paths["sub"], "clash"), exist_ok=True)
+    os.makedirs(os.path.join(paths["sub"], "regions"), exist_ok=True)
+    
+    # 按协议分类
+    protocol_nodes = classify_nodes_by_protocol(verified_nodes)
+    good_protocol_nodes = classify_nodes_by_protocol(good_nodes)
+    
+    # 按地区分类
+    region_nodes = classify_nodes_by_region(verified_nodes)
+    good_region_nodes = classify_nodes_by_region(good_nodes)
+    
+    # 生成PassWall2订阅文件
+    print(f"[info] 生成PassWall2订阅文件...")
+    generate_passwall2_subscription(verified_nodes, os.path.join(paths["sub"], "passwall2", "all.txt"))
+    generate_passwall2_subscription(good_nodes, os.path.join(paths["sub"], "passwall2", "good.txt"))
+    
+    # 生成Clash配置文件
+    print(f"[info] 生成Clash配置文件...")
+    generate_clash_config(verified_nodes, os.path.join(paths["sub"], "clash", "all.yaml"), "full")
+    generate_clash_config(good_nodes, os.path.join(paths["sub"], "clash", "good.yaml"), "full")
+    
+    # 生成协议分类文件
+    for protocol, nodes in protocol_nodes.items():
+        if nodes:
+            print(f"[info] {protocol}.txt: {len(nodes)} 个节点")
+            generate_passwall2_subscription(nodes, os.path.join(paths["sub"], "passwall2", f"{protocol}.txt"))
+            generate_clash_config(nodes, os.path.join(paths["sub"], "clash", f"{protocol}.yaml"), "minimal")
+    
+    # 生成地区分类文件
+    region_names = {
+        'hk': '香港', 'jp': '日本', 'us': '美国', 'sg': '新加坡', 
+        'tw': '台湾', 'kr': '韩国', 'uk': '英国', 'de': '德国', 'fr': '法国'
+    }
+    
+    for region_code, nodes in region_nodes.items():
+        if nodes and region_code in region_names:
+            region_name = region_names[region_code]
+            print(f"[info] {region_name}.txt: {len(nodes)} 个节点")
+            
+            # 创建地区目录
+            region_dir = os.path.join(paths["sub"], "regions", region_code)
+            os.makedirs(region_dir, exist_ok=True)
+            
+            generate_passwall2_subscription(nodes, os.path.join(region_dir, "passwall2.txt"))
+            generate_clash_config(nodes, os.path.join(region_dir, "clash.yaml"), "minimal")
+    
     # 生成优秀节点的Clash配置 (good.yaml)
     if args.public_base and good_nodes:
         # 创建优秀节点的代理提供者文件
@@ -1698,6 +2001,7 @@ def main():
         "dedup_ratio": round(1.0 - (len(verified_nodes) / nodes_before_dedup), 4) if nodes_before_dedup else 0.0,
         "parse_ok_rate": round((parse_ok_count / max(1, len(alive_urls))), 4),
         "protocol_counts": protocol_counts,
+        "region_counts": {region: len(nodes) for region, nodes in classify_nodes_by_region(verified_nodes).items()},
         "github_urls_count": len(github_alive_urls),
         "google_urls_count": len(google_alive_urls) if google_alive_urls else (len(refined_alive_urls) if not gh_urls else 0),
         "quota_total_left": quota_total_left,
