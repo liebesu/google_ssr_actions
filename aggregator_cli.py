@@ -2291,6 +2291,14 @@ def main():
                     write_text(os.path.join(output_dir, "source.html"), f.read())
         except Exception:
             pass
+        # emit key manager page
+        try:
+            key_mgr_tpl = os.path.join(PROJECT_ROOT, "static", "key_manager.html")
+            if os.path.exists(key_mgr_tpl):
+                with open(key_mgr_tpl, "r", encoding="utf-8") as f:
+                    write_text(os.path.join(output_dir, "key_manager.html"), f.read())
+        except Exception:
+            pass
         # emit login page
         try:
             login_tpl = os.path.join(PROJECT_ROOT, "static", "login.html")

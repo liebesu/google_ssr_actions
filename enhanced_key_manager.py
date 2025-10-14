@@ -138,10 +138,18 @@ class EnhancedSerpAPIKeyManager:
                 
                 return quota_info
             else:
+                error_msg = f'HTTP {response.status_code}'
+                if response.status_code == 401:
+                    error_msg = 'API密钥无效或已过期'
+                elif response.status_code == 429:
+                    error_msg = 'API配额已用完'
+                elif response.status_code == 403:
+                    error_msg = 'API访问被拒绝'
+                
                 return {
                     'success': False,
                     'api_key': api_key,
-                    'error': f'HTTP {response.status_code}',
+                    'error': error_msg,
                     'response_time': response.elapsed.total_seconds()
                 }
         except Exception as e:

@@ -199,6 +199,29 @@
     .hidden {
       display: none;
     }
+    
+    .instructions {
+      background: rgba(59,130,246,.1);
+      border: 1px solid rgba(59,130,246,.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .instructions h3 {
+      color: #60a5fa;
+      margin: 0 0 1rem;
+    }
+    
+    .instructions ol {
+      color: #e5e7eb;
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+    
+    .instructions li {
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -209,6 +232,18 @@
     </div>
     
     <div class="key-manager">
+      <!-- 使用说明 -->
+      <div class="instructions">
+        <h3>📋 使用说明</h3>
+        <ol>
+          <li>在下方添加您的 SerpAPI 密钥</li>
+          <li>系统会验证密钥的有效性</li>
+          <li>验证通过后，复制生成的配置</li>
+          <li>将配置添加到 GitHub Actions 的 Secrets 中</li>
+          <li>下次构建时会自动使用新的密钥</li>
+        </ol>
+      </div>
+      
       <!-- 添加密钥表单 -->
       <div class="key-form">
         <h3 style="color: #e5e7eb; margin: 0 0 1.5rem; font-size: 1.25rem;">🔑 添加新密钥</h3>
@@ -251,14 +286,29 @@
         <h3 style="color: #e5e7eb; margin: 0 0 1.5rem; font-size: 1.25rem;">📋 密钥列表</h3>
         <div id="key-list-container">
           <div style="text-align: center; color: #94a3b8; padding: 2rem;">
-            正在加载密钥列表...
+            暂无密钥，请添加新密钥
           </div>
+        </div>
+      </div>
+      
+      <!-- GitHub Actions 配置 -->
+      <div class="key-list" id="github-config" style="display: none;">
+        <h3 style="color: #e5e7eb; margin: 0 0 1.5rem; font-size: 1.25rem;">⚙️ GitHub Actions 配置</h3>
+        <div style="background: rgba(15,23,42,.6); border: 1px solid #334155; border-radius: 12px; padding: 1.5rem;">
+          <p style="color: #94a3b8; margin: 0 0 1rem;">将以下内容添加到 GitHub Actions 的 Secrets 中：</p>
+          <div style="background: #0b1220; border: 1px solid #1f2937; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+            <code id="github-secrets" style="color: #e5e7eb; font-family: monospace; white-space: pre-wrap;"></code>
+          </div>
+          <button onclick="copyGitHubConfig()" class="btn-primary btn-small">复制配置</button>
         </div>
       </div>
     </div>
   </div>
 
   <script>
+    // 存储密钥数据
+    let keys = JSON.parse(localStorage.getItem('serpapi_keys') || '[]');
+    
     // 显示提示信息
     function showAlert(message, type = 'info') {
       const container = document.getElementById('alert-container');
@@ -282,91 +332,107 @@
     // 验证密钥
     async function validateKey(keyValue) {
       try {
-        const response = await fetch('/api/validate-key', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ key: keyValue })
+        // 使用 SerpAPI 的测试端点
+        const url = `https://serpapi.com/search?q=test&api_key=${keyValue}&engine=google&num=1`;
+        
+        const response = await fetch(url, {
+          method: 'GET',
+          mode: 'cors'
         });
         
-        if (!response.ok) {
-          throw new Error('验证请求失败');
+        if (response.ok) {
+          const data = await response.json();
+          if (data.error) {
+            return {
+              valid: false,
+              error: data.error,
+              status: 'invalid'
+            };
+          } else {
+            return {
+              valid: true,
+              status: 'valid',
+              quota_info: {
+                used_searches: data.search_metadata?.used_searches || 0,
+                searches_per_month: data.search_metadata?.searches_per_month || 0,
+                total_searches_left: data.search_metadata?.total_searches_left || 0,
+                reset_date: data.search_metadata?.reset_date || ''
+              }
+            };
+          }
+        } else if (response.status === 401) {
+          return {
+            valid: false,
+            error: 'API密钥无效或已过期',
+            status: 'invalid'
+          };
+        } else if (response.status === 429) {
+          return {
+            valid: true,
+            error: 'API配额已用完，但密钥有效',
+            status: 'quota_exhausted'
+          };
+        } else {
+          return {
+            valid: false,
+            error: `API请求失败 (状态码: ${response.status})`,
+            status: 'error'
+          };
         }
-        
-        const result = await response.json();
-        return result;
       } catch (error) {
-        console.error('验证密钥失败:', error);
-        return { valid: false, error: '网络错误，请稍后重试' };
+        return {
+          valid: false,
+          error: `网络错误: ${error.message}`,
+          status: 'error'
+        };
       }
+    }
+    
+    // 掩码显示密钥
+    function maskKey(key) {
+      if (key.length <= 8) {
+        return '*'.repeat(key.length);
+      }
+      return key.substring(0, 4) + '*'.repeat(key.length - 8) + key.substring(key.length - 4);
     }
     
     // 添加密钥
-    async function addKey(keyData) {
-      try {
-        const response = await fetch('/api/add-key', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(keyData)
-        });
-        
-        if (!response.ok) {
-          throw new Error('添加密钥失败');
-        }
-        
-        const result = await response.json();
-        return result;
-      } catch (error) {
-        console.error('添加密钥失败:', error);
-        return { success: false, error: '网络错误，请稍后重试' };
-      }
+    function addKey(keyData) {
+      const keyId = Date.now().toString();
+      const newKey = {
+        id: keyId,
+        name: keyData.name.trim(),
+        key: keyData.key.trim(),
+        key_masked: maskKey(keyData.key.trim()),
+        registration_date: keyData.registration_date,
+        description: keyData.description.trim(),
+        created_at: new Date().toISOString(),
+        last_validated: new Date().toISOString(),
+        status: keyData.validation_result?.status || 'pending',
+        quota_info: keyData.validation_result?.quota_info || {},
+        error: keyData.validation_result?.error || ''
+      };
+      
+      keys.push(newKey);
+      localStorage.setItem('serpapi_keys', JSON.stringify(keys));
+      
+      return { success: true, key_id: newKey.id };
     }
     
     // 删除密钥
-    async function deleteKey(keyId) {
-      try {
-        const response = await fetch(`/api/delete-key/${keyId}`, {
-          method: 'DELETE'
-        });
-        
-        if (!response.ok) {
-          throw new Error('删除密钥失败');
-        }
-        
-        const result = await response.json();
-        return result;
-      } catch (error) {
-        console.error('删除密钥失败:', error);
-        return { success: false, error: '网络错误，请稍后重试' };
-      }
-    }
-    
-    // 获取密钥列表
-    async function loadKeyList() {
-      try {
-        const response = await fetch('/api/keys');
-        if (!response.ok) {
-          throw new Error('获取密钥列表失败');
-        }
-        
-        const keys = await response.json();
-        renderKeyList(keys);
-      } catch (error) {
-        console.error('加载密钥列表失败:', error);
-        document.getElementById('key-list-container').innerHTML = 
-          '<div style="text-align: center; color: #ef4444; padding: 2rem;">加载失败，请刷新页面重试</div>';
-      }
+    function deleteKey(keyId) {
+      keys = keys.filter(key => key.id !== keyId);
+      localStorage.setItem('serpapi_keys', JSON.stringify(keys));
+      return { success: true };
     }
     
     // 渲染密钥列表
-    function renderKeyList(keys) {
+    function renderKeyList() {
       const container = document.getElementById('key-list-container');
       
       if (keys.length === 0) {
-        container.innerHTML = '<div style="text-align: center; color: #94a3b8; padding: 2rem;">暂无密钥</div>';
+        container.innerHTML = '<div style="text-align: center; color: #94a3b8; padding: 2rem;">暂无密钥，请添加新密钥</div>';
+        document.getElementById('github-config').style.display = 'none';
         return;
       }
       
@@ -380,8 +446,10 @@
             <div><strong>创建日期:</strong> ${key.registration_date}</div>
             <div><strong>密钥:</strong> ${key.key_masked}</div>
             ${key.description ? `<div><strong>描述:</strong> ${key.description}</div>` : ''}
-            ${key.last_validated ? `<div><strong>最后验证:</strong> ${key.last_validated}</div>` : ''}
+            <div><strong>最后验证:</strong> ${new Date(key.last_validated).toLocaleString()}</div>
             ${key.error ? `<div style="color: #ef4444;"><strong>错误:</strong> ${key.error}</div>` : ''}
+            ${key.quota_info && key.quota_info.total_searches_left !== undefined ? 
+              `<div><strong>剩余配额:</strong> ${key.quota_info.total_searches_left}</div>` : ''}
           </div>
           <div class="key-actions">
             <button class="btn-secondary btn-small" onclick="revalidateKey('${key.id}')">重新验证</button>
@@ -389,6 +457,9 @@
           </div>
         </div>
       `).join('');
+      
+      // 显示GitHub配置
+      updateGitHubConfig();
     }
     
     // 获取状态文本
@@ -397,50 +468,82 @@
         'valid': '有效',
         'invalid': '无效',
         'pending': '待验证',
-        'error': '错误'
+        'error': '错误',
+        'quota_exhausted': '配额用尽'
       };
       return statusMap[status] || '未知';
     }
     
     // 重新验证密钥
     async function revalidateKey(keyId) {
-      try {
-        const response = await fetch(`/api/revalidate-key/${keyId}`, {
-          method: 'POST'
-        });
-        
-        if (!response.ok) {
-          throw new Error('验证失败');
-        }
-        
-        const result = await response.json();
-        if (result.success) {
-          showAlert('密钥验证成功', 'success');
-          loadKeyList();
-        } else {
-          showAlert(result.error || '验证失败', 'error');
-        }
-      } catch (error) {
-        showAlert('验证失败，请稍后重试', 'error');
+      const key = keys.find(k => k.id === keyId);
+      if (!key) return;
+      
+      showAlert('正在重新验证密钥...', 'info');
+      
+      const validation = await validateKey(key.key);
+      
+      // 更新密钥状态
+      key.status = validation.status;
+      key.last_validated = new Date().toISOString();
+      key.error = validation.error || '';
+      key.quota_info = validation.quota_info || {};
+      
+      localStorage.setItem('serpapi_keys', JSON.stringify(keys));
+      
+      if (validation.valid) {
+        showAlert('密钥验证成功', 'success');
+      } else {
+        showAlert(validation.error || '验证失败', 'error');
       }
+      
+      renderKeyList();
     }
     
     // 删除密钥确认
     function deleteKeyConfirm(keyId, keyName) {
       if (confirm(`确定要删除密钥 "${keyName}" 吗？此操作不可撤销。`)) {
-        deleteKeyAction(keyId);
+        deleteKey(keyId);
+        showAlert('密钥删除成功', 'success');
+        renderKeyList();
       }
     }
     
-    // 删除密钥操作
-    async function deleteKeyAction(keyId) {
-      const result = await deleteKey(keyId);
-      if (result.success) {
-        showAlert('密钥删除成功', 'success');
-        loadKeyList();
-      } else {
-        showAlert(result.error || '删除失败', 'error');
+    // 更新GitHub配置
+    function updateGitHubConfig() {
+      const validKeys = keys.filter(k => k.status === 'valid');
+      if (validKeys.length === 0) {
+        document.getElementById('github-config').style.display = 'none';
+        return;
       }
+      
+      document.getElementById('github-config').style.display = 'block';
+      
+      let config = '';
+      validKeys.forEach((key, index) => {
+        config += `SERPAPI_KEY_${index + 1}=${key.key}\n`;
+      });
+      
+      // 添加注册日期配置
+      config += '\n# 密钥注册日期配置\n';
+      config += 'KEY_REGISTRATION_DATES={\n';
+      validKeys.forEach((key, index) => {
+        const keyHash = btoa(key.key).substring(0, 16); // 简化的哈希
+        config += `  "${keyHash}": "${key.registration_date}"${index < validKeys.length - 1 ? ',' : ''}\n`;
+      });
+      config += '}';
+      
+      document.getElementById('github-secrets').textContent = config;
+    }
+    
+    // 复制GitHub配置
+    function copyGitHubConfig() {
+      const config = document.getElementById('github-secrets').textContent;
+      navigator.clipboard.writeText(config).then(() => {
+        showAlert('配置已复制到剪贴板', 'success');
+      }).catch(() => {
+        showAlert('复制失败，请手动复制', 'error');
+      });
     }
     
     // 表单提交处理
@@ -464,6 +567,13 @@
           description: document.getElementById('key-description').value.trim()
         };
         
+        // 检查密钥是否已存在
+        const existingKey = keys.find(k => k.key === keyData.key);
+        if (existingKey) {
+          showAlert('该密钥已存在', 'error');
+          return;
+        }
+        
         // 验证密钥
         showAlert('正在验证密钥...', 'info');
         const validation = await validateKey(keyData.key);
@@ -475,7 +585,7 @@
         
         // 添加密钥
         showAlert('密钥验证成功，正在保存...', 'info');
-        const result = await addKey({
+        const result = addKey({
           ...keyData,
           validation_result: validation
         });
@@ -483,9 +593,9 @@
         if (result.success) {
           showAlert('密钥添加成功！', 'success');
           clearForm();
-          loadKeyList();
+          renderKeyList();
         } else {
-          showAlert(result.error || '添加失败', 'error');
+          showAlert('添加失败', 'error');
         }
         
       } catch (error) {
@@ -498,9 +608,9 @@
       }
     });
     
-    // 页面加载时获取密钥列表
+    // 页面加载时渲染密钥列表
     document.addEventListener('DOMContentLoaded', () => {
-      loadKeyList();
+      renderKeyList();
     });
   </script>
 </body>
