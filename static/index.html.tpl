@@ -1169,7 +1169,22 @@
             }
           }
           
-          loadMeta(); loadDailyChart(); loadSparklines(); loadSerpAPIKeys(); loadRecentUrls(); loadTrend7Day();
+          // 确保所有函数都正确定义后再调用
+          setTimeout(() => {
+            console.log('🚀 开始加载所有内容...');
+            if (typeof loadMeta === 'function') loadMeta();
+            if (typeof loadDailyChart === 'function') loadDailyChart();
+            if (typeof loadSparklines === 'function') loadSparklines();
+            if (typeof loadSerpAPIKeys === 'function') {
+              console.log('🔑 调用loadSerpAPIKeys函数');
+              loadSerpAPIKeys();
+            } else {
+              console.error('❌ loadSerpAPIKeys函数未定义');
+            }
+            if (typeof loadRecentUrls === 'function') loadRecentUrls();
+            if (typeof loadTrend7Day === 'function') loadTrend7Day();
+            console.log('✅ 所有内容加载函数调用完成');
+          }, 100);
         </script>
       </div>
     </div>

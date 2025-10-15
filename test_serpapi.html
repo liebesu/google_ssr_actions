@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SerpAPI Keys Test</title>
+</head>
+<body>
+    <h1>SerpAPI Keys Test</h1>
+    <div id="serpapi-keys-list"></div>
+    
+    <script>
+        async function loadSerpAPIKeys() {
+            console.log('🔑 开始加载SerpAPI密钥详情...');
+            try {
+                const r = await fetch('https://liebesu.github.io/google_ssr_actions/health.json', { cache:'no-cache' });
+                if(!r.ok) {
+                    console.error('❌ 获取health.json失败:', r.status);
+                    return;
+                }
+                const health = await r.json();
+                console.log('📊 获取到health数据:', health);
+                const keys = health.serpapi_keys_detail || [];
+                console.log('🔑 密钥详情:', keys);
+                const container = document.getElementById('serpapi-keys-list');
+                if(!container) {
+                    console.error('❌ 找不到serpapi-keys-list容器');
+                    return;
+                }
+                
+                if(keys.length === 0) {
+                    console.log('⚠️ 没有密钥信息');
+                    container.innerHTML = '<div>暂无密钥信息</div>';
+                    return;
+                }
+                
+                container.innerHTML = keys.map(key => {
+                    if(key.error) {
+                        return `<div style="border: 1px solid red; padding: 10px; margin: 5px;">
+                            <strong>Key ${key.index}</strong> - 错误: ${key.error}
+                        </div>`;
+                    }
+                    return `<div style="border: 1px solid green; padding: 10px; margin: 5px;">
+                        <strong>Key ${key.index}</strong> - 正常
+                    </div>`;
+                }).join('');
+                console.log('✅ SerpAPI密钥详情加载完成');
+            } catch(e) { 
+                console.error('❌ SerpAPI keys load failed:', e);
+                const container = document.getElementById('serpapi-keys-list');
+                if(container) container.innerHTML = '<div>加载失败</div>';
+            }
+        }
+        
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('页面加载完成，开始加载SerpAPI密钥');
+            loadSerpAPIKeys();
+        });
+    </script>
+</body>
+</html>
