@@ -1338,10 +1338,10 @@
     "next_allowed_at": 1760541890.7748032
   },
   "https://djjc.cfd/api/v1/client/subscribe?token=4b4ad3eaa186905398ac0bcada1815ab": {
-    "hits": 16,
+    "hits": 17,
     "last_reason": "http 403",
-    "last_at": 1760390464.4689946,
-    "next_allowed_at": 1760476864.4689946
+    "last_at": 1760492431.6893165,
+    "next_allowed_at": 1760578831.6893165
   },
   "https://xtls.rprx.vision/api/v1/client/subscribe?token=99a65a39b738158aa849ef1ac8e6d845": {
     "hits": 16,
@@ -1890,10 +1890,10 @@
     "next_allowed_at": 1760527893.5765605
   },
   "https://platform.djjc.cfd/api/v1/client/subscribe?token=6bd2d572b3f78f750caf259666d8736c": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "http 403",
-    "last_at": 1760390464.4689946,
-    "next_allowed_at": 1760476864.4689946
+    "last_at": 1760492431.6893165,
+    "next_allowed_at": 1760578831.6893165
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=901ee588c51c64290d7da78054d5e330": {
     "hits": 9,
@@ -1962,10 +1962,10 @@
     "next_allowed_at": 1760435774.3122602
   },
   "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=fdcb29a03a96c3296620ef37d7f9a890": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1760359545.73118,
-    "next_allowed_at": 1760360445.73118
+    "last_at": 1760492431.6893165,
+    "next_allowed_at": 1760494231.6893165
   },
   "https://subscription-gov.lianjiasub.work/api/v1/client/subscribe?token=e4cc5b5cdd16153cbabab52429dd43d6": {
     "hits": 7,
@@ -1998,46 +1998,46 @@
     "next_allowed_at": 1760505569.22805
   },
   "http://91chigua-vpn.com/api/v1/client/subscribe?token=9c7f5653953c7732425bb4b9de8b3bc1": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1760476769.22805,
-    "next_allowed_at": 1760477669.22805
+    "last_at": 1760492431.6893165,
+    "next_allowed_at": 1760494231.6893165
   },
   "https://ch.cukug.website/api/v1/client/subscribe?token=df4b5687c58b0c8cfd9899b1bef63888": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1760476769.22805,
-    "next_allowed_at": 1760477669.22805
+    "last_at": 1760492431.6893165,
+    "next_allowed_at": 1760494231.6893165
   },
   "https://ls.xn--sxqu35b.xn--fiqs8s/api/v1/client/subscribe?token=249181e4acd8725ae30f4afe9f45b20b": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1760476769.22805,
-    "next_allowed_at": 1760477669.22805
+    "last_at": 1760492431.6893165,
+    "next_allowed_at": 1760494231.6893165
   },
   "https://m33.spwvpn.com/api/v1/client/subscribe?token=37aa8cb315551a1cea16054d5e62ba4d": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1760476769.22805,
-    "next_allowed_at": 1760477669.22805
+    "last_at": 1760492431.6893165,
+    "next_allowed_at": 1760494231.6893165
   },
   "https://ni8.zxm.cc/api/v1/client/subscribe?token=c3a1dcdd92cad737bbaf8b9059c953ef": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1760476769.22805,
-    "next_allowed_at": 1760477669.22805
+    "last_at": 1760492431.6893165,
+    "next_allowed_at": 1760494231.6893165
   },
   "https://s2.equinoxaa.com/api/v1/client/subscribe?token=f984d7cafdbb1e2d68cb0fc091bfbe78": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1760476769.22805,
-    "next_allowed_at": 1760477669.22805
+    "last_at": 1760492431.6893165,
+    "next_allowed_at": 1760494231.6893165
   },
   "https://sub.nex7.us.kg/api/v1/client/subscribe?token=ee6d1ad168c682e88f6bf92cd344df23": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1760476769.22805,
-    "next_allowed_at": 1760477669.22805
+    "last_at": 1760492431.6893165,
+    "next_allowed_at": 1760494231.6893165
   },
   "https://submit.mylac.cn:22443/api/v1/client/subscribe?token=2e1d3fae9b9b3dac6670575621a0a15d": {
     "hits": 1,
@@ -2046,9 +2046,9 @@
     "next_allowed_at": 1760477669.22805
   },
   "https://v2.netbridge.uk/api/v1/client/subscribe?token=31f8371d6d3781f3a6d4586a67b98b95": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1760476769.22805,
-    "next_allowed_at": 1760477669.22805
+    "last_at": 1760492431.6893165,
+    "next_allowed_at": 1760494231.6893165
   }
 }
