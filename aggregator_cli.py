@@ -1093,6 +1093,7 @@ def main():
                     quota_total_left += int(q.get("total_searches_left", 0) or 0)
                     quota_total_cap += int(q.get("searches_per_month", 0) or 0)
                 # 收集每个 key 的详细信息
+                api_key = q.get("api_key", "")
                 key_info = {
                     "index": i + 1,
                     "success": q.get("success", False),
@@ -1100,7 +1101,8 @@ def main():
                     "searches_per_month": q.get("searches_per_month", 0),
                     "used_searches": q.get("searches_per_month", 0) - q.get("total_searches_left", 0),
                     "reset_date": q.get("reset_date", ""),
-                    "error": q.get("error", "") if not q.get("success") else ""
+                    "error": q.get("error", "") if not q.get("success") else "",
+                    "key_masked": api_key[:4] + "*" * (len(api_key) - 8) + api_key[-4:] if len(api_key) > 8 else "*" * len(api_key)
                 }
                 serpapi_keys_detail.append(key_info)
             
@@ -1123,12 +1125,12 @@ def main():
             for i, key in enumerate(actual_keys):
                 key_detail = {
                     "index": i + 1,
-                "success": False,
-                "total_searches_left": 0,
-                "searches_per_month": 0,
-                "used_searches": 0,
-                "reset_date": "",
-                    "key_masked": key[:8] + "..." if len(key) > 8 else key,
+                    "success": False,
+                    "total_searches_left": 0,
+                    "searches_per_month": 0,
+                    "used_searches": 0,
+                    "reset_date": "",
+                    "key_masked": key[:4] + "*" * (len(key) - 8) + key[-4:] if len(key) > 8 else "*" * len(key),
                     "error": f"Unable to check quota: {str(e)}"
                 }
                 
