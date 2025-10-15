@@ -56,6 +56,13 @@ jobs:
           if [ -n "${{ secrets.AUTH_USER }}" ]; then
             echo "AUTH_USER from secrets configured"
           fi
+          # 创建SerpAPI密钥管理数据目录
+          mkdir -p data
+          # 如果有SerpAPI密钥，创建密钥管理文件
+          if [ -n "${{ secrets.SERPAPI_KEYS_JSON }}" ]; then
+            echo "${{ secrets.SERPAPI_KEYS_JSON }}" > data/serpapi_keys.json
+            echo "SerpAPI密钥管理文件已创建"
+          fi
 
       - name: Generate subscriptions
         run: |
@@ -64,6 +71,17 @@ jobs:
           export DISABLE_PROXY=1
           # Pass SerpAPI keys as environment variable for backup plan
           if [ -n "${{ secrets.SCRAPER_KEYS }}" ]; then export SCRAPER_KEYS="${{ secrets.SCRAPER_KEYS }}"; fi
+          # Pass SerpAPI keys from individual secrets
+          if [ -n "${{ secrets.SERPAPI_KEY_1 }}" ]; then export SERPAPI_KEY_1="${{ secrets.SERPAPI_KEY_1 }}"; echo "Set SERPAPI_KEY_1"; fi
+          if [ -n "${{ secrets.SERPAPI_KEY_2 }}" ]; then export SERPAPI_KEY_2="${{ secrets.SERPAPI_KEY_2 }}"; echo "Set SERPAPI_KEY_2"; fi
+          if [ -n "${{ secrets.SERPAPI_KEY_3 }}" ]; then export SERPAPI_KEY_3="${{ secrets.SERPAPI_KEY_3 }}"; echo "Set SERPAPI_KEY_3"; fi
+          if [ -n "${{ secrets.SERPAPI_KEY_4 }}" ]; then export SERPAPI_KEY_4="${{ secrets.SERPAPI_KEY_4 }}"; echo "Set SERPAPI_KEY_4"; fi
+          if [ -n "${{ secrets.SERPAPI_KEY_5 }}" ]; then export SERPAPI_KEY_5="${{ secrets.SERPAPI_KEY_5 }}"; echo "Set SERPAPI_KEY_5"; fi
+          if [ -n "${{ secrets.SERPAPI_KEY_6 }}" ]; then export SERPAPI_KEY_6="${{ secrets.SERPAPI_KEY_6 }}"; echo "Set SERPAPI_KEY_6"; fi
+          if [ -n "${{ secrets.SERPAPI_KEY_7 }}" ]; then export SERPAPI_KEY_7="${{ secrets.SERPAPI_KEY_7 }}"; echo "Set SERPAPI_KEY_7"; fi
+          if [ -n "${{ secrets.SERPAPI_KEY_8 }}" ]; then export SERPAPI_KEY_8="${{ secrets.SERPAPI_KEY_8 }}"; echo "Set SERPAPI_KEY_8"; fi
+          if [ -n "${{ secrets.SERPAPI_KEY_9 }}" ]; then export SERPAPI_KEY_9="${{ secrets.SERPAPI_KEY_9 }}"; echo "Set SERPAPI_KEY_9"; fi
+          if [ -n "${{ secrets.SERPAPI_KEY_10 }}" ]; then export SERPAPI_KEY_10="${{ secrets.SERPAPI_KEY_10 }}"; echo "Set SERPAPI_KEY_10"; fi
           # Pass optional auth envs
           if [ -n "${{ vars.AUTH_PLAIN }}" ]; then export AUTH_PLAIN="${{ vars.AUTH_PLAIN }}"; fi
           if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ secrets.AUTH_SHA256 }}"; fi
