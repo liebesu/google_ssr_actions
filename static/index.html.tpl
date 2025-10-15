@@ -977,15 +977,25 @@
 
           // 加载 SerpAPI 密钥详情
           async function loadSerpAPIKeys() {
+            console.log('🔑 开始加载SerpAPI密钥详情...');
             try {
               const r = await fetch('health.json', { cache:'no-cache' });
-              if(!r.ok) return;
+              if(!r.ok) {
+                console.error('❌ 获取health.json失败:', r.status);
+                return;
+              }
               const health = await r.json();
+              console.log('📊 获取到health数据:', health);
               const keys = health.serpapi_keys_detail || [];
+              console.log('🔑 密钥详情:', keys);
               const container = document.getElementById('serpapi-keys-list');
-              if(!container) return;
+              if(!container) {
+                console.error('❌ 找不到serpapi-keys-list容器');
+                return;
+              }
               
               if(keys.length === 0) {
+                console.log('⚠️ 没有密钥信息');
                 container.innerHTML = '<div class="serpapi-key-item error">暂无密钥信息</div>';
                 return;
               }
@@ -1029,8 +1039,9 @@
                   </div>
                 `;
               }).join('');
+              console.log('✅ SerpAPI密钥详情加载完成');
             } catch(e) { 
-              console.warn('SerpAPI keys load failed:', e);
+              console.error('❌ SerpAPI keys load failed:', e);
               const container = document.getElementById('serpapi-keys-list');
               if(container) container.innerHTML = '<div class="serpapi-key-item error">加载失败</div>';
             }
