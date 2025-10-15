@@ -1722,9 +1722,12 @@ def main():
             if node.startswith('vmess://') or node.startswith('vless://'):
                 v2ray_nodes.append(node)
         
+        # 总是生成V2Ray格式文件，即使为空
+        write_text(os.path.join(paths["sub"], "top100_v2ray.txt"), "\n".join(v2ray_nodes) + ("\n" if v2ray_nodes else ""))
         if v2ray_nodes:
-            write_text(os.path.join(paths["sub"], "top100_v2ray.txt"), "\n".join(v2ray_nodes) + ("\n" if v2ray_nodes else ""))
             print(f"[info] 生成V2Ray格式订阅: {len(v2ray_nodes)} 个节点")
+        else:
+            print(f"[warning] 没有V2Ray节点，生成空的top100_v2ray.txt")
         
         # 生成Clash格式的订阅
         clash_proxies = []
@@ -1733,8 +1736,8 @@ def main():
             if proxy_obj:
                 clash_proxies.append(proxy_obj)
         
-        if clash_proxies:
-            top100_clash_yaml = {
+        # 总是生成Clash格式文件，即使为空
+        top100_clash_yaml = {
                 "mixed-port": 7890,
                 "allow-lan": False,
                 "mode": "rule",
@@ -1744,12 +1747,12 @@ def main():
                     {
                         "name": "Node-Select",
                         "type": "select",
-                        "proxies": [proxy["name"] for proxy in clash_proxies] + ["Auto", "DIRECT"]
+                        "proxies": ([proxy["name"] for proxy in clash_proxies] if clash_proxies else []) + ["Auto", "DIRECT"]
                     },
                     {
                         "name": "Auto",
                         "type": "url-test",
-                        "proxies": [proxy["name"] for proxy in clash_proxies],
+                        "proxies": [proxy["name"] for proxy in clash_proxies] if clash_proxies else [],
                         "url": "http://www.gstatic.com/generate_204",
                         "interval": 300
                     },
@@ -1845,8 +1848,11 @@ def main():
                     "MATCH,Final"
                 ]
             }
-            write_text(os.path.join(paths["sub"], "top100.yaml"), yaml.safe_dump(top100_clash_yaml, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
+        write_text(os.path.join(paths["sub"], "top100.yaml"), yaml.safe_dump(top100_clash_yaml, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
+        if clash_proxies:
             print(f"[info] 生成Clash格式订阅: {len(clash_proxies)} 个节点")
+        else:
+            print(f"[warning] 没有Clash代理，生成空的top100.yaml")
     else:
         print(f"[warning] 没有优秀节点，跳过生成top100文件")
     

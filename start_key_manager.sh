@@ -26,3 +26,5 @@ echo "密钥管理页面: http://localhost:5000/static/key_manager.html"
 echo "按 Ctrl+C 停止服务"
 
 python3 key_manager_api.py
+
+
