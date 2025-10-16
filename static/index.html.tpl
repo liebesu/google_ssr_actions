@@ -1012,6 +1012,7 @@
                       <div style="color:#ef4444">${key.error}</div>
                       ${key.status === 'key_valid_unchecked' ? '<div style="color:#10b981;margin-top:4px">✓ 密钥格式有效，但无法检查配额</div>' : ''}
                       ${key.status === 'key_invalid' ? '<div style="color:#ef4444;margin-top:4px">✗ 密钥格式无效</div>' : ''}
+                      ${key.registration_date ? `<div class="registration-info" style="margin-top:4px">注册日期: ${key.registration_date}</div>` : ''}
                     </div>
                   </div>`;
                 }
@@ -1035,6 +1036,7 @@
                       </div>
                       <div class="quota-text">已用 ${used}/${total} (${usagePercent}%) · 剩余 ${left}</div>
                       <div class="reset-info">重置时间: ${resetDate}</div>
+                      ${key.registration_date ? `<div class="registration-info">注册日期: ${key.registration_date}</div>` : ''}
                     </div>
                   </div>
                 `;

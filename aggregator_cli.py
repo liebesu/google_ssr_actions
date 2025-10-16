@@ -1069,8 +1069,29 @@ def main():
                     keys_from_env.append(key.strip())
                     print(f"[info] 从 SERPAPI_KEY_{i} 获取到密钥")
             
+            # 如果环境变量中没有密钥，尝试从注册日期文件创建模拟密钥
+            if not keys_from_env:
+                print(f"[info] 环境变量中没有密钥，尝试从注册日期文件创建模拟密钥")
+                dates_file = os.path.join(PROJECT_ROOT, "api_key_registration_dates.json")
+                if os.path.exists(dates_file):
+                    try:
+                        import json
+                        with open(dates_file, "r", encoding="utf-8") as f:
+                            dates_data = json.load(f)
+                            key_hashes = dates_data.get("key_registration_dates", {})
+                            print(f"[info] 从注册日期文件发现 {len(key_hashes)} 个密钥哈希")
+                            
+                            # 为每个密钥哈希创建模拟密钥（用于显示）
+                            for i, key_hash in enumerate(key_hashes.keys(), 1):
+                                # 创建模拟密钥，格式：key_1, key_2, etc.
+                                mock_key = f"mock_key_{i}_{key_hash[:8]}"
+                                keys_from_env.append(mock_key)
+                                print(f"[info] 创建模拟密钥 {i}: {mock_key}")
+                    except Exception as e:
+                        print(f"[warn] 读取注册日期文件失败: {e}")
+            
             if keys_from_env:
-                print(f"[info] 总共从环境变量获取到 {len(keys_from_env)} 个密钥")
+                print(f"[info] 总共获取到 {len(keys_from_env)} 个密钥")
                 with open(keys_file_path, 'w') as f:
                     f.write('\n'.join(keys_from_env))
                 print(f"[info] 已创建密钥文件: {keys_file_path}")
@@ -1106,19 +1127,41 @@ def main():
                     keys_ok += 1
                     quota_total_left += int(q.get("total_searches_left", 0) or 0)
                     quota_total_cap += int(q.get("searches_per_month", 0) or 0)
-                # 收集每个 key 的详细信息
-                api_key = q.get("api_key", "")
-                key_info = {
-                    "index": i + 1,
-                    "success": q.get("success", False),
-                    "total_searches_left": q.get("total_searches_left", 0),
-                    "searches_per_month": q.get("searches_per_month", 0),
-                    "used_searches": q.get("searches_per_month", 0) - q.get("total_searches_left", 0),
-                    "reset_date": q.get("reset_date", ""),
-                    "error": q.get("error", "") if not q.get("success") else "",
-                    "key_masked": (api_key[:4] + "*" * min(8, max(0, len(api_key) - 8)) + api_key[-4:]) if len(api_key) > 8 else ("*" * len(api_key)) if api_key else "****"
-                }
-                serpapi_keys_detail.append(key_info)
+            # 收集每个 key 的详细信息
+            api_key = q.get("api_key", "")
+            
+            # 尝试从注册日期文件获取真实密钥信息
+            key_registration_date = ""
+            if api_key.startswith("mock_key_"):
+                # 这是模拟密钥，尝试从注册日期文件获取信息
+                try:
+                    dates_file = os.path.join(PROJECT_ROOT, "api_key_registration_dates.json")
+                    if os.path.exists(dates_file):
+                        import json
+                        with open(dates_file, "r", encoding="utf-8") as f:
+                            dates_data = json.load(f)
+                            key_hashes = dates_data.get("key_registration_dates", {})
+                            
+                            # 查找匹配的密钥哈希
+                            for key_hash, reg_date in key_hashes.items():
+                                if key_hash[:8] in api_key:
+                                    key_registration_date = reg_date
+                                    break
+                except Exception as e:
+                    print(f"[warn] 读取注册日期文件失败: {e}")
+            
+            key_info = {
+                "index": i + 1,
+                "success": q.get("success", False),
+                "total_searches_left": q.get("total_searches_left", 0),
+                "searches_per_month": q.get("searches_per_month", 0),
+                "used_searches": q.get("searches_per_month", 0) - q.get("total_searches_left", 0),
+                "reset_date": q.get("reset_date", ""),
+                "error": q.get("error", "") if not q.get("success") else "",
+                "key_masked": (api_key[:4] + "*" * min(8, max(0, len(api_key) - 8)) + api_key[-4:]) if len(api_key) > 8 else ("*" * len(api_key)) if api_key else "****",
+                "registration_date": key_registration_date
+            }
+            serpapi_keys_detail.append(key_info)
             
             print(f"[info] SerpAPI 汇总: 可用密钥 {keys_ok}/{keys_total}, 总剩余额度 {quota_total_left}/{quota_total_cap}")
     except Exception as e:
