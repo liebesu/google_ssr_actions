@@ -2154,27 +2154,27 @@
     "next_allowed_at": 1760579676.8232808
   },
   "https://6lv.godblessyou.top/api/v1/client/subscribe?token=75223a22fb710034a31be41352f04420": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1760610512.3775184,
-    "next_allowed_at": 1760612312.3775184
+    "last_at": 1760618729.7186422,
+    "next_allowed_at": 1760622329.7186422
   },
   "https://6lv.godblessyou.top/api/v1/client/subscribe?token=8bbec219a125b8b291fc44a49b43e90f": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1760610512.3775184,
-    "next_allowed_at": 1760612312.3775184
+    "last_at": 1760618729.7186422,
+    "next_allowed_at": 1760622329.7186422
   },
   "https://6lv.godblessyou.top/api/v1/client/subscribe?token=e5d78074c4b7c59ed3b94f5050f2599d": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1760610512.3775184,
-    "next_allowed_at": 1760612312.3775184
+    "last_at": 1760618729.7186422,
+    "next_allowed_at": 1760622329.7186422
   },
   "https://sdfhkrecvbfrs7.dashuai.us/api/v1/client/subscribe?token=e37e3989b4c00a57d27c1b959d69ca87": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1760610512.3775184,
-    "next_allowed_at": 1760612312.3775184
+    "last_at": 1760618729.7186422,
+    "next_allowed_at": 1760622329.7186422
   }
 }
