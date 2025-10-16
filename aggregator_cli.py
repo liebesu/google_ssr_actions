@@ -1053,16 +1053,30 @@ def main():
         # 检查密钥文件是否存在
         if not os.path.exists(keys_file_path):
             print(f"[warn] 密钥文件不存在: {keys_file_path}")
-            # 尝试从环境变量获取密钥
+            # 尝试从多个环境变量获取密钥
+            keys_from_env = []
+            
+            # 从SCRAPER_KEYS获取
             scraper_keys_env = os.getenv("SCRAPER_KEYS")
             if scraper_keys_env:
-                print(f"[info] 从环境变量 SCRAPER_KEYS 获取密钥")
+                keys_from_env.extend([k.strip() for k in scraper_keys_env.split(',') if k.strip()])
+                print(f"[info] 从 SCRAPER_KEYS 获取到 {len(keys_from_env)} 个密钥")
+            
+            # 从SERPAPI_KEY_1到SERPAPI_KEY_10获取
+            for i in range(1, 11):
+                key = os.getenv(f'SERPAPI_KEY_{i}')
+                if key and key.strip():
+                    keys_from_env.append(key.strip())
+                    print(f"[info] 从 SERPAPI_KEY_{i} 获取到密钥")
+            
+            if keys_from_env:
+                print(f"[info] 总共从环境变量获取到 {len(keys_from_env)} 个密钥")
                 with open(keys_file_path, 'w') as f:
-                    f.write(scraper_keys_env)
+                    f.write('\n'.join(keys_from_env))
                 print(f"[info] 已创建密钥文件: {keys_file_path}")
             else:
-                print(f"[warn] 环境变量 SCRAPER_KEYS 也未设置")
-                serpapi_keys_detail = [{"error": f"Keys file not found and SCRAPER_KEYS env not set"}]
+                print(f"[warn] 所有环境变量都未设置")
+                serpapi_keys_detail = [{"error": f"No keys found in environment variables"}]
                 return
         
         # 检查密钥文件是否为空
