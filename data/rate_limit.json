@@ -552,10 +552,10 @@
     "next_allowed_at": 1760639558.0060382
   },
   "https://vpndata.shop/api/v1/client/subscribe?token=a0abc72c47d4c7ea48e4b700bee0c1b5": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "body-hint",
-    "last_at": 1759980992.1072187,
-    "next_allowed_at": 1759988192.1072187
+    "last_at": 1760585913.1413698,
+    "next_allowed_at": 1760600313.1413698
   },
   "http://gbtgurl01.org/api/v1/client/subscribe?token=36e8a67632a8d0f0c0eea58b099a0826": {
     "hits": 25,
@@ -1338,10 +1338,10 @@
     "next_allowed_at": 1760639558.0060382
   },
   "https://djjc.cfd/api/v1/client/subscribe?token=4b4ad3eaa186905398ac0bcada1815ab": {
-    "hits": 17,
+    "hits": 18,
     "last_reason": "http 403",
-    "last_at": 1760492431.6893165,
-    "next_allowed_at": 1760578831.6893165
+    "last_at": 1760585913.1413698,
+    "next_allowed_at": 1760672313.1413698
   },
   "https://xtls.rprx.vision/api/v1/client/subscribe?token=99a65a39b738158aa849ef1ac8e6d845": {
     "hits": 17,
@@ -1890,10 +1890,10 @@
     "next_allowed_at": 1760618748.0066648
   },
   "https://platform.djjc.cfd/api/v1/client/subscribe?token=6bd2d572b3f78f750caf259666d8736c": {
-    "hits": 10,
+    "hits": 11,
     "last_reason": "http 403",
-    "last_at": 1760492431.6893165,
-    "next_allowed_at": 1760578831.6893165
+    "last_at": 1760585913.1413698,
+    "next_allowed_at": 1760672313.1413698
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=901ee588c51c64290d7da78054d5e330": {
     "hits": 10,
