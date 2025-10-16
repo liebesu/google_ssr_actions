@@ -87,6 +87,27 @@ class EnhancedSerpAPIKeyManager:
                 if key and key.strip():
                     keys.append(key.strip())
         
+        # 如果仍然没有密钥，尝试从api_key_registration_dates.json加载
+        if not keys:
+            try:
+                dates_file = os.path.join(os.path.dirname(self.keys_file), "api_key_registration_dates.json")
+                if os.path.exists(dates_file):
+                    with open(dates_file, "r", encoding="utf-8") as f:
+                        dates_data = json.load(f)
+                        key_hashes = dates_data.get("key_registration_dates", {})
+                        self.logger.info(f"从注册日期文件发现 {len(key_hashes)} 个密钥哈希")
+                        
+                        # 尝试从环境变量中匹配这些哈希
+                        for i in range(1, 11):
+                            env_key = os.getenv(f'SERPAPI_KEY_{i}')
+                            if env_key:
+                                key_hash = hashlib.sha256(env_key.strip().encode()).hexdigest()
+                                if key_hash in key_hashes:
+                                    keys.append(env_key.strip())
+                                    self.logger.info(f"匹配到密钥 {i}: {env_key[:10]}...")
+            except Exception as e:
+                self.logger.warning(f"从注册日期文件加载密钥失败: {e}")
+        
         # 从文件加载（如果环境变量中没有）
         if not keys and os.path.exists(self.keys_file):
             try:
