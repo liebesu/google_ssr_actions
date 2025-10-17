@@ -1,0 +1,81 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 美国01-GPT
+  type: ss
+  server: us1b.efydt.top
+  port: 42448
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+- name: 美国02|GPT
+  type: ss
+  server: us2.efydt.top
+  port: 35133
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+- name: 美国03|GPT
+  type: ss
+  server: us3.efydt.top
+  port: 51983
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+- name: 美国04|GPT
+  type: ss
+  server: us4.efydt.top
+  port: 13572
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+- name: 美国05|Netflix
+  type: ss
+  server: us5.efydt.top
+  port: 46555
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+- name: 美国06|Netflix
+  type: ss
+  server: us6.efydt.top
+  port: 34476
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+proxy-groups:
+- name: Node-Select
+  type: select
+  proxies:
+  - 美国01-GPT
+  - 美国02|GPT
+  - 美国03|GPT
+  - 美国04|GPT
+  - 美国05|Netflix
+  - 美国06|Netflix
+  - Auto
+  - DIRECT
+- name: Auto
+  type: url-test
+  proxies:
+  - 美国01-GPT
+  - 美国02|GPT
+  - 美国03|GPT
+  - 美国04|GPT
+  - 美国05|Netflix
+  - 美国06|Netflix
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+- name: Media
+  type: select
+  proxies:
+  - Node-Select
+  - Auto
+  - DIRECT
+- name: Final
+  type: select
+  proxies:
+  - Node-Select
+  - Auto
+  - DIRECT
+rule-providers: {}
+rules:
+- DOMAIN-SUFFIX,local,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,Final

@@ -1,0 +1,81 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 新加坡01-Netflix
+  type: ss
+  server: xjp1.rtuiwr.top
+  port: 25043
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+- name: 新加坡02-Netflix
+  type: ss
+  server: xjp2.rtuiwr.top
+  port: 32973
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+- name: 新加坡03-Netflix
+  type: ss
+  server: xjp3.rtuiwr.top
+  port: 28617
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+- name: 新加坡04-Netflix
+  type: ss
+  server: xjp4.rtuiwr.top
+  port: 42877
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+- name: 新加坡05|Netflix
+  type: ss
+  server: xjp5.rtuiwr.top
+  port: 32954
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+- name: 新加坡06|Netflix
+  type: ss
+  server: xjp6.rtuiwr.top
+  port: 28320
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+proxy-groups:
+- name: Node-Select
+  type: select
+  proxies:
+  - 新加坡01-Netflix
+  - 新加坡02-Netflix
+  - 新加坡03-Netflix
+  - 新加坡04-Netflix
+  - 新加坡05|Netflix
+  - 新加坡06|Netflix
+  - Auto
+  - DIRECT
+- name: Auto
+  type: url-test
+  proxies:
+  - 新加坡01-Netflix
+  - 新加坡02-Netflix
+  - 新加坡03-Netflix
+  - 新加坡04-Netflix
+  - 新加坡05|Netflix
+  - 新加坡06|Netflix
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+- name: Media
+  type: select
+  proxies:
+  - Node-Select
+  - Auto
+  - DIRECT
+- name: Final
+  type: select
+  proxies:
+  - Node-Select
+  - Auto
+  - DIRECT
+rule-providers: {}
+rules:
+- DOMAIN-SUFFIX,local,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,Final

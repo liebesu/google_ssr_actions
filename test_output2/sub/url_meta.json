@@ -1,0 +1,46 @@
+[
+  {
+    "url": "http://23.145.248.238:13389/api/v1/client/subscribe?token=fe53dd9857bb1e0a0d51812c92143981",
+    "available": true,
+    "response_ms": 971.9,
+    "over_quota": false,
+    "nodes_total": 60,
+    "protocols": "trojan:60",
+    "id": "b0496458c6e6",
+    "host": "23.145.248.238:13389",
+    "provider": "23.145.248.238:13389",
+    "source": "google",
+    "first_seen": "2025-10-04",
+    "first_seen_time": "10:48:50",
+    "detail_page": "source.html?id=b0496458c6e6",
+    "quality_score": 71,
+    "traffic": {
+      "total": null,
+      "remaining": null,
+      "used": null,
+      "unit": "GB"
+    }
+  },
+  {
+    "url": "http://47.86.18.66/api/v1/client/subscribe?token=84f98ad8f8c5ef123e6430a310d709c1",
+    "available": true,
+    "response_ms": 269.8,
+    "over_quota": false,
+    "nodes_total": 40,
+    "protocols": "ss:40",
+    "id": "7e3499e6c4ae",
+    "host": "47.86.18.66",
+    "provider": "47.86.18.66",
+    "source": "google",
+    "first_seen": "2025-10-11",
+    "first_seen_time": "10:48:50",
+    "detail_page": "source.html?id=7e3499e6c4ae",
+    "quality_score": 92,
+    "traffic": {
+      "total": null,
+      "remaining": null,
+      "used": null,
+      "unit": "GB"
+    }
+  }
+]

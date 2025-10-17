@@ -1,0 +1,572 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 剩余流量：112.07 GB
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 10101
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 距离下次重置剩余：16 天
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 10101
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 套餐到期：2026-04-02
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 10101
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 🇭🇰 香港 01 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 10101
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 🇭🇰 香港 02 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 10102
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 🇭🇰 香港 03 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 10103
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 🇭🇰 香港 04 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 10104
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 🇭🇰 香港 05 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 10105
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 🇭🇰 香港 06 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 10106
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 🇭🇰 香港 07 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 10107
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 🇭🇰 香港 08 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 10108
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 🇸🇬 狮城 02 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12012
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: tr.yuanul.com
+  skip-cert-verify: false
+- name: 🇸🇬 狮城 03 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12013
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sg.yuanul.com
+  skip-cert-verify: false
+- name: 🇸🇬 狮城 04 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12014
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sg4.yuanul.com
+  skip-cert-verify: false
+- name: 🇸🇬 狮城 05 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12015
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sg5.yuanul.com
+  skip-cert-verify: false
+- name: 🇸🇬 狮城 06 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12016
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sg6.yuanul.com
+  skip-cert-verify: false
+- name: 🇸🇬 狮城 07 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12017
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 63.yuanul.com
+  skip-cert-verify: false
+- name: 🇸🇬 狮城 08 TR
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12018
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 64.yuanul.com
+  skip-cert-verify: false
+- name: 🇨🇳 台湾 01
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12101
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 104.yuanul.com
+  skip-cert-verify: false
+- name: 🇨🇳 台湾 02
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12102
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 106.yuanul.com
+  skip-cert-verify: false
+- name: 🇨🇳 台湾 03
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12103
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 116.yuanul.com
+  skip-cert-verify: false
+- name: 🇨🇳 台湾 04
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12104
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 108.yuanul.com
+  skip-cert-verify: false
+- name: 🇨🇳 台湾 05
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12105
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  skip-cert-verify: true
+- name: 🇨🇳 台湾 06
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12106
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 110.yuanul.com
+  skip-cert-verify: false
+- name: 🇯🇵 日本 01
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12201
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 149.yuanul.com
+  skip-cert-verify: false
+- name: 🇯🇵 日本 02
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12202
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 119.yuanul.com
+  skip-cert-verify: false
+- name: 🇯🇵 日本 03
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12203
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 120.yuanul.com
+  skip-cert-verify: false
+- name: 🇯🇵 日本 04
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12204
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 121.yuanul.com
+  skip-cert-verify: false
+- name: 🇯🇵 日本 05
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12205
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 122.yuanul.com
+  skip-cert-verify: false
+- name: 🇯🇵 日本 06
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12206
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 123.yuanul.com
+  skip-cert-verify: false
+- name: 🇯🇵 日本 07
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12207
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 124.yuanul.com
+  skip-cert-verify: false
+- name: 🇯🇵 日本 08
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 12208
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 125.yuanul.com
+  skip-cert-verify: false
+- name: 🇺🇸 美国 01
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 13201
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 133.yuanul.com
+  skip-cert-verify: false
+- name: 🇺🇸 美国 02
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 13202
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 135.yuanul.com
+  skip-cert-verify: false
+- name: 🇺🇸 美国 03
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 13203
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 136.yuanul.com
+  skip-cert-verify: false
+- name: 🇺🇸 美国 04
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 13204
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 137.yuanul.com
+  skip-cert-verify: false
+- name: 🇺🇸 美国 05
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 13205
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 138.yuanul.com
+  skip-cert-verify: false
+- name: 🇺🇸 美国 06
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 13206
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 139.yuanul.com
+  skip-cert-verify: false
+- name: 🇺🇸 美国 07
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 13207
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 140.yuanul.com
+  skip-cert-verify: false
+- name: 🇺🇸 美国 08
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 13208
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 141.yuanul.com
+  skip-cert-verify: false
+- name: 🇲🇾 马来西亚 01
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 14101
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 152.yuanul.com
+  skip-cert-verify: false
+- name: 🇲🇾 马来西亚 02
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 14102
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 154.yuanul.com
+  skip-cert-verify: false
+- name: 🇲🇾 马来西亚 03
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 14103
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 155.yuanul.com
+  skip-cert-verify: false
+- name: 🇲🇾 马来西亚 04
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 14104
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 156.yuanul.com
+  skip-cert-verify: false
+- name: 🇲🇾 马来西亚 05
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 14105
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 157.yuanul.com
+  skip-cert-verify: false
+- name: 🇲🇾 马来西亚 06
+  type: trojan
+  server: 2c6f2139-838e-4478-9e47-55140df12640.hkglink.xyz
+  port: 14106
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 162.yuanul.com
+  skip-cert-verify: false
+- name: 🇨🇦 IEPL 加拿大
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23000
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 73.yuanul.com
+  skip-cert-verify: false
+- name: 🇩🇪 IEPL 德国
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23001
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 75.yuanul.com
+  skip-cert-verify: false
+- name: 🇺🇦 IEPL 乌克兰
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23002
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 76.yuanul.com
+  skip-cert-verify: false
+- name: 🇵🇱 IEPL 波兰
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23003
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 🇹🇭 IEPL 泰国
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23004
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 81.yuanul.com
+  skip-cert-verify: false
+- name: 🇮🇳 IEPL 印度
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23006
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 84.yuanul.com
+  skip-cert-verify: false
+- name: 🇷🇺 IEPL 俄罗斯
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23007
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 84.yuanul.com
+  skip-cert-verify: false
+- name: 🇹🇷 IEPL 土耳其
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23008
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: sni.eos-suzhou-4.cmecloud.cn
+  skip-cert-verify: false
+- name: 🇬🇧 IEPL 英国
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23009
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 93.yuanul.com
+  skip-cert-verify: false
+- name: 🇪🇸 IEPL 西班牙
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23012
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 97.yuanul.com
+  skip-cert-verify: false
+- name: 🇮🇩 IEPL 印度尼尼亚
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23013
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 99.yuanul.com
+  skip-cert-verify: false
+- name: 🇦🇺 IEPL 澳大利亚
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23015
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 102.yuanul.com
+  skip-cert-verify: false
+- name: 🇳🇬 IEPL 尼日利亚
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23020
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 168.yuanul.com
+  skip-cert-verify: false
+- name: 🇫🇷 IEPL 法国
+  type: trojan
+  server: tr.node1link.xyz
+  port: 23017
+  password: 66ca69fd-bdea-4c15-917c-bd8dccc3facd
+  sni: 169.yuanul.com
+  skip-cert-verify: false
+proxy-groups:
+- name: Node-Select
+  type: select
+  proxies:
+  - 剩余流量：112.07 GB
+  - 距离下次重置剩余：16 天
+  - 套餐到期：2026-04-02
+  - 🇭🇰 香港 01 TR
+  - 🇭🇰 香港 02 TR
+  - 🇭🇰 香港 03 TR
+  - 🇭🇰 香港 04 TR
+  - 🇭🇰 香港 05 TR
+  - 🇭🇰 香港 06 TR
+  - 🇭🇰 香港 07 TR
+  - 🇭🇰 香港 08 TR
+  - 🇸🇬 狮城 02 TR
+  - 🇸🇬 狮城 03 TR
+  - 🇸🇬 狮城 04 TR
+  - 🇸🇬 狮城 05 TR
+  - 🇸🇬 狮城 06 TR
+  - 🇸🇬 狮城 07 TR
+  - 🇸🇬 狮城 08 TR
+  - 🇨🇳 台湾 01
+  - 🇨🇳 台湾 02
+  - 🇨🇳 台湾 03
+  - 🇨🇳 台湾 04
+  - 🇨🇳 台湾 05
+  - 🇨🇳 台湾 06
+  - 🇯🇵 日本 01
+  - 🇯🇵 日本 02
+  - 🇯🇵 日本 03
+  - 🇯🇵 日本 04
+  - 🇯🇵 日本 05
+  - 🇯🇵 日本 06
+  - 🇯🇵 日本 07
+  - 🇯🇵 日本 08
+  - 🇺🇸 美国 01
+  - 🇺🇸 美国 02
+  - 🇺🇸 美国 03
+  - 🇺🇸 美国 04
+  - 🇺🇸 美国 05
+  - 🇺🇸 美国 06
+  - 🇺🇸 美国 07
+  - 🇺🇸 美国 08
+  - 🇲🇾 马来西亚 01
+  - 🇲🇾 马来西亚 02
+  - 🇲🇾 马来西亚 03
+  - 🇲🇾 马来西亚 04
+  - 🇲🇾 马来西亚 05
+  - 🇲🇾 马来西亚 06
+  - 🇨🇦 IEPL 加拿大
+  - 🇩🇪 IEPL 德国
+  - 🇺🇦 IEPL 乌克兰
+  - 🇵🇱 IEPL 波兰
+  - 🇹🇭 IEPL 泰国
+  - 🇮🇳 IEPL 印度
+  - 🇷🇺 IEPL 俄罗斯
+  - 🇹🇷 IEPL 土耳其
+  - 🇬🇧 IEPL 英国
+  - 🇪🇸 IEPL 西班牙
+  - 🇮🇩 IEPL 印度尼尼亚
+  - 🇦🇺 IEPL 澳大利亚
+  - 🇳🇬 IEPL 尼日利亚
+  - 🇫🇷 IEPL 法国
+  - Auto
+  - DIRECT
+- name: Auto
+  type: url-test
+  proxies:
+  - 剩余流量：112.07 GB
+  - 距离下次重置剩余：16 天
+  - 套餐到期：2026-04-02
+  - 🇭🇰 香港 01 TR
+  - 🇭🇰 香港 02 TR
+  - 🇭🇰 香港 03 TR
+  - 🇭🇰 香港 04 TR
+  - 🇭🇰 香港 05 TR
+  - 🇭🇰 香港 06 TR
+  - 🇭🇰 香港 07 TR
+  - 🇭🇰 香港 08 TR
+  - 🇸🇬 狮城 02 TR
+  - 🇸🇬 狮城 03 TR
+  - 🇸🇬 狮城 04 TR
+  - 🇸🇬 狮城 05 TR
+  - 🇸🇬 狮城 06 TR
+  - 🇸🇬 狮城 07 TR
+  - 🇸🇬 狮城 08 TR
+  - 🇨🇳 台湾 01
+  - 🇨🇳 台湾 02
+  - 🇨🇳 台湾 03
+  - 🇨🇳 台湾 04
+  - 🇨🇳 台湾 05
+  - 🇨🇳 台湾 06
+  - 🇯🇵 日本 01
+  - 🇯🇵 日本 02
+  - 🇯🇵 日本 03
+  - 🇯🇵 日本 04
+  - 🇯🇵 日本 05
+  - 🇯🇵 日本 06
+  - 🇯🇵 日本 07
+  - 🇯🇵 日本 08
+  - 🇺🇸 美国 01
+  - 🇺🇸 美国 02
+  - 🇺🇸 美国 03
+  - 🇺🇸 美国 04
+  - 🇺🇸 美国 05
+  - 🇺🇸 美国 06
+  - 🇺🇸 美国 07
+  - 🇺🇸 美国 08
+  - 🇲🇾 马来西亚 01
+  - 🇲🇾 马来西亚 02
+  - 🇲🇾 马来西亚 03
+  - 🇲🇾 马来西亚 04
+  - 🇲🇾 马来西亚 05
+  - 🇲🇾 马来西亚 06
+  - 🇨🇦 IEPL 加拿大
+  - 🇩🇪 IEPL 德国
+  - 🇺🇦 IEPL 乌克兰
+  - 🇵🇱 IEPL 波兰
+  - 🇹🇭 IEPL 泰国
+  - 🇮🇳 IEPL 印度
+  - 🇷🇺 IEPL 俄罗斯
+  - 🇹🇷 IEPL 土耳其
+  - 🇬🇧 IEPL 英国
+  - 🇪🇸 IEPL 西班牙
+  - 🇮🇩 IEPL 印度尼尼亚
+  - 🇦🇺 IEPL 澳大利亚
+  - 🇳🇬 IEPL 尼日利亚
+  - 🇫🇷 IEPL 法国
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+- name: Media
+  type: select
+  proxies:
+  - Node-Select
+  - Auto
+  - DIRECT
+- name: Final
+  type: select
+  proxies:
+  - Node-Select
+  - Auto
+  - DIRECT
+rule-providers: {}
+rules:
+- DOMAIN-SUFFIX,local,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,Final

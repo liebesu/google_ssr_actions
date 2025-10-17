@@ -1,0 +1,130 @@
+{
+  "build_time_utc": "2025-10-17 02:48:53",
+  "build_time_cn": "2025-10-17 10:48:53",
+  "next_run_utc": "2025-10-17 05:48:53",
+  "next_run_cn": "2025-10-17 13:48:53",
+  "source_total": 743,
+  "source_alive": 2,
+  "sources_new": 0,
+  "sources_removed": 0,
+  "daily_new_urls": 0,
+  "nodes_total": 100,
+  "nodes_before_dedup": 100,
+  "nodes_after_dedup": 100,
+  "dedup_ratio": 0.0,
+  "parse_ok_rate": 1.0,
+  "protocol_counts": {
+    "trojan": 60,
+    "ss": 40
+  },
+  "region_counts": {
+    "hk": 54,
+    "jp": 6,
+    "us": 6,
+    "sg": 0,
+    "tw": 2,
+    "kr": 0,
+    "uk": 0,
+    "de": 14,
+    "fr": 0,
+    "other": 18
+  },
+  "github_urls_count": 0,
+  "google_urls_count": 2,
+  "quota_total_left": 0,
+  "quota_total_capacity": 0,
+  "keys_total": 8,
+  "keys_ok": 0,
+  "serpapi_keys_detail": [
+    {
+      "index": 1,
+      "success": false,
+      "total_searches_left": 0,
+      "searches_per_month": 0,
+      "used_searches": 0,
+      "reset_date": "",
+      "error": "HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /account?api_key=mock_key_5_eafd4bb7 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10840cdc0>: Failed to establish a new connection: [Errno 61] Connection refused')))",
+      "key_masked": "mock********4bb7",
+      "registration_date": "2025-09-21"
+    },
+    {
+      "index": 2,
+      "success": false,
+      "total_searches_left": 0,
+      "searches_per_month": 0,
+      "used_searches": 0,
+      "reset_date": "",
+      "error": "HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /account?api_key=mock_key_7_58268974 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10840c610>: Failed to establish a new connection: [Errno 61] Connection refused')))",
+      "key_masked": "mock********8974",
+      "registration_date": "2025-09-28"
+    },
+    {
+      "index": 3,
+      "success": false,
+      "total_searches_left": 0,
+      "searches_per_month": 0,
+      "used_searches": 0,
+      "reset_date": "",
+      "error": "HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /account?api_key=mock_key_1_1df753b4 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10841eac0>: Failed to establish a new connection: [Errno 61] Connection refused')))",
+      "key_masked": "mock********53b4",
+      "registration_date": "2025-09-05"
+    },
+    {
+      "index": 4,
+      "success": false,
+      "total_searches_left": 0,
+      "searches_per_month": 0,
+      "used_searches": 0,
+      "reset_date": "",
+      "error": "HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /account?api_key=mock_key_2_e9e285d7 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10841e160>: Failed to establish a new connection: [Errno 61] Connection refused')))",
+      "key_masked": "mock********85d7",
+      "registration_date": "2025-09-10"
+    },
+    {
+      "index": 5,
+      "success": false,
+      "total_searches_left": 0,
+      "searches_per_month": 0,
+      "used_searches": 0,
+      "reset_date": "",
+      "error": "HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /account?api_key=mock_key_4_0bc6d360 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10840c3a0>: Failed to establish a new connection: [Errno 61] Connection refused')))",
+      "key_masked": "mock********d360",
+      "registration_date": "2025-09-11"
+    },
+    {
+      "index": 6,
+      "success": false,
+      "total_searches_left": 0,
+      "searches_per_month": 0,
+      "used_searches": 0,
+      "reset_date": "",
+      "error": "HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /account?api_key=mock_key_6_ec668842 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10840c5b0>: Failed to establish a new connection: [Errno 61] Connection refused')))",
+      "key_masked": "mock********8842",
+      "registration_date": "2025-09-24"
+    },
+    {
+      "index": 7,
+      "success": false,
+      "total_searches_left": 0,
+      "searches_per_month": 0,
+      "used_searches": 0,
+      "reset_date": "",
+      "error": "HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /account?api_key=mock_key_3_547d658f (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10841e910>: Failed to establish a new connection: [Errno 61] Connection refused')))",
+      "key_masked": "mock********658f",
+      "registration_date": "2025-09-10"
+    },
+    {
+      "index": 8,
+      "success": false,
+      "total_searches_left": 0,
+      "searches_per_month": 0,
+      "used_searches": 0,
+      "reset_date": "",
+      "error": "HTTPSConnectionPool(host='serpapi.com', port=443): Max retries exceeded with url: /account?api_key=mock_key_8_04e93c8e (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x108415520>: Failed to establish a new connection: [Errno 61] Connection refused')))",
+      "key_masked": "mock********3c8e",
+      "registration_date": "2025-10-14"
+    }
+  ],
+  "auth_sha256": "",
+  "auth_user": ""
+}

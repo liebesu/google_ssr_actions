@@ -1,0 +1,18 @@
+{
+  "id": "b0496458c6e6",
+  "url": "http://23.145.248.238:13389/api/v1/client/subscribe?token=fe53dd9857bb1e0a0d51812c92143981",
+  "host": "23.145.248.238:13389",
+  "provider": "23.145.248.238:13389",
+  "nodes_total": 60,
+  "protocol_counts": {
+    "trojan": 60
+  },
+  "traffic": {
+    "total": null,
+    "remaining": null,
+    "used": null,
+    "unit": "GB"
+  },
+  "response_ms": 971.9,
+  "updated_at": "2025-10-17 02:48:50"
+}

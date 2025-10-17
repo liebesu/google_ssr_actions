@@ -1,0 +1,210 @@
+[
+  {
+    "date": "2025-09-22",
+    "google_added": 48,
+    "github_added": 10,
+    "new_total": 0,
+    "removed_total": 0,
+    "alive_total": 58
+  },
+  {
+    "date": "2025-09-23",
+    "google_added": 59,
+    "github_added": 5,
+    "new_total": 22,
+    "removed_total": 0,
+    "alive_total": 64
+  },
+  {
+    "date": "2025-09-24",
+    "google_added": 114,
+    "github_added": 5,
+    "new_total": 4,
+    "removed_total": 0,
+    "alive_total": 119
+  },
+  {
+    "date": "2025-09-25",
+    "google_added": 168,
+    "github_added": 5,
+    "new_total": 38,
+    "removed_total": 2,
+    "alive_total": 173
+  },
+  {
+    "date": "2025-09-26",
+    "google_added": 256,
+    "github_added": 6,
+    "new_total": 60,
+    "removed_total": 1,
+    "alive_total": 262
+  },
+  {
+    "date": "2025-09-27",
+    "google_added": 233,
+    "github_added": 5,
+    "new_total": 0,
+    "removed_total": 17,
+    "alive_total": 238
+  },
+  {
+    "date": "2025-09-28",
+    "google_added": 244,
+    "github_added": 6,
+    "new_total": 2,
+    "removed_total": 27,
+    "alive_total": 250
+  },
+  {
+    "date": "2025-09-29",
+    "google_added": 247,
+    "github_added": 6,
+    "new_total": 2,
+    "removed_total": 1,
+    "alive_total": 253
+  },
+  {
+    "date": "2025-09-30",
+    "google_added": 245,
+    "github_added": 5,
+    "new_total": 0,
+    "removed_total": 8,
+    "alive_total": 250
+  },
+  {
+    "date": "2025-10-01",
+    "google_added": 279,
+    "github_added": 4,
+    "new_total": 33,
+    "removed_total": 0,
+    "alive_total": 283
+  },
+  {
+    "date": "2025-10-02",
+    "google_added": 271,
+    "github_added": 4,
+    "new_total": 23,
+    "removed_total": 1,
+    "alive_total": 275
+  },
+  {
+    "date": "2025-10-03",
+    "google_added": 243,
+    "github_added": 4,
+    "new_total": 1,
+    "removed_total": 13,
+    "alive_total": 247
+  },
+  {
+    "date": "2025-10-04",
+    "google_added": 288,
+    "github_added": 5,
+    "new_total": 25,
+    "removed_total": 0,
+    "alive_total": 293
+  },
+  {
+    "date": "2025-10-05",
+    "google_added": 260,
+    "github_added": 5,
+    "new_total": 8,
+    "removed_total": 11,
+    "alive_total": 265
+  },
+  {
+    "date": "2025-10-06",
+    "google_added": 279,
+    "github_added": 5,
+    "new_total": 28,
+    "removed_total": 2,
+    "alive_total": 284
+  },
+  {
+    "date": "2025-10-07",
+    "google_added": 249,
+    "github_added": 4,
+    "new_total": 4,
+    "removed_total": 8,
+    "alive_total": 253
+  },
+  {
+    "date": "2025-10-08",
+    "google_added": 263,
+    "github_added": 5,
+    "new_total": 17,
+    "removed_total": 3,
+    "alive_total": 268
+  },
+  {
+    "date": "2025-10-09",
+    "google_added": 260,
+    "github_added": 5,
+    "new_total": 2,
+    "removed_total": 2,
+    "alive_total": 265
+  },
+  {
+    "date": "2025-10-10",
+    "google_added": 262,
+    "github_added": 4,
+    "new_total": 1,
+    "removed_total": 1,
+    "alive_total": 266
+  },
+  {
+    "date": "2025-10-11",
+    "google_added": 255,
+    "github_added": 4,
+    "new_total": 2,
+    "removed_total": 9,
+    "alive_total": 259
+  },
+  {
+    "date": "2025-10-12",
+    "google_added": 259,
+    "github_added": 4,
+    "new_total": 0,
+    "removed_total": 1,
+    "alive_total": 263
+  },
+  {
+    "date": "2025-10-13",
+    "google_added": 260,
+    "github_added": 5,
+    "new_total": 1,
+    "removed_total": 1,
+    "alive_total": 265
+  },
+  {
+    "date": "2025-10-14",
+    "google_added": 257,
+    "github_added": 6,
+    "new_total": 2,
+    "removed_total": 2,
+    "alive_total": 263
+  },
+  {
+    "date": "2025-10-15",
+    "google_added": 185,
+    "github_added": 3,
+    "new_total": 0,
+    "removed_total": 72,
+    "alive_total": 188
+  },
+  {
+    "date": "2025-10-16",
+    "google_added": 191,
+    "github_added": 4,
+    "new_total": 0,
+    "removed_total": 0,
+    "alive_total": 195
+  },
+  {
+    "date": "2025-10-17",
+    "google_added": 2,
+    "github_added": 0,
+    "new_total": 0,
+    "removed_total": 193,
+    "alive_total": 2
+  }
+]

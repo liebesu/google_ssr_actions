@@ -1,0 +1,49 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: 台湾01
+  type: ss
+  server: tw1.gthub.top
+  port: 45696
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+- name: 台湾02
+  type: ss
+  server: tw2.gthub.top
+  port: 35584
+  cipher: aes-128-gcm
+  password: 97665548-2902-449f-a78c-62f5d48ef3d0
+proxy-groups:
+- name: Node-Select
+  type: select
+  proxies:
+  - 台湾01
+  - 台湾02
+  - Auto
+  - DIRECT
+- name: Auto
+  type: url-test
+  proxies:
+  - 台湾01
+  - 台湾02
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+- name: Media
+  type: select
+  proxies:
+  - Node-Select
+  - Auto
+  - DIRECT
+- name: Final
+  type: select
+  proxies:
+  - Node-Select
+  - Auto
+  - DIRECT
+rule-providers: {}
+rules:
+- DOMAIN-SUFFIX,local,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,Final

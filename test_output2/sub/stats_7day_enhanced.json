@@ -1,0 +1,79 @@
+[
+  {
+    "date": "2025-10-11",
+    "total_count": 259,
+    "new_added": 259,
+    "google_added": 255,
+    "github_added": 4,
+    "failed_count": 266,
+    "removed_count": 9,
+    "net_growth": -7,
+    "alive_count": 259
+  },
+  {
+    "date": "2025-10-12",
+    "total_count": 263,
+    "new_added": 263,
+    "google_added": 259,
+    "github_added": 4,
+    "failed_count": 264,
+    "removed_count": 1,
+    "net_growth": -1,
+    "alive_count": 263
+  },
+  {
+    "date": "2025-10-13",
+    "total_count": 265,
+    "new_added": 265,
+    "google_added": 260,
+    "github_added": 5,
+    "failed_count": 265,
+    "removed_count": 1,
+    "net_growth": 0,
+    "alive_count": 265
+  },
+  {
+    "date": "2025-10-14",
+    "total_count": 263,
+    "new_added": 263,
+    "google_added": 257,
+    "github_added": 6,
+    "failed_count": 263,
+    "removed_count": 2,
+    "net_growth": 0,
+    "alive_count": 263
+  },
+  {
+    "date": "2025-10-15",
+    "total_count": 188,
+    "new_added": 188,
+    "google_added": 185,
+    "github_added": 3,
+    "failed_count": 260,
+    "removed_count": 72,
+    "net_growth": -72,
+    "alive_count": 188
+  },
+  {
+    "date": "2025-10-16",
+    "total_count": 195,
+    "new_added": 195,
+    "google_added": 191,
+    "github_added": 4,
+    "failed_count": 195,
+    "removed_count": 0,
+    "net_growth": 0,
+    "alive_count": 195
+  },
+  {
+    "date": "2025-10-17",
+    "total_count": 2,
+    "new_added": 2,
+    "google_added": 2,
+    "github_added": 0,
+    "failed_count": 2,
+    "removed_count": 0,
+    "net_growth": 0,
+    "alive_count": 2
+  }
+]

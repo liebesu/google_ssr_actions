@@ -1,0 +1,101 @@
+[
+  {
+    "url": "http://23.145.248.238:13389/api/v1/client/subscribe?token=fe53dd9857bb1e0a0d51812c92143981",
+    "available": true,
+    "response_ms": 1115.3,
+    "over_quota": false,
+    "nodes_total": 60,
+    "protocols": "trojan:60",
+    "id": "b0496458c6e6",
+    "host": "23.145.248.238:13389",
+    "provider": "23.145.248.238:13389",
+    "source": "google",
+    "first_seen": "2025-10-04",
+    "first_seen_time": "10:33:19",
+    "detail_page": "source.html?id=b0496458c6e6",
+    "quality_score": 67,
+    "traffic": {
+      "total": null,
+      "remaining": null,
+      "used": null,
+      "unit": "GB"
+    }
+  },
+  {
+    "url": "http://47.86.18.66/api/v1/client/subscribe?token=84f98ad8f8c5ef123e6430a310d709c1",
+    "available": true,
+    "response_ms": 264.0,
+    "over_quota": false,
+    "nodes_total": 40,
+    "protocols": "ss:40",
+    "id": "7e3499e6c4ae",
+    "host": "47.86.18.66",
+    "provider": "47.86.18.66",
+    "source": "google",
+    "first_seen": "2025-10-11",
+    "first_seen_time": "10:33:19",
+    "detail_page": "source.html?id=7e3499e6c4ae",
+    "quality_score": 92,
+    "traffic": {
+      "total": null,
+      "remaining": null,
+      "used": null,
+      "unit": "GB"
+    }
+  },
+  {
+    "url": "https://562dd2da-d6a6-49ca-8ec2-f65fbb4b2e2c.xn--l6qx3lcvp58x.com/api/v1/client/subscribe?token=e3cfcced59c60d67198c8e585c785913",
+    "available": false,
+    "response_ms": null
+  },
+  {
+    "url": "https://api.636333.xyz/api/v1/client/subscribe?token=156bca9e28f3d060f344f6d9e19e3643",
+    "available": false,
+    "response_ms": null
+  },
+  {
+    "url": "https://api.cnct.xn--fiqs8s/api/v1/client/subscribe?token=756b1b611e804aafb94811f735529740",
+    "available": false,
+    "response_ms": null
+  },
+  {
+    "url": "https://berber.pics/api/v1/client/subscribe?token=cca540002b0a7241d10056756eee9101",
+    "available": false,
+    "response_ms": null
+  },
+  {
+    "url": "https://big234.com/api/v1/client/subscribe?token=7dc7d4c1458f986d86c50283985c4e07",
+    "available": false,
+    "response_ms": null
+  },
+  {
+    "url": "https://cloudflaresub.yuwan.link/api/v1/client/subscribe?token=28523a41b161916657c537c3bfa009e6",
+    "available": false,
+    "response_ms": null
+  },
+  {
+    "url": "https://fg88.whtjdasha.com/api/v1/client/subscribe?token=7bbd0dbe02bcebb1b94e2cdf7c27770c",
+    "available": false,
+    "response_ms": null
+  },
+  {
+    "url": "https://hjxixi001.xxssx.cn/api/v1/client/subscribe?token=db88cd47f7831eedc8950b105e3a97c1",
+    "available": false,
+    "response_ms": null
+  },
+  {
+    "url": "https://mojie.app/api/v1/client/subscribe?token=0978d16dbbd8d16b7239284116c882c9",
+    "available": false,
+    "response_ms": null
+  },
+  {
+    "url": "https://mojie.app/api/v1/client/subscribe?token=c8cf82bb480e2421da49217310854e10",
+    "available": false,
+    "response_ms": null
+  },
+  {
+    "url": "https://onlysub.mjurl.com/api/v1/client/subscribe?token=7fdab2c93ce3605b60aa425f7ed7c975",
+    "available": false,
+    "response_ms": null
+  }
+]
