@@ -1002,10 +1002,9 @@
               
               container.innerHTML = keys.map(key => {
                 if(key.error) {
-                  const keyInfo = key.key_masked ? `(${key.key_masked})` : '';
                   return `<div class="serpapi-key-item error">
                     <div class="key-header">
-                      <span class="key-index">Key ${key.index} ${keyInfo}</span>
+                      <span class="key-index">密钥 ${key.index}</span>
                       <span class="key-status">错误</span>
                     </div>
                     <div class="key-details">
@@ -1022,12 +1021,11 @@
                 const usagePercent = total > 0 ? Math.round((used / total) * 100) : 0;
                 const statusClass = left <= 0 ? 'exhausted' : (usagePercent > 80 ? 'warning' : 'ok');
                 const resetDate = key.reset_date ? new Date(key.reset_date).toLocaleDateString('zh-CN') : '未知';
-                const keyInfo = key.key_masked ? `(${key.key_masked})` : '';
                 
                 return `
                   <div class="serpapi-key-item ${statusClass}">
                     <div class="key-header">
-                      <span class="key-index">Key ${key.index} ${keyInfo}</span>
+                      <span class="key-index">密钥 ${key.index}</span>
                       <span class="key-status">${left <= 0 ? '已用尽' : (usagePercent > 80 ? '即将用尽' : '正常')}</span>
                     </div>
                     <div class="key-details">

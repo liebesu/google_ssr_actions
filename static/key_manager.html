@@ -444,7 +444,6 @@
           </div>
           <div class="key-details">
             <div><strong>创建日期:</strong> ${key.registration_date}</div>
-            <div><strong>密钥:</strong> ${key.key_masked}</div>
             ${key.description ? `<div><strong>描述:</strong> ${key.description}</div>` : ''}
             <div><strong>最后验证:</strong> ${new Date(key.last_validated).toLocaleString()}</div>
             ${key.error ? `<div style="color: #ef4444;"><strong>错误:</strong> ${key.error}</div>` : ''}
