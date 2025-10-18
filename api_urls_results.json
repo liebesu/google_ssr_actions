@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-18T06:28:52.944655",
+  "timestamp": "2025-10-18T09:19:46.601853",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -13,7 +13,7 @@
   "total_urls": 2,
   "original_urls": 8,
   "urls": [
-    "https://411611.xyz/api/v1/client/subscribe?token=549",
-    "https://sfj.sufujia.top/api/v1/client/subscribe?token=178afe4c4754a4d0743bdec99cf82aca"
+    "https://sfj.sufujia.top/api/v1/client/subscribe?token=178afe4c4754a4d0743bdec99cf82aca",
+    "https://411611.xyz/api/v1/client/subscribe?token=549"
   ]
 }
