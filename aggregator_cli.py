@@ -579,9 +579,21 @@ def generate_clash_config(nodes: list, filename: str, config_type: str = "full")
     """生成Clash配置文件"""
     # 转换节点为Clash格式
     clash_proxies = []
+    used_names = set()  # 用于跟踪已使用的代理名称
+    
     for uri in nodes:
         proxy_obj = _uri_to_clash_proxy(uri)
         if proxy_obj:
+            # 确保代理名称唯一
+            original_name = proxy_obj["name"]
+            name = original_name
+            counter = 1
+            while name in used_names:
+                name = f"{original_name}_{counter}"
+                counter += 1
+            
+            proxy_obj["name"] = name
+            used_names.add(name)
             clash_proxies.append(proxy_obj)
     
     if not clash_proxies:
@@ -1791,9 +1803,21 @@ def main():
         
         # 生成Clash格式的订阅
         clash_proxies = []
+        used_names = set()  # 用于跟踪已使用的代理名称
+        
         for uri in top_100_nodes:
             proxy_obj = _uri_to_clash_proxy(uri)
             if proxy_obj:
+                # 确保代理名称唯一
+                original_name = proxy_obj["name"]
+                name = original_name
+                counter = 1
+                while name in used_names:
+                    name = f"{original_name}_{counter}"
+                    counter += 1
+                
+                proxy_obj["name"] = name
+                used_names.add(name)
                 clash_proxies.append(proxy_obj)
         
         # 总是生成Clash格式文件，即使为空
@@ -1976,9 +2000,21 @@ def main():
         
         # 将URI格式的节点转换为Clash对象格式
         clash_proxies = []
+        used_names = set()  # 用于跟踪已使用的代理名称
+        
         for uri in good_nodes:
             proxy_obj = _uri_to_clash_proxy(uri)
             if proxy_obj:
+                # 确保代理名称唯一
+                original_name = proxy_obj["name"]
+                name = original_name
+                counter = 1
+                while name in used_names:
+                    name = f"{original_name}_{counter}"
+                    counter += 1
+                
+                proxy_obj["name"] = name
+                used_names.add(name)
                 clash_proxies.append(proxy_obj)
         
         good_clash_yaml = {
