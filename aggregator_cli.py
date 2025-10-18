@@ -2297,6 +2297,7 @@ def main():
         "sources_removed": sources_removed,
         "daily_new_urls": sum(1 for meta in url_meta if meta.get("first_seen") == date_today),
         "nodes_total": len(verified_nodes),
+        "nodes_good": len(good_nodes),
         "nodes_before_dedup": nodes_before_dedup,
         "nodes_after_dedup": len(verified_nodes),
         "dedup_ratio": round(1.0 - (len(verified_nodes) / nodes_before_dedup), 4) if nodes_before_dedup else 0.0,
