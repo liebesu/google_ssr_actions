@@ -1962,10 +1962,10 @@
     "next_allowed_at": 1760670661.511677
   },
   "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=fdcb29a03a96c3296620ef37d7f9a890": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "body-hint",
-    "last_at": 1760669122.231444,
-    "next_allowed_at": 1760676322.231444
+    "last_at": 1760791251.7269213,
+    "next_allowed_at": 1760805651.7269213
   },
   "https://subscription-gov.lianjiasub.work/api/v1/client/subscribe?token=e4cc5b5cdd16153cbabab52429dd43d6": {
     "hits": 10,
