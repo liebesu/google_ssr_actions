@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-19T03:46:29.059647",
+  "timestamp": "2025-10-19T06:29:54.849563",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -13,7 +13,7 @@
   "total_urls": 2,
   "original_urls": 8,
   "urls": [
-    "https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=74540cb3c2a5e39cf",
-    "https://fanyun.pro/api/v1/client/subscribe?token=2214e0e7817fc96e428aba9ab5a9ed22"
+    "https://fanyun.pro/api/v1/client/subscribe?token=2214e0e7817fc96e428aba9ab5a9ed22",
+    "https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=74540cb3c2a5e39cf"
   ]
 }
