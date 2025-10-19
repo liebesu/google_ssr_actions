@@ -4422,9 +4422,9 @@
     "next_allowed_at": 1760879989.026262
   },
   "https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=74540cb3c2a5e39cf": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1760855545.3323338,
-    "next_allowed_at": 1760857345.3323338
+    "last_at": 1760865707.282529,
+    "next_allowed_at": 1760869307.282529
   }
 }
