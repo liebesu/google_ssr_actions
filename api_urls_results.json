@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-20T06:33:02.115262",
+  "timestamp": "2025-10-20T09:25:29.889897",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,9 +11,9 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 8,
+  "original_urls": 4,
   "urls": [
-    "https://411611.xyz/api/v1/client/subscribe?token=549",
+    "https://6lv.godblessyou.top/api/v1/client/subscribe?token=8bbec219a125b8b291fc44a49b43e90f",
     "https://fanyun.pro/api/v1/client/subscribe?token=422e15c6b1d1784d6af699bd6510e927"
   ]
 }
