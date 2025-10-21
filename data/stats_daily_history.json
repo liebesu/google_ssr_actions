@@ -241,10 +241,10 @@
   },
   {
     "date": "2025-10-22",
-    "google_added": 195,
+    "google_added": 174,
     "github_added": 5,
-    "new_total": 1,
-    "removed_total": 1,
-    "alive_total": 200
+    "new_total": 0,
+    "removed_total": 21,
+    "alive_total": 179
   }
 ]
