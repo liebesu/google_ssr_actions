@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-22T15:23:05.474199",
+  "timestamp": "2025-10-22T18:32:46.658373",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,29 +10,15 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 21,
-  "original_urls": 32,
+  "total_urls": 7,
+  "original_urls": 20,
   "urls": [
     "https://fanyun.pro/api/v1/client/subscribe?token=ed4563f1a023f6d55e893006d18749cd",
-    "https://cf02.magic993.cfd/api/v1/client/subscribe?token=d2625dfb4c9dde24cc7a70239b88f3f9",
     "https://411611.xyz/api/v1/client/subscribe?token=549",
-    "https://fanyun.pro/api/v1/client/subscribe?token=83228ab93e89e2413ba",
     "https://6lv.godblessyou.top/api/v1/client/subscribe?token=8bbec219a125b8b291fc44a49b43e90f",
-    "https://fanyun.pro/api/v1/client/subscribe?token=be793367c0e803b2f5a892940b4bdcee",
-    "https://fanyun.pro/api/v1/client/subscribe?token=a7df572a7ae5c26384eed6d05cb735a8",
-    "https://fanyun.pro/api/v1/client/subscribe?token=b55120a773f75bea8cc6ad9c1bd75177",
-    "https://old-v2b.linkedton.com/api/v1/client/subscribe?token=fcf3ed980cc5c55be7262181cd71ace4",
-    "https://x2b.eans.top/api/v1/client/subscribe?token=baec1ecdf428caae62419648aa94a817",
-    "https://fanyun.pro/api/v1/client/subscribe?token=ee3ed0cf2cd3b07b60e35d9b892149e5",
-    "https://fanyun.pro/api/v1/client/subscribe?token=70c1dbf718928eee96090fc1b25b3516",
-    "https://fanyun.pro/api/v1/client/subscribe?token=471af517143fcb30b10d225209136af2",
-    "https://fanyun.pro/api/v1/client/subscribe?token=135c886637efbc464bcb99bee0b171db",
-    "https://xbd.iftballs.com/api/v1/client/subscribe?token=c0a7fc10b89d39eb8f7efeee5677b17f",
-    "https://fanyun.pro/api/v1/client/subscribe?token=d2573aa6badf2401e953933221452c89",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=899925529ee257c0c9eefa428c8c2921",
-    "https://fanyun.pro/api/v1/client/subscribe?token=b0b4a406b2de529b5f92074ce0e497b9",
-    "https://fanyun.pro/api/v1/client/subscribe?token=95262254f787716782273edf41f63473",
-    "https://fanyun.pro/api/v1/client/subscribe?token=6e8350692ccc241019613b446563a659",
-    "https://dash.djjc.cfd/api/v1/client/subscribe?token=10b74549757be16e2e04900ea1405733"
+    "https://fanyun.pro/api/v1/client/subscribe?token=83228ab93e89e2413ba",
+    "https://fanyun.pro/api/v1/client/subscribe?token=fc711610dc6e51ba734",
+    "https://login.djjc.cfd/api/v1/client/subscribe?token=d9d366127",
+    "https://login.djjc.cfd/api/v1/client/subscribe?token=d9d366127674481da5457f4508c61788"
   ]
 }
