@@ -4500,105 +4500,111 @@
     "next_allowed_at": 1761212504.4432442
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=83228ab93e89e2413ba": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761198104.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761230091.2429311
   },
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=10b74549757be16e2e04900ea1405733": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=135c886637efbc464bcb99bee0b171db": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=471af517143fcb30b10d225209136af2": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=6e8350692ccc241019613b446563a659": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=70c1dbf718928eee96090fc1b25b3516": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=95262254f787716782273edf41f63473": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=a7df572a7ae5c26384eed6d05cb735a8": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=b0b4a406b2de529b5f92074ce0e497b9": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=b55120a773f75bea8cc6ad9c1bd75177": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=be793367c0e803b2f5a892940b4bdcee": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=d2573aa6badf2401e953933221452c89": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=ed4563f1a023f6d55e893006d18749cd": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=ee3ed0cf2cd3b07b60e35d9b892149e5": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761183704.4432442,
-    "next_allowed_at": 1761190904.4432442
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=fc711610dc6e51ba734": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761190817.1444,
-    "next_allowed_at": 1761198017.1444
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://login.djjc.cfd/api/v1/client/subscribe?token=d9d366127": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1761190817.1444,
-    "next_allowed_at": 1761198017.1444
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761215691.2429311
   },
   "https://xxcc/api/v1/client/subscribe?token=xxx": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1761190817.1444,
-    "next_allowed_at": 1761191717.1444
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761203091.2429311
+  },
+  "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=8d5f7734faf545e3a4105f2eec109f8b": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1761201291.2429311,
+    "next_allowed_at": 1761202191.2429311
   }
 }
