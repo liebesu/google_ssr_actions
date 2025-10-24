@@ -265,10 +265,10 @@
   },
   {
     "date": "2025-10-25",
-    "google_added": 102,
+    "google_added": 101,
     "github_added": 3,
-    "new_total": 13,
+    "new_total": 0,
     "removed_total": 1,
-    "alive_total": 105
+    "alive_total": 104
   }
 ]
