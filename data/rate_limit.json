@@ -4500,10 +4500,10 @@
     "next_allowed_at": 1761374011.610037
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=83228ab93e89e2413ba": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1761233123.1102407,
-    "next_allowed_at": 1761290723.1102407
+    "last_at": 1761297975.7982903,
+    "next_allowed_at": 1761384375.7982903
   },
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=10b74549757be16e2e04900ea1405733": {
     "hits": 7,
@@ -4650,15 +4650,27 @@
     "next_allowed_at": 1761316411.610037
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1761277029.5184646,
-    "next_allowed_at": 1761291429.5184646
+    "last_at": 1761297975.7982903,
+    "next_allowed_at": 1761326775.7982903
   },
   "https://jennie.rsqpq.cn/api/v1/client/subscribe?token=f525b547a0ef850bbb033b5e614db8d5": {
     "hits": 1,
     "last_reason": "body-hint",
     "last_at": 1761244424.1344833,
     "next_allowed_at": 1761245324.1344833
+  },
+  "https://fanyun.pro/api/v1/client/subscribe?token=a8c0d345b6e015fb2ae6416cd9845805": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1761297975.7982903,
+    "next_allowed_at": 1761298875.7982903
+  },
+  "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=644eab74ee914a1aa785d9f4c8a13f50": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1761297975.7982903,
+    "next_allowed_at": 1761298875.7982903
   }
 }
