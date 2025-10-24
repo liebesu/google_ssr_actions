@@ -257,10 +257,10 @@
   },
   {
     "date": "2025-10-24",
-    "google_added": 100,
+    "google_added": 70,
     "github_added": 5,
     "new_total": 0,
-    "removed_total": 0,
-    "alive_total": 105
+    "removed_total": 30,
+    "alive_total": 75
   }
 ]
