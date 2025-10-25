@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-25T06:28:47.200791",
+  "timestamp": "2025-10-25T09:19:37.327368",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,14 +10,12 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 6,
-  "original_urls": 18,
+  "total_urls": 4,
+  "original_urls": 15,
   "urls": [
-    "https://pokelink.堡垒的泵.cn/api/v1/client/subscribe?token=4341511b84a03796fe60783c6ee6773b",
-    "https://s1.byte77.com/api/v1/client/subscribe?token=ce8bef8c67c46cee338654c46945cc81",
+    "https://sub-1.smjcdh.top/smjc/api/v1/client/subscribe?token=f859cede6c813621c9f9886a8772aab6",
     "https://6lv.godblessyou.top/api/v1/client/subscribe?token=8bbec219a125b8b291fc44a49b43e90f",
-    "https://fanyun.pro/api/v1/client/subscribe?token=775aa1d4ecc7af56135a914ba5af113a",
-    "http://x2b.eans.top/api/v1/client/subscribe?token=35c5ff3a66c759d3e51c480111d61df4",
-    "https://sub-1.smjcdh.top/smjc/api/v1/client/subscribe?token=f859cede6c813621c9f9886a8772aab6"
+    "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda",
+    "http://x2b.eans.top/api/v1/client/subscribe?token=35c5ff3a66c759d3e51c480111d61df4"
   ]
 }
