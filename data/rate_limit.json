@@ -4674,10 +4674,10 @@
     "next_allowed_at": 1761546762.7920742
   },
   "https://5ub.m78sc.cn/api/v1/client/subscribe?token=6c9c806af12b013a53542b318412a77d": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1761405704.4879904,
-    "next_allowed_at": 1761463304.4879904
+    "last_at": 1761470518.5577013,
+    "next_allowed_at": 1761556918.5577013
   },
   "http://xn--9kq85xcu6b.com/api/v1/client/subscribe?token=a811d3ff85af57f060f3f56cf32d43a4": {
     "hits": 7,
