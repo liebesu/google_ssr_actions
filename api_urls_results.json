@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-26T12:39:40.448601",
+  "timestamp": "2025-10-26T15:19:30.846428",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,20 +10,12 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 12,
-  "original_urls": 33,
+  "total_urls": 4,
+  "original_urls": 24,
   "urls": [
     "https://dreamlinkc.top/api/v1/client/subscribe?token=e639f92f9096dc33fbfcfc3a730c456c",
-    "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda",
     "http://120.24.254.184:8086/api/v1/client/subscribe?token=cbed3403fc547cdd4d1b18bfa575176c",
     "https://6lv.godblessyou.top/api/v1/client/subscribe?token=8bbec219a125b8b291fc44a49b43e90f",
-    "http://120.24.254.184:8086/api/v1/client/subscribe?token=55758f551c526ffcc56ec3a564cc6a3b",
-    "https://jennie.rsqpq.cn/api/v1/client/subscribe?token=26e6b985d7674c46cfbe00abf8f0338f",
-    "https://jennie.rsqpq.cn/api/v1/client/subscribe?token=108382b07815a75058fcabd757277ae6",
-    "https://jennie.rsqpq.cn/api/v1/client/subscribe?token=e272e0a0c6c97905b22ca996dceb9142",
-    "https://jennie.rsqpq.cn/api/v1/client/subscribe?token=26e6b985d7674c46cfbe00abf8f0338fhttp://120.24.254.184:8086/api/v1/client/subscribe?token=cbed3403fc547cdd4d1b18bfa575176chttps://jennie.rsqpq.cn/api/v1/client/subscribe?token=324734d4793cdc136fa259e1af43069ehttps://jennie.rsqpq.cn/api/v1/client/subscribe?token=108382b07815a75058fcabd757277ae6https://jennie.rsqpq.cn/api/v1/client/subscribe?token=0c863fcd5f29c6ee279c7b69b9618f58https://jennie.rsqpq.cn/api/v1/client/subscribe?token=908ce7da854ee459aa800007310972b7https://jennie.rsqpq.cn/api/v1/client/subscribe?token=e272e0a0c6c97905b22ca996dceb9142",
-    "https://jennie.rsqpq.cn/api/v1/client/subscribe?token=324734d4793cdc136fa259e1af43069e",
-    "https://jennie.rsqpq.cn/api/v1/client/subscribe?token=0c863fcd5f29c6ee279c7b69b9618f58",
-    "https://jennie.rsqpq.cn/api/v1/client/subscribe?token=908ce7da854ee459aa800007310972b7"
+    "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda"
   ]
 }
