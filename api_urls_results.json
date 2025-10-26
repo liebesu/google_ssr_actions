@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-26T03:41:54.237391",
+  "timestamp": "2025-10-26T06:30:07.782301",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,12 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 9,
+  "total_urls": 4,
+  "original_urls": 24,
   "urls": [
-    "https://411611.xyz/api/v1/client/subscribe?token=549",
+    "https://dreamlinkc.top/api/v1/client/subscribe?token=e639f92f9096dc33fbfcfc3a730c456c",
     "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda",
+    "https://411611.xyz/api/v1/client/subscribe?token=549",
     "https://sb.meslcloud.com/api/v1/client/subscribe?token=590812c64a479f5ef47172f5b3d4881ah"
   ]
 }
