@@ -1326,10 +1326,10 @@
     "next_allowed_at": 1760670922.231444
   },
   "https://qq.xlm.plus/api/v1/client/subscribe?token=9e5db95336ab586ac6c4e2306c4d25a9": {
-    "hits": 21,
+    "hits": 22,
     "last_reason": "body-hint",
-    "last_at": 1761513660.018804,
-    "next_allowed_at": 1761600060.018804
+    "last_at": 1761600092.813465,
+    "next_allowed_at": 1761686492.813465
   },
   "https://odysseycdn.cyou/api/v1/client/subscribe?token=057940e6e8d6f091ceabdf2f8b1965ed": {
     "hits": 29,
@@ -4698,10 +4698,10 @@
     "next_allowed_at": 1761676435.5770829
   },
   "https://s1.byte77.com/api/v1/client/subscribe?token=ce8bef8c67c46cee338654c46945cc81": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1761513660.018804,
-    "next_allowed_at": 1761600060.018804
+    "last_at": 1761600092.813465,
+    "next_allowed_at": 1761686492.813465
   },
   "https://xsus.moe/api/v1/client/subscribe?token=4c1f8f412cd5e46a7fa883ef9f08a04c": {
     "hits": 5,
@@ -4782,9 +4782,9 @@
     "next_allowed_at": 1761665160.0510757
   },
   "http://202508271819451.chibaba.ggff.net/api/v1/client/subscribe?token=c0cceb2fb5d18aa662d72145f34750a4": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1761590035.5770829,
-    "next_allowed_at": 1761590935.5770829
+    "last_at": 1761600092.813465,
+    "next_allowed_at": 1761601892.813465
   }
 }
