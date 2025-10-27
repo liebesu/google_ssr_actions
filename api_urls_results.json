@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-27T09:27:02.096180",
+  "timestamp": "2025-10-27T12:45:55.177945",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,12 +10,20 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 4,
-  "original_urls": 15,
+  "total_urls": 12,
+  "original_urls": 20,
   "urls": [
-    "https://411611.xyz/api/v1/client/subscribe?token=549",
-    "http://120.24.254.184:8086/api/v1/client/subscribe?token=cbed3403fc547cdd4d1b18bfa575176c",
     "https://6lv.godblessyou.top/api/v1/client/subscribe?token=8bbec219a125b8b291fc44a49b43e90f",
-    "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda"
+    "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda",
+    "https://411611.xyz/api/v1/client/subscribe?token=549",
+    "https://x2b.eans.top/api/v1/client/subscribe?token=0b88ff6430a45e3b974a9579d0fdb372",
+    "http://x2b.eans.top/api/v1/client/subscribe?token=01750dfe2cb5be6dce5e1576bfe466f0",
+    "http://x2b.eans.top/api/v1/client/subscribe?token=899925529ee257c0c9eefa428c8c2921",
+    "https://oxdtang.top/api/v1/client/subscribe?token=4998540a19c125d0e6a5a205fa84dbf0",
+    "https://oxdtang.top/api/v1/client/subscribe?token=0bc0b6dba43d179288fe9f7e70b4848c",
+    "https://old-v2b.linkedton.com/api/v1/client/subscribe?token=6c65affa0fcb878fe3bfd590848554ea",
+    "https://oxdtang.top/api/v1/client/subscribe?token=9af2b83978d8316238b4b2245fe5b922",
+    "https://sufujia.top/api/v1/client/subscribe?token=e1c2219ca89c983fc5ca59c7578741bf",
+    "https://xbd.iftballs.com/api/v1/client/subscribe?token=06c2f3d8b56b92550b416161f28462aa"
   ]
 }
