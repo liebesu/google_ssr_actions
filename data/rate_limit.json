@@ -48,10 +48,10 @@
     "next_allowed_at": 1758699377.2758753
   },
   "https://dashboard.yunagrp.com/api/v1/client/subscribe?token=fecb36ead0ec9805592afb4d2ddea462": {
-    "hits": 38,
+    "hits": 39,
     "last_reason": "http 403",
-    "last_at": 1761460362.7920742,
-    "next_allowed_at": 1761546762.7920742
+    "last_at": 1761547086.2539308,
+    "next_allowed_at": 1761633486.2539308
   },
   "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=158da66e7a12bb08018974512a596599": {
     "hits": 39,
@@ -2820,10 +2820,10 @@
     "next_allowed_at": 1760670922.231444
   },
   "https://subscribe.hxlgaozhong.xyz/api/v1/client/subscribe?token=3e6d91cdccde5149755dddc909af7774": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "body-hint",
-    "last_at": 1761460362.7920742,
-    "next_allowed_at": 1761546762.7920742
+    "last_at": 1761547086.2539308,
+    "next_allowed_at": 1761633486.2539308
   },
   "https://subsub.haitacdn.com/api/v1/client/subscribe?token=6kynk6rk4x0nfvujoo6q381f15abwx10": {
     "hits": 2,
@@ -4602,10 +4602,10 @@
     "next_allowed_at": 1761616252.2946353
   },
   "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=8d5f7734faf545e3a4105f2eec109f8b": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "http 403",
-    "last_at": 1761460362.7920742,
-    "next_allowed_at": 1761546762.7920742
+    "last_at": 1761547086.2539308,
+    "next_allowed_at": 1761633486.2539308
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=165fb372c35c31c415f728b3f53606ae": {
     "hits": 9,
@@ -4662,16 +4662,16 @@
     "next_allowed_at": 1761245324.1344833
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=a8c0d345b6e015fb2ae6416cd9845805": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1761460362.7920742,
-    "next_allowed_at": 1761546762.7920742
+    "last_at": 1761547086.2539308,
+    "next_allowed_at": 1761633486.2539308
   },
   "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=644eab74ee914a1aa785d9f4c8a13f50": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1761460362.7920742,
-    "next_allowed_at": 1761546762.7920742
+    "last_at": 1761547086.2539308,
+    "next_allowed_at": 1761633486.2539308
   },
   "https://5ub.m78sc.cn/api/v1/client/subscribe?token=6c9c806af12b013a53542b318412a77d": {
     "hits": 8,
