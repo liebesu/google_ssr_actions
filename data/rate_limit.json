@@ -1380,10 +1380,10 @@
     "next_allowed_at": 1761719776.5789094
   },
   "https://ktm.zuuqb.cn/api/v1/client/subscribe?token=e2a19321bb8564a6f004c821933d0a04": {
-    "hits": 26,
+    "hits": 27,
     "last_reason": "http 403",
-    "last_at": 1761557373.480861,
-    "next_allowed_at": 1761643773.480861
+    "last_at": 1761655554.216418,
+    "next_allowed_at": 1761741954.216418
   },
   "http://14.103.133.120/api/v1/client/subscribe?token=8c120aac413e48a364bdd8410e4ccb80": {
     "hits": 27,
@@ -3702,10 +3702,10 @@
     "next_allowed_at": 1760670922.231444
   },
   "https://zvxfe.tdwj.net:108/api/v1/client/subscribe?token=b001fff1b087a49b33b6459fad4014ea": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "body-hint",
-    "last_at": 1760669122.231444,
-    "next_allowed_at": 1760670922.231444
+    "last_at": 1761655554.216418,
+    "next_allowed_at": 1761659154.216418
   },
   "http://x2b.eans.top/api/v1/client/subscribe?token=510fb0101effe3bee10146fa4566b8b5": {
     "hits": 4,
@@ -4674,10 +4674,10 @@
     "next_allowed_at": 1761729982.1341827
   },
   "https://5ub.m78sc.cn/api/v1/client/subscribe?token=6c9c806af12b013a53542b318412a77d": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "http 403",
-    "last_at": 1761557373.480861,
-    "next_allowed_at": 1761643773.480861
+    "last_at": 1761655554.216418,
+    "next_allowed_at": 1761741954.216418
   },
   "http://xn--9kq85xcu6b.com/api/v1/client/subscribe?token=a811d3ff85af57f060f3f56cf32d43a4": {
     "hits": 9,
@@ -4782,10 +4782,10 @@
     "next_allowed_at": 1761665160.0510757
   },
   "http://202508271819451.chibaba.ggff.net/api/v1/client/subscribe?token=c0cceb2fb5d18aa662d72145f34750a4": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1761633376.5789094,
-    "next_allowed_at": 1761647776.5789094
+    "last_at": 1761655554.216418,
+    "next_allowed_at": 1761684354.216418
   },
   "https://x2b.eans.top/api/v1/client/subscribe?token=b11ae0d9ce89182d8fccb16a9f4ef617": {
     "hits": 1,
@@ -4794,9 +4794,9 @@
     "next_allowed_at": 1761623988.184072
   },
   "https://zyxq.281968.xyz/api/v1/client/subscribe?token=549eeb7d3024398f12bc74177d5875fb": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1761643582.1341827,
-    "next_allowed_at": 1761647182.1341827
+    "last_at": 1761655554.216418,
+    "next_allowed_at": 1761662754.216418
   }
 }
