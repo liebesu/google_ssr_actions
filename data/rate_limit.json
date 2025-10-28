@@ -1962,10 +1962,10 @@
     "next_allowed_at": 1761594923.1678965
   },
   "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=fdcb29a03a96c3296620ef37d7f9a890": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1760791251.7269213,
-    "next_allowed_at": 1760805651.7269213
+    "last_at": 1761615718.2716992,
+    "next_allowed_at": 1761644518.2716992
   },
   "https://subscription-gov.lianjiasub.work/api/v1/client/subscribe?token=e4cc5b5cdd16153cbabab52429dd43d6": {
     "hits": 19,
@@ -4782,9 +4782,9 @@
     "next_allowed_at": 1761665160.0510757
   },
   "http://202508271819451.chibaba.ggff.net/api/v1/client/subscribe?token=c0cceb2fb5d18aa662d72145f34750a4": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1761600092.813465,
-    "next_allowed_at": 1761601892.813465
+    "last_at": 1761615718.2716992,
+    "next_allowed_at": 1761619318.2716992
   }
 }
