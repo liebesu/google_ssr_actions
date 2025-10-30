@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T21:19:52.580618",
+  "timestamp": "2025-10-30T01:45:06.402033",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,22 +10,17 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 14,
-  "original_urls": 22,
+  "total_urls": 9,
+  "original_urls": 19,
   "urls": [
-    "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda",
-    "https://pokelink.堡垒的泵.cn/api/v1/client/subscribe?token=ee4fe6a63c2cb0952c570313270c3200",
     "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=c0c9d4428e044dcb116ab50f0cf1735d",
-    "https://submit.mylac.cn:22443/api/v1/client/subscribe?token=a882f6d085778f55a8eaccb11293576c",
-    "https://fanyun.pro/api/v1/client/subscribe?token=af27fb8e944a5e2a66ec3c817f51229d",
-    "https://6lv.godblessyou.top/api/v1/client/subscribe?token=8bbec219a125b8b291fc44a49b43e90f",
-    "https://d7b12d59-21aa-9561-087f-89c834ac7fe8.372372.xyz/api/v1/client/subscribe?token=8ee93c59b28fdb95a7fb002cef0209af",
-    "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=5ac94d2d3df2ddac06bd54ae44cd5497",
-    "https://submit.m删ylac.cn:22443/api/v1/client/subscribe?token=8d4367af659c6380f9049268bcd56010",
     "https://d7b12d59-21aa-9561-087f-89c834ac7fe8.372372.xyz/api/v1/client/subscribe?token=a0771e560325f1236d4cdac9178774e2",
-    "https://submit.m删ylac.cn:22443/api/v1/client/subscribe?token=d3429edc413a7c6bf889c2de983ef04d",
-    "https://submit.my删lac.cn:22443/api/v1/client/subscribe?token=a882f6d085778f55a8eaccb11293576c30天：https://submit.m删ylac.cn:22443/api/v1/client/subscribe?token=8d4367af659c6380f9049268bcd5601030",
-    "https://submit.my删lac.cn:22443/api/v1/client/subscribe?token=a882f6d085778f55a8eaccb11293576c",
-    "https://323d.anyway.best/api/v1/client/subscribe?token=44ac20d0fe32eb9cb5e3f2b65e4c94e1"
+    "https://pokelink.堡垒的泵.cn/api/v1/client/subscribe?token=ee4fe6a63c2cb0952c570313270c3200",
+    "https://submit.mylac.cn:22443/api/v1/client/subscribe?token=a882f6d085778f55a8eaccb11293576c",
+    "https://6lv.godblessyou.top/api/v1/client/subscribe?token=8bbec219a125b8b291fc44a49b43e90f",
+    "https://fanyun.pro/api/v1/client/subscribe?token=af27fb8e944a5e2a66ec3c817f51229d",
+    "https://www.huojian1.sbs/api/v1/client/subscribe?token=c40671b3963a317e8170322254036c71",
+    "https://sfj.sufujia.top/api/v1/client/subscribe?token=8612313108bf43a14f033ab1bdcd1cce",
+    "https://xn--9kq85xcu6b.com/api/v1/client/subscribe?token=a811d3ff85af57f060f3f56cf32d43a4"
   ]
 }
