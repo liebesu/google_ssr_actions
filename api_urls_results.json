@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-30T15:26:35.303461",
+  "timestamp": "2025-10-30T18:31:25.439132",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,24 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 16,
-  "original_urls": 19,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda",
-    "https://old-v2b.linkedton.com/api/v1/client/subscribe?token=ce7c8166b54f689b4db39e6240db96a1",
-    "https://xbd.iftballs.com/api/v1/client/subscribe?token=e744b80504ecb9e2437846b0751d9c42",
-    "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=1a5f05d2cadd031634fe0bc5098e3b00",
-    "https://sub.xn--9kqw1xbnu.shop/s/1e5db310d22208303e3a23a1c0da5a3dhttps://sub.xn--9kqw1xbnu.shop/s/1381d30d15940aee4cda06976d80b5dfhttps://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=e86cf92d6f65ca7ddd0ac283d4e8d7eahttps://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=d0647c025442e777c3b3d24b58a7013fhttps://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=c195d0fe1e3a56c89fa0a49e11cdc25fhttps://xiaomifengjc.top/api/v1/client/subscribe?token=4bc679e1cc6416dcad7b3ac8e0d9bd30",
-    "https://old-v2b.linkedton.com/api/v1/client/subscribe?token=95d5adc79ba60e7e320f8f45c57a892e",
-    "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=d0647c025442e777c3b3d24b58a7013f",
-    "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=cba51f966f8c269f77306adca0226aaf",
-    "https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/main/@Eag1e_YThttps://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=1a5f05d2cadd031634fe0bc5098e3b00https",
-    "https://sufujia.top/api/v1/client/subscribe?token=2c5b6fa11cd51602b1983156df8ddb4f",
-    "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=c195d0fe1e3a56c89fa0a49e11cdc25f",
-    "https://sufujia.top/api/v1/client/subscribe?token=bec3175a6655691e0bd04dfc175cbc2e",
-    "https://oxdtang.top/api/v1/client/subscribe?token=20c070c63642c889078e767deeb8445a",
-    "https://xiaomifengjc.top/api/v1/client/subscribe?token=4bc679e1cc6416dcad7b3ac8e0d9bd30",
-    "https://oxdtang.top/api/v1/client/subscribe?token=9144bcab5a16b43fbb7cd2e7682af8ac",
-    "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=e86cf92d6f65ca7ddd0ac283d4e8d7ea"
+    "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda"
   ]
 }
