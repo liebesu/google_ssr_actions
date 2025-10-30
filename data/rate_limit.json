@@ -4830,16 +4830,16 @@
     "next_allowed_at": 1761830547.8915927
   },
   "http://91.132.146.90/api/v1/client/subscribe?token=7e78e0016dd03e1a933": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1761762873.3592355,
-    "next_allowed_at": 1761791673.3592355
+    "last_at": 1761795974.1245975,
+    "next_allowed_at": 1761853574.1245975
   },
   "https://cc.dreamlinkc.top/api/v1/client/subscribe?token=dbf7fdf85c25c6": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1761762873.3592355,
-    "next_allowed_at": 1761791673.3592355
+    "last_at": 1761795974.1245975,
+    "next_allowed_at": 1761853574.1245975
   },
   "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=de3bb4cc5e784db8ef91dd705e41b272": {
     "hits": 6,
@@ -4860,15 +4860,15 @@
     "next_allowed_at": 1761773847.8915927
   },
   "https://www.huojian1.sbs/api/v1/client/subscribe?token=c40671b3963a317e8170322254036c71": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1761788862.4550273,
-    "next_allowed_at": 1761789762.4550273
+    "last_at": 1761795974.1245975,
+    "next_allowed_at": 1761797774.1245975
   },
   "https://xn--9kq85xcu6b.com/api/v1/client/subscribe?token=a811d3ff85af57f060f3f56cf32d43a4": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1761788862.4550273,
-    "next_allowed_at": 1761789762.4550273
+    "last_at": 1761795974.1245975,
+    "next_allowed_at": 1761797774.1245975
   }
 }
