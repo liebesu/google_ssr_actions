@@ -4860,16 +4860,16 @@
     "next_allowed_at": 1761773847.8915927
   },
   "https://www.huojian1.sbs/api/v1/client/subscribe?token=c40671b3963a317e8170322254036c71": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1761882460.859081,
-    "next_allowed_at": 1761940060.859081
+    "last_at": 1761945636.3602052,
+    "next_allowed_at": 1762032036.3602052
   },
   "https://xn--9kq85xcu6b.com/api/v1/client/subscribe?token=a811d3ff85af57f060f3f56cf32d43a4": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1761882460.859081,
-    "next_allowed_at": 1761940060.859081
+    "last_at": 1761945636.3602052,
+    "next_allowed_at": 1762032036.3602052
   },
   "https://fn2.476579.xyz/api/v1/client/subscribe?token=685e3c4f3c5134ec8241e5812c30d224": {
     "hits": 7,
@@ -4878,21 +4878,27 @@
     "next_allowed_at": 1761972372.5216217
   },
   "https://s.stga.cn/api/v1/client/subscribe?token=c98ba6fa9a7c00047f701067f8f8bf27": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1761924257.3294451,
-    "next_allowed_at": 1761938657.3294451
+    "last_at": 1761945636.3602052,
+    "next_allowed_at": 1761974436.3602052
   },
   "http://xn--mes358alqkxik.com/api/v1/client/subscribe?token=9fe4a07a3761857d2277a0ecf364b382": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1761935655.0847013,
-    "next_allowed_at": 1761936555.0847013
+    "last_at": 1761945636.3602052,
+    "next_allowed_at": 1761947436.3602052
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=1ed5d271bd749172e69144b12834fe42": {
+    "hits": 2,
+    "last_reason": "http 403",
+    "last_at": 1761945636.3602052,
+    "next_allowed_at": 1761947436.3602052
+  },
+  "https://dreamlinkc.top/api/v1/client/subscribe?token=88a87d39b0b611283": {
     "hits": 1,
     "last_reason": "http 403",
-    "last_at": 1761935655.0847013,
-    "next_allowed_at": 1761936555.0847013
+    "last_at": 1761945636.3602052,
+    "next_allowed_at": 1761946536.3602052
   }
 }
