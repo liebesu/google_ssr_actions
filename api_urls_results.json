@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-01T12:39:18.518767",
+  "timestamp": "2025-11-01T15:18:28.169487",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,16 +10,12 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 8,
-  "original_urls": 17,
+  "total_urls": 4,
+  "original_urls": 15,
   "urls": [
     "http://x2b.eans.top/api/v1/client/subscribe?token=ccf812a91218a6b4708a",
-    "http://xn--mes358alqkxik.com/api/v1/client/subscribe?token=9fe4a07a3761857d2277a0ecf364b382",
     "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda",
-    "http://xn--mes358alqkxik.com/api/v1/client/subscribe?token=a53a6ec730752fdb2e754f046dcdf030",
-    "https://old-v2b.linkedton.com/api/v1/client/subscribe?token=d575d066adb2c4fc16420d6fe3e4d128",
-    "https://pavo.eu.org/api/v1/client/subscribe?token=2493aca73cd8d76163e2d6639e899bf9",
-    "https://xbd.iftballs.com/api/v1/client/subscribe?token=fb101e241426cfb652bc42d774ebbe22",
-    "https://old-v2b.linkedton.com/api/v1/client/subscribe?token=40c459593988d7ac5da6aacf1f521357"
+    "http://xn--mes358alqkxik.com/api/v1/client/subscribe?token=9fe4a07a3761857d2277a0ecf364b382",
+    "http://xn--mes358alqkxik.com/api/v1/client/subscribe?token=a53a6ec730752fdb2e754f046dcdf030"
   ]
 }

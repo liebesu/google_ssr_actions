@@ -321,10 +321,10 @@
   },
   {
     "date": "2025-11-01",
-    "google_added": 107,
+    "google_added": 106,
     "github_added": 1,
-    "new_total": 3,
-    "removed_total": 0,
-    "alive_total": 108
+    "new_total": 0,
+    "removed_total": 1,
+    "alive_total": 107
   }
 ]
