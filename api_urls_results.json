@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-31T21:18:06.997049",
+  "timestamp": "2025-11-01T01:45:07.041874",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,14 +10,15 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 6,
-  "original_urls": 18,
+  "total_urls": 7,
+  "original_urls": 15,
   "urls": [
-    "https://pavo.eu.org/api/v1/client/subscribe?token=2493aca73cd8d76163e2d6639e899bf9",
     "http://x2b.eans.top/api/v1/client/subscribe?token=ccf812a91218a6b4708a",
+    "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda",
     "http://xn--mes358alqkxik.com/api/v1/client/subscribe?token=9fe4a07a3761857d2277a0ecf364b382",
     "https://fanyun.pro/api/v1/client/subscribe?token=9404b0873a8d01bbce258e58853e7e49",
-    "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda",
+    "https://pavo.eu.org/api/v1/client/subscribe?token=2493aca73cd8d76163e2d6639e899bf9",
+    "https://fanyun.pro/api/v1/client/subscribe?token=8ac6a090f0d22a5d90ec370c3de1608b",
     "https://dreamlinkc.top/api/v1/client/subscribe?token=88a87d39b0b611283"
   ]
 }
