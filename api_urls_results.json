@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-02T12:38:58.604868",
+  "timestamp": "2025-11-02T15:19:11.492462",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,19 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 11,
-  "original_urls": 12,
+  "total_urls": 1,
+  "original_urls": 3,
   "urls": [
-    "https://1a.xg-hub.icu/api/v1/client/subscribe?token=4bbb217f8334e17905f05d55e110b41e",
-    "https://sfj.sufujia.top/api/v1/client/subscribe?token=90de88dfa77ab031a8939a8522cea4a4",
-    "https://oxdtangx.top/api/v1/client/subscribe?token=7b5b7ceda45c18dbf80ad30c262a54a8",
-    "https://old-v2b.linkedton.com/api/v1/client/subscribe?token=879e57333e3c81e14259ddf86fc0678b",
-    "https://oxdtang.top/api/v1/client/subscribe?token=f264be1215b46c765143fbd999f5eb4a",
-    "https://old-v2b.linkedton.com/api/v1/client/subscribe?token=9fb68046e5bbdd7ef98e7862a18b7b57",
-    "https://sfj.sufujia.top/api/v1/client/subscribe?token=e46d0151e2b5ed9237e0e86160ae8431",
-    "https://old-v2b.linkedton.com/api/v1/client/subscribe?token=273715d6221ff0242c53b1c1f5b88eb0",
-    "https://kuaiqiangshou.xyz/api/v1/client/subscribe?token=c9bfec5b1ac2276f2a31b4ed8969e089",
-    "https://sub.966888.xyz/api/v1/client/subscribe?token=2c53cb842bd6e2366782444aac8cfc16",
-    "https://old-v2b.linkedton.com/api/v1/client/subscribe?token=0ecbdf433bb49238f2cbb078210e04cf"
+    "https://sfj.sufujia.top/api/v1/client/subscribe?token=90de88dfa77ab031a8939a8522cea4a4"
   ]
 }
