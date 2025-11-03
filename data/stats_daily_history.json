@@ -345,10 +345,10 @@
   },
   {
     "date": "2025-11-04",
-    "google_added": 140,
+    "google_added": 139,
     "github_added": 0,
-    "new_total": 2,
-    "removed_total": 0,
-    "alive_total": 140
+    "new_total": 0,
+    "removed_total": 1,
+    "alive_total": 139
   }
 ]
