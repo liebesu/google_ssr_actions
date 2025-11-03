@@ -1902,10 +1902,10 @@
     "next_allowed_at": 1762183292.9086337
   },
   "https://feiniaoyun.life/api/v1/client/subscribe?token=6816d33214d612c02fdb95977cf5de89": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "body-hint",
-    "last_at": 1761988973.9232664,
-    "next_allowed_at": 1762075373.9232664
+    "last_at": 1762162173.6528275,
+    "next_allowed_at": 1762248573.6528275
   },
   "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=e29f7f689352adeed4908ae79224a426": {
     "hits": 27,
@@ -4920,9 +4920,9 @@
     "next_allowed_at": 1762180612.350071
   },
   "https://bsn.ewpbh.cn/api/v1/client/subscribe?token=3bdcb1cdee5aa2abc2a5e586418fd05b": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1762151812.350071,
-    "next_allowed_at": 1762159012.350071
+    "last_at": 1762162173.6528275,
+    "next_allowed_at": 1762176573.6528275
   }
 }
