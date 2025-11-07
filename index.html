@@ -87,8 +87,8 @@
     
     // 认证检查
     function gate() {
-      // 如果不需要认证
-      if (!AUTH_HASH || AUTH_HASH.trim() === '') { 
+      // 如果不需要认证（AUTH_HASH为空或为占位符）
+      if (!AUTH_HASH || AUTH_HASH.trim() === '' || AUTH_HASH === '__AUTH_HASH__') { 
         const wrap = document.querySelector('.wrap');
         if (wrap) wrap.style.display = '';
         return; 
