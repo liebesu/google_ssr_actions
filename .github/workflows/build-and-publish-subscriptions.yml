@@ -82,12 +82,31 @@ jobs:
           if [ -n "${{ secrets.SERPAPI_KEY_8 }}" ]; then export SERPAPI_KEY_8="${{ secrets.SERPAPI_KEY_8 }}"; echo "Set SERPAPI_KEY_8"; fi
           if [ -n "${{ secrets.SERPAPI_KEY_9 }}" ]; then export SERPAPI_KEY_9="${{ secrets.SERPAPI_KEY_9 }}"; echo "Set SERPAPI_KEY_9"; fi
           if [ -n "${{ secrets.SERPAPI_KEY_10 }}" ]; then export SERPAPI_KEY_10="${{ secrets.SERPAPI_KEY_10 }}"; echo "Set SERPAPI_KEY_10"; fi
-          # Pass optional auth envs
-          if [ -n "${{ vars.AUTH_PLAIN }}" ]; then export AUTH_PLAIN="${{ vars.AUTH_PLAIN }}"; fi
-          if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ secrets.AUTH_SHA256 }}"; fi
-          if [ -n "${{ vars.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ vars.AUTH_SHA256 }}"; fi
-          if [ -n "${{ vars.AUTH_USER }}" ]; then export AUTH_USER="${{ vars.AUTH_USER }}"; fi
-          if [ -n "${{ secrets.AUTH_USER }}" ]; then export AUTH_USER="${{ secrets.AUTH_USER }}"; fi
+          # Pass optional auth envs (优先级: secrets > vars)
+          echo "=== 🔐 配置认证信息 ==="
+          if [ -n "${{ vars.AUTH_PLAIN }}" ]; then 
+            export AUTH_PLAIN="${{ vars.AUTH_PLAIN }}"; 
+            echo "✅ AUTH_PLAIN from vars configured"
+          fi
+          if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then 
+            export AUTH_SHA256="${{ secrets.AUTH_SHA256 }}"; 
+            echo "✅ AUTH_SHA256 from secrets configured (长度: ${#AUTH_SHA256})"
+          elif [ -n "${{ vars.AUTH_SHA256 }}" ]; then 
+            export AUTH_SHA256="${{ vars.AUTH_SHA256 }}"; 
+            echo "✅ AUTH_SHA256 from vars configured (长度: ${#AUTH_SHA256})"
+          else
+            echo "⚠️ AUTH_SHA256 未配置，页面将无需认证"
+          fi
+          if [ -n "${{ secrets.AUTH_USER }}" ]; then 
+            export AUTH_USER="${{ secrets.AUTH_USER }}"; 
+            echo "✅ AUTH_USER from secrets configured: $AUTH_USER"
+          elif [ -n "${{ vars.AUTH_USER }}" ]; then 
+            export AUTH_USER="${{ vars.AUTH_USER }}"; 
+            echo "✅ AUTH_USER from vars configured: $AUTH_USER"
+          else
+            echo "⚠️ AUTH_USER 未配置"
+          fi
+          echo "=== 开始生成订阅 ==="
           python aggregator_cli.py --output-dir dist --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery --emit-health --emit-index
           
           # 确保 dist 目录有内容
@@ -96,7 +115,24 @@ jobs:
           echo "=== 检查 index.html ==="
           if [ -f dist/index.html ]; then
             echo "index.html 存在，大小: $(wc -c < dist/index.html) 字节"
-            head -5 dist/index.html
+            echo "=== 检查认证配置 ==="
+            if grep -q 'AUTH_HASH = "__AUTH_HASH__"' dist/index.html; then
+              echo "⚠️ 警告: AUTH_HASH 占位符未被替换，认证可能未配置"
+            elif grep -q 'AUTH_HASH = ""' dist/index.html; then
+              echo "⚠️ 警告: AUTH_HASH 为空，页面将无需认证"
+            elif grep -q 'AUTH_HASH = "0d605622' dist/index.html; then
+              echo "✅ AUTH_HASH 已正确配置"
+            else
+              echo "ℹ️ AUTH_HASH 状态: $(grep -o 'AUTH_HASH = "[^"]*"' dist/index.html | head -1)"
+            fi
+            if grep -q 'AUTH_USER = "__AUTH_USER__"' dist/index.html; then
+              echo "⚠️ 警告: AUTH_USER 占位符未被替换"
+            elif grep -q 'AUTH_USER = "liebesu"' dist/index.html; then
+              echo "✅ AUTH_USER 已正确配置"
+            else
+              echo "ℹ️ AUTH_USER 状态: $(grep -o 'AUTH_USER = "[^"]*"' dist/index.html | head -1)"
+            fi
+            head -15 dist/index.html
           else
             echo "index.html 不存在！"
           fi
