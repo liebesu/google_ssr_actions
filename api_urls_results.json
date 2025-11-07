@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-07T15:22:23.155283",
+  "timestamp": "2025-11-07T18:30:32.263568",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 9,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://pavo.eu.org/api/v1/client/subscribe?token=2493aca73cd8d76163e2d6639e899bf9",
-    "https://hqkeu.louwangzhiyu.shop/api/v1/client/subscribe?token=cc955c6c0b8245879b0ac433d9c6240f",
-    "https://39xwg.tdwj.net:108/api/v1/client/subscribe?token=641a628fa2a7742b6a7ed"
+    "https://pavo.eu.org/api/v1/client/subscribe?token=2493aca73cd8d76163e2d6639e899bf9"
   ]
 }
