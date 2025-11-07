@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 安全认证测试</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 20px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #667eea;
+            margin: 0 0 10px 0;
+            font-size: 32px;
+        }
+        .subtitle {
+            color: #666;
+            margin: 0 0 30px 0;
+        }
+        .test-section { 
+            margin: 25px 0; 
+            padding: 20px; 
+            border: 2px solid #e0e0e0; 
+            border-radius: 12px; 
+            background: #f9f9f9;
+        }
+        .test-section h3 {
+            margin: 0 0 15px 0;
+            color: #333;
+            font-size: 18px;
+        }
+        .result { 
+            margin: 12px 0; 
+            padding: 15px; 
+            border-radius: 8px; 
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .success { 
+            background: #d4edda; 
+            color: #155724; 
+            border: 1px solid #c3e6cb;
+        }
+        .error { 
+            background: #f8d7da; 
+            color: #721c24; 
+            border: 1px solid #f5c6cb;
+        }
+        .info { 
+            background: #d1ecf1; 
+            color: #0c5460; 
+            border: 1px solid #bee5eb;
+        }
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        input, button { 
+            padding: 12px 16px; 
+            margin: 8px 5px 8px 0; 
+            border-radius: 8px; 
+            border: 2px solid #ddd; 
+            background: white;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        button { 
+            cursor: pointer; 
+            background: #667eea;
+            color: white;
+            border: none;
+            font-weight: 600;
+            padding: 12px 24px;
+        }
+        button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        .credential-box {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        .credential-box h4 {
+            margin: 0 0 10px 0;
+            color: #667eea;
+        }
+        .credential-box p {
+            margin: 8px 0;
+            font-family: monospace;
+        }
+        .credential-box strong {
+            color: #333;
+        }
+        code {
+            background: #e8e8e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .security-note {
+            background: #fffbea;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+        }
+        .security-note h4 {
+            margin: 0 0 10px 0;
+            color: #f59e0b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 安全认证系统测试</h1>
+        <p class="subtitle">测试新的密码和安全机制</p>
+        
+        <div class="credential-box">
+            <h4>📋 当前认证凭据</h4>
+            <p><strong>用户名：</strong><code>liebesu</code></p>
+            <p><strong>密码：</strong><code>Liebesu!@#</code></p>
+            <p><strong>密码SHA-256：</strong><code>0d605622a936837919436b104b6f15fabeb1f0dea561a631abf8873858f0526a</code></p>
+        </div>
+
+        <div class="security-note">
+            <h4>🛡️ 安全改进</h4>
+            <p>✅ 页面内容默认隐藏（<code>display:none</code>）</p>
+            <p>✅ 只有认证成功后才显示内容</p>
+            <p>✅ 即使删除登录框，内容仍然隐藏</p>
+            <p>✅ 使用 SHA-256 哈希验证密码</p>
+        </div>
+        
+        <div class="test-section">
+            <h3>📊 当前认证状态</h3>
+            <div id="current-auth" class="result info">检查中...</div>
+        </div>
+        
+        <div class="test-section">
+            <h3>🔑 测试密码哈希</h3>
+            <input type="text" id="test-password" placeholder="输入密码测试" style="width: 300px;" />
+            <button onclick="testPassword()">计算哈希</button>
+            <div id="password-result" class="result" style="display:none;"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>✅ 完整认证测试</h3>
+            <input type="text" id="test-user" placeholder="用户名" value="liebesu" style="width: 200px;" />
+            <input type="password" id="test-pass" placeholder="密码" style="width: 200px;" />
+            <button onclick="testAuth()">测试认证</button>
+            <div id="auth-result" class="result" style="display:none;"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>🧪 安全测试场景</h3>
+            <button onclick="testBypassAttempt()">尝试绕过认证</button>
+            <button onclick="clearStorage()">清除认证缓存</button>
+            <div id="bypass-result" class="result" style="display:none;"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>📝 快速操作</h3>
+            <button onclick="saveValidAuth()">保存有效认证</button>
+            <button onclick="window.open('index.html', '_blank')">打开主页</button>
+            <button onclick="location.reload()">刷新测试页</button>
+        </div>
+
+    </div>
+
+    <script>
+        // 使用实际的认证信息
+        const AUTH_HASH = "0d605622a936837919436b104b6f15fabeb1f0dea561a631abf8873858f0526a";
+        const AUTH_USER = "liebesu";
+        
+        async function sha256(message) {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        
+        function updateCurrentAuth() {
+            const div = document.getElementById('current-auth');
+            const storedHash = localStorage.getItem('gauth');
+            const storedUser = localStorage.getItem('guser');
+            
+            let html = `
+                <strong>期望值：</strong><br>
+                用户名: ${AUTH_USER}<br>
+                密码哈希: ${AUTH_HASH.substring(0, 32)}...<br><br>
+                <strong>存储值：</strong><br>
+                用户名: ${storedUser || '未存储'}<br>
+                密码哈希: ${storedHash ? storedHash.substring(0, 32) + '...' : '未存储'}
+            `;
+            
+            if (storedHash && storedUser) {
+                const hashMatch = storedHash.toLowerCase() === AUTH_HASH.toLowerCase();
+                const userMatch = storedUser === AUTH_USER;
+                
+                if (hashMatch && userMatch) {
+                    div.className = 'result success';
+                    html += '<br><br>✅ <strong>认证有效</strong>';
+                } else {
+                    div.className = 'result error';
+                    html += '<br><br>❌ <strong>认证无效</strong>';
+                    if (!hashMatch) html += '<br>密码哈希不匹配';
+                    if (!userMatch) html += '<br>用户名不匹配';
+                }
+            } else {
+                div.className = 'result warning';
+                html += '<br><br>⚠️ <strong>未登录</strong>';
+            }
+            
+            div.innerHTML = html;
+        }
+        
+        async function testPassword() {
+            const password = document.getElementById('test-password').value;
+            const resultDiv = document.getElementById('password-result');
+            
+            if (!password) {
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'result error';
+                resultDiv.textContent = '❌ 请输入密码';
+                return;
+            }
+            
+            const hash = await sha256(password);
+            const match = hash.toLowerCase() === AUTH_HASH.toLowerCase();
+            
+            resultDiv.style.display = 'block';
+            resultDiv.className = match ? 'result success' : 'result error';
+            resultDiv.innerHTML = `
+                ${match ? '✅ 密码正确!' : '❌ 密码错误'}<br><br>
+                <strong>输入密码：</strong>${password}<br>
+                <strong>计算哈希：</strong>${hash}<br>
+                <strong>匹配结果：</strong>${match ? '匹配' : '不匹配'}
+            `;
+        }
+        
+        async function testAuth() {
+            const user = document.getElementById('test-user').value;
+            const pass = document.getElementById('test-pass').value;
+            const resultDiv = document.getElementById('auth-result');
+            
+            if (!user || !pass) {
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'result error';
+                resultDiv.textContent = '❌ 请输入用户名和密码';
+                return;
+            }
+            
+            const hash = await sha256(pass);
+            const userOk = user === AUTH_USER;
+            const passOk = hash.toLowerCase() === AUTH_HASH.toLowerCase();
+            const authOk = userOk && passOk;
+            
+            resultDiv.style.display = 'block';
+            resultDiv.className = authOk ? 'result success' : 'result error';
+            resultDiv.innerHTML = `
+                ${authOk ? '✅ 认证成功!' : '❌ 认证失败'}<br><br>
+                <strong>用户名验证：</strong>${userOk ? '✅ 通过' : '❌ 失败'} (${user} vs ${AUTH_USER})<br>
+                <strong>密码验证：</strong>${passOk ? '✅ 通过' : '❌ 失败'}<br>
+                <strong>计算哈希：</strong>${hash.substring(0, 32)}...
+            `;
+            
+            if (authOk) {
+                setTimeout(() => {
+                    resultDiv.innerHTML += '<br><br>💾 正在保存认证信息...';
+                    try {
+                        localStorage.setItem('gauth', hash);
+                        localStorage.setItem('guser', user);
+                        resultDiv.innerHTML += '<br>✅ 认证信息已保存到 LocalStorage';
+                        updateCurrentAuth();
+                    } catch(e) {
+                        resultDiv.innerHTML += '<br>❌ 保存失败: ' + e.message;
+                    }
+                }, 500);
+            }
+        }
+        
+        function testBypassAttempt() {
+            const resultDiv = document.getElementById('bypass-result');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result info';
+            
+            let html = '<strong>🔬 安全测试结果：</strong><br><br>';
+            
+            // 测试1：尝试直接显示内容
+            const wrap = document.querySelector('.wrap');
+            if (wrap) {
+                html += '❌ 在测试页没有找到 .wrap 元素（这是正常的）<br>';
+            } else {
+                html += '✅ 测试页不包含主内容元素<br>';
+            }
+            
+            // 测试2：检查认证状态
+            const storedHash = localStorage.getItem('gauth');
+            const storedUser = localStorage.getItem('guser');
+            
+            if (storedHash && storedUser) {
+                const valid = storedHash.toLowerCase() === AUTH_HASH.toLowerCase() && 
+                             storedUser === AUTH_USER;
+                html += valid ? 
+                    '✅ LocalStorage 包含有效认证信息<br>' : 
+                    '⚠️ LocalStorage 包含无效认证信息<br>';
+            } else {
+                html += '⚠️ LocalStorage 无认证信息<br>';
+            }
+            
+            html += '<br><strong>💡 安全建议：</strong><br>';
+            html += '• 页面内容应该默认隐藏（CSS: display:none）<br>';
+            html += '• 只有通过 JavaScript 验证后才显示<br>';
+            html += '• 即使删除登录框，内容仍然隐藏<br>';
+            html += '• 认证成功后才动态显示内容<br>';
+            
+            resultDiv.innerHTML = html;
+        }
+        
+        function clearStorage() {
+            localStorage.removeItem('gauth');
+            localStorage.removeItem('guser');
+            updateCurrentAuth();
+            
+            const resultDiv = document.getElementById('bypass-result');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result success';
+            resultDiv.innerHTML = '✅ LocalStorage 已清除<br>刷新主页将显示登录框';
+        }
+        
+        async function saveValidAuth() {
+            const hash = AUTH_HASH;
+            const user = AUTH_USER;
+            
+            try {
+                localStorage.setItem('gauth', hash);
+                localStorage.setItem('guser', user);
+                
+                const resultDiv = document.getElementById('bypass-result');
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'result success';
+                resultDiv.innerHTML = `
+                    ✅ 有效认证信息已保存<br><br>
+                    用户名: ${user}<br>
+                    密码哈希: ${hash.substring(0, 32)}...<br><br>
+                    💡 现在打开主页应该能直接看到内容
+                `;
+                
+                updateCurrentAuth();
+            } catch(e) {
+                alert('保存失败: ' + e.message);
+            }
+        }
+        
+        // 页面加载时更新显示
+        updateCurrentAuth();
+        
+        // 自动填充测试密码
+        document.getElementById('test-password').value = 'Liebesu!@#';
+        document.getElementById('test-pass').value = 'Liebesu!@#';
+    </script>
+</body>
+</html>
+

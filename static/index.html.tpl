@@ -6,42 +6,61 @@
   <title>Google SSR Actions - 订阅聚合</title>
   <link rel="stylesheet" href="styles.css" />
   <script>
+    // ====================
+    // 🔐 安全认证系统 v2
+    // ====================
     const AUTH_HASH = "__AUTH_HASH__";
     const AUTH_USER = "__AUTH_USER__";
+    
+    // SHA-256 哈希计算
     async function sha256(message) {
       const msgBuffer = new TextEncoder().encode(message);
       const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
     }
+    
+    // 显示登录对话框
     function showAuth() {
       const mask = document.getElementById('auth-mask');
       const userInput = document.getElementById('auth-user');
       const passInput = document.getElementById('auth-input');
       const err = document.getElementById('auth-err');
       const btn = document.getElementById('auth-btn');
+      const wrap = document.querySelector('.wrap');
+      
+      // 显示遮罩，隐藏内容
       mask.style.display = 'flex';
+      if (wrap) wrap.style.display = 'none';
       userInput.focus();
+      
       async function submit() {
         const user = userInput.value.trim();
         const pwd = passInput.value || '';
+        
+        if (!pwd) {
+          err.textContent = '请输入密码';
+          return;
+        }
+        
         const h = await sha256(pwd);
         const userRequired = (AUTH_USER || '').trim().length > 0;
         const userOk = userRequired ? (user === (AUTH_USER||'').trim()) : true;
+        
         if (userOk && h.toLowerCase() === AUTH_HASH.toLowerCase()) {
-          console.log('🎉 认证成功！');
+          // 认证成功
           try{ 
             localStorage.setItem('gauth', h); 
             localStorage.setItem('guser', user); 
-            console.log('✅ 认证信息已保存到localStorage');
           }catch(e){
             console.error('保存认证信息失败:', e);
           }
-          mask.style.display = 'none';
-          document.documentElement.style.display = '';
-          console.log('✅ 页面已显示，开始加载内容...');
           
-          // 手动触发页面内容加载
+          // 显示内容
+          mask.style.display = 'none';
+          if (wrap) wrap.style.display = '';
+          
+          // 加载动态内容
           setTimeout(() => {
             try {
               if (typeof loadMeta === 'function') loadMeta();
@@ -49,30 +68,33 @@
               if (typeof loadSparklines === 'function') loadSparklines();
               if (typeof loadSerpAPIKeys === 'function') loadSerpAPIKeys();
               if (typeof loadRecentUrls === 'function') loadRecentUrls();
-              console.log('✅ 所有内容加载函数已触发');
+              if (typeof loadTrend7Day === 'function') loadTrend7Day();
+              if (typeof loadSpeedRanking === 'function') loadSpeedRanking();
             } catch(e) {
               console.error('内容加载出错:', e);
             }
           }, 100);
         } else {
-          console.log('❌ 认证失败');
-          err.textContent = '用户名或密码错误，请重试';
+          err.textContent = '用户名或密码错误';
+          passInput.value = '';
+          passInput.focus();
         }
       }
+      
       btn.addEventListener('click', submit);
       passInput.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ submit(); }});
     }
+    
+    // 认证检查
     function gate() {
-      console.log('🔐 认证检查开始...');
-      console.log('AUTH_HASH:', AUTH_HASH ? '已设置' : '未设置');
-      console.log('AUTH_USER:', AUTH_USER ? '已设置' : '未设置');
-      
-      if (!AUTH_HASH || AUTH_HASH.trim() === '') { 
-        console.log('✅ 无需认证，直接显示页面');
-        document.documentElement.style.display = ''; 
+      // 如果不需要认证
+      if (!AUTH_HASH || AUTH_HASH.trim() === '' || AUTH_HASH === '__AUTH_HASH__') { 
+        const wrap = document.querySelector('.wrap');
+        if (wrap) wrap.style.display = '';
         return; 
       }
       
+      // 检查已保存的认证信息
       try{
         const tk = localStorage.getItem('gauth');
         const gu = (localStorage.getItem('guser') || '').trim();
@@ -80,15 +102,12 @@
         const passOk = !!tk && (tk.toLowerCase() === AUTH_HASH.toLowerCase());
         const userOk = userRequired ? (gu === (AUTH_USER||'').trim()) : true;
         
-        console.log('存储的认证:', tk ? '存在' : '不存在');
-        console.log('密码验证:', passOk ? '通过' : '失败');
-        console.log('用户验证:', userOk ? '通过' : '失败');
-        
         if (passOk && userOk) { 
-          console.log('✅ 认证成功，显示页面');
-          document.documentElement.style.display = ''; 
+          // 认证通过，显示内容
+          const wrap = document.querySelector('.wrap');
+          if (wrap) wrap.style.display = '';
           
-          // 确保内容加载函数在页面显示后执行
+          // 自动加载内容
           setTimeout(() => {
             try {
               if (typeof loadMeta === 'function') loadMeta();
@@ -96,7 +115,8 @@
               if (typeof loadSparklines === 'function') loadSparklines();
               if (typeof loadSerpAPIKeys === 'function') loadSerpAPIKeys();
               if (typeof loadRecentUrls === 'function') loadRecentUrls();
-              console.log('✅ 自动加载所有内容完成');
+              if (typeof loadTrend7Day === 'function') loadTrend7Day();
+              if (typeof loadSpeedRanking === 'function') loadSpeedRanking();
             } catch(e) {
               console.error('自动内容加载出错:', e);
             }
@@ -107,57 +127,16 @@
         console.error('认证检查出错:', e);
       }
       
-      console.log('❌ 认证失败，显示登录框');
-      showAuth(); // 直接显示认证弹窗而不是跳转
+      // 认证失败，显示登录框
+      showAuth();
     }
-    // 强制确保页面能够显示
-    console.log('🚀 页面初始化开始...');
     
-    // 先立即显示页面，然后进行认证检查
-    document.documentElement.style.display = '';
-    
-    // 延迟隐藏页面，给认证检查足够时间
-    setTimeout(function() {
-      console.log('🔐 开始认证检查，暂时隐藏页面...');
-      document.documentElement.style.display = 'none';
-      
-      // 立即进行认证检查
+    // 页面加载后立即执行认证检查
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', gate);
+    } else {
       gate();
-      
-      // 超短时间fallback - 确保用户能看到内容
-      setTimeout(function() {
-        if (document.documentElement.style.display === 'none') {
-          console.log('⚠️ 1秒fallback - 强制显示认证框');
-          showAuth();
-        }
-      }, 1000);
-      
-      // 最终fallback - 无论如何都要显示
-      setTimeout(function() {
-        if (document.documentElement.style.display === 'none') {
-          console.log('🚨 最终fallback - 强制显示页面');
-          document.documentElement.style.display = '';
-          showAuth();
-        }
-      }, 2000);
-      
-    }, 100);
-    
-    // 多重事件监听保障
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('📄 DOM加载完成，检查认证状态...');
-      setTimeout(gate, 50);
-    });
-    
-    window.addEventListener('load', function() {
-      console.log('🌐 页面完全加载，最终检查...');
-      setTimeout(function() {
-        if (document.documentElement.style.display === 'none') {
-          console.log('⚠️ 页面加载完成但仍隐藏，强制显示认证框');
-          showAuth();
-        }
-      }, 100);
-    });
+    }
     // 根据是否有配额数据隐藏卡片
     document.addEventListener('DOMContentLoaded', ()=>{
       const qleft = '__QLEFT__'; const qcap = '__QCAP__'; const kok='__KOK__'; const kt='__KTOTAL__';
@@ -169,17 +148,20 @@
   </script>
 </head>
 <body>
-  <div class="wrap">
-    <div id="auth-mask" class="auth-mask" style="display:none">
-      <div class="auth-card">
-        <h3 class="auth-title">访问认证</h3>
-        <p class="auth-sub">请输入用户名和密码以查看页面内容</p>
-        <input id="auth-user" class="auth-input" type="text" placeholder="输入用户名" />
-        <input id="auth-input" class="auth-input" type="password" placeholder="输入密码" />
-        <button id="auth-btn" class="auth-btn">进入</button>
-        <div id="auth-err" class="auth-err"></div>
-      </div>
+  <!-- 认证遮罩（未认证时显示） -->
+  <div id="auth-mask" class="auth-mask" style="display:none">
+    <div class="auth-card">
+      <h3 class="auth-title">🔐 访问认证</h3>
+      <p class="auth-sub">请输入用户名和密码以查看页面内容</p>
+      <input id="auth-user" class="auth-input" type="text" placeholder="输入用户名" autocomplete="username" />
+      <input id="auth-input" class="auth-input" type="password" placeholder="输入密码" autocomplete="current-password" />
+      <button id="auth-btn" class="auth-btn">进入</button>
+      <div id="auth-err" class="auth-err"></div>
     </div>
+  </div>
+  
+  <!-- 主内容（认证成功后显示） -->
+  <div class="wrap" style="display:none">
     <div class="header">
       <h1>Google SSR Actions</h1>
       <small>构建时间(中国时区)：__TS_CN__</small>
@@ -240,6 +222,22 @@
               </div>
             </div>
             <button onclick="copyFileUrl('sub/good.yaml', this)" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制</span>
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-info">
+              <div class="file-name">
+                <a href="sub/speed_ranking.yaml"><code>speed_ranking.yaml</code></a>
+                <span class="file-desc">🚀 速度排行 (国内优化)</span>
+              </div>
+              <div class="file-stats">
+                <span class="file-type">YAML</span>
+                <span class="speed-badge">⚡ 测速</span>
+              </div>
+            </div>
+            <button onclick="copyFileUrl('sub/speed_ranking.yaml', this)" class="copy-btn">
               <span class="copy-icon">📋</span>
               <span class="copy-text">复制</span>
             </button>
@@ -682,8 +680,8 @@
               <br>🟠 <strong>橙色线条</strong>：净增长（新增 - 失效）
               <br>💡 数据来源于Google搜索和GitHub发现，实时更新。
             </p>
-          </div>
         </div>
+      </div>
       </div>
 
       <div class="card card-recent">
@@ -702,6 +700,17 @@
           <li>节点：<b>__NODES__</b> · 协议 SS <b>__SS__</b> | VMess <b>__VMESS__</b> | VLESS <b>__VLESS__</b> | Trojan <b>__TROJAN__</b> | HY2 <b>__HY2__</b></li>
           <li>来源：Google <b>__GCOUNT__</b> | GitHub <b>__GHCOUNT__</b></li>
         </ul>
+        
+        <!-- 标注式速度排行显示 -->
+        <div id="speed-ranking-section" class="speed-ranking-section" style="display: none;">
+          <h3>🚀 速度排行 (标注式)</h3>
+          <div class="speed-disclaimer">
+            <p><strong>⚠️ 重要说明：</strong>此测速基于云环境，不代表国内用户真实速度。建议用户自行测试验证。</p>
+          </div>
+          <div id="speed-ranking-list" class="speed-ranking-list">
+            <!-- 动态加载标注式速度排行数据 -->
+          </div>
+        </div>
       </div>
 
       <div class="card card-serpapi">
@@ -1170,21 +1179,100 @@
           }
           
           // 确保所有函数都正确定义后再调用
-          setTimeout(() => {
-            console.log('🚀 开始加载所有内容...');
-            if (typeof loadMeta === 'function') loadMeta();
-            if (typeof loadDailyChart === 'function') loadDailyChart();
-            if (typeof loadSparklines === 'function') loadSparklines();
-            if (typeof loadSerpAPIKeys === 'function') {
-              console.log('🔑 调用loadSerpAPIKeys函数');
-              loadSerpAPIKeys();
-            } else {
-              console.error('❌ loadSerpAPIKeys函数未定义');
+        setTimeout(() => {
+          console.log('🚀 开始加载所有内容...');
+          if (typeof loadMeta === 'function') loadMeta();
+          if (typeof loadDailyChart === 'function') loadDailyChart();
+          if (typeof loadSparklines === 'function') loadSparklines();
+          if (typeof loadSerpAPIKeys === 'function') {
+            console.log('🔑 调用loadSerpAPIKeys函数');
+            loadSerpAPIKeys();
+          } else {
+            console.error('❌ loadSerpAPIKeys函数未定义');
+          }
+          if (typeof loadRecentUrls === 'function') loadRecentUrls();
+          if (typeof loadTrend7Day === 'function') loadTrend7Day();
+          if (typeof loadSpeedRanking === 'function') {
+            console.log('🚀 调用loadSpeedRanking函数');
+            loadSpeedRanking();
+          } else {
+            console.error('❌ loadSpeedRanking函数未定义');
+          }
+          console.log('✅ 所有内容加载函数调用完成');
+        }, 100);
+        
+        async function loadSpeedRanking() {
+          console.log('🚀 开始加载标注式速度排行数据...');
+          try {
+            const response = await fetch('data/speed_ranking.json', { cache: 'no-cache' });
+            if (!response.ok) {
+              throw new Error('HTTP ' + response.status);
             }
-            if (typeof loadRecentUrls === 'function') loadRecentUrls();
-            if (typeof loadTrend7Day === 'function') loadTrend7Day();
-            console.log('✅ 所有内容加载函数调用完成');
-          }, 100);
+            const data = await response.json();
+            console.log('📊 获取到标注式速度排行数据:', data);
+            
+            const ranking = data.ranking || [];
+            const section = document.getElementById('speed-ranking-section');
+            const container = document.getElementById('speed-ranking-list');
+            
+            if (!section || !container) {
+              console.error('❌ 找不到速度排行容器');
+              return;
+            }
+            
+            if (ranking.length === 0) {
+              section.style.display = 'none';
+              return;
+            }
+            
+            // 显示速度排行区域
+            section.style.display = 'block';
+            
+            let html = '';
+            ranking.slice(0, 10).forEach((node, index) => {
+              const score = node.scores ? node.scores.total_score.toFixed(1) : 'N/A';
+              const location = node.location || '未知';
+              const protocol = node.protocol || '未知';
+              const annotations = node.annotations || {};
+              const cloudLatency = annotations.cloud_latency || 'N/A';
+              const chinaEstimate = annotations.china_estimate || 'N/A';
+              const confidence = annotations.confidence || '低';
+              const note = annotations.note || '';
+              
+              const confidenceClass = confidence === '高' ? 'high' : confidence === '中' ? 'medium' : 'low';
+              
+              html += `
+                <div class="speed-ranking-item annotated">
+                  <div class="ranking-number">${node.rank || (index + 1)}</div>
+                  <div class="ranking-info">
+                    <div class="ranking-score">${score}分</div>
+                    <div class="ranking-location">${location}</div>
+                    <div class="ranking-protocol">${protocol}</div>
+                  </div>
+                  <div class="ranking-details">
+                    <div class="latency-info">
+                      <span class="cloud-latency">云延迟: ${cloudLatency}</span>
+                      <span class="china-estimate">国内估算: ${chinaEstimate}</span>
+                    </div>
+                    <div class="confidence-info">
+                      <span class="confidence ${confidenceClass}">置信度: ${confidence}</span>
+                    </div>
+                    <div class="note-info">${note}</div>
+                  </div>
+                </div>
+              `;
+            });
+            
+            container.innerHTML = html;
+            console.log('✅ 标注式速度排行数据加载完成');
+          } catch (error) {
+            console.error('❌ 加载标注式速度排行数据失败:', error);
+            const section = document.getElementById('speed-ranking-section');
+            if (section) {
+              section.style.display = 'none';
+            }
+          }
+        }
         </script>
       </div>
     </div>

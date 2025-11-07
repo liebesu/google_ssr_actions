@@ -1998,6 +1998,29 @@ def main():
         write_text(os.path.join(paths["providers"], "good.yaml"), yaml.safe_dump(good_provider_list, allow_unicode=True, sort_keys=False, default_flow_style=False, indent=2, width=float('inf')))
         good_provider_url = args.public_base.rstrip("/") + "/sub/providers/good.yaml"
         
+        # 生成基于标注式测速的订阅
+        if len(good_nodes) > 5:  # 只有足够节点时才进行测速
+            print(f"[info] 开始对 {len(good_nodes)} 个优秀节点进行标注式测速...")
+            try:
+                from annotated_speed_tester import AnnotatedSpeedTester
+                speed_tester = AnnotatedSpeedTester()
+                speed_results = speed_tester.generate_annotated_ranking(good_nodes)
+                
+                if speed_results:
+                    # 创建标注式速度排行订阅
+                    speed_subscription_file = os.path.join(paths["sub"], "speed_ranking.yaml")
+                    speed_tester.create_annotated_subscription(speed_results, speed_subscription_file)
+                    
+                    # 保存标注式速度排行数据
+                    speed_data_file = os.path.join(paths["data"], "speed_ranking.json")
+                    speed_tester.save_annotated_data(speed_results, speed_data_file)
+                    
+                    print(f"[info] 标注式速度排行订阅已生成: {speed_subscription_file}")
+                else:
+                    print(f"[warn] 标注式测速未获得有效结果")
+            except Exception as e:
+                print(f"[warn] 标注式测速失败: {e}")
+        
         # 将URI格式的节点转换为Clash对象格式
         clash_proxies = []
         used_names = set()  # 用于跟踪已使用的代理名称

@@ -6,72 +6,95 @@
   <title>Google SSR Actions - 订阅聚合</title>
   <link rel="stylesheet" href="styles.css" />
   <script>
-    const AUTH_HASH = "1dd2557b6334b098dc895f52fe46add7880094aec59a2eece3e4c5da2fc79f86";
+    // ====================
+    // 🔐 安全认证系统 v2
+    // ====================
+    const AUTH_HASH = "0d605622a936837919436b104b6f15fabeb1f0dea561a631abf8873858f0526a";
     const AUTH_USER = "liebesu";
+    
+    // SHA-256 哈希计算
     async function sha256(message) {
       const msgBuffer = new TextEncoder().encode(message);
       const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
     }
+    
+    // 显示登录对话框
     function showAuth() {
       const mask = document.getElementById('auth-mask');
       const userInput = document.getElementById('auth-user');
       const passInput = document.getElementById('auth-input');
       const err = document.getElementById('auth-err');
       const btn = document.getElementById('auth-btn');
+      const wrap = document.querySelector('.wrap');
+      
+      // 显示遮罩，隐藏内容
       mask.style.display = 'flex';
+      if (wrap) wrap.style.display = 'none';
       userInput.focus();
+      
       async function submit() {
         const user = userInput.value.trim();
         const pwd = passInput.value || '';
+        
+        if (!pwd) {
+          err.textContent = '请输入密码';
+          return;
+        }
+        
         const h = await sha256(pwd);
         const userRequired = (AUTH_USER || '').trim().length > 0;
         const userOk = userRequired ? (user === (AUTH_USER||'').trim()) : true;
+        
         if (userOk && h.toLowerCase() === AUTH_HASH.toLowerCase()) {
-          console.log('🎉 认证成功！');
+          // 认证成功
           try{ 
             localStorage.setItem('gauth', h); 
             localStorage.setItem('guser', user); 
-            console.log('✅ 认证信息已保存到localStorage');
           }catch(e){
             console.error('保存认证信息失败:', e);
           }
-          mask.style.display = 'none';
-          document.documentElement.style.display = '';
-          console.log('✅ 页面已显示，开始加载内容...');
           
-          // 手动触发页面内容加载
+          // 显示内容
+          mask.style.display = 'none';
+          if (wrap) wrap.style.display = '';
+          
+          // 加载动态内容
           setTimeout(() => {
             try {
               if (typeof loadMeta === 'function') loadMeta();
               if (typeof loadDailyChart === 'function') loadDailyChart();
               if (typeof loadSparklines === 'function') loadSparklines();
               if (typeof loadSerpAPIKeys === 'function') loadSerpAPIKeys();
-              console.log('✅ 所有内容加载函数已触发');
+              if (typeof loadRecentUrls === 'function') loadRecentUrls();
+              if (typeof loadTrend7Day === 'function') loadTrend7Day();
+              if (typeof loadSpeedRanking === 'function') loadSpeedRanking();
             } catch(e) {
               console.error('内容加载出错:', e);
             }
           }, 100);
         } else {
-          console.log('❌ 认证失败');
-          err.textContent = '用户名或密码错误，请重试';
+          err.textContent = '用户名或密码错误';
+          passInput.value = '';
+          passInput.focus();
         }
       }
+      
       btn.addEventListener('click', submit);
       passInput.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ submit(); }});
     }
+    
+    // 认证检查
     function gate() {
-      console.log('🔐 认证检查开始...');
-      console.log('AUTH_HASH:', AUTH_HASH ? '已设置' : '未设置');
-      console.log('AUTH_USER:', AUTH_USER ? '已设置' : '未设置');
-      
+      // 如果不需要认证
       if (!AUTH_HASH || AUTH_HASH.trim() === '') { 
-        console.log('✅ 无需认证，直接显示页面');
-        document.documentElement.style.display = ''; 
+        const wrap = document.querySelector('.wrap');
+        if (wrap) wrap.style.display = '';
         return; 
       }
       
+      // 检查已保存的认证信息
       try{
         const tk = localStorage.getItem('gauth');
         const gu = (localStorage.getItem('guser') || '').trim();
@@ -79,22 +102,21 @@
         const passOk = !!tk && (tk.toLowerCase() === AUTH_HASH.toLowerCase());
         const userOk = userRequired ? (gu === (AUTH_USER||'').trim()) : true;
         
-        console.log('存储的认证:', tk ? '存在' : '不存在');
-        console.log('密码验证:', passOk ? '通过' : '失败');
-        console.log('用户验证:', userOk ? '通过' : '失败');
-        
         if (passOk && userOk) { 
-          console.log('✅ 认证成功，显示页面');
-          document.documentElement.style.display = ''; 
+          // 认证通过，显示内容
+          const wrap = document.querySelector('.wrap');
+          if (wrap) wrap.style.display = '';
           
-          // 确保内容加载函数在页面显示后执行
+          // 自动加载内容
           setTimeout(() => {
             try {
               if (typeof loadMeta === 'function') loadMeta();
               if (typeof loadDailyChart === 'function') loadDailyChart();
               if (typeof loadSparklines === 'function') loadSparklines();
               if (typeof loadSerpAPIKeys === 'function') loadSerpAPIKeys();
-              console.log('✅ 自动加载所有内容完成');
+              if (typeof loadRecentUrls === 'function') loadRecentUrls();
+              if (typeof loadTrend7Day === 'function') loadTrend7Day();
+              if (typeof loadSpeedRanking === 'function') loadSpeedRanking();
             } catch(e) {
               console.error('自动内容加载出错:', e);
             }
@@ -105,57 +127,16 @@
         console.error('认证检查出错:', e);
       }
       
-      console.log('❌ 认证失败，显示登录框');
-      showAuth(); // 直接显示认证弹窗而不是跳转
+      // 认证失败，显示登录框
+      showAuth();
     }
-    // 强制确保页面能够显示
-    console.log('🚀 页面初始化开始...');
     
-    // 先立即显示页面，然后进行认证检查
-    document.documentElement.style.display = '';
-    
-    // 延迟隐藏页面，给认证检查足够时间
-    setTimeout(function() {
-      console.log('🔐 开始认证检查，暂时隐藏页面...');
-      document.documentElement.style.display = 'none';
-      
-      // 立即进行认证检查
+    // 页面加载后立即执行认证检查
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', gate);
+    } else {
       gate();
-      
-      // 超短时间fallback - 确保用户能看到内容
-      setTimeout(function() {
-        if (document.documentElement.style.display === 'none') {
-          console.log('⚠️ 1秒fallback - 强制显示认证框');
-          showAuth();
-        }
-      }, 1000);
-      
-      // 最终fallback - 无论如何都要显示
-      setTimeout(function() {
-        if (document.documentElement.style.display === 'none') {
-          console.log('🚨 最终fallback - 强制显示页面');
-          document.documentElement.style.display = '';
-          showAuth();
-        }
-      }, 2000);
-      
-    }, 100);
-    
-    // 多重事件监听保障
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('📄 DOM加载完成，检查认证状态...');
-      setTimeout(gate, 50);
-    });
-    
-    window.addEventListener('load', function() {
-      console.log('🌐 页面完全加载，最终检查...');
-      setTimeout(function() {
-        if (document.documentElement.style.display === 'none') {
-          console.log('⚠️ 页面加载完成但仍隐藏，强制显示认证框');
-          showAuth();
-        }
-      }, 100);
-    });
+    }
     // 根据是否有配额数据隐藏卡片
     document.addEventListener('DOMContentLoaded', ()=>{
       const qleft = '472'; const qcap = '1250'; const kok='5'; const kt='5';
@@ -167,22 +148,35 @@
   </script>
 </head>
 <body>
-  <div class="wrap">
-    <div id="auth-mask" class="auth-mask" style="display:none">
-      <div class="auth-card">
-        <h3 class="auth-title">访问认证</h3>
-        <p class="auth-sub">请输入用户名和密码以查看页面内容</p>
-        <input id="auth-user" class="auth-input" type="text" placeholder="输入用户名" />
-        <input id="auth-input" class="auth-input" type="password" placeholder="输入密码" />
-        <button id="auth-btn" class="auth-btn">进入</button>
-        <div id="auth-err" class="auth-err"></div>
-      </div>
+  <!-- 认证遮罩（未认证时显示） -->
+  <div id="auth-mask" class="auth-mask" style="display:none">
+    <div class="auth-card">
+      <h3 class="auth-title">🔐 访问认证</h3>
+      <p class="auth-sub">请输入用户名和密码以查看页面内容</p>
+      <input id="auth-user" class="auth-input" type="text" placeholder="输入用户名" autocomplete="username" />
+      <input id="auth-input" class="auth-input" type="password" placeholder="输入密码" autocomplete="current-password" />
+      <button id="auth-btn" class="auth-btn">进入</button>
+      <div id="auth-err" class="auth-err"></div>
     </div>
+  </div>
+  
+  <!-- 主内容（认证成功后显示） -->
+  <div class="wrap" style="display:none">
     <div class="header">
       <h1>Google SSR Actions</h1>
       <small>构建时间(中国时区)：2025-09-24 19:00:00</small>
     </div>
     <div class="subtitle">源 108/192 · 节点 1200 · 新增 0 · 移除 4</div>
+
+    <!-- 顶部广告位 -->
+    <div class="ad-container ad-top">
+      <div class="ad-label">广告</div>
+      <div class="ad-content" id="ad-top">
+        <!-- Google AdSense 或自定义广告代码 -->
+        <!-- 示例：<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxxxxxxxxxxxx" data-ad-slot="xxxxxxxxxx" data-ad-format="auto"></ins> -->
+        <div class="ad-placeholder">广告位 - 728x90</div>
+      </div>
+    </div>
 
     <div class="stats" id="stats-cards">
       <div class="stat quota" data-hide="q"><div class="num">472</div><div>剩余额度</div></div>
@@ -495,7 +489,21 @@
     </div>
 
     <p><small>仅展示可用源（自动过滤失效/超额/限速来源）。 构建(UTC)：2025-09-24 11:00:00 · 下次(UTC)：2025-09-24 14:00:00</small></p>
+
+    <!-- 底部广告位 -->
+    <div class="ad-container ad-bottom">
+      <div class="ad-label">广告</div>
+      <div class="ad-content" id="ad-bottom">
+        <!-- Google AdSense 或自定义广告代码 -->
+        <!-- 示例：<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxxxxxxxxxxxx" data-ad-slot="xxxxxxxxxx" data-ad-format="auto"></ins> -->
+        <div class="ad-placeholder">广告位 - 728x90</div>
+      </div>
+    </div>
   </div>
+
+  <!-- Google AdSense 初始化脚本（如果需要） -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+  <!-- <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
 </body>
 </html>
 

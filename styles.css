@@ -143,3 +143,65 @@ tbody tr:hover { background: rgba(59,130,246,.15); }
 .trend-desc-text { margin: 0; font-size: 13px; color: #cbd5e1; line-height: 1.5; }
 .trend-desc-text strong { color: #e5e7eb; }
 
+/* 广告容器样式 */
+.ad-container { 
+  margin: 20px 0; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 8px; 
+}
+.ad-top { 
+  margin-top: 24px; 
+  margin-bottom: 24px; 
+}
+.ad-bottom { 
+  margin-top: 32px; 
+  margin-bottom: 20px; 
+}
+.ad-label { 
+  font-size: 11px; 
+  color: #6b7280; 
+  text-transform: uppercase; 
+  letter-spacing: 0.5px; 
+  font-weight: 500; 
+}
+.ad-content { 
+  width: 100%; 
+  max-width: 728px; 
+  min-height: 90px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background: rgba(15,23,42,.3); 
+  border: 1px dashed #334155; 
+  border-radius: 8px; 
+  padding: 12px; 
+}
+.ad-placeholder { 
+  color: #6b7280; 
+  font-size: 13px; 
+  text-align: center; 
+  padding: 20px; 
+}
+.ad-content iframe,
+.ad-content ins { 
+  display: block; 
+  width: 100%; 
+  max-width: 728px; 
+  min-height: 90px; 
+  border-radius: 4px; 
+}
+
+/* 响应式广告样式 */
+@media (max-width: 768px) {
+  .ad-content { 
+    max-width: 100%; 
+    min-height: 50px; 
+  }
+  .ad-placeholder { 
+    font-size: 11px; 
+    padding: 12px; 
+  }
+}
+
