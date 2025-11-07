@@ -4854,10 +4854,10 @@
     "next_allowed_at": 1762529251.92332
   },
   "https://subapi01.qytsublink.com/api/v1/client/subscribe?token=a763b8f1e279f3f7fa481c33a6214453": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1762454123.0144396,
-    "next_allowed_at": 1762468523.0144396
+    "last_at": 1762501939.4722283,
+    "next_allowed_at": 1762530739.4722283
   },
   "https://www.huojian1.sbs/api/v1/client/subscribe?token=c40671b3963a317e8170322254036c71": {
     "hits": 13,
@@ -4998,10 +4998,10 @@
     "next_allowed_at": 1762508710.8678403
   },
   "http://23.145.248.238:13389/api/v1/client/subscribe?token=fe53dd9857bb1e0a0d51812c92143981": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1762487242.8931427,
-    "next_allowed_at": 1762501642.8931427
+    "last_at": 1762501939.4722283,
+    "next_allowed_at": 1762530739.4722283
   },
   "https://pavo.eu.org/api/v1/client/subscribe?token=2493aca73cd8d76163e2d6639e899bf9": {
     "hits": 4,
@@ -5010,9 +5010,9 @@
     "next_allowed_at": 1762504533.5136611
   },
   "https://39xwg.tdwj.net:108/api/v1/client/subscribe?token=641a628fa2a7742b6a7ed": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1762497333.5136611,
-    "next_allowed_at": 1762500933.5136611
+    "last_at": 1762501939.4722283,
+    "next_allowed_at": 1762509139.4722283
   }
 }
