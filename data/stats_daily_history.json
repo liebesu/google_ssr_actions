@@ -211,8 +211,168 @@
     "date": "2025-10-18",
     "google_added": 189,
     "github_added": 3,
-    "new_total": 1,
-    "removed_total": 1,
+    "new_total": 2,
+    "removed_total": 0,
     "alive_total": 192
+  },
+  {
+    "date": "2025-10-19",
+    "google_added": 190,
+    "github_added": 4,
+    "new_total": 2,
+    "removed_total": 0,
+    "alive_total": 194
+  },
+  {
+    "date": "2025-10-20",
+    "google_added": 192,
+    "github_added": 5,
+    "new_total": 2,
+    "removed_total": 0,
+    "alive_total": 197
+  },
+  {
+    "date": "2025-10-21",
+    "google_added": 196,
+    "github_added": 4,
+    "new_total": 7,
+    "removed_total": 1,
+    "alive_total": 200
+  },
+  {
+    "date": "2025-10-22",
+    "google_added": 193,
+    "github_added": 4,
+    "new_total": 4,
+    "removed_total": 2,
+    "alive_total": 197
+  },
+  {
+    "date": "2025-10-23",
+    "google_added": 100,
+    "github_added": 5,
+    "new_total": 0,
+    "removed_total": 51,
+    "alive_total": 105
+  },
+  {
+    "date": "2025-10-24",
+    "google_added": 89,
+    "github_added": 4,
+    "new_total": 3,
+    "removed_total": 13,
+    "alive_total": 93
+  },
+  {
+    "date": "2025-10-25",
+    "google_added": 101,
+    "github_added": 4,
+    "new_total": 2,
+    "removed_total": 1,
+    "alive_total": 105
+  },
+  {
+    "date": "2025-10-26",
+    "google_added": 103,
+    "github_added": 3,
+    "new_total": 23,
+    "removed_total": 1,
+    "alive_total": 106
+  },
+  {
+    "date": "2025-10-27",
+    "google_added": 109,
+    "github_added": 3,
+    "new_total": 1,
+    "removed_total": 0,
+    "alive_total": 112
+  },
+  {
+    "date": "2025-10-28",
+    "google_added": 107,
+    "github_added": 2,
+    "new_total": 1,
+    "removed_total": 4,
+    "alive_total": 109
+  },
+  {
+    "date": "2025-10-29",
+    "google_added": 92,
+    "github_added": 2,
+    "new_total": 1,
+    "removed_total": 2,
+    "alive_total": 94
+  },
+  {
+    "date": "2025-10-30",
+    "google_added": 105,
+    "github_added": 0,
+    "new_total": 13,
+    "removed_total": 1,
+    "alive_total": 105
+  },
+  {
+    "date": "2025-10-31",
+    "google_added": 106,
+    "github_added": 1,
+    "new_total": 0,
+    "removed_total": 0,
+    "alive_total": 107
+  },
+  {
+    "date": "2025-11-01",
+    "google_added": 106,
+    "github_added": 1,
+    "new_total": 0,
+    "removed_total": 1,
+    "alive_total": 107
+  },
+  {
+    "date": "2025-11-02",
+    "google_added": 111,
+    "github_added": 0,
+    "new_total": 0,
+    "removed_total": 1,
+    "alive_total": 111
+  },
+  {
+    "date": "2025-11-03",
+    "google_added": 138,
+    "github_added": 0,
+    "new_total": 7,
+    "removed_total": 1,
+    "alive_total": 138
+  },
+  {
+    "date": "2025-11-04",
+    "google_added": 142,
+    "github_added": 0,
+    "new_total": 4,
+    "removed_total": 0,
+    "alive_total": 142
+  },
+  {
+    "date": "2025-11-05",
+    "google_added": 158,
+    "github_added": 0,
+    "new_total": 0,
+    "removed_total": 5,
+    "alive_total": 158
+  },
+  {
+    "date": "2025-11-06",
+    "google_added": 142,
+    "github_added": 0,
+    "new_total": 0,
+    "removed_total": 2,
+    "alive_total": 142
+  },
+  {
+    "date": "2025-11-07",
+    "google_added": 143,
+    "github_added": 0,
+    "new_total": 1,
+    "removed_total": 0,
+    "alive_total": 143
   }
 ]
