@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: "0 */4 * * *"  # 每4小时构建一次
+    - cron: "0 */3 * * *"
   workflow_dispatch:
 
 permissions:
