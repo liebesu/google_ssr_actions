@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-08T06:30:32.510223",
+  "timestamp": "2025-11-08T09:20:08.587737",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,19 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 11,
-  "original_urls": 15,
+  "total_urls": 2,
+  "original_urls": 8,
   "urls": [
-    "https://pavo.eu.org/api/v1/client/subscribe?token=2493aca73cd8d76163e2d6639e899bf9",
-    "https://9yddd.whtjdasha.com/api/v1/client/subscribe?token=84487699ab097c119ecfc7f45d36080c",
-    "https://sub.lbxx.club/api/v1/client/subscribe?token=ce4eae1ef9d1ee5e310643c15c6792f5",
-    "https://d2f42a86-2a1f-49b5-bd2f-d2154daa6a09.com/api/v1/client/subscribe?token=0fe29ca910e0a0663aaf5f7c92040d62",
-    "https://lansecs.top/api/v1/client/subscribe?token=e81e38eaab35cceb76a7a28700ea89c0",
-    "https://subscr.easyinternet.one/api/v1/client/subscribe?token=3072bdb3197331148c3232231ffd82ad",
-    "https://lansecs.top/api/v1/client/subscribe?token=9f66b3037cd9089fa54812e449453b43",
-    "https://lansecs.top/api/v1/client/subscribe?token=352029a7ed4a0652d7cf75272dced67d",
-    "https://lansecs.top/api/v1/client/subscribe?token=fae290a3b0b27b2a00778683818ddc95",
-    "https://sub.easyinternet.one/api/v1/client/subscribe?token=00787f80891987ac8151d4fdd28bf64f",
-    "https://sub.easyinternet.one/api/v1/client/subscribe?token=2991af1c8cb8cbc402ad3e52b56235d1"
+    "https://sub.easyinternet.one/api/v1/client/subscribe?token=2991af1c8cb8cbc402ad3e52b56235d1",
+    "https://pavo.eu.org/api/v1/client/subscribe?token=2493aca73cd8d76163e2d6639e899bf9"
   ]
 }
