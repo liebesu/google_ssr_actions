@@ -5028,9 +5028,9 @@
     "next_allowed_at": 1762620068.4342287
   },
   "https://sub.lbxx.club/api/v1/client/subscribe?token=ce4eae1ef9d1ee5e310643c15c6792f5": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1762605668.4342287,
-    "next_allowed_at": 1762609268.4342287
+    "last_at": 1762615304.6293323,
+    "next_allowed_at": 1762622504.6293323
   }
 }
