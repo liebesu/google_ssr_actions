@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-09T03:44:45.611843",
+  "timestamp": "2025-11-09T06:30:05.537137",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,13 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 5,
-  "original_urls": 15,
+  "total_urls": 3,
+  "original_urls": 8,
   "urls": [
-    "https://sub.966888.xyz/api/v1/client/subscribe?token=2c53cb842bd6e2366782444aac8cfc16",
-    "https://sub.easyinternet.one/api/v1/client/subscribe?token=2991af1c8cb8cbc402ad3e52b56235d1",
-    "https://xxx.com/api/v1/client/subscribe?token=xxxxxx",
     "https://subscr.easyinternet.one/api/v1/client/subscribe?token=a604357595a10e788a95d4f5130662b0",
+    "https://xxx.com/api/v1/client/subscribe?token=xxxxxx",
     "https://dreamlinkc.top/api/v1/client/subscribe?token=f39724f20a56f05def610826520c9572"
   ]
 }
