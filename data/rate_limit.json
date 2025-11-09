@@ -5040,9 +5040,9 @@
     "next_allowed_at": 1762716099.918762
   },
   "https://52pokemon.sdnlv0.cn/api/v1/client/subscribe?token=52d61987d1b2a30b30520c1ed8aa3484": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "body-hint",
-    "last_at": 1762701699.918762,
-    "next_allowed_at": 1762703499.918762
+    "last_at": 1762713004.67939,
+    "next_allowed_at": 1762716604.67939
   }
 }
