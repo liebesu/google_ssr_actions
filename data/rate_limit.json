@@ -5016,10 +5016,10 @@
     "next_allowed_at": 1762713077.2572258
   },
   "https://ylccloud.top/api/v1/client/subscribe?token=2152c3886b66b2872517fc01509e8260": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1762636798.781989,
-    "next_allowed_at": 1762694398.781989
+    "last_at": 1762701699.918762,
+    "next_allowed_at": 1762788099.918762
   },
   "https://kuaiqiangshou.xyz/api/v1/client/subscribe?token=c9bfec5b1ac227": {
     "hits": 7,
@@ -5034,15 +5034,15 @@
     "next_allowed_at": 1762749702.5961223
   },
   "https://riolu.azure-api.net/api/v1/client/subscribe?token=442f400808f3e22cd848303b90ad690b": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "body-hint",
-    "last_at": 1762692102.5961223,
-    "next_allowed_at": 1762699302.5961223
+    "last_at": 1762701699.918762,
+    "next_allowed_at": 1762716099.918762
   },
   "https://52pokemon.sdnlv0.cn/api/v1/client/subscribe?token=52d61987d1b2a30b30520c1ed8aa3484": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1762692102.5961223,
-    "next_allowed_at": 1762693002.5961223
+    "last_at": 1762701699.918762,
+    "next_allowed_at": 1762703499.918762
   }
 }
