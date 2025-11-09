@@ -40,45 +40,28 @@ jobs:
           if [ -n "${{ secrets.SCRAPER_CONFIG_JSON }}" ]; then
             printf "%s\n" "${{ secrets.SCRAPER_CONFIG_JSON }}" > scraper_config.json
           fi
+          # prepare auth env from variables/secrets
+          if [ -n "${{ vars.AUTH_PLAIN }}" ]; then
+            echo "AUTH_PLAIN from vars configured"
+          fi
+          if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then
+            echo "AUTH_SHA256 from secrets configured"
+          fi
+          if [ -n "${{ vars.AUTH_SHA256 }}" ]; then
+            echo "AUTH_SHA256 from vars configured"
+          fi
+          if [ -n "${{ vars.AUTH_USER }}" ]; then
+            echo "AUTH_USER from vars configured"
+          fi
+          if [ -n "${{ secrets.AUTH_USER }}" ]; then
+            echo "AUTH_USER from secrets configured"
+          fi
           # 创建SerpAPI密钥管理数据目录
           mkdir -p data
           # 如果有SerpAPI密钥，创建密钥管理文件
           if [ -n "${{ secrets.SERPAPI_KEYS_JSON }}" ]; then
             echo "${{ secrets.SERPAPI_KEYS_JSON }}" > data/serpapi_keys.json
             echo "SerpAPI密钥管理文件已创建"
-          fi
-          
-          # ====================
-          # 🔐 配置认证信息
-          # ====================
-          echo "=== 🔐 配置认证信息 ==="
-          AUTH_SHA256_SET=""
-          AUTH_USER_SET=""
-          
-          # 优先使用 secrets，其次使用 vars
-          if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then 
-            AUTH_SHA256_SET="${{ secrets.AUTH_SHA256 }}"
-            echo "✅ AUTH_SHA256 from secrets configured (长度: ${#AUTH_SHA256_SET})"
-          elif [ -n "${{ vars.AUTH_SHA256 }}" ]; then 
-            AUTH_SHA256_SET="${{ vars.AUTH_SHA256 }}"
-            echo "✅ AUTH_SHA256 from vars configured (长度: ${#AUTH_SHA256_SET})"
-          else
-            echo "⚠️ AUTH_SHA256 未配置，页面将无需认证"
-          fi
-          
-          if [ -n "${{ secrets.AUTH_USER }}" ]; then 
-            AUTH_USER_SET="${{ secrets.AUTH_USER }}"
-            echo "✅ AUTH_USER from secrets configured: $AUTH_USER_SET"
-          elif [ -n "${{ vars.AUTH_USER }}" ]; then 
-            AUTH_USER_SET="${{ vars.AUTH_USER }}"
-            echo "✅ AUTH_USER from vars configured: $AUTH_USER_SET"
-          else
-            echo "⚠️ AUTH_USER 未配置"
-          fi
-          
-          # 检查 AUTH_PLAIN（如果设置了，Python 脚本会自动计算哈希）
-          if [ -n "${{ vars.AUTH_PLAIN }}" ]; then
-            echo "ℹ️ AUTH_PLAIN from vars configured (将自动计算哈希)"
           fi
 
       - name: Generate subscriptions
@@ -99,30 +82,12 @@ jobs:
           if [ -n "${{ secrets.SERPAPI_KEY_8 }}" ]; then export SERPAPI_KEY_8="${{ secrets.SERPAPI_KEY_8 }}"; echo "Set SERPAPI_KEY_8"; fi
           if [ -n "${{ secrets.SERPAPI_KEY_9 }}" ]; then export SERPAPI_KEY_9="${{ secrets.SERPAPI_KEY_9 }}"; echo "Set SERPAPI_KEY_9"; fi
           if [ -n "${{ secrets.SERPAPI_KEY_10 }}" ]; then export SERPAPI_KEY_10="${{ secrets.SERPAPI_KEY_10 }}"; echo "Set SERPAPI_KEY_10"; fi
-          # Pass optional auth envs (优先使用 secrets，其次使用 vars)
-          if [ -n "${{ vars.AUTH_PLAIN }}" ]; then 
-            export AUTH_PLAIN="${{ vars.AUTH_PLAIN }}"
-            echo "✅ AUTH_PLAIN 已设置"
-          fi
-          if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then 
-            export AUTH_SHA256="${{ secrets.AUTH_SHA256 }}"
-            echo "✅ AUTH_SHA256 from secrets 已设置 (长度: ${#AUTH_SHA256})"
-          elif [ -n "${{ vars.AUTH_SHA256 }}" ]; then 
-            export AUTH_SHA256="${{ vars.AUTH_SHA256 }}"
-            echo "✅ AUTH_SHA256 from vars 已设置 (长度: ${#AUTH_SHA256})"
-          else
-            echo "⚠️ AUTH_SHA256 未设置，页面将无需认证"
-          fi
-          if [ -n "${{ secrets.AUTH_USER }}" ]; then 
-            export AUTH_USER="${{ secrets.AUTH_USER }}"
-            echo "✅ AUTH_USER from secrets 已设置: $AUTH_USER"
-          elif [ -n "${{ vars.AUTH_USER }}" ]; then 
-            export AUTH_USER="${{ vars.AUTH_USER }}"
-            echo "✅ AUTH_USER from vars 已设置: $AUTH_USER"
-          else
-            echo "⚠️ AUTH_USER 未设置"
-          fi
-          
+          # Pass optional auth envs
+          if [ -n "${{ vars.AUTH_PLAIN }}" ]; then export AUTH_PLAIN="${{ vars.AUTH_PLAIN }}"; fi
+          if [ -n "${{ secrets.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ secrets.AUTH_SHA256 }}"; fi
+          if [ -n "${{ vars.AUTH_SHA256 }}" ]; then export AUTH_SHA256="${{ vars.AUTH_SHA256 }}"; fi
+          if [ -n "${{ vars.AUTH_USER }}" ]; then export AUTH_USER="${{ vars.AUTH_USER }}"; fi
+          if [ -n "${{ secrets.AUTH_USER }}" ]; then export AUTH_USER="${{ secrets.AUTH_USER }}"; fi
           python aggregator_cli.py --output-dir dist --dedup --public-base https://liebesu.github.io/google_ssr_actions --github-discovery --emit-health --emit-index
           
           # 确保 dist 目录有内容
@@ -146,61 +111,6 @@ jobs:
           ls -la dist/
           echo "=== index.html 内容预览 ==="
           head -10 dist/index.html
-          
-          # ====================
-          # 🔐 检查认证配置
-          # ====================
-          echo ""
-          echo "=== 🔐 检查认证配置 ==="
-          if [ -f dist/index.html ]; then
-            if grep -q 'AUTH_HASH = "__AUTH_HASH__"' dist/index.html; then
-              echo "❌ 错误: AUTH_HASH 占位符未被替换，认证配置失败！"
-              echo "请检查 GitHub Variables/Secrets 中的 AUTH_SHA256 配置"
-              exit 1
-            elif grep -q 'AUTH_HASH = ""' dist/index.html; then
-              echo "⚠️ 警告: AUTH_HASH 为空，页面将无需认证"
-            elif grep -q 'const AUTH_HASH = "' dist/index.html; then
-              AUTH_HASH_VALUE=$(grep -o 'const AUTH_HASH = "[^"]*"' dist/index.html | head -1 | sed 's/const AUTH_HASH = "\(.*\)"/\1/')
-              if [ -n "$AUTH_HASH_VALUE" ] && [ ${#AUTH_HASH_VALUE} -eq 64 ]; then
-                echo "✅ AUTH_HASH 已正确配置 (长度: ${#AUTH_HASH_VALUE})"
-              else
-                echo "⚠️ AUTH_HASH 配置异常: $AUTH_HASH_VALUE"
-              fi
-            fi
-            
-            if grep -q 'AUTH_USER = "__AUTH_USER__"' dist/index.html; then
-              echo "⚠️ 警告: AUTH_USER 占位符未被替换"
-            elif grep -q 'const AUTH_USER = "' dist/index.html; then
-              AUTH_USER_VALUE=$(grep -o 'const AUTH_USER = "[^"]*"' dist/index.html | head -1 | sed 's/const AUTH_USER = "\(.*\)"/\1/')
-              if [ -n "$AUTH_USER_VALUE" ]; then
-                echo "✅ AUTH_USER 已正确配置: $AUTH_USER_VALUE"
-              else
-                echo "ℹ️ AUTH_USER 为空（可选）"
-              fi
-            fi
-          else
-            echo "❌ index.html 不存在，无法检查认证配置"
-          fi
-          
-          # 检查 health.json 中的认证信息
-          if [ -f dist/health.json ]; then
-            echo ""
-            echo "=== 检查 health.json 认证信息 ==="
-            if command -v jq &> /dev/null; then
-              HEALTH_AUTH_SHA256=$(jq -r '.auth_sha256 // ""' dist/health.json)
-              HEALTH_AUTH_USER=$(jq -r '.auth_user // ""' dist/health.json)
-              if [ -n "$HEALTH_AUTH_SHA256" ]; then
-                echo "✅ health.json auth_sha256: ${HEALTH_AUTH_SHA256:0:16}... (长度: ${#HEALTH_AUTH_SHA256})"
-              else
-                echo "⚠️ health.json auth_sha256 为空"
-              fi
-              if [ -n "$HEALTH_AUTH_USER" ]; then
-                echo "✅ health.json auth_user: $HEALTH_AUTH_USER"
-              else
-                echo "ℹ️ health.json auth_user 为空"
-              fi
-            fi
-          fi
 
       - name: Persist history back to repo
         env:
