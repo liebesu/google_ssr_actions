@@ -864,10 +864,10 @@
     "next_allowed_at": 1762809633.0914705
   },
   "https://v2b.100010.site/api/v1/client/subscribe?token=c2cddc7fc56f787ed12185b378fe559c": {
-    "hits": 48,
+    "hits": 49,
     "last_reason": "http 403",
-    "last_at": 1762679055.0429199,
-    "next_allowed_at": 1762765455.0429199
+    "last_at": 1762766947.6287868,
+    "next_allowed_at": 1762853347.6287868
   },
   "https://login.djjc.cfd/api/v1/client/subscribe?token=d9d366127674481da5457f4508c61788": {
     "hits": 49,
@@ -5046,9 +5046,9 @@
     "next_allowed_at": 1762785482.2896802
   },
   "https://d2f42a86-2a1f-49b5-bd2f-d2154daa6a09.com/api/v1/client/subscribe?token=0fe29ca910e0a0663aaf5f7c92040d62": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1762756682.2896802,
-    "next_allowed_at": 1762757582.2896802
+    "last_at": 1762766947.6287868,
+    "next_allowed_at": 1762768747.6287868
   }
 }
