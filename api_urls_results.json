@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-10T03:51:56.295754",
+  "timestamp": "2025-11-10T12:45:13.213172",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -13,6 +13,6 @@
   "total_urls": 1,
   "original_urls": 4,
   "urls": [
-    "https://xiaohuolongjc.top/api/v1/client/subscribe?token=0a81b315f9cfe4200fbf7d7433c68d97"
+    "https://lansecs.top/api/v1/client/subscribe?token=e81e38eaab35cceb76a7a28700ea89c0"
   ]
 }
