@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-10T18:32:33.555335",
+  "timestamp": "2025-11-10T21:21:43.883988",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,12 +10,24 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 4,
-  "original_urls": 8,
+  "total_urls": 16,
+  "original_urls": 23,
   "urls": [
+    "https://lansecs.oxdtangx.top/api/v1/client/subscribe?token=b9d3649ff15f544dde918d82042ef567",
     "https://lansecs.top/api/v1/client/subscribe?token=e81e38eaab35cceb76a7a28700ea89c0",
     "https://fanyun.pro/api/v1/client/subscribe?token=5959c04eeef837bd0c92337b36a1072c",
-    "https://sufujia.top/api/v1/client/subscribe?token=bbe9f9ebc54d7cef3cde4aab62501519",
-    "https://lansecs.oxdtangx.top/api/v1/client/subscribe?token=23318670feaa6d70a6c933bcff3e88f3"
+    "https://lansecs.top/api/v1/client/subscribe?token=c8284b9516616521e3fab8ea329d1163",
+    "https://fanyun.pro/api/v1/client/subscribe?token=5478c773d318eae438dfbb35e87671f1",
+    "https://fanyun.pro/api/v1/client/subscribe?token=b26c473653e4dd56a64800af25f422d9",
+    "https://sufujia.top/api/v1/client/subscribe?token=4b8f25e827546a0be374efa7ff692605",
+    "https://x2b.eans.top/api/v1/client/subscribe?token=dcedd148c7ea786497433917e4ec1e18",
+    "https://lansecs.oxdtangx.top/api/v1/client/subscribe?token=5c5a9b46191285ddb007346c4c4ee6aa",
+    "https://lansecs.oxdtangx.top/api/v1/client/subscribe?token=bccc8e7e2a4653db7b26b6c1b1cabc20",
+    "https://qucloud.top/api/v1/client/subscribe?token=5df3248e799f5561fd8d5c2dcb260d2e",
+    "https://xbd.iftballs.com/api/v1/client/subscribe?token=d799e42afd61a1ab126b2dc73682bc02",
+    "https://fanyun.pro/api/v1/client/subscribe?token=f2910b9d84a99bbff85f03fe1502436d",
+    "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=f28886c6f6f067308bdc6bf8863db581",
+    "https://www.yuntt.sbs/api/v1/client/subscribe?token=c2e43de810f9e2c8ebce033aef9ef142",
+    "https://lansecs.oxdtangx.top/api/v1/client/subscribe?token=c82066dec66775aecf58e9a3eef98119"
   ]
 }
