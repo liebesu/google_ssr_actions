@@ -401,10 +401,10 @@
   },
   {
     "date": "2025-11-11",
-    "google_added": 152,
+    "google_added": 131,
     "github_added": 0,
-    "new_total": 1,
-    "removed_total": 1,
-    "alive_total": 152
+    "new_total": 2,
+    "removed_total": 23,
+    "alive_total": 131
   }
 ]
