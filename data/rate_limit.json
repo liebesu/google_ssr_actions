@@ -5142,9 +5142,9 @@
     "next_allowed_at": 1762903593.050328
   },
   "https://xxx.xxx.xxx/api/v1/client/subscribe?token=xxx": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1762886112.1912546,
-    "next_allowed_at": 1762887012.1912546
+    "last_at": 1762896150.3992178,
+    "next_allowed_at": 1762897950.3992178
   }
 }
