@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-11T21:19:54.606913",
+  "timestamp": "2025-11-12T01:43:38.649562",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,9 +11,9 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 5,
+  "original_urls": 8,
   "urls": [
-    "https://msub.建森电器.com/api/v1/client/subscribe?token=366e5563d0511b3b31f8fc8b5401235a",
-    "https://xxx.xxx.xxx/api/v1/client/subscribe?token=xxx"
+    "https://xxx.xxx.xxx/api/v1/client/subscribe?token=xxx",
+    "https://msub.建森电器.com/api/v1/client/subscribe?token=366e5563d0511b3b31f8fc8b5401235a"
   ]
 }
