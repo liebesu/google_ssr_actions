@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-13T12:47:19.903139",
+  "timestamp": "2025-11-13T15:24:27.861574",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,21 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 13,
-  "original_urls": 19,
+  "total_urls": 3,
+  "original_urls": 8,
   "urls": [
+    "https://zh-hans.micro361.org/api/v1/client/subscribe?token=17d51221df162f301f1b8b5df34d50c4",
     "https://jxkkl.tdwj.net:108/api/v1/client/subscribe?token=598cff4a5c560f904a0e7cca98445f27",
-    "https://fanyun.pro/api/v1/client/subscribe?token=e0486c40afb96c45a2dd7b32e6969fe0",
-    "https://lansecs.top/api/v1/client/subscribe?token=d9ea8d39cc4f66daf8f10ae068d414c9",
-    "https://lansecs.top/api/v1/client/subscribe?token=8d3e34cebab0ef5993ef82a1d500096f",
-    "https://dy269.dukadi.cv/api/v1/client/subscribe?token=1b53ddef506a26bd89dd857eeaef01db",
-    "https://www.yuntt.sbs/api/v1/client/subscribe?token=c2e43de810f9e2c8ebce033aef9ef142",
-    "https://lansecs.top/api/v1/client/subscribe?token=c8284b9516616521e3fab8ea329d1163",
-    "https://dreamlinkc.top/api/v1/client/subscribe?token=11d8ca1411cfa5553fdddf879e8ae905",
-    "https://cc.dreamlinkc.top/api/v1/client/subscribe?token=987b22ff8c11b66ac674ce29491491a9",
-    "https://login.yfjc.xyz/api/v1/client/subscribe?token=c26750864f94b0a3b51475c150e5a699",
-    "https://fanyun.pro/api/v1/client/subscribe?token=3e1b63f593750656f25eff48b725084c",
-    "https://dreamlinkc.top/api/v1/client/subscribe?token=11d8ca1411cfa5553fdddf879e8ae90514号早九点04到期https://cc.dreamlinkc.top/api/v1/client/subscribe?token=987b22ff8c11b66ac674ce29491491a915",
-    "https://lansecs.top/api/v1/client/subscribe?token=d001522a38015a995b73d7d428467ddb"
+    "https://fanyun.pro/api/v1/client/subscribe?token=e0486c40afb96c45a2dd7b32e6969fe0"
   ]
 }
