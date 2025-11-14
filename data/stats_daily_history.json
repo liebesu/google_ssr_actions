@@ -433,10 +433,10 @@
   },
   {
     "date": "2025-11-15",
-    "google_added": 147,
+    "google_added": 156,
     "github_added": 1,
-    "new_total": 4,
-    "removed_total": 12,
-    "alive_total": 148
+    "new_total": 12,
+    "removed_total": 3,
+    "alive_total": 157
   }
 ]
