@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-14T12:43:56.507918",
+  "timestamp": "2025-11-14T15:20:56.215066",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,24 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 8,
+  "total_urls": 16,
+  "original_urls": 22,
   "urls": [
     "https://pavo.eu.org/api/v1/client/subscribe?token=2493aca73cd8d76163e2d6639e899bf9",
     "https://pub10.20251103.top/api/v1/client/subscribe?token=b8ff43d6e241f2e3f4ba20b8f0769272",
-    "https://fanyun.pro/api/v1/client/subscribe?token=8ac6a090f0d22a5d90ec370c3de1608b"
+    "https://www.yuntt.sbs/api/v1/client/subscribe?token=c2e43de810f9e2c8ebce033aef9ef142",
+    "https://lansecs.top/api/v1/client/subscribe?token=c162adb2d90fe3f5860b374f11bf5840",
+    "https://lansecs.top/api/v1/client/subscribe?token=8d3e34cebab0ef5993ef82a1d500096f",
+    "https://dreamlinkc.top/api/v1/client/subscribe?token=11d8ca1411cfa5553fdddf879e8ae905",
+    "https://lansecs.top/api/v1/client/subscribe?token=4d8ca80694d8941d77e14a4367a2ef44",
+    "https://lansecs.top/api/v1/client/subscribe?token=11462a7219951d3afc945ffae2829af9",
+    "https://lansecs.top/api/v1/client/subscribe?token=d2b1ebe704aff17cd1f504a3a521f247",
+    "https://sub.966888.xyz/api/v1/client/subscribe?token=2c53cb842bd6e2366782444aac8cfc16",
+    "https://lansecs.top/api/v1/client/subscribe?token=d001522a38015a995b73d7d428467ddb",
+    "https://lansecs.top/api/v1/client/subscribe?token=a4dcadcc80b1ab1c6f2b76cc0aef4cd9",
+    "https://qucloud.top/api/v1/client/subscribe?token=80bcfd0fb81b1b8ce1f89a55bff77a5e",
+    "https://lansecs.top/api/v1/client/subscribe?token=d9ea8d39cc4f66daf8f10ae068d414c9",
+    "https://lansecs.top/api/v1/client/subscribe?token=b9f86fb15a1ab71757fd45bfda61576e",
+    "https://bajie.info/api/v1/client/subscribe?token=6dea9ea62ad8460d61d933db266c35ef"
   ]
 }
