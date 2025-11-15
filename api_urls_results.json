@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-15T15:20:14.618351",
+  "timestamp": "2025-11-15T18:28:10.065079",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,23 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 15,
-  "original_urls": 25,
+  "total_urls": 3,
+  "original_urls": 10,
   "urls": [
     "https://xiaomifengjc.top/api/v1/client/subscribe?token=00a6e91492e5b58042435fd3ca5ca948",
-    "https://mojie.app/api/v1/client/subscribe?token=3bce9b9dae74d7f31709ffbdfdba98ba",
-    "https://pub10.20251103.top/api/v1/client/subscribe?token=b8ff43d6e241f2e3f4ba20b8f0769272",
     "https://lansecs.top/api/v1/client/subscribe?token=a4dcadcc80b1ab1c6f2b76cc0aef4cd9",
-    "https://dreamlinkc.top/api/v1/client/subscribe?token=11d8ca1411cfa5553fdddf879e8ae905",
-    "https://fanyun.pro/api/v1/client/subscribe?token=3e1b63f593750656f25eff48b725084c",
-    "https://dreamlinkc.top/api/v1/client/subscribe?token=11d8ca1411cfa5553fdddf879e8ae90514号早九点04到期https://cc.dreamlinkc.top/api/v1/client/subscribe?token=987b22ff8c11b66ac674ce29491491a915",
-    "https://mytoken-1.huyun.nl/api/v1/client/subscribe?token=fd88d6b229fae6fd60225469be590fe1",
-    "https://d2f42a86-2a1f-49b5-bd2f-d2154daa6a09.com/api/v1/client/subscribe?token=a488cb8acbd2c7a3ab6a702629fe4b4e",
-    "https://login.yfjc.xyz/api/v1/client/subscribe?token=c26750864f94b0a3b51475c150e5a699",
-    "https://bajie.info/api/v1/client/subscribe?token=6dea9ea62ad8460d61d933db266c35ef流量耗尽不断网https://s3.v2rayse.com/public/20251113/pppujin0.txthttps://aa.wanfeng88.top/c/4PfqsB2订阅链接https://d2f42a86-2a1f-49b5-bd2f-d2154daa6a09.com/api/v1/client/subscribe?token=a488cb8acbd2c7a3ab6a702629fe4b4e",
-    "https://bajie.info/api/v1/client/subscribe?token=6dea9ea62ad8460d61d933db266c35ef",
-    "https://cc.dreamlinkc.top/api/v1/client/subscribe?token=987b22ff8c11b66ac674ce29491491a9",
-    "https://103.118.42.43:18181/api/v1/client/subscribe?token=07fc662b04006fadb8eae713306fec8c",
-    "https://139.224.118.41/api/v1/client/subscribe?token=26e94a7e1f848d2f42f1730507475291"
+    "https://pub10.20251103.top/api/v1/client/subscribe?token=b8ff43d6e241f2e3f4ba20b8f0769272"
   ]
 }
