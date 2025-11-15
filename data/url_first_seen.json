@@ -1034,5 +1034,7 @@
   "https://mytoken-1.huyun.nl/api/v1/client/subscribe?token=fd88d6b229fae6fd60225469be590fe1": "2025-11-15",
   "https://sufujia.top/api/v1/client/subscribe?token=6daec15bfd3975062203f2035cc8326f": "2025-11-15",
   "https://lansecs.top/api/v1/client/subscribe?token=efff9824316ad0219e841f4609dd1541": "2025-11-15",
-  "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=0b243131007ffd8af9f52129e6ee16a2": "2025-11-15"
+  "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=0b243131007ffd8af9f52129e6ee16a2": "2025-11-15",
+  "https://webget.yfjc.xyz/api/v1/client/subscribe?token=58f430519bc69309c5df1f15e4758a47": "2025-11-15",
+  "https://webget.yfjc.xyz/api/v1/client/subscribe?token=58f430519bc69309c5df1f15e4758a47&flag=meta": "2025-11-15"
 }
