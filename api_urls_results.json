@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-16T12:39:34.893473",
+  "timestamp": "2025-11-16T15:19:56.626084",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,17 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 9,
-  "original_urls": 21,
+  "total_urls": 3,
+  "original_urls": 10,
   "urls": [
-    "https://lansecs.top/api/v1/client/subscribe?token=09b24eaf6feaac3fb7fe1e5f5ae9e5a8",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=f026222ff44e207d0467304c24556320",
     "https://lansecs.top/api/v1/client/subscribe?token=ff990e1cf2c82024cb24913669910a67",
-    "https://lansecs.top/api/v1/client/subscribe?token=efff9824316ad0219e841f4609dd1541",
-    "https://lansecs.top/api/v1/client/subscribe?token=068463de5b8ac6bb9664e21be84711f8",
-    "https://sub.duffy.baby/api/v1/client/subscribe?token=8009acb7846b4e23baa82ac21a3244cd",
-    "https://cc.dreamlinkc.top/api/v1/client/subscribe?token=987b22ff8c11b66ac674ce29491491a9",
-    "https://lansecs.top/api/v1/client/subscribe?token=0f6dd304b3758075922c9ac23a0bce11",
-    "https://aaa.wqtd.mom/api/v1/client/subscribe?token=e112944b79454f7cbac860869c02b684"
+    "https://lansecs.top/api/v1/client/subscribe?token=09b24eaf6feaac3fb7fe1e5f5ae9e5a8",
+    "https://fn02.20251117.top/api/v1/client/subscribe?token=f026222ff44e207d0467304c24556320"
   ]
 }
