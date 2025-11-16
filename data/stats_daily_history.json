@@ -441,10 +441,10 @@
   },
   {
     "date": "2025-11-16",
-    "google_added": 162,
+    "google_added": 161,
     "github_added": 2,
-    "new_total": 0,
-    "removed_total": 2,
-    "alive_total": 164
+    "new_total": 2,
+    "removed_total": 3,
+    "alive_total": 163
   }
 ]
