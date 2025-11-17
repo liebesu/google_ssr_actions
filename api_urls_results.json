@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-17T01:44:53.710106",
+  "timestamp": "2025-11-17T03:50:39.175384",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
+  "total_urls": 3,
   "original_urls": 6,
   "urls": [
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=f026222ff44e207d0467304c24556320",
-    "https://lansecs.top/api/v1/client/subscribe?token=ff990e1cf2c82024cb24913669910a67"
+    "https://lansecs.top/api/v1/client/subscribe?token=ff990e1cf2c82024cb24913669910a67",
+    "https://lansecs.top/api/v1/client/subscribe?token=58de9b236fa1f3e85dcc7cba1c008b34",
+    "https://oss8.cauenvao.click/api/v1/client/subscribe?token=a396379c8c9383d1959339f768742ce6"
   ]
 }

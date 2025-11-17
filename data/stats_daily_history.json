@@ -449,10 +449,10 @@
   },
   {
     "date": "2025-11-17",
-    "google_added": 160,
+    "google_added": 155,
     "github_added": 2,
-    "new_total": 0,
-    "removed_total": 0,
-    "alive_total": 162
+    "new_total": 2,
+    "removed_total": 7,
+    "alive_total": 157
   }
 ]
