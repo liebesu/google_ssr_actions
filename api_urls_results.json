@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-18T06:33:03.753173",
+  "timestamp": "2025-11-18T09:25:23.404268",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,7 +11,7 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 7,
+  "original_urls": 4,
   "urls": [
     "https://abc.xhonor.top:9066/v2b/km/api/v1/client/subscribe?token=5fc737a1ec908b63fe1bed88449ba286",
     "https://onlysub.mjurl.com/api/v1/client/subscribe?token=6dbf0b92279e3ca9448b883496d8870f"
