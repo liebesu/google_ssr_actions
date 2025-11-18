@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-18T12:45:27.414606",
+  "timestamp": "2025-11-18T15:25:19.158743",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,9 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 1,
-  "original_urls": 1,
+  "total_urls": 3,
+  "original_urls": 6,
   "urls": [
-    "https://xtls.rprx.vision/api/v1/client/subscribe?token=262696dcb24a351cfaaa449da507edfb"
+    "https://xtls.rprx.vision/api/v1/client/subscribe?token=262696dcb24a351cfaaa449da507edfb",
+    "https://abc.xhonor.top:9066/v2b/km/api/v1/client/subscribe?token=5fc737a1ec908b63fe1bed88449ba286",
+    "https://sub-1.smjcdh.top/smjc/api/v1/client/subscribe?token=4ab54e827e94bb171457a98b48756a81"
   ]
 }
