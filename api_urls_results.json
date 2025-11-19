@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-19T18:33:07.007445",
+  "timestamp": "2025-11-19T21:17:31.904224",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 6,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://139.224.118.41/api/v1/client/subscribe?token=26e94a7e1f848d2f42f1730507475291",
-    "https://s1.byte11.com/api/v1/client/subscribe?token=1946f1ba6dc724c79cbe3f2c2c41336a"
+    "https://139.224.118.41/api/v1/client/subscribe?token=26e94a7e1f848d2f42f1730507475291"
   ]
 }
