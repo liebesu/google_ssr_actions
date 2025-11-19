@@ -5248,5 +5248,17 @@
     "last_reason": "body-hint",
     "last_at": 1763544469.8235993,
     "next_allowed_at": 1763546269.8235993
+  },
+  "https://A.com/api/v1/client/subscribe?token=A": {
+    "hits": 1,
+    "last_reason": "body-hint",
+    "last_at": 1763566007.624908,
+    "next_allowed_at": 1763566907.624908
+  },
+  "https://cf02.magic993.cfd/api/v1/client/subscribe?token=d2625dfb4c9dde24cc7a70239b88f3f9": {
+    "hits": 1,
+    "last_reason": "body-hint",
+    "last_at": 1763566007.624908,
+    "next_allowed_at": 1763566907.624908
   }
 }
