@@ -1956,10 +1956,10 @@
     "next_allowed_at": 1763642907.7561352
   },
   "https://subapi01.qytsublink.com/api/v1/client/subscribe?token=5f78a0d7a8e0e046154ac4d84f94d861": {
-    "hits": 16,
+    "hits": 17,
     "last_reason": "body-hint",
-    "last_at": 1763447730.1982965,
-    "next_allowed_at": 1763534130.1982965
+    "last_at": 1763577334.746443,
+    "next_allowed_at": 1763663734.746443
   },
   "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=fdcb29a03a96c3296620ef37d7f9a890": {
     "hits": 7,
@@ -4854,10 +4854,10 @@
     "next_allowed_at": 1763642907.7561352
   },
   "https://subapi01.qytsublink.com/api/v1/client/subscribe?token=a763b8f1e279f3f7fa481c33a6214453": {
-    "hits": 11,
+    "hits": 12,
     "last_reason": "body-hint",
-    "last_at": 1763447730.1982965,
-    "next_allowed_at": 1763534130.1982965
+    "last_at": 1763577334.746443,
+    "next_allowed_at": 1763663734.746443
   },
   "https://www.huojian1.sbs/api/v1/client/subscribe?token=c40671b3963a317e8170322254036c71": {
     "hits": 25,
@@ -5208,10 +5208,10 @@
     "next_allowed_at": 1763363207.4816551
   },
   "https://lansecs.top/api/v1/client/subscribe?token=11462a7219951d3afc94": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1763516740.6616535,
-    "next_allowed_at": 1763574340.6616535
+    "last_at": 1763577334.746443,
+    "next_allowed_at": 1763663734.746443
   },
   "https://fn02.20251117.top/api/v1/client/subscribe?token=2ceba75f71bfea43b8926d0f5606918c": {
     "hits": 7,
@@ -5232,10 +5232,10 @@
     "next_allowed_at": 1763585307.7561352
   },
   "https://xn--cp3a08l.com/api/v1/client/subscribe?token=cddb51d297e364422912db05dffcb2f0": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1763556507.7561352,
-    "next_allowed_at": 1763570907.7561352
+    "last_at": 1763577334.746443,
+    "next_allowed_at": 1763606134.746443
   },
   "https://client-sub.cloudlion.top/api/v1/client/subscribe?token=3647bf4f65718f15e9558a9daf0a5fc3": {
     "hits": 2,
@@ -5250,15 +5250,15 @@
     "next_allowed_at": 1763546269.8235993
   },
   "https://A.com/api/v1/client/subscribe?token=A": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1763566007.624908,
-    "next_allowed_at": 1763566907.624908
+    "last_at": 1763577334.746443,
+    "next_allowed_at": 1763579134.746443
   },
   "https://cf02.magic993.cfd/api/v1/client/subscribe?token=d2625dfb4c9dde24cc7a70239b88f3f9": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1763566007.624908,
-    "next_allowed_at": 1763566907.624908
+    "last_at": 1763577334.746443,
+    "next_allowed_at": 1763579134.746443
   }
 }
