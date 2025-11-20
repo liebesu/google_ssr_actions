@@ -3696,10 +3696,10 @@
     "next_allowed_at": 1763673597.8789577
   },
   "https://yun.dashiba.com/api/v1/client/subscribe?token=c5053a3a08a325c302b499ccf00967b3": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1763556507.7561352,
-    "next_allowed_at": 1763614107.7561352
+    "last_at": 1763620502.3338356,
+    "next_allowed_at": 1763706902.3338356
   },
   "https://zvxfe.tdwj.net:108/api/v1/client/subscribe?token=b001fff1b087a49b33b6459fad4014ea": {
     "hits": 3,
