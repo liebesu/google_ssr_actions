@@ -5250,15 +5250,15 @@
     "next_allowed_at": 1763546269.8235993
   },
   "https://A.com/api/v1/client/subscribe?token=A": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1763587197.8789577,
-    "next_allowed_at": 1763590797.8789577
+    "last_at": 1763603067.0267375,
+    "next_allowed_at": 1763610267.0267375
   },
   "https://cf02.magic993.cfd/api/v1/client/subscribe?token=d2625dfb4c9dde24cc7a70239b88f3f9": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1763587197.8789577,
-    "next_allowed_at": 1763590797.8789577
+    "last_at": 1763603067.0267375,
+    "next_allowed_at": 1763610267.0267375
   }
 }
