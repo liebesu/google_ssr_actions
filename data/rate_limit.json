@@ -3804,10 +3804,10 @@
     "next_allowed_at": 1763093960.5465028
   },
   "https://ch.owokkvsxks.store/api/v1/client/subscribe?token=14d9b7ad8be7234188ee330d3bb511f7": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1763544469.8235993,
-    "next_allowed_at": 1763548069.8235993
+    "last_at": 1763738593.773283,
+    "next_allowed_at": 1763745793.773283
   },
   "https://ch.owokkvsxks.store/api/v1/client/subscribe?token=3b000590951e6a7e3e83cc720d6b6eda": {
     "hits": 3,
@@ -5148,10 +5148,10 @@
     "next_allowed_at": 1763783261.6757808
   },
   "https://pokelink.xn--4gsvmh74cwxi.cn/api/v1/client/subscribe?token=13dbb1bd2634dc38b473c69aff59bedd": {
-    "hits": 13,
+    "hits": 14,
     "last_reason": "http 403",
-    "last_at": 1763642786.8067253,
-    "next_allowed_at": 1763729186.8067253
+    "last_at": 1763738593.773283,
+    "next_allowed_at": 1763824993.773283
   },
   "https://dreamlinkc.top/api/v1/client/subscribe?token=11d8ca1411cfa5553fdddf879e8ae90514": {
     "hits": 13,
@@ -5278,5 +5278,11 @@
     "last_reason": "http 403",
     "last_at": 1763729126.589217,
     "next_allowed_at": 1763743526.589217
+  },
+  "https://fn02.20251117.top/api/v1/client/subscribe?token=9c7e73eeb62f7645137a1bb49fe926f7": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1763738593.773283,
+    "next_allowed_at": 1763739493.773283
   }
 }
