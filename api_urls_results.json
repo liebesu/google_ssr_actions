@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-22T01:38:50.849104",
+  "timestamp": "2025-11-22T03:38:55.320294",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 6,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://oss8.cauenvao.click/api/v1/client/subscribe?token=a396379c8c9383d1959339f768742ce6",
-    "https://xiaomifengjc.top/api/v1/client/subscribe?token=00a6e91492e5b58042435fd3ca5ca948",
     "https://www.yuntt.sbs/api/v1/client/subscribe?token=223aa5d1dd79d32ec8aa1b1d25a9f0e4"
   ]
 }
