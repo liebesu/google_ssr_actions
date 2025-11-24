@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-24T09:27:58.941143",
+  "timestamp": "2025-11-24T12:47:10.855342",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,9 +11,9 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 5,
+  "original_urls": 4,
   "urls": [
-    "https://www.yuntt.sbs/api/v1/client/subscribe?token=223aa5d1dd79d32ec8aa1b1d25a9f0e4",
-    "https://xtls.rprx.vision/api/v1/client/subscribe?token=dcb70e51eb7c7373c0ada8028c06309b"
+    "https://xtls.rprx.vision/api/v1/client/subscribe?token=dcb70e51eb7c7373c0ada8028c06309b",
+    "https://www.yuntt.sbs/api/v1/client/subscribe?token=223aa5d1dd79d32ec8aa1b1d25a9f0e4"
   ]
 }
