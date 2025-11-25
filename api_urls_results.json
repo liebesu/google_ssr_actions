@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-25T09:27:52.509416",
+  "timestamp": "2025-11-25T12:46:47.591107",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,26 +10,15 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 18,
-  "original_urls": 24,
+  "total_urls": 7,
+  "original_urls": 13,
   "urls": [
-    "https://www.yuntt.sbs/api/v1/client/subscribe?token=223aa5d1dd79d32ec8aa1b1d25a9f0e4",
     "https://msub.xn--bwwx30f.top/api/v1/client/subscribe?token=80ae0e0",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=1af2f6cb62e1d011c68dca19222d3476",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=a3aeaf26daa115180051e6b32af20de8",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=44ca326d8256056ba1a8130f328013d7",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=ec275b076c12fc98242d0184d8240d75",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=a3aeaf26daa115180051e6b32af20de8\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=0b7f3f358123383778c77cc217beb4a6\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=54b1b7565572cd979f0908445135a4a9\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=44ca326d8256056ba1a8130f328013d7\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=02a9c8b5eb7f8ae314eaae868156a71a\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=8f8616420807193fe1d326bd64562849\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=1af2f6cb62e1d011c68dca19222d3476\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=f2dff9f81ed71eb26ebefd8302260770\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=3e25d582968279ac995524f8f54705ff\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=f84dd9fe00c1eda98008677a47406712\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=edf13fa0e3eb90e4e1c32168cc65625e\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=2b4e1d18bc1ea56d7e989854dc35ba6e\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=ec275b076c12fc98242d0184d8240d75\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=4ea995fff607a515b30de00a5b7cb446\\nhttps://fn02.20251117.top/api/v1/client/subscribe?token=ed60751bd49b4bcce1a12201800e5a63",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=0b7f3f358123383778c77cc217beb4a6",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=8f8616420807193fe1d326bd64562849",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=f2dff9f81ed71eb26ebefd8302260770",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=edf13fa0e3eb90e4e1c32168cc65625e",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=2b4e1d18bc1ea56d7e989854dc35ba6e",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=02a9c8b5eb7f8ae314eaae868156a71a",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=4ea995fff607a515b30de00a5b7cb446",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=54b1b7565572cd979f0908445135a4a9",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=ed60751bd49b4bcce1a12201800e5a63",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=3e25d582968279ac995524f8f54705ff",
-    "https://fn02.20251117.top/api/v1/client/subscribe?token=f84dd9fe00c1eda98008677a47406712"
+    "https://www.yuntt.sbs/api/v1/client/subscribe?token=223aa5d1dd79d32ec8aa1b1d25a9f0e4",
+    "https://lansecs.oxdtangx.top/api/v1/client/subscribe?token=a0876e1475c87bb66035347ff6499c67",
+    "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=04672f8b41a91b3f6409105b18f45b8c",
+    "https://xn--9kq85xcu6b.com/api/v1/client/subscribe?token=74f46a6d8825d12c767f5698b2e755fb",
+    "https://dy.jgpyjc.top/api/v1/client/subscribe?token=56f0f7a3293059dc027fe1333139d766",
+    "https://qucloud.top/api/v1/client/subscribe?token=edf4e7e6b712968bb28f040aa894e4a2"
   ]
 }
