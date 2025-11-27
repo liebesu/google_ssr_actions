@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-26T21:20:06.975451",
+  "timestamp": "2025-11-27T01:42:43.813687",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,9 +11,9 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 6,
+  "original_urls": 8,
   "urls": [
     "https://t7u8.1010991.xyz/api/v1/client/subscribe?token=fdf3271b4df6617540d51c7a6a186bb6",
-    "https://www.yuntt.sbs/api/v1/client/subscribe?token=223aa5d1dd79d32ec8aa1b1d25a9f0e4"
+    "https://uf.edu.kg/api/v1/client/subscribe?token=909ad0a9fbb15ab087fa1a418f5ea5e3"
   ]
 }
