@@ -537,10 +537,10 @@
   },
   {
     "date": "2025-11-28",
-    "google_added": 163,
+    "google_added": 158,
     "github_added": 2,
-    "new_total": 1,
-    "removed_total": 1,
-    "alive_total": 165
+    "new_total": 0,
+    "removed_total": 5,
+    "alive_total": 160
   }
 ]
