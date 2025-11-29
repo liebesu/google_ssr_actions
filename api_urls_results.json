@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-29T18:30:33.590984",
+  "timestamp": "2025-11-29T21:19:10.316654",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,15 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 7,
-  "original_urls": 12,
+  "total_urls": 2,
+  "original_urls": 8,
   "urls": [
-    "https://jgpyjc.top/api/v1/client/subscribe?token=38c535da0ec5ea58821a20b6c091e2d1",
-    "https://dy.jgpyjc.top/api/v1/client/subscribe?token=c0a55f7039eb90cddf0ba74c58ec62cd",
     "https://fg88.whtjdasha.com/api/v1/client/subscribe?token=d29d82218854861a2bbf01b1a2bf2d9f",
-    "https://dhdhhdhs28282.emxg.cn/api/v1/client/subscribe?token=ef11b1e75b4b3312262f6a6124bca2cd",
-    "https://www.flyintpro05.com/api/v1/client/subscribe?token=62be89e4bc828cdfd0c62bfb44746312",
-    "https://gates.djjc.cfd/api/v1/client/subscribe?token=94530d03ca11d120b1bb6273440a73c5",
-    "https://jgpyjc.top/api/v1/client/subscribe?token=b344d0ac346b7c8b116ee7cedd774f31"
+    "https://dy.jgpyjc.top/api/v1/client/subscribe?token=c0a55f7039eb90cddf0ba74c58ec62cd"
   ]
 }
