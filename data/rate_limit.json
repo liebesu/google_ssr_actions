@@ -318,10 +318,10 @@
     "next_allowed_at": 1764527579.6157255
   },
   "https://tiziya-zone-35j5gzft7lc3-1323316545.eo-edgefunctions1.com/api/v1/client/subscribe?token=2704165367b5aaef3eec9d6f6058292c": {
-    "hits": 14,
+    "hits": 15,
     "last_reason": "body-hint",
-    "last_at": 1763351587.2003758,
-    "next_allowed_at": 1763437987.2003758
+    "last_at": 1764494607.4757674,
+    "next_allowed_at": 1764581007.4757674
   },
   "https://pwac.anliangjifeiyun.eu/api/v1/client/subscribe?token=f858b37e9f7efc29d7a050ed3b47d418": {
     "hits": 55,
@@ -5574,9 +5574,9 @@
     "next_allowed_at": 1764458500.8451989
   },
   "https://fn02.20251117.top/api/v1/client/subscribe?token=a3aeaf26daa115180051e6b32af20de8": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1764467835.567029,
-    "next_allowed_at": 1764482235.567029
+    "last_at": 1764494607.4757674,
+    "next_allowed_at": 1764523407.4757674
   }
 }
