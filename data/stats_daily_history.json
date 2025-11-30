@@ -553,10 +553,10 @@
   },
   {
     "date": "2025-11-30",
-    "google_added": 143,
+    "google_added": 144,
     "github_added": 4,
-    "new_total": 0,
-    "removed_total": 2,
-    "alive_total": 147
+    "new_total": 2,
+    "removed_total": 1,
+    "alive_total": 148
   }
 ]

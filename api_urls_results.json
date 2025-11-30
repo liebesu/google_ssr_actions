@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-30T12:40:55.781359",
+  "timestamp": "2025-11-30T15:20:26.509505",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,15 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 7,
-  "original_urls": 12,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://dy.jgpyjc.top/api/v1/client/subscribe?token=c0a55f7039eb90cddf0ba74c58ec62cd",
-    "https://sub-1.smjcdh.top/smjc/api/v1/client/subscribe?token=c3e9d1f7341cace6ff7ed2c81c5870f3",
-    "https://1.xn--xc3ao8r.top/api/v1/client/subscribe?token=01c5359b1085a0ab1e8d7f934163d171",
-    "https://proxyinfo.net/api/v1/client/subscribe?token=406b2afca30ac58a861d04747082c3d1",
-    "https://1.xn--xc3ao8r.top/api/v1/client/subscribe?token=2aca73df5d853f41b6c6d3b9bc42d201",
-    "https://dy-2.smjcdh.com/smjc/api/v1/client/subscribe?token=ddef77045932d95887bc27846bed2fe8",
-    "https://jgpyjc.top/api/v1/client/subscribe?token=38c535da0ec5ea58821a20b6c091e2d1"
+    "https://sub-1.smjcdh.top/smjc/api/v1/client/subscribe?token=c3e9d1f7341cace6ff7ed2c81c5870f3"
   ]
 }
