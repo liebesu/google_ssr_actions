@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-30T21:19:39.009429",
+  "timestamp": "2025-12-01T02:02:36.443066",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,9 +10,17 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 1,
-  "original_urls": 3,
+  "total_urls": 9,
+  "original_urls": 16,
   "urls": [
-    "https://sub-1.smjcdh.top/smjc/api/v1/client/subscribe?token=c3e9d1f7341cace6ff7ed2c81c5870f3"
+    "https://sub-1.smjcdh.top/smjc/api/v1/client/subscribe?token=c3e9d1f7341cace6ff7ed2c81c5870f3",
+    "https://dy.jgpyjc.top/api/v1/client/subscribe?token=635857e1183bb524888c534fdf1cd1a1",
+    "https://xn--9kq85xcu6b.com/api/v1/client/subscribe?token=74f46a6d8825d12c767f5698b2e755fb",
+    "https://qucloud.top/api/v1/client/subscribe?token=277d193b4820fbef25d6f43e21677187",
+    "https://lansecs.top/api/v1/client/subscribe?token=5e98eb6f71a3e17f285118cf8462b8a3",
+    "https://dy.jgpyjc.top/api/v1/client/subscribe?token=7e7d43fad38b3203f24da800a43145f1",
+    "https://xiaomifengjc.top/api/v1/client/subscribe?token=0bd7675bbbf691016ddd5c4066235f08",
+    "https://dy.jgpyjc.top/api/v1/client/subscribe?token=f275220eda4bc4505c7b7cc392387a56",
+    "https://xiaomifengjc.top/api/v1/client/subscribe?token=91e46c7f7e6fc24910afc1519623860c"
   ]
 }
