@@ -2184,10 +2184,10 @@
     "next_allowed_at": 1763956832.9281054
   },
   "http://153.121.42.218/api/v1/client/subscribe?token=7644909b02c60f79520eaeb61173ca31": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1764562465.4440517,
-    "next_allowed_at": 1764576865.4440517
+    "last_at": 1764581663.4826276,
+    "next_allowed_at": 1764610463.4826276
   },
   "http://x2b.eans.top/api/v1/client/subscribe?token=0de5dbd9210d179d733f542cee5f1891": {
     "hits": 11,
@@ -5580,10 +5580,10 @@
     "next_allowed_at": 1764585175.5212805
   },
   "https://xn--7gql113q.com/api/v1/client/subscribe?token=866c76f5d17677a99b9e6d8f8099b94e": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1764562465.4440517,
-    "next_allowed_at": 1764576865.4440517
+    "last_at": 1764581663.4826276,
+    "next_allowed_at": 1764610463.4826276
   },
   "https://xtls.rprx.vision/api/v1/client/subscribe?token=dcb70e51eb7c7373c0ada8028c06309b": {
     "hits": 5,
