@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-01T12:48:07.829468",
+  "timestamp": "2025-12-01T15:25:20.304648",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,7 +11,7 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 6,
+  "original_urls": 4,
   "urls": [
     "https://dy.jgpyjc.top/api/v1/client/subscribe?token=635857e1183bb524888c534fdf1cd1a1",
     "https://xn--9kq85xcu6b.com/api/v1/client/subscribe?token=74f46a6d8825d12c767f5698b2e755fb"
