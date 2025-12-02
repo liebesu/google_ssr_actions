@@ -569,10 +569,10 @@
   },
   {
     "date": "2025-12-02",
-    "google_added": 140,
+    "google_added": 142,
     "github_added": 4,
-    "new_total": 1,
-    "removed_total": 2,
-    "alive_total": 144
+    "new_total": 2,
+    "removed_total": 0,
+    "alive_total": 146
   }
 ]
