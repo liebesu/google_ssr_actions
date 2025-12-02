@@ -1920,10 +1920,10 @@
     "next_allowed_at": 1764726550.9214668
   },
   "https://www.cocotoyou.com/api/v1/client/subscribe?token=596bf145d4288599d53f7a646c613f60": {
-    "hits": 50,
+    "hits": 51,
     "last_reason": "http 403",
-    "last_at": 1764614390.8737288,
-    "next_allowed_at": 1764700790.8737288
+    "last_at": 1764710690.442189,
+    "next_allowed_at": 1764797090.442189
   },
   "http://202508121742351.chibaba.ggff.net/api/v1/client/subscribe?token=14d625654f2a01b05b28cb6e47975838": {
     "hits": 53,
@@ -4860,10 +4860,10 @@
     "next_allowed_at": 1764084560.7331452
   },
   "https://www.huojian1.sbs/api/v1/client/subscribe?token=c40671b3963a317e8170322254036c71": {
-    "hits": 35,
+    "hits": 36,
     "last_reason": "http 403",
-    "last_at": 1764614390.8737288,
-    "next_allowed_at": 1764700790.8737288
+    "last_at": 1764710690.442189,
+    "next_allowed_at": 1764797090.442189
   },
   "https://xn--9kq85xcu6b.com/api/v1/client/subscribe?token=a811d3ff85af57f060f3f56cf32d43a4": {
     "hits": 37,
@@ -5364,10 +5364,10 @@
     "next_allowed_at": 1764775755.339273
   },
   "https://mytoken-1.huyun.nl/api/v1/client/subscribe?token=fd88d6b229fae6fd60225469be590fe1": {
-    "hits": 12,
+    "hits": 13,
     "last_reason": "http 403",
-    "last_at": 1764614390.8737288,
-    "next_allowed_at": 1764700790.8737288
+    "last_at": 1764710690.442189,
+    "next_allowed_at": 1764797090.442189
   },
   "https://fanyun.pro/api/v1/client/subscribe?token=3744f4ca9da784e809c1e1e917d77b42": {
     "hits": 12,
@@ -5460,10 +5460,10 @@
     "next_allowed_at": 1764754292.1237793
   },
   "https://www.yfjc.xyz/api/v1/client/subscribe?token=84f71bcce2dafaa39fc101dc60292c93&flag=meta": {
-    "hits": 10,
+    "hits": 11,
     "last_reason": "http 403",
-    "last_at": 1764614390.8737288,
-    "next_allowed_at": 1764700790.8737288
+    "last_at": 1764710690.442189,
+    "next_allowed_at": 1764797090.442189
   },
   "https://www.yfjc.xyz/api/v1/client/subscribe?token=84f71bcce2dafaa39fc101dc60292c93": {
     "hits": 10,
@@ -5598,10 +5598,10 @@
     "next_allowed_at": 1764758317.874072
   },
   "https://dhdhhdhs28282.emxg.cn/api/v1/client/subscribe?token=ef11b1e75b4b3312262f6a6124bca2cd": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "body-hint",
-    "last_at": 1764700717.874072,
-    "next_allowed_at": 1764707917.874072
+    "last_at": 1764710690.442189,
+    "next_allowed_at": 1764725090.442189
   },
   "https://103.118.42.43:18181/api/v1/client/subscribe?token=07fc662b04006fadb8eae713306fec8c": {
     "hits": 1,

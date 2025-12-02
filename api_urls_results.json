@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-02T18:36:06.894435",
+  "timestamp": "2025-12-02T21:22:22.198067",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 8,
+  "total_urls": 3,
+  "original_urls": 10,
   "urls": [
     "https://www.flyintpro05.com/api/v1/client/subscribe?token=62be89e4bc828cdfd0c62bfb44746312",
-    "https://sub01.fkknet.cn/api/v1/client/subscribe?token=f61ae694dc0d764fcbb6893682a1d8c3"
+    "https://sub01.fkknet.cn/api/v1/client/subscribe?token=f61ae694dc0d764fcbb6893682a1d8c3",
+    "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7"
   ]
 }
