@@ -5610,9 +5610,15 @@
     "next_allowed_at": 1764690255.339273
   },
   "https://s1.byte77.com/api/v1/client/subscribe?token=1775a285b9cbfdcd72fee23c4aefd67f": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1764787724.999889,
-    "next_allowed_at": 1764794924.999889
+    "last_at": 1764797020.3145034,
+    "next_allowed_at": 1764811420.3145034
+  },
+  "http://so.xfxssr.me/api/v1/client/subscribe?token=7854d59f38ac51700730b9e782c5160c": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1764797020.3145034,
+    "next_allowed_at": 1764797920.3145034
   }
 }
