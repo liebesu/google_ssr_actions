@@ -5334,10 +5334,10 @@
     "next_allowed_at": 1764852735.011884
   },
   "https://fn02.20251117.top/api/v1/client/subscribe?token=4f48bf4904c626e7d282fb893bd8153c": {
-    "hits": 13,
-    "last_reason": "body-hint",
-    "last_at": 1764667892.1237793,
-    "next_allowed_at": 1764754292.1237793
+    "hits": 14,
+    "last_reason": "http 403",
+    "last_at": 1764775744.5288975,
+    "next_allowed_at": 1764862144.5288975
   },
   "http://47.76.135.200/api/v1/client/subscribe?token=57ce18339271c390eb57ce3af52ec938": {
     "hits": 14,
@@ -5610,9 +5610,9 @@
     "next_allowed_at": 1764690255.339273
   },
   "https://s1.byte77.com/api/v1/client/subscribe?token=1775a285b9cbfdcd72fee23c4aefd67f": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1764766335.011884,
-    "next_allowed_at": 1764768135.011884
+    "last_at": 1764775744.5288975,
+    "next_allowed_at": 1764779344.5288975
   }
 }
