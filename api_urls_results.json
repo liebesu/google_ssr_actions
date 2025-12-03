@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-03T06:35:40.477914",
+  "timestamp": "2025-12-03T09:28:10.976652",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,15 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 8,
+  "total_urls": 7,
+  "original_urls": 14,
   "urls": [
-    "https://www.flyintpro05.com/api/v1/client/subscribe?token=62be89e4bc828cdfd0c62bfb44746312",
-    "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7"
+    "https://s1.byte77.com/api/v1/client/subscribe?token=1775a285b9cbfdcd72fee23c4aefd67f",
+    "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7",
+    "https://pokelink.xn--4gsvmh74cwxi.cn/api/v1/client/subscribe?token=78d717b5c8bbe933a6d857fb5636c70c",
+    "https://lansecs.oxdtangx.top/api/v1/client/subscribe?token=c3a626b4c501a64aa64ede4a8b4eea16",
+    "https://lansecs.oxdtangx.top/api/v1/client/subscribe?token=77cb57d70c26f6ee2a3236bfd17d4aa0",
+    "https://lansecs.oxdtangx.top/api/v1/client/subscribe?token=63ebb884efd7f8081e47562da7af03b4",
+    "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=04672f8b41a91b3f6409105b18f45b8c"
   ]
 }
