@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-03T15:26:33.839190",
+  "timestamp": "2025-12-03T18:45:23.700975",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,11 +11,11 @@
   ],
   "regions_count": 4,
   "total_urls": 4,
-  "original_urls": 15,
+  "original_urls": 4,
   "urls": [
-    "https://s1.byte77.com/api/v1/client/subscribe?token=1775a285b9cbfdcd72fee23c4aefd67f",
+    "https://www.yuntt.sbs/api/v1/client/subscribe?token=223aa5d1dd79d32ec8aa1b1d25a9f0e4",
     "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7",
     "https://has.ninja/api/v1/client/subscribe?token=4450159ebd8f980287eba6732c190c2d",
-    "https://pokelink.xn--4gsvmh74cwxi.cn/api/v1/client/subscribe?token=78d717b5c8bbe933a6d857fb5636c70c"
+    "https://s1.byte77.com/api/v1/client/subscribe?token=1775a285b9cbfdcd72fee23c4aefd67f"
   ]
 }
