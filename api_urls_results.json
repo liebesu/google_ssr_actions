@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-04T06:35:27.145347",
+  "timestamp": "2025-12-04T09:28:02.354810",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,13 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 5,
-  "original_urls": 16,
+  "total_urls": 3,
+  "original_urls": 7,
   "urls": [
-    "https://has.ninja/api/v1/client/subscribe?token=4450159ebd8f980287eba6732c190c2d",
     "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7",
     "https://jgpyjc.top/api/v1/client/subscribe?token=84edffc4cc62faaad58777215f92baa5",
-    "https://s1.byte77.com/api/v1/client/subscribe?token=1775a285b9cbfdcd72fee23c4aefd67f",
     "https://www.flyintpro05.com/api/v1/client/subscribe?token=62be89e4bc828cdfd0c62bfb44746312"
   ]
 }
