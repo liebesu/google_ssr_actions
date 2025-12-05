@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-05T12:46:23.109318",
+  "timestamp": "2025-12-05T18:30:47.621252",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -13,6 +13,6 @@
   "total_urls": 1,
   "original_urls": 4,
   "urls": [
-    "https://onlysub.mjurl.com/api/v1/client/subscribe?token=80bef547e433a6a522a9e91f09a0ccdd"
+    "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=cef2f94309d0f177012da649e3c52178"
   ]
 }
