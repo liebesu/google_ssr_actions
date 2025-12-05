@@ -4920,10 +4920,10 @@
     "next_allowed_at": 1764969858.1527894
   },
   "https://bsn.ewpbh.cn/api/v1/client/subscribe?token=3bdcb1cdee5aa2abc2a5e586418fd05b": {
-    "hits": 35,
+    "hits": 36,
     "last_reason": "http 403",
-    "last_at": 1764820593.031667,
-    "next_allowed_at": 1764906993.031667
+    "last_at": 1764926829.5067422,
+    "next_allowed_at": 1765013229.5067422
   },
   "https://jennie.rsqpq.cn/api/v1/client/subscribe?token=0c863fcd5f29c6ee279c7b69b9618f58": {
     "hits": 34,
@@ -5634,10 +5634,10 @@
     "next_allowed_at": 1764974288.990432
   },
   "https://onlysub.mjurl.com/api/v1/client/subscribe?token=80bef547e433a6a522a9e91f09a0ccdd": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1764916688.990432,
-    "next_allowed_at": 1764923888.990432
+    "last_at": 1764926829.5067422,
+    "next_allowed_at": 1764941229.5067422
   },
   "https://fn02.20251117.top/api/v1/client/subscribe?token=0b7f3f358123383778c77cc217beb4a6": {
     "hits": 1,
