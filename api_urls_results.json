@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-05T03:53:09.313764",
+  "timestamp": "2025-12-05T06:35:44.518328",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,15 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 7,
-  "original_urls": 11,
+  "total_urls": 2,
+  "original_urls": 6,
   "urls": [
     "https://x1.344211.cc/api/v1/client/subscribe?token=8252720a0320a6faad5eccb23c40569a",
-    "https://pokelink.xn--4gsvmh74cwxi.cn/api/v1/client/subscribe?token=78d717b5c8bbe933a6d857fb5636c70c",
-    "https://lansecs.top/api/v1/client/subscribe?token=5e98eb6f71a3e17f285118cf8462b8a3",
-    "https://lansecs.top/api/v1/client/subscribe?token=b9f86fb15a1ab71757fd45bfda61576e",
-    "https://lansecs.top/api/v1/client/subscribe?token=edf4ffd15adcab32e25a2dcb49194bf3",
-    "https://qucloud.top/api/v1/client/subscribe?token=edf4e7e6b712968bb28f040aa894e4a2",
     "https://onlysub.mjurl.com/api/v1/client/subscribe?token=80bef547e433a6a522a9e91f09a0ccdd"
   ]
 }
