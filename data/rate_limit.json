@@ -5616,16 +5616,16 @@
     "next_allowed_at": 1765099440.6397595
   },
   "http://so.xfxssr.me/api/v1/client/subscribe?token=7854d59f38ac51700730b9e782c5160c": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1764959590.4936044,
-    "next_allowed_at": 1765045990.4936044
+    "last_at": 1765056126.9766164,
+    "next_allowed_at": 1765142526.9766164
   },
   "https://has.ninja/api/v1/client/subscribe?token=4450159ebd8f980287eba6732c190c2d": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "body-hint",
-    "last_at": 1765013040.6397595,
-    "next_allowed_at": 1765041840.6397595
+    "last_at": 1765056126.9766164,
+    "next_allowed_at": 1765113726.9766164
   },
   "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7": {
     "hits": 8,
@@ -5646,16 +5646,16 @@
     "next_allowed_at": 1764907840.0147445
   },
   "https://oss8.cauenvao.click/api/v1/client/subscribe?token=a396379c8c9383d1959339f768742ce6": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1765025053.574446,
-    "next_allowed_at": 1765053853.574446
+    "last_at": 1765056126.9766164,
+    "next_allowed_at": 1765113726.9766164
   },
   "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=cef2f94309d0f177012da649e3c52178": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1765025053.574446,
-    "next_allowed_at": 1765053853.574446
+    "last_at": 1765056126.9766164,
+    "next_allowed_at": 1765113726.9766164
   },
   "https://1.xn--xc3ao8r.top/api/v1/client/subscribe?token=01c5359b1085a0ab1e8d7f934163d171": {
     "hits": 6,
@@ -5688,15 +5688,15 @@
     "next_allowed_at": 1765060350.8994222
   },
   "https://yfjc.xyz/api/v1/client/subscribe?token=dcb519f97507743e79d3b34e1048fc04&flag=meta": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1765045950.8994222,
-    "next_allowed_at": 1765053150.8994222
+    "last_at": 1765056126.9766164,
+    "next_allowed_at": 1765070526.9766164
   },
   "https://oss7.cauenvao.click/api/v1/client/subscribe?token=NzMzOTU6MWE2ZTFiYjAzZGNjNjdiY2E4MWJhMDRkNGU5MzhjNmRmMDZmMTIzOQ": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1765045950.8994222,
-    "next_allowed_at": 1765046850.8994222
+    "last_at": 1765056126.9766164,
+    "next_allowed_at": 1765057926.9766164
   }
 }
