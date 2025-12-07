@@ -5694,15 +5694,15 @@
     "next_allowed_at": 1765101465.3655941
   },
   "https://oss7.cauenvao.click/api/v1/client/subscribe?token=NzMzOTU6MWE2ZTFiYjAzZGNjNjdiY2E4MWJhMDRkNGU5MzhjNmRmMDZmMTIzOQ": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1765080029.400533,
-    "next_allowed_at": 1765087229.400533
+    "last_at": 1765089227.9375815,
+    "next_allowed_at": 1765103627.9375815
   },
   "https://dy-2.smjcdh.com/smjc/api/v1/client/subscribe?token=ddef77045932d95887bc27846bed2fe8": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1765080029.400533,
-    "next_allowed_at": 1765081829.400533
+    "last_at": 1765089227.9375815,
+    "next_allowed_at": 1765092827.9375815
   }
 }
