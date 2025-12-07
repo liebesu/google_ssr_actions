@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-07T15:20:06.128868",
+  "timestamp": "2025-12-07T21:18:56.798352",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -13,6 +13,6 @@
   "total_urls": 1,
   "original_urls": 4,
   "urls": [
-    "https://oss7.cauenvao.click/api/v1/client/subscribe?token=NzMzOTU6MWE2ZTFiYjAzZGNjNjdiY2E4MWJhMDRkNGU5MzhjNmRmMDZmMTIzOQ"
+    "https://dash.boboch.it.com/api/v1/client/subscribe?token=ad80a81805cd0af79e5c5174fad26271"
   ]
 }
