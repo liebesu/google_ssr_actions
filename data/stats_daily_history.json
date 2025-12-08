@@ -617,10 +617,10 @@
   },
   {
     "date": "2025-12-08",
-    "google_added": 80,
+    "google_added": 75,
     "github_added": 2,
-    "new_total": 5,
-    "removed_total": 1,
-    "alive_total": 82
+    "new_total": 0,
+    "removed_total": 5,
+    "alive_total": 77
   }
 ]
