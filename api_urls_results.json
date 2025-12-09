@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-08T21:20:30.165847",
+  "timestamp": "2025-12-09T01:46:55.872679",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,7 +11,7 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 6,
+  "original_urls": 8,
   "urls": [
     "https://skylumo.com/api/v1/client/subscribe?token=7ff4958ee8d2efb1246e1922397a52fe",
     "https://dash.boboch.it.com/api/v1/client/subscribe?token=ad80a81805cd0af79e5c5174fad26271"

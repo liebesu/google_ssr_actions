@@ -4248,10 +4248,10 @@
     "next_allowed_at": 1760670022.231444
   },
   "https://get.passsub.link/api/v1/client/subscribe?token=4f76fc0bdd4ebc1a175d65c5e9aa0e0b": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1765219075.7743068,
-    "next_allowed_at": 1765233475.7743068
+    "last_at": 1765244962.6419053,
+    "next_allowed_at": 1765273762.6419053
   },
   "https://gfwairport.icu/api/v1/client/subscribe?token=43684bc36538e2747a2d7f268be96e3b": {
     "hits": 1,
