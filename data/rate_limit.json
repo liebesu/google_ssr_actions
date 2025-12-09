@@ -1326,10 +1326,10 @@
     "next_allowed_at": 1763551669.8235993
   },
   "https://qq.xlm.plus/api/v1/client/subscribe?token=9e5db95336ab586ac6c4e2306c4d25a9": {
-    "hits": 49,
+    "hits": 50,
     "last_reason": "body-hint",
-    "last_at": 1765198202.1036572,
-    "next_allowed_at": 1765284602.1036572
+    "last_at": 1765305201.5719028,
+    "next_allowed_at": 1765391601.5719028
   },
   "https://odysseycdn.cyou/api/v1/client/subscribe?token=057940e6e8d6f091ceabdf2f8b1965ed": {
     "hits": 69,
