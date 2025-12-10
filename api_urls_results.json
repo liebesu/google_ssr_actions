@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-10T03:56:43.256563",
+  "timestamp": "2025-12-10T06:36:38.238942",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 4,
+  "total_urls": 1,
+  "original_urls": 1,
   "urls": [
-    "https://bsn.ewpbh.cn/api/v1/client/subscribe?token=d3960f664d90041d508c7a830a766a68",
-    "https://example.com/api/v1/client/subscribe?token=ilovechina"
+    "https://bsn.ewpbh.cn/api/v1/client/subscribe?token=d3960f664d90041d508c7a830a766a68"
   ]
 }
