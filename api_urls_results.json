@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-11T15:28:33.616906",
+  "timestamp": "2025-12-11T18:34:07.827978",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,9 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 1,
+  "total_urls": 2,
   "original_urls": 3,
   "urls": [
+    "https://pokelink.xn--4gsvmh74cwxi.cn/api/v1/client/subscribe?token=78d717b5c8bbe933a6d857fb5636c70c",
     "https://fg88.whtjdasha.com/api/v1/client/subscribe?token=d29d82218854861a2bbf01b1a2bf2d9f"
   ]
 }
