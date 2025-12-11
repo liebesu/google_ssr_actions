@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-11T06:37:47.382052",
+  "timestamp": "2025-12-11T09:29:07.266677",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,18 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 10,
-  "original_urls": 15,
+  "total_urls": 1,
+  "original_urls": 2,
   "urls": [
-    "https://lansecs.top/api/v1/client/subscribe?token=12378fd7aa1088cde9765890405dc258",
-    "https://fg88.whtjdasha.com/api/v1/client/subscribe?token=d29d82218854861a2bbf01b1a2bf2d9f",
-    "https://dash.boboch.it.com/api/v1/client/subscribe?token=ad80a81805cd0af79e5c5174fad26271",
-    "http://xn--dlqr72e.top/api/v1/client/subscribe?token=ad80a81805cd0af79e5c5174fad26271",
-    "https://mojie.app/api/v1/client/subscribe?token=4a4c7826dcfa5c788553092bb4df113f",
-    "https://9yddd.whtjdasha.com/api/v1/client/subscribe?token=a9a6d5df74506006c41d6803d10e55e3",
-    "https://skylumo.com/api/v1/client/subscribe?token=3fb64a9c1f3629cd2ca57ca24f51339a",
-    "https://login.yfjc.xyz/api/v1/client/subscribe?token=9232d2cd72cc7d74ec40e050026591ef",
-    "https://bj.mfsyw.cn/api/v1/client/subscribe?token=41cbd904c3ab780e31e146b27cd68b5b",
-    "https://www.yuntt.sbs/api/v1/client/subscribe?token=223aa5d1dd79d32ec8aa1b1d25a9f0e4"
+    "https://fg88.whtjdasha.com/api/v1/client/subscribe?token=d29d82218854861a2bbf01b1a2bf2d9f"
   ]
 }
