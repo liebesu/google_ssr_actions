@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-12T12:49:02.398470",
+  "timestamp": "2025-12-12T15:25:45.338740",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 5,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=64f28087c5ec4301a0bc4170c43a7690",
-    "https://v2.axcc.top/api/v1/client/subscribe?token=080299d22b1531e04e848fa77c40f89f"
+    "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=64f28087c5ec4301a0bc4170c43a7690"
   ]
 }
