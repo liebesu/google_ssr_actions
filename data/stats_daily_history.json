@@ -657,10 +657,10 @@
   },
   {
     "date": "2025-12-13",
-    "google_added": 73,
+    "google_added": 69,
     "github_added": 4,
-    "new_total": 0,
-    "removed_total": 2,
-    "alive_total": 77
+    "new_total": 2,
+    "removed_total": 6,
+    "alive_total": 73
   }
 ]
