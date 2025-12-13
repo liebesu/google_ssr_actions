@@ -5766,10 +5766,10 @@
     "next_allowed_at": 1765601494.2447855
   },
   "https://onlysub.mjurl.com/api/v1/client/subscribe?token=6ce36d5db7913f957f0b53cce90385ac": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1765564660.536037,
-    "next_allowed_at": 1765593460.536037
+    "last_at": 1765597971.5066998,
+    "next_allowed_at": 1765655571.5066998
   },
   "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=64f28087c5ec4301a0bc4170c43a7690": {
     "hits": 7,
@@ -5812,5 +5812,11 @@
     "last_reason": "body-hint",
     "last_at": 1765574610.0697882,
     "next_allowed_at": 1765575510.0697882
+  },
+  "https://dash.pqjc.site/api/v1/client/subscribe?token=371f6a54dc202d4a2dedcda37cf8e": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1765597971.5066998,
+    "next_allowed_at": 1765598871.5066998
   }
 }
