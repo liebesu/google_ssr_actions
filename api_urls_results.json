@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-13T15:21:01.499955",
+  "timestamp": "2025-12-13T18:29:39.084501",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 8,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://qucloud.top/api/v1/client/subscribe?token=277d193b4820fbef25d6f43e21677187",
-    "https://dash.pqjc.site/api/v1/client/subscribe?token=371f6a54dc202d4a2dedcda37cf8e"
+    "https://qucloud.top/api/v1/client/subscribe?token=277d193b4820fbef25d6f43e21677187"
   ]
 }
