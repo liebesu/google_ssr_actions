@@ -4422,10 +4422,10 @@
     "next_allowed_at": 1765676765.318502
   },
   "https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=74540cb3c2a5e39cf": {
-    "hits": 58,
+    "hits": 59,
     "last_reason": "http 403",
-    "last_at": 1765660954.9083056,
-    "next_allowed_at": 1765747354.9083056
+    "last_at": 1765747369.1933815,
+    "next_allowed_at": 1765833769.1933815
   },
   "https://msub.xn--bwwx30f.top/api/v1/client/subscribe?token=c6fbf0b7ddad71011f342130f8a9e34f": {
     "hits": 55,
@@ -4920,10 +4920,10 @@
     "next_allowed_at": 1765802724.5107722
   },
   "https://bsn.ewpbh.cn/api/v1/client/subscribe?token=3bdcb1cdee5aa2abc2a5e586418fd05b": {
-    "hits": 44,
+    "hits": 45,
     "last_reason": "http 403",
-    "last_at": 1765660954.9083056,
-    "next_allowed_at": 1765747354.9083056
+    "last_at": 1765747369.1933815,
+    "next_allowed_at": 1765833769.1933815
   },
   "https://jennie.rsqpq.cn/api/v1/client/subscribe?token=0c863fcd5f29c6ee279c7b69b9618f58": {
     "hits": 43,
@@ -4962,16 +4962,16 @@
     "next_allowed_at": 1765823646.729457
   },
   "http://120.24.254.184:8086/api/v1/client/subscribe?token=55758f551c526ffcc56ec3a564cc6a3b": {
-    "hits": 42,
+    "hits": 43,
     "last_reason": "http 403",
-    "last_at": 1765650721.1292758,
-    "next_allowed_at": 1765737121.1292758
+    "last_at": 1765747369.1933815,
+    "next_allowed_at": 1765833769.1933815
   },
   "http://120.24.254.184:8086/api/v1/client/subscribe?token=cbed3403fc547cdd4d1b18bfa575176c": {
-    "hits": 42,
+    "hits": 43,
     "last_reason": "http 403",
-    "last_at": 1765660954.9083056,
-    "next_allowed_at": 1765747354.9083056
+    "last_at": 1765747369.1933815,
+    "next_allowed_at": 1765833769.1933815
   },
   "https://xiaomifengjc.top/api/v1/client/subscribe?token=00a6e91492e5b58042435fd3ca5ca948": {
     "hits": 43,
@@ -5652,10 +5652,10 @@
     "next_allowed_at": 1765564653.0766175
   },
   "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=cef2f94309d0f177012da649e3c52178": {
-    "hits": 14,
+    "hits": 15,
     "last_reason": "http 403",
-    "last_at": 1765660954.9083056,
-    "next_allowed_at": 1765747354.9083056
+    "last_at": 1765747369.1933815,
+    "next_allowed_at": 1765833769.1933815
   },
   "https://1.xn--xc3ao8r.top/api/v1/client/subscribe?token=01c5359b1085a0ab1e8d7f934163d171": {
     "hits": 14,
@@ -5766,10 +5766,10 @@
     "next_allowed_at": 1765790701.8975463
   },
   "https://onlysub.mjurl.com/api/v1/client/subscribe?token=6ce36d5db7913f957f0b53cce90385ac": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1765660954.9083056,
-    "next_allowed_at": 1765747354.9083056
+    "last_at": 1765747369.1933815,
+    "next_allowed_at": 1765833769.1933815
   },
   "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=64f28087c5ec4301a0bc4170c43a7690": {
     "hits": 9,
@@ -5784,16 +5784,16 @@
     "next_allowed_at": 1765823646.729457
   },
   "https://dy269.dukadi.cv/api/v1/client/subscribe?token=1b53ddef506a26bd89dd857eeaef01db": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1765725808.6730454,
-    "next_allowed_at": 1765740208.6730454
+    "last_at": 1765747369.1933815,
+    "next_allowed_at": 1765776169.1933815
   },
   "https://dy987.dukadi.info/api/v1/client/subscribe?token=2eecbb636d71c36db20b59a84d59fcf0": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1765725808.6730454,
-    "next_allowed_at": 1765740208.6730454
+    "last_at": 1765747369.1933815,
+    "next_allowed_at": 1765776169.1933815
   },
   "http://your-service.com/api/v1/client/subscribe?token=xxxxxx": {
     "hits": 1,
@@ -5820,9 +5820,9 @@
     "next_allowed_at": 1765751764.9775107
   },
   "https://d2vjcldsa36rx2.cloudfront.net/api/v1/client/subscribe?token=60e590229922adf871b45dcb79d2c6bc": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1765737246.729457,
-    "next_allowed_at": 1765740846.729457
+    "last_at": 1765747369.1933815,
+    "next_allowed_at": 1765754569.1933815
   }
 }
