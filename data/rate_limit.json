@@ -4740,10 +4740,10 @@
     "next_allowed_at": 1764429920.9621074
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=80df1ff3079bdb997d00f22f14767a10": {
-    "hits": 40,
+    "hits": 41,
     "last_reason": "body-hint",
-    "last_at": 1765574610.0697882,
-    "next_allowed_at": 1765661010.0697882
+    "last_at": 1765694164.9775107,
+    "next_allowed_at": 1765780564.9775107
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=8d324cec9e8acbc0665020c2230823cd": {
     "hits": 43,
@@ -5784,16 +5784,16 @@
     "next_allowed_at": 1765737121.1292758
   },
   "https://dy269.dukadi.cv/api/v1/client/subscribe?token=1b53ddef506a26bd89dd857eeaef01db": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1765543894.2447855,
-    "next_allowed_at": 1765544794.2447855
+    "last_at": 1765694164.9775107,
+    "next_allowed_at": 1765695964.9775107
   },
   "https://dy987.dukadi.info/api/v1/client/subscribe?token=2eecbb636d71c36db20b59a84d59fcf0": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1765543894.2447855,
-    "next_allowed_at": 1765544794.2447855
+    "last_at": 1765694164.9775107,
+    "next_allowed_at": 1765695964.9775107
   },
   "http://your-service.com/api/v1/client/subscribe?token=xxxxxx": {
     "hits": 1,
@@ -5814,9 +5814,9 @@
     "next_allowed_at": 1765575510.0697882
   },
   "https://dash.pqjc.site/api/v1/client/subscribe?token=371f6a54dc202d4a2dedcda37cf8e": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1765660954.9083056,
-    "next_allowed_at": 1765689754.9083056
+    "last_at": 1765694164.9775107,
+    "next_allowed_at": 1765751764.9775107
   }
 }
