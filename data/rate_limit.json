@@ -240,10 +240,10 @@
     "next_allowed_at": 1765858068.9253926
   },
   "https://v1.vmess.top/api/v1/client/subscribe?token=4466f09766641e9e7b6e89fe084da55c": {
-    "hits": 51,
+    "hits": 52,
     "last_reason": "http 403",
-    "last_at": 1765737246.729457,
-    "next_allowed_at": 1765823646.729457
+    "last_at": 1765849965.4807918,
+    "next_allowed_at": 1765936365.4807918
   },
   "https://xn--4gq62f52gdss.com/api/v1/client/subscribe?token=xxxxx": {
     "hits": 84,
@@ -720,16 +720,16 @@
     "next_allowed_at": 1765858068.9253926
   },
   "https://ss.hxcq.cc/api/v1/client/subscribe?token=9dd158fa3432f8c6933bc96a54bf8572": {
-    "hits": 51,
-    "last_reason": "body-hint",
-    "last_at": 1765737246.729457,
-    "next_allowed_at": 1765823646.729457
+    "hits": 52,
+    "last_reason": "http 403",
+    "last_at": 1765849965.4807918,
+    "next_allowed_at": 1765936365.4807918
   },
   "https://ss.hxcq.cc/api/v1/client/subscribe?token=fb9bb47917afa2bfa7a0367463d6dc90": {
-    "hits": 51,
-    "last_reason": "body-hint",
-    "last_at": 1765737246.729457,
-    "next_allowed_at": 1765823646.729457
+    "hits": 52,
+    "last_reason": "http 403",
+    "last_at": 1765849965.4807918,
+    "next_allowed_at": 1765936365.4807918
   },
   "https://ysjc.us.kg/api/v1/client/subscribe?token=e24f65aa2693828bf7acc5043d17daae": {
     "hits": 82,
@@ -1464,10 +1464,10 @@
     "next_allowed_at": 1765858068.9253926
   },
   "https://mlshu.xyz/api/v1/client/subscribe?token=3ffbd62af7f8ecae6f863d65d3113e48": {
-    "hits": 49,
+    "hits": 50,
     "last_reason": "http 403",
-    "last_at": 1765737246.729457,
-    "next_allowed_at": 1765823646.729457
+    "last_at": 1765849965.4807918,
+    "next_allowed_at": 1765936365.4807918
   },
   "https://www2nd.ga-sub.hair/api/v1/client/subscribe?token=e5451d54aa982b10f07ec5c02afe0499": {
     "hits": 69,
@@ -5784,16 +5784,16 @@
     "next_allowed_at": 1765910316.2453997
   },
   "https://dy269.dukadi.cv/api/v1/client/subscribe?token=1b53ddef506a26bd89dd857eeaef01db": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1765780903.9437978,
-    "next_allowed_at": 1765838503.9437978
+    "last_at": 1765849965.4807918,
+    "next_allowed_at": 1765936365.4807918
   },
   "https://dy987.dukadi.info/api/v1/client/subscribe?token=2eecbb636d71c36db20b59a84d59fcf0": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1765780903.9437978,
-    "next_allowed_at": 1765838503.9437978
+    "last_at": 1765849965.4807918,
+    "next_allowed_at": 1765936365.4807918
   },
   "http://your-service.com/api/v1/client/subscribe?token=xxxxxx": {
     "hits": 1,
@@ -5826,27 +5826,33 @@
     "next_allowed_at": 1765870221.9906213
   },
   "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=fae301c15fe43d985f6729044db330c2": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1765833927.780222,
-    "next_allowed_at": 1765848327.780222
+    "last_at": 1765849965.4807918,
+    "next_allowed_at": 1765878765.4807918
   },
   "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=fae301c": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1765833927.780222,
-    "next_allowed_at": 1765837527.780222
+    "last_at": 1765849965.4807918,
+    "next_allowed_at": 1765857165.4807918
   },
   "https://proxyinfo.net/api/v1/client/subscribe?token=0ced743c0f42cc62a8826bbc80a82d02": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1765833927.780222,
-    "next_allowed_at": 1765835727.780222
+    "last_at": 1765849965.4807918,
+    "next_allowed_at": 1765853565.4807918
   },
   "https://sub.besttelecom.cc/api/v1/client/subscribe?token=564086401976d6d3821574e4e7f9c36c": {
+    "hits": 2,
+    "last_reason": "http 403",
+    "last_at": 1765849965.4807918,
+    "next_allowed_at": 1765851765.4807918
+  },
+  "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=c3400b086f": {
     "hits": 1,
     "last_reason": "http 403",
-    "last_at": 1765833927.780222,
-    "next_allowed_at": 1765834827.780222
+    "last_at": 1765849965.4807918,
+    "next_allowed_at": 1765850865.4807918
   }
 }
