@@ -4752,16 +4752,16 @@
     "next_allowed_at": 1765802724.5107722
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=bad3c9deeda196a7c4e1d051fb7dc2c0": {
-    "hits": 45,
+    "hits": 46,
     "last_reason": "body-hint",
-    "last_at": 1765704301.8975463,
-    "next_allowed_at": 1765790701.8975463
+    "last_at": 1765857665.9480367,
+    "next_allowed_at": 1765944065.9480367
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=c5c916cd8c7810789488b7aecd5b22d4": {
-    "hits": 45,
+    "hits": 46,
     "last_reason": "body-hint",
-    "last_at": 1765704301.8975463,
-    "next_allowed_at": 1765790701.8975463
+    "last_at": 1765857665.9480367,
+    "next_allowed_at": 1765944065.9480367
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=dca17f182cb0546b07fe4f53f99cdcf9": {
     "hits": 46,
@@ -5814,10 +5814,10 @@
     "next_allowed_at": 1765575510.0697882
   },
   "https://dash.pqjc.site/api/v1/client/subscribe?token=371f6a54dc202d4a2dedcda37cf8e": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1765763747.8287847,
-    "next_allowed_at": 1765850147.8287847
+    "last_at": 1765857665.9480367,
+    "next_allowed_at": 1765944065.9480367
   },
   "https://d2vjcldsa36rx2.cloudfront.net/api/v1/client/subscribe?token=60e590229922adf871b45dcb79d2c6bc": {
     "hits": 7,
@@ -5832,27 +5832,27 @@
     "next_allowed_at": 1765878765.4807918
   },
   "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=fae301c": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1765849965.4807918,
-    "next_allowed_at": 1765857165.4807918
+    "last_at": 1765857665.9480367,
+    "next_allowed_at": 1765872065.9480367
   },
   "https://proxyinfo.net/api/v1/client/subscribe?token=0ced743c0f42cc62a8826bbc80a82d02": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1765849965.4807918,
-    "next_allowed_at": 1765853565.4807918
+    "last_at": 1765857665.9480367,
+    "next_allowed_at": 1765864865.9480367
   },
   "https://sub.besttelecom.cc/api/v1/client/subscribe?token=564086401976d6d3821574e4e7f9c36c": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1765849965.4807918,
-    "next_allowed_at": 1765851765.4807918
+    "last_at": 1765857665.9480367,
+    "next_allowed_at": 1765861265.9480367
   },
   "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=c3400b086f": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1765849965.4807918,
-    "next_allowed_at": 1765850865.4807918
+    "last_at": 1765857665.9480367,
+    "next_allowed_at": 1765859465.9480367
   }
 }
