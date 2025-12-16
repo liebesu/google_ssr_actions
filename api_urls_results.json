@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-16T18:35:52.190842",
+  "timestamp": "2025-12-16T21:23:22.933551",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,8 +11,8 @@
   ],
   "regions_count": 4,
   "total_urls": 1,
-  "original_urls": 4,
+  "original_urls": 2,
   "urls": [
-    "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=c3400b086f"
+    "https://sub.besttelecom.cc/api/v1/client/subscribe?token=564086401976d6d3821574e4e7f9c36c"
   ]
 }
