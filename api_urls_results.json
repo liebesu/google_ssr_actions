@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-17T06:37:15.639672",
+  "timestamp": "2025-12-17T09:30:50.626122",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,9 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 1,
-  "original_urls": 4,
+  "total_urls": 3,
+  "original_urls": 7,
   "urls": [
-    "https://sub.besttelecom.cc/api/v1/client/subscribe?token=564086401976d6d3821574e4e7f9c36c"
+    "https://sub.besttelecom.cc/api/v1/client/subscribe?token=564086401976d6d3821574e4e7f9c36c",
+    "https://uuuukkkkrrrrttttllllmmmmcloudplmqazclub.com/api/v1/client/subscribe?token=f976f8637ea14cad03d1fc41a458e46d",
+    "https://mc.jiedianxielou.workers.dev/api/v1/client/subscribe?token=22a82bc9a50b426b944bdeca4c4c2168"
   ]
 }
