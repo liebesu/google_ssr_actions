@@ -5850,10 +5850,10 @@
     "next_allowed_at": 1766083124.998011
   },
   "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=c3400b086f": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1765943909.0272057,
-    "next_allowed_at": 1766001509.0272057
+    "last_at": 1766006710.5194058,
+    "next_allowed_at": 1766093110.5194058
   },
   "https://uuuukkkkrrrrttttllllmmmmcloudplmqazclub.com/api/v1/client/subscribe?token=f976f8637ea14cad03d1fc41a458e46d": {
     "hits": 7,
@@ -5862,15 +5862,15 @@
     "next_allowed_at": 1766042997.7072847
   },
   "https://B.top/smjc/api/v1/client/subscribe?token=B": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1765996724.998011,
-    "next_allowed_at": 1766000324.998011
+    "last_at": 1766006710.5194058,
+    "next_allowed_at": 1766013910.5194058
   },
   "https://www.yfjc.xyz/api/v1/client/subscribe?token=37aaba46d9133e0ac31264e516b11f99": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1765996724.998011,
-    "next_allowed_at": 1766000324.998011
+    "last_at": 1766006710.5194058,
+    "next_allowed_at": 1766013910.5194058
   }
 }
