@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-18T09:29:56.914321",
+  "timestamp": "2025-12-18T12:48:36.325177",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,7 +11,7 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 5,
+  "original_urls": 6,
   "urls": [
     "https://api.hbwqf.com/api/v1/client/subscribe?token=0ba019ed51d613aace6fdbe1c6a00c6d",
     "https://sub.mofeiyun.com/api/v1/client/subscribe?token=31f0b43dad7bfa255bf61a9475c3e359"
