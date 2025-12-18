@@ -552,10 +552,10 @@
     "next_allowed_at": 1766039983.5356658
   },
   "https://vpndata.shop/api/v1/client/subscribe?token=a0abc72c47d4c7ea48e4b700bee0c1b5": {
-    "hits": 24,
+    "hits": 25,
     "last_reason": "body-hint",
-    "last_at": 1765780903.9437978,
-    "next_allowed_at": 1765867303.9437978
+    "last_at": 1766039979.0462017,
+    "next_allowed_at": 1766126379.0462017
   },
   "http://gbtgurl01.org/api/v1/client/subscribe?token=36e8a67632a8d0f0c0eea58b099a0826": {
     "hits": 84,
@@ -5862,15 +5862,15 @@
     "next_allowed_at": 1766042997.7072847
   },
   "https://B.top/smjc/api/v1/client/subscribe?token=B": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1766022524.5739763,
-    "next_allowed_at": 1766036924.5739763
+    "last_at": 1766039979.0462017,
+    "next_allowed_at": 1766068779.0462017
   },
   "https://www.yfjc.xyz/api/v1/client/subscribe?token=37aaba46d9133e0ac31264e516b11f99": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1766022524.5739763,
-    "next_allowed_at": 1766036924.5739763
+    "last_at": 1766039979.0462017,
+    "next_allowed_at": 1766068779.0462017
   }
 }
