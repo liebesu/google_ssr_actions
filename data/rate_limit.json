@@ -720,16 +720,16 @@
     "next_allowed_at": 1766234911.9780746
   },
   "https://ss.hxcq.cc/api/v1/client/subscribe?token=9dd158fa3432f8c6933bc96a54bf8572": {
-    "hits": 55,
+    "hits": 56,
     "last_reason": "body-hint",
-    "last_at": 1766116851.9854827,
-    "next_allowed_at": 1766203251.9854827
+    "last_at": 1766212601.904093,
+    "next_allowed_at": 1766299001.904093
   },
   "https://ss.hxcq.cc/api/v1/client/subscribe?token=fb9bb47917afa2bfa7a0367463d6dc90": {
-    "hits": 55,
+    "hits": 56,
     "last_reason": "body-hint",
-    "last_at": 1766116851.9854827,
-    "next_allowed_at": 1766203251.9854827
+    "last_at": 1766212601.904093,
+    "next_allowed_at": 1766299001.904093
   },
   "https://ysjc.us.kg/api/v1/client/subscribe?token=e24f65aa2693828bf7acc5043d17daae": {
     "hits": 86,
@@ -6258,9 +6258,9 @@
     "next_allowed_at": 1766224001.062308
   },
   "https://fcsblka.fcsubcn.cc:2096/api/v1/client/subscribe?token=0574115a91a28fbc5e58157ef30c936a": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "body-hint",
-    "last_at": 1766202786.6125407,
-    "next_allowed_at": 1766204586.6125407
+    "last_at": 1766212601.904093,
+    "next_allowed_at": 1766216201.904093
   }
 }
