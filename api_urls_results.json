@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-21T15:21:42.939472",
+  "timestamp": "2025-12-21T18:31:16.854286",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,9 +11,9 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 4,
+  "original_urls": 2,
   "urls": [
-    "https://cygw.ciyuan78.help/api/v1/client/subscribe?token=b61b6eda298fa620f578cf37d881c30a",
-    "https://your-provider.com/api/v1/client/subscribe?token=xxxxx"
+    "https://101.43.12.60:28364/api/v1/client/subscribe?token=1f1bed7a132a3fcb58527589b3543bb8",
+    "https://dy.588511.xyz/api/v1/client/subscribe?token=8c9b3b55a8a5f010f7c943405e984aaa"
   ]
 }
