@@ -1212,10 +1212,10 @@
     "next_allowed_at": 1766330633.651724
   },
   "https://9yddd.whtjdasha.com/api/v1/client/subscribe?token=32c1ac591c70bd37b56dc8f81e789eb6": {
-    "hits": 73,
-    "last_reason": "http 403",
-    "last_at": 1765823916.2453997,
-    "next_allowed_at": 1765910316.2453997
+    "hits": 74,
+    "last_reason": "body-hint",
+    "last_at": 1766298979.2713287,
+    "next_allowed_at": 1766385379.2713287
   },
   "https://fn1.170809.xyz/api/v1/client/subscribe?token=d16d4532ee64cccfeeebe49fa3475fd0": {
     "hits": 84,
@@ -5796,10 +5796,10 @@
     "next_allowed_at": 1765936365.4807918
   },
   "http://your-service.com/api/v1/client/subscribe?token=xxxxxx": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1765574610.0697882,
-    "next_allowed_at": 1765575510.0697882
+    "last_at": 1766298979.2713287,
+    "next_allowed_at": 1766300779.2713287
   },
   "https://9yddd.whtjdasha.com/api/v1/client/subscribe?token=84487699ab097c119ecfc7f45d36080c": {
     "hits": 1,
@@ -6222,52 +6222,52 @@
     "next_allowed_at": 1766352117.261056
   },
   "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=04672f8b41a91b3f6409105b18f45b8c": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1766234694.4408803,
-    "next_allowed_at": 1766292294.4408803
+    "last_at": 1766298979.2713287,
+    "next_allowed_at": 1766385379.2713287
   },
   "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=1a5f05d2cadd031634fe0bc5098e3b00": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1766234694.4408803,
-    "next_allowed_at": 1766292294.4408803
+    "last_at": 1766298979.2713287,
+    "next_allowed_at": 1766385379.2713287
   },
   "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=c195d0fe1e3a56c89fa0a49e11cdc25f": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1766234694.4408803,
-    "next_allowed_at": 1766292294.4408803
+    "last_at": 1766298979.2713287,
+    "next_allowed_at": 1766385379.2713287
   },
   "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=cba51f966f8c269f77306adca0226aaf": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1766234694.4408803,
-    "next_allowed_at": 1766292294.4408803
+    "last_at": 1766298979.2713287,
+    "next_allowed_at": 1766385379.2713287
   },
   "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=d0647c025442e777c3b3d24b58a7013f": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1766234694.4408803,
-    "next_allowed_at": 1766292294.4408803
+    "last_at": 1766298979.2713287,
+    "next_allowed_at": 1766385379.2713287
   },
   "https://xxxmf.oxdtangx.top/api/v1/client/subscribe?token=e86cf92d6f65ca7ddd0ac283d4e8d7ea": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1766234694.4408803,
-    "next_allowed_at": 1766292294.4408803
+    "last_at": 1766298979.2713287,
+    "next_allowed_at": 1766385379.2713287
   },
   "https://fcsblka.fcsubcn.cc:2096/api/v1/client/subscribe?token=0574115a91a28fbc5e58157ef30c936a": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "body-hint",
-    "last_at": 1766255511.9269733,
-    "next_allowed_at": 1766284311.9269733
+    "last_at": 1766298979.2713287,
+    "next_allowed_at": 1766356579.2713287
   },
   "https://sub.mofeiyun.com/api/v1/client/subscribe?token=31f0b43dad7bfa255bf61a9475c3e359": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1766282319.4061334,
-    "next_allowed_at": 1766296719.4061334
+    "last_at": 1766298979.2713287,
+    "next_allowed_at": 1766327779.2713287
   },
   "https://skylumo.com/api/v1/client/subscribe?token=3fb64a9c1f3629cd2ca57ca24f51339a": {
     "hits": 1,
@@ -6282,9 +6282,9 @@
     "next_allowed_at": 1766256411.9269733
   },
   "https://sub123.71345.xyz/api/v1/client/subscribe?token=399838939b7d55f30d05013c66465b9d": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "body-hint",
-    "last_at": 1766289836.5394177,
-    "next_allowed_at": 1766297036.5394177
+    "last_at": 1766298979.2713287,
+    "next_allowed_at": 1766313379.2713287
   }
 }

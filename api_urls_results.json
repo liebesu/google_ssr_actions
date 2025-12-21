@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-21T04:01:28.795313",
+  "timestamp": "2025-12-21T06:33:48.552588",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 8,
+  "total_urls": 2,
+  "original_urls": 7,
   "urls": [
     "https://sub123.71345.xyz/api/v1/client/subscribe?token=399838939b7d55f30d05013c66465b9d",
-    "https://cygw.ciyuan78.help/api/v1/client/subscribe?token=b61b6eda298fa620f578cf37d881c30a",
-    "https://ciqiyuanjiuyubad01y.ciyuan78.help/api/v1/client/subscribe?token=07c5639681a7ada08f5320055c4a6571"
+    "https://cygw.ciyuan78.help/api/v1/client/subscribe?token=b61b6eda298fa620f578cf37d881c30a"
   ]
 }
