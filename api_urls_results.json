@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-20T21:19:31.851584",
+  "timestamp": "2025-12-21T01:56:02.281365",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,14 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 9,
+  "total_urls": 6,
+  "original_urls": 13,
   "urls": [
-    "https://api.hbwqf.com/api/v1/client/subscribe?token=0ba019ed51d613aace6fdbe1c6a00c6d",
     "https://sub123.71345.xyz/api/v1/client/subscribe?token=399838939b7d55f30d05013c66465b9d",
-    "https://cygw.ciyuan78.help/api/v1/client/subscribe?token=b61b6eda298fa620f578cf37d881c30a"
+    "https://cygw.ciyuan78.help/api/v1/client/subscribe?token=b61b6eda298fa620f578cf37d881c30a",
+    "https://ciqiyuanjiuyubad01y.ciyuan78.help/api/v1/client/subscribe?token=07c5639681a7ada08f5320055c4a6571",
+    "https://sub-1.smjcdh.top/smjc/api/v1/client/subscribe?token=f1ae535ca74677625afaec4be044c7c3",
+    "https://fn1.fnxx.cc/api/v1/client/subscribe?token=4004e977a85ab52550af01ecff107315",
+    "https://101.43.12.60:28364/api/v1/client/subscribe?token=117e91c511b382393e154361e46cd42f"
   ]
 }
