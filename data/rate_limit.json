@@ -1308,10 +1308,10 @@
     "next_allowed_at": 1760670922.231444
   },
   "https://cloudflaresub.yuwan.link/api/v1/client/subscribe?token=28523a41b161916657c537c3bfa009e6": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1766352168.5344048,
-    "next_allowed_at": 1766359368.5344048
+    "last_at": 1766368647.9708095,
+    "next_allowed_at": 1766383047.9708095
   },
   "https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a": {
     "hits": 2,
@@ -6294,9 +6294,9 @@
     "next_allowed_at": 1766331551.1317406
   },
   "https://lansecs.top/api/v1/client/subscribe?token=6064b9adf954d362416601b2d29ef35b": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1766352168.5344048,
-    "next_allowed_at": 1766353968.5344048
+    "last_at": 1766368647.9708095,
+    "next_allowed_at": 1766372247.9708095
   }
 }
