@@ -2412,10 +2412,10 @@
     "next_allowed_at": 1766558404.3631985
   },
   "https://powerwan.net/api/v1/client/subscribe?token=ed2c0d351b051eb820f9cda00ef55526": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1766494318.6544309,
-    "next_allowed_at": 1766497918.6544309
+    "last_at": 1766503651.3259523,
+    "next_allowed_at": 1766510851.3259523
   },
   "https://proxyinfo.net/api/v1/client/subscribe?token=e8fda1861dfc7b660e347d273b3df97b": {
     "hits": 53,
@@ -4740,10 +4740,10 @@
     "next_allowed_at": 1765850147.8287847
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=80df1ff3079bdb997d00f22f14767a10": {
-    "hits": 46,
+    "hits": 47,
     "last_reason": "body-hint",
-    "last_at": 1766352168.5344048,
-    "next_allowed_at": 1766438568.5344048
+    "last_at": 1766503651.3259523,
+    "next_allowed_at": 1766590051.3259523
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=8d324cec9e8acbc0665020c2230823cd": {
     "hits": 50,
@@ -6294,15 +6294,15 @@
     "next_allowed_at": 1766331551.1317406
   },
   "https://lansecs.top/api/v1/client/subscribe?token=6064b9adf954d362416601b2d29ef35b": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1766438592.5571973,
-    "next_allowed_at": 1766496192.5571973
+    "last_at": 1766503651.3259523,
+    "next_allowed_at": 1766590051.3259523
   },
   "https://ymjc.cfd/api/v1/client/subscribe?token=7d9184fa9e60ecc799110054297d89a6": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1766494318.6544309,
-    "next_allowed_at": 1766495218.6544309
+    "last_at": 1766503651.3259523,
+    "next_allowed_at": 1766505451.3259523
   }
 }
