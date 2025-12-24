@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-24T03:58:31.376360",
+  "timestamp": "2025-12-24T06:37:06.763360",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,9 +11,9 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 5,
+  "original_urls": 6,
   "urls": [
-    "https://ymjc.cfd/api/v1/client/subscribe?token=7d9184fa9e60ecc799110054297d89a6",
-    "https://101.43.12.60:28364/api/v1/client/subscribe?token=8db900e484b1bc915cb3cf7d5ff8ff6f"
+    "https://cresub.trafficmanager.net/api/v1/client/subscribe?token=59bff633e8c286c80035ffbb3190d45c",
+    "https://ymjc.cfd/api/v1/client/subscribe?token=7d9184fa9e60ecc799110054297d89a6"
   ]
 }
