@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-24T12:47:38.501418",
+  "timestamp": "2025-12-24T15:24:29.990346",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 6,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://cresub.trafficmanager.net/api/v1/client/subscribe?token=59bff633e8c286c80035ffbb3190d45c",
-    "https://ymjc.cfd/api/v1/client/subscribe?token=7d9184fa9e60ecc799110054297d89a6",
-    "https://cyberguard.cfd/api/v1/client/subscribe?token=07be47a8cd3a22a417905ab2e41ccf28"
+    "https://cresub.trafficmanager.net/api/v1/client/subscribe?token=59bff633e8c286c80035ffbb3190d45c"
   ]
 }
