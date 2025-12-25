@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-25T04:00:54.510614",
+  "timestamp": "2025-12-25T12:45:55.201929",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,8 +11,8 @@
   ],
   "regions_count": 4,
   "total_urls": 1,
-  "original_urls": 4,
+  "original_urls": 3,
   "urls": [
-    "https://cresub.trafficmanager.net/api/v1/client/subscribe?token=59bff633e8c286c80035ffbb3190d45c"
+    "https://api.yingtaowangluo.net/api/v1/client/subscribe?token=46f255c92552b27e930362e1ef4ba961"
   ]
 }
