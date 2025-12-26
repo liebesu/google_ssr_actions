@@ -761,10 +761,10 @@
   },
   {
     "date": "2025-12-26",
-    "google_added": 69,
+    "google_added": 70,
     "github_added": 5,
     "new_total": 1,
-    "removed_total": 1,
-    "alive_total": 74
+    "removed_total": 0,
+    "alive_total": 75
   }
 ]
