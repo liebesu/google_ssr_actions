@@ -2412,10 +2412,10 @@
     "next_allowed_at": 1766753303.7905767
   },
   "https://powerwan.net/api/v1/client/subscribe?token=ed2c0d351b051eb820f9cda00ef55526": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "body-hint",
-    "last_at": 1766644745.0128314,
-    "next_allowed_at": 1766731145.0128314
+    "last_at": 1766741299.7020106,
+    "next_allowed_at": 1766827699.7020106
   },
   "https://proxyinfo.net/api/v1/client/subscribe?token=e8fda1861dfc7b660e347d273b3df97b": {
     "hits": 56,
@@ -3804,10 +3804,10 @@
     "next_allowed_at": 1765578210.0697882
   },
   "https://ch.owokkvsxks.store/api/v1/client/subscribe?token=14d9b7ad8be7234188ee330d3bb511f7": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "body-hint",
-    "last_at": 1766644745.0128314,
-    "next_allowed_at": 1766731145.0128314
+    "last_at": 1766741299.7020106,
+    "next_allowed_at": 1766827699.7020106
   },
   "https://ch.owokkvsxks.store/api/v1/client/subscribe?token=3b000590951e6a7e3e83cc720d6b6eda": {
     "hits": 8,
@@ -5646,10 +5646,10 @@
     "next_allowed_at": 1766762754.4035954
   },
   "https://oss8.cauenvao.click/api/v1/client/subscribe?token=a396379c8c9383d1959339f768742ce6": {
-    "hits": 21,
+    "hits": 22,
     "last_reason": "http 403",
-    "last_at": 1766644745.0128314,
-    "next_allowed_at": 1766731145.0128314
+    "last_at": 1766741299.7020106,
+    "next_allowed_at": 1766827699.7020106
   },
   "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=cef2f94309d0f177012da649e3c52178": {
     "hits": 25,
@@ -5694,10 +5694,10 @@
     "next_allowed_at": 1766753303.7905767
   },
   "https://oss7.cauenvao.click/api/v1/client/subscribe?token=NzMzOTU6MWE2ZTFiYjAzZGNjNjdiY2E4MWJhMDRkNGU5MzhjNmRmMDZmMTIzOQ": {
-    "hits": 21,
+    "hits": 22,
     "last_reason": "http 403",
-    "last_at": 1766644745.0128314,
-    "next_allowed_at": 1766731145.0128314
+    "last_at": 1766741299.7020106,
+    "next_allowed_at": 1766827699.7020106
   },
   "https://dy-2.smjcdh.com/smjc/api/v1/client/subscribe?token=ddef77045932d95887bc27846bed2fe8": {
     "hits": 24,
@@ -6318,10 +6318,10 @@
     "next_allowed_at": 1766817535.5864654
   },
   "https://cyberguard.cfd/api/v1/client/subscribe?token=07be47a8cd3a22a417905ab2e41ccf28": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1766676354.4035954,
-    "next_allowed_at": 1766733954.4035954
+    "last_at": 1766741299.7020106,
+    "next_allowed_at": 1766827699.7020106
   },
   "https://qucloud.top/api/v1/client/subscribe?token=277d193b4820fbef25d6f43e21677187": {
     "hits": 7,
