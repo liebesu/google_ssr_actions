@@ -5622,10 +5622,10 @@
     "next_allowed_at": 1766713988.2108774
   },
   "https://has.ninja/api/v1/client/subscribe?token=4450159ebd8f980287eba6732c190c2d": {
-    "hits": 21,
+    "hits": 22,
     "last_reason": "body-hint",
-    "last_at": 1766611415.2639678,
-    "next_allowed_at": 1766697815.2639678
+    "last_at": 1766713951.9410124,
+    "next_allowed_at": 1766800351.9410124
   },
   "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7": {
     "hits": 26,
@@ -6360,9 +6360,15 @@
     "next_allowed_at": 1766745320.1639247
   },
   "https://api.yingtaowangluo.net/api/v1/client/subscribe?token=46f255c92552b27e930362e1ef4ba961": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1766697822.2353969,
-    "next_allowed_at": 1766705022.2353969
+    "last_at": 1766713951.9410124,
+    "next_allowed_at": 1766728351.9410124
+  },
+  "https://cresub.trafficmanager.net/api/v1/client/subscribe?token=59bff633e8c286c80035ffbb3190d45c": {
+    "hits": 1,
+    "last_reason": "body-hint",
+    "last_at": 1766713951.9410124,
+    "next_allowed_at": 1766714851.9410124
   }
 }
