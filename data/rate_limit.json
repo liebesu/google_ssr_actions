@@ -2412,10 +2412,10 @@
     "next_allowed_at": 1766839739.1948087
   },
   "https://powerwan.net/api/v1/client/subscribe?token=ed2c0d351b051eb820f9cda00ef55526": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "body-hint",
-    "last_at": 1766741299.7020106,
-    "next_allowed_at": 1766827699.7020106
+    "last_at": 1766839562.3206928,
+    "next_allowed_at": 1766925962.3206928
   },
   "https://proxyinfo.net/api/v1/client/subscribe?token=e8fda1861dfc7b660e347d273b3df97b": {
     "hits": 57,
@@ -3804,10 +3804,10 @@
     "next_allowed_at": 1765578210.0697882
   },
   "https://ch.owokkvsxks.store/api/v1/client/subscribe?token=14d9b7ad8be7234188ee330d3bb511f7": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "body-hint",
-    "last_at": 1766741299.7020106,
-    "next_allowed_at": 1766827699.7020106
+    "last_at": 1766839562.3206928,
+    "next_allowed_at": 1766925962.3206928
   },
   "https://ch.owokkvsxks.store/api/v1/client/subscribe?token=3b000590951e6a7e3e83cc720d6b6eda": {
     "hits": 9,
@@ -5646,10 +5646,10 @@
     "next_allowed_at": 1766849198.839513
   },
   "https://oss8.cauenvao.click/api/v1/client/subscribe?token=a396379c8c9383d1959339f768742ce6": {
-    "hits": 22,
+    "hits": 23,
     "last_reason": "http 403",
-    "last_at": 1766741299.7020106,
-    "next_allowed_at": 1766827699.7020106
+    "last_at": 1766839562.3206928,
+    "next_allowed_at": 1766925962.3206928
   },
   "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=cef2f94309d0f177012da649e3c52178": {
     "hits": 26,
@@ -5694,10 +5694,10 @@
     "next_allowed_at": 1766839739.1948087
   },
   "https://oss7.cauenvao.click/api/v1/client/subscribe?token=NzMzOTU6MWE2ZTFiYjAzZGNjNjdiY2E4MWJhMDRkNGU5MzhjNmRmMDZmMTIzOQ": {
-    "hits": 22,
+    "hits": 23,
     "last_reason": "http 403",
-    "last_at": 1766741299.7020106,
-    "next_allowed_at": 1766827699.7020106
+    "last_at": 1766839562.3206928,
+    "next_allowed_at": 1766925962.3206928
   },
   "https://dy-2.smjcdh.com/smjc/api/v1/client/subscribe?token=ddef77045932d95887bc27846bed2fe8": {
     "hits": 25,
@@ -6318,10 +6318,10 @@
     "next_allowed_at": 1766913944.7595768
   },
   "https://cyberguard.cfd/api/v1/client/subscribe?token=07be47a8cd3a22a417905ab2e41ccf28": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1766741299.7020106,
-    "next_allowed_at": 1766827699.7020106
+    "last_at": 1766839562.3206928,
+    "next_allowed_at": 1766925962.3206928
   },
   "https://qucloud.top/api/v1/client/subscribe?token=277d193b4820fbef25d6f43e21677187": {
     "hits": 8,
@@ -6372,15 +6372,21 @@
     "next_allowed_at": 1766714851.9410124
   },
   "https://jsjc.cfd/api/v1/client/subscribe?token=41d2cc3da79c5349481197cf934951f1": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1766817420.670169,
-    "next_allowed_at": 1766831820.670169
+    "last_at": 1766839562.3206928,
+    "next_allowed_at": 1766868362.3206928
   },
   "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=2be092a4abc6c3dcb59093ffb3197963": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1766827544.7595768,
-    "next_allowed_at": 1766829344.7595768
+    "last_at": 1766839562.3206928,
+    "next_allowed_at": 1766843162.3206928
+  },
+  "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=bd209b283c7ba4a3d1fadc40e881c98a": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1766839562.3206928,
+    "next_allowed_at": 1766840462.3206928
   }
 }
