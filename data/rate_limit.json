@@ -5622,10 +5622,10 @@
     "next_allowed_at": 1766808073.4736633
   },
   "https://has.ninja/api/v1/client/subscribe?token=4450159ebd8f980287eba6732c190c2d": {
-    "hits": 22,
+    "hits": 23,
     "last_reason": "body-hint",
-    "last_at": 1766713951.9410124,
-    "next_allowed_at": 1766800351.9410124
+    "last_at": 1766807965.620809,
+    "next_allowed_at": 1766894365.620809
   },
   "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7": {
     "hits": 27,
@@ -6372,9 +6372,9 @@
     "next_allowed_at": 1766714851.9410124
   },
   "https://jsjc.cfd/api/v1/client/subscribe?token=41d2cc3da79c5349481197cf934951f1": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1766800233.2525852,
-    "next_allowed_at": 1766803833.2525852
+    "last_at": 1766807965.620809,
+    "next_allowed_at": 1766815165.620809
   }
 }
