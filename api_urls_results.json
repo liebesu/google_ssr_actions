@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-27T18:31:54.252668",
+  "timestamp": "2025-12-28T02:01:00.909558",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
+  "total_urls": 2,
   "original_urls": 4,
   "urls": [
     "https://example.com/api/v1/client/subscribe?token=xxx",
-    "http://gg.gg/11bl3ohttps://catvodtv.github.io/catTV.jsonhttps://crushs.top/api/v1/client/subscribe?token=2fdc83b7d87c795664479e9ccd91981ahttps",
-    "https://crushs.top/api/v1/client/subscribe?token=2fdc83b7d87c795664479e9ccd91981a"
+    "http://so.xfxssr.me/api/v1/client/subscribe?token=7854d59f38ac51700730b9e782c5160c"
   ]
 }
