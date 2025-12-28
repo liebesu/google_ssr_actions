@@ -2412,10 +2412,10 @@
     "next_allowed_at": 1766935452.3685946
   },
   "https://powerwan.net/api/v1/client/subscribe?token=ed2c0d351b051eb820f9cda00ef55526": {
-    "hits": 10,
+    "hits": 11,
     "last_reason": "body-hint",
-    "last_at": 1766839562.3206928,
-    "next_allowed_at": 1766925962.3206928
+    "last_at": 1766925990.3930745,
+    "next_allowed_at": 1767012390.3930745
   },
   "https://proxyinfo.net/api/v1/client/subscribe?token=e8fda1861dfc7b660e347d273b3df97b": {
     "hits": 58,
@@ -3804,10 +3804,10 @@
     "next_allowed_at": 1765578210.0697882
   },
   "https://ch.owokkvsxks.store/api/v1/client/subscribe?token=14d9b7ad8be7234188ee330d3bb511f7": {
-    "hits": 10,
+    "hits": 11,
     "last_reason": "body-hint",
-    "last_at": 1766839562.3206928,
-    "next_allowed_at": 1766925962.3206928
+    "last_at": 1766925990.3930745,
+    "next_allowed_at": 1767012390.3930745
   },
   "https://ch.owokkvsxks.store/api/v1/client/subscribe?token=3b000590951e6a7e3e83cc720d6b6eda": {
     "hits": 10,
@@ -5646,10 +5646,10 @@
     "next_allowed_at": 1766946867.4089015
   },
   "https://oss8.cauenvao.click/api/v1/client/subscribe?token=a396379c8c9383d1959339f768742ce6": {
-    "hits": 23,
+    "hits": 24,
     "last_reason": "http 403",
-    "last_at": 1766839562.3206928,
-    "next_allowed_at": 1766925962.3206928
+    "last_at": 1766925990.3930745,
+    "next_allowed_at": 1767012390.3930745
   },
   "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=cef2f94309d0f177012da649e3c52178": {
     "hits": 27,
@@ -5694,10 +5694,10 @@
     "next_allowed_at": 1766935452.3685946
   },
   "https://oss7.cauenvao.click/api/v1/client/subscribe?token=NzMzOTU6MWE2ZTFiYjAzZGNjNjdiY2E4MWJhMDRkNGU5MzhjNmRmMDZmMTIzOQ": {
-    "hits": 23,
+    "hits": 24,
     "last_reason": "http 403",
-    "last_at": 1766839562.3206928,
-    "next_allowed_at": 1766925962.3206928
+    "last_at": 1766925990.3930745,
+    "next_allowed_at": 1767012390.3930745
   },
   "https://dy-2.smjcdh.com/smjc/api/v1/client/subscribe?token=ddef77045932d95887bc27846bed2fe8": {
     "hits": 26,
@@ -6306,22 +6306,22 @@
     "next_allowed_at": 1766935452.3685946
   },
   "https://nVx81Q0ouJA21x8U.xn--fiqs8s40dz2j.com/api/v1/client/subscribe?token=1f6xxxxxxxxxxx": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "http 403",
-    "last_at": 1766827544.7595768,
-    "next_allowed_at": 1766913944.7595768
+    "last_at": 1766925990.3930745,
+    "next_allowed_at": 1767012390.3930745
   },
   "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=f9a68e380047ce9f24f68833bc897c6c": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "http 403",
-    "last_at": 1766827544.7595768,
-    "next_allowed_at": 1766913944.7595768
+    "last_at": 1766925990.3930745,
+    "next_allowed_at": 1767012390.3930745
   },
   "https://cyberguard.cfd/api/v1/client/subscribe?token=07be47a8cd3a22a417905ab2e41ccf28": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "http 403",
-    "last_at": 1766839562.3206928,
-    "next_allowed_at": 1766925962.3206928
+    "last_at": 1766925990.3930745,
+    "next_allowed_at": 1767012390.3930745
   },
   "https://qucloud.top/api/v1/client/subscribe?token=277d193b4820fbef25d6f43e21677187": {
     "hits": 9,
@@ -6360,10 +6360,10 @@
     "next_allowed_at": 1766935452.3685946
   },
   "https://api.yingtaowangluo.net/api/v1/client/subscribe?token=46f255c92552b27e930362e1ef4ba961": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1766827544.7595768,
-    "next_allowed_at": 1766913944.7595768
+    "last_at": 1766925990.3930745,
+    "next_allowed_at": 1767012390.3930745
   },
   "https://cresub.trafficmanager.net/api/v1/client/subscribe?token=59bff633e8c286c80035ffbb3190d45c": {
     "hits": 1,
@@ -6378,10 +6378,10 @@
     "next_allowed_at": 1766928183.88956
   },
   "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=2be092a4abc6c3dcb59093ffb3197963": {
-    "hits": 6,
-    "last_reason": "body-hint",
-    "last_at": 1766887410.477082,
-    "next_allowed_at": 1766916210.477082
+    "hits": 7,
+    "last_reason": "http 403",
+    "last_at": 1766925990.3930745,
+    "next_allowed_at": 1766983590.3930745
   },
   "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=bd209b283c7ba4a3d1fadc40e881c98a": {
     "hits": 6,
