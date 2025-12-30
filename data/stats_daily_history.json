@@ -793,10 +793,10 @@
   },
   {
     "date": "2025-12-30",
-    "google_added": 66,
+    "google_added": 64,
     "github_added": 6,
     "new_total": 1,
-    "removed_total": 2,
-    "alive_total": 72
+    "removed_total": 3,
+    "alive_total": 70
   }
 ]
