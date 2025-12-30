@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-30T09:28:29.309867",
+  "timestamp": "2025-12-30T12:49:27.312684",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 7,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=23144d2206df3b0f2d0adb519d200278",
     "https://www8th.ga-sub.lat/api/v1/client/subscribe?token=5b293de17123dc4a461bad4ea2280976"
   ]
 }
