@@ -6426,15 +6426,21 @@
     "next_allowed_at": 1767130795.1363351
   },
   "https://abc.aayjm.com/api/v1/client/subscribe?token=9e56ee66f35cf55a22e105de8638edf1": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1767146041.4022253,
-    "next_allowed_at": 1767146941.4022253
+    "last_at": 1767153845.501204,
+    "next_allowed_at": 1767155645.501204
   },
   "https://api.dingyueapi.win/api/v1/client/subscribe?token=159af437936c214f358a8179d9880482": {
+    "hits": 2,
+    "last_reason": "http 403",
+    "last_at": 1767153845.501204,
+    "next_allowed_at": 1767155645.501204
+  },
+  "https://subpoke.xn--4gsvmh74cwxi.cn/api/v1/client/subscribe?token=xxx": {
     "hits": 1,
     "last_reason": "http 403",
-    "last_at": 1767146041.4022253,
-    "next_allowed_at": 1767146941.4022253
+    "last_at": 1767153845.501204,
+    "next_allowed_at": 1767154745.501204
   }
 }
