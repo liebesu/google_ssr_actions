@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-31T04:01:38.755312",
+  "timestamp": "2025-12-31T06:37:35.098857",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,9 +11,9 @@
   ],
   "regions_count": 4,
   "total_urls": 2,
-  "original_urls": 8,
+  "original_urls": 5,
   "urls": [
     "https://subpoke.xn--4gsvmh74cwxi.cn/api/v1/client/subscribe?token=xxx",
-    "https://www8th.ga-sub.lat/api/v1/client/subscribe?token=5b293de17123dc4a461bad4ea2280976"
+    "https://101.43.12.60:28364/api/v1/client/subscribe?token=efa89bdedcec648e2a0add8dc36b63ef"
   ]
 }
