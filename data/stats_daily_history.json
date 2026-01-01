@@ -809,10 +809,10 @@
   },
   {
     "date": "2026-01-01",
-    "google_added": 53,
+    "google_added": 52,
     "github_added": 6,
-    "new_total": 2,
-    "removed_total": 0,
-    "alive_total": 59
+    "new_total": 1,
+    "removed_total": 2,
+    "alive_total": 58
   }
 ]
