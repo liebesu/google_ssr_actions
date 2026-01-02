@@ -516,10 +516,10 @@
     "next_allowed_at": 1767444492.5753164
   },
   "http://148.135.67.219/api/v1/client/subscribe?token=5fdc037af8a1d09c7": {
-    "hits": 96,
-    "last_reason": "http 403",
-    "last_at": 1767022105.9734256,
-    "next_allowed_at": 1767108505.9734256
+    "hits": 97,
+    "last_reason": "body-hint",
+    "last_at": 1767378986.3733685,
+    "next_allowed_at": 1767465386.3733685
   },
   "https://qufanfan.info/api/v1/client/subscribe?token=00d1eff0820cffa7b904f3ed0dcee8d9": {
     "hits": 68,
@@ -2418,10 +2418,10 @@
     "next_allowed_at": 1767379011.6990714
   },
   "https://proxyinfo.net/api/v1/client/subscribe?token=e8fda1861dfc7b660e347d273b3df97b": {
-    "hits": 62,
+    "hits": 63,
     "last_reason": "http 403",
-    "last_at": 1767281219.376172,
-    "next_allowed_at": 1767367619.376172
+    "last_at": 1767378986.3733685,
+    "next_allowed_at": 1767465386.3733685
   },
   "https://qianggewangluo.link/api/v1/client/subscribe?token=bfe07da013500835a50c11a94a0b5f86": {
     "hits": 2,
@@ -4650,10 +4650,10 @@
     "next_allowed_at": 1765676765.318502
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=3cfd3dc3836b3f650bba28ee0b731bda": {
-    "hits": 40,
+    "hits": 41,
     "last_reason": "body-hint",
-    "last_at": 1767240787.969766,
-    "next_allowed_at": 1767327187.969766
+    "last_at": 1767378986.3733685,
+    "next_allowed_at": 1767465386.3733685
   },
   "https://jennie.rsqpq.cn/api/v1/client/subscribe?token=f525b547a0ef850bbb033b5e614db8d5": {
     "hits": 61,
@@ -4710,40 +4710,40 @@
     "next_allowed_at": 1767389078.632958
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=16c299297bca84972869464564f5cc9d": {
-    "hits": 38,
+    "hits": 39,
     "last_reason": "body-hint",
-    "last_at": 1767240787.969766,
-    "next_allowed_at": 1767327187.969766
+    "last_at": 1767378986.3733685,
+    "next_allowed_at": 1767465386.3733685
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=1f7dd7c6127aea2f376c8d0cb8a03fa0": {
-    "hits": 38,
+    "hits": 39,
     "last_reason": "body-hint",
-    "last_at": 1767240787.969766,
-    "next_allowed_at": 1767327187.969766
+    "last_at": 1767378986.3733685,
+    "next_allowed_at": 1767465386.3733685
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=29dcd18fd35b47f790003ee8c313a133": {
-    "hits": 38,
+    "hits": 39,
     "last_reason": "body-hint",
-    "last_at": 1767240787.969766,
-    "next_allowed_at": 1767327187.969766
+    "last_at": 1767378986.3733685,
+    "next_allowed_at": 1767465386.3733685
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=2b34f61827a84e001cfaf19674e121b8": {
-    "hits": 38,
+    "hits": 39,
     "last_reason": "body-hint",
-    "last_at": 1767240787.969766,
-    "next_allowed_at": 1767327187.969766
+    "last_at": 1767378986.3733685,
+    "next_allowed_at": 1767465386.3733685
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=80d9e48a280938c6c9f6b8dd63723522": {
-    "hits": 38,
+    "hits": 39,
     "last_reason": "body-hint",
-    "last_at": 1767240787.969766,
-    "next_allowed_at": 1767327187.969766
+    "last_at": 1767378986.3733685,
+    "next_allowed_at": 1767465386.3733685
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=80df1ff3079bdb997d00f22f14767a10": {
-    "hits": 53,
+    "hits": 54,
     "last_reason": "body-hint",
-    "last_at": 1767194785.828547,
-    "next_allowed_at": 1767281185.828547
+    "last_at": 1767378986.3733685,
+    "next_allowed_at": 1767465386.3733685
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=8d324cec9e8acbc0665020c2230823cd": {
     "hits": 58,
@@ -6466,5 +6466,17 @@
     "last_reason": "body-hint",
     "last_at": 1767336001.3027344,
     "next_allowed_at": 1767336901.3027344
+  },
+  "http://shiyuanyinian.xyz/api/v1/client/subscribe?token=f64ab6f1d58f1120064b61da41e84f47": {
+    "hits": 1,
+    "last_reason": "body-hint",
+    "last_at": 1767378986.3733685,
+    "next_allowed_at": 1767379886.3733685
+  },
+  "https://api.hbwqf.com/api/v1/client/subscribe?token=0ba019ed51d613aace6fdbe1c6a00c6d": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1767378986.3733685,
+    "next_allowed_at": 1767379886.3733685
   }
 }
