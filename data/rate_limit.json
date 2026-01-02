@@ -6270,16 +6270,16 @@
     "next_allowed_at": 1767319465.5611982
   },
   "https://skylumo.com/api/v1/client/subscribe?token=3fb64a9c1f3629cd2ca57ca24f51339a": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1767249592.3731275,
-    "next_allowed_at": 1767307192.3731275
+    "last_at": 1767318937.8669298,
+    "next_allowed_at": 1767405337.8669298
   },
   "https://skylumo.com/api/v1/client/subscribe?token=7ff4958ee8d2efb1246e1922397a52fe": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1767249592.3731275,
-    "next_allowed_at": 1767307192.3731275
+    "last_at": 1767318937.8669298,
+    "next_allowed_at": 1767405337.8669298
   },
   "https://sub123.71345.xyz/api/v1/client/subscribe?token=399838939b7d55f30d05013c66465b9d": {
     "hits": 17,
@@ -6456,9 +6456,9 @@
     "next_allowed_at": 1767272696.225015
   },
   "https://dy.dhh.gay/api/v1/client/subscribe?token=5a525ca1b6ef742cae9a4955d8fccf10": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1767302678.632958,
-    "next_allowed_at": 1767304478.632958
+    "last_at": 1767318937.8669298,
+    "next_allowed_at": 1767322537.8669298
   }
 }
