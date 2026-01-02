@@ -5622,10 +5622,10 @@
     "next_allowed_at": 1767367619.376172
   },
   "https://has.ninja/api/v1/client/subscribe?token=4450159ebd8f980287eba6732c190c2d": {
-    "hits": 27,
+    "hits": 28,
     "last_reason": "body-hint",
-    "last_at": 1767233065.5611982,
-    "next_allowed_at": 1767319465.5611982
+    "last_at": 1767346218.4866004,
+    "next_allowed_at": 1767432618.4866004
   },
   "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7": {
     "hits": 33,

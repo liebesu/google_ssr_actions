@@ -817,10 +817,10 @@
   },
   {
     "date": "2026-01-02",
-    "google_added": 65,
+    "google_added": 67,
     "github_added": 6,
-    "new_total": 4,
-    "removed_total": 2,
-    "alive_total": 71
+    "new_total": 2,
+    "removed_total": 0,
+    "alive_total": 73
   }
 ]
