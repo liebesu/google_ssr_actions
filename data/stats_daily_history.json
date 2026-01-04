@@ -833,10 +833,10 @@
   },
   {
     "date": "2026-01-04",
-    "google_added": 63,
+    "google_added": 61,
     "github_added": 6,
-    "new_total": 2,
-    "removed_total": 1,
-    "alive_total": 69
+    "new_total": 1,
+    "removed_total": 3,
+    "alive_total": 67
   }
 ]
