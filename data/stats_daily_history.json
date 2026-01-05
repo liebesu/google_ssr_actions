@@ -841,10 +841,10 @@
   },
   {
     "date": "2026-01-05",
-    "google_added": 60,
-    "github_added": 7,
-    "new_total": 4,
+    "google_added": 59,
+    "github_added": 6,
+    "new_total": 0,
     "removed_total": 2,
-    "alive_total": 67
+    "alive_total": 65
   }
 ]
