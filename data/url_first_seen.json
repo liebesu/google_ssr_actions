@@ -1219,5 +1219,6 @@
   "https://fn.234923.icu/api/v1/client/subscribe?token=8d9e8c6773cd03d15f0d96dbbfef7ba9": "2026-01-04",
   "https://example.com/api/v1/client/subscribe?token=11451419198101145141919810114514": "2026-01-05",
   "https://d41d8cd98f-1ytapi02.1ytsub.com/api/v1/client/subscribe?token=465fd6e2b5c03cfb242b140f5395a222": "2026-01-05",
-  "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=1a9d71e3e8d96ce57f6c5645d3762ebf": "2026-01-05"
+  "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=1a9d71e3e8d96ce57f6c5645d3762ebf": "2026-01-05",
+  "https://scurl.izenny.com/api/v1/client/subscribe?token=712791573bf1e92d661d25675b427161": "2026-01-06"
 }
