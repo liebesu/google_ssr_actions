@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-06T12:50:15.573265",
+  "timestamp": "2026-01-06T15:26:44.998146",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 8,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://a001.microunsync.com/api/v1/client/subscribe?token=2be90a04a96ffa434532d7f02269c8e1",
-    "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=1a9d71e3e8d96ce57f6c5645d3762ebf"
+    "https://a001.microunsync.com/api/v1/client/subscribe?token=2be90a04a96ffa434532d7f02269c8e1"
   ]
 }
