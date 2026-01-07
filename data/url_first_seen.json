@@ -1222,5 +1222,7 @@
   "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=1a9d71e3e8d96ce57f6c5645d3762ebf": "2026-01-05",
   "https://scurl.izenny.com/api/v1/client/subscribe?token=712791573bf1e92d661d25675b427161": "2026-01-06",
   "https://a001.microunsync.com/api/v1/client/subscribe?token=2be90a04a96ffa434532d7f02269c8e1": "2026-01-06",
-  "https://login.yfjc.xyz/api/v1/client/subscribe?token=92698f052e6ec2a71149ef277ad08a98": "2026-01-07"
+  "https://login.yfjc.xyz/api/v1/client/subscribe?token=92698f052e6ec2a71149ef277ad08a98": "2026-01-07",
+  "https://jsjc.cfd/api/v1/client/subscribe?token=41d2cc3da79c5349481197": "2026-01-07",
+  "https://proxyinfo.net/api/v1/client/subscribe?token=3fd0819483a550b2f7a1456021e39060": "2026-01-07"
 }
