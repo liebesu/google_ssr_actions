@@ -552,10 +552,10 @@
     "next_allowed_at": 1767068050.6086717
   },
   "https://vpndata.shop/api/v1/client/subscribe?token=a0abc72c47d4c7ea48e4b700bee0c1b5": {
-    "hits": 35,
-    "last_reason": "body-hint",
-    "last_at": 1767638350.8559682,
-    "next_allowed_at": 1767724750.8559682
+    "hits": 36,
+    "last_reason": "http 403",
+    "last_at": 1767821162.9454815,
+    "next_allowed_at": 1767907562.9454815
   },
   "http://gbtgurl01.org/api/v1/client/subscribe?token=36e8a67632a8d0f0c0eea58b099a0826": {
     "hits": 103,
@@ -1404,10 +1404,10 @@
     "next_allowed_at": 1767845168.36012
   },
   "https://s.gwzxwk.com/api/v1/client/subscribe?token=f7577a5ef586b00d0774112a337c2d1e": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "body-hint",
-    "last_at": 1766472004.3631985,
-    "next_allowed_at": 1766479204.3631985
+    "last_at": 1767821162.9454815,
+    "next_allowed_at": 1767835562.9454815
   },
   "https://riolu.azure-api.net/api/v1/client/subscribe?token=4881d2ce996e6494d53a0d9598557352": {
     "hits": 92,
@@ -2424,10 +2424,10 @@
     "next_allowed_at": 1767845168.36012
   },
   "https://qianggewangluo.link/api/v1/client/subscribe?token=bfe07da013500835a50c11a94a0b5f86": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1767758768.36012,
-    "next_allowed_at": 1767816368.36012
+    "last_at": 1767821162.9454815,
+    "next_allowed_at": 1767907562.9454815
   },
   "https://qishuijc.top/api/v1/client/subscribe?token=a77f9be06b9c35c988f24a4771761f48": {
     "hits": 2,
@@ -6522,10 +6522,10 @@
     "next_allowed_at": 1767854423.1134515
   },
   "https://d41d8cd98f-1ytapi02.1ytsub.com/api/v1/client/subscribe?token=465fd6e2b5c03cfb242b140f5395a222": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1767750898.982133,
-    "next_allowed_at": 1767808498.982133
+    "last_at": 1767821162.9454815,
+    "next_allowed_at": 1767907562.9454815
   },
   "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=1a9d71e3e8d96ce57f6c5645d3762ebf": {
     "hits": 8,
@@ -6564,15 +6564,21 @@
     "next_allowed_at": 1767839942.6161005
   },
   "https://cyberguard.cfd/api/v1/client/subscribe?token=e67d61206ae2683ab8671952e5976df8": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1767799888.1661828,
-    "next_allowed_at": 1767814288.1661828
+    "last_at": 1767821162.9454815,
+    "next_allowed_at": 1767849962.9454815
   },
   "https://proxyinfo.net/api/v1/client/subscribe?token=3fd0819483a550b2f7a1456021e39060": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1767811142.6161005,
-    "next_allowed_at": 1767812942.6161005
+    "last_at": 1767821162.9454815,
+    "next_allowed_at": 1767824762.9454815
+  },
+  "https://su.gwzxwk.com/api/v1/client/subscribe?token=beb83b46a24b24976fb5382f3fab7157": {
+    "hits": 1,
+    "last_reason": "body-hint",
+    "last_at": 1767821162.9454815,
+    "next_allowed_at": 1767822062.9454815
   }
 }
