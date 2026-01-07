@@ -857,10 +857,10 @@
   },
   {
     "date": "2026-01-07",
-    "google_added": 46,
+    "google_added": 45,
     "github_added": 6,
-    "new_total": 5,
-    "removed_total": 1,
-    "alive_total": 52
+    "new_total": 1,
+    "removed_total": 2,
+    "alive_total": 51
   }
 ]
