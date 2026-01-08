@@ -865,10 +865,10 @@
   },
   {
     "date": "2026-01-08",
-    "google_added": 58,
+    "google_added": 53,
     "github_added": 6,
-    "new_total": 3,
-    "removed_total": 2,
-    "alive_total": 64
+    "new_total": 1,
+    "removed_total": 6,
+    "alive_total": 59
   }
 ]
