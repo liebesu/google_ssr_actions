@@ -1314,10 +1314,10 @@
     "next_allowed_at": 1767940848.4040778
   },
   "https://owlbam.com/api/v1/client/subscribe?token=e6ae8f77eb2da3b49fd1aad4a157b63a": {
-    "hits": 2,
-    "last_reason": "body-hint",
-    "last_at": 1760669122.231444,
-    "next_allowed_at": 1760670922.231444
+    "hits": 3,
+    "last_reason": "http 403",
+    "last_at": 1767940840.68835,
+    "next_allowed_at": 1767944440.68835
   },
   "https://ch.owokkvsxks.store/api/v1/client/subscribe?token=9743a3cf100d2ebbde71a012d812746c": {
     "hits": 21,
@@ -3750,22 +3750,22 @@
     "next_allowed_at": 1768010186.7199738
   },
   "https://api.cnct.xn--fiqs8s/api/v1/client/subscribe?token=756b1b611e804aafb94811f735529740": {
-    "hits": 1,
-    "last_reason": "body-hint",
-    "last_at": 1760669122.231444,
-    "next_allowed_at": 1760670022.231444
+    "hits": 2,
+    "last_reason": "http 403",
+    "last_at": 1767940840.68835,
+    "next_allowed_at": 1767942640.68835
   },
   "https://api.nnbhhxk.com/api/v1/client/subscribe?token=767a439a67a5bc637d1aa2537121a314": {
-    "hits": 1,
-    "last_reason": "body-hint",
-    "last_at": 1760669122.231444,
-    "next_allowed_at": 1760670022.231444
+    "hits": 2,
+    "last_reason": "http 403",
+    "last_at": 1767940840.68835,
+    "next_allowed_at": 1767942640.68835
   },
   "https://api.nnbhhxk.com/api/v1/client/subscribe?token=c48e7a6135ee2c8c56bf68fab56315c0": {
-    "hits": 1,
-    "last_reason": "body-hint",
-    "last_at": 1760669122.231444,
-    "next_allowed_at": 1760670022.231444
+    "hits": 2,
+    "last_reason": "http 403",
+    "last_at": 1767940840.68835,
+    "next_allowed_at": 1767942640.68835
   },
   "https://apisub.mcwy.xyz/api/v1/client/subscribe?token=4cf652216630747993ef777833148adf": {
     "hits": 1,
@@ -6540,10 +6540,10 @@
     "next_allowed_at": 1767994025.8558772
   },
   "https://dy.588511.xyz/api/v1/client/subscribe?token=8c9b3b55a8a5f010f7c943405e984aaa": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "body-hint",
-    "last_at": 1767845157.8570313,
-    "next_allowed_at": 1767902757.8570313
+    "last_at": 1767940840.68835,
+    "next_allowed_at": 1768027240.68835
   },
   "https://fn.234923.icu/api/v1/client/subscribe?token=8d9e8c6773cd03d15f0d96dbbfef7ba9": {
     "hits": 8,

@@ -1227,5 +1227,6 @@
   "https://proxyinfo.net/api/v1/client/subscribe?token=3fd0819483a550b2f7a1456021e39060": "2026-01-07",
   "https://cyberguard.cfd/api/v1/client/subscribe?token=e67d61206ae2683ab8671952e5976df8": "2026-01-07",
   "https://101.43.12.60:28364/api/v1/client/subscribe?token=faa216fa8d9fba8f09370a9f92571298": "2026-01-08",
-  "https://example.com/api/v1/client/subscribe?token=xyz": "2026-01-08"
+  "https://example.com/api/v1/client/subscribe?token=xyz": "2026-01-08",
+  "https://www.finghtly.world/api/v1/client/subscribe?token=3a1ae7747a91e80581a7dac49bdb6534": "2026-01-09"
 }
