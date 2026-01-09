@@ -873,10 +873,10 @@
   },
   {
     "date": "2026-01-09",
-    "google_added": 55,
+    "google_added": 59,
     "github_added": 6,
-    "new_total": 2,
-    "removed_total": 4,
-    "alive_total": 61
+    "new_total": 5,
+    "removed_total": 1,
+    "alive_total": 65
   }
 ]
