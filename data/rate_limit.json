@@ -6592,5 +6592,11 @@
     "last_reason": "body-hint",
     "last_at": 1768026990.0024724,
     "next_allowed_at": 1768113390.0024724
+  },
+  "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=c3d83b45783d990a1555d8498a6815ca": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1768037148.2313426,
+    "next_allowed_at": 1768038048.2313426
   }
 }
