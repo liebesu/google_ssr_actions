@@ -2424,10 +2424,10 @@
     "next_allowed_at": 1768049595.8026183
   },
   "https://qianggewangluo.link/api/v1/client/subscribe?token=bfe07da013500835a50c11a94a0b5f86": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "http 403",
-    "last_at": 1767907625.8558772,
-    "next_allowed_at": 1767994025.8558772
+    "last_at": 1768009962.020122,
+    "next_allowed_at": 1768096362.020122
   },
   "https://qishuijc.top/api/v1/client/subscribe?token=a77f9be06b9c35c988f24a4771761f48": {
     "hits": 2,
@@ -6444,10 +6444,10 @@
     "next_allowed_at": 1768070321.4053028
   },
   "https://mojie.app/api/v1/client/subscribe?token=80ae0e00404b9b5157f4efafe3ac6809": {
-    "hits": 14,
+    "hits": 15,
     "last_reason": "http 403",
-    "last_at": 1767907625.8558772,
-    "next_allowed_at": 1767994025.8558772
+    "last_at": 1768009962.020122,
+    "next_allowed_at": 1768096362.020122
   },
   "https://abc.xhonor.top:9066/v2b/qy/api/v1/client/subscribe?token=49b76e0ba6e393baac2efd36faa0d99e": {
     "hits": 1,
@@ -6468,10 +6468,10 @@
     "next_allowed_at": 1768059017.160284
   },
   "http://shiyuanyinian.xyz/api/v1/client/subscribe?token=f64ab6f1d58f1120064b61da41e84f47": {
-    "hits": 12,
+    "hits": 13,
     "last_reason": "body-hint",
-    "last_at": 1767907625.8558772,
-    "next_allowed_at": 1767994025.8558772
+    "last_at": 1768009962.020122,
+    "next_allowed_at": 1768096362.020122
   },
   "https://api.hbwqf.com/api/v1/client/subscribe?token=0ba019ed51d613aace6fdbe1c6a00c6d": {
     "hits": 9,
@@ -6534,10 +6534,10 @@
     "next_allowed_at": 1768059017.160284
   },
   "https://scurl.izenny.com/api/v1/client/subscribe?token=712791573bf1e92d661d25675b427161": {
-    "hits": 9,
+    "hits": 10,
     "last_reason": "http 403",
-    "last_at": 1767907625.8558772,
-    "next_allowed_at": 1767994025.8558772
+    "last_at": 1768009962.020122,
+    "next_allowed_at": 1768096362.020122
   },
   "https://dy.588511.xyz/api/v1/client/subscribe?token=8c9b3b55a8a5f010f7c943405e984aaa": {
     "hits": 8,
@@ -6558,10 +6558,10 @@
     "next_allowed_at": 1768070321.4053028
   },
   "https://jsjc.cfd/api/v1/client/subscribe?token=41d2cc3da79c5349481197": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1767907625.8558772,
-    "next_allowed_at": 1767994025.8558772
+    "last_at": 1768009962.020122,
+    "next_allowed_at": 1768096362.020122
   },
   "https://cyberguard.cfd/api/v1/client/subscribe?token=e67d61206ae2683ab8671952e5976df8": {
     "hits": 8,

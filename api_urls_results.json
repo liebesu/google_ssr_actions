@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-09T21:23:56.605843",
+  "timestamp": "2026-01-10T01:50:05.602903",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,11 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 3,
-  "original_urls": 7,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://www.finghtly.world/api/v1/client/subscribe?token=3a1ae7747a91e80581a7dac49bdb6534",
-    "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=c3d83b45783d990a1555d8498a6815ca",
-    "http://your-service.com/api/v1/client/subscribe?token=xxxxxx"
+    "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=c3d83b45783d990a1555d8498a6815ca"
   ]
 }
