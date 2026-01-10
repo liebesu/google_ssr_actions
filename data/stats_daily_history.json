@@ -881,10 +881,10 @@
   },
   {
     "date": "2026-01-10",
-    "google_added": 61,
+    "google_added": 59,
     "github_added": 6,
-    "new_total": 5,
+    "new_total": 0,
     "removed_total": 2,
-    "alive_total": 67
+    "alive_total": 65
   }
 ]
