@@ -6618,9 +6618,9 @@
     "next_allowed_at": 1768081109.381575
   },
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=dafad1181ebfcc83ba7a50a2de798474": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1768145140.479084,
-    "next_allowed_at": 1768146940.479084
+    "last_at": 1768156507.1045926,
+    "next_allowed_at": 1768160107.1045926
   }
 }
