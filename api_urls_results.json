@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-11T15:23:09.781347",
+  "timestamp": "2026-01-12T09:35:31.045382",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,13 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 5,
-  "original_urls": 5,
+  "total_urls": 1,
+  "original_urls": 2,
   "urls": [
-    "https://ncdy.aza7.cn/api/v1/client/subscribe?token=b43598a9cd18170fd1ff8e91813d5928",
-    "https://dhh.lol/api/v1/client/subscribe?token=ea6ecbf23123e1d804f99f49d28ce1f2",
-    "http://sub.966888.xyz/api/v1/client/subscribe?token=f1272890ba600633b6e0ef8c609cada6",
-    "https://link.dingyueapi.net/api/v1/client/subscribe?token=2142d9d2cf5b725a604e147169efade4",
-    "https://dash.djjc.cfd/api/v1/client/subscribe?token=dafad1181ebfcc83ba7a50a2de798474"
+    "https://api.dingyueapi.win/api/v1/client/subscribe?token=76b5ff64208908271360d4bda2f97166"
   ]
 }
