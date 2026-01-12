@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-12T09:35:31.045382",
+  "timestamp": "2026-01-12T12:53:30.115772",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,9 +10,19 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 1,
-  "original_urls": 2,
+  "total_urls": 11,
+  "original_urls": 13,
   "urls": [
-    "https://api.dingyueapi.win/api/v1/client/subscribe?token=76b5ff64208908271360d4bda2f97166"
+    "https://api.dingyueapi.win/api/v1/client/subscribe?token=76b5ff64208908271360d4bda2f97166",
+    "https://lmapi02.lmsub.cc/api/v1/client/subscribe?token=43e22f2b6585743ed8fab01e93b313cd",
+    "https://api.dyljstar.sbs/api/v1/client/subscribe?token=1860c63e31e0fce7b2a014005f9a3142",
+    "https://bajie.info/api/v1/client/subscribe?token=b78803cf9d070374b55b0f686b778e05",
+    "https://ncdy.aza7.cn/api/v1/client/subscribe?token=b43598a9cd18170fd1ff8e91813d5928",
+    "http://dash.knjc.cfd/api/v1/client/subscribe?token=fff2d54bd72980104bcb8d5ac4218fd4",
+    "https://dash.djjc.cfd/api/v1/client/subscribe?token=dafad1181ebfcc83ba7a50a2de798474",
+    "https://fg88.whtjdasha.com/api/v1/client/subscribe?token=9ebbc735a946ef11c645b625184a1ecb",
+    "https://bajie.xyz/api/v1/client/subscribe?token=c731d8fbfd3fdd470b1f46dd6707bb40",
+    "https://link.dingyueapi.net/api/v1/client/subscribe?token=2142d9d2cf5b725a604e147169efade4",
+    "https://host.api-baobaog.rest/api/v1/client/subscribe?token=311358734f243a4134981c04c356a8ba"
   ]
 }
