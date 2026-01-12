@@ -552,10 +552,10 @@
     "next_allowed_at": 1767068050.6086717
   },
   "https://vpndata.shop/api/v1/client/subscribe?token=a0abc72c47d4c7ea48e4b700bee0c1b5": {
-    "hits": 38,
+    "hits": 39,
     "last_reason": "body-hint",
-    "last_at": 1768070125.0861633,
-    "next_allowed_at": 1768156525.0861633
+    "last_at": 1768183284.1519737,
+    "next_allowed_at": 1768269684.1519737
   },
   "http://gbtgurl01.org/api/v1/client/subscribe?token=36e8a67632a8d0f0c0eea58b099a0826": {
     "hits": 107,
@@ -5622,10 +5622,10 @@
     "next_allowed_at": 1768191228.3312922
   },
   "https://has.ninja/api/v1/client/subscribe?token=4450159ebd8f980287eba6732c190c2d": {
-    "hits": 34,
+    "hits": 35,
     "last_reason": "body-hint",
-    "last_at": 1768070125.0861633,
-    "next_allowed_at": 1768156525.0861633
+    "last_at": 1768183284.1519737,
+    "next_allowed_at": 1768269684.1519737
   },
   "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7": {
     "hits": 42,
@@ -6618,9 +6618,9 @@
     "next_allowed_at": 1768081109.381575
   },
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=dafad1181ebfcc83ba7a50a2de798474": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1768166623.245025,
-    "next_allowed_at": 1768173823.245025
+    "last_at": 1768183284.1519737,
+    "next_allowed_at": 1768197684.1519737
   }
 }
