@@ -905,10 +905,10 @@
   },
   {
     "date": "2026-01-13",
-    "google_added": 63,
+    "google_added": 67,
     "github_added": 7,
-    "new_total": 0,
-    "removed_total": 5,
-    "alive_total": 70
+    "new_total": 5,
+    "removed_total": 1,
+    "alive_total": 74
   }
 ]
