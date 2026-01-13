@@ -6624,27 +6624,27 @@
     "next_allowed_at": 1768289486.6812449
   },
   "https://api.dingyueapi.win/api/v1/client/subscribe?token=76b5ff64208908271360d4bda2f97166": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1768253208.2239618,
-    "next_allowed_at": 1768267608.2239618
+    "last_at": 1768269179.0411384,
+    "next_allowed_at": 1768297979.0411384
   },
   "http://dash.knjc.cfd/api/v1/client/subscribe?token=fff2d54bd72980104bcb8d5ac4218fd4": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1768253208.2239618,
-    "next_allowed_at": 1768260408.2239618
+    "last_at": 1768269179.0411384,
+    "next_allowed_at": 1768283579.0411384
   },
   "https://host.api-baobaog.rest/api/v1/client/subscribe?token=311358734f243a4134981c04c356a8ba": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1768253208.2239618,
-    "next_allowed_at": 1768260408.2239618
+    "last_at": 1768269179.0411384,
+    "next_allowed_at": 1768283579.0411384
   },
   "https://link.dingyueapi.net/api/v1/client/subscribe?token=2142d9d2cf5b725a604e147169efade4": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1768253208.2239618,
-    "next_allowed_at": 1768256808.2239618
+    "last_at": 1768269179.0411384,
+    "next_allowed_at": 1768276379.0411384
   }
 }
