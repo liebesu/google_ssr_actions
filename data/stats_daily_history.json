@@ -913,10 +913,10 @@
   },
   {
     "date": "2026-01-14",
-    "google_added": 64,
+    "google_added": 65,
     "github_added": 6,
     "new_total": 4,
-    "removed_total": 5,
-    "alive_total": 70
+    "removed_total": 3,
+    "alive_total": 71
   }
 ]

@@ -2790,10 +2790,10 @@
     "next_allowed_at": 1760670922.231444
   },
   "https://sub.hx666.pro/api/v1/client/subscribe?token=5e3f5d269857f2b792ff5aae32a10efd": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1768363988.3917603,
-    "next_allowed_at": 1768371188.3917603
+    "last_at": 1768372830.1462011,
+    "next_allowed_at": 1768387230.1462011
   },
   "https://sub.wordvlog.link/api/v1/client/subscribe?token=fb8072549e3a35a2977b6cf78dae142f": {
     "hits": 66,
@@ -3768,10 +3768,10 @@
     "next_allowed_at": 1768372848.5128958
   },
   "https://apisub.mcwy.xyz/api/v1/client/subscribe?token=4cf652216630747993ef777833148adf": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1768356027.4138508,
-    "next_allowed_at": 1768370427.4138508
+    "last_at": 1768372830.1462011,
+    "next_allowed_at": 1768401630.1462011
   },
   "https://b3b0549e-160e-495a-a528-cccf5148bc48.372372.xyz/api/v1/client/subscribe?token=365e6b573c7f1b3c6f1f7f8fd83351a5": {
     "hits": 1,
@@ -6420,10 +6420,10 @@
     "next_allowed_at": 1768415889.1633265
   },
   "https://crushs.top/api/v1/client/subscribe?token=2fdc83b7d87c795664479e9ccd91981a": {
-    "hits": 3,
-    "last_reason": "http 429",
-    "last_at": 1767444363.068788,
-    "next_allowed_at": 1767447963.068788
+    "hits": 4,
+    "last_reason": "body-hint",
+    "last_at": 1768372830.1462011,
+    "next_allowed_at": 1768380030.1462011
   },
   "https://abc.aayjm.com/api/v1/client/subscribe?token=9e56ee66f35cf55a22e105de8638edf1": {
     "hits": 19,
@@ -6624,10 +6624,10 @@
     "next_allowed_at": 1768383230.9256015
   },
   "https://api.dingyueapi.win/api/v1/client/subscribe?token=76b5ff64208908271360d4bda2f97166": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1768308932.3898256,
-    "next_allowed_at": 1768366532.3898256
+    "last_at": 1768372830.1462011,
+    "next_allowed_at": 1768459230.1462011
   },
   "http://dash.knjc.cfd/api/v1/client/subscribe?token=fff2d54bd72980104bcb8d5ac4218fd4": {
     "hits": 7,
@@ -6648,9 +6648,9 @@
     "next_allowed_at": 1768387089.1633265
   },
   "https://sudusub.com/api/v1/client/subscribe?token=25fcda2927b343be205b47ca4d1ad551": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1768339604.9042811,
-    "next_allowed_at": 1768368404.9042811
+    "last_at": 1768372830.1462011,
+    "next_allowed_at": 1768430430.1462011
   }
 }
