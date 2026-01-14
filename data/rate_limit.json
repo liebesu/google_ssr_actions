@@ -2790,10 +2790,10 @@
     "next_allowed_at": 1760670922.231444
   },
   "https://sub.hx666.pro/api/v1/client/subscribe?token=5e3f5d269857f2b792ff5aae32a10efd": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1768395301.473468,
-    "next_allowed_at": 1768424101.473468
+    "last_at": 1768426041.03559,
+    "next_allowed_at": 1768483641.03559
   },
   "https://sub.wordvlog.link/api/v1/client/subscribe?token=fb8072549e3a35a2977b6cf78dae142f": {
     "hits": 67,
@@ -6522,10 +6522,10 @@
     "next_allowed_at": 1768491133.3906069
   },
   "https://d41d8cd98f-1ytapi02.1ytsub.com/api/v1/client/subscribe?token=465fd6e2b5c03cfb242b140f5395a222": {
-    "hits": 13,
+    "hits": 14,
     "last_reason": "body-hint",
-    "last_at": 1768308932.3898256,
-    "next_allowed_at": 1768395332.3898256
+    "last_at": 1768426041.03559,
+    "next_allowed_at": 1768512441.03559
   },
   "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=1a9d71e3e8d96ce57f6c5645d3762ebf": {
     "hits": 14,

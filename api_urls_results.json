@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-14T18:37:05.776655",
+  "timestamp": "2026-01-14T21:24:39.372321",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,9 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 1,
-  "original_urls": 4,
+  "total_urls": 2,
+  "original_urls": 5,
   "urls": [
-    "https://my.bohex-link.work/api/v1/client/subscribe?token=d2efc0fe50b226c08292bc500861c454"
+    "https://my.bohex-link.work/api/v1/client/subscribe?token=d2efc0fe50b226c08292bc500861c454",
+    "https://moes.lnaspiring.com/Moe233-Subs/qwbm/api/v1/client/subscribe?token=e4a48770537e9e47347439adefb34ac9"
   ]
 }
