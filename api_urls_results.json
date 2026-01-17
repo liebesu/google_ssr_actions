@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-16T21:24:38.348433",
+  "timestamp": "2026-01-17T01:48:54.701192",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,11 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 8,
+  "total_urls": 3,
+  "original_urls": 7,
   "urls": [
+    "https://ncdy.aza7.cn/api/v1/client/subscribe?token=b43598a9cd18170fd1ff8e91813d5928",
     "https://xxx.com/api/v1/client/subscribe?token=xxxxxx",
-    "https://ncdy.aza7.cn/api/v1/client/subscribe?token=b43598a9cd18170fd1ff8e91813d5928"
+    "https://api.eehk.net/api/v1/client/subscribe?token=abcdefgh"
   ]
 }
