@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-17T09:23:41.167024",
+  "timestamp": "2026-01-17T12:43:33.399313",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,16 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 8,
-  "original_urls": 11,
+  "total_urls": 2,
+  "original_urls": 4,
   "urls": [
     "https://xxx.com/api/v1/client/subscribe?token=xxxxxx",
-    "https://ncdy.aza7.cn/api/v1/client/subscribe?token=b43598a9cd18170fd1ff8e91813d5928",
-    "https://dash.pqjc.site/api/v1/client/subscribe?token=25612456e52e3b7841472e9b1c3b9194",
-    "https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e6079650693a24a0d8893",
-    "https://www8th.ga-sub.lat/api/v1/client/subscribe?token=5b293de17123dc4a461bad4ea2280976",
-    "https://bajie.info/api/v1/client/subscribe?token=3c44e4ff71d81e58cf915b44677ea683",
-    "https://dy-2.xn--30rs3bu7r87f.com/csjc/api/v1/client/subscribe?token=fddaf8bcb5a17d0ea18861033082c27a",
     "https://api.eehk.net/api/v1/client/subscribe?token=abcdefgh"
   ]
 }
