@@ -330,10 +330,10 @@
     "next_allowed_at": 1768761263.2307513
   },
   "http://154.89.203.177/api/v1/client/subscribe?token=0f3c7e30c503f6a45ea65a671d4cfe26": {
-    "hits": 24,
+    "hits": 25,
     "last_reason": "body-hint",
-    "last_at": 1768567996.839918,
-    "next_allowed_at": 1768654396.839918
+    "last_at": 1768709376.9248264,
+    "next_allowed_at": 1768795776.9248264
   },
   "http://47.74.1.114:8089/api/v1/client/subscribe?token=59bbba2d0f3135693b3f339e7b0bbe73": {
     "hits": 114,
@@ -1236,10 +1236,10 @@
     "next_allowed_at": 1768761263.2307513
   },
   "https://sanfen003.xyz/api/v1/client/subscribe?token=965a9805b26d65b736e88bea4d7e66a0&flag=clash": {
-    "hits": 39,
+    "hits": 40,
     "last_reason": "body-hint",
-    "last_at": 1768545631.9148798,
-    "next_allowed_at": 1768632031.9148798
+    "last_at": 1768709376.9248264,
+    "next_allowed_at": 1768795776.9248264
   },
   "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=01469aa2996308f7fedf6d35727e1e04": {
     "hits": 109,
@@ -1956,10 +1956,10 @@
     "next_allowed_at": 1765034871.5067036
   },
   "https://subapi01.qytsublink.com/api/v1/client/subscribe?token=5f78a0d7a8e0e046154ac4d84f94d861": {
-    "hits": 39,
+    "hits": 40,
     "last_reason": "body-hint",
-    "last_at": 1768577399.8427718,
-    "next_allowed_at": 1768663799.8427718
+    "last_at": 1768709376.9248264,
+    "next_allowed_at": 1768795776.9248264
   },
   "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=fdcb29a03a96c3296620ef37d7f9a890": {
     "hits": 8,
@@ -4854,10 +4854,10 @@
     "next_allowed_at": 1768761263.2307513
   },
   "https://subapi01.qytsublink.com/api/v1/client/subscribe?token=a763b8f1e279f3f7fa481c33a6214453": {
-    "hits": 34,
+    "hits": 35,
     "last_reason": "body-hint",
-    "last_at": 1768577399.8427718,
-    "next_allowed_at": 1768663799.8427718
+    "last_at": 1768709376.9248264,
+    "next_allowed_at": 1768795776.9248264
   },
   "https://www.huojian1.sbs/api/v1/client/subscribe?token=c40671b3963a317e8170322254036c71": {
     "hits": 79,
@@ -6612,10 +6612,10 @@
     "next_allowed_at": 1768788201.9046211
   },
   "https://bj.mfsyw.cn/api/v1/client/subscribe?token=41cbd904c3ab780e31e146b27cd68b5b": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1768080209.381575,
-    "next_allowed_at": 1768081109.381575
+    "last_at": 1768709376.9248264,
+    "next_allowed_at": 1768711176.9248264
   },
   "https://dash.djjc.cfd/api/v1/client/subscribe?token=dafad1181ebfcc83ba7a50a2de798474": {
     "hits": 12,
@@ -6648,10 +6648,10 @@
     "next_allowed_at": 1768771382.2466307
   },
   "https://sudusub.com/api/v1/client/subscribe?token=25fcda2927b343be205b47ca4d1ad551": {
-    "hits": 10,
+    "hits": 11,
     "last_reason": "http 403",
-    "last_at": 1768622415.3235462,
-    "next_allowed_at": 1768708815.3235462
+    "last_at": 1768709376.9248264,
+    "next_allowed_at": 1768795776.9248264
   },
   "https://519nz.tdwj.net:108/api/v1/client/subscribe?token=a763f55d16e1c1860a681d89e1ae6f23": {
     "hits": 1,
@@ -6696,10 +6696,10 @@
     "next_allowed_at": 1768721104.0829625
   },
   "https://api.eehk.net/api/v1/client/subscribe?token=abcdefgh": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1768674863.2307513,
-    "next_allowed_at": 1768703663.2307513
+    "last_at": 1768709376.9248264,
+    "next_allowed_at": 1768766976.9248264
   },
   "https://dash.pqjc.site/api/v1/client/subscribe?token=25612456e52e3b7841472e9b1c3b9194": {
     "hits": 6,
@@ -6720,15 +6720,15 @@
     "next_allowed_at": 1768713782.2466307
   },
   "https://xx.115.49.124:9999/api/v1/client/subscribe?token=xxx0f4f99601bed315b26d0f4bd310e9": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1768701801.9046211,
-    "next_allowed_at": 1768705401.9046211
+    "last_at": 1768709376.9248264,
+    "next_allowed_at": 1768716576.9248264
   },
   "https://ymjc.cfd/api/v1/client/subscribe?token=4967e1ab65be0e4b80c83cb813266045": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1768701801.9046211,
-    "next_allowed_at": 1768703601.9046211
+    "last_at": 1768709376.9248264,
+    "next_allowed_at": 1768712976.9248264
   }
 }
