@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-17T21:20:32.573233",
+  "timestamp": "2026-01-18T02:00:55.366272",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -13,13 +13,13 @@
   "total_urls": 8,
   "original_urls": 11,
   "urls": [
-    "https://api.eehk.net/api/v1/client/subscribe?token=abcdefgh",
-    "https://ymjc.cfd/api/v1/client/subscribe?token=4967e1ab65be0e4b80c83cb813266045",
-    "https://bajie.info/api/v1/client/subscribe?token=3c44e4ff71d81e58cf915b44677ea683",
-    "https://dy-2.xn--30rs3bu7r87f.com/csjc/api/v1/client/subscribe?token=fddaf8bcb5a17d0ea18861033082c27a",
-    "https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e6079650693a24a0d8893",
-    "https://b01b.microvmcdn.org/api/v1/client/subscribe?token=c67e2073240f79760b2108289e9d6010",
+    "http://dash.knjc.cfd/api/v1/client/subscribe?token=fff2d54bd72980104bcb8d5ac4218fd4",
     "https://www8th.ga-sub.lat/api/v1/client/subscribe?token=5b293de17123dc4a461bad4ea2280976",
-    "https://dash.pqjc.site/api/v1/client/subscribe?token=25612456e52e3b7841472e9b1c3b9194"
+    "https://dash.pqjc.site/api/v1/client/subscribe?token=25612456e52e3b7841472e9b1c3b9194",
+    "https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e6079650693a24a0d8893",
+    "https://yyds.emovpn.top/api/v1/client/subscribe?token=e3564accfb797578dc8251fc07207abe",
+    "https://link.dingyueapi.net/api/v1/client/subscribe?token=4b9da9e83107e7a0b0c744e48a8c91b4",
+    "https://mojie.app/api/v1/client/subscribe?token=954689f4edf6140a66ba50ccbf28dfd9",
+    "https://dy-2.xn--30rs3bu7r87f.com/csjc/api/v1/client/subscribe?token=fddaf8bcb5a17d0ea18861033082c27a"
   ]
 }
