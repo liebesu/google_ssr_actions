@@ -950,5 +950,13 @@
     "new_total": 4,
     "removed_total": 5,
     "alive_total": 70
+  },
+  {
+    "date": "2026-01-19",
+    "google_added": 68,
+    "github_added": 5,
+    "new_total": 5,
+    "removed_total": 2,
+    "alive_total": 73
   }
 ]
