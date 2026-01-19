@@ -3222,10 +3222,10 @@
     "next_allowed_at": 1768857836.40038
   },
   "https://www8th.ga-sub.lat/api/v1/client/subscribe?token=5b293de17123dc4a461bad4ea2280976": {
-    "hits": 10,
+    "hits": 11,
     "last_reason": "http 403",
-    "last_at": 1768761248.1781254,
-    "next_allowed_at": 1768847648.1781254
+    "last_at": 1768847917.5074131,
+    "next_allowed_at": 1768934317.5074131
   },
   "https://xb.feiyi.mom/api/v1/client/subscribe?token=444c18ef9fcef77cf32111512d749271": {
     "hits": 65,
@@ -3768,10 +3768,10 @@
     "next_allowed_at": 1768857836.40038
   },
   "https://apisub.mcwy.xyz/api/v1/client/subscribe?token=4cf652216630747993ef777833148adf": {
-    "hits": 11,
+    "hits": 12,
     "last_reason": "body-hint",
-    "last_at": 1768761248.1781254,
-    "next_allowed_at": 1768847648.1781254
+    "last_at": 1768847917.5074131,
+    "next_allowed_at": 1768934317.5074131
   },
   "https://b3b0549e-160e-495a-a528-cccf5148bc48.372372.xyz/api/v1/client/subscribe?token=365e6b573c7f1b3c6f1f7f8fd83351a5": {
     "hits": 1,
@@ -6624,10 +6624,10 @@
     "next_allowed_at": 1768857836.40038
   },
   "https://api.dingyueapi.win/api/v1/client/subscribe?token=76b5ff64208908271360d4bda2f97166": {
-    "hits": 12,
+    "hits": 13,
     "last_reason": "http 403",
-    "last_at": 1768761248.1781254,
-    "next_allowed_at": 1768847648.1781254
+    "last_at": 1768847917.5074131,
+    "next_allowed_at": 1768934317.5074131
   },
   "http://dash.knjc.cfd/api/v1/client/subscribe?token=fff2d54bd72980104bcb8d5ac4218fd4": {
     "hits": 12,
@@ -6726,21 +6726,21 @@
     "next_allowed_at": 1768923128.9510624
   },
   "https://ymjc.cfd/api/v1/client/subscribe?token=4967e1ab65be0e4b80c83cb813266045": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1768788094.2257307,
-    "next_allowed_at": 1768845694.2257307
+    "last_at": 1768847917.5074131,
+    "next_allowed_at": 1768934317.5074131
   },
   "https://sub.joker007.top/api/v1/client/subscribe?token=905feab19d6d89431b721126db5b6c16https": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1768836728.9510624,
-    "next_allowed_at": 1768840328.9510624
+    "last_at": 1768847917.5074131,
+    "next_allowed_at": 1768855117.5074131
   },
   "https://dash.pqjc.site/api/v1/client/subscribe?token=ac1f0a17b98dcab48d007074069cfcf9": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1768836728.9510624,
-    "next_allowed_at": 1768837628.9510624
+    "last_at": 1768847917.5074131,
+    "next_allowed_at": 1768849717.5074131
   }
 }
