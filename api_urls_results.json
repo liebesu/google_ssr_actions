@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-19T18:36:09.862980",
+  "timestamp": "2026-01-19T21:22:21.989726",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -13,7 +13,7 @@
   "total_urls": 2,
   "original_urls": 8,
   "urls": [
-    "http://dash.knjc.cfd/api/v1/client/subscribe?token=fff2d54bd72980104bcb8d5ac4218fd4",
-    "https://赔钱.com/api/v1/client/subscribe?token=c1a7fc13f0c47a6dc9d749f9cf51c377"
+    "https://赔钱.com/api/v1/client/subscribe?token=c1a7fc13f0c47a6dc9d749f9cf51c377",
+    "http://dash.knjc.cfd/api/v1/client/subscribe?token=fff2d54bd72980104bcb8d5ac4218fd4"
   ]
 }
