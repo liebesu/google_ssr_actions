@@ -1962,10 +1962,10 @@
     "next_allowed_at": 1768795776.9248264
   },
   "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=fdcb29a03a96c3296620ef37d7f9a890": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "body-hint",
-    "last_at": 1764042760.1564162,
-    "next_allowed_at": 1764129160.1564162
+    "last_at": 1768923427.3614626,
+    "next_allowed_at": 1769009827.3614626
   },
   "https://subscription-gov.lianjiasub.work/api/v1/client/subscribe?token=e4cc5b5cdd16153cbabab52429dd43d6": {
     "hits": 98,
@@ -4704,10 +4704,10 @@
     "next_allowed_at": 1768944295.9001014
   },
   "https://xsus.moe/api/v1/client/subscribe?token=4c1f8f412cd5e46a7fa883ef9f08a04c": {
-    "hits": 58,
+    "hits": 59,
     "last_reason": "http 403",
-    "last_at": 1768827451.1475859,
-    "next_allowed_at": 1768913851.1475859
+    "last_at": 1768923427.3614626,
+    "next_allowed_at": 1769009827.3614626
   },
   "https://pub04.20251020a.top/api/v1/client/subscribe?token=16c299297bca84972869464564f5cc9d": {
     "hits": 54,
@@ -6720,10 +6720,10 @@
     "next_allowed_at": 1768968658.0689023
   },
   "https://xx.115.49.124:9999/api/v1/client/subscribe?token=xxx0f4f99601bed315b26d0f4bd310e9": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "body-hint",
-    "last_at": 1768836728.9510624,
-    "next_allowed_at": 1768923128.9510624
+    "last_at": 1768923427.3614626,
+    "next_allowed_at": 1769009827.3614626
   },
   "https://ymjc.cfd/api/v1/client/subscribe?token=4967e1ab65be0e4b80c83cb813266045": {
     "hits": 8,
@@ -6744,10 +6744,10 @@
     "next_allowed_at": 1768930718.7506924
   },
   "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=eb83ec292f30e19621491aaf974fc0c0": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1768913880.1051638,
-    "next_allowed_at": 1768921080.1051638
+    "last_at": 1768923427.3614626,
+    "next_allowed_at": 1768937827.3614626
   },
   "https://knjc.cfd/api/v1/client/subscribe?token=3cfc1f2fdf84c1be6e64fe6e6667ea3e": {
     "hits": 5,
@@ -6756,15 +6756,15 @@
     "next_allowed_at": 1768928280.1051638
   },
   "https://dash.yfjc.xyz/api/v1/client/subscribe?token=30f4712b6a11d82c4c8bc9c81b630212": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1768913880.1051638,
-    "next_allowed_at": 1768921080.1051638
+    "last_at": 1768923427.3614626,
+    "next_allowed_at": 1768937827.3614626
   },
   "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=8eec89052868733cc66e58006a7f3221": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1768913880.1051638,
-    "next_allowed_at": 1768914780.1051638
+    "last_at": 1768923427.3614626,
+    "next_allowed_at": 1768925227.3614626
   }
 }
