@@ -6750,10 +6750,10 @@
     "next_allowed_at": 1768973187.2653327
   },
   "https://knjc.cfd/api/v1/client/subscribe?token=3cfc1f2fdf84c1be6e64fe6e6667ea3e": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1768934612.6165864,
-    "next_allowed_at": 1768963412.6165864
+    "last_at": 1768968599.9800618,
+    "next_allowed_at": 1769026199.9800618
   },
   "https://dash.yfjc.xyz/api/v1/client/subscribe?token=30f4712b6a11d82c4c8bc9c81b630212": {
     "hits": 6,
