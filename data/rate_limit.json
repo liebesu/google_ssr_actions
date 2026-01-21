@@ -6768,9 +6768,9 @@
     "next_allowed_at": 1769006568.498108
   },
   "https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e6079650693a24a0d8893": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "http 403",
-    "last_at": 1768977768.498108,
-    "next_allowed_at": 1768978668.498108
+    "last_at": 1768988298.807093,
+    "next_allowed_at": 1768990098.807093
   }
 }
