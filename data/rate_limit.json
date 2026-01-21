@@ -5622,10 +5622,10 @@
     "next_allowed_at": 1769030787.2653327
   },
   "https://has.ninja/api/v1/client/subscribe?token=4450159ebd8f980287eba6732c190c2d": {
-    "hits": 40,
+    "hits": 41,
     "last_reason": "body-hint",
-    "last_at": 1768815623.0773928,
-    "next_allowed_at": 1768902023.0773928
+    "last_at": 1768960787.138903,
+    "next_allowed_at": 1769047187.138903
   },
   "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7": {
     "hits": 50,
@@ -6762,9 +6762,9 @@
     "next_allowed_at": 1768973187.2653327
   },
   "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=8eec89052868733cc66e58006a7f3221": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "body-hint",
-    "last_at": 1768944387.2653327,
-    "next_allowed_at": 1768951587.2653327
+    "last_at": 1768960787.138903,
+    "next_allowed_at": 1768975187.138903
   }
 }
