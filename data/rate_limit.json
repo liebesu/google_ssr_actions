@@ -1956,10 +1956,10 @@
     "next_allowed_at": 1765034871.5067036
   },
   "https://subapi01.qytsublink.com/api/v1/client/subscribe?token=5f78a0d7a8e0e046154ac4d84f94d861": {
-    "hits": 40,
+    "hits": 41,
     "last_reason": "body-hint",
-    "last_at": 1768709376.9248264,
-    "next_allowed_at": 1768795776.9248264
+    "last_at": 1769047222.33891,
+    "next_allowed_at": 1769133622.33891
   },
   "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=fdcb29a03a96c3296620ef37d7f9a890": {
     "hits": 9,
@@ -4854,10 +4854,10 @@
     "next_allowed_at": 1769117609.0251112
   },
   "https://subapi01.qytsublink.com/api/v1/client/subscribe?token=a763b8f1e279f3f7fa481c33a6214453": {
-    "hits": 35,
+    "hits": 36,
     "last_reason": "body-hint",
-    "last_at": 1768709376.9248264,
-    "next_allowed_at": 1768795776.9248264
+    "last_at": 1769047222.33891,
+    "next_allowed_at": 1769133622.33891
   },
   "https://www.huojian1.sbs/api/v1/client/subscribe?token=c40671b3963a317e8170322254036c71": {
     "hits": 82,
@@ -5622,10 +5622,10 @@
     "next_allowed_at": 1769117609.0251112
   },
   "https://has.ninja/api/v1/client/subscribe?token=4450159ebd8f980287eba6732c190c2d": {
-    "hits": 41,
+    "hits": 42,
     "last_reason": "body-hint",
-    "last_at": 1768960787.138903,
-    "next_allowed_at": 1769047187.138903
+    "last_at": 1769047222.33891,
+    "next_allowed_at": 1769133622.33891
   },
   "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7": {
     "hits": 51,
@@ -6744,10 +6744,10 @@
     "next_allowed_at": 1769086679.4579656
   },
   "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=eb83ec292f30e19621491aaf974fc0c0": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1768977768.498108,
-    "next_allowed_at": 1769035368.498108
+    "last_at": 1769047222.33891,
+    "next_allowed_at": 1769133622.33891
   },
   "https://knjc.cfd/api/v1/client/subscribe?token=3cfc1f2fdf84c1be6e64fe6e6667ea3e": {
     "hits": 8,
@@ -6756,10 +6756,10 @@
     "next_allowed_at": 1769117609.0251112
   },
   "https://dash.yfjc.xyz/api/v1/client/subscribe?token=30f4712b6a11d82c4c8bc9c81b630212": {
-    "hits": 7,
+    "hits": 8,
     "last_reason": "http 403",
-    "last_at": 1768977768.498108,
-    "next_allowed_at": 1769035368.498108
+    "last_at": 1769047222.33891,
+    "next_allowed_at": 1769133622.33891
   },
   "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=8eec89052868733cc66e58006a7f3221": {
     "hits": 7,
@@ -6768,9 +6768,9 @@
     "next_allowed_at": 1769067527.5553026
   },
   "https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e6079650693a24a0d8893": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1769021356.5148208,
-    "next_allowed_at": 1769035756.5148208
+    "last_at": 1769047222.33891,
+    "next_allowed_at": 1769076022.33891
   }
 }
