@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-22T09:36:05.965134",
+  "timestamp": "2026-01-22T15:34:46.788263",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,7 +11,7 @@
   ],
   "regions_count": 4,
   "total_urls": 1,
-  "original_urls": 3,
+  "original_urls": 2,
   "urls": [
     "https://cdn.bocchi.ooo/api/v1/client/subscribe?token=055d81074954e1295b6b87ec8865df56"
   ]
