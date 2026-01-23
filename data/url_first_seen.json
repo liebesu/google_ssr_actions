@@ -1275,5 +1275,8 @@
   "https://cdn.bocchi.ooo/api/v1/client/subscribe?token=055d81074954e1295b6b87ec8865df56": "2026-01-22",
   "https://your-subscription-url.com/api/v1/client/subscribe?token=xyz": "2026-01-23",
   "https://osaip.ftcos.click/api/v1/client/subscribe?token=30ffa0f1f58a7482906553af1374f1c7": "2026-01-23",
-  "https://x1.344211.cc/api/v1/client/subscribe?token=74f7ca994193946b8c31772d92a57a51": "2026-01-23"
+  "https://x1.344211.cc/api/v1/client/subscribe?token=74f7ca994193946b8c31772d92a57a51": "2026-01-23",
+  "http://example.com/api/v1/client/subscribe?token=YOUR": "2026-01-23",
+  "https://tc.adfgawidhioawjd.site/api/v1/client/subscribe?token=574a305a1df2fd4e11958e62af84e530": "2026-01-23",
+  "https://yfjc.xyz/api/v1/client/subscribe?token=6a9261e894f37fc064d94ead5b73e8a8": "2026-01-23"
 }
