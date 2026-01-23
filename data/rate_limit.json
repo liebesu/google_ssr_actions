@@ -6744,10 +6744,10 @@
     "next_allowed_at": 1769182643.0257924
   },
   "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=eb83ec292f30e19621491aaf974fc0c0": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1769047222.33891,
-    "next_allowed_at": 1769133622.33891
+    "last_at": 1769141322.2954924,
+    "next_allowed_at": 1769227722.2954924
   },
   "https://knjc.cfd/api/v1/client/subscribe?token=3cfc1f2fdf84c1be6e64fe6e6667ea3e": {
     "hits": 9,
@@ -6756,10 +6756,10 @@
     "next_allowed_at": 1769219783.3494573
   },
   "https://dash.yfjc.xyz/api/v1/client/subscribe?token=30f4712b6a11d82c4c8bc9c81b630212": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1769047222.33891,
-    "next_allowed_at": 1769133622.33891
+    "last_at": 1769141322.2954924,
+    "next_allowed_at": 1769227722.2954924
   },
   "https://linka.lmscunb.cc:2087/api/v1/client/subscribe?token=8eec89052868733cc66e58006a7f3221": {
     "hits": 8,
@@ -6828,9 +6828,15 @@
     "next_allowed_at": 1769162183.3494573
   },
   "https://your-subscription-url.com/api/v1/client/subscribe?token=xyz": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1769133383.3494573,
-    "next_allowed_at": 1769136983.3494573
+    "last_at": 1769141322.2954924,
+    "next_allowed_at": 1769148522.2954924
+  },
+  "https://osaip.ftcos.click/api/v1/client/subscribe?token=30ffa0f1f58a7482906553af1374f1c7": {
+    "hits": 1,
+    "last_reason": "body-hint",
+    "last_at": 1769141322.2954924,
+    "next_allowed_at": 1769142222.2954924
   }
 }

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-23T01:53:57.762439",
+  "timestamp": "2026-01-23T04:06:14.082382",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,9 +10,12 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 1,
-  "original_urls": 3,
+  "total_urls": 4,
+  "original_urls": 9,
   "urls": [
-    "https://cdn.bocchi.ooo/api/v1/client/subscribe?token=055d81074954e1295b6b87ec8865df56"
+    "https://example.com/api/v1/client/subscribe?token=YOUR",
+    "https://cdn.bocchi.ooo/api/v1/client/subscribe?token=055d81074954e1295b6b87ec8865df56",
+    "https://osaip.ftcos.click/api/v1/client/subscribe?token=30ffa0f1f58a7482906553af1374f1c7",
+    "https://x1.344211.cc/api/v1/client/subscribe?token=74f7ca994193946b8c31772d92a57a51"
   ]
 }
