@@ -2808,10 +2808,10 @@
     "next_allowed_at": 1769117609.0251112
   },
   "https://sub.yifenjichang.online/api/v1/client/subscribe?token=71a92de8e9302ea6ecd1b2cf6acd4818": {
-    "hits": 9,
-    "last_reason": "body-hint",
-    "last_at": 1768977768.498108,
-    "next_allowed_at": 1769064168.498108
+    "hits": 10,
+    "last_reason": "http 429",
+    "last_at": 1769160975.3735487,
+    "next_allowed_at": 1769247375.3735487
   },
   "https://sub.yifenjichang.online/api/v1/client/subscribe?token=bc7a2450d60ebc32688f1e07e837f16d": {
     "hits": 10,
