@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-25T09:25:57.660377",
+  "timestamp": "2026-01-25T12:47:20.772201",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,22 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 14,
-  "original_urls": 24,
+  "total_urls": 2,
+  "original_urls": 8,
   "urls": [
-    "https://x1.332244.icu/api/v1/client/subscribe?token=84830888f0aacb136c6bb0bf28d73d02",
     "https://login.yfjc.xyz/api/v1/client/subscribe?token=641b21e166a350692cb411548f76a6bf",
-    "https://sub.xunlian.site//api/v1/client/subscribe?token=62d93588737e677ed64ee697c983bb45",
-    "https://3ra4214.tjsd.site/api/v1/client/subscribe?token=54aae03dfffe20126e28640907c76927",
-    "https://rb.gy/3xnckrhttps://v1.mk/xAAejQphttps://v1.mk/J2qr3NShttps://mirror.ghproxy.com/https://github.com/yuanwangokk-1/subscribe/blob/main/a.yamlhttps://subs.zeabur.app/clashhttps://gitlab.com/mfuu/v2ray/-/raw/master/clash.yamlhttps://sub.onlineweb.work/api/v1/client/subscribe?token=54d2f37502f364cfd519901909b39d1dhttps://ls.xn--sxqu35b.xn--fiqs8s/api/v1/client/subscribe?token=b7f32bdd63d5b8bf3513aeef1c2e1b41https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META_IRAN-Direct.ymlhttps://portal.nextport.top/api/v1/client/subscribe?token=a7c422d46c1a3f9927fe97472d27ebf9https://raw.githubusercontent.com/Aorp2008/Airp_all_box/main/config.yamlhttps://fku-ppg.co.uk/https://raw.githubusercontent.com/vveg26/chromego_merge/main/sub/merged_proxies.yamlhttps://anaer.github.io/Sub/clash.yamlhttps://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yamlhttps://neko-warp.nloli.xyz/https://my5353.com/bmCUKhttp://1i8.cn/SYg3Lhttps://suo.yt/7z3dTcvhttps://raw.iqiq.io/anaer/Sub/main/clash.yamlhttp://1i8.cn/nwdtlhttps://my5353.com/YeNZRhttps://bakapie.cf/api/v1/client/subscribe?token=764255b17754ededb45c551d3ee9083f&flag=clashhttps://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3QvcyFBcWNyX0lvTkZNV0FlX21WLWxnMkRiclhvNHM_ZT1MZVI4Ym8https://sub.cloudflare.questhttps://my5353.com/kunkunhttps://sub.sharecentre.online/subhttps://sub.sharecentre.online/clash/scp.ymlhttps://openit.ml/Clash.yamlhttps://github.xiaoku666.tk/https://raw.githubusercontent.com/yu-steven/openit/main/Clash.yamlhttps://openit.daycat.space/clashhttps://tt.vg/freeclashhttps://ghproxy.com/https://raw.githubusercontent.com/kxswa/k/k/clashhttps://git.io/emzclashhttps://cdn.jsdelivr.net/gh/oslook/clash-freenode@main/clash.yamlhttps://cdn.statically.io/gh/oslook/clash-freenode/main/clash.yamlhttps://proxypool.toshiki.top/clash/proxieshttps://tsutsu.top/JEmV1o5http://hazz.win/KmpQdYhttps://dllx.tk/GreenFishYYDShttps://openit.ml/longhttps://raw.fastgit.org/freefq/free/master/v2https://v1.mk/NJxbGcvhttps://suo.yt/1myZcHjhttps://sub.cm/kzBXnMV",
-    "https://xn--4oq11ryli3rg.com/s/d94ab6d97735b60789f6f5571318f66ehttp://64.181.242.230/api/v1/client/subscribe?token=7e661917e3b7bec79c1955f6bcd24101",
-    "https://353g78qgfq.surfcat.store/api/v1/client/subscribe?token=aea5fd520527f8cd4ad458819e588e57",
-    "https://ls.xn--sxqu35b.xn--fiqs8s/api/v1/client/subscribe?token=b7f32bdd63d5b8bf3513aeef1c2e1b41",
-    "https://portal.nextport.top/api/v1/client/subscribe?token=a7c422d46c1a3f9927fe97472d27ebf9",
-    "https://bakapie.cf/api/v1/client/subscribe?token=764255b17754ededb45c551d3ee9083f&flag=clash",
-    "https://sub.onlineweb.work/api/v1/client/subscribe?token=54d2f37502f364cfd519901909b39d1d",
-    "https://sub.lingche.icu/api/v1/client/subscribe?token=48e95450735e7d06d61b56f9bdb349fc",
-    "https://suscribethenetword.beecloud.club/api/v1/client/subscribe?token=3ea9448be6c5ace78a51249cb91b233f",
-    "http://64.181.242.230/api/v1/client/subscribe?token=7e661917e3b7bec79c1955f6bcd24101"
+    "https://x1.332244.icu/api/v1/client/subscribe?token=84830888f0aacb136c6bb0bf28d73d02"
   ]
 }
