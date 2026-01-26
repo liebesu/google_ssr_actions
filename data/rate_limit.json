@@ -5286,10 +5286,10 @@
     "next_allowed_at": 1769528120.1829734
   },
   "https://submit.mylac.cn:22443/api/v1/client/subscribe?token=a882f6d085778f55a8eaccb11293576c": {
-    "hits": 25,
+    "hits": 26,
     "last_reason": "body-hint",
-    "last_at": 1769354762.4058294,
-    "next_allowed_at": 1769441162.4058294
+    "last_at": 1769452936.786685,
+    "next_allowed_at": 1769539336.786685
   },
   "https://fn02.20251117.top/api/v1/client/subscribe?token=b1f34921b02cdc828fbe0f1788d4e11b": {
     "hits": 66,
@@ -5892,16 +5892,16 @@
     "next_allowed_at": 1769487599.6827812
   },
   "https://pokelink.xn--4gsvmh74cwxi.cn/api/v1/client/subscribe?token=1b38aaf5109bee897b4fe8493fc2bfb8": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "body-hint",
-    "last_at": 1767681982.277569,
-    "next_allowed_at": 1767710782.277569
+    "last_at": 1769452936.786685,
+    "next_allowed_at": 1769510536.786685
   },
   "https://pokelink.xn--4gsvmh74cwxi.cn/api/v1/client/subscribe?token=78d717b5c8bbe933a6d857fb5636c70c": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "body-hint",
-    "last_at": 1767681982.277569,
-    "next_allowed_at": 1767710782.277569
+    "last_at": 1769452936.786685,
+    "next_allowed_at": 1769510536.786685
   },
   "https://sub01.fkknet.cn/api/v1/client/subscribe?token=f61ae694dc0d764fcbb6893682a1d8c3": {
     "hits": 9,
@@ -6834,10 +6834,10 @@
     "next_allowed_at": 1769528120.1829734
   },
   "https://osaip.ftcos.click/api/v1/client/subscribe?token=30ffa0f1f58a7482906553af1374f1c7": {
-    "hits": 4,
+    "hits": 5,
     "last_reason": "http 403",
-    "last_at": 1769441720.1829734,
-    "next_allowed_at": 1769448920.1829734
+    "last_at": 1769452936.786685,
+    "next_allowed_at": 1769467336.786685
   },
   "https://moes.lnaspiring.com/Moe233-Subs/qwbm/api/v1/client/subscribe?token=e4a48770537e9e47347439adefb34ac9": {
     "hits": 1,
@@ -6924,9 +6924,9 @@
     "next_allowed_at": 1769489796.3767266
   },
   "http://23.145.248.238:13389/api/v1/client/subscribe?token=7df98cd9f7015036aa16ca7f7b84b8b4": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1769441720.1829734,
-    "next_allowed_at": 1769442620.1829734
+    "last_at": 1769452936.786685,
+    "next_allowed_at": 1769454736.786685
   }
 }
