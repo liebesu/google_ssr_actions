@@ -1134,10 +1134,10 @@
     "next_allowed_at": 1769487599.6827812
   },
   "https://sub.minizz.online/api/v1/client/subscribe?token=3f665c70a7bcd29ed3a1e087b27d2f13": {
-    "hits": 80,
+    "hits": 81,
     "last_reason": "body-hint",
-    "last_at": 1765771668.9253926,
-    "next_allowed_at": 1765858068.9253926
+    "last_at": 1769479407.1960638,
+    "next_allowed_at": 1769565807.1960638
   },
   "https://sub1.jiatelin.cyou/api/v1/client/subscribe?token=fa5f8fbbf4612457bce2411d06c8c3d5": {
     "hits": 119,
@@ -6924,9 +6924,9 @@
     "next_allowed_at": 1769489796.3767266
   },
   "http://23.145.248.238:13389/api/v1/client/subscribe?token=7df98cd9f7015036aa16ca7f7b84b8b4": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1769462989.6537173,
-    "next_allowed_at": 1769466589.6537173
+    "last_at": 1769479407.1960638,
+    "next_allowed_at": 1769486607.1960638
   }
 }
