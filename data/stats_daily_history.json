@@ -1017,10 +1017,10 @@
   },
   {
     "date": "2026-01-27",
-    "google_added": 70,
-    "github_added": 5,
+    "google_added": 69,
+    "github_added": 4,
     "new_total": 0,
-    "removed_total": 0,
-    "alive_total": 75
+    "removed_total": 2,
+    "alive_total": 73
   }
 ]
