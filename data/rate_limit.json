@@ -6942,15 +6942,15 @@
     "next_allowed_at": 1769619518.4364622
   },
   "https://fn1.fnxx.cc/api/v1/client/subscribe?token=4004e977a85ab52550af01ecff107315": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1769614721.107495,
-    "next_allowed_at": 1769618321.107495
+    "last_at": 1769625817.8030083,
+    "next_allowed_at": 1769633017.8030083
   },
   "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=hps9m3cm1rl9acjy314n0z64y07zt1pg": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "http 403",
-    "last_at": 1769614721.107495,
-    "next_allowed_at": 1769616521.107495
+    "last_at": 1769625817.8030083,
+    "next_allowed_at": 1769629417.8030083
   }
 }
