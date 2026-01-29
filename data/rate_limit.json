@@ -522,10 +522,10 @@
     "next_allowed_at": 1769787704.5367928
   },
   "https://qufanfan.info/api/v1/client/subscribe?token=00d1eff0820cffa7b904f3ed0dcee8d9": {
-    "hits": 85,
+    "hits": 86,
     "last_reason": "http 403",
-    "last_at": 1769593188.9078648,
-    "next_allowed_at": 1769679588.9078648
+    "last_at": 1769712899.7523706,
+    "next_allowed_at": 1769799299.7523706
   },
   "https://www.djjc.cfd/api/v1/client/subscribe?token=eb6fb117e1c1cbe8041e0e0a00935b85": {
     "hits": 125,
@@ -1404,10 +1404,10 @@
     "next_allowed_at": 1769787704.5367928
   },
   "https://s.gwzxwk.com/api/v1/client/subscribe?token=f7577a5ef586b00d0774112a337c2d1e": {
-    "hits": 15,
+    "hits": 16,
     "last_reason": "http 403",
-    "last_at": 1769593188.9078648,
-    "next_allowed_at": 1769679588.9078648
+    "last_at": 1769712899.7523706,
+    "next_allowed_at": 1769799299.7523706
   },
   "https://riolu.azure-api.net/api/v1/client/subscribe?token=4881d2ce996e6494d53a0d9598557352": {
     "hits": 113,
@@ -4440,10 +4440,10 @@
     "next_allowed_at": 1769756100.885689
   },
   "https://subtwo.arisaka.io/api/v1/client/subscribe?token=6ab4a8c0c632f45ecd35b75fa3bfcefe": {
-    "hits": 64,
+    "hits": 65,
     "last_reason": "http 403",
-    "last_at": 1769593188.9078648,
-    "next_allowed_at": 1769679588.9078648
+    "last_at": 1769712899.7523706,
+    "next_allowed_at": 1769799299.7523706
   },
   "https://webget.yfjc.xyz/api/v1/client/subscribe?token=c47cb593f47fcca611769f614c27b6d3": {
     "hits": 99,
@@ -4878,10 +4878,10 @@
     "next_allowed_at": 1769756100.885689
   },
   "https://s.stga.cn/api/v1/client/subscribe?token=c98ba6fa9a7c00047f701067f8f8bf27": {
-    "hits": 63,
+    "hits": 64,
     "last_reason": "http 403",
-    "last_at": 1769593188.9078648,
-    "next_allowed_at": 1769679588.9078648
+    "last_at": 1769712899.7523706,
+    "next_allowed_at": 1769799299.7523706
   },
   "http://xn--mes358alqkxik.com/api/v1/client/subscribe?token=9fe4a07a3761857d2277a0ecf364b382": {
     "hits": 31,
@@ -6576,10 +6576,10 @@
     "next_allowed_at": 1769787704.5367928
   },
   "https://su.gwzxwk.com/api/v1/client/subscribe?token=beb83b46a24b24976fb5382f3fab7157": {
-    "hits": 14,
+    "hits": 15,
     "last_reason": "http 403",
-    "last_at": 1769593188.9078648,
-    "next_allowed_at": 1769679588.9078648
+    "last_at": 1769712899.7523706,
+    "next_allowed_at": 1769799299.7523706
   },
   "https://www.yuntt.sbs/api/v1/client/subscribe?token=223aa5d1dd79d32ec8aa1b1d25a9f0e4": {
     "hits": 26,
