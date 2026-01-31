@@ -6948,10 +6948,10 @@
     "next_allowed_at": 1769938422.692596
   },
   "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=hps9m3cm1rl9acjy314n0z64y07zt1pg": {
-    "hits": 8,
+    "hits": 9,
     "last_reason": "http 403",
-    "last_at": 1769766229.5793128,
-    "next_allowed_at": 1769852629.5793128
+    "last_at": 1769864135.2942128,
+    "next_allowed_at": 1769950535.2942128
   },
   "http://x2b.eans.top/api/v1/client/subscribe?token=b7d1bd8013e73f79be6f46929b330154": {
     "hits": 2,
@@ -6960,15 +6960,15 @@
     "next_allowed_at": 1769853822.692596
   },
   "https://x2b.eans.top/api/v1/client/subscribe?token=a885ec15352f581eec4073d0758e678a": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "body-hint",
-    "last_at": 1769852022.692596,
-    "next_allowed_at": 1769853822.692596
+    "last_at": 1769864135.2942128,
+    "next_allowed_at": 1769867735.2942128
   },
   "https://x2b.eans.top/api/v1/client/subscribe?token=dcedd148c7ea786497433917e4ec1e18": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "body-hint",
-    "last_at": 1769852022.692596,
-    "next_allowed_at": 1769853822.692596
+    "last_at": 1769864135.2942128,
+    "next_allowed_at": 1769867735.2942128
   }
 }
