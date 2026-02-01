@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-01T15:28:08.625565",
+  "timestamp": "2026-02-01T18:38:36.181975",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,7 +11,7 @@
   ],
   "regions_count": 4,
   "total_urls": 1,
-  "original_urls": 4,
+  "original_urls": 2,
   "urls": [
     "https://a001.microunsync.com/api/v1/client/subscribe?token=71b4cf3ece906508dd5334e89f8caa4a"
   ]
