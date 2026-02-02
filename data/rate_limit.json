@@ -6984,9 +6984,9 @@
     "next_allowed_at": 1770028861.3460393
   },
   "https://zeroyyds.cc/api/v1/client/subscribe?token=4ced924eda11b55c5c987e813b076b28": {
-    "hits": 1,
+    "hits": 2,
     "last_reason": "body-hint",
-    "last_at": 1769981362.6762433,
-    "next_allowed_at": 1769982262.6762433
+    "last_at": 1769999364.5392952,
+    "next_allowed_at": 1770001164.5392952
   }
 }
