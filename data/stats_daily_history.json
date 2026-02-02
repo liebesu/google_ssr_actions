@@ -1065,10 +1065,10 @@
   },
   {
     "date": "2026-02-02",
-    "google_added": 69,
+    "google_added": 66,
     "github_added": 4,
     "new_total": 1,
-    "removed_total": 0,
-    "alive_total": 73
+    "removed_total": 4,
+    "alive_total": 70
   }
 ]
