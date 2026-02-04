@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-04T18:55:07.956336",
+  "timestamp": "2026-02-04T21:36:26.345171",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,10 +11,10 @@
   ],
   "regions_count": 4,
   "total_urls": 3,
-  "original_urls": 7,
+  "original_urls": 10,
   "urls": [
     "http://sub.linkxfk.com/api/v1/client/subscribe?token=ee64171db62284ada8a630fdad7d008e",
-    "https://fcsblka.fcsubcn.cc:2096/api/v1/client/subscribe?token=0574115a91a28fbc5e58157ef30c936a",
-    "https://login.yfjc.xyz/api/v1/client/subscribe?token=641b21e166a350692cb411548f76a6bf"
+    "https://login.yfjc.xyz/api/v1/client/subscribe?token=641b21e166a350692cb411548f76a6bf",
+    "https://fcsblka.fcsubcn.cc:2096/api/v1/client/subscribe?token=0574115a91a28fbc5e58157ef30c936a"
   ]
 }
