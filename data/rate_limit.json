@@ -2808,16 +2808,16 @@
     "next_allowed_at": 1770037043.257692
   },
   "https://sub.yifenjichang.online/api/v1/client/subscribe?token=71a92de8e9302ea6ecd1b2cf6acd4818": {
-    "hits": 16,
+    "hits": 17,
     "last_reason": "http 429",
-    "last_at": 1769922319.7912135,
-    "next_allowed_at": 1770008719.7912135
+    "last_at": 1770171298.6164618,
+    "next_allowed_at": 1770257698.6164618
   },
   "https://sub.yifenjichang.online/api/v1/client/subscribe?token=bc7a2450d60ebc32688f1e07e837f16d": {
-    "hits": 15,
-    "last_reason": "body-hint",
-    "last_at": 1769950643.257692,
-    "next_allowed_at": 1770037043.257692
+    "hits": 16,
+    "last_reason": "http 429",
+    "last_at": 1770171298.6164618,
+    "next_allowed_at": 1770257698.6164618
   },
   "https://subscribe.hxlgaozhong.xyz/api/v1/client/subscribe?token=3e6d91cdccde5149755dddc909af7774": {
     "hits": 101,
@@ -5286,10 +5286,10 @@
     "next_allowed_at": 1770172056.4543252
   },
   "https://submit.mylac.cn:22443/api/v1/client/subscribe?token=a882f6d085778f55a8eaccb11293576c": {
-    "hits": 32,
+    "hits": 33,
     "last_reason": "body-hint",
-    "last_at": 1770026193.242965,
-    "next_allowed_at": 1770112593.242965
+    "last_at": 1770171298.6164618,
+    "next_allowed_at": 1770257698.6164618
   },
   "https://fn02.20251117.top/api/v1/client/subscribe?token=b1f34921b02cdc828fbe0f1788d4e11b": {
     "hits": 74,
@@ -5622,10 +5622,10 @@
     "next_allowed_at": 1770210517.1735175
   },
   "https://has.ninja/api/v1/client/subscribe?token=4450159ebd8f980287eba6732c190c2d": {
-    "hits": 51,
+    "hits": 52,
     "last_reason": "body-hint",
-    "last_at": 1770058282.6246915,
-    "next_allowed_at": 1770144682.6246915
+    "last_at": 1770171298.6164618,
+    "next_allowed_at": 1770257698.6164618
   },
   "https://mojie.app/api/v1/client/subscribe?token=32420f8a7ac0dcb134ab30f85e16e7d7": {
     "hits": 63,
@@ -6996,9 +6996,9 @@
     "next_allowed_at": 1770181717.1735175
   },
   "https://139.224.118.41/api/v1/client/subscribe?token=26e94a7e1f848d2f42f1730507475291": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1770154761.0957537,
-    "next_allowed_at": 1770169161.0957537
+    "last_at": 1770171298.6164618,
+    "next_allowed_at": 1770200098.6164618
   }
 }
