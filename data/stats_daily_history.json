@@ -1081,10 +1081,10 @@
   },
   {
     "date": "2026-02-04",
-    "google_added": 65,
+    "google_added": 63,
     "github_added": 4,
     "new_total": 2,
-    "removed_total": 1,
-    "alive_total": 69
+    "removed_total": 4,
+    "alive_total": 67
   }
 ]
