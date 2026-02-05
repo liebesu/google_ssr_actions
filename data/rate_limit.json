@@ -7002,9 +7002,9 @@
     "next_allowed_at": 1770268023.7899475
   },
   "http://sub.linkxfk.com/api/v1/client/subscribe?token=ee64171db62284ada8a630fdad7d008e": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1770231460.304316,
-    "next_allowed_at": 1770245860.304316
+    "last_at": 1770257733.2075245,
+    "next_allowed_at": 1770286533.2075245
   }
 }
