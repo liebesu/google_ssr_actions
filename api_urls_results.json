@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-05T13:07:31.518841",
+  "timestamp": "2026-02-06T18:55:18.536827",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -13,6 +13,6 @@
   "total_urls": 1,
   "original_urls": 4,
   "urls": [
-    "https://fcsblka.fcsubcn.cc:2096/api/v1/client/subscribe?token=0574115a91a28fbc5e58157ef30c936a"
+    "https://www.djjc.cfd/api/v1/client/subscribe?token=d3c44ec80b52bfb55fb5acf523096be5"
   ]
 }
