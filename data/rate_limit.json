@@ -7006,5 +7006,11 @@
     "last_reason": "http 403",
     "last_at": 1770361253.901406,
     "next_allowed_at": 1770447653.901406
+  },
+  "https://heis.ninja/api/v1/client/subscribe?token=feb206445262cfadcd29c45bc8688dc0": {
+    "hits": 1,
+    "last_reason": "body-hint",
+    "last_at": 1770430322.7623775,
+    "next_allowed_at": 1770431222.7623775
   }
 }
