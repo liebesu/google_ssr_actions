@@ -1962,10 +1962,10 @@
     "next_allowed_at": 1770371517.580674
   },
   "https://gogof.hgfastgo.com/api/v1/client/subscribe?token=fdcb29a03a96c3296620ef37d7f9a890": {
-    "hits": 11,
+    "hits": 12,
     "last_reason": "body-hint",
-    "last_at": 1769841902.341133,
-    "next_allowed_at": 1769928302.341133
+    "last_at": 1770439350.2650871,
+    "next_allowed_at": 1770525750.2650871
   },
   "https://subscription-gov.lianjiasub.work/api/v1/client/subscribe?token=e4cc5b5cdd16153cbabab52429dd43d6": {
     "hits": 114,
@@ -5760,10 +5760,10 @@
     "next_allowed_at": 1770447653.901406
   },
   "http://xn--dlqr72e.top/api/v1/client/subscribe?token=ad80a81805cd0af79e5c5174fad26271": {
-    "hits": 27,
+    "hits": 28,
     "last_reason": "body-hint",
-    "last_at": 1770344152.8777618,
-    "next_allowed_at": 1770430552.8777618
+    "last_at": 1770439350.2650871,
+    "next_allowed_at": 1770525750.2650871
   },
   "https://onlysub.mjurl.com/api/v1/client/subscribe?token=6ce36d5db7913f957f0b53cce90385ac": {
     "hits": 59,
@@ -5892,16 +5892,16 @@
     "next_allowed_at": 1770490672.76021
   },
   "https://pokelink.xn--4gsvmh74cwxi.cn/api/v1/client/subscribe?token=1b38aaf5109bee897b4fe8493fc2bfb8": {
-    "hits": 17,
+    "hits": 18,
     "last_reason": "body-hint",
-    "last_at": 1770344152.8777618,
-    "next_allowed_at": 1770430552.8777618
+    "last_at": 1770439350.2650871,
+    "next_allowed_at": 1770525750.2650871
   },
   "https://pokelink.xn--4gsvmh74cwxi.cn/api/v1/client/subscribe?token=78d717b5c8bbe933a6d857fb5636c70c": {
-    "hits": 17,
+    "hits": 18,
     "last_reason": "body-hint",
-    "last_at": 1770344152.8777618,
-    "next_allowed_at": 1770430552.8777618
+    "last_at": 1770439350.2650871,
+    "next_allowed_at": 1770525750.2650871
   },
   "https://sub01.fkknet.cn/api/v1/client/subscribe?token=f61ae694dc0d764fcbb6893682a1d8c3": {
     "hits": 13,
@@ -6366,10 +6366,10 @@
     "next_allowed_at": 1770447653.901406
   },
   "https://cresub.trafficmanager.net/api/v1/client/subscribe?token=59bff633e8c286c80035ffbb3190d45c": {
-    "hits": 12,
+    "hits": 13,
     "last_reason": "body-hint",
-    "last_at": 1770285117.580674,
-    "next_allowed_at": 1770371517.580674
+    "last_at": 1770439350.2650871,
+    "next_allowed_at": 1770525750.2650871
   },
   "https://jsjc.cfd/api/v1/client/subscribe?token=41d2cc3da79c5349481197cf934951f1": {
     "hits": 45,
@@ -6768,10 +6768,10 @@
     "next_allowed_at": 1770447653.901406
   },
   "https://data.xtcloud.org/api/v1/client/subscribe?token=30da5d6c915e6079650693a24a0d8893": {
-    "hits": 21,
+    "hits": 22,
     "last_reason": "body-hint",
-    "last_at": 1770344152.8777618,
-    "next_allowed_at": 1770430552.8777618
+    "last_at": 1770439350.2650871,
+    "next_allowed_at": 1770525750.2650871
   },
   "https://cdn.bocchi.ooo/api/v1/client/subscribe?token=055d81074954e1295b6b87ec8865df56": {
     "hits": 21,
@@ -6846,10 +6846,10 @@
     "next_allowed_at": 1769173818.9391499
   },
   "https://yfjc.xyz/api/v1/client/subscribe?token=6a9261e894f37fc064d94ead5b73e8a8": {
-    "hits": 19,
+    "hits": 20,
     "last_reason": "http 403",
-    "last_at": 1770344152.8777618,
-    "next_allowed_at": 1770430552.8777618
+    "last_at": 1770439350.2650871,
+    "next_allowed_at": 1770525750.2650871
   },
   "https://101.43.12.60:28364/api/v1/client/subscribe?token=40cd1caddf2aa3d067f96a2d8001836": {
     "hits": 19,
@@ -6924,10 +6924,10 @@
     "next_allowed_at": 1770490672.76021
   },
   "http://23.145.248.238:13389/api/v1/client/subscribe?token=7df98cd9f7015036aa16ca7f7b84b8b4": {
-    "hits": 16,
+    "hits": 17,
     "last_reason": "body-hint",
-    "last_at": 1770344152.8777618,
-    "next_allowed_at": 1770430552.8777618
+    "last_at": 1770439350.2650871,
+    "next_allowed_at": 1770525750.2650871
   },
   "https://dash.knjc.cfd/api/v1/client/subscribe?token=afaa631bb786f363508851370fe83c08": {
     "hits": 15,
@@ -6984,10 +6984,10 @@
     "next_allowed_at": 1770490672.76021
   },
   "https://zeroyyds.cc/api/v1/client/subscribe?token=4ced924eda11b55c5c987e813b076b28": {
-    "hits": 10,
+    "hits": 11,
     "last_reason": "body-hint",
-    "last_at": 1770344152.8777618,
-    "next_allowed_at": 1770430552.8777618
+    "last_at": 1770439350.2650871,
+    "next_allowed_at": 1770525750.2650871
   },
   "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=3e67afc6221f26": {
     "hits": 10,
