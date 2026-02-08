@@ -2040,10 +2040,10 @@
     "next_allowed_at": 1770543381.164944
   },
   "https://submit.mylac.cn:22443/api/v1/client/subscribe?token=2e1d3fae9b9b3dac6670575621a0a15d": {
-    "hits": 37,
+    "hits": 38,
     "last_reason": "body-hint",
-    "last_at": 1770404272.76021,
-    "next_allowed_at": 1770490672.76021
+    "last_at": 1770543358.961819,
+    "next_allowed_at": 1770629758.961819
   },
   "https://v2.netbridge.uk/api/v1/client/subscribe?token=31f8371d6d3781f3a6d4586a67b98b95": {
     "hits": 114,
@@ -5286,10 +5286,10 @@
     "next_allowed_at": 1770543381.164944
   },
   "https://submit.mylac.cn:22443/api/v1/client/subscribe?token=a882f6d085778f55a8eaccb11293576c": {
-    "hits": 35,
+    "hits": 36,
     "last_reason": "body-hint",
-    "last_at": 1770404272.76021,
-    "next_allowed_at": 1770490672.76021
+    "last_at": 1770543358.961819,
+    "next_allowed_at": 1770629758.961819
   },
   "https://fn02.20251117.top/api/v1/client/subscribe?token=b1f34921b02cdc828fbe0f1788d4e11b": {
     "hits": 78,
@@ -5862,10 +5862,10 @@
     "next_allowed_at": 1770586328.9361281
   },
   "https://B.top/smjc/api/v1/client/subscribe?token=B": {
-    "hits": 23,
+    "hits": 24,
     "last_reason": "body-hint",
-    "last_at": 1767508694.1199355,
-    "next_allowed_at": 1767595094.1199355
+    "last_at": 1770543358.961819,
+    "next_allowed_at": 1770629758.961819
   },
   "https://www.yfjc.xyz/api/v1/client/subscribe?token=37aaba46d9133e0ac31264e516b11f99": {
     "hits": 55,
