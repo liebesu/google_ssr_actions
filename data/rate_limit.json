@@ -450,10 +450,10 @@
     "next_allowed_at": 1770586328.9361281
   },
   "https://qingcha.win/api/v1/client/subscribe?token=89e22b9e9b39a570ffe5caa44398c3d8": {
-    "hits": 128,
+    "hits": 129,
     "last_reason": "http 403",
-    "last_at": 1770446898.9079537,
-    "next_allowed_at": 1770533298.9079537
+    "last_at": 1770533792.1273255,
+    "next_allowed_at": 1770620192.1273255
   },
   "https://qingcha.win/api/v1/client/subscribe?token=c35d37388aaf8d58e7bd94757ae782dd": {
     "hits": 132,
