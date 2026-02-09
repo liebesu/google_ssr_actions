@@ -1326,10 +1326,10 @@
     "next_allowed_at": 1770447653.901406
   },
   "https://qq.xlm.plus/api/v1/client/subscribe?token=9e5db95336ab586ac6c4e2306c4d25a9": {
-    "hits": 89,
+    "hits": 90,
     "last_reason": "body-hint",
-    "last_at": 1770392720.3864524,
-    "next_allowed_at": 1770479120.3864524
+    "last_at": 1770604262.8315444,
+    "next_allowed_at": 1770690662.8315444
   },
   "https://odysseycdn.cyou/api/v1/client/subscribe?token=057940e6e8d6f091ceabdf2f8b1965ed": {
     "hits": 126,
@@ -2784,10 +2784,10 @@
     "next_allowed_at": 1760670922.231444
   },
   "https://sub.gougou.live/api/v1/client/subscribe?token=002c61fa51ccc991a0e76d3f01120e9b": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1770586340.0909715,
-    "next_allowed_at": 1770589940.0909715
+    "last_at": 1770604262.8315444,
+    "next_allowed_at": 1770611462.8315444
   },
   "https://sub.hx666.pro/api/v1/client/subscribe?token=5e3f5d269857f2b792ff5aae32a10efd": {
     "hits": 31,
