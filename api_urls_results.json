@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-10T07:08:01.644074",
+  "timestamp": "2026-02-10T10:02:52.794870",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,10 +10,9 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 2,
-  "original_urls": 7,
+  "total_urls": 1,
+  "original_urls": 4,
   "urls": [
-    "https://api.dingyueapi.win/api/v1/client/subscribe?token=0130f5ec09400db6c64b3a4bfbe0f6",
-    "https://cdn9.bydcloud.top/api/v1/client/subscribe?token=77c1e7758860b1cd12a2479cf9983338"
+    "https://api.dingyueapi.win/api/v1/client/subscribe?token=0130f5ec09400db6c64b3a4bfbe0f6"
   ]
 }
