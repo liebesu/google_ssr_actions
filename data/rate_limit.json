@@ -7020,10 +7020,10 @@
     "next_allowed_at": 1770817575.4481914
   },
   "https://a.flyintpro06.pro/api/v1/client/subscribe?token=a82fd01da70d9bffb6221adfb8df6247": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1770777378.0672653,
-    "next_allowed_at": 1770806178.0672653
+    "last_at": 1770815921.0446312,
+    "next_allowed_at": 1770873521.0446312
   },
   "https://example.com/api/v1/client/subscribe?token=11451419198101145141919810114514": {
     "hits": 1,
@@ -7044,9 +7044,9 @@
     "next_allowed_at": 1770740767.604203
   },
   "https://cdn9.bydcloud.top/api/v1/client/subscribe?token=77c1e7758860b1cd12a2479cf9983338": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "body-hint",
-    "last_at": 1770803939.9871624,
-    "next_allowed_at": 1770805739.9871624
+    "last_at": 1770815921.0446312,
+    "next_allowed_at": 1770819521.0446312
   }
 }
