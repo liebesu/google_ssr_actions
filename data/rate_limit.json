@@ -456,10 +456,10 @@
     "next_allowed_at": 1771045062.3125486
   },
   "https://qingcha.win/api/v1/client/subscribe?token=c35d37388aaf8d58e7bd94757ae782dd": {
-    "hits": 137,
+    "hits": 138,
     "last_reason": "body-hint",
-    "last_at": 1770949952.5681539,
-    "next_allowed_at": 1771036352.5681539
+    "last_at": 1771051982.5170772,
+    "next_allowed_at": 1771138382.5170772
   },
   "https://smjcdh.com/api/v1/client/subscribe?token=ab76cd0151a664de5a1c121a7393db2d": {
     "hits": 134,
