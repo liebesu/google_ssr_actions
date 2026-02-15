@@ -456,10 +456,10 @@
     "next_allowed_at": 1771160205.2248793
   },
   "https://qingcha.win/api/v1/client/subscribe?token=c35d37388aaf8d58e7bd94757ae782dd": {
-    "hits": 138,
-    "last_reason": "body-hint",
-    "last_at": 1771051982.5170772,
-    "next_allowed_at": 1771138382.5170772
+    "hits": 139,
+    "last_reason": "http 403",
+    "last_at": 1771138679.0496724,
+    "next_allowed_at": 1771225079.0496724
   },
   "https://smjcdh.com/api/v1/client/subscribe?token=ab76cd0151a664de5a1c121a7393db2d": {
     "hits": 134,
@@ -2814,10 +2814,10 @@
     "next_allowed_at": 1771074461.0866485
   },
   "https://sub.yifenjichang.online/api/v1/client/subscribe?token=bc7a2450d60ebc32688f1e07e837f16d": {
-    "hits": 21,
-    "last_reason": "body-hint",
-    "last_at": 1770988061.0866485,
-    "next_allowed_at": 1771074461.0866485
+    "hits": 22,
+    "last_reason": "http 429",
+    "last_at": 1771138679.0496724,
+    "next_allowed_at": 1771225079.0496724
   },
   "https://subscribe.hxlgaozhong.xyz/api/v1/client/subscribe?token=3e6d91cdccde5149755dddc909af7774": {
     "hits": 112,
