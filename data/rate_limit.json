@@ -2040,10 +2040,10 @@
     "next_allowed_at": 1771304653.7420838
   },
   "https://submit.mylac.cn:22443/api/v1/client/subscribe?token=2e1d3fae9b9b3dac6670575621a0a15d": {
-    "hits": 44,
+    "hits": 45,
     "last_reason": "body-hint",
-    "last_at": 1771208935.8196516,
-    "next_allowed_at": 1771295335.8196516
+    "last_at": 1771304201.1303685,
+    "next_allowed_at": 1771390601.1303685
   },
   "https://v2.netbridge.uk/api/v1/client/subscribe?token=31f8371d6d3781f3a6d4586a67b98b95": {
     "hits": 122,
