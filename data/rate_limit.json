@@ -2040,10 +2040,10 @@
     "next_allowed_at": 1771581221.242667
   },
   "https://submit.mylac.cn:22443/api/v1/client/subscribe?token=2e1d3fae9b9b3dac6670575621a0a15d": {
-    "hits": 47,
+    "hits": 48,
     "last_reason": "body-hint",
-    "last_at": 1771484729.8600655,
-    "next_allowed_at": 1771571129.8600655
+    "last_at": 1771580766.976912,
+    "next_allowed_at": 1771667166.976912
   },
   "https://v2.netbridge.uk/api/v1/client/subscribe?token=31f8371d6d3781f3a6d4586a67b98b95": {
     "hits": 125,
@@ -2748,10 +2748,10 @@
     "next_allowed_at": 1771593220.2168403
   },
   "https://sub-jam.auto/api/v1/client/subscribe?token=f4b0b8dbae270e09247c4cee21fe527b": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1771570977.9726753,
-    "next_allowed_at": 1771574577.9726753
+    "last_at": 1771580766.976912,
+    "next_allowed_at": 1771587966.976912
   },
   "https://sub.372372.xyz/api/v1/client/subscribe?token=024e356371111d8f84b0d93052868143": {
     "hits": 2,
