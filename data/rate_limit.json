@@ -3246,10 +3246,10 @@
     "next_allowed_at": 1760670922.231444
   },
   "https://xiaomi.nekoy01.com:10018/api/v1/client/subscribe?token=ce9dd77b741c8a0dcdbe134314ea0901": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1771592769.8677425,
-    "next_allowed_at": 1771621569.8677425
+    "last_at": 1771623053.7883663,
+    "next_allowed_at": 1771680653.7883663
   },
   "https://xn--mesr8b36x.com/api/v1/client/subscribe?token=39e08aae1d7932fa88ac1557749b7de1": {
     "hits": 2,
