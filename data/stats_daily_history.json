@@ -1209,10 +1209,10 @@
   },
   {
     "date": "2026-02-20",
-    "google_added": 62,
+    "google_added": 58,
     "github_added": 5,
-    "new_total": 1,
-    "removed_total": 1,
-    "alive_total": 67
+    "new_total": 0,
+    "removed_total": 4,
+    "alive_total": 63
   }
 ]

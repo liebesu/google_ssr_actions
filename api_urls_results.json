@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-20T09:43:41.487561",
+  "timestamp": "2026-02-20T13:03:43.124028",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -11,7 +11,7 @@
   ],
   "regions_count": 4,
   "total_urls": 1,
-  "original_urls": 2,
+  "original_urls": 3,
   "urls": [
     "https://ldld.whtjdasha.com/api/v1/client/subscribe?token=6b69e6bc9bc793ea90db235e89a649d5"
   ]
