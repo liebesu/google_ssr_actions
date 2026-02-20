@@ -552,10 +552,10 @@
     "next_allowed_at": 1767068050.6086717
   },
   "https://vpndata.shop/api/v1/client/subscribe?token=a0abc72c47d4c7ea48e4b700bee0c1b5": {
-    "hits": 72,
+    "hits": 73,
     "last_reason": "body-hint",
-    "last_at": 1771506820.2168403,
-    "next_allowed_at": 1771593220.2168403
+    "last_at": 1771613726.4092002,
+    "next_allowed_at": 1771700126.4092002
   },
   "http://gbtgurl01.org/api/v1/client/subscribe?token=36e8a67632a8d0f0c0eea58b099a0826": {
     "hits": 145,
@@ -2748,10 +2748,10 @@
     "next_allowed_at": 1771688516.437152
   },
   "https://sub-jam.auto/api/v1/client/subscribe?token=f4b0b8dbae270e09247c4cee21fe527b": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "body-hint",
-    "last_at": 1771592769.8677425,
-    "next_allowed_at": 1771607169.8677425
+    "last_at": 1771613726.4092002,
+    "next_allowed_at": 1771642526.4092002
   },
   "https://sub.372372.xyz/api/v1/client/subscribe?token=024e356371111d8f84b0d93052868143": {
     "hits": 2,
