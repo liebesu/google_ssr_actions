@@ -330,10 +330,10 @@
     "next_allowed_at": 1771785666.0408058
   },
   "http://154.89.203.177/api/v1/client/subscribe?token=0f3c7e30c503f6a45ea65a671d4cfe26": {
-    "hits": 39,
+    "hits": 40,
     "last_reason": "body-hint",
-    "last_at": 1771639857.4784188,
-    "next_allowed_at": 1771726257.4784188
+    "last_at": 1771727291.5546775,
+    "next_allowed_at": 1771813691.5546775
   },
   "http://47.74.1.114:8089/api/v1/client/subscribe?token=59bbba2d0f3135693b3f339e7b0bbe73": {
     "hits": 147,
@@ -552,10 +552,10 @@
     "next_allowed_at": 1767068050.6086717
   },
   "https://vpndata.shop/api/v1/client/subscribe?token=a0abc72c47d4c7ea48e4b700bee0c1b5": {
-    "hits": 73,
+    "hits": 74,
     "last_reason": "body-hint",
-    "last_at": 1771613726.4092002,
-    "next_allowed_at": 1771700126.4092002
+    "last_at": 1771727291.5546775,
+    "next_allowed_at": 1771813691.5546775
   },
   "http://gbtgurl01.org/api/v1/client/subscribe?token=36e8a67632a8d0f0c0eea58b099a0826": {
     "hits": 146,
@@ -2766,10 +2766,10 @@
     "next_allowed_at": 1760670922.231444
   },
   "https://sub.966888.xyz/api/v1/client/subscribe?token=2c53cb842bd6e2366782444aac8cfc16": {
-    "hits": 15,
+    "hits": 16,
     "last_reason": "body-hint",
-    "last_at": 1771639857.4784188,
-    "next_allowed_at": 1771726257.4784188
+    "last_at": 1771727291.5546775,
+    "next_allowed_at": 1771813691.5546775
   },
   "https://sub.bajieurl.com/api/v1/client/subscribe?token=a7f2a1975aec5bd766e1f1222819b9f5": {
     "hits": 2,
@@ -7020,10 +7020,10 @@
     "next_allowed_at": 1771774261.9164686
   },
   "https://a.flyintpro06.pro/api/v1/client/subscribe?token=a82fd01da70d9bffb6221adfb8df6247": {
-    "hits": 16,
+    "hits": 17,
     "last_reason": "http 403",
-    "last_at": 1771639857.4784188,
-    "next_allowed_at": 1771726257.4784188
+    "last_at": 1771727291.5546775,
+    "next_allowed_at": 1771813691.5546775
   },
   "https://example.com/api/v1/client/subscribe?token=11451419198101145141919810114514": {
     "hits": 1,
@@ -7134,9 +7134,9 @@
     "next_allowed_at": 1771593669.8677425
   },
   "https://lmapi02.lmsub.cc/api/v1/client/subscribe?token=43e22f2b6585743ed8fab01e93b313cd": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "http 403",
-    "last_at": 1771709339.4811432,
-    "next_allowed_at": 1771712939.4811432
+    "last_at": 1771727291.5546775,
+    "next_allowed_at": 1771734491.5546775
   }
 }
