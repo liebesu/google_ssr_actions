@@ -450,16 +450,16 @@
     "next_allowed_at": 1771785666.0408058
   },
   "https://qingcha.win/api/v1/client/subscribe?token=89e22b9e9b39a570ffe5caa44398c3d8": {
-    "hits": 140,
+    "hits": 141,
     "last_reason": "http 403",
-    "last_at": 1771666531.0072277,
-    "next_allowed_at": 1771752931.0072277
+    "last_at": 1771753029.4378712,
+    "next_allowed_at": 1771839429.4378712
   },
   "https://qingcha.win/api/v1/client/subscribe?token=c35d37388aaf8d58e7bd94757ae782dd": {
-    "hits": 144,
+    "hits": 145,
     "last_reason": "http 403",
-    "last_at": 1771656512.9635823,
-    "next_allowed_at": 1771742912.9635823
+    "last_at": 1771753029.4378712,
+    "next_allowed_at": 1771839429.4378712
   },
   "https://smjcdh.com/api/v1/client/subscribe?token=ab76cd0151a664de5a1c121a7393db2d": {
     "hits": 134,
@@ -1236,10 +1236,10 @@
     "next_allowed_at": 1771785666.0408058
   },
   "https://sanfen003.xyz/api/v1/client/subscribe?token=965a9805b26d65b736e88bea4d7e66a0&flag=clash": {
-    "hits": 70,
+    "hits": 71,
     "last_reason": "body-hint",
-    "last_at": 1771570977.9726753,
-    "next_allowed_at": 1771657377.9726753
+    "last_at": 1771753029.4378712,
+    "next_allowed_at": 1771839429.4378712
   },
   "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=01469aa2996308f7fedf6d35727e1e04": {
     "hits": 142,
@@ -7008,10 +7008,10 @@
     "next_allowed_at": 1771774261.9164686
   },
   "https://heis.ninja/api/v1/client/subscribe?token=feb206445262cfadcd29c45bc8688dc0": {
-    "hits": 15,
+    "hits": 16,
     "last_reason": "body-hint",
-    "last_at": 1771656512.9635823,
-    "next_allowed_at": 1771742912.9635823
+    "last_at": 1771753029.4378712,
+    "next_allowed_at": 1771839429.4378712
   },
   "https://api.dingyueapi.win/api/v1/client/subscribe?token=0130f5ec09400db6c64b3a4bfbe0f6": {
     "hits": 17,
@@ -7134,9 +7134,9 @@
     "next_allowed_at": 1771593669.8677425
   },
   "https://lmapi02.lmsub.cc/api/v1/client/subscribe?token=43e22f2b6585743ed8fab01e93b313cd": {
-    "hits": 5,
+    "hits": 6,
     "last_reason": "http 403",
-    "last_at": 1771736026.6820264,
-    "next_allowed_at": 1771750426.6820264
+    "last_at": 1771753029.4378712,
+    "next_allowed_at": 1771781829.4378712
   }
 }
