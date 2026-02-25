@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-25T16:06:17.374601",
+  "timestamp": "2026-02-25T19:09:35.175876",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,16 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 8,
-  "original_urls": 11,
+  "total_urls": 2,
+  "original_urls": 7,
   "urls": [
-    "https://login.yfjc.xyz/api/v1/client/subscribe?token=641b21e166a350692cb411548f76a6bf",
-    "https://www.yfjc.xyz/api/v1/client/subscribe?token=43637982a362bb62df71b4d6da763751",
-    "https://dash.knjc.cfd/api/v1/client/subscribe?token=8c1e4ed7de047bb19f4af4e77acdfbad",
-    "https://s1.byte77.com/api/v1/client/subscribe?token=ce8bef8c67c46cee338654c46945cc81",
-    "https://mcp.dpenly.org/api/v1/client/subscribe?token=23a28ee69cc9b064fb5dcb8ab6d22b0d",
-    "https://apt.dyljstar.sbs/api/v1/client/subscribe?token=a030644345fe01becc042b352e1b2d7e",
-    "https://mcp.dpenly.org/api/v1/client/subscribe?token=a29ce12fe21a8523c65529ebaa71ba67",
-    "https://sub-1.smjcdh.top/smjc/api/v1/client/subscribe?token=f859cede6c813621c9f9886a8772aab6"
+    "https://sub-1.smjcdh.top/smjc/api/v1/client/subscribe?token=f859cede6c813621c9f9886a8772aab6",
+    "https://login.yfjc.xyz/api/v1/client/subscribe?token=641b21e166a350692cb411548f76a6bf"
   ]
 }
