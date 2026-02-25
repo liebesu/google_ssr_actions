@@ -936,10 +936,10 @@
     "next_allowed_at": 1772133122.8127482
   },
   "https://xsus.wiki/api/v1/client/subscribe?token=04cb973f36d932775a721f6ff838b2f1": {
-    "hits": 43,
+    "hits": 44,
     "last_reason": "body-hint",
-    "last_at": 1763306539.972688,
-    "next_allowed_at": 1763392939.972688
+    "last_at": 1772055588.9879878,
+    "next_allowed_at": 1772141988.9879878
   },
   "https://xsus.wiki/api/v1/client/subscribe?token=115a2a0c2dade3638a87e903a4e8793e": {
     "hits": 43,
@@ -7188,15 +7188,21 @@
     "next_allowed_at": 1772075522.8127482
   },
   "https://ldld.whtjdasha.com/api/v1/client/subscribe?token=6b69e6bc9bc793ea90db235e89a649d5": {
-    "hits": 3,
+    "hits": 4,
     "last_reason": "body-hint",
-    "last_at": 1772046722.8127482,
-    "next_allowed_at": 1772050322.8127482
+    "last_at": 1772055588.9879878,
+    "next_allowed_at": 1772062788.9879878
   },
   "https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=493b544df59832a5716a27bf5e9da216": {
     "hits": 1,
     "last_reason": "body-hint",
     "last_at": 1772025184.9742699,
     "next_allowed_at": 1772026084.9742699
+  },
+  "https://gsurl.izenny.com/api/v1/client/subscribe?token=9c40957bccea7105c27ae6d1608b329e": {
+    "hits": 1,
+    "last_reason": "body-hint",
+    "last_at": 1772055588.9879878,
+    "next_allowed_at": 1772056488.9879878
   }
 }
