@@ -2748,10 +2748,10 @@
     "next_allowed_at": 1772133122.8127482
   },
   "https://sub-jam.auto/api/v1/client/subscribe?token=f4b0b8dbae270e09247c4cee21fe527b": {
-    "hits": 11,
+    "hits": 12,
     "last_reason": "body-hint",
-    "last_at": 1771986440.9742436,
-    "next_allowed_at": 1772072840.9742436
+    "last_at": 1772081735.201734,
+    "next_allowed_at": 1772168135.201734
   },
   "https://sub.372372.xyz/api/v1/client/subscribe?token=024e356371111d8f84b0d93052868143": {
     "hits": 2,
@@ -6258,10 +6258,10 @@
     "next_allowed_at": 1772122136.6305394
   },
   "https://fcsblka.fcsubcn.cc:2096/api/v1/client/subscribe?token=0574115a91a28fbc5e58157ef30c936a": {
-    "hits": 67,
+    "hits": 68,
     "last_reason": "body-hint",
-    "last_at": 1771986440.9742436,
-    "next_allowed_at": 1772072840.9742436
+    "last_at": 1772081735.201734,
+    "next_allowed_at": 1772168135.201734
   },
   "https://sub.mofeiyun.com/api/v1/client/subscribe?token=31f0b43dad7bfa255bf61a9475c3e359": {
     "hits": 69,
@@ -7176,16 +7176,16 @@
     "next_allowed_at": 1772129736.4940574
   },
   "https://dash.knjc.cfd/api/v1/client/subscribe?token=8c1e4ed7de047bb19f4af4e77acdfbad": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1772046722.8127482,
-    "next_allowed_at": 1772075522.8127482
+    "last_at": 1772081735.201734,
+    "next_allowed_at": 1772139335.201734
   },
   "https://www.yfjc.xyz/api/v1/client/subscribe?token=43637982a362bb62df71b4d6da763751": {
-    "hits": 6,
+    "hits": 7,
     "last_reason": "http 403",
-    "last_at": 1772046722.8127482,
-    "next_allowed_at": 1772075522.8127482
+    "last_at": 1772081735.201734,
+    "next_allowed_at": 1772139335.201734
   },
   "https://ldld.whtjdasha.com/api/v1/client/subscribe?token=6b69e6bc9bc793ea90db235e89a649d5": {
     "hits": 5,
@@ -7200,9 +7200,15 @@
     "next_allowed_at": 1772026084.9742699
   },
   "https://gsurl.izenny.com/api/v1/client/subscribe?token=9c40957bccea7105c27ae6d1608b329e": {
-    "hits": 2,
+    "hits": 3,
     "last_reason": "body-hint",
-    "last_at": 1772072136.4940574,
-    "next_allowed_at": 1772073936.4940574
+    "last_at": 1772081735.201734,
+    "next_allowed_at": 1772085335.201734
+  },
+  "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=8827a7d0e22de79b46fd5003b1cc0ca7": {
+    "hits": 1,
+    "last_reason": "http 403",
+    "last_at": 1772081735.201734,
+    "next_allowed_at": 1772082635.201734
   }
 }
