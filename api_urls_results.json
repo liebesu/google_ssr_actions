@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-26T07:03:48.503827",
+  "timestamp": "2026-02-26T09:53:41.650220",
   "query": "\"api/v1/client/subscribe?token=\"",
   "search_type": "batch_regions",
   "regions_summary": "批量搜索 4 个地区: 沙特阿拉伯, 土耳其, 以色列, 印度",
@@ -10,14 +10,10 @@
     "印度 (gl=in, hl=hi, lr=lang_hi|lang_en|lang_zh-CN)"
   ],
   "regions_count": 4,
-  "total_urls": 6,
-  "original_urls": 14,
+  "total_urls": 2,
+  "original_urls": 10,
   "urls": [
-    "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=8827a7d0e22de79b46fd5003b1cc0ca7",
-    "https://your-provider.com/api/v1/client/subscribe?token=xxxxx",
-    "https://sub-1.smjcdh.top/smjc/api/v1/client/subscribe?token=f859cede6c813621c9f9886a8772aab6",
-    "https://gsurl.izenny.com/api/v1/client/subscribe?token=9c40957bccea7105c27ae6d1608b329e&types=hysteria2",
-    "https://dy11.baipiaoyes.com/api/v1/client/subscribe?token=f8fb5683f0cf6f938bccf053c55ead62",
-    "https://xfapp.quickbeevpn.com/api/v1/client/subscribe?token=f29a710191d5672892c2401084c5eb07&flag=meta"
+    "https://login.yfjc.xyz/api/v1/client/subscribe?token=641b21e166a350692cb411548f76a6bf",
+    "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=8827a7d0e22de79b46fd5003b1cc0ca7"
   ]
 }
